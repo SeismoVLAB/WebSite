@@ -1,0 +1,7 @@
+<map id="TIEQlin2DQuad4" name="TIEQlin2DQuad4">
+<area shape="rect" id="node2" href="$classElement.html" title="Virtual class for creating an element in a mesh. " alt="" coords="441,189,512,215"/>
+<area shape="rect" id="node3" title="STL class. " alt="" coords="215,89,295,115"/>
+<area shape="rect" id="node9" href="$classMaterial.html" title="Virtual class for creating a material object. " alt="" coords="443,127,511,154"/>
+<area shape="rect" id="node11" href="$classQuadratureRule.html" title="Virtual class for defining a Quadrature Rule to integrate quantities in the iso&#45;parametric elements..." alt="" coords="420,18,533,45"/>
+<area shape="rect" id="node4" title="STL class. " alt="" coords="5,81,132,123"/>
+</map>

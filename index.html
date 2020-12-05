@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Seismo-VLAB</title>
+  <meta name="description" content="Seismo-VLAB (SVL) is an open-source C++ multi-platform finite element software designed to optimize large-scale simulations of dynamic soil-structure interaction (SSI) problems" />
+  <meta name="keywords" content="Finite element method, object-oriented program, soil-structure interaction, wave propagation" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <!-- <h1><a href="index.html">Seismo-<span class="logo_colour">VLAB</span></a></h1> -->
+          <h2>An Open-Source Finite Element Software for Meso-Scale Simulations</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li class="selected"><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Features</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="tutorial.html">Tutorial</a></li>
+          <li><a href="documentation/index.html" target="_blank">Documentation</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        <h3>Latest News</h3>
+        <h4>Stable Seismo-VLAB will be released on</h4>
+        <h5>June 1st, 2021</h5>
+        <p>Download beta version at: <br/><a href="https://github.com/SeismoVLAB/SVL/releases/tag/v0.1-beta" target="_blank">SVL-0.1-beta.zip</a>
+        <p></p>
+        <h4>Seismo-VLAB's manual</h4>
+        <h5>December 5th, 2020</h5>
+        <p>Documentation available at:<br /><a href="documentation/index.html" target="_blank">User's Manual</a></p>
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="https://github.com/SeismoVLAB/SVL" target="_blank">Seismo-VLAB GitHub</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PLqgazBudFosqiC6P-EvUF4DR_IF5K81m7" target="_blank">YouTube Installation (under construction)</a></li>
+          <li><a href="https://www.asimaki.caltech.edu/" target="_blank">Prof. Asimaki's Lab</a></li>
+          <li><a href="https://www.elnaz-esmaeilzadeh.com/" target="_blank">Prof. Seylabi's Lab</a></li>
+        </ul>
+        <h3>Search</h3>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" value="Enter keywords..." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
+          </p>
+        </form>
+      </div>
+      <div id="content">
+        <!-- TO BE ERASED -->
+        <img src="style/UnderConstruction.png" alt="Under Construction" height="128" class="center">
+        <p align="center" style="color:red">THIS WEBSITE IS CURRENTLY UNDER CONSTRUCTION <br> Seismo-VLAB is scheduled to be released on June 1st, 2021 <br> Sorry for the inconveniences </p>
+        <!-- TO BE ERASED -->
+
+        <!-- insert the page content here -->
+        <h2><b>Seismo-VLAB</b> (<b>SVL</b>): An Open-Source Finite Element Software for Meso-Scale Simulations</h2>
+        <p>We present, <b>Seismo-VLAB</b> (<b>SVL</b>), a new open-source finite element software designed to optimize meso-scale (i.e., order of km) simulations in the context of structural and geotechnical engineering. High-fidelity soil-structure interaction (SSI) simulations require advanced models that can capture the nonlinear behavior of soils and structures, and parallel computing capabilities to optimize the cost associated with large scale problems. These features are not generally available in open-source softwares, and more importantly, their performance degrades as the size of the problem increases, a drawback very frequently associated with SSI problems.</p>
+        <p>Since <b>SVL</b> is not intended to be a commercial software, it lacks of some sophisticated element and material models present in commercial applications. However, the purpose of <b>SVL</b> is to provide a simple interface in which enginners as well as researcher can test, modify, share, and implement not only new element and material, but also new solvers, integration schemes, and nonlinear solution algorithms. Such features, not provided by most commercial applications, are necessary as researchers to improve the modeling capabilities of the software and to use state-of-the-art nonlinear structural analyses. Currently, <b>SVL</b> is developed to meet two important functionalities that we believe will become important in the near future (a) can perform spatial variability of soil properties for uncertainty quantification in linear and nonlinear models of civil structures, and (b) can be coupled to high-level languages such as MatLab and Python to perform system identification for parameter estimation in nonlinear structural finite element models of civil structures.</p>
+
+<hr />
+
+        <h2><b>Seismo-VLAB</b> Modelling Capabilities</h2>
+        <ul>
+          <li>Dynamic nonlinear solvers for time-domain analyses</li>
+          <li>Cutting edge parallel linear system solvers</li>
+          <li>Message Passing Interface (MPI) parallelization</li>
+          <li>Domain decomposition for optimal parallel efficiency</li>
+          <li>Perfectly matched layer (PML) absorbing boundary conditions</li>
+          <li>Domain reduction that incorporates wave-field incoherency in truncated computational domains</li>
+        </ul>
+        For more details, please refer to the <a href="gallery.html">FEATURES</a> tab to see some of these applications.
+      </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+      Copyright &copy; Seismo-VLAB - developed by <a href="https://dankusanovic.github.io/">D.S. Kusanovic</a> | <a href="https://www.elnaz-esmaeilzadeh.com/">E.E. Seylabi</a>  | <a href="https://www.asimaki.caltech.edu/">D.M. Asimaki</a>  
+      <!-- Copyright &copy; colour_blue | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">design from HTML5webtemplates.co.uk</a> -->
+    </div>
+  </div>
+</body>
+</html>

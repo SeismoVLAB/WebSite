@@ -1,0 +1,4 @@
+<map id="Algorithm" name="Algorithm">
+<area shape="rect" id="node2" href="$classLinear.html" title="Class for solving a linear system in just one&#45;step; therefore, no&#45;iteration or convergence test is pe..." alt="" coords="5,80,63,107"/>
+<area shape="rect" id="node3" href="$classNewtonRaphson.html" title="Class for solving a non&#45;linear system in a few iterations until the norm of the residuals reaches a c..." alt="" coords="87,80,205,107"/>
+</map>

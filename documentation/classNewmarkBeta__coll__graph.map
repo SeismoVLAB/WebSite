@@ -1,0 +1,5 @@
+<map id="NewmarkBeta" name="NewmarkBeta">
+<area shape="rect" id="node2" href="$classIntegrator.html" title="Class for defining how the static/dynamic snalysis between two steps is going to be performed..." alt="" coords="5,95,83,121"/>
+<area shape="rect" id="node4" href="$classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out..." alt="" coords="159,5,236,32"/>
+<area shape="rect" id="node6" href="$classAssembler.html" title="Class for assembling the finite element matrices and vector. " alt="" coords="367,5,451,32"/>
+</map>

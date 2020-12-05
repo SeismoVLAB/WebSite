@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Seismo-VLAB</title>
+  <meta name="description" content="Seismo-VLAB (SVL) is an open-source C++ multi-platform finite element software designed to optimize large-scale simulations of dynamic soil-structure interaction (SSI) problems" />
+  <meta name="keywords" content="Finite element method, object-oriented program, soil-structure interaction, wave propagation" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <!-- <h1><a href="index.html">Seismo-<span class="logo_colour">VLAB</span></a></h1> -->
+          <h2>An Open-Source Finite Element Software for Meso-Scale Simulations</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Home</a></li>
+          <li class="selected"><a href="gallery.html">Features</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="tutorial.html">Tutorial</a></li>
+          <li><a href="documentation/index.html" target="_blank">Documentation</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        <h3>Latest News</h3>
+        <h4>Stable Seismo-VLAB will be released on</h4>
+        <h5>June 1st, 2021</h5>
+        <p>Download beta version at: <br/><a href="https://github.com/SeismoVLAB/SVL/releases/tag/v0.1-beta" target="_blank">SVL-0.1-beta.zip</a>
+        <p></p>
+        <h4>Seismo-VLAB's manual</h4>
+        <h5>December 5th, 2020</h5>
+        <p>Documentation available at:<br /><a href="documentation/index.html" target="_blank">User's Manual</a></p>
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="https://github.com/SeismoVLAB/SVL" target="_blank">Seismo-VLAB GitHub</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PLqgazBudFosqiC6P-EvUF4DR_IF5K81m7" target="_blank">YouTube Installation (under construction)</a></li>
+          <li><a href="https://www.asimaki.caltech.edu/" target="_blank">Prof. Asimaki's Lab</a></li>
+          <li><a href="https://www.elnaz-esmaeilzadeh.com/" target="_blank">Prof. Seylabi's Lab</a></li>
+        </ul>
+        <h3>Search</h3>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" value="Enter keywords..." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
+          </p>
+        </form>
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+
+
+		<div>
+	<p> State-of-the-art tools required for efficient modeling of half-space and parallel computing capabilities are included in <b>Seismo-VLAB</b>. For example, perfectly matched layer (PML) for absorbing boundary conditions; domain reduction that incorporates wave-field incoherency in truncated computational domains; dynamic nonlinear solvers for time-domain analyses of inelastic problems; cutting edge parallel linear system solvers; domain decomposition method; and a series of plasticity models are available. </p> 
+    <p> In this gallery, we describe some of the features implemented in <b>SVL</b> as well as some applications in the context of structural and geotechnical engineering.
+	</p>
+</div>
+
+<hr />
+
+<article>
+	<h2><b>DOMAIN DECOMPOSITION</b></h2>
+	<p> Domain decomposition in <b>Seismo-VLAB</b> is employed to performa a parallel execution using openMPI. The domain partition is carried out using Metis software at the Pre-Analysis. Here, the model domain is divided so that the number of elements are almost uniform across processors. </p>
+	<div class="gallery">
+		<div class="galleryVideo">
+			The figure shows the domain decomposition performed to a 3D Soil-Structure Interaction building model using different number of processors. In this animation, the domain is sequentially divided from one to eleven partitions. Note how the elements are uniformly clustered leading to very similar colored volumes. As a reference, the mesh has 121944 nodes in total, 105825 elements divided as follows: 2164 <em>lin3DFrame2</em>, 7388 <em>lin3DShell4</em>, and 96273 <em>lin3DHexa8</em> and <em>PML3DHexa8</em> elements. In addition, 7 different materials and 19 different sections are employed to define both soil and building domain. The connections between shell/frame and solid as well as PML and soil elements are performed through kinematics constraints. Then, 26247 Constraints are used in order to tie the model together. The SSI problem has around 700000 degrees of freedom in total.
+		</div>
+		<div class="galleryVideo">
+			<img class="galleryGif" src="figures/DomDecomp.gif" alt="Domain decomposition." />
+			<figcaption>Domain decomposition of a 3D SSI problem model using different number of processors.</figcaption>
+		</div>
+	</div>		
+</article>
+
+<hr />
+
+<article>
+	<h2><b>DOMAIN REDUCTION METHOD</b></h2>
+	<p> The domain reduction method (DRM) is employed in <b>Seismo-VLAB</b> to transmit a ground motion inside the near-field. Currently homogeneous and heterogeneous elastic half-space can be generated inside the near-field using the Plane-Wave case. More sophisticated ground motion can be genarted in the near-field using the General-Wave case.</p>
+	<div class="gallery">
+		<div class="galleryVideo">
+			<img class="galleryGif" src="figures/DRM2D.gif" alt="Domain reduction in 2D." />
+			<figcaption>Animation of the 2D velocity amplitude field computed using the DRM load modeling for an inclined wave at incident angle of 15 degrees in a homogeneous half-space. </figcaption>
+		</div>
+		<div class="galleryVideo">
+            The animation on the left shows the velocity field amplitude at different time steps for a 2D rectangular homogeneous and elastic half-space. The soil domain has a horizontal length 150 [m] and vertical length 100 [m]. In this animation the DRM is employed to generate an sv-wave propagating in 15 degrees. As a reference, the finite element model has 46202 nodes, 701 restrains, and 16402 elements divided into 15000 <em>lin2DQuad8</em> and 1402 <em>ZeroLength1D</em> placed along the boundary to absorb possible scatter waves.
+		</div>
+	</div>		
+	<div class="gallery">
+		<div class="galleryVideo">
+            The animation on the right shows the velocity field amplitude at different time steps for a 3D rectangular homogeneous and elastic half-space. Note how the inclined sv-wave is generated with a vertical angle of 15 degrees and a horizontal angle of 30 degrees. This animation confirms the proper implementation of DRM in 3D settings. As a reference, we now consider a truncated soil domain with a horizontal length 130 [m], and 130 [m], and vertical length 100 [m]. The soil domain is now discretized using 174376 <em>lin3DHexa8</em> elements, and the surface boundaries are fixed. 
+		</div>				
+		<div class="galleryVideo">
+			<img class="galleryGif" src="figures/DRM3D.gif" alt="Domain reduction in 3D." />
+			<figcaption>Animation of the 3D velocity amplitude field computed using the DRM load modeling for an inclined wave at incident angle of 15 degrees in a homogeneous half-space.</figcaption>
+		</div>
+	</div>
+</article>
+
+<hr />
+
+<article>
+	<h2><b>PERFECTLY-MATCHED LAYER</b></h2>
+	<p> Perfectly Matched Layer (PML) for emulating semi-infinite half-space for 2D and 3D analyses are available in <b>Seismo-VLAB</b>. Currently, quadrilateral  <em>PML2DQuad4</em> of four and <em>PML2DQuad8</em> of eight nodes are available in 2D, while hexahedral <em>PML3DHexa8</em> of eight and <em>PML3DHexa20</em> twenty nodes are implemented for 3D. </p>
+	<div class="gallery">
+		<div class="galleryVideo">
+			<img class="galleryGif" src="figures/PML2D.gif" alt="Perfectly-matched leyer 2D." />
+			<figcaption>A snapshot of velocity amplitude field in 2D under vertical loading at the surface of the domain.</figcaption>
+		</div>
+		<div class="galleryVideo">
+			The animaton on the left shows a truncated soil domain with a horizontal length 150 [m] and vertical length 100 [m]. Isotropic linear elastic material for the soil is employed and plane-strain conditions are enforced. A PML zone of 25 [m] thickness is provided along the truncated domain as well. The model is subjected to a downward point load force, located at the middle on the surface. As a reference, the finite element model has 1718 nodes, 61 restrains, 162 constraints, and  1578  elements  divided  as  980 <em>lin2DQuad4</em> and  580 <em>PML2DQuad4</em>. Note how in the animation no reflections is generated from the boundaries.
+		</div>	
+	</div>
+	<div class="gallery">
+		<div class="galleryVideo">
+			The animation on the right sows the same results but extended to a 3D case. Here a truncated soil domain with a horizontal length 150 [m], and 150 [m], and vertical length 100 [m]. Eight-node hexahedral  elements are employed to discretize the domain. The linear and elastic soil domain is now discretized using 13500 <em>lin3DHexa8</em> elements. A PML layer of 25 [m] is discretized using 18500 <em>PML3DHexa8</em>.  Note that the velocity amplitude field at different time steps is smooth and that there is no reflections is generated from the boundaries demonstrating the proper implementation of PML in 3D settings as well.
+		</div>	
+		<div class="galleryVideo">
+			<img class="galleryGif" src="figures/PML3D.gif" alt="Perfectly-matched leyer 3D." />
+			<figcaption>A snapshot of velocity amplitude field in 3D under vertical loading at the surface of the domain. </figcaption>
+		</div>
+	</div>
+</article>
+
+<hr />
+
+<article>
+	<h2><b>MODELING OF TRUNCATED HALF-SPACE</b></h2>
+	<p> An efficient, reliable and robust numerical platform for high-fidelity simulation of wave propagation in heterogeneous half-spaces must consider the domain reduction method (DRM) and the perfectly matched layer (PML). The applications below show how these two features can be applied to very different scenarios.</p>
+	<div class="gallery">
+		<div class="galleryVideo">
+			<img class="galleryGif" src="figures/DRMPML.gif" alt="Truncated half-space in 2D." />
+			<figcaption>Simulation of a earth dam structure subjected to a vertical wave propagating upwards in heterogenous half-space</figcaption>
+		</div>
+		<div class="galleryVideo">
+			The animation on the left shows the solution of a wave propagation in a half-space for the analysis of a linear elastic earth dam problem. The domain reduction method (DRM) is employed in order to transmit the ground motion of an in-plane sv-wave propagating upwards inside the near-field domain. Also, a zone with PML is provided along the truncated domain to absorb the scattered waves. Note how inside the near-field domain, the DRM elements successfully generate the sv-wave propagating upwards; however, because of the presence of the dam, a scattered field is generated outside the DRM (near-field) domain.
+		</div>	
+	</div>
+	<div class="gallery">
+		<div class="galleryVideo">
+			The animation on the right shows the solution of a SSI problem applied to the analysis of a building. The 3D model consists on <em>lin3DFrame2</em>, <em>lin3DShell4</em>, <em>lin3DHexa8</em>, and <em>PML3DHexa8</em> elements. Note how inside the near-field domain, the DRM elements successfully generate the sv-wave propagating upwards; however, because of the presence of the bridge, a scattered field is generated outside the DRM (near-field) domain which is totally absorbed by the PML elements.
+		</div>	
+		<div class="galleryVideo">
+			<img class="galleryGif" src="figures/Building3D.gif" alt="SSI of a Building." />
+			<figcaption>Soil-Structure Interaction problem of a building subjected to a vertical wave propagating upwards in heterogenous half-space. </figcaption>
+		</div>
+	</div>
+</article>
+
+<hr />
+
+<article>
+	<h2><b>NONLINEARITY</b></h2>
+	<p> Nonlinear analysis in <b>Seismo-VLAB</b> is required when large deformation or non-linear material behavior is used. Solid elements such as <em>kin2DTruss2</em>, <em>kin3DTruss2</em>, <em>kin2DQuad4</em> and <em>kin3DHexa8</em> currently allows large deformation. On the other hand, structural elements such as <em>kin2DFrame2</em> and <em>kin3DFrame2</em> allow this feature. Nonlinear material behaviour such as plasticity  models are implemented in <em>Plastic1DJ2</em>, <em>Plastic3DJ2</em> and <em>PlasticPlaneStrainJ2</em>. Bounding  surface multi-axial  plasticity are also available in <em>PlasticPlaneStrainBA</em>, and <em>Plastic3DBA</em>. </p>
+	<div class="gallery">
+		<div class="galleryVideo">
+			<img class="galleryGif" src="figures/TrussBeam.gif" alt="Truss beam under large deformation." />
+			<figcaption>Deformed configuration at different load increments for a truss beam under large vertical load (Courtesi of prof. Louis Yaw from Walla Walla university.).</figcaption>
+		</div>
+		<div class="galleryVideo">
+            The animation on the left consist on a 3D clamped truss beam that has two point loads applied at its end. The problem setting is defined to test <em>kin3DTruss2</em> element with material type <em>Elastic1DLinear</em>. The cantilevered space truss is 10 long, 0.1 wide and 0.5 deep. The truss has two top chord members and two bottom chord members. For all truss elements the area used is 1.0. The nodes on the left are restrained in X, Y, and Z directions. Two vertical forces at the right end. The animation shows that the the 3D Space truss beam experiences lateral torsional buckling due to large deformations. 
+		</div>	
+	</div>
+	<div class="gallery">
+		<div class="galleryVideo">
+The animation on the right shows the solution of the wave equations for the analysis of an earth dam problem. In this problem, we use a conventional approach for defining transmitting boundaries - i.e., using Lysmer-Kuhlemeyer dashpots with prescribed nodal forces in terms of the incident wave velocity along the far-field boundary. The crest of the dam is a nonlinear material, and the far-field is assumed to be linear. The finite element mesh in has 57770 degrees of freedom in total, 28885 nodes are used to generate the mesh discretization, thus 28847 elements, 203 boundary nodal forces are applied, and 1501 time steps are required for the simulation.
+		</div>	
+		<div class="galleryVideo">
+			<img class="galleryGif" src="figures/NLDam.gif" alt="Nonlinear gravitational dam." />
+			<figcaption>Permanent deformation developed in a gratitational dam due to earthquake excitation. </figcaption>
+		</div>
+	</div>
+</article>
+
+
+
+
+
+      </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+      Copyright &copy; Seismo-VLAB - developed by <a href="https://dankusanovic.github.io/">D.S. Kusanovic</a> | <a href="https://www.elnaz-esmaeilzadeh.com/">E.E. Seylabi</a>  | <a href="https://www.asimaki.caltech.edu/">D.M. Asimaki</a>  
+      <!-- Copyright &copy; colour_blue | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">design from HTML5webtemplates.co.uk</a> -->
+    </div>
+  </div>
+</body>
+</html>

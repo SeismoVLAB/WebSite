@@ -1,0 +1,27 @@
+/*********************************************/
+/**               Inline code               **/
+/*********************************************/
+p code,
+li code,
+td code,
+dd code {
+	display: inline;
+	padding: 0px 6px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
+	background-color: #CCCCCC;
+	border: 1px solid #333333;
+
+	color: #333333;
+}
+
+/*********************************************/
+/**               Download url              **/
+/*********************************************/
+.download_url {
+	font-weight: bold;
+	font-size: 150%;
+	line-height: 150%;
+}

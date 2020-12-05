@@ -1,0 +1,30 @@
+<map id="Element" name="Element">
+<area shape="rect" id="node2" href="$classEQlin2DQuad4.html" title="Class for creating a 2D linearized equivalent linear four&#45;node quadrilateral element in a mesh..." alt="" coords="152,5,261,32"/>
+<area shape="rect" id="node3" href="$classHDRBYamamoto2DLink.html" title="Class for creating a bidirectional 2D two&#45;node link element using Yamamoto HDRB formulation. " alt="" coords="124,56,289,83"/>
+<area shape="rect" id="node4" href="$classHDRBYamamoto3DLink.html" title="Class for creating a bidirectional 3D two&#45;node link element using Yamamoto HDRB formulation. " alt="" coords="124,107,289,133"/>
+<area shape="rect" id="node5" href="$classkin2DFrame2.html" title="Class for creating a 2D finite kinematic two&#45;node frame element in a mesh. " alt="" coords="157,157,257,184"/>
+<area shape="rect" id="node6" href="$classkin2DQuad4.html" title="Class for creating a 2D finite kinematic four&#45;node quadrilateral element in a mesh. " alt="" coords="159,208,254,235"/>
+<area shape="rect" id="node7" href="$classkin2DTruss2.html" title="Class for creating a 2D finite kinematic two&#45;node truss element in a mesh. " alt="" coords="159,259,255,285"/>
+<area shape="rect" id="node8" href="$classkin3DHexa8.html" title="Class for creating a 3D finite kinematic eight&#45;node hexahedron element in a mesh. ..." alt="" coords="159,309,254,336"/>
+<area shape="rect" id="node9" href="$classkin3DTruss2.html" title="Class for creating a 3D finite kinematic two&#45;node truss element in a mesh. " alt="" coords="159,360,255,387"/>
+<area shape="rect" id="node10" href="$classlin2DFrame2.html" title="Class for creating a 2D linearized two&#45;node frame element in a mesh. " alt="" coords="159,411,255,437"/>
+<area shape="rect" id="node11" href="$classlin2DQuad4.html" title="Class for creating a 2D linearized four&#45;node quadrilateral element in a mesh. " alt="" coords="161,461,252,488"/>
+<area shape="rect" id="node12" href="$classlin2DQuad8.html" title="Class for creating a 2D linearized eight&#45;node quadrilateral element in a mesh. " alt="" coords="161,512,252,539"/>
+<area shape="rect" id="node13" href="$classlin2DTruss2.html" title="Class for creating a 2D linearized two&#45;node truss element in a mesh. " alt="" coords="161,563,253,589"/>
+<area shape="rect" id="node14" href="$classlin2DTruss3.html" title="Class for creating a 2D linearized three&#45;node truss element in a mesh. " alt="" coords="161,613,253,640"/>
+<area shape="rect" id="node15" href="$classlin3DFrame2.html" title="Class for creating a 3D linearized two&#45;node frame element in a mesh. " alt="" coords="159,664,255,691"/>
+<area shape="rect" id="node16" href="$classlin3DHexa20.html" title="Class for creating a 3D linearized twenty&#45;node hexahedron element in a mesh. " alt="" coords="158,715,255,741"/>
+<area shape="rect" id="node17" href="$classlin3DHexa8.html" title="Class for creating a 3D linearized eight&#45;node hexahedron element in a mesh. " alt="" coords="161,765,252,792"/>
+<area shape="rect" id="node18" href="$classlin3DShell4.html" title="Class for creating a 3D linearized four&#45;node shell element in a mesh. " alt="" coords="163,816,251,843"/>
+<area shape="rect" id="node19" href="$classlin3DTruss2.html" title="Class for creating a 3D linearized two&#45;node truss element in a mesh. " alt="" coords="161,867,253,893"/>
+<area shape="rect" id="node20" href="$classlin3DTruss3.html" title="Class for creating a 3D linearized three&#45;node truss element in a mesh. " alt="" coords="161,917,253,944"/>
+<area shape="rect" id="node21" href="$classnull2DFrame2.html" title="Class for creating a 2D null frame element (no properties) in a mesh. " alt="" coords="155,968,258,995"/>
+<area shape="rect" id="node22" href="$classnull3DFrame2.html" title="Class for creating a 3D null frame element (no properties) in a mesh. " alt="" coords="155,1019,258,1045"/>
+<area shape="rect" id="node23" href="$classPML2DQuad4.html" title="Class for creating a 2D linearized four&#45;node perfectly matched layer element in a mesh..." alt="" coords="155,1069,259,1096"/>
+<area shape="rect" id="node24" href="$classPML2DQuad8.html" title="Class for creating a 2D linearized eight&#45;node perfectly matched layer element in a mesh..." alt="" coords="155,1120,259,1147"/>
+<area shape="rect" id="node25" href="$classPML3DHexa8.html" title="Class for creating a 3D linearized eight&#45;node perfectly matched layer element in a mesh..." alt="" coords="155,1171,259,1197"/>
+<area shape="rect" id="node26" href="$classTIEQlin2DQuad4.html" title="Class for creating a 2D time invariant equivalent linear four&#45;node quadrilateral element in a mesh..." alt="" coords="146,1221,267,1248"/>
+<area shape="rect" id="node27" href="$classUnxBoucWen2DLink.html" title="Class for creating an uniaxial 2D two&#45;node link element using Bouc&#45;Wen formulation. " alt="" coords="135,1272,279,1299"/>
+<area shape="rect" id="node28" href="$classUnxBoucWen3DLink.html" title="Class for creating an uniaxial 3D two&#45;node link element using Bouc&#45;Wen formulation. " alt="" coords="135,1323,279,1349"/>
+<area shape="rect" id="node29" href="$classZeroLength1D.html" title="Class for creating a 2D/3D two&#45;node zero length element in a mesh. " alt="" coords="155,1373,259,1400"/>
+</map>
