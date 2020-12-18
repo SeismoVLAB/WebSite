@@ -70,10 +70,10 @@
 
 <article>
 	<h2><b>DOMAIN DECOMPOSITION</b></h2>
-	<p> Domain decomposition in <b>Seismo-VLAB</b> is employed to performa a parallel execution using openMPI. The domain partition is carried out using Metis software at the Pre-Analysis. Here, the model domain is divided so that the number of elements are almost uniform across processors. </p>
+	<p> Domain decomposition in <b>Seismo-VLAB</b> is employed to perform a parallel execution using openMPI. The domain partition is carried out using Metis software in the Pre-Analysis. Here, the model domain is divided so that the number of elements are almost uniform across processors. </p>
 	<div class="gallery">
 		<div class="galleryVideo">
-			The figure shows the domain decomposition performed to a 3D Soil-Structure Interaction building model using different number of processors. In this animation, the domain is sequentially divided from one to eleven partitions. Note how the elements are uniformly clustered leading to very similar colored volumes. As a reference, the mesh has 121944 nodes in total, 105825 elements divided as follows: 2164 <em>lin3DFrame2</em>, 7388 <em>lin3DShell4</em>, and 96273 <em>lin3DHexa8</em> and <em>PML3DHexa8</em> elements. In addition, 7 different materials and 19 different sections are employed to define both soil and building domain. The connections between shell/frame and solid as well as PML and soil elements are performed through kinematics constraints. Then, 26247 Constraints are used in order to tie the model together. The SSI problem has around 700000 degrees of freedom in total.
+			The figure shows the domain decomposition performed to a 3D Soil-Structure Interaction building model using different number of processors. In this animation, the domain is sequentially divided from one to eleven partitions. Note how the elements are uniformly clustered leading to very similar colored volumes. As a reference, the mesh has 121944 nodes in total, 105825 elements divided as follows: 2164 <em>lin3DFrame2</em>, 7388 <em>lin3DShell4</em>, and 96273 <em>lin3DHexa8</em> and <em>PML3DHexa8</em> elements. In addition, 7 different materials and 19 different sections are employed to define both soil and building domains. The connections between shell/frame and solid as well as PML and soil elements are performed through kinematics constraints. Then, 26247 Constraints are used in order to tie the model together. The SSI problem has around 700000 degrees of freedom in total.
 		</div>
 		<div class="galleryVideo">
 			<img class="galleryGif" src="figures/DomDecomp.gif" alt="Domain decomposition." />
@@ -86,23 +86,23 @@
 
 <article>
 	<h2><b>DOMAIN REDUCTION METHOD</b></h2>
-	<p> The domain reduction method (DRM) is employed in <b>Seismo-VLAB</b> to transmit a ground motion inside the near-field. Currently homogeneous and heterogeneous elastic half-space can be generated inside the near-field using the Plane-Wave case. More sophisticated ground motion can be genarted in the near-field using the General-Wave case.</p>
+	<p> The domain reduction method (DRM) is employed in <b>Seismo-VLAB</b> to transmit a ground motion inside the near-field. Currently homogeneous and heterogeneous elastic half-spaces can be generated inside the near-field using the Plane-Wave case. More sophisticated ground motion can be generated in the near-field using the General-Wave case.</p>
 	<div class="gallery">
 		<div class="galleryVideo">
 			<img class="galleryGif" src="figures/DRM2D.gif" alt="Domain reduction in 2D." />
-			<figcaption>Animation of the 2D velocity amplitude field computed using the DRM load modeling for an inclined wave at incident angle of 15 degrees in a homogeneous half-space. </figcaption>
+			<figcaption>Fig. 2(a) Animation of the 2D velocity amplitude field computed using the DRM load modeling for an inclined wave at incident angle of 15 degrees in a homogeneous half-space. </figcaption>
 		</div>
 		<div class="galleryVideo">
-            The animation on the left shows the velocity field amplitude at different time steps for a 2D rectangular homogeneous and elastic half-space. The soil domain has a horizontal length 150 [m] and vertical length 100 [m]. In this animation the DRM is employed to generate an sv-wave propagating in 15 degrees. As a reference, the finite element model has 46202 nodes, 701 restrains, and 16402 elements divided into 15000 <em>lin2DQuad8</em> and 1402 <em>ZeroLength1D</em> placed along the boundary to absorb possible scatter waves.
+            Fig. 2(a) shows the velocity field amplitude at different time steps for a 2D rectangular homogeneous and elastic half-space. The soil domain has a horizontal length 150 [m] and vertical length 100 [m]. In this animation the DRM is employed to generate a sv-wave propagating in 15 degrees. As a reference, the finite element model has 46202 nodes, 701 restrains, and 16402 elements divided into 15000 <em>lin2DQuad8</em> and 1402 <em>ZeroLength1D</em> placed along the boundary to absorb possible scatter waves.
 		</div>
 	</div>		
 	<div class="gallery">
 		<div class="galleryVideo">
-            The animation on the right shows the velocity field amplitude at different time steps for a 3D rectangular homogeneous and elastic half-space. Note how the inclined sv-wave is generated with a vertical angle of 15 degrees and a horizontal angle of 30 degrees. This animation confirms the proper implementation of DRM in 3D settings. As a reference, we now consider a truncated soil domain with a horizontal length 130 [m], and 130 [m], and vertical length 100 [m]. The soil domain is now discretized using 174376 <em>lin3DHexa8</em> elements, and the surface boundaries are fixed. 
+            Fig. 2(b) shows the velocity field amplitude at different time steps for a 3D rectangular homogeneous and elastic half-space. Note how the inclined sv-wave is generated with a vertical angle of 15 degrees and a horizontal angle of 30 degrees. This animation confirms the proper implementation of DRM in 3D settings. As a reference, we now consider a truncated soil domain with of 130 x 130 x 100 [m]. The soil domain is now discretized using 174376 <em>lin3DHexa8</em> elements, and the surface boundaries are fixed. 
 		</div>				
 		<div class="galleryVideo">
 			<img class="galleryGif" src="figures/DRM3D.gif" alt="Domain reduction in 3D." />
-			<figcaption>Animation of the 3D velocity amplitude field computed using the DRM load modeling for an inclined wave at incident angle of 15 degrees in a homogeneous half-space.</figcaption>
+			<figcaption>Fig. 2(b) Animation of the 3D velocity amplitude field computed using the DRM load modeling for an inclined wave at incident angle of 15 degrees in a homogeneous half-space.</figcaption>
 		</div>
 	</div>
 </article>
@@ -115,19 +115,19 @@
 	<div class="gallery">
 		<div class="galleryVideo">
 			<img class="galleryGif" src="figures/PML2D.gif" alt="Perfectly-matched leyer 2D." />
-			<figcaption>A snapshot of velocity amplitude field in 2D under vertical loading at the surface of the domain.</figcaption>
+			<figcaption>Fig. 3(a) A snapshot of velocity amplitude field in 2D under vertical loading at the surface of the domain.</figcaption>
 		</div>
 		<div class="galleryVideo">
-			The animaton on the left shows a truncated soil domain with a horizontal length 150 [m] and vertical length 100 [m]. Isotropic linear elastic material for the soil is employed and plane-strain conditions are enforced. A PML zone of 25 [m] thickness is provided along the truncated domain as well. The model is subjected to a downward point load force, located at the middle on the surface. As a reference, the finite element model has 1718 nodes, 61 restrains, 162 constraints, and  1578  elements  divided  as  980 <em>lin2DQuad4</em> and  580 <em>PML2DQuad4</em>. Note how in the animation no reflections is generated from the boundaries.
+			Fig. 3(a) shows a truncated soil domain with a horizontal length 150 [m] and vertical length 100 [m]. Isotropic linear elastic material for the soil is employed and plane-strain conditions are enforced. A PML zone of 25 [m] thickness is provided along the truncated domain as well. The model is subjected to a downward point load force, located at the middle on the surface. As a reference, the finite element model has 1718 nodes, 61 restrains, 162 constraints, and  1578  elements  divided  as  980 <em>lin2DQuad4</em> and  580 <em>PML2DQuad4</em>. Note how in the animation no reflections are generated from the boundaries.
 		</div>	
 	</div>
 	<div class="gallery">
 		<div class="galleryVideo">
-			The animation on the right sows the same results but extended to a 3D case. Here a truncated soil domain with a horizontal length 150 [m], and 150 [m], and vertical length 100 [m]. Eight-node hexahedral  elements are employed to discretize the domain. The linear and elastic soil domain is now discretized using 13500 <em>lin3DHexa8</em> elements. A PML layer of 25 [m] is discretized using 18500 <em>PML3DHexa8</em>.  Note that the velocity amplitude field at different time steps is smooth and that there is no reflections is generated from the boundaries demonstrating the proper implementation of PML in 3D settings as well.
+			Fig. 3(b) shows the same results but extended to a 3D case. Here a truncated soil domain with a horizontal length 150 [m], and 150 [m], and vertical length 100 [m]. Eight-node hexahedral  elements are employed to discretize the domain. The linear and elastic soil domain is now discretized using 13500 <em>lin3DHexa8</em> elements. A PML layer of 25 [m] is discretized using 18500 <em>PML3DHexa8</em>.  Note that the velocity amplitude field at different time steps is smooth and that there are no reflections generated from the boundaries demonstrating the proper implementation of PML in 3D settings as well.
 		</div>	
 		<div class="galleryVideo">
 			<img class="galleryGif" src="figures/PML3D.gif" alt="Perfectly-matched leyer 3D." />
-			<figcaption>A snapshot of velocity amplitude field in 3D under vertical loading at the surface of the domain. </figcaption>
+			<figcaption>Fig. 3(b) A snapshot of velocity amplitude field in 3D under vertical loading at the surface of the domain. </figcaption>
 		</div>
 	</div>
 </article>
@@ -140,19 +140,19 @@
 	<div class="gallery">
 		<div class="galleryVideo">
 			<img class="galleryGif" src="figures/DRMPML.gif" alt="Truncated half-space in 2D." />
-			<figcaption>Simulation of a earth dam structure subjected to a vertical wave propagating upwards in heterogenous half-space</figcaption>
+			<figcaption>Fig. 4(a) Simulation of a earth dam structure subjected to a vertical wave propagating upwards in heterogenous half-space</figcaption>
 		</div>
 		<div class="galleryVideo">
-			The animation on the left shows the solution of a wave propagation in a half-space for the analysis of a linear elastic earth dam problem. The domain reduction method (DRM) is employed in order to transmit the ground motion of an in-plane sv-wave propagating upwards inside the near-field domain. Also, a zone with PML is provided along the truncated domain to absorb the scattered waves. Note how inside the near-field domain, the DRM elements successfully generate the sv-wave propagating upwards; however, because of the presence of the dam, a scattered field is generated outside the DRM (near-field) domain.
+			Fig. 4(a) shows the solution of a wave propagation in a half-space for the analysis of a linear elastic earth dam problem. The domain reduction method (DRM) is employed in order to transmit the ground motion of an in-plane sv-wave propagating upwards inside the near-field domain. Also, a zone with PML is provided along the truncated domain to absorb the scattered waves. Note how inside the near-field domain, the DRM elements successfully generate the sv-wave propagating upwards; however, because of the presence of the dam, a scattered field is generated outside the DRM (near-field) domain.
 		</div>	
 	</div>
 	<div class="gallery">
 		<div class="galleryVideo">
-			The animation on the right shows the solution of a SSI problem applied to the analysis of a building. The 3D model consists on <em>lin3DFrame2</em>, <em>lin3DShell4</em>, <em>lin3DHexa8</em>, and <em>PML3DHexa8</em> elements. Note how inside the near-field domain, the DRM elements successfully generate the sv-wave propagating upwards; however, because of the presence of the bridge, a scattered field is generated outside the DRM (near-field) domain which is totally absorbed by the PML elements.
+			Fig. 4(b) shows the solution of a SSI problem applied to the analysis of a building. The 3D model consists of <em>lin3DFrame2</em>, <em>lin3DShell4</em>, <em>lin3DHexa8</em>, and <em>PML3DHexa8</em> elements. Note how inside the near-field domain, the DRM elements successfully generate the sv-wave propagating upwards; however, because of the presence of the bridge, a scattered field is generated outside the DRM (near-field) domain which is totally absorbed by the PML elements.
 		</div>	
 		<div class="galleryVideo">
 			<img class="galleryGif" src="figures/Building3D.gif" alt="SSI of a Building." />
-			<figcaption>Soil-Structure Interaction problem of a building subjected to a vertical wave propagating upwards in heterogenous half-space. </figcaption>
+			<figcaption>Fig. 4(b) Soil-Structure Interaction problem of a building subjected to a vertical wave propagating upwards in heterogenous half-space. </figcaption>
 		</div>
 	</div>
 </article>
@@ -161,23 +161,23 @@
 
 <article>
 	<h2><b>NONLINEARITY</b></h2>
-	<p> Nonlinear analysis in <b>Seismo-VLAB</b> is required when large deformation or non-linear material behavior is used. Solid elements such as <em>kin2DTruss2</em>, <em>kin3DTruss2</em>, <em>kin2DQuad4</em> and <em>kin3DHexa8</em> currently allows large deformation. On the other hand, structural elements such as <em>kin2DFrame2</em> and <em>kin3DFrame2</em> allow this feature. Nonlinear material behaviour such as plasticity  models are implemented in <em>Plastic1DJ2</em>, <em>Plastic3DJ2</em> and <em>PlasticPlaneStrainJ2</em>. Bounding  surface multi-axial  plasticity are also available in <em>PlasticPlaneStrainBA</em>, and <em>Plastic3DBA</em>. </p>
+	<p> Non-linear analysis in <b>Seismo-VLAB</b> is required when large deformation or non-linear material behavior is used. Solid elements such as <em>kin2DTruss2</em>, <em>kin3DTruss2</em>, <em>kin2DQuad4</em> and <em>kin3DHexa8</em> currently allow large deformation. On the other hand, structural elements such as <em>kin2DFrame2</em> and <em>kin3DFrame2</em> allow this feature. Non-linear material behaviors such as plasticity  models are implemented in <em>Plastic1DJ2</em>, <em>Plastic3DJ2</em> and <em>PlasticPlaneStrainJ2</em>. Bounding  surface multi-axial  plasticity is also available in <em>PlasticPlaneStrainBA</em>, and <em>Plastic3DBA</em>. </p>
 	<div class="gallery">
 		<div class="galleryVideo">
 			<img class="galleryGif" src="figures/TrussBeam.gif" alt="Truss beam under large deformation." />
-			<figcaption>Deformed configuration at different load increments for a truss beam under large vertical load (Courtesi of prof. Louis Yaw from Walla Walla university.).</figcaption>
+			<figcaption>Fig. 5(a)Deformed configuration at different load increments for a truss beam under large vertical load (Courtesi of prof. Louis Yaw from Walla Walla university.).</figcaption>
 		</div>
 		<div class="galleryVideo">
-            The animation on the left consist on a 3D clamped truss beam that has two point loads applied at its end. The problem setting is defined to test <em>kin3DTruss2</em> element with material type <em>Elastic1DLinear</em>. The cantilevered space truss is 10 long, 0.1 wide and 0.5 deep. The truss has two top chord members and two bottom chord members. For all truss elements the area used is 1.0. The nodes on the left are restrained in X, Y, and Z directions. Two vertical forces at the right end. The animation shows that the the 3D Space truss beam experiences lateral torsional buckling due to large deformations. 
+            Fig. 5(a) consists of a 3D clamped truss beam that has two point loads applied at its end. The problem setting is defined to test <em>kin3DTruss2</em> element with material type <em>Elastic1DLinear</em>. The cantilevered space truss is 10 long, 0.1 wide and 0.5 deep. The truss has two top chord members and two bottom chord members. For all truss elements the area used is 1.0. The nodes on the left are restrained in X, Y, and Z directions. Two vertical forces at the right end. The animation shows that the 3D Space truss beam experiences lateral torsional buckling due to large deformations. 
 		</div>	
 	</div>
 	<div class="gallery">
 		<div class="galleryVideo">
-The animation on the right shows the solution of the wave equations for the analysis of an earth dam problem. In this problem, we use a conventional approach for defining transmitting boundaries - i.e., using Lysmer-Kuhlemeyer dashpots with prescribed nodal forces in terms of the incident wave velocity along the far-field boundary. The crest of the dam is a nonlinear material, and the far-field is assumed to be linear. The finite element mesh in has 57770 degrees of freedom in total, 28885 nodes are used to generate the mesh discretization, thus 28847 elements, 203 boundary nodal forces are applied, and 1501 time steps are required for the simulation.
+Fig. 5(b) shows the solution of the wave equations for the analysis of an earth dam problem. In this problem, we use a conventional approach for defining transmitting boundaries - i.e., using Lysmer-Kuhlemeyer dashpots with prescribed nodal forces in terms of the incident wave velocity along the far-field boundary. The crest of the dam is a nonlinear material, and the far-field is assumed to be linear. The finite element mesh has 57770 degrees of freedom in total, 28885 nodes are used to generate the mesh discretization, thus 28847 elements, 203 boundary nodal forces are applied, and 1501 time steps are required for the simulation.
 		</div>	
 		<div class="galleryVideo">
 			<img class="galleryGif" src="figures/NLDam.gif" alt="Nonlinear gravitational dam." />
-			<figcaption>Permanent deformation developed in a gratitational dam due to earthquake excitation. </figcaption>
+			<figcaption>Fig. 5(b) Permanent deformation developed in a gratitational dam due to earthquake excitation. </figcaption>
 		</div>
 	</div>
 </article>
