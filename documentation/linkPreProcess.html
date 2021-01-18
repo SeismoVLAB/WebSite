@@ -102,47 +102,26 @@ $(document).ready(function(){initNavTree('linkPreProcess.html','');});
 <div class="title">Pre-Analysis </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="linkPreProcess.html">Pre-Analysis</a> consists on the following modules:</p>
+<div class="textblock"><p>The <a class="el" href="linkPreProcess.html">Pre-Analysis</a> has the following folders:</p>
 <ul>
+<li><a class="el" href="linkPythonCore.html">Core</a></li>
+<li><a class="el" href="linkPythonMethod.html">Method</a></li>
 <li><a class="el" href="linkPythonParser.html">Parser</a></li>
-<li><a class="el" href="linkMetis.html">Metis</a></li>
-<li><a class="el" href="linkNumbering.html">Numbering</a></li>
-<li><a class="el" href="linkPlaneWave.html">PlaneWave</a></li>
-<li><a class="el" href="linkSeismoVLab.html">SeismoVLab</a></li>
+<li><a class="el" href="linkPythonMetis.html">Metis</a></li>
 </ul>
-<p>The <b>Pre-Analysis</b> consists on a set of Python files that transform a simulation file into <a class="el" href="linkRunProcess.html">Run-Analysis</a> format. This basic task is orchestrated by two main scripts: <span style="color:green">PreProcess.py</span> that essentially loads the input file and creates python dictionaries; and <span style="color:green">SeismoVLab.py</span> that tarsnforms the python dictionaries into <a class="el" href="linkRunProcess.html">Run-Analysis</a> input files. In addition, the Python parser provided in <b>SVL</b> handles the degree-of-freedom numbering in <span style="color:green">Numbering.py</span>, the domain partition in <span style="color:green">Metis.py</span>, soil spatial variablility in <span style="color:green">...py</span>, and domain reduction forces in <span style="color:green">PlaneWave.py</span>. Therefore, the <b>Pre-Analysis</b> can be fully replaced by another program as long as the output files are written using the <b>Run-Analysis</b> format.</p>
-<div class="image">
-<img src="PreAnalysis.png" alt="PreAnalysis.png" width="90%"/>
+<p>The main <a class="el" href="linkPreProcess.html">Pre-Analysis</a> components are shown in the figure below: </p><div class="image">
+<img src="PreAnalysis.png" alt="PreAnalysis.png" width="65%"/>
 </div>
-<p>The <b>Pre-Analysis</b> input file format, <code>Simulation.txt</code> is defined by fields. Each field must start and ends with a <code>*NAME</code> and <code>*END</code> keyword that defines the scope of the instance being defined. Inside this scope, variables are defined with a <span style="color:blue">-variable</span> declaration followed by its corresponding instantiation, i.e, <em>name, number, path</em>. Each variable are separated by commas <code>,</code> which allows this format to be order insensitive. However, tags or identifiers for each entity need to be declared at the begining of each line within the field. For example,</p>
-<ul>
-<li>A 2D <a class="el" href="linkNode.html">Node</a> with coordinates *(-75, 100)*, <em>5</em> degree-of-freedom, and identifier <em>7</em>: <blockquote class="doxtable">
-<p>*POINT <br />
- 7, -ndof 5, -pos -75.00 100.00 <br />
- *END </p>
-</blockquote>
-</li>
-<li>A <a class="el" href="linkElastic2DPlaneStrain.html">Elastic2DPlaneStrain</a> material with identifier <em>1</em>, elastic modulus <em>500.0</em>, Poisson's ratio <em>0.25</em>, density <em>2000.0</em>: <blockquote class="doxtable">
-<p>*MATERIAL <br />
- 1, -name <a class="el" href="classElastic2DPlaneStrain.html" title="Class for creating a biaxial isotropic linear elastic material in plane strain conditions for two-dim...">Elastic2DPlaneStrain</a>, -E 500.0, -nu 0.25, -rho 2000.0 <br />
- *END </p>
-</blockquote>
-</li>
-<li>A domain partition for <em>8</em> processors using a <em>Plain</em> degree of freedom numbering: <blockquote class="doxtable">
-<p>*PARTITION <br />
- -metis /usr/bin/mpmetis, -np 8, -ordering Plain <br />
- *END </p>
-</blockquote>
-</li>
-</ul>
-<p>Note that <span style="color:blue">-metis</span> specifies the path where the <code>mpmetis</code> is located. Also, additional nodes as well as material can be defined inside the <code>POINT</code> and <code>MATERIAL</code> scope. More details about the <a class="el" href="linkPreProcess.html">Pre-Analysis</a> format can be found at <a class="el" href="linkPythonParser.html">Parser</a>. </p>
+<p>In general, the <b>Pre-Analysis</b> consists on a set of Python routines that allows to construct a finite element model. This interface is designed to be user friendly and to handle large models in different formats. The main task is orchestrated by two main scripts: <span style="color:green"><b>Core/SeismoVLAB.py</b></span> that essentially loads all required modules to generate a model; and <span style="color:green"><b>Core/Definitions.py</b></span> that contains the data structure (dictionaries) that stores the finite element information to be transformed into <a class="el" href="linkRunProcess.html">Run-Analysis</a> input files.</p>
+<p>The Python routines provided in <b>SVL</b> handles the degree-of-freedom numbering in <span style="color:green"><b>Core/Numberer.py</b></span>, the domain partition in <span style="color:green"><b>Core/Partition.py</b></span>, soil spatial variablility in <span style="color:green"><b>Core/RandomField.py</b></span>, and domain reduction forces in <span style="color:green"><b>Core/PlaneWave.py</b></span>. Also, the <b>Pre-Analysis</b> allows the user to parse formats from other softwares. For example, ETABS (.e2k), SAP (.s2k), and gmsh (.mesh) are currently available. Only basic features (point, material, element, restriction) in these files can be translated into <b>SVL</b> format. Similarly, several routines are provided in the <span style="color:green"><b>Method/Attach.py</b></span> that allows the user to create a model using a Python interface. Then, a user can take full advantage of all the features avaible in Python to manipulate, modify and create a finite element model.</p>
+<dl class="section attention"><dt>Attention</dt><dd>The <b>Pre-Analysis</b> can be fully replaced by another program as long as the output files are written using the <b>Run-Analysis</b> format. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sat Dec 5 2020 10:49:55 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun Jan 17 2021 18:13:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -102,17 +102,28 @@ $(document).ready(function(){initNavTree('linkInstallation.html','');});
 <div class="title">Installation </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Installation of <b>SVL</b> requires a <code>python3</code> environment to execute the <a class="el" href="linkPreProcess.html">Pre-Analysis</a>. In particular, libraries such as <code>numpy</code>, <code>scipy</code>, and <code>matplotlib</code> must be available. In general, in Linux and Unix based system the package installation is straightforward, since they can be installed using the command line. In windows system we recommend to watch this video (<a href="https://www.youtube.com/watch?v=-llHYUMH9Dg">https://www.youtube.com/watch?v=-llHYUMH9Dg</a>) for a detailed explanation.</p>
+<div class="textblock"><p>Installation of <b>SVL</b> requires a <code>python3</code> environment to execute the <a class="el" href="linkPreProcess.html">Pre-Analysis</a>. In particular, libraries such as</p>
+<ul>
+<li>Numpy (<a href="https://numpy.org/">https://numpy.org/</a>)</li>
+<li>Scipy (<a href="https://www.scipy.org/">https://www.scipy.org/</a>)</li>
+<li>Matplotlib (<a href="https://matplotlib.org/">https://matplotlib.org/</a>)</li>
+<li>VTK (<a href="https://pypi.org/project/vtk/">https://pypi.org/project/vtk/</a>)</li>
+<li>Json (<a href="https://docs.python.org/3/library/json.html">https://docs.python.org/3/library/json.html</a>)</li>
+</ul>
+<p>must be installed. Once the previous modules are available, it is useful to export Seismo-VLAB path as follows:</p>
+<pre style="padding: 5px; color: white; background-color: black; border: white 2px solid"> <span style="color:lime">export</span> PYTHONPATH=<span style="color:yellow">"/path/to/SeismoVLAB/01-Pre_Process"</span>
+</pre><p>This will allow the user to import SeismoVLAB as a normal python module (in a Python script) as</p>
+<pre style="padding: 5px; color: white; background-color: black; border: white 2px solid"> <span style="color:magenta">from</span> Core <span style="color:magenta">import</span> SeismoVLAB <span style="color:magenta">as</span> SVL 
+</pre><p>In general, in Linux and Unix based system the package installation is straightforward, since they can be installed using the command line. In windows system we recommend to watch this video (<a href="https://www.youtube.com/watch?v=-llHYUMH9Dg">https://www.youtube.com/watch?v=-llHYUMH9Dg</a>) for a detailed explanation.</p>
 <p>Once the python dependencies are successfully installed, then the <a class="el" href="linkPreProcess.html">Pre-Analysis</a> can be executed. Write in a terminal (Linux/MacOSX) or command prompt (cmd in Windows),</p>
-<pre>
-<span style="color:green">~/SVL/01-Pre_Process$</span> python3 PreProcess.py
+<pre style="padding: 5px; color: white; background-color: black; border: white 2px solid"> <span style="color:aqua">~$</span> python3
+<span style="color:white">&gt;&gt;&gt;</span> <span style="color:magenta">from</span> Core <span style="color:magenta">import</span> SeismoVLAB <span style="color:magenta">as</span> SVL 
 </pre><p>In addition, a C++ compiler with Message Passage Interface (MPI) is required for the <a class="el" href="linkRunProcess.html">Run-Analysis</a>. Additionally, installation of <b>SVL</b> on Linux/MacOSX/Windows requires <b>Eigen C++ library</b>, <b>MUMPS Library</b>, and <b>PETSc Library</b> to be installed:</p>
 <ul>
 <li>The <b>Eigen C++ library</b> can be downloaded from the website <a href="http://eigen.tuxfamily.org/">http://eigen.tuxfamily.org/</a>.</li>
 <li>The <b>MUMPS library</b> can be downloaded from the website <a href="http://mumps.enseeiht.fr/">http://mumps.enseeiht.fr/</a>.</li>
 <li>The <b>Pestc Library</b> library can be downloaded at the website <a href="https://www.mcs.anl.gov/petsc/">https://www.mcs.anl.gov/petsc/</a>.</li>
 </ul>
-<p>Note that <code>MPI_DIR, METIS_DIR, SCOTCH_DIR</code> in <code>SVL/02-Run_Process/Makefile.mk</code> must have the path where these libraries are installed. Also, make sure libraries such as: <code>-lscalapack-openmpi -lblacs-openmpi -llapack -lblas</code> and <code>-lparmetis -lmetis -lptesmumps -lptscotch -lptscotcherr</code> are also installed.</p>
 <p>After all previous libraries are present, compile the <code>02-Run_Analysis</code> folder by executing <code>make DEBUG=False</code> in a terminal or command prompt. Further details on how to compile the <a class="el" href="linkRunProcess.html">Run-Analysis</a> can be found at:</p>
 <ul>
 <li><a class="el" href="linkLinux.html">Linux Operating System</a></li>
@@ -120,8 +131,7 @@ $(document).ready(function(){initNavTree('linkInstallation.html','');});
 <li><a class="el" href="linkWindows.html">Windows Operating System</a></li>
 </ul>
 <p>Once <a class="el" href="linkRunProcess.html">Run-Analysis</a> is successfully compiled, write in a terminal (Linux/MacOSX) or command prompt (cmd in Windows),</p>
-<pre>
-<span style="color:green">~/SVL/02-Run_Process$</span> ./SeismoVLab.exe -help
+<pre></pre><pre></pre><pre style="padding: 5px; color: white; background-color: black; border: white 2px solid"> <span style="color:aqua">~/SVL/02-Run_Process$</span> ./SeismoVLab.exe -help
 </pre><p>and the following message will be printed:</p>
 <pre>
        _____      _                    _    ____          __            
@@ -140,10 +150,10 @@ $(document).ready(function(){initNavTree('linkInstallation.html','');});
      -file : Name of the SeismoVLab input file to be loaded.      
 </pre><p>Then, we can run a serial/parallel <b>Seismo-VLAB</b> in the following manner:</p>
 <ul>
-<li>For a single-core execution, <pre>
+<li>For a single-core execution, <pre style="padding: 5px; color: white; background-color: black; border: white 2px solid">
 ./SeismoVLab.exe -dir /path/to/simulation/directory -file model.$.svl
 </pre></li>
-<li>For a multiple-core execution, <pre>
+<li>For a multiple-core execution, <pre style="padding: 5px; color: white; background-color: black; border: white 2px solid">
 mpirun -np n ./SeismoVLab.exe -dir /path/to/simulation/directory -file model.$.svl
 </pre></li>
 </ul>
@@ -154,7 +164,7 @@ mpirun -np n ./SeismoVLab.exe -dir /path/to/simulation/directory -file model.$.s
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sat Dec 5 2020 10:49:55 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun Jan 17 2021 18:13:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

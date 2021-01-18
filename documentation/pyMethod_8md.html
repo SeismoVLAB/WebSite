@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 		<meta name="generator" content="Doxygen 1.8.13"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>Seismo-VLAB: Numbering</title>
+		<title>Seismo-VLAB: pyMethod.md File Reference</title>
 		<link href="tabs.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="dynsections.js"></script>
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('linkNumbering.html','');});
+$(document).ready(function(){initNavTree('pyMethod_8md.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -99,27 +99,17 @@ $(document).ready(function(){initNavTree('linkNumbering.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Numbering </div>  </div>
+<div class="title">pyMethod.md File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The numbering scheme in <b>Seismo-VLAB</b> is employed to map the degree of freedom number to the linear system equation to be solved. The number scheme available are Plain and CutHill-McKee. This also computes the amount of memory that PETSc matrices need to be allocated.</p>
-<p>The numbering is performed at <span style="color:green">./SVL/01-Pre_Process/Source/Numbering.py</span>. In this file, the following functions are defined:</p>
-<ul>
-<li><span style="color:green">SetDegreeOfFreedom</span>: This is the main function and assigns the degree of freedom numbering for each <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> according to the User's numbering pattern. Currently, Plain and CutHillMcKee schemes are implemented.</li>
-<li><span style="color:green">FindDefectiveNodes</span>: This function loops over the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> and identify <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> that does not belong to them. Then, it fix such Nodes that are defective. Constraints of type Diaphragm or General are not considered defective.</li>
-<li><span style="color:green">CutHillMcKeeScheme</span>: This function performs the CutHill-McKee ordering Scheme to the free degree of freedom. First compute the Sparse Matrix Pattern, and then computes the permutation vector. Such vercor is finally employed to re-label the free-degree-of-freedom</li>
-<li><span style="color:green">MinimumDegreeScheme</span>: This function is not implemented yet.</li>
-<li><span style="color:green">PlainScheme</span>: This function assign a Plain Scheme to the degree of freedom of each <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>, i.e., the node numbering is assigned consecutively from the lowest to the highest <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> identifier.</li>
-<li><span style="color:green">FormSparseMatrix</span>: This function compute/emulates the Sparse Matrix Pattern to be employed in the user's defined ordering scheme.</li>
-<li><span style="color:green">PetscAllocation</span>: This function This function computes (bruta fuerza) the number of non-zero for each diagonal and off-diagonal blocks required for allocation in PETSc. </li>
-</ul>
-</div></div><!-- contents -->
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
+				<li class="navelem"><a class="el" href="pyMethod_8md.html">pyMethod.md</a></li>
 				<li class="footer">
-					Generated on Sat Dec 5 2020 10:49:55 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun Jan 17 2021 18:13:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

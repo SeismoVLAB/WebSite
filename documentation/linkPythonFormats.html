@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 		<meta name="generator" content="Doxygen 1.8.13"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>Seismo-VLAB: SeismoVLab</title>
+		<title>Seismo-VLAB: Formats.py</title>
 		<link href="tabs.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="dynsections.js"></script>
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('linkSeismoVLab.html','');});
+$(document).ready(function(){initNavTree('linkPythonFormats.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -99,37 +99,23 @@ $(document).ready(function(){initNavTree('linkSeismoVLab.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">SeismoVLab </div>  </div>
+<div class="title">Formats.py </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This file is in charge of creating the input SeismoVLAB (*.svl) file required in the <a class="el" href="linkRunProcess.html">Run-Analysis</a>. It first reads the METIS Graph output Files, then select the elements of the the domain partition, and finally writes the partition files in SeismoVLAB format.</p>
-<p>The SeismoVLAB (*.svl) output file is performed at <span style="color:green">./SVL/01-Pre_Process/Source/SeismoVLab.py</span>. In this file, the following main functions are defined:</p>
+<div class="textblock"><p>The fucntions provided in <span style="color:green"><b>Formats.py</b></span> are:</p>
 <ul>
-<li><span style="color:green">WriteMeshPartition</span>: This function writes the SeismoVLAB (*.svl) file. It first reads the METIS Graph output files, then select the domain partition elements, and finally writes the partition files (<code>name.$.svl</code>) in SeismoVLAB format.</li>
-<li><span style="color:green">WriteParaviewFile</span>: This function writes the Paraview mesh file. This file displays properties such as Partition, Sections and Materials.</li>
+<li><span style="color:blue"><b>parseFile</b></span>(<b>filepath</b>, <b>fileformat</b>):<br />
+ This is the main parsing function. The <b>filepath</b> specifies the path where the files is located, while <b>fileformat</b> is the format of this file. Currently the available formats are: ETABS (<a class="el" href="linkPythonETABS.html">ETABS.py</a>), SAP (<a class="el" href="linkPythonSAP2000.html">SAP2000.py</a>), and GMSH (<a class="el" href="linkPythonGMSH.html">GMSH.py</a>).</li>
+<li><span style="color:blue"><b>parseJSON</b></span>(<b>filepath</b>):<br />
+ This function parses a model in JSON (.json) format that is located at <b>filepath</b>. The structure of the JSON file must be consistent to the one defined in <code>Entities</code> (see <a class="el" href="linkPythonDefinitions.html">Definitions.py</a>). </li>
 </ul>
-<p>There are several functions that are defined to handle writing of the model components in an ordered way:</p>
-<ul>
-<li><span style="color:green">WriteElementPartition</span>: This function appends the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> in the finite element mesh to the SeismoVLAB mesh input files.</li>
-<li><span style="color:green">WriteNodePartition</span>: This function appends the Initial conditions in the finite element mesh to the SeismoVLAB mesh input files.</li>
-<li><span style="color:green">WriteSectionsPartition</span>: This function appends the <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> that are used to construct structural <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> to the SeismoVLAB mesh input files.</li>
-<li><span style="color:green">WriteMaterialPartition</span>: This function appends the <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> that are used to construct either solid/structural <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> to the SeismoVLAB mesh input files.</li>
-<li><span style="color:green">WriteSimulationPartition</span>: This function appends the Simulation specification to run the analysis for a particular load combination pattern.</li>
-</ul>
-<dl class="section note"><dt>Note</dt><dd>The later list are just a few function. The rest can be found at the SeismoVLab.py python script.</dd></dl>
-<dl class="section attention"><dt>Attention</dt><dd>If a new <a class="el" href="linkElement.html">Element</a>/<a class="el" href="linkMaterial.html">Material</a>/<a class="el" href="linkSection.html">Section</a> or another feature is added, it MUST be written in this file, and its format MUST be consistent to the one provided in the <a class="el" href="linkParser.html">Parser</a> in the <a class="el" href="linkRunProcess.html">Run-Analysis</a>. In other words, there are three steps in adding a new feature:<ul>
-<li>Modify the python <a class="el" href="linkPythonParser.html">Parser</a> file to be able to read the input values of the new feature. This may require to define a new python dictionary to store this information.</li>
-<li>Modify the python <a class="el" href="linkSeismoVLab.html">SeismoVLab</a> so that the new feature is written in the output SeismoVLAB (*.svl) file required in the <a class="el" href="linkRunProcess.html">Run-Analysis</a>.</li>
-<li>Modify the C++ <a class="el" href="linkParser.html">Parser</a> file to be able to read the input values of the new feature with the format defined in <a class="el" href="linkSeismoVLab.html">SeismoVLab</a>. </li>
-</ul>
-</dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sat Dec 5 2020 10:49:55 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun Jan 17 2021 18:13:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

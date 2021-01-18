@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 		<meta name="generator" content="Doxygen 1.8.13"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>Seismo-VLAB: Metis</title>
+		<title>Seismo-VLAB: Display.py</title>
 		<link href="tabs.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="dynsections.js"></script>
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('linkMetis.html','');});
+$(document).ready(function(){initNavTree('linkPythonDisplay.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -99,24 +99,24 @@ $(document).ready(function(){initNavTree('linkMetis.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Metis </div>  </div>
+<div class="title">Display.py </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Domain decomposition in <b>Seismo-VLAB</b> is employed to perform a parallel execution. Domain decomposition is carried out at the <a class="el" href="linkPreProcess.html">Pre-Analysis</a> using <b>Metis</b> software. Here, the model domain (i.e., group of objects such as <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>, <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>, <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>, <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a>, and <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a>) is divided so that the number of elements are almost uniform across processors.</p>
-<p>The domain decomposition is performed at <span style="color:green">./SVL/01-Pre_Process/Metis/Metis.py</span>. In this file, there are two functions:</p>
+<div class="textblock"><p>The python <a class="el" href="linkPythonDisplay.html">Display.py</a> file is a set of functions that allow to generate a 3D visualization.</p>
 <ul>
-<li><span style="color:green">SetMetisInputFile</span>: Creates the partition directory Partition and creates the input file for <b>METIS - Serial Graph Partitioning</b> by George Karypis.</li>
-<li><span style="color:green">GetMetisOutputFile</span>: Runs the <b>METIS - Serial Graph Partitioning</b> by George Karypis and saves the element indeces for each partition.</li>
+<li><span style="color:blue"><b>renderData</b></span>(<b>option</b>):<br />
+ This function render a 3D view of the model created so far. The elements in the mesh are colored depending if option='element' or option='partition'. The default color for each option are given at <a class="el" href="linkPythonDefinitions.html">Definitions.py</a> (<span style="color:green"><b>VTKcolors</b></span> dictionary)</li>
+<li><span style="color:blue"><b>setVTKtype</b></span>(<b>option</b>):<br />
+ This function classifies each element (depending on its <b>VTKname</b> defined in <a class="el" href="linkPythonDefinitions.html">Definitions.py</a> at <span style="color:green"><b>VTKelems</b></span> dictionary) and associate a colordepending if option='element' or option='partition'.</li>
 </ul>
-<dl class="section note"><dt>Note</dt><dd>Metis can be downloaded at <a href="http://glaros.dtc.umn.edu/gkhome/metis/metis/overview">http://glaros.dtc.umn.edu/gkhome/metis/metis/overview</a><br />
-The address where metis is downloaded must be consistent with <span style="color:blue">-metis</span> in the <code>*PARTITION</code> block. </dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>The python3 module <b>VTK</b> must be installed to use the <a class="el" href="linkPythonDisplay.html">Display.py</a> functions </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sat Dec 5 2020 10:49:55 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun Jan 17 2021 18:13:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

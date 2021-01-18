@@ -1,8 +1,7 @@
 var linkPreProcess =
 [
-    [ "Parser", "linkPythonParser.html", null ],
-    [ "Metis", "linkMetis.html", null ],
-    [ "Numbering", "linkNumbering.html", null ],
-    [ "PlaneWave", "linkPlaneWave.html", null ],
-    [ "SeismoVLab", "linkSeismoVLab.html", null ]
+    [ "Core", "linkPythonCore.html", "linkPythonCore" ],
+    [ "Method", "linkPythonMethod.html", "linkPythonMethod" ],
+    [ "Parser", "linkPythonParser.html", "linkPythonParser" ],
+    [ "Metis", "linkPythonMetis.html", null ]
 ];

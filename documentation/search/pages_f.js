@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['tieqlin2dquad4',['TIEQlin2DQuad4',['../linkTIEQlin2DQuad4.html',1,'linkElement']]]
+  ['quadrature_20rule',['Quadrature Rule',['../linkQuadratureRule.html',1,'linkElement']]],
+  ['quasistatic',['QuasiStatic',['../linkQuasiStatic.html',1,'linkIntegrator']]]
 ];
