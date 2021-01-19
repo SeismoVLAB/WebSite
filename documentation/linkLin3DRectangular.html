@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linkLin3DRectangular.html','');});
 <div class="title"><a class="el" href="classLin3DRectangular.html" title="Class for creating a solid rectangular section for 3D analysis with linear elastic material for a fra...">Lin3DRectangular</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <code>RECTANGULAR</code> keyword creates a line <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> class that is represented by its height \(h\), and width \(b\). This class computes the cross-sectional properties such as area, shear area, inertias and so on. The figure shows a representation of the <a class="el" href="classLin2DRectangular.html" title="Class for creating a solid rectangular section for 2D analysis with linear elastic material for a fra...">Lin2DRectangular</a> and <a class="el" href="classLin3DRectangular.html" title="Class for creating a solid rectangular section for 3D analysis with linear elastic material for a fra...">Lin3DRectangular</a></p>
+<div class="textblock"><p>The <code>LIN3DRECTANGULAR</code> (or <code>LIN2DRECTANGULAR</code>) keyword creates a line <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> class that is represented by its height \(h\), and width \(b\). This class computes the cross-sectional properties such as area, shear area, inertias and so on. The figure shows a representation of the <a class="el" href="classLin2DRectangular.html" title="Class for creating a solid rectangular section for 2D analysis with linear elastic material for a fra...">Lin2DRectangular</a> and <a class="el" href="classLin3DRectangular.html" title="Class for creating a solid rectangular section for 3D analysis with linear elastic material for a fra...">Lin3DRectangular</a></p>
 <div class="image">
 <img src="Rectangular.png" alt="Rectangular.png" width="18%"/>
 </div>
@@ -112,8 +112,8 @@ $(document).ready(function(){initNavTree('linkLin3DRectangular.html','');});
 <li>Geometric center from bottom left corner: \(\bar{x}_3 = \frac{b}{2}\), and \(\bar{x}_2 = \frac{h}{2}\)</li>
 </ul>
 <hr/>
-<p>A <b>RECTANGULAR</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object can be created using the built-in parse-function provided in the <a class="el" href="classParser.html" title="Class that translate an input file into Seismo-VLAB classes. ">Parser</a> as follows,</p>
-<p><code>SECTION</code> <code>PLAIN</code> <code>Tag</code> <code>LINE</code> <code>mTag</code> <code>RECTANGULAR</code> <code>h</code> <code>b</code></p>
+<p>A <b>LIN3DRECTANGULAR</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object can be created using the built-in parse-function provided in the <a class="el" href="classParser.html" title="Class that translate an input file into Seismo-VLAB classes. ">Parser</a> as follows,</p>
+<p><code>SECTION</code> <code>Tag</code> <code>PLAIN</code> <code>mTag</code> <code>RECTANGULAR</code> <code>h</code> <code>b</code></p>
 <table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
@@ -126,20 +126,20 @@ $(document).ready(function(){initNavTree('linkLin3DRectangular.html','');});
 <tr>
 <td><code>b</code> </td><td>The width of the cross section. </td></tr>
 </table>
-<dl class="section attention"><dt>Attention</dt><dd>The <b>RECTANGULAR</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object is made of one <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>. </dd>
+<dl class="section attention"><dt>Attention</dt><dd>The <b>LIN3DRECTANGULAR</b> / <b>LIN2DRECTANGULAR</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object is made of one <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>. </dd>
 <dd>
-The <b>RECTANGULAR</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> is assumed to be use in linearized and finite deformations. </dd>
+The <b>LIN3DRECTANGULAR</b> / <b>LIN2DRECTANGULAR</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> is assumed to be use in linearized and finite deformations. </dd>
 <dd>
-The strees/strain coordinates at <a class="el" href="classSection.html#a1c700c5934a89ef66d60ce9c6f003561" title="Returns the section strain at given position. ">Section::GetStrainAt()</a> or <a class="el" href="classSection.html#ae767384094272d5c375e7b1390e18c35" title="Returns the section stress at given position. ">Section::GetStressAt()</a> must be refered to the geometric center \(\bar{x}_3,\bar{x}_2\). </dd>
+The stress/strain coordinates at <a class="el" href="classSection.html#a1c700c5934a89ef66d60ce9c6f003561" title="Returns the section strain at given position. ">Section::GetStrainAt()</a> or <a class="el" href="classSection.html#ae767384094272d5c375e7b1390e18c35" title="Returns the section stress at given position. ">Section::GetStressAt()</a> must be refereed to the geometric center \(\bar{x}_3,\bar{x}_2\). </dd>
 <dd>
-If strees/strain are evaluated outside the section domain, the response is computed at \(x_3 = -\frac{b}{2} , x_2 = \frac{h}{2}\) from the axes shown in figure. </dd></dl>
+If stress/strain are evaluated outside the section domain, the response is computed at \(x_3 = -\frac{b}{2} , x_2 = \frac{h}{2}\) from the axes shown in figure. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Jan 17 2021 18:13:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Jan 18 2021 21:55:22 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

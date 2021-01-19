@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linkPythonPlaneWave.html','');});
 <div class="title">PlaneWave.py </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The plane wave file generation is performed at <span style="color:green"><b>./SVL/01-Pre_Process/Core/PlaneWave.py</b></span>. In this file, the following functions are defined:</p>
+<div class="textblock"><p>The plane wave options is designed to compute the domain reduction fields (linear elastic half-space) for a planar wave provided with a time series. In this file, the following functions are defined:</p>
 <ul>
 <li><span style="color:blue"><b>GenerateDRMFiles</b></span>():<br />
  This function writes (generates) the DRM input files to be used in the <b>Run-Analysis</b>. The function writes the input information regarding displacement, velocity and acceleration at each DRM node.</li>
@@ -111,27 +111,35 @@ $(document).ready(function(){initNavTree('linkPythonPlaneWave.html','');});
 <img src="GeneralWave.png" alt="GeneralWave.png" width="55%"/>
 </div>
 </li>
-</ul>
-<p>There are several functions that are defined to handle different wave patterns:</p>
-<ul>
 <li><span style="color:blue"><b>ParseDRMFile</b></span>():<br />
- This function parses the DRM file for plane-wave provided in the Entities['Functions']. The routine reads the displacement, velocity, or accelertion input signal depending on the option=ALL,DISP,VEL,ACCEL provied (at the header) by the user. The structure of the generated file is as follows: <div class="image">
+ This function parses the DRM file for plane-wave provided in the <b>SVL.Entities['Functions']</b>. The routine reads the displacement, velocity, or accelertion input signal depending on the option = <b>ALL</b>,<b>DISP</b>,<b>VEL</b>,<b>ACCEL</b> provied (at the header) by the user. The structure of the generated file is as follows: <div class="image">
 <img src="PlaneWave.png" alt="PlaneWave.png" width="25%"/>
 </div>
 </li>
-<li><span style="color:blue"><b>RHbackground2Dfield</b></span>():<br />
- This function generates the 2D DRM field for a Rayleigh wave in a homogeneous half-space at a particular node. This file has the implementation on how the shear wave displacements, velocities, and acceleration fields are computed.</li>
-<li><span style="color:blue"><b>SVbackground3Dfield</b></span>():<br />
- This function generates the 3D DRM field for a shear wave in a homogeneous layered half-space at a particular node. This file has the implementation on how the shear wave displacements, velocities, and acceleration fields are computed.</li>
 </ul>
-<dl class="section note"><dt>Note</dt><dd>Domain reduction fields for <b>SH</b>, <b>SV</b>, and <b>Rayleigh</b> waves in 2D, and 3D for homogeneous and layered (linear) half-space are currently available. </dd></dl>
+<p>In addition, there are several functions that are defined to handle different wave patterns:</p>
+<ul>
+<li><span style="color:blue"><b>RHbackground2Dfield</b></span>():<br />
+ This function generates the 2D DRM field for a Rayleigh wave in a homogeneous half-space at a particular node. This file has the implementation on how the Rayleigh wave displacements, velocities, and acceleration fields are computed.</li>
+<li><span style="color:blue"><b>RHbackground3Dfield</b></span>():<br />
+ This function generates the 3D DRM field for a Rayleigh wave in a homogeneous half-space at a particular node. This file has the implementation on how the Rayleigh wave displacements, velocities, and acceleration fields are computed.</li>
+<li><span style="color:blue"><b>SVbackground2Dfield</b></span>():<br />
+ This function generates the 2D DRM field for a shear wave (<b>SV</b>) in a homogeneous layered half-space at a particular node. This file has the implementation on how the shear wave displacements, velocities, and acceleration fields are computed.</li>
+<li><span style="color:blue"><b>SVbackground3Dfield</b></span>():<br />
+ This function generates the 3D DRM field for a shear wave (<b>SV</b>) in a homogeneous layered half-space at a particular node. This file has the implementation on how the shear wave displacements, velocities, and acceleration fields are computed.</li>
+<li><span style="color:blue"><b>SHbackground3Dfield</b></span>():<br />
+ This function generates the 3D DRM field for a shear wave (<b>SH</b>) in a homogeneous layered half-space at a particular node. This file has the implementation on how the shear wave displacements, velocities, and acceleration fields are computed.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Domain reduction fields for <b>SH</b>, <b>SV</b>, and <b>Rayleigh</b> waves in 2D, and 3D for homogeneous and layered (linear) half-space are currently available<br />
+Extensions can be performes by modifying RHbackground2Dfield, RHbackground3Dfield, SVbackground3Dfield, ... SHbackground3Dfield.</dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>Please refer to <span style="color:blue"><b>SVL/01-Pre_Process/Core/PlaneWave.py</b></span> for more details in declarations and implementation aspects </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Jan 17 2021 18:13:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Jan 18 2021 21:55:22 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

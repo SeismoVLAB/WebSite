@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linkPythonBuilder.html','');});
 <div class="title">Builder.py </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The python <a class="el" href="linkPythonBuilder.html">Builder.py</a> file is a set of functions that allow to generate line, area, or volume domains for simple geometries. It also provided with functions to merge two domains and remove a section of a domain. These set of fucntions are provided to constuct simpel domains in a fast manner. However, complex geometries are not currently available.</p>
+<div class="textblock"><p>The python <a class="el" href="linkPythonBuilder.html">Builder.py</a> file is a set of functions that allow to generate line, area, or volume domains for simple geometries. It also provided with functions to merge two domains and remove a section of a domain. These set of functions are provided to construct simple domains in a fast manner. However, complex geometries are not currently available.</p>
 <p>Some functions defined in <a class="el" href="linkPythonBuilder.html">Builder.py</a> are:</p>
 <ul>
 <li><span style="color:blue"><b>makeDomainVolume</b></span>(<b>option</b>):<br />
@@ -144,8 +144,8 @@ $(document).ready(function(){initNavTree('linkPythonBuilder.html','');});
 </li>
 <li><span style="color:blue"><b>mergeDomain</b></span>(<b>mesh1</b>, <b>mesh2</b>):<br />
  This function essentially merge two domain. This function returns a merged dictionary with the fields 'Nodes' and 'Elements' in <b>mesh1</b>. The function does not merge nodes that are the same in moth meshes, it just re-number them so that these are 2 independent meshes. Therefore, kinematic constraints should be applied to those nodes.</li>
-<li><span style="color:blue"><b>removeDomain</b></span>(<b>mesh</b>,<b>atributes</b>):<br />
- This function removes a domain specifying the geometry. The dictionary <b>mesh</b> is where the elements and nodes are going to be removed, and <b>atributes</b> is a dictionary containing the information of the domain to be removed. Currently a <span style="color:green"><b>Rectangular</b></span> and a <span style="color:green"><b>Circular</b></span> domain can be removed. The <b>atributes</b> dictionary has the following fields<ul>
+<li><span style="color:blue"><b>removeDomain</b></span>(<b>mesh</b>,<b>attributes</b>):<br />
+ This function removes a domain specifying the geometry. The dictionary <b>mesh</b> is where the elements and nodes are going to be removed, and <b>attributes</b> is a dictionary containing the information of the domain to be removed. Currently a <span style="color:green"><b>Rectangular</b></span> and a <span style="color:green"><b>Circular</b></span> domain can be removed. The <b>attributes</b> dictionary has the following fields<ul>
 <li><span style="color:green"><b>'name'</b></span>=Rectangular<ul>
 <li>'sides' The length of the sides in x,y, and z</li>
 <li>'center' The center of the rectangular domain</li>
@@ -159,15 +159,16 @@ $(document).ready(function(){initNavTree('linkPythonBuilder.html','');});
 </ul>
 </li>
 <li><span style="color:blue"><b>boundaryNodes</b></span>(<b>option</b>):<br />
- This auxiliar function gets the face node for a simple domain </li>
+ This auxiliar function gets the face node for a simple domain</li>
 </ul>
+<dl class="section attention"><dt>Attention</dt><dd>Please refer to <span style="color:blue"><b>SVL/01-Pre_Process/Method/Builder.py</b></span> for more details in declarations and implementation aspects </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Jan 17 2021 18:13:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Jan 18 2021 21:55:22 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

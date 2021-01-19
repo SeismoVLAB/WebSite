@@ -102,21 +102,23 @@ $(document).ready(function(){initNavTree('linkPythonSeismoVLAB.html','');});
 <div class="title">SeismoVLAB.py </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This file check the correctness of the define domain and</p><ul>
+<div class="textblock"><p>This file check the correctness of the defined model and generate the <b>Run-Analysis</b> input files. The functions declared in this file are:</p>
+<ul>
 <li><span style="color:blue"><b>Entities2Processor</b></span>():<br />
  This function creates a dictionary that holds all information required to be written in the k-th processor</li>
 <li><span style="color:blue"><b>createPartitions</b></span>():<br />
  This function creates the partitions according with the pattern generated during the domain decomposition. Basically, goes over the Entities and extract the information</li>
 <li><span style="color:blue"><b>checkWarnings</b></span>():<br />
- This function checks consistency between the parameters specified by the user and the parameters employed in SeismoVLAB. A small report is printed showing all possible warnings encounter during the process. </li>
+ This function checks consistency between the parameters specified by the user and the parameters employed in SeismoVLAB. A small report is printed showing all possible warnings encounter during the process.</li>
 </ul>
+<dl class="section attention"><dt>Attention</dt><dd>Please refer to <span style="color:blue"><b>SVL/01-Pre_Process/Core/SeismoVLAB.py</b></span> for more details in declarations and implementation aspects </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Jan 17 2021 18:13:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Jan 18 2021 21:55:22 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

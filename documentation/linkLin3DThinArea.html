@@ -102,13 +102,13 @@ $(document).ready(function(){initNavTree('linkLin3DThinArea.html','');});
 <div class="title"><a class="el" href="classLin3DThinArea.html" title="Class for creating an area section for 3D analysis with linear elastic material for a shell elements...">Lin3DThinArea</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <code>THINAREA</code> keyword creates an area <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> that is represented by its thickness \(t_h\). The figure shows a representation of the <a class="el" href="classLin3DThinArea.html" title="Class for creating an area section for 3D analysis with linear elastic material for a shell elements...">Lin3DThinArea</a></p>
+<div class="textblock"><p>The <code>LIN3DTHINAREA</code> keyword creates an area <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> that is represented by its thickness \(t_h\). The figure shows a representation of the <a class="el" href="classLin3DThinArea.html" title="Class for creating an area section for 3D analysis with linear elastic material for a shell elements...">Lin3DThinArea</a></p>
 <div class="image">
 <img src="ThinArea.png" alt="ThinArea.png" width="25%"/>
 </div>
 <hr/>
-<p>A <b>THINAREA</b> section object can be created using the built-in parse-function provided in the Parse as follows,</p>
-<p><code>SECTION</code> <code>PLAIN</code> <code>Tag</code> <code>AREA</code> <code>mTag</code> <code>THINAREA</code> <code>th</code></p>
+<p>A <b>LIN3DTHINAREA</b> section object can be created using the built-in parse-function provided in the Parse as follows,</p>
+<p><code>SECTION</code> <code>Tag</code> <code>PLAIN</code> <code>mTag</code> <code>LIN3DTHINAREA</code> <code>th</code></p>
 <table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
@@ -119,18 +119,18 @@ $(document).ready(function(){initNavTree('linkLin3DThinArea.html','');});
 <tr>
 <td><code>th</code> </td><td>The thickness of the area section. </td></tr>
 </table>
-<dl class="section attention"><dt>Attention</dt><dd>The <b>THINAREA</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object is made of one <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>. </dd>
+<dl class="section attention"><dt>Attention</dt><dd>The <b>LIN3DTHINAREA</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object is made of one <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>. </dd>
 <dd>
-The <b>THINAREA</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> is assumed to be use in linearized and finite deformations. </dd>
+The <b>LIN3DTHINAREA</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> is assumed to be use in linearized and finite deformations. </dd>
 <dd>
-The strees/strain coordinates at <a class="el" href="classSection.html#a1c700c5934a89ef66d60ce9c6f003561" title="Returns the section strain at given position. ">Section::GetStrainAt()</a> or <a class="el" href="classSection.html#ae767384094272d5c375e7b1390e18c35" title="Returns the section stress at given position. ">Section::GetStressAt()</a> must be refered to the geometric center \(\bar{x}_3\) or mid-surface, i.e., \(x_3 \in [-\frac{t_h}{2},\frac{t_h}{2}]\). </dd></dl>
+The stress/strain coordinates at <a class="el" href="classSection.html#a1c700c5934a89ef66d60ce9c6f003561" title="Returns the section strain at given position. ">Section::GetStrainAt()</a> or <a class="el" href="classSection.html#ae767384094272d5c375e7b1390e18c35" title="Returns the section stress at given position. ">Section::GetStressAt()</a> must be referred to the geometric center \(\bar{x}_3\) or mid-surface, i.e., \(x_3 \in [-\frac{t_h}{2},\frac{t_h}{2}]\). </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Jan 17 2021 18:13:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Jan 18 2021 21:55:22 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

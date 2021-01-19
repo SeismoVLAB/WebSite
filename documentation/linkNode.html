@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linkNode.html','');});
 <div class="title"><a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classNode.html">Node</a> keyword defines a point in a finite element mesh. This object provides with member functions to obtain the coordinates <a class="el" href="classNode.html#a7b2668a65e828ea8616a2b36a071f955">Node::Coordinates</a> of the node and the numbering for total <a class="el" href="classNode.html#ae45794759a63b572d044f6c73ad791d1">Node::TotalDegreeOfFreedom</a> and free degrees of freedom <a class="el" href="classNode.html#ae465330d294a54b11d29ecdadd29812e">Node::FreeDegreeOfFreedom</a>. This class also stores displacements <a class="el" href="classNode.html#a5b8cd00fc32ef0fa1a35cae3407cc8e1">Node::Displacements</a>, velocities <a class="el" href="classNode.html#a4d29bfa922db5e2f775641a9616de651">Node::Velocities</a> and accelerations <a class="el" href="classNode.html#aa0b9638da475a9666445be272797f53b">Node::Accelerations</a> at each degree of freedom. The Figure bellow shows a schematic representation of a node in 1-dimension, 2-dimensions and 3-dimensions, respectively. The blue arrows represent the translational degree-of-freedom, while the red arrows represent the rotational degree-of-freedom.</p>
+<div class="textblock"><p>The <a class="el" href="classNode.html">Node</a> keyword defines a point in a finite element mesh. This object provides with member functions to obtain the coordinates <a class="el" href="classNode.html#a7b2668a65e828ea8616a2b36a071f955">Node::Coordinates</a> of the node and the numbering for total <a class="el" href="classNode.html#ae45794759a63b572d044f6c73ad791d1">Node::TotalDegreeOfFreedom</a> and free degrees of freedom <a class="el" href="classNode.html#ae465330d294a54b11d29ecdadd29812e">Node::FreeDegreeOfFreedom</a>. This class also stores displacements <a class="el" href="classNode.html#a5b8cd00fc32ef0fa1a35cae3407cc8e1">Node::Displacements</a>, velocities <a class="el" href="classNode.html#a4d29bfa922db5e2f775641a9616de651">Node::Velocities</a> and accelerations <a class="el" href="classNode.html#aa0b9638da475a9666445be272797f53b">Node::Accelerations</a> at each degree of freedom. The Figure bellow shows a schematic representation of a node in 1-dimension, 2-dimensions and 3-dimensions, respectively. The single arrows represent the translational degree-of-freedom, while the triple arrows represent the rotational degree-of-freedom.</p>
 <div class="image">
 <img src="Node.png" alt="Node.png" width="48%"/>
 </div>
@@ -122,7 +122,7 @@ $(document).ready(function(){initNavTree('linkNode.html','');});
 <tr>
 <td><code>coordinates</code> </td><td>The coordinates in 1-, 2-, and 3-dimensions of the node. </td></tr>
 </table>
-<dl class="section attention"><dt>Attention</dt><dd>The node identifier number must be unique and positive ($$). </dd>
+<dl class="section attention"><dt>Attention</dt><dd>The node identifier number must be unique and positive ( \(\geq0\)). </dd>
 <dd>
 The numbering in <code>&lt;total&gt;</code> and <code>&lt;free&gt;</code> defines the sparse matrix pattern. </dd>
 <dd>
@@ -142,7 +142,7 @@ It is worth mentioning that the number of degree of freedom <code>nDof</code> at
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Jan 17 2021 18:13:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Jan 18 2021 21:55:22 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

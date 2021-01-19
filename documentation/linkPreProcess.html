@@ -109,19 +109,19 @@ $(document).ready(function(){initNavTree('linkPreProcess.html','');});
 <li><a class="el" href="linkPythonParser.html">Parser</a></li>
 <li><a class="el" href="linkPythonMetis.html">Metis</a></li>
 </ul>
-<p>The main <a class="el" href="linkPreProcess.html">Pre-Analysis</a> components are shown in the figure below: </p><div class="image">
+<p>The <a class="el" href="linkPreProcess.html">Pre-Analysis</a> execution workflow is shown in the figure below: </p><div class="image">
 <img src="PreAnalysis.png" alt="PreAnalysis.png" width="65%"/>
 </div>
 <p>In general, the <b>Pre-Analysis</b> consists on a set of Python routines that allows to construct a finite element model. This interface is designed to be user friendly and to handle large models in different formats. The main task is orchestrated by two main scripts: <span style="color:green"><b>Core/SeismoVLAB.py</b></span> that essentially loads all required modules to generate a model; and <span style="color:green"><b>Core/Definitions.py</b></span> that contains the data structure (dictionaries) that stores the finite element information to be transformed into <a class="el" href="linkRunProcess.html">Run-Analysis</a> input files.</p>
-<p>The Python routines provided in <b>SVL</b> handles the degree-of-freedom numbering in <span style="color:green"><b>Core/Numberer.py</b></span>, the domain partition in <span style="color:green"><b>Core/Partition.py</b></span>, soil spatial variablility in <span style="color:green"><b>Core/RandomField.py</b></span>, and domain reduction forces in <span style="color:green"><b>Core/PlaneWave.py</b></span>. Also, the <b>Pre-Analysis</b> allows the user to parse formats from other softwares. For example, ETABS (.e2k), SAP (.s2k), and gmsh (.mesh) are currently available. Only basic features (point, material, element, restriction) in these files can be translated into <b>SVL</b> format. Similarly, several routines are provided in the <span style="color:green"><b>Method/Attach.py</b></span> that allows the user to create a model using a Python interface. Then, a user can take full advantage of all the features avaible in Python to manipulate, modify and create a finite element model.</p>
-<dl class="section attention"><dt>Attention</dt><dd>The <b>Pre-Analysis</b> can be fully replaced by another program as long as the output files are written using the <b>Run-Analysis</b> format. </dd></dl>
+<p>The Python routines provided in <b>SVL</b> handles the degree-of-freedom numbering in <span style="color:green"><b>Core/Numberer.py</b></span>, the domain partition in <span style="color:green"><b>Core/Partition.py</b></span>, soil spatial variablility in <span style="color:green"><b>Core/RandomField.py</b></span>, and domain reduction forces in <span style="color:green"><b>Core/PlaneWave.py</b></span>. Also, the <b>Pre-Analysis</b> allows the user to parse formats from other softwares. For example, ETABS (.e2k), SAP (.s2k), and gmsh (.mesh) are currently available. Only basic features (point, material, element, restriction) in these files can be translated into <b>SVL</b> format, but they can be manipulated using Python to include other features. That is why, <b>SVL</b> also offers several routines that are provided in the <span style="color:green"><b>Method/Attach.py</b></span> that allows the user to create/append new entities using a Python interface. Then, a user can take full advantage of all the features avaible in Python to manipulate, modify and create a finite element model.</p>
+<dl class="section attention"><dt>Attention</dt><dd>The <b>Pre-Analysis</b> can be fully replaced by another program as long as the output files (<span style="color:blue">./Partition/File.#.svl</span>) are written using the <b>Run-Analysis</b> format. \ </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Jan 17 2021 18:13:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Jan 18 2021 21:55:22 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

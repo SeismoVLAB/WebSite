@@ -148,11 +148,11 @@ Element Responses</h1>
 <tr>
 <td><code>element</code> </td><td>The list of <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> identifiers. </td></tr>
 </table>
-<p>The output file of a {ELEMENT} recorder for <code>internal force</code> has the structure showed in Figure~fig:ForceRecorder}.</p>
+<p>The output file of a <b>ELEMENT</b> recorder for <code>internal force</code> has the structure showed in the Figure below.</p>
 <div class="image">
 <img src="ForceRecorder.png" alt="ForceRecorder.png" width="45%"/>
 </div>
-<p>The output file of a <b>ELEMENT</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> for <code>stress/strain/strainrate</code> has the structure showed in Figure~fig:StressRecorder}.</p>
+<p>The output file of a <b>ELEMENT</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> for <code>stress/strain/strainrate</code> has the structure showed in the Figure below.</p>
 <div class="image">
 <img src="StressRecorder.png" alt="StressRecorder.png" width="45%"/>
 </div>
@@ -206,11 +206,11 @@ Paraview Animation</h1>
 A <code>nfeatures = n</code> means that the number of connectivities with its length of all elements in the partition is <code>n</code>. This parameter is internally used in Paraview. </dd>
 <dd>
 The <b>PARAVIEW</b> option currently saves two types of output:<ul>
-<li><b>POINT</b>: Response at each <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> of the finite element model. Thus, dsiplacement, velocity and accelerations are displayed. The point quantities are represented in global coordinates.</li>
-<li><b>CELL</b>: Response at each <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> of the finite element model. Thus, stresses and strains are displayed. Note that these quantities are computed at the integration points, for now SeismoVLAB interpolates these results to the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> center. Additionaly, solid elements (truss, quadrilateral, hexahedra) represents the cell quantities in local coordinates, thus <p class="formulaDsp">
+<li><b>POINT</b>: Response at each <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> of the finite element model. Thus, displacement, velocity and accelerations are displayed. The point quantities are represented in global coordinates.</li>
+<li><b>CELL</b>: Response at each <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> of the finite element model. Thus, stresses and strains are displayed. Note that these quantities are computed at the integration points, for now SeismoVLAB interpolates these results to the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> center. Additionally, solid elements (truss, quadrilateral, hexahedra) represents the cell quantities in local coordinates, thus <p class="formulaDsp">
 \[ \text{Strains : } \textrm{XX} = \epsilon_\textrm{11}, \textrm{YY} = \epsilon_\textrm{22}, \textrm{ZZ} = \epsilon_\textrm{33}, \textrm{XY} = \epsilon_\textrm{12}, \textrm{YZ} = \epsilon_\textrm{23}, \textrm{XZ} = \epsilon_\textrm{13}, \nonumber \\ \text{Stresses : } \textrm{XX} = \sigma_\textrm{11}, \textrm{YY} = \sigma_\textrm{22}, \textrm{ZZ} = \sigma_\textrm{33}, \textrm{XY} = \sigma_\textrm{12}, \textrm{YZ} = \sigma_\textrm{23}, \textrm{XZ} = \sigma_\textrm{13}. \nonumber \]
 </p>
- However, for sructural elements (frames, and shells) stresses are generailed section forces, and thus for frames: <p class="formulaDsp">
+ However, for sructural elements (frames, and shells) stresses are generalized section forces, and thus for frames: <p class="formulaDsp">
 \[ \text{Strains : }\textrm{XX} = \epsilon_{11}, \textrm{YY} = \gamma_2, \textrm{ZZ} = \gamma_3, \textrm{XY} = \varphi_1, \textrm{YZ} = \kappa_2, \textrm{XZ} = \kappa_3, \nonumber \\ \text{Stresses : }\textrm{XX} = \textrm{N}_1, \textrm{YY} = \textrm{V}_2, \textrm{ZZ} = \textrm{V}_3, \textrm{XY} = \textrm{T}, \textrm{YZ} = \textrm{M}_2, \textrm{XZ} = \textrm{M}_3. \nonumber \]
 </p>
  and for shell elements: <p class="formulaDsp">
@@ -225,7 +225,7 @@ The <b>PARAVIEW</b> option currently saves two types of output:<ul>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Jan 17 2021 18:13:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Jan 18 2021 21:55:22 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

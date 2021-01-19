@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('linkNewmarkBeta.html','');});
 <p class="formulaDsp">
 \[ \textbf{K}_{\textrm{eff}} = \textbf{K}^{(i-1)}_{n+1} + \frac{4}{\Delta t^2} \textbf{M} + \frac{2}{\Delta t} \textbf{C} \nonumber \\ \textrm{F}_{\textrm{eff}} = \textrm{R}_{n+1}^{(i)} - \textrm{F}_{n+1}^{(i-1)} + \textbf{M} \left(\frac{4}{\Delta t}V_n + A_n - \frac{4}{\Delta t^2} \Delta U \right) + \textbf{C} \left(V_n - \frac{2}{\Delta t} \Delta U\right) \nonumber \]
 </p>
-<p>where \(\delta U^{(i)} = \textbf{K}_{\textrm{eff}}^{-1} \textrm{F}_{\textrm{eff}}\) and \(\Delta U = \displaystyle{\sum_i \delta U^{(i)}}\) shown in linkNewtonRaphson for details.</p>
+<p>where \(\delta U^{(i)} = \textbf{K}_{\textrm{eff}}^{-1} \textrm{F}_{\textrm{eff}}\) and \(\Delta U = \displaystyle{\sum_i \delta U^{(i)}}\) shown in <a class="el" href="linkNewtonRaphson.html">NewtonRaphson</a> for details.</p>
 <hr/>
 <p>A <a class="el" href="classNewmarkBeta.html" title="Class for integrating the equation of motion using the implicit Newmark method. ">NewmarkBeta</a> integrator can be created using the built-in parse-structure provided in the <a class="el" href="classParser.html" title="Class that translate an input file into Seismo-VLAB classes. ">Parser</a> as,</p>
 <p><code>INTEGRATOR</code> <code>NEWMARK</code> <code>mTol</code> <code>kTol</code> <code>fTol</code> <code>dt</code></p>
@@ -135,7 +135,7 @@ The default tolerance for \(M_{ij}\), \(K_{ij}\), and \(F_{j}\) is \(10^{-15}\).
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Jan 17 2021 18:13:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Jan 18 2021 21:55:22 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

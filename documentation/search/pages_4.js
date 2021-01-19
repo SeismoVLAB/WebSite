@@ -8,6 +8,7 @@ var searchData=
   ['element',['Element',['../linkElement.html',1,'linkGeometryModule']]],
   ['element_20local_20axes',['Element Local Axes',['../linkElementLocalAxis.html',1,'linkElement']]],
   ['eqlin2dquad4',['EQlin2DQuad4',['../linkEQlin2DQuad4.html',1,'linkElement']]],
+  ['extendednewmarkbeta',['ExtendedNewmarkBeta',['../linkExtendedNewmarkBeta.html',1,'linkIntegrator']]],
   ['extensions_20and_20more',['Extensions and More',['../linkExtensions.html',1,'']]],
   ['external_20libraries',['External Libraries',['../linkExternalPackages.html',1,'linkExtensions']]],
   ['etabs_2epy',['ETABS.py',['../linkPythonETABS.html',1,'linkPythonParser']]]

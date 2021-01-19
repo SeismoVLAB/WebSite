@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linkLin3DChannel.html','');});
 <div class="title"><a class="el" href="classLin3DChannel.html" title="Class for creating a channel section for 3D analysis with linear elastic material for a frame element...">Lin3DChannel</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <code>CHANNEL</code> keyword creates a line <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> that is represented by its height \(h\), width \(b\), flange thickness \(t_f\), and web thickness \(t_w\). This class computes the cross-sectional properties such as area, shear area, inertias and so on. The figure shows a representation of the <a class="el" href="classLin2DChannel.html" title="Class for creating a channel section for 2D analysis with linear elastic material for a frame element...">Lin2DChannel</a> and <a class="el" href="classLin3DChannel.html" title="Class for creating a channel section for 3D analysis with linear elastic material for a frame element...">Lin3DChannel</a></p>
+<div class="textblock"><p>The <code>LIN3DCHANNEL</code> (or <code>LIN2DCHANNEL</code>) keyword creates a line <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> that is represented by its height \(h\), width \(b\), flange thickness \(t_f\), and web thickness \(t_w\). This class computes the cross-sectional properties such as area, shear area, inertias and so on. The figure shows a representation of the <a class="el" href="classLin2DChannel.html" title="Class for creating a channel section for 2D analysis with linear elastic material for a frame element...">Lin2DChannel</a> and <a class="el" href="classLin3DChannel.html" title="Class for creating a channel section for 3D analysis with linear elastic material for a frame element...">Lin3DChannel</a></p>
 <div class="image">
 <img src="Channel.png" alt="Channel.png" width="18%"/>
 </div>
@@ -112,8 +112,8 @@ $(document).ready(function(){initNavTree('linkLin3DChannel.html','');});
 <li>Geometric center from bottom left corner: \(x_3 = \frac{1}{A} \left(t_f \, b^2 + \frac{1}{2} t_w^2(h - 2 \, t_f) \right) \), and \(x_2 = \frac{h}{2}\)</li>
 </ul>
 <hr/>
-<p>A <b>CHANNEL</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object can be created using the built-in parse-function provided in the Parse as follows,</p>
-<p><code>SECTION</code> <code>PLAIN</code> <code>Tag</code> <code>LINE</code> <code>mTag</code> <code>CHANNEL</code> <code>h</code> <code>b</code> <code>tf</code> <code>tw</code></p>
+<p>A <b>LIN3DCHANNEL</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object can be created using the built-in parse-function provided in the Parse as follows,</p>
+<p><code>SECTION</code> <code>Tag</code> <code>PLAIN</code> <code>mTag</code> <code>LIN3DCHANNEL</code> <code>h</code> <code>b</code> <code>tf</code> <code>tw</code></p>
 <table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
@@ -130,20 +130,20 @@ $(document).ready(function(){initNavTree('linkLin3DChannel.html','');});
 <tr>
 <td><code>tw</code> </td><td>The web thickness of the cross section. </td></tr>
 </table>
-<dl class="section attention"><dt>Attention</dt><dd>The <b>CHANNEL</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object is made of one <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>. </dd>
+<dl class="section attention"><dt>Attention</dt><dd>The <b>LIN3DCHANNEL</b> / <b>LIN2DCHANNEL</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object is made of one <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>. </dd>
 <dd>
-The <b>CHANNEL</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> is assumed to be use in linearized and finite deformations. </dd>
+The <b>LIN3DCHANNEL</b> / <b>LIN2DCHANNEL</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> is assumed to be use in linearized and finite deformations. </dd>
 <dd>
-The strees/strain coordinates at <a class="el" href="classSection.html#a1c700c5934a89ef66d60ce9c6f003561" title="Returns the section strain at given position. ">Section::GetStrainAt()</a> or <a class="el" href="classSection.html#ae767384094272d5c375e7b1390e18c35" title="Returns the section stress at given position. ">Section::GetStressAt()</a> must be refered to the geometric center \(\bar{x}_3,\bar{x}_2\). </dd>
+The stress/strain coordinates at <a class="el" href="classSection.html#a1c700c5934a89ef66d60ce9c6f003561" title="Returns the section strain at given position. ">Section::GetStrainAt()</a> or <a class="el" href="classSection.html#ae767384094272d5c375e7b1390e18c35" title="Returns the section stress at given position. ">Section::GetStressAt()</a> must be referred to the geometric center \(\bar{x}_3,\bar{x}_2\). </dd>
 <dd>
-If strees/strain are evaluated outside the section domain, the response is computed at \(x_3 = \bar{x}_3 - b, x_2 = \frac{h}{2}\) from the axes shown in figure. </dd></dl>
+If stress/strain are evaluated outside the section domain, the response is computed at \(x_3 = \bar{x}_3 - b, x_2 = \frac{h}{2}\) from the axes shown in figure. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Jan 17 2021 18:13:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Jan 18 2021 21:55:22 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>
