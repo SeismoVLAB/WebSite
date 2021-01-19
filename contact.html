@@ -60,14 +60,14 @@
         <!-- insert the page content here -->
         <h2>CONTACT US</h2>
         <p>Please fill out the information below for suggestions, comments or questions:</p>
-        <div class="form_settings"></div>
-            <form action="contact-form.php" method="post">
-            <p><span>Name</span><br><input class="contact" type="text" name="name" placeholder="Your Name" required /></p>
-            <p><span>Email Address</span><br><input class="contact" type="email" name="email" placeholder="Your Email" required /></p>
-            <p><span>Message</span><br><textarea class="contact textarea" rows="8" cols="50" name="message" placeholder="Message..." required></textarea></p>
-            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="Send" /></p>
-            </form>
-        </div>
+        <form action="contact-form.php" method="post">
+          <div class="form_settings">
+            <p><span>Name</span><input class="contact" type="text" name="name" required/></p>
+            <p><span>Email Address</span><input type="text" name="email" required/></p>
+            <p><span>Message</span><textarea rows="8" cols="50" name="message" required></textarea></p>
+            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="submit" value="submit"/></p>
+          </div>
+        </form>
         <p><br /><br /> <b>NOTE:</b> We do not guarantee immediately response but we will try our best.</p>
       </div>
     </div>

@@ -1,19 +1,18 @@
 <?php
+if (isset($_POST['submit'])){
     $name = $_POST['name'];
-    $visitor_email = $_POST['email'];
+    $mailFrom = $_POST['email'];
     $message = $_POST['message'];
 
-    $email_from = 'dankusanovic@gmail.com';
-    $email_subject = "New Form Submission";
-    $email_body = "User Name: $name.\n".
-                    "User Email: $visitor_email.\n".
-                        "User Message: $message.\n";
+    $subject = "New Form Submission from SeismoVLAB";
+        
+    $mailTo = "dkusanov@caltech.edu";
+    $headers = "From: ".$mailFrom;
+    $text = "User Name: ".$name.".\n\n".$message";
 
-    $to = "dkusanov@caltech.edu";
-    $headers = "From: $email_from \r\n";
-    $headers .= "Reply-To: $visitor_email \r\n";
-
-    mail($to,$email_subject,$email_body,$headers);
+    mail($mailTo, $subject, $text, $headers);
 
     header("Location: contact.html");
+}
+    
 ?>
