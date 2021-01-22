@@ -106,11 +106,22 @@ $(document).ready(function(){initNavTree('linkPythonCompute.html','');});
 <ul>
 <li><span style="color:blue"><b>SurfaceFace</b></span>(<b>name</b>, <b>surf</b>):<br />
  This function associate the face (surface) number to an element (<b>name</b>) depending on the connectivity array spacified for that face (<b>surf</b>).</li>
+<li><span style="color:blue"><b>RigidLinkConstraints</b></span>():<br />
+ This function generates the constraints associated to the applied rigid links. The rigid link constraints are available for 2D and 3D. See <a class="el" href="linkPythonAttach.html">Attach.py</a> (<span style="color:green"><b>addRigidLink</b></span>) for more details.</li>
 <li><span style="color:blue"><b>DiaphragmConstraints</b></span>():<br />
  This function generates the constraints associated to the applied rigid diaphragm. The diaphragm constraints are available for 2D and 3D and needs to be specified along an axis. See <a class="el" href="linkPythonAttach.html">Attach.py</a> (<span style="color:green"><b>addDiaphragm</b></span>) for more details.</li>
 <li><span style="color:blue"><b>RigidBodyConstraints</b></span>():<br />
  This function generates the constraints associated to the applied rigid body. The rigid body constraints are available only for 3D. See <a class="el" href="linkPythonAttach.html">Attach.py</a> (<span style="color:green"><b>addRigidBody</b></span>) for more details.</li>
+<li><span style="color:blue"><b>ApplyConstraints</b></span>():<br />
+ This function enforces all constarints defines as rigid link, diaphragm, rigid body at the same time.</li>
 </ul>
+<p><b>Example</b> </p><blockquote class="doxtable">
+<p>The <b>diaphragm constraints</b> are enforced using the python interface as follows:<br />
+SVL.DiaphragmConstraints()<br />
+<br />
+All <b>special constraints</b> such as rigid link, diaphragm, rigid body can be enforced at the same time as follows:<br />
+SVL.ApplyConstraints() </p>
+</blockquote>
 <dl class="section attention"><dt>Attention</dt><dd>Please refer to <span style="color:blue"><b>SVL/01-Pre_Process/Method/Compute.py</b></span> for more details in declarations and implementation aspects </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -118,7 +129,7 @@ $(document).ready(function(){initNavTree('linkPythonCompute.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Mon Jan 18 2021 23:31:27 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Fri Jan 22 2021 10:28:28 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

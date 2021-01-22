@@ -119,11 +119,11 @@ $(document).ready(function(){initNavTree('linkPythonDefinitions.html','');});
 <li><span style="color:blue"><b>Constraints</b></span> : Dictionary that stores all constraints applied to a certain degree of freedom, some of the fiels defined here are:<ul>
 <li><span style="color:green"><b>name</b></span> : Seismo-VLAB material class name</li>
 <li><span style="color:green"><b>attributes</b></span> : Specific properties assigned to the constraint, for example:<ul>
-<li>'stag' : The slave node(s) tags to be constrained</li>
-<li>'sdof' : The slave degree-of-freedom to be constrained</li>
-<li>'mtag' : The master node(s) tags to be employed</li>
-<li>'mdof' : The master degree-of-freedom to be combined</li>
-<li>'factor': The combinational factors to be combined</li>
+<li><span style="color:blue">'stag'</span> : The slave node(s) tags to be constrained</li>
+<li><span style="color:blue">'sdof'</span> : The slave degree-of-freedom to be constrained</li>
+<li><span style="color:blue">'mtag'</span> : The master node(s) tags to be employed</li>
+<li><span style="color:blue">'mdof'</span> : The master degree-of-freedom to be combined</li>
+<li><span style="color:blue">'factor'</span>: The combinational factors to be combined</li>
 </ul>
 </li>
 </ul>
@@ -212,6 +212,13 @@ $(document).ready(function(){initNavTree('linkPythonDefinitions.html','');});
 <li><span style="color:green"><b>dimension</b></span> : The model's dimension, this is '=2' (2D) or '=3' (3D)</li>
 </ul>
 <p>Some other dictionaries are defined. For example: the <code>VTKcolors</code> dictionary stores data to generate the VTK visualization, the <code>SVLclasses</code> stores the information of the material, section, and element classes available in <b>SVL</b>. The <code>SolverOption</code> dictionary has the available option of the solver, and <code>ConvergeTest</code> dictionary the available test that can be performed during the Newton-Raphson method.</p>
+<p><b>Example</b> </p><blockquote class="doxtable">
+<p>The nodes in <b>Entities</b> defined in SVL can be accesses as:<br />
+SVL.Entities['Nodes']<br />
+<br />
+The <b>Options</b> can be modified in SVL as:<br />
+SVL.Entities['numbering'] = 'CutHill-McKee' </p>
+</blockquote>
 <dl class="section attention"><dt>Attention</dt><dd>Please refer to <span style="color:blue"><b>SVL/01-Pre_Process/Core/Definitions.py</b></span> for more details in declarations and implementation aspects </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -219,7 +226,7 @@ $(document).ready(function(){initNavTree('linkPythonDefinitions.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Mon Jan 18 2021 23:31:27 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Fri Jan 22 2021 10:28:28 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

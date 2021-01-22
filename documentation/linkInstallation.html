@@ -112,8 +112,18 @@ $(document).ready(function(){initNavTree('linkInstallation.html','');});
 </ul>
 <p>must be installed to have full avalability of all deatures implemented in the <a class="el" href="linkPreProcess.html">Pre-Analysis</a>.</p>
 <p>Once the previous modules are available in python, it is useful to export <b>SVL</b> path as follows:</p>
-<pre style="padding: 5px; color: white; background-color: black; border: white 2px solid"> <span style="color:lime">export</span> PYTHONPATH=<span style="color:yellow">"/path/to/SeismoVLAB/01-Pre_Process"</span>
-</pre><p>This will allow the user to import <b>SeismoVLAB</b> as a normal python module (in a Python script) as</p>
+<ul>
+<li>For Linux and Mac operating systems: <pre style="padding: 5px; color: white; background-color: black; border: white 2px solid"> <span style="color:lime">export</span> PYTHONPATH=<span style="color:yellow">"/path/to/SeismoVLAB/01-Pre_Process"</span>
+</pre></li>
+<li><p class="startli">For Windows operating systems:<br />
+ Advanced System Setting -&gt; Environment Variables -&gt; New<br />
+</p>
+<p class="startli">Then, under system variables: type <b>PYTHONPATH</b> under <b>Variable name</b>, and provide the <em>01-Pre_Process</em> folder location under <b>Variable value</b> as shown in figure below </p><div class="image">
+<img src="WindowsPython.png" alt="WindowsPython.png" width="30%"/>
+</div>
+</li>
+</ul>
+<p>This will allow the user to import <b>SeismoVLAB</b> as a normal python module (in a Python script) as</p>
 <pre style="padding: 5px; color: white; background-color: black; border: white 2px solid"> <span style="color:magenta">from</span> Core <span style="color:magenta">import</span> SeismoVLAB <span style="color:magenta">as</span> SVL 
 </pre><p>In general, in Linux and Unix based system (MacOS) the package installation is straightforward, since they can be installed using the command line. In windows system we recommend to watch this video (<a href="https://www.youtube.com/watch?v=-llHYUMH9Dg">https://www.youtube.com/watch?v=-llHYUMH9Dg</a>) for a detailed explanation on how to install python modules.</p>
 <p>Once the python dependencies are successfully installed, then the <a class="el" href="linkPreProcess.html">Pre-Analysis</a> can be executed. Write in a terminal (Linux/MacOSX) or command prompt (cmd in Windows),</p>
@@ -165,7 +175,7 @@ mpirun -np n ./SeismoVLab.exe -dir /path/to/simulation/directory -file model.$.s
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Mon Jan 18 2021 23:31:27 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Fri Jan 22 2021 10:28:28 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -161,6 +161,21 @@ $(document).ready(function(){initNavTree('linkPythonBuilder.html','');});
 <li><span style="color:blue"><b>boundaryNodes</b></span>(<b>option</b>):<br />
  This auxiliar function gets the face node for a simple domain</li>
 </ul>
+<p><b>Example</b> </p><blockquote class="doxtable">
+<p>A <b>3D rectangular domain</b> of 1 x 1 x 10 [m] with <a class="el" href="classPML3DHexa8.html" title="Class for creating a 3D linearized eight-node perfectly matched layer element in a mesh...">PML3DHexa8</a> elements is created using the python interface as follows:<br />
+opts = {<br />
+ 'ne' : [1, 1, 10], <br />
+ 'class': '<a class="el" href="classPML3DHexa8.html" title="Class for creating a 3D linearized eight-node perfectly matched layer element in a mesh...">PML3DHexa8</a>', <br />
+ 'ndof' : 9, <br />
+ 'P0' : [0, 0, 0], <br />
+ 'P1' : [1.0, 0, 0], <br />
+ 'P2' : [0, 1.0, 0], <br />
+ 'P3' : [0, 0, 10.0],<br />
+ 'elems': 'HEXA8',<br />
+ 'attributes': {'material': 2, 'n': 2.0, 'L': 10.0, 'R': 1E-5, 'x0': [0.5, 0.5, 10.0], 'npml': [0.0, 0.0, -1.0], 'rule': 'Gauss', 'np': 8}<br />
+ }<br />
+mesh = SVL.makeDomainVolume(<b>options</b>=opts) </p>
+</blockquote>
 <dl class="section attention"><dt>Attention</dt><dd>Please refer to <span style="color:blue"><b>SVL/01-Pre_Process/Method/Builder.py</b></span> for more details in declarations and implementation aspects </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -168,7 +183,7 @@ $(document).ready(function(){initNavTree('linkPythonBuilder.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Mon Jan 18 2021 23:31:27 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Fri Jan 22 2021 10:28:28 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>
