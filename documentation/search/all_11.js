@@ -11,6 +11,5 @@ var searchData=
   ['quadraturerule_2emd',['QuadratureRule.md',['../QuadratureRule_8md.html',1,'']]],
   ['quasistatic',['QuasiStatic',['../classQuasiStatic.html',1,'QuasiStatic'],['../classQuasiStatic.html#a055849649699f38f5e37f77dfae41568',1,'QuasiStatic::QuasiStatic()']]],
   ['quasistatic_2ehpp',['QuasiStatic.hpp',['../QuasiStatic_8hpp.html',1,'']]],
-  ['quasistatic_2emd',['QuasiStatic.md',['../QuasiStatic_8md.html',1,'']]],
-  ['qy',['qY',['../classUnxBoucWen2DLink.html#a566944f7e65851f9c3638de6fecb86ff',1,'UnxBoucWen2DLink::qY()'],['../classUnxBoucWen3DLink.html#a8387ca76528c53760bf248434230be7f',1,'UnxBoucWen3DLink::qY()']]]
+  ['quasistatic_2emd',['QuasiStatic.md',['../QuasiStatic_8md.html',1,'']]]
 ];

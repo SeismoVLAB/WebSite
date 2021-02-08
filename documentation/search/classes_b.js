@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['parser',['Parser',['../classParser.html',1,'']]],
   ['petscsolver',['PetscSolver',['../classPetscSolver.html',1,'']]],
   ['plastic1dj2',['Plastic1DJ2',['../classPlastic1DJ2.html',1,'']]],
   ['plastic3dba',['Plastic3DBA',['../classPlastic3DBA.html',1,'']]],

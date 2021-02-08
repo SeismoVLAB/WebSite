@@ -1,6 +1,6 @@
 var classkin2DTruss2 =
 [
-    [ "kin2DTruss2", "classkin2DTruss2.html#a643ec1073b8b4ab017b40ef4aa98cb9e", null ],
+    [ "kin2DTruss2", "classkin2DTruss2.html#aa54892628a1e2c25a2e385756c52bc2f", null ],
     [ "~kin2DTruss2", "classkin2DTruss2.html#a77b2b5a3b918526b4ff502a380b98746", null ],
     [ "CommitState", "classkin2DTruss2.html#ab43e1e1bd544f874dbdfaf0028b30fb1", null ],
     [ "ComputeAxialForce", "classkin2DTruss2.html#a3de10e812b01378349d2f1be791cdc34", null ],
@@ -33,7 +33,6 @@ var classkin2DTruss2 =
     [ "UpdateState", "classkin2DTruss2.html#a89f3020fc7285d62a71587f4c3eaa425", null ],
     [ "A", "classkin2DTruss2.html#aa3b2af15ce760384b179240fb9ddf589", null ],
     [ "Lo", "classkin2DTruss2.html#a506aa33b957471f775accbc52ad8427c", null ],
-    [ "MassForm", "classkin2DTruss2.html#ac277b74ce866745949df326bc392a83b", null ],
     [ "theDamping", "classkin2DTruss2.html#a8497905e70859510b1746a8ffe9c4336", null ],
     [ "theMaterial", "classkin2DTruss2.html#ac97dc6ef802b77ae61705834f4bc9408", null ],
     [ "theNodes", "classkin2DTruss2.html#a4bc80232ec383e5f1185e3d06bce2fda", null ]

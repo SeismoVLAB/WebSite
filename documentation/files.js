@@ -200,9 +200,7 @@ var files =
     [ "null3DFrame2.hpp", "null3DFrame2_8hpp.html", [
       [ "null3DFrame2", "classnull3DFrame2.html", "classnull3DFrame2" ]
     ] ],
-    [ "Parser.hpp", "Parser_8hpp.html", [
-      [ "Parser", "classParser.html", "classParser" ]
-    ] ],
+    [ "Parser.hpp", "Parser_8hpp.html", "Parser_8hpp" ],
     [ "PetscSolver.hpp", "PetscSolver_8hpp.html", [
       [ "PetscSolver", "classPetscSolver.html", "classPetscSolver" ]
     ] ],
@@ -240,6 +238,7 @@ var files =
     [ "Recorder.hpp", "Recorder_8hpp.html", [
       [ "Recorder", "classRecorder.html", "classRecorder" ]
     ] ],
+    [ "RSJparser.hpp", "RSJparser_8hpp.html", "RSJparser_8hpp" ],
     [ "Section.hpp", "Section_8hpp.html", [
       [ "Section", "classSection.html", "classSection" ]
     ] ],

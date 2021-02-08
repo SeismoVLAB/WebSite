@@ -133,9 +133,9 @@ Collaboration diagram for UnxBoucWen3DLink:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac54c7a7a7120c472d19c1d6e0460f0e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#ac54c7a7a7120c472d19c1d6e0460f0e5">UnxBoucWen3DLink</a> (const std::vector&lt; unsigned int &gt; nodes, std::vector&lt; double &gt; parameters, std::vector&lt; double &gt; variables, const unsigned int dim, const unsigned int dir, bool massform=false)</td></tr>
-<tr class="memdesc:ac54c7a7a7120c472d19c1d6e0460f0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classUnxBoucWen3DLink.html" title="Class for creating an uniaxial 3D two-node link element using Bouc-Wen formulation. ">UnxBoucWen3DLink</a> in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.  <a href="#ac54c7a7a7120c472d19c1d6e0460f0e5">More...</a><br /></td></tr>
-<tr class="separator:ac54c7a7a7120c472d19c1d6e0460f0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad857baeb9ced9ec9653c40852d0f3488"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#ad857baeb9ced9ec9653c40852d0f3488">UnxBoucWen3DLink</a> (const std::vector&lt; unsigned int &gt; nodes, std::vector&lt; double &gt; parameters, std::vector&lt; double &gt; variables, const unsigned int dim, const unsigned int dir, double tol=1E-06, unsigned int nmax=50)</td></tr>
+<tr class="memdesc:ad857baeb9ced9ec9653c40852d0f3488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classUnxBoucWen3DLink.html" title="Class for creating an uniaxial 3D two-node link element using Bouc-Wen formulation. ">UnxBoucWen3DLink</a> in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.  <a href="#ad857baeb9ced9ec9653c40852d0f3488">More...</a><br /></td></tr>
+<tr class="separator:ad857baeb9ced9ec9653c40852d0f3488"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36bf321227ba23627720e9c538bbe602"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#a36bf321227ba23627720e9c538bbe602">~UnxBoucWen3DLink</a> ()</td></tr>
 <tr class="memdesc:a36bf321227ba23627720e9c538bbe602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classUnxBoucWen3DLink.html" title="Class for creating an uniaxial 3D two-node link element using Bouc-Wen formulation. ">UnxBoucWen3DLink</a> object.  <a href="#a36bf321227ba23627720e9c538bbe602">More...</a><br /></td></tr>
 <tr class="separator:a36bf321227ba23627720e9c538bbe602"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -245,12 +245,15 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ac4eb7aa622b7a271f0a09eac1f1796c0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#ac4eb7aa622b7a271f0a09eac1f1796c0">A</a></td></tr>
-<tr class="memdesc:ac4eb7aa622b7a271f0a09eac1f1796c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restoring force amplitude parameter.  <a href="#ac4eb7aa622b7a271f0a09eac1f1796c0">More...</a><br /></td></tr>
-<tr class="separator:ac4eb7aa622b7a271f0a09eac1f1796c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a478ac82690ad44c073816d1710c291f3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#a478ac82690ad44c073816d1710c291f3">mu</a></td></tr>
-<tr class="memdesc:a478ac82690ad44c073816d1710c291f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exponent of non-linear hardening component.  <a href="#a478ac82690ad44c073816d1710c291f3">More...</a><br /></td></tr>
-<tr class="separator:a478ac82690ad44c073816d1710c291f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74e00c5a20ac346728d623cceba04d8a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#a74e00c5a20ac346728d623cceba04d8a">Ko</a></td></tr>
+<tr class="memdesc:a74e00c5a20ac346728d623cceba04d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initial stiffness of hysteretic component.  <a href="#a74e00c5a20ac346728d623cceba04d8a">More...</a><br /></td></tr>
+<tr class="separator:a74e00c5a20ac346728d623cceba04d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6944ad6211d155f05681592b997079c3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#a6944ad6211d155f05681592b997079c3">Fy</a></td></tr>
+<tr class="memdesc:a6944ad6211d155f05681592b997079c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yield force.  <a href="#a6944ad6211d155f05681592b997079c3">More...</a><br /></td></tr>
+<tr class="separator:a6944ad6211d155f05681592b997079c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae374fb31eb64d7a968a1e6d2033b0d82"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#ae374fb31eb64d7a968a1e6d2033b0d82">alpha</a></td></tr>
+<tr class="memdesc:ae374fb31eb64d7a968a1e6d2033b0d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yielding exponent (sharpness of hysteresis loop corners)  <a href="#ae374fb31eb64d7a968a1e6d2033b0d82">More...</a><br /></td></tr>
+<tr class="separator:ae374fb31eb64d7a968a1e6d2033b0d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0a156cad525ae604f63c6e1b3e599f5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#ac0a156cad525ae604f63c6e1b3e599f5">eta</a></td></tr>
 <tr class="memdesc:ac0a156cad525ae604f63c6e1b3e599f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yielding exponent (sharpness of hysteresis loop corners)  <a href="#ac0a156cad525ae604f63c6e1b3e599f5">More...</a><br /></td></tr>
 <tr class="separator:ac0a156cad525ae604f63c6e1b3e599f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -260,21 +263,6 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a2962a06e855e72064ecf9672d030b5a1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#a2962a06e855e72064ecf9672d030b5a1">gamma</a></td></tr>
 <tr class="memdesc:a2962a06e855e72064ecf9672d030b5a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">second hysteretic shape parameter  <a href="#a2962a06e855e72064ecf9672d030b5a1">More...</a><br /></td></tr>
 <tr class="separator:a2962a06e855e72064ecf9672d030b5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8387ca76528c53760bf248434230be7f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#a8387ca76528c53760bf248434230be7f">qY</a></td></tr>
-<tr class="memdesc:a8387ca76528c53760bf248434230be7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yield force of hysteretic component.  <a href="#a8387ca76528c53760bf248434230be7f">More...</a><br /></td></tr>
-<tr class="separator:a8387ca76528c53760bf248434230be7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3435978968f26aecdfd323f55794e4d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#af3435978968f26aecdfd323f55794e4d">uY</a></td></tr>
-<tr class="memdesc:af3435978968f26aecdfd323f55794e4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yield deformation of hysteretic component.  <a href="#af3435978968f26aecdfd323f55794e4d">More...</a><br /></td></tr>
-<tr class="separator:af3435978968f26aecdfd323f55794e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54582a1eabb4933c208961ef9ebc4e27"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#a54582a1eabb4933c208961ef9ebc4e27">k0</a></td></tr>
-<tr class="memdesc:a54582a1eabb4933c208961ef9ebc4e27"><td class="mdescLeft">&#160;</td><td class="mdescRight">initial stiffness of hysteretic component  <a href="#a54582a1eabb4933c208961ef9ebc4e27">More...</a><br /></td></tr>
-<tr class="separator:a54582a1eabb4933c208961ef9ebc4e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f3d93c21df12b0e07a047d19673bd3e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#a6f3d93c21df12b0e07a047d19673bd3e">k2</a></td></tr>
-<tr class="memdesc:a6f3d93c21df12b0e07a047d19673bd3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">stiffness of linear elastic component  <a href="#a6f3d93c21df12b0e07a047d19673bd3e">More...</a><br /></td></tr>
-<tr class="separator:a6f3d93c21df12b0e07a047d19673bd3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9f95cb064525472a94ded4574acb067"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#ac9f95cb064525472a94ded4574acb067">k3</a></td></tr>
-<tr class="memdesc:ac9f95cb064525472a94ded4574acb067"><td class="mdescLeft">&#160;</td><td class="mdescRight">stiffness of nonlinear elastic component  <a href="#ac9f95cb064525472a94ded4574acb067">More...</a><br /></td></tr>
-<tr class="separator:ac9f95cb064525472a94ded4574acb067"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6498ffe943d6fad140aae74ffe5ab11e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#a6498ffe943d6fad140aae74ffe5ab11e">Tol</a></td></tr>
 <tr class="memdesc:a6498ffe943d6fad140aae74ffe5ab11e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Newton-Raphson Tolerance.  <a href="#a6498ffe943d6fad140aae74ffe5ab11e">More...</a><br /></td></tr>
 <tr class="separator:a6498ffe943d6fad140aae74ffe5ab11e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -299,9 +287,6 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a5a4ef0c6af9aa026cd4486b058a706ae"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#a5a4ef0c6af9aa026cd4486b058a706ae">nMax</a></td></tr>
 <tr class="memdesc:a5a4ef0c6af9aa026cd4486b058a706ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Newton-Raphson maximum number of iterations.  <a href="#a5a4ef0c6af9aa026cd4486b058a706ae">More...</a><br /></td></tr>
 <tr class="separator:a5a4ef0c6af9aa026cd4486b058a706ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9d1051997c3f99540e619c998b2cdb8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#ae9d1051997c3f99540e619c998b2cdb8">MassForm</a></td></tr>
-<tr class="memdesc:ae9d1051997c3f99540e619c998b2cdb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mass Formulation.  <a href="#ae9d1051997c3f99540e619c998b2cdb8">More...</a><br /></td></tr>
-<tr class="separator:ae9d1051997c3f99540e619c998b2cdb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc9c125d5e2d535589829dbde0e89547"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen3DLink.html#acc9c125d5e2d535589829dbde0e89547">Dimension</a></td></tr>
 <tr class="memdesc:acc9c125d5e2d535589829dbde0e89547"><td class="mdescLeft">&#160;</td><td class="mdescRight">The element dimension in global coordinates.  <a href="#acc9c125d5e2d535589829dbde0e89547">More...</a><br /></td></tr>
 <tr class="separator:acc9c125d5e2d535589829dbde0e89547"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -316,8 +301,8 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>Class for creating an uniaxial 3D two-node link element using Bouc-Wen formulation. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="Element_8hpp.html" title="This file contains the &quot;Element&quot; object declarations, which defines an element in a finite element me...">Element.hpp</a> <a class="el" href="Mesh_8hpp.html" title="This file contains the &quot;Mesh object&quot; declarations, which stores nodes, materials, elements...">Mesh.hpp</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac54c7a7a7120c472d19c1d6e0460f0e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac54c7a7a7120c472d19c1d6e0460f0e5">&#9670;&nbsp;</a></span>UnxBoucWen3DLink()</h2>
+<a id="ad857baeb9ced9ec9653c40852d0f3488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad857baeb9ced9ec9653c40852d0f3488">&#9670;&nbsp;</a></span>UnxBoucWen3DLink()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -355,8 +340,14 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>massform</em> = <code>false</code>&#160;</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tol</em> = <code>1E-06</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>nmax</em> = <code>50</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -374,12 +365,13 @@ Private Attributes</h2></td></tr>
     <tr><td class="paramname">variables</td><td>Vector that contains auxiliar model parameters. </td></tr>
     <tr><td class="paramname">dim</td><td>The model dimension. </td></tr>
     <tr><td class="paramname">dir</td><td>The local direction where this <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> is acting. </td></tr>
-    <tr><td class="paramname">massform</td><td>The mass formulation. </td></tr>
+    <tr><td class="paramname">tol</td><td>Tolerance to stop Newton-Raphson iterations. </td></tr>
+    <tr><td class="paramname">nmax</td><td>Maximum number of iteration for Newton-Raphson. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>More details can be found at <a class="el" href="linkUnxBoucWen3DLink.html">UnxBoucWen3DLink</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classUnxBoucWen3DLink.html#ab7ae3c9682f63d6815c8b7d3eb71b528" title="The Element&#39;s Nodes. ">UnxBoucWen3DLink::theNodes</a>, UnxBoucWen3DLink::theDirection, UnxBoucWen3DLink::theDimension, <a class="el" href="classUnxBoucWen3DLink.html#ae9d1051997c3f99540e619c998b2cdb8" title="Mass Formulation. ">UnxBoucWen3DLink::MassForm</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classUnxBoucWen3DLink.html#ab7ae3c9682f63d6815c8b7d3eb71b528" title="The Element&#39;s Nodes. ">UnxBoucWen3DLink::theNodes</a>, UnxBoucWen3DLink::theDirection, UnxBoucWen3DLink::theDimension. </dd></dl>
 
 </div>
 </div>
@@ -1284,8 +1276,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac4eb7aa622b7a271f0a09eac1f1796c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4eb7aa622b7a271f0a09eac1f1796c0">&#9670;&nbsp;</a></span>A</h2>
+<a id="ae374fb31eb64d7a968a1e6d2033b0d82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae374fb31eb64d7a968a1e6d2033b0d82">&#9670;&nbsp;</a></span>alpha</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1294,7 +1286,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double UnxBoucWen3DLink::A</td>
+          <td class="memname">double UnxBoucWen3DLink::alpha</td>
         </tr>
       </table>
   </td>
@@ -1304,7 +1296,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Restoring force amplitude parameter. </p>
+<p>Yielding exponent (sharpness of hysteresis loop corners) </p>
 
 </div>
 </div>
@@ -1404,6 +1396,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a6944ad6211d155f05681592b997079c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6944ad6211d155f05681592b997079c3">&#9670;&nbsp;</a></span>Fy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnxBoucWen3DLink::Fy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Yield force. </p>
+
+</div>
+</div>
 <a id="a2962a06e855e72064ecf9672d030b5a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2962a06e855e72064ecf9672d030b5a1">&#9670;&nbsp;</a></span>gamma</h2>
 
@@ -1425,78 +1441,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>second hysteretic shape parameter </p>
-
-</div>
-</div>
-<a id="a54582a1eabb4933c208961ef9ebc4e27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54582a1eabb4933c208961ef9ebc4e27">&#9670;&nbsp;</a></span>k0</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double UnxBoucWen3DLink::k0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>initial stiffness of hysteretic component </p>
-
-</div>
-</div>
-<a id="a6f3d93c21df12b0e07a047d19673bd3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f3d93c21df12b0e07a047d19673bd3e">&#9670;&nbsp;</a></span>k2</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double UnxBoucWen3DLink::k2</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>stiffness of linear elastic component </p>
-
-</div>
-</div>
-<a id="ac9f95cb064525472a94ded4574acb067"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9f95cb064525472a94ded4574acb067">&#9670;&nbsp;</a></span>k3</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double UnxBoucWen3DLink::k3</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>stiffness of nonlinear elastic component </p>
 
 </div>
 </div>
@@ -1524,8 +1468,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae9d1051997c3f99540e619c998b2cdb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9d1051997c3f99540e619c998b2cdb8">&#9670;&nbsp;</a></span>MassForm</h2>
+<a id="a74e00c5a20ac346728d623cceba04d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74e00c5a20ac346728d623cceba04d8a">&#9670;&nbsp;</a></span>Ko</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1534,7 +1478,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool UnxBoucWen3DLink::MassForm</td>
+          <td class="memname">double UnxBoucWen3DLink::Ko</td>
         </tr>
       </table>
   </td>
@@ -1544,31 +1488,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Mass Formulation. </p>
-
-</div>
-</div>
-<a id="a478ac82690ad44c073816d1710c291f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a478ac82690ad44c073816d1710c291f3">&#9670;&nbsp;</a></span>mu</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double UnxBoucWen3DLink::mu</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Exponent of non-linear hardening component. </p>
+<p>Initial stiffness of hysteretic component. </p>
 
 </div>
 </div>
@@ -1617,30 +1537,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Non-linear Bouc-Wen internal force. </p>
-
-</div>
-</div>
-<a id="a8387ca76528c53760bf248434230be7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8387ca76528c53760bf248434230be7f">&#9670;&nbsp;</a></span>qY</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double UnxBoucWen3DLink::qY</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Yield force of hysteretic component. </p>
 
 </div>
 </div>
@@ -1740,30 +1636,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af3435978968f26aecdfd323f55794e4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3435978968f26aecdfd323f55794e4d">&#9670;&nbsp;</a></span>uY</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double UnxBoucWen3DLink::uY</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Yield deformation of hysteretic component. </p>
-
-</div>
-</div>
 <a id="afdd71ebb98f8cc204bd9f1b068338e6c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afdd71ebb98f8cc204bd9f1b068338e6c">&#9670;&nbsp;</a></span>z</h2>
 
@@ -1819,7 +1691,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classUnxBoucWen3DLink.html">UnxBoucWen3DLink</a></li>
 				<li class="footer">
-					Generated on Wed Jan 27 2021 22:17:10 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun Feb 7 2021 20:59:19 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

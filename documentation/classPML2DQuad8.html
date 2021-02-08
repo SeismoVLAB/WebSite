@@ -135,9 +135,9 @@ Collaboration diagram for PML2DQuad8:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3e9b31a787f4c2e845814cb9b0988cba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPML2DQuad8.html#a3e9b31a787f4c2e845814cb9b0988cba">PML2DQuad8</a> (const std::vector&lt; unsigned int &gt; nodes, std::unique_ptr&lt; <a class="el" href="classMaterial.html">Material</a> &gt; &amp;material, const std::vector&lt; double &gt; parameters, const std::string quadrature=&quot;GAUSS&quot;, const unsigned int nGauss=4, bool massform=false)</td></tr>
-<tr class="memdesc:a3e9b31a787f4c2e845814cb9b0988cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classPML2DQuad8.html" title="Class for creating a 2D linearized eight-node perfectly matched layer element in a mesh...">PML2DQuad8</a> in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.  <a href="#a3e9b31a787f4c2e845814cb9b0988cba">More...</a><br /></td></tr>
-<tr class="separator:a3e9b31a787f4c2e845814cb9b0988cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2593b4f7d5d7a7c6cac23647188deb3c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPML2DQuad8.html#a2593b4f7d5d7a7c6cac23647188deb3c">PML2DQuad8</a> (const std::vector&lt; unsigned int &gt; nodes, std::unique_ptr&lt; <a class="el" href="classMaterial.html">Material</a> &gt; &amp;material, const std::vector&lt; double &gt; parameters, const std::string quadrature=&quot;GAUSS&quot;, const unsigned int nGauss=27)</td></tr>
+<tr class="memdesc:a2593b4f7d5d7a7c6cac23647188deb3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classPML2DQuad8.html" title="Class for creating a 2D linearized eight-node perfectly matched layer element in a mesh...">PML2DQuad8</a> in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.  <a href="#a2593b4f7d5d7a7c6cac23647188deb3c">More...</a><br /></td></tr>
+<tr class="separator:a2593b4f7d5d7a7c6cac23647188deb3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53b18b5fc58f30c2f8d6353314c87cb5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPML2DQuad8.html#a53b18b5fc58f30c2f8d6353314c87cb5">~PML2DQuad8</a> ()</td></tr>
 <tr class="memdesc:a53b18b5fc58f30c2f8d6353314c87cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classPML2DQuad8.html" title="Class for creating a 2D linearized eight-node perfectly matched layer element in a mesh...">PML2DQuad8</a> object.  <a href="#a53b18b5fc58f30c2f8d6353314c87cb5">More...</a><br /></td></tr>
 <tr class="separator:a53b18b5fc58f30c2f8d6353314c87cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -256,8 +256,6 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:afa0761d292bf5d7b2ae902423febb3fe"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPML2DQuad8.html#afa0761d292bf5d7b2ae902423febb3fe">t</a></td></tr>
 <tr class="memdesc:afa0761d292bf5d7b2ae902423febb3fe"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> thickness.  <a href="#afa0761d292bf5d7b2ae902423febb3fe">More...</a><br /></td></tr>
 <tr class="separator:afa0761d292bf5d7b2ae902423febb3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3e85a8a205ec54591b46f160a4eea0b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPML2DQuad8.html#ae3e85a8a205ec54591b46f160a4eea0b">MassForm</a></td></tr>
-<tr class="separator:ae3e85a8a205ec54591b46f160a4eea0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae422118b29571d23eeca35df0a4e7b3b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPML2DQuad8.html#ae422118b29571d23eeca35df0a4e7b3b">m_pml</a></td></tr>
 <tr class="memdesc:ae422118b29571d23eeca35df0a4e7b3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polynomial degree of thePerfectly Match Layer.  <a href="#ae422118b29571d23eeca35df0a4e7b3b">More...</a><br /></td></tr>
 <tr class="separator:ae422118b29571d23eeca35df0a4e7b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -296,8 +294,8 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>Class for creating a 2D linearized eight-node perfectly matched layer element in a mesh. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="Element_8hpp.html" title="This file contains the &quot;Element&quot; object declarations, which defines an element in a finite element me...">Element.hpp</a> <a class="el" href="Mesh_8hpp.html" title="This file contains the &quot;Mesh object&quot; declarations, which stores nodes, materials, elements...">Mesh.hpp</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a3e9b31a787f4c2e845814cb9b0988cba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e9b31a787f4c2e845814cb9b0988cba">&#9670;&nbsp;</a></span>PML2DQuad8()</h2>
+<a id="a2593b4f7d5d7a7c6cac23647188deb3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2593b4f7d5d7a7c6cac23647188deb3c">&#9670;&nbsp;</a></span>PML2DQuad8()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -330,13 +328,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>nGauss</em> = <code>4</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>massform</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>nGauss</em> = <code>27</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -354,7 +346,6 @@ Private Attributes</h2></td></tr>
     <tr><td class="paramname">parameters</td><td>The list of PML parameters. </td></tr>
     <tr><td class="paramname">quadrature</td><td>The integration rule to be employed. </td></tr>
     <tr><td class="paramname">nGauss</td><td>Number of Gauss points for <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> integration. </td></tr>
-    <tr><td class="paramname">massform</td><td>The mass formulation to compute the mass matrix. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1480,28 +1471,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae3e85a8a205ec54591b46f160a4eea0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3e85a8a205ec54591b46f160a4eea0b">&#9670;&nbsp;</a></span>MassForm</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool PML2DQuad8::MassForm</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a7c691a1ae483d497284b1d9cd6ee07fb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7c691a1ae483d497284b1d9cd6ee07fb">&#9670;&nbsp;</a></span>nx_pml</h2>
 
@@ -1749,7 +1718,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classPML2DQuad8.html">PML2DQuad8</a></li>
 				<li class="footer">
-					Generated on Wed Jan 27 2021 22:17:10 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun Feb 7 2021 20:59:19 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

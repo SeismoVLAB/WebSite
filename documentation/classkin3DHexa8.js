@@ -1,6 +1,6 @@
 var classkin3DHexa8 =
 [
-    [ "kin3DHexa8", "classkin3DHexa8.html#ae332d0089433334be63f90dfade300dc", null ],
+    [ "kin3DHexa8", "classkin3DHexa8.html#acb7fb51ecfd7299fb1d649bd98d9baad", null ],
     [ "~kin3DHexa8", "classkin3DHexa8.html#aeecc3a14231f129cfe8674a15f773968", null ],
     [ "CommitState", "classkin3DHexa8.html#a81914652ed255d582fc2162945acfb57", null ],
     [ "ComputeBodyForces", "classkin3DHexa8.html#accf4f721367576ffac4072b4225c1035", null ],
@@ -35,7 +35,6 @@ var classkin3DHexa8 =
     [ "TransformTensorToVector", "classkin3DHexa8.html#a09f99fd35b3a38d31f6d6885b06c7cae", null ],
     [ "TransformVectorToTensor", "classkin3DHexa8.html#a7535ac26cdbe261d273a04ab223aba62", null ],
     [ "UpdateState", "classkin3DHexa8.html#a238b3089b6e450cd244f13cf1b30af5b", null ],
-    [ "MassForm", "classkin3DHexa8.html#af7d9a3ff87dc5617bb7858ec0cea5bbc", null ],
     [ "QuadraturePoints", "classkin3DHexa8.html#a37606bdedbad9e69514945b5b510e32b", null ],
     [ "theDamping", "classkin3DHexa8.html#a70045eadda93ec2692eab51383f491d0", null ],
     [ "theMaterial", "classkin3DHexa8.html#afc62be4906070f6c33fcf1ef08246d5c", null ],

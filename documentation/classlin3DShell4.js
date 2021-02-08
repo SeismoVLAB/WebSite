@@ -1,6 +1,6 @@
 var classlin3DShell4 =
 [
-    [ "lin3DShell4", "classlin3DShell4.html#aa89bcb207f7e7f6bfa98d2dc77fc2984", null ],
+    [ "lin3DShell4", "classlin3DShell4.html#a79e10200530d23a319698e861ad97623", null ],
     [ "~lin3DShell4", "classlin3DShell4.html#ac6a75af9fd357bed74575313201edef7", null ],
     [ "AssemblePlateMembraneEffects", "classlin3DShell4.html#ad8cb62c73b7c1cf56356372114c33ae8", null ],
     [ "CommitState", "classlin3DShell4.html#a798a5adfcc0b4091b273fda112ff7bac", null ],
@@ -38,7 +38,6 @@ var classlin3DShell4 =
     [ "SetDamping", "classlin3DShell4.html#ac5f2e9ba40cc014ff87b090d860ceeef", null ],
     [ "SetDomain", "classlin3DShell4.html#aa44257d52f60fae13574ae79f50ce952", null ],
     [ "UpdateState", "classlin3DShell4.html#aeea8a4eddec8b699bb01c670179b5f2c", null ],
-    [ "MassForm", "classlin3DShell4.html#a8bd72d41094f07f0f261920f9bafef3b", null ],
     [ "QuadraturePoints", "classlin3DShell4.html#abe8ba78a20c17d39d75ed24aed25fa9d", null ],
     [ "theDamping", "classlin3DShell4.html#ac5cfed64a11101f08d21f1d129c2f4a2", null ],
     [ "theNodes", "classlin3DShell4.html#a9ba3508826296964ef8836485590a022", null ],

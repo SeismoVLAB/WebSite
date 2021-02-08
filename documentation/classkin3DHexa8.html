@@ -136,9 +136,9 @@ Collaboration diagram for kin3DHexa8:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae332d0089433334be63f90dfade300dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkin3DHexa8.html#ae332d0089433334be63f90dfade300dc">kin3DHexa8</a> (const std::vector&lt; unsigned int &gt; nodes, std::unique_ptr&lt; <a class="el" href="classMaterial.html">Material</a> &gt; &amp;material, const std::string quadrature=&quot;GAUSS&quot;, const unsigned int nGauss=8, bool massform=false)</td></tr>
-<tr class="memdesc:ae332d0089433334be63f90dfade300dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classkin3DHexa8.html" title="Class for creating a 3D finite kinematic eight-node hexahedron element in a mesh. ...">kin3DHexa8</a> in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.  <a href="#ae332d0089433334be63f90dfade300dc">More...</a><br /></td></tr>
-<tr class="separator:ae332d0089433334be63f90dfade300dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb7fb51ecfd7299fb1d649bd98d9baad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkin3DHexa8.html#acb7fb51ecfd7299fb1d649bd98d9baad">kin3DHexa8</a> (const std::vector&lt; unsigned int &gt; nodes, std::unique_ptr&lt; <a class="el" href="classMaterial.html">Material</a> &gt; &amp;material, const std::string quadrature=&quot;GAUSS&quot;, const unsigned int nGauss=8)</td></tr>
+<tr class="memdesc:acb7fb51ecfd7299fb1d649bd98d9baad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classkin3DHexa8.html" title="Class for creating a 3D finite kinematic eight-node hexahedron element in a mesh. ...">kin3DHexa8</a> in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.  <a href="#acb7fb51ecfd7299fb1d649bd98d9baad">More...</a><br /></td></tr>
+<tr class="separator:acb7fb51ecfd7299fb1d649bd98d9baad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeecc3a14231f129cfe8674a15f773968"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkin3DHexa8.html#aeecc3a14231f129cfe8674a15f773968">~kin3DHexa8</a> ()</td></tr>
 <tr class="memdesc:aeecc3a14231f129cfe8674a15f773968"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classkin3DHexa8.html" title="Class for creating a 3D finite kinematic eight-node hexahedron element in a mesh. ...">kin3DHexa8</a> object.  <a href="#aeecc3a14231f129cfe8674a15f773968">More...</a><br /></td></tr>
 <tr class="separator:aeecc3a14231f129cfe8674a15f773968"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -275,9 +275,6 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:af7d9a3ff87dc5617bb7858ec0cea5bbc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkin3DHexa8.html#af7d9a3ff87dc5617bb7858ec0cea5bbc">MassForm</a></td></tr>
-<tr class="memdesc:af7d9a3ff87dc5617bb7858ec0cea5bbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mass Formulation.  <a href="#af7d9a3ff87dc5617bb7858ec0cea5bbc">More...</a><br /></td></tr>
-<tr class="separator:af7d9a3ff87dc5617bb7858ec0cea5bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70045eadda93ec2692eab51383f491d0"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classDamping.html">Damping</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkin3DHexa8.html#a70045eadda93ec2692eab51383f491d0">theDamping</a></td></tr>
 <tr class="memdesc:a70045eadda93ec2692eab51383f491d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a> model.  <a href="#a70045eadda93ec2692eab51383f491d0">More...</a><br /></td></tr>
 <tr class="separator:a70045eadda93ec2692eab51383f491d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -295,8 +292,8 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>Class for creating a 3D finite kinematic eight-node hexahedron element in a mesh. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="Element_8hpp.html" title="This file contains the &quot;Element&quot; object declarations, which defines an element in a finite element me...">Element.hpp</a> <a class="el" href="Mesh_8hpp.html" title="This file contains the &quot;Mesh object&quot; declarations, which stores nodes, materials, elements...">Mesh.hpp</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ae332d0089433334be63f90dfade300dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae332d0089433334be63f90dfade300dc">&#9670;&nbsp;</a></span>kin3DHexa8()</h2>
+<a id="acb7fb51ecfd7299fb1d649bd98d9baad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb7fb51ecfd7299fb1d649bd98d9baad">&#9670;&nbsp;</a></span>kin3DHexa8()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -323,13 +320,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>nGauss</em> = <code>8</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>massform</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>nGauss</em> = <code>8</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -346,7 +337,6 @@ Private Attributes</h2></td></tr>
     <tr><td class="paramname">material</td><td>Pointer to the <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> that this <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> is made out of. </td></tr>
     <tr><td class="paramname">quadrature</td><td>The integration rule to be employed. </td></tr>
     <tr><td class="paramname">nGauss</td><td>Number of Gauss points for <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> integration. </td></tr>
-    <tr><td class="paramname">massform</td><td>The mass formulation to compute the mass matrix. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1741,30 +1731,6 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="af7d9a3ff87dc5617bb7858ec0cea5bbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7d9a3ff87dc5617bb7858ec0cea5bbc">&#9670;&nbsp;</a></span>MassForm</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool kin3DHexa8::MassForm</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Mass Formulation. </p>
-
-</div>
-</div>
 <a id="a37606bdedbad9e69514945b5b510e32b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a37606bdedbad9e69514945b5b510e32b">&#9670;&nbsp;</a></span>QuadraturePoints</h2>
 
@@ -1868,7 +1834,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classkin3DHexa8.html">kin3DHexa8</a></li>
 				<li class="footer">
-					Generated on Wed Jan 27 2021 22:17:09 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

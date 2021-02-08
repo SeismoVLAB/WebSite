@@ -107,10 +107,10 @@ $(document).ready(function(){initNavTree('linkUnxBoucWen3DLink.html','');});
 <img src="UnxBoucWen3DLink.png" alt="UnxBoucWen3DLink.png" width="40%"/>
 </div>
 <p>The <a class="el" href="classUnxBoucWen3DLink.html" title="Class for creating an uniaxial 3D two-node link element using Bouc-Wen formulation. ">UnxBoucWen3DLink</a> mass matrix in global coordinates is \(\textbf{M}^\textrm{e} = 0\). On the other hand, the <a class="el" href="classUnxBoucWen3DLink.html" title="Class for creating an uniaxial 3D two-node link element using Bouc-Wen formulation. ">UnxBoucWen3DLink</a> solves the differential equation: </p><p class="formulaDsp">
-\[ \dot{z}(t)=(\alpha - (\beta \, \textrm{sign}[z(t)\dot{u}(t)] + \gamma)\|z(t)\|^\eta )\dot{u}(t) \,, \]
+\[ \dot{z}(t)=(1 - (\beta \, \textrm{sign}[z(t)\dot{u}(t)] + \gamma)\|z(t)\|^\eta )\dot{u}(t) \,, \]
 </p>
 <p> and the force is computed as </p><p class="formulaDsp">
-\[F(z,u) = q_y\,z + \alpha_1\,K_0\,U + \alpha_2\,K_0\,\textrm{sign}[u] \| u\|^{\mu-1}\,, \]
+\[F(z,u) = q_y\,z + \alpha\,K_0\,U\,, \]
 </p>
 <p> where \(q_y\) is the yield force of hysteretic component.</p>
 <div class="image">
@@ -125,7 +125,7 @@ $(document).ready(function(){initNavTree('linkUnxBoucWen3DLink.html','');});
 \[ \textbf{K}^\textrm{e} = \textbf{T}_\textrm{e}^\top \, \mathcal{K}^\textrm{e} \, \textbf{T}_\textrm{e} \,, \; \textbf{F}^\textrm{e} = \textbf{T}_\textrm{e}^\top \, \mathcal{F}^\textrm{e} \,,\nonumber \]
 </p>
 <p>and \(\hat{\textbf{N}} = [\hat{\textrm{n}}_1, \hat{\textrm{n}}_2, \hat{\textrm{n}}_3]^\top\) is the unit matrix of local coordinate axes, and \(\hat{\textrm{n}}_\textrm{i}\) is the unit vector of the i-th local coordinate axis. Note that \(\hat{\textbf{N}} \in \mathbb{R}^{3 \times 3}\), and \(\hat{\textrm{n}}_\textrm{i} \in \mathbb{R}^3\). Note that \(\textbf{M}^\textrm{e}, \textbf{K}^\textrm{e} \in \mathbb{R}^{\textrm{N}_\textrm{dof}^\textrm{e} \times \textrm{N}_\textrm{dof}^\textrm{e}}\) with \(\textrm{N}_\textrm{dof}^\textrm{e} = 6, \text{ or } 12\). </p><hr/>
-<p>A <a class="el" href="classUnxBoucWen2DLink.html" title="Class for creating an uniaxial 2D two-node link element using Bouc-Wen formulation. ">UnxBoucWen2DLink</a> element is created using the built-in parse-structure provided in the <a class="el" href="Parser_8hpp.html" title="This is a parallel parser object that takes the program&#39;s format and generates the Mesh and Analysis ...">Parser.hpp</a>,</p>
+<p>A <a class="el" href="classUnxBoucWen2DLink.html" title="Class for creating an uniaxial 2D two-node link element using Bouc-Wen formulation. ">UnxBoucWen2DLink</a> element is created using the built-in parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>,</p>
 <p><code>ELEMENT</code> <code>Tag</code> <code>UNXBOUCWEN3DLINK</code> <code>nodes</code> <code>params</code> <code>vars</code> <code>dim</code> <code>dir</code></p>
 <table class="doxtable">
 <tr>
@@ -165,7 +165,7 @@ Strain and Stress link responses are relative deformation and non-linear force a
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Wed Jan 27 2021 22:17:09 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

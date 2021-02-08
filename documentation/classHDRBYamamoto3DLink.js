@@ -1,6 +1,6 @@
 var classHDRBYamamoto3DLink =
 [
-    [ "HDRBYamamoto3DLink", "classHDRBYamamoto3DLink.html#a77a0c6df3abb130e71d61323ecf35a2a", null ],
+    [ "HDRBYamamoto3DLink", "classHDRBYamamoto3DLink.html#ad80675731c2864f6f3f0f4104bd59e30", null ],
     [ "~HDRBYamamoto3DLink", "classHDRBYamamoto3DLink.html#affb7020601b8dc32e951c8e75f7173f7", null ],
     [ "CommitState", "classHDRBYamamoto3DLink.html#a3d5f7ca677daf55163245cdf7219030b", null ],
     [ "ComputeBodyForces", "classHDRBYamamoto3DLink.html#a7e9671b185554f4ab46fcf2d18d075cb", null ],
@@ -34,7 +34,6 @@ var classHDRBYamamoto3DLink =
     [ "Fn", "classHDRBYamamoto3DLink.html#a9a0451763e4baeace1a22ee6eddef959", null ],
     [ "Hr", "classHDRBYamamoto3DLink.html#a77b5ae27130b3ecee30fe9d5377c834c", null ],
     [ "Krb", "classHDRBYamamoto3DLink.html#a7ae7b897a08247127591f82d36b7b2cb", null ],
-    [ "MassForm", "classHDRBYamamoto3DLink.html#ad3cadd0c8b0809eeffe697846c6cdda3", null ],
     [ "n", "classHDRBYamamoto3DLink.html#ace17df93faf6970b307189b68a74c1fd", null ],
     [ "nMax", "classHDRBYamamoto3DLink.html#a5fa844414a1d9f0556f36eaf3dc1d97f", null ],
     [ "Paux", "classHDRBYamamoto3DLink.html#a84ef72d5087dc49d35162eb99b68a6ec", null ],

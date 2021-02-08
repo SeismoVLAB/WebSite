@@ -1,7 +1,8 @@
 <map id="Assembler.hpp" name="Assembler.hpp">
 <area shape="rect" id="node2" href="$QuasiStatic_8hpp.html" title="This file contains the &quot;QuasiStatic&quot; integrator declaration, this integrator neglects any damping and..." alt="" coords="5,80,120,107"/>
-<area shape="rect" id="node3" href="$CentralDifference_8hpp.html" title="This file contains the &quot;CentralDifference&quot; integration method, which inncludes any damping and inerti..." alt="" coords="144,80,293,107"/>
-<area shape="rect" id="node4" href="$ExtendedNewmarkBeta_8hpp.html" title="This file contains the &quot;ExtendedNewmarkBeta&quot; integration declaration, the routine includes any dampin..." alt="" coords="318,80,503,107"/>
-<area shape="rect" id="node5" href="$NewmarkBeta_8hpp.html" title="This file contains the &quot;NewmarkBeta&quot; integration declaration, the rouine inncludes any damping and in..." alt="" coords="528,80,659,107"/>
-<area shape="rect" id="node6" href="$CompositeBathe_8hpp.html" title="This file contains the &quot;CompositeBathe&quot; integration declaration, the file integrator includes any dam..." alt="" coords="683,80,827,107"/>
+<area shape="rect" id="node4" href="$CentralDifference_8hpp.html" title="This file contains the &quot;CentralDifference&quot; integration method, which inncludes any damping and inerti..." alt="" coords="144,80,293,107"/>
+<area shape="rect" id="node5" href="$ExtendedNewmarkBeta_8hpp.html" title="This file contains the &quot;ExtendedNewmarkBeta&quot; integration declaration, the routine includes any dampin..." alt="" coords="318,80,503,107"/>
+<area shape="rect" id="node6" href="$NewmarkBeta_8hpp.html" title="This file contains the &quot;NewmarkBeta&quot; integration declaration, the routine include any damping and ine..." alt="" coords="528,80,659,107"/>
+<area shape="rect" id="node7" href="$CompositeBathe_8hpp.html" title="This file contains the &quot;CompositeBathe&quot; integration declaration, the file integrator includes any dam..." alt="" coords="683,80,827,107"/>
+<area shape="rect" id="node3" href="$Parser_8hpp.html" title="Parser.hpp" alt="" coords="368,155,453,181"/>
 </map>

@@ -135,9 +135,9 @@ Collaboration diagram for lin3DTruss3:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac4bf90f415f5e0c6c421a2a1e0da5d4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlin3DTruss3.html#ac4bf90f415f5e0c6c421a2a1e0da5d4e">lin3DTruss3</a> (const std::vector&lt; unsigned int &gt; nodes, std::unique_ptr&lt; <a class="el" href="classMaterial.html">Material</a> &gt; &amp;material, const double area, const std::string quadrature=&quot;GAUSS&quot;, const unsigned int nGauss=3, bool massform=false)</td></tr>
-<tr class="memdesc:ac4bf90f415f5e0c6c421a2a1e0da5d4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classlin3DTruss3.html" title="Class for creating a 3D linearized three-node truss element in a mesh. ">lin3DTruss3</a> in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.  <a href="#ac4bf90f415f5e0c6c421a2a1e0da5d4e">More...</a><br /></td></tr>
-<tr class="separator:ac4bf90f415f5e0c6c421a2a1e0da5d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d428abd2d5f6c2695fc54d8380274ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlin3DTruss3.html#a2d428abd2d5f6c2695fc54d8380274ef">lin3DTruss3</a> (const std::vector&lt; unsigned int &gt; nodes, std::unique_ptr&lt; <a class="el" href="classMaterial.html">Material</a> &gt; &amp;material, const double area, const std::string quadrature=&quot;GAUSS&quot;, const unsigned int nGauss=3)</td></tr>
+<tr class="memdesc:a2d428abd2d5f6c2695fc54d8380274ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classlin3DTruss3.html" title="Class for creating a 3D linearized three-node truss element in a mesh. ">lin3DTruss3</a> in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.  <a href="#a2d428abd2d5f6c2695fc54d8380274ef">More...</a><br /></td></tr>
+<tr class="separator:a2d428abd2d5f6c2695fc54d8380274ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae566c0e11b1e75e1659e2b4016aab17d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlin3DTruss3.html#ae566c0e11b1e75e1659e2b4016aab17d">~lin3DTruss3</a> ()</td></tr>
 <tr class="memdesc:ae566c0e11b1e75e1659e2b4016aab17d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classlin3DTruss3.html" title="Class for creating a 3D linearized three-node truss element in a mesh. ">lin3DTruss3</a> object.  <a href="#ae566c0e11b1e75e1659e2b4016aab17d">More...</a><br /></td></tr>
 <tr class="separator:ae566c0e11b1e75e1659e2b4016aab17d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -265,9 +265,6 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ad0d66b5c4ddf21d7910b159c42ca912e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlin3DTruss3.html#ad0d66b5c4ddf21d7910b159c42ca912e">A</a></td></tr>
 <tr class="memdesc:ad0d66b5c4ddf21d7910b159c42ca912e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Area of cross-section.  <a href="#ad0d66b5c4ddf21d7910b159c42ca912e">More...</a><br /></td></tr>
 <tr class="separator:ad0d66b5c4ddf21d7910b159c42ca912e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc365eaf3571085d882118afc761a3ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlin3DTruss3.html#acc365eaf3571085d882118afc761a3ef">MassForm</a></td></tr>
-<tr class="memdesc:acc365eaf3571085d882118afc761a3ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mass Formulation.  <a href="#acc365eaf3571085d882118afc761a3ef">More...</a><br /></td></tr>
-<tr class="separator:acc365eaf3571085d882118afc761a3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4fc7a89a816a575789dd8ab6a326348"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classDamping.html">Damping</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlin3DTruss3.html#ab4fc7a89a816a575789dd8ab6a326348">theDamping</a></td></tr>
 <tr class="memdesc:ab4fc7a89a816a575789dd8ab6a326348"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a> model.  <a href="#ab4fc7a89a816a575789dd8ab6a326348">More...</a><br /></td></tr>
 <tr class="separator:ab4fc7a89a816a575789dd8ab6a326348"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -285,8 +282,8 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>Class for creating a 3D linearized three-node truss element in a mesh. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="Element_8hpp.html" title="This file contains the &quot;Element&quot; object declarations, which defines an element in a finite element me...">Element.hpp</a> <a class="el" href="Mesh_8hpp.html" title="This file contains the &quot;Mesh object&quot; declarations, which stores nodes, materials, elements...">Mesh.hpp</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac4bf90f415f5e0c6c421a2a1e0da5d4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4bf90f415f5e0c6c421a2a1e0da5d4e">&#9670;&nbsp;</a></span>lin3DTruss3()</h2>
+<a id="a2d428abd2d5f6c2695fc54d8380274ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d428abd2d5f6c2695fc54d8380274ef">&#9670;&nbsp;</a></span>lin3DTruss3()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -319,13 +316,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>nGauss</em> = <code>3</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>massform</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>nGauss</em> = <code>3</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -343,7 +334,6 @@ Private Attributes</h2></td></tr>
     <tr><td class="paramname">area</td><td>The cross-section area. </td></tr>
     <tr><td class="paramname">quadrature</td><td>The integration rule to be employed. </td></tr>
     <tr><td class="paramname">nGauss</td><td>Number of Gauss points for <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> integration. </td></tr>
-    <tr><td class="paramname">massform</td><td>The mass formulation to compute the mass matrix. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1442,30 +1432,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="acc365eaf3571085d882118afc761a3ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc365eaf3571085d882118afc761a3ef">&#9670;&nbsp;</a></span>MassForm</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool lin3DTruss3::MassForm</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Mass Formulation. </p>
-
-</div>
-</div>
 <a id="aca636aaf4a47c3cb1c8e00678a7d11a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca636aaf4a47c3cb1c8e00678a7d11a7">&#9670;&nbsp;</a></span>QuadraturePoints</h2>
 
@@ -1569,7 +1535,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classlin3DTruss3.html">lin3DTruss3</a></li>
 				<li class="footer">
-					Generated on Wed Jan 27 2021 22:17:10 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun Feb 7 2021 20:59:19 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -1,6 +1,6 @@
 var classlin3DHexa20 =
 [
-    [ "lin3DHexa20", "classlin3DHexa20.html#aef4aa33c352781090207ffc2352ec89c", null ],
+    [ "lin3DHexa20", "classlin3DHexa20.html#a844040c7d415874f40e55e4573abb891", null ],
     [ "~lin3DHexa20", "classlin3DHexa20.html#ade1c4749c7805c658b66c9c08695545e", null ],
     [ "CommitState", "classlin3DHexa20.html#add3d7fb9b6567154542054fc508a6897", null ],
     [ "ComputeBodyForces", "classlin3DHexa20.html#a47a59bc89b8192521d55d9ba49df87e0", null ],
@@ -29,7 +29,6 @@ var classlin3DHexa20 =
     [ "SetDamping", "classlin3DHexa20.html#a7dc7dc30ccc98de39599386c15f84ea3", null ],
     [ "SetDomain", "classlin3DHexa20.html#af0784fb5321ca6a513d9b51e07952e15", null ],
     [ "UpdateState", "classlin3DHexa20.html#a7228d185075fcfa56a70318e48c5f258", null ],
-    [ "MassForm", "classlin3DHexa20.html#a2e0200074fba0c4922b87c46c92546fe", null ],
     [ "QuadraturePoints", "classlin3DHexa20.html#a6741bba5d758f2cc577ce0699a363856", null ],
     [ "theDamping", "classlin3DHexa20.html#a99a290aced0a92a32aa4432cbac4e14e", null ],
     [ "theMaterial", "classlin3DHexa20.html#a7e1768426e8729316d4de6e8f0b54b6b", null ],

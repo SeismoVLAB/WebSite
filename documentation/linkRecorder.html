@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('linkRecorder.html','');});
 <div class="textblock"><p>The <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> keyword defines a solution output file. Currently, there are two object solution that can be recorded: <a class="el" href="linkNode.html">Node</a>, <a class="el" href="linkSection.html">Section</a> and <a class="el" href="linkElement.html">Element</a>.</p>
 <h1><a class="anchor" id="linkNodeRecorder"></a>
 Node Responses</h1>
-<p>A <b>NODE</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> can be created using the built-in parse-function provided in the <a class="el" href="classParser.html" title="Class that translate an input file into Seismo-VLAB classes. ">Parser</a> as follows,</p>
+<p>A <b>NODE</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> can be created using the built-in parse-function provided in the Parser as follows,</p>
 <p><code>RECORDER</code> <code>NODE</code> <code>file</code> <code>nsample</code> <code>precision</code> <code>response</code> <code>nn</code> <code>nodes</code></p>
 <table class="doxtable">
 <tr>
@@ -130,7 +130,7 @@ Node Responses</h1>
 <dl class="section attention"><dt>Attention</dt><dd>If the <code>response</code> is recorded for a <code>node</code>, then it can be either <code>disp, vel, accel, reaction</code>.</dd></dl>
 <h1><a class="anchor" id="linkElementRecorder"></a>
 Element Responses</h1>
-<p>An <b>ELEMENT</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> can be created using the built-in parse-function provided in the <a class="el" href="classParser.html" title="Class that translate an input file into Seismo-VLAB classes. ">Parser</a> as follows,</p>
+<p>An <b>ELEMENT</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> can be created using the built-in parse-function provided in the Parser as follows,</p>
 <p><code>RECORDER</code> <code>ELEMENT</code> <code>file</code> <code>nsample</code> <code>precision</code> <code>response</code> <code>ne</code> <code>elements</code></p>
 <table class="doxtable">
 <tr>
@@ -159,7 +159,7 @@ Element Responses</h1>
 <dl class="section attention"><dt>Attention</dt><dd>If the <code>response</code> is recorded for a <code>element</code>, then it can be either <code>strain, stress, internalforce, strainrate</code>.</dd></dl>
 <h1><a class="anchor" id="linkSectionRecorder"></a>
 Section Responses</h1>
-<p>An <b>SECTION</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> can be created using the built-in parse-function provided in the <a class="el" href="classParser.html" title="Class that translate an input file into Seismo-VLAB classes. ">Parser</a> as follows,</p>
+<p>An <b>SECTION</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> can be created using the built-in parse-function provided in the Parser as follows,</p>
 <p><code>RECORDER</code> <code>SECTION</code> <code>file</code> <code>nsample</code> <code>precision</code> <code>response</code> <code>npos</code> <code>position</code> <code>ne</code> <code>elements</code></p>
 <table class="doxtable">
 <tr>
@@ -186,7 +186,7 @@ Section Responses</h1>
 The <b>SECTION</b> <code>response = strain, stress</code> are allowed, and they are computed at each integration point.</dd></dl>
 <h1><a class="anchor" id="linkParaviewRecorder"></a>
 Paraview Animation</h1>
-<p>An <b>PARAVIEW</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> can be created using the built-in parse-function provided in the <a class="el" href="classParser.html" title="Class that translate an input file into Seismo-VLAB classes. ">Parser</a> as follows,</p>
+<p>An <b>PARAVIEW</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> can be created using the built-in parse-function provided in the Parser as follows,</p>
 <p><code>RECORDER</code> <code>PARAVIEW</code> <code>file</code> <code>nsample</code> <code>precision</code> <code>nfeatures</code></p>
 <table class="doxtable">
 <tr>
@@ -225,7 +225,7 @@ The <b>PARAVIEW</b> option currently saves two types of output:<ul>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Wed Jan 27 2021 22:17:09 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

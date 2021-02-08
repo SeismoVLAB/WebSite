@@ -1,6 +1,6 @@
 var classlin2DQuad4 =
 [
-    [ "lin2DQuad4", "classlin2DQuad4.html#a8985c19c3079b75024b1255aee56c9c6", null ],
+    [ "lin2DQuad4", "classlin2DQuad4.html#ad285da6deca9daa60ad57a0e432ca221", null ],
     [ "~lin2DQuad4", "classlin2DQuad4.html#a04dc6fcfcc7526f5a407f957b681892a", null ],
     [ "CommitState", "classlin2DQuad4.html#a1f9fb26a14a5bb11514d60f4a25a0173", null ],
     [ "ComputeBodyForces", "classlin2DQuad4.html#a79780cc086d1ffbae35262b63630927b", null ],
@@ -29,7 +29,6 @@ var classlin2DQuad4 =
     [ "SetDamping", "classlin2DQuad4.html#ab19ef0b48af113928202e4bb4399cf49", null ],
     [ "SetDomain", "classlin2DQuad4.html#a5949f971535867f3f787f3a0fe6e14d9", null ],
     [ "UpdateState", "classlin2DQuad4.html#a455bb495c89060b0dd2e1dbcdff5bed2", null ],
-    [ "MassForm", "classlin2DQuad4.html#a6ca2c5644eba80726dfecf78f7932dfb", null ],
     [ "QuadraturePoints", "classlin2DQuad4.html#a05091c89a95732cf05234edf8cf8460d", null ],
     [ "t", "classlin2DQuad4.html#a8c33b1e79546eec0bed23a4877f73aee", null ],
     [ "theDamping", "classlin2DQuad4.html#aee7a89a256a151151e4a3790bdbe40f1", null ],

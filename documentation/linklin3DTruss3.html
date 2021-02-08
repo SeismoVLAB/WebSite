@@ -130,7 +130,7 @@ $(document).ready(function(){initNavTree('linklin3DTruss3.html','');});
 </p>
 <p>The mass and stiffness matrices as well as the force vector are transformed into global coordinates as \(\textbf{M}^\textrm{e} = \textbf{T}_\textrm{e}^\top \mathcal{M}^\textrm{e} \,\textbf{T}_\textrm{e}\), \(\textbf{K}^\textrm{e} = \textbf{T}_\textrm{e}^\top \mathcal{K}^\textrm{e} \,\textbf{T}_\textrm{e}\), and \(\textbf{F}^\textrm{e} = \textbf{T}_\textrm{e}^\top \mathcal{F}^\textrm{e}\). The transformation matrix from local to global axes is \(\textbf{T}_\textrm{e} = \begin{bmatrix} \hat{\textrm{n}}_1^\top &amp; 0 &amp; 0 \\ 0 &amp; \hat{\textrm{n}}_1^\top &amp; 0 \\ 0 &amp; 0 &amp; \hat{\textrm{n}}_1^\top \end{bmatrix}\), where \(\hat{\textrm{n}}_1 \in \mathbb{R}^{3}\) is the unit vector along the truss. Note that \(\textbf{M}^\textrm{e}, \textbf{C}^\textrm{e} , \textbf{K}^\textrm{e} \in \mathbb{R}^{\textrm{N}_\textrm{dof}^\textrm{e} \times \textrm{N}_\textrm{dof}^\textrm{e}}\) with \(\textrm{N}_\textrm{dof}^\textrm{e} = 9\) in this case.</p>
 <hr/>
-<p>A <a class="el" href="classlin3DTruss3.html" title="Class for creating a 3D linearized three-node truss element in a mesh. ">lin3DTruss3</a> element is created using the built-in parse-structure provided in the <a class="el" href="classParser.html" title="Class that translate an input file into Seismo-VLAB classes. ">Parser</a>,</p>
+<p>A <a class="el" href="classlin3DTruss3.html" title="Class for creating a 3D linearized three-node truss element in a mesh. ">lin3DTruss3</a> element is created using the built-in parse-structure provided in the Parser,</p>
 <p><code>ELEMENT</code> <code>Tag</code> <code>LIN3DTRUSS3</code> <code>nodes</code> <code>mTag</code> <code>A</code> <code>np</code></p>
 <table class="doxtable">
 <tr>
@@ -166,7 +166,7 @@ For the element size \(\Delta_\textrm{h}\) in wave propagation problems, one can
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Wed Jan 27 2021 22:17:09 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

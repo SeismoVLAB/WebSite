@@ -1,8 +1,8 @@
 var classRecorder =
 [
-    [ "Recorder", "classRecorder.html#a998e59d505f8e3cce3547f7a53e5df8f", null ],
-    [ "Recorder", "classRecorder.html#a34d7393fd54fa8dfc33ba702db6afb93", null ],
-    [ "Recorder", "classRecorder.html#a7c49539cc2d58106d951550468f006c3", null ],
+    [ "Recorder", "classRecorder.html#a11cab9366c84b1bb04fa904d470817e4", null ],
+    [ "Recorder", "classRecorder.html#a7711227f0c6b9bb37db96ecdd925eb93", null ],
+    [ "Recorder", "classRecorder.html#a085c315418a1d66166114e6ca34db0ca", null ],
     [ "~Recorder", "classRecorder.html#a6b3c569577fcdc298d8d4a6a2b96e9a9", null ],
     [ "CopyRecorder", "classRecorder.html#af1d9ed67e4550d9c426a4acba7f8d8e3", null ],
     [ "Finalize", "classRecorder.html#a1be2313f3dad1690ab79cb73b3a1d9b2", null ],
@@ -20,11 +20,9 @@ var classRecorder =
     [ "File", "classRecorder.html#a39374ee45d17af75455282d8279b588a", null ],
     [ "IDs", "classRecorder.html#ab1623694b15008aeba6f1e0ca6c32645", null ],
     [ "Name", "classRecorder.html#af489c77da564d01663a309d2019a14d0", null ],
-    [ "nDimensions", "classRecorder.html#a19933de9c6a51f472972aec1ee801521", null ],
     [ "nParaview", "classRecorder.html#a85ffcd3a9a4c1601ad048d5a41754c5a", null ],
     [ "nSample", "classRecorder.html#a35b70b11d8ad449486346610ccf92639", null ],
     [ "OutputFile", "classRecorder.html#ad4e8d5f7f12d79cf8a5d8e1935e63515", null ],
-    [ "Path", "classRecorder.html#ac5fdaee71842f5863cb3b7458bf24da2", null ],
     [ "Position", "classRecorder.html#ab69fd494ade0b78b26fa98305a27bde1", null ],
     [ "Precision", "classRecorder.html#afa38c594b07d6f81af110eda03f516e5", null ],
     [ "Response", "classRecorder.html#ac6796f56a0c5c91fcea6703a3ab7b4b0", null ],

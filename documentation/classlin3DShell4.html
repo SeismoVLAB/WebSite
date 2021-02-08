@@ -135,9 +135,9 @@ Collaboration diagram for lin3DShell4:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa89bcb207f7e7f6bfa98d2dc77fc2984"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlin3DShell4.html#aa89bcb207f7e7f6bfa98d2dc77fc2984">lin3DShell4</a> (const std::vector&lt; unsigned int &gt; nodes, std::unique_ptr&lt; <a class="el" href="classSection.html">Section</a> &gt; &amp;section, const std::string quadrature=&quot;GAUSS&quot;, const unsigned int nGauss=9, bool massform=true)</td></tr>
-<tr class="memdesc:aa89bcb207f7e7f6bfa98d2dc77fc2984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classlin3DShell4.html" title="Class for creating a 3D linearized four-node shell element in a mesh. ">lin3DShell4</a> in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.  <a href="#aa89bcb207f7e7f6bfa98d2dc77fc2984">More...</a><br /></td></tr>
-<tr class="separator:aa89bcb207f7e7f6bfa98d2dc77fc2984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79e10200530d23a319698e861ad97623"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlin3DShell4.html#a79e10200530d23a319698e861ad97623">lin3DShell4</a> (const std::vector&lt; unsigned int &gt; nodes, std::unique_ptr&lt; <a class="el" href="classSection.html">Section</a> &gt; &amp;section, const std::string quadrature=&quot;GAUSS&quot;, const unsigned int nGauss=9)</td></tr>
+<tr class="memdesc:a79e10200530d23a319698e861ad97623"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classlin3DShell4.html" title="Class for creating a 3D linearized four-node shell element in a mesh. ">lin3DShell4</a> in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.  <a href="#a79e10200530d23a319698e861ad97623">More...</a><br /></td></tr>
+<tr class="separator:a79e10200530d23a319698e861ad97623"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6a75af9fd357bed74575313201edef7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlin3DShell4.html#ac6a75af9fd357bed74575313201edef7">~lin3DShell4</a> ()</td></tr>
 <tr class="memdesc:ac6a75af9fd357bed74575313201edef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classlin3DShell4.html" title="Class for creating a 3D linearized four-node shell element in a mesh. ">lin3DShell4</a> object.  <a href="#ac6a75af9fd357bed74575313201edef7">More...</a><br /></td></tr>
 <tr class="separator:ac6a75af9fd357bed74575313201edef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -280,9 +280,6 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a8bd72d41094f07f0f261920f9bafef3b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlin3DShell4.html#a8bd72d41094f07f0f261920f9bafef3b">MassForm</a></td></tr>
-<tr class="memdesc:a8bd72d41094f07f0f261920f9bafef3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mass Formulation.  <a href="#a8bd72d41094f07f0f261920f9bafef3b">More...</a><br /></td></tr>
-<tr class="separator:a8bd72d41094f07f0f261920f9bafef3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5cfed64a11101f08d21f1d129c2f4a2"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classDamping.html">Damping</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlin3DShell4.html#ac5cfed64a11101f08d21f1d129c2f4a2">theDamping</a></td></tr>
 <tr class="memdesc:ac5cfed64a11101f08d21f1d129c2f4a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a> model.  <a href="#ac5cfed64a11101f08d21f1d129c2f4a2">More...</a><br /></td></tr>
 <tr class="separator:ac5cfed64a11101f08d21f1d129c2f4a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -300,8 +297,8 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>Class for creating a 3D linearized four-node shell element in a mesh. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="Element_8hpp.html" title="This file contains the &quot;Element&quot; object declarations, which defines an element in a finite element me...">Element.hpp</a> <a class="el" href="Mesh_8hpp.html" title="This file contains the &quot;Mesh object&quot; declarations, which stores nodes, materials, elements...">Mesh.hpp</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa89bcb207f7e7f6bfa98d2dc77fc2984"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa89bcb207f7e7f6bfa98d2dc77fc2984">&#9670;&nbsp;</a></span>lin3DShell4()</h2>
+<a id="a79e10200530d23a319698e861ad97623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79e10200530d23a319698e861ad97623">&#9670;&nbsp;</a></span>lin3DShell4()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -328,13 +325,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>nGauss</em> = <code>9</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>massform</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>nGauss</em> = <code>9</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -351,7 +342,6 @@ Private Attributes</h2></td></tr>
     <tr><td class="paramname">section</td><td>Pointer to the <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> that this <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> is made out of. </td></tr>
     <tr><td class="paramname">nGauss</td><td>Numner of Gauss-integration points. </td></tr>
     <tr><td class="paramname">quadrature</td><td>The integration rule to be employed. </td></tr>
-    <tr><td class="paramname">massform</td><td>The mass formulation to compute the mass matrix. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1896,30 +1886,6 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a8bd72d41094f07f0f261920f9bafef3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bd72d41094f07f0f261920f9bafef3b">&#9670;&nbsp;</a></span>MassForm</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool lin3DShell4::MassForm</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Mass Formulation. </p>
-
-</div>
-</div>
 <a id="abe8ba78a20c17d39d75ed24aed25fa9d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abe8ba78a20c17d39d75ed24aed25fa9d">&#9670;&nbsp;</a></span>QuadraturePoints</h2>
 
@@ -2023,7 +1989,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classlin3DShell4.html">lin3DShell4</a></li>
 				<li class="footer">
-					Generated on Wed Jan 27 2021 22:17:10 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun Feb 7 2021 20:59:19 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

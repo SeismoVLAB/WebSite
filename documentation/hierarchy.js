@@ -71,7 +71,6 @@ var hierarchy =
     ] ],
     [ "Mesh", "classMesh.html", null ],
     [ "Node", "classNode.html", null ],
-    [ "Parser", "classParser.html", null ],
     [ "Profiler", "classProfiler.html", null ],
     [ "ProfileResult", "structProfileResult.html", null ],
     [ "QuadratureRule", "classQuadratureRule.html", [
@@ -79,6 +78,8 @@ var hierarchy =
       [ "LobattoQuadrature", "classLobattoQuadrature.html", null ]
     ] ],
     [ "Recorder", "classRecorder.html", null ],
+    [ "RSJparsedData", "classRSJparsedData.html", null ],
+    [ "RSJresource", "classRSJresource.html", null ],
     [ "Section", "classSection.html", [
       [ "Lin2DAngle", "classLin2DAngle.html", null ],
       [ "Lin2DChannel", "classLin2DChannel.html", null ],

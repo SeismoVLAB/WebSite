@@ -1,7 +1,7 @@
 var classProfiler =
 [
     [ "Profiler", "classProfiler.html#a675ebc9207b9aeace1d967c085abeacf", null ],
-    [ "BeginSession", "classProfiler.html#af7aa029cba37f81649c705c59fd05673", null ],
+    [ "BeginSession", "classProfiler.html#a947e1b10da8d14987479470cb11ffe62", null ],
     [ "EndSession", "classProfiler.html#a903f48b60248329e0d3799c73d4ed9aa", null ],
     [ "Get", "classProfiler.html#aaee0da3e8f590a3f98ff82b8cd69ce75", null ],
     [ "WriteFooter", "classProfiler.html#a621121cb16ad51b1f263022e0cc4b75a", null ],

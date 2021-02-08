@@ -1,6 +1,6 @@
 var classZeroLength1D =
 [
-    [ "ZeroLength1D", "classZeroLength1D.html#afb65e4907c79e5efd033a682ae938f45", null ],
+    [ "ZeroLength1D", "classZeroLength1D.html#a7ad46886d5af106fa5c9933bab0e515a", null ],
     [ "~ZeroLength1D", "classZeroLength1D.html#ac838d2a341f478a8e01f45713ec73cb9", null ],
     [ "CommitState", "classZeroLength1D.html#a6db2ddeaaec1c09574ef5f17ba3cd6a2", null ],
     [ "ComputeBodyForces", "classZeroLength1D.html#aa7dc54e999ca2be78cab2d7a503f2d0c", null ],
@@ -26,8 +26,6 @@ var classZeroLength1D =
     [ "SetDamping", "classZeroLength1D.html#a2d1069c9a2634d5a166e19945b8710eb", null ],
     [ "SetDomain", "classZeroLength1D.html#ae7e9a917aa6bd5484a7ffc56fd17bfc7", null ],
     [ "UpdateState", "classZeroLength1D.html#a893d601d81d57e8dfc61535203ddd102", null ],
-    [ "MassForm", "classZeroLength1D.html#aa8929aa493f03cce34f7372e37d41005", null ],
-    [ "theDimension", "classZeroLength1D.html#a887a7dc58a7edbda953721b9fdd929c2", null ],
     [ "theDirection", "classZeroLength1D.html#ad0b9c12de6c40f0ee48c1c52e7aed127", null ],
     [ "theMaterial", "classZeroLength1D.html#a2cf5cd5233104095e6f23b0def7729ef", null ],
     [ "theNodes", "classZeroLength1D.html#aaa5111f02bddb9dbef8573d37d792218", null ]

@@ -120,8 +120,9 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="Definitions_8hpp__dep__incl.png" border="0" usemap="#Definitions_8hppdep" alt=""/></div>
 <map name="Definitions_8hppdep" id="Definitions_8hppdep">
-<area shape="rect" id="node2" href="Profiler_8hpp.html" title="Profiler.hpp" alt="" coords="5,80,93,107"/>
-<area shape="rect" id="node3" href="Utilities_8hpp.html" title="This set of functions gets the command line user&#39;s inputs. " alt="" coords="117,80,208,107"/>
+<area shape="rect" id="node2" href="Parser_8hpp.html" title="Parser.hpp" alt="" coords="5,155,91,181"/>
+<area shape="rect" id="node3" href="Profiler_8hpp.html" title="Profiler.hpp" alt="" coords="45,80,133,107"/>
+<area shape="rect" id="node4" href="Utilities_8hpp.html" title="Utilities.hpp" alt="" coords="157,80,248,107"/>
 </map>
 </div>
 </div>
@@ -144,6 +145,18 @@ Variables</h2></td></tr>
 <tr class="memitem:a439227feff9d7f55384e8780cfc2eb82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a439227feff9d7f55384e8780cfc2eb82">size</a></td></tr>
 <tr class="memdesc:a439227feff9d7f55384e8780cfc2eb82"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of partitions.  <a href="#a439227feff9d7f55384e8780cfc2eb82">More...</a><br /></td></tr>
 <tr class="separator:a439227feff9d7f55384e8780cfc2eb82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19e5b03b2be8d78bd8ce30ad81e105d6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a19e5b03b2be8d78bd8ce30ad81e105d6">nDimensions</a></td></tr>
+<tr class="memdesc:a19e5b03b2be8d78bd8ce30ad81e105d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The problem dimension (1D, 2D, 3D).  <a href="#a19e5b03b2be8d78bd8ce30ad81e105d6">More...</a><br /></td></tr>
+<tr class="separator:a19e5b03b2be8d78bd8ce30ad81e105d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac81f9269c8d57eed4d5b56f054fc84de"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#ac81f9269c8d57eed4d5b56f054fc84de">fileName</a></td></tr>
+<tr class="memdesc:ac81f9269c8d57eed4d5b56f054fc84de"><td class="mdescLeft">&#160;</td><td class="mdescRight">The file name to be loaded.  <a href="#ac81f9269c8d57eed4d5b56f054fc84de">More...</a><br /></td></tr>
+<tr class="separator:ac81f9269c8d57eed4d5b56f054fc84de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa770d80493fae04dd6a59446cceb8e75"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#aa770d80493fae04dd6a59446cceb8e75">filePath</a></td></tr>
+<tr class="memdesc:aa770d80493fae04dd6a59446cceb8e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">The folder path where the file is loaded.  <a href="#aa770d80493fae04dd6a59446cceb8e75">More...</a><br /></td></tr>
+<tr class="separator:aa770d80493fae04dd6a59446cceb8e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c113dfaf37c3366c2cd4a54e0d4b000"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a6c113dfaf37c3366c2cd4a54e0d4b000">MassFormulation</a></td></tr>
+<tr class="memdesc:a6c113dfaf37c3366c2cd4a54e0d4b000"><td class="mdescLeft">&#160;</td><td class="mdescRight">The element mass formulation.  <a href="#a6c113dfaf37c3366c2cd4a54e0d4b000">More...</a><br /></td></tr>
+<tr class="separator:a6c113dfaf37c3366c2cd4a54e0d4b000"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a660ccb16de86e113372e3ff256bab21d"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a660ccb16de86e113372e3ff256bab21d">LumpedStorage</a></td></tr>
 <tr class="memdesc:a660ccb16de86e113372e3ff256bab21d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum memory for lumped storage sparse matrix.  <a href="#a660ccb16de86e113372e3ff256bab21d">More...</a><br /></td></tr>
 <tr class="separator:a660ccb16de86e113372e3ff256bab21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,7 +180,7 @@ Variables</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Danilo S. Kusanovic (<a href="#" onclick="location.href='mai'+'lto:'+'dku'+'sa'+'nov'+'@c'+'alt'+'ec'+'h.e'+'du'; return false;">dkusa<span style="display: none;">.nosp@m.</span>nov@<span style="display: none;">.nosp@m.</span>calte<span style="display: none;">.nosp@m.</span>ch.e<span style="display: none;">.nosp@m.</span>du</a>) </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>June 9, 2020 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="Utilities_8hpp.html" title="This set of functions gets the command line user&#39;s inputs. ">Utilities.hpp</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="Utilities_8hpp.html">Utilities.hpp</a> and <a class="el" href="Profiler_8hpp.html">Profiler.hpp</a> </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a8c097a59d344c89887c5f4cbdbcf493e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8c097a59d344c89887c5f4cbdbcf493e">&#9670;&nbsp;</a></span>PROFILING</h2>
@@ -222,6 +235,38 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ac81f9269c8d57eed4d5b56f054fc84de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac81f9269c8d57eed4d5b56f054fc84de">&#9670;&nbsp;</a></span>fileName</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string fileName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The file name to be loaded. </p>
+
+</div>
+</div>
+<a id="aa770d80493fae04dd6a59446cceb8e75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa770d80493fae04dd6a59446cceb8e75">&#9670;&nbsp;</a></span>filePath</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string filePath</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The folder path where the file is loaded. </p>
+
+</div>
+</div>
 <a id="a660ccb16de86e113372e3ff256bab21d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a660ccb16de86e113372e3ff256bab21d">&#9670;&nbsp;</a></span>LumpedStorage</h2>
 
@@ -235,6 +280,38 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Maximum memory for lumped storage sparse matrix. </p>
+
+</div>
+</div>
+<a id="a6c113dfaf37c3366c2cd4a54e0d4b000"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c113dfaf37c3366c2cd4a54e0d4b000">&#9670;&nbsp;</a></span>MassFormulation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MassFormulation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The element mass formulation. </p>
+
+</div>
+</div>
+<a id="a19e5b03b2be8d78bd8ce30ad81e105d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19e5b03b2be8d78bd8ce30ad81e105d6">&#9670;&nbsp;</a></span>nDimensions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int nDimensions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The problem dimension (1D, 2D, 3D). </p>
 
 </div>
 </div>
@@ -339,7 +416,7 @@ Variables</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="dir_c4c3cc1ef075e8c2dbf7a9cdab7d21b3.html">12-Utilities</a></li><li class="navelem"><a class="el" href="Definitions_8hpp.html">Definitions.hpp</a></li>
 				<li class="footer">
-					Generated on Wed Jan 27 2021 22:17:09 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

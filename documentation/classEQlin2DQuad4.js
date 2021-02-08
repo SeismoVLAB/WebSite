@@ -1,6 +1,6 @@
 var classEQlin2DQuad4 =
 [
-    [ "EQlin2DQuad4", "classEQlin2DQuad4.html#a6d756464ea59d3c4f5542f6b61758599", null ],
+    [ "EQlin2DQuad4", "classEQlin2DQuad4.html#a4e3f33ee4901cca1a239efb37cfdbfea", null ],
     [ "~EQlin2DQuad4", "classEQlin2DQuad4.html#acd763e994de3fcf15896058ab9d310d0", null ],
     [ "CommitState", "classEQlin2DQuad4.html#aec5938666be7149ea511a31e836bd0a5", null ],
     [ "ComputeBodyForces", "classEQlin2DQuad4.html#a825108e2295f059be461f8b51fd90465", null ],
@@ -31,7 +31,6 @@ var classEQlin2DQuad4 =
     [ "UpdateState", "classEQlin2DQuad4.html#acd1e5abe731d066b01797066e746c151", null ],
     [ "cf1", "classEQlin2DQuad4.html#a28515dbbe1a9f944131d71b62cc11765", null ],
     [ "cf2", "classEQlin2DQuad4.html#a1d3890f9ea38f6b81e1e8ff929b1681d", null ],
-    [ "MassForm", "classEQlin2DQuad4.html#a50b66e76fcf29cf565af2218b1a0d299", null ],
     [ "QuadraturePoints", "classEQlin2DQuad4.html#a9bfea64f12fbc61c800dfe52e41b3457", null ],
     [ "t", "classEQlin2DQuad4.html#a7ec5f842c282c1abf52245d055656a47", null ],
     [ "theDamping", "classEQlin2DQuad4.html#a784e337e26f79a14a67c99fc2c45a675", null ],

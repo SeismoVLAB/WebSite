@@ -1,6 +1,6 @@
 var classPML3DHexa8 =
 [
-    [ "PML3DHexa8", "classPML3DHexa8.html#a570948256237dee081cd2899d55bb143", null ],
+    [ "PML3DHexa8", "classPML3DHexa8.html#a40787235ef29033c04c5745a497ff3b7", null ],
     [ "~PML3DHexa8", "classPML3DHexa8.html#ad0c4f3d7c5a24758a1e89bbdb755de37", null ],
     [ "CommitState", "classPML3DHexa8.html#a9ffa3dabbc1fecda941fabc9df861d73", null ],
     [ "ComputeBodyForces", "classPML3DHexa8.html#a1d0ab1d395f983fb54375ab98f94c05e", null ],
@@ -31,7 +31,6 @@ var classPML3DHexa8 =
     [ "UpdateState", "classPML3DHexa8.html#a494cc6d767200c67816c4059a5082608", null ],
     [ "L_pml", "classPML3DHexa8.html#af23f27697f07f0a0ed1166e3a48263ec", null ],
     [ "m_pml", "classPML3DHexa8.html#a32b6700411d717507f81a3a91756c3b1", null ],
-    [ "MassForm", "classPML3DHexa8.html#a75742d1d63db6139881c4f58f8b3438f", null ],
     [ "nx_pml", "classPML3DHexa8.html#a9e1343f0a7f913c0f7a4cbd718714a4a", null ],
     [ "ny_pml", "classPML3DHexa8.html#a0ae5a871ddda76783abb4b3e169e1cbe", null ],
     [ "nz_pml", "classPML3DHexa8.html#ae6759970527d8d277b450fd220402b1f", null ],

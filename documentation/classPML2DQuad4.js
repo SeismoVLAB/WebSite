@@ -1,6 +1,6 @@
 var classPML2DQuad4 =
 [
-    [ "PML2DQuad4", "classPML2DQuad4.html#adbe4bcadaafca503dde5160309f87e3c", null ],
+    [ "PML2DQuad4", "classPML2DQuad4.html#a62ac77a32699e849f5378409ac82becb", null ],
     [ "~PML2DQuad4", "classPML2DQuad4.html#a0edb1721f2da7af729ec759b6c758fc6", null ],
     [ "CommitState", "classPML2DQuad4.html#ab041a04bf2ca04cddbd88b3429747f69", null ],
     [ "ComputeBodyForces", "classPML2DQuad4.html#a590d4d054cedd8f41fcb679019645935", null ],
@@ -31,7 +31,6 @@ var classPML2DQuad4 =
     [ "UpdateState", "classPML2DQuad4.html#ab793914b99867857d83f1c12918afbe6", null ],
     [ "L_pml", "classPML2DQuad4.html#a06bcc92bef12d1995c2fc56b874659a2", null ],
     [ "m_pml", "classPML2DQuad4.html#a029aa6837845563d3a54e67111f83ffb", null ],
-    [ "MassForm", "classPML2DQuad4.html#a4510d428434b765235d14b064ec8e2ac", null ],
     [ "nx_pml", "classPML2DQuad4.html#a50b7221974a8772efc883a8eae7231c8", null ],
     [ "ny_pml", "classPML2DQuad4.html#a3b9e821e10876bc8d1479aec90a53baf", null ],
     [ "QuadraturePoints", "classPML2DQuad4.html#a3147d78a853af3b30cbb21d602952201", null ],

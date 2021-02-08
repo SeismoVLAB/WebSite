@@ -104,9 +104,6 @@ $(document).ready(function(){initNavTree('Utilities_8hpp.html','');});
 <div class="title">Utilities.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This set of functions gets the command line user's inputs.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;ctime&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
@@ -131,25 +128,24 @@ Functions</h2></td></tr>
 <tr class="memitem:ad4952f88b5d628ce55f78bb06d8dedaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Utilities_8hpp.html#ad4952f88b5d628ce55f78bb06d8dedaa">printLogo</a> ()</td></tr>
 <tr class="memdesc:ad4952f88b5d628ce55f78bb06d8dedaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints Seismo-VLAB software header.  <a href="#ad4952f88b5d628ce55f78bb06d8dedaa">More...</a><br /></td></tr>
 <tr class="separator:ad4952f88b5d628ce55f78bb06d8dedaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86de7510fcb5ca72b4385b073ea6d15e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Utilities_8hpp.html#a86de7510fcb5ca72b4385b073ea6d15e">CommandLine</a> (int argc, char **argv, std::string &amp;folder, std::string &amp;file)</td></tr>
-<tr class="memdesc:a86de7510fcb5ca72b4385b073ea6d15e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse Command Line Inputs.  <a href="#a86de7510fcb5ca72b4385b073ea6d15e">More...</a><br /></td></tr>
-<tr class="separator:a86de7510fcb5ca72b4385b073ea6d15e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af517170a919110843756c69561470f45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Utilities_8hpp.html#af517170a919110843756c69561470f45">CommandLine</a> (int argc, char **argv)</td></tr>
+<tr class="memdesc:af517170a919110843756c69561470f45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse Command Line Inputs.  <a href="#af517170a919110843756c69561470f45">More...</a><br /></td></tr>
+<tr class="separator:af517170a919110843756c69561470f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This set of functions gets the command line user's inputs. </p>
-<dl class="section author"><dt>Author</dt><dd>Danilo S. Kusanovic (<a href="#" onclick="location.href='mai'+'lto:'+'dku'+'sa'+'nov'+'@c'+'alt'+'ec'+'h.e'+'du'; return false;">dkusa<span style="display: none;">.nosp@m.</span>nov@<span style="display: none;">.nosp@m.</span>calte<span style="display: none;">.nosp@m.</span>ch.e<span style="display: none;">.nosp@m.</span>du</a>) </dd></dl>
+<div class="textblock"><dl class="section author"><dt>Author</dt><dd>Danilo S. Kusanovic (<a href="#" onclick="location.href='mai'+'lto:'+'dku'+'sa'+'nov'+'@c'+'alt'+'ec'+'h.e'+'du'; return false;">dkusa<span style="display: none;">.nosp@m.</span>nov@<span style="display: none;">.nosp@m.</span>calte<span style="display: none;">.nosp@m.</span>ch.e<span style="display: none;">.nosp@m.</span>du</a>) </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>December 18, 2018 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0</dd></dl>
 <dl class="section see"><dt>See also</dt><dd>main.cpp </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a86de7510fcb5ca72b4385b073ea6d15e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86de7510fcb5ca72b4385b073ea6d15e">&#9670;&nbsp;</a></span>CommandLine()</h2>
+<a id="af517170a919110843756c69561470f45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af517170a919110843756c69561470f45">&#9670;&nbsp;</a></span>CommandLine()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool CommandLine </td>
+          <td class="memname">void CommandLine </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>argc</em>, </td>
@@ -158,19 +154,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>argv</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>folder</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>file</em>&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -229,7 +213,7 @@ Functions</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="dir_c4c3cc1ef075e8c2dbf7a9cdab7d21b3.html">12-Utilities</a></li><li class="navelem"><a class="el" href="Utilities_8hpp.html">Utilities.hpp</a></li>
 				<li class="footer">
-					Generated on Wed Jan 27 2021 22:17:09 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

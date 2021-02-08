@@ -134,9 +134,9 @@ Collaboration diagram for kin2DFrame2:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3560e73a8dc2593e015bb2fbe07f66b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkin2DFrame2.html#a3560e73a8dc2593e015bb2fbe07f66b7">kin2DFrame2</a> (const std::vector&lt; unsigned int &gt; nodes, std::unique_ptr&lt; <a class="el" href="classSection.html">Section</a> &gt; &amp;section, bool massform=true)</td></tr>
-<tr class="memdesc:a3560e73a8dc2593e015bb2fbe07f66b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classkin2DFrame2.html" title="Class for creating a 2D finite kinematic two-node frame element in a mesh. ">kin2DFrame2</a> in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.  <a href="#a3560e73a8dc2593e015bb2fbe07f66b7">More...</a><br /></td></tr>
-<tr class="separator:a3560e73a8dc2593e015bb2fbe07f66b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6004987be9ee082103fbf45e95fd1f2f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkin2DFrame2.html#a6004987be9ee082103fbf45e95fd1f2f">kin2DFrame2</a> (const std::vector&lt; unsigned int &gt; nodes, std::unique_ptr&lt; <a class="el" href="classSection.html">Section</a> &gt; &amp;section)</td></tr>
+<tr class="memdesc:a6004987be9ee082103fbf45e95fd1f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classkin2DFrame2.html" title="Class for creating a 2D finite kinematic two-node frame element in a mesh. ">kin2DFrame2</a> in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.  <a href="#a6004987be9ee082103fbf45e95fd1f2f">More...</a><br /></td></tr>
+<tr class="separator:a6004987be9ee082103fbf45e95fd1f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e4988cafb44abf84dba66ea5b7c834a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkin2DFrame2.html#a5e4988cafb44abf84dba66ea5b7c834a">~kin2DFrame2</a> ()</td></tr>
 <tr class="memdesc:a5e4988cafb44abf84dba66ea5b7c834a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classkin3DTruss2.html" title="Class for creating a 3D finite kinematic two-node truss element in a mesh. ">kin3DTruss2</a> object.  <a href="#a5e4988cafb44abf84dba66ea5b7c834a">More...</a><br /></td></tr>
 <tr class="separator:a5e4988cafb44abf84dba66ea5b7c834a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -273,9 +273,6 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a2bc892820b7c2c244255d80550c3ccfc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkin2DFrame2.html#a2bc892820b7c2c244255d80550c3ccfc">Alpha</a></td></tr>
 <tr class="memdesc:a2bc892820b7c2c244255d80550c3ccfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Angle of the element.  <a href="#a2bc892820b7c2c244255d80550c3ccfc">More...</a><br /></td></tr>
 <tr class="separator:a2bc892820b7c2c244255d80550c3ccfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3573a712755bca3377488848316d8cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkin2DFrame2.html#af3573a712755bca3377488848316d8cc">MassForm</a></td></tr>
-<tr class="memdesc:af3573a712755bca3377488848316d8cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mass Formulation.  <a href="#af3573a712755bca3377488848316d8cc">More...</a><br /></td></tr>
-<tr class="separator:af3573a712755bca3377488848316d8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bb8c454929a78fce92d7da00786addf"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classDamping.html">Damping</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkin2DFrame2.html#a8bb8c454929a78fce92d7da00786addf">theDamping</a></td></tr>
 <tr class="memdesc:a8bb8c454929a78fce92d7da00786addf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a> model.  <a href="#a8bb8c454929a78fce92d7da00786addf">More...</a><br /></td></tr>
 <tr class="separator:a8bb8c454929a78fce92d7da00786addf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -290,8 +287,8 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>Class for creating a 2D finite kinematic two-node frame element in a mesh. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="Element_8hpp.html" title="This file contains the &quot;Element&quot; object declarations, which defines an element in a finite element me...">Element.hpp</a> <a class="el" href="Mesh_8hpp.html" title="This file contains the &quot;Mesh object&quot; declarations, which stores nodes, materials, elements...">Mesh.hpp</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a3560e73a8dc2593e015bb2fbe07f66b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3560e73a8dc2593e015bb2fbe07f66b7">&#9670;&nbsp;</a></span>kin2DFrame2()</h2>
+<a id="a6004987be9ee082103fbf45e95fd1f2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6004987be9ee082103fbf45e95fd1f2f">&#9670;&nbsp;</a></span>kin2DFrame2()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -306,13 +303,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classSection.html">Section</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>section</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>massform</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>section</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -328,7 +319,6 @@ Private Attributes</h2></td></tr>
     <tr><td class="paramname">nodes</td><td>The <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> connectivity array of this <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>. </td></tr>
     <tr><td class="paramname">material</td><td>Pointer to the <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> that this <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> is made out of. </td></tr>
     <tr><td class="paramname">area</td><td>The cross-section area of the <a class="el" href="classkin3DTruss2.html" title="Class for creating a 3D finite kinematic two-node truss element in a mesh. ">kin3DTruss2</a> <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>. </td></tr>
-    <tr><td class="paramname">massform</td><td>The mass formulation to compute the mass matrix. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1515,30 +1505,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af3573a712755bca3377488848316d8cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3573a712755bca3377488848316d8cc">&#9670;&nbsp;</a></span>MassForm</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool kin2DFrame2::MassForm</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Mass Formulation. </p>
-
-</div>
-</div>
 <a id="a8bb8c454929a78fce92d7da00786addf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8bb8c454929a78fce92d7da00786addf">&#9670;&nbsp;</a></span>theDamping</h2>
 
@@ -1618,7 +1584,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classkin2DFrame2.html">kin2DFrame2</a></li>
 				<li class="footer">
-					Generated on Wed Jan 27 2021 22:17:09 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -1,6 +1,6 @@
 var classlin3DFrame2 =
 [
-    [ "lin3DFrame2", "classlin3DFrame2.html#a4b15a8abe276c210407dddf569ad5eda", null ],
+    [ "lin3DFrame2", "classlin3DFrame2.html#a42569ef1199ff305c7eab8c86db37316", null ],
     [ "~lin3DFrame2", "classlin3DFrame2.html#a71a333fbb03016ad3e2b989d4f616643", null ],
     [ "CommitState", "classlin3DFrame2.html#a0a5e3814a0403a2359b55ad79ba1e1a8", null ],
     [ "ComputeBodyForces", "classlin3DFrame2.html#aa83629a3f27a79a0b0d78369a96b5703", null ],
@@ -32,7 +32,6 @@ var classlin3DFrame2 =
     [ "UpdateState", "classlin3DFrame2.html#a05e92788996064267a138c9a82e8a9fe", null ],
     [ "Formulation", "classlin3DFrame2.html#af4325a801ed78f07a333d1f845c4ac08", null ],
     [ "L", "classlin3DFrame2.html#a11f4ee927b9dd18f9e20df5a7fba9666", null ],
-    [ "MassForm", "classlin3DFrame2.html#a82b3d8aa77ceba53446b550e0c006e96", null ],
     [ "Phiy", "classlin3DFrame2.html#a6eb285ba700aab97439aae7aaea1b12e", null ],
     [ "Phiz", "classlin3DFrame2.html#adae93ace8450c97db4e1c138b5168e6a", null ],
     [ "QuadraturePoints", "classlin3DFrame2.html#a33a2331a690474b16769e7a900e06229", null ],

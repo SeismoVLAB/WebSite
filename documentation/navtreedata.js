@@ -20,6 +20,9 @@ var NAVTREE =
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
+        [ "Typedefs", "globals_type.html", null ],
+        [ "Enumerations", "globals_enum.html", null ],
+        [ "Enumerator", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -29,17 +32,17 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Algorithm_8hpp.html",
-"classCompositeBathe.html#a88e5fbf4783c74691dbf65a97f0dae82",
-"classExtendedNewmarkBeta.html#abb8e5791679f4e32351b83be8d7e9ad9",
-"classLin2DCircularTube.html#af62a00bd9a41f1f1b58de95274f3236c",
-"classLin3DRectangularTube.html#a38460ed2db7615ac7fb784c150f11425",
-"classNewtonRaphson.html#adfeeee486b397ac63c65ca40bc9e5ec6",
-"classPlastic3DBA.html#a1c9c12c865d30c0e038a79223ec57855",
-"classSection.html#af58cc23a2ef8436984b1f2bff5d93462",
-"classkin2DFrame2.html#ae375328e77de2ec406027ca84b7433cf",
-"classlin2DQuad8.html#a401d8e786df804136be45f1528a7059c",
-"classlin3DShell4.html#ad8cb62c73b7c1cf56356372114c33ae8",
-"linkAnalysisModule.html"
+"classAssembler.html#ab1c1218154138eeb898a6bdc4f5c4324",
+"classElement.html#a41c1d4cacb1ac26cd0f7debeae50359a",
+"classLin2DCircular.html#a33347b15e47af2b0da9ec5d3976fea12",
+"classLin3DCircularTube.html#ac539df907e58d85463b084d4177d75f4",
+"classMumpsSolver.html#a76e289c56bcf3c48ddd7438280faccf8",
+"classPlastic1DJ2.html#ae574f2adc93c43974c997922181a1b63",
+"classRSJresource.html#ab4ae66ae97fa7e18ae6c6eb87cfcb10c",
+"classZeroLength1D.html#adb2d1930c1a364b3ddb425b5d1a284b5",
+"classlin2DQuad4.html#a403fdd9db21a065c7317f3475390d5c1",
+"classlin3DShell4.html#a627685c75b4f663ba7390782821b7bc4",
+"kin2DTruss2_8hpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

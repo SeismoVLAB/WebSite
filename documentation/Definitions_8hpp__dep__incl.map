@@ -1,4 +1,5 @@
 <map id="Definitions.hpp" name="Definitions.hpp">
-<area shape="rect" id="node2" href="$Profiler_8hpp.html" title="Profiler.hpp" alt="" coords="5,80,93,107"/>
-<area shape="rect" id="node3" href="$Utilities_8hpp.html" title="This set of functions gets the command line user&#39;s inputs. " alt="" coords="117,80,208,107"/>
+<area shape="rect" id="node2" href="$Parser_8hpp.html" title="Parser.hpp" alt="" coords="5,155,91,181"/>
+<area shape="rect" id="node3" href="$Profiler_8hpp.html" title="Profiler.hpp" alt="" coords="45,80,133,107"/>
+<area shape="rect" id="node4" href="$Utilities_8hpp.html" title="Utilities.hpp" alt="" coords="157,80,248,107"/>
 </map>

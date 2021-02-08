@@ -1,6 +1,6 @@
 var classlin2DTruss3 =
 [
-    [ "lin2DTruss3", "classlin2DTruss3.html#aef9346bb31f8b6c892446e81630f4859", null ],
+    [ "lin2DTruss3", "classlin2DTruss3.html#a4c9330fc9e2249e05f7841fc49b6ff77", null ],
     [ "~lin2DTruss3", "classlin2DTruss3.html#ac9f5dd93875be8ba62bcd245d01bb412", null ],
     [ "CommitState", "classlin2DTruss3.html#a4b93b0c21c2b9765ebf18a9bcb875948", null ],
     [ "ComputeBodyForces", "classlin2DTruss3.html#a4bc36640ebe711adf1c1a02a0b1f12e1", null ],
@@ -33,7 +33,6 @@ var classlin2DTruss3 =
     [ "UpdateState", "classlin2DTruss3.html#a651cebd02118d04b8f3838b97072716f", null ],
     [ "A", "classlin2DTruss3.html#a618141617d87882bb8dd4dfed3805a2c", null ],
     [ "Lo", "classlin2DTruss3.html#acc431e3f0380d7ea3f60a5d2be7eb44a", null ],
-    [ "MassForm", "classlin2DTruss3.html#a1f17b36db6b49d3545dbd82d1a4ab0c8", null ],
     [ "QuadraturePoints", "classlin2DTruss3.html#a2d1baec41989148a8697c16ac2c05cb7", null ],
     [ "theDamping", "classlin2DTruss3.html#afe6e3efe4501a9c7705c2503cabbeb92", null ],
     [ "theMaterial", "classlin2DTruss3.html#a1e72df3876e0081110b63e15918c0c09", null ],

@@ -1,6 +1,6 @@
 var classkin2DFrame2 =
 [
-    [ "kin2DFrame2", "classkin2DFrame2.html#a3560e73a8dc2593e015bb2fbe07f66b7", null ],
+    [ "kin2DFrame2", "classkin2DFrame2.html#a6004987be9ee082103fbf45e95fd1f2f", null ],
     [ "~kin2DFrame2", "classkin2DFrame2.html#a5e4988cafb44abf84dba66ea5b7c834a", null ],
     [ "CommitState", "classkin2DFrame2.html#a9765103fd5650b20aa124cb6c1349fa5", null ],
     [ "ComputeAxialForce", "classkin2DFrame2.html#a1fee4a24ffdb215ee16f4d171ee9be2c", null ],
@@ -36,7 +36,6 @@ var classkin2DFrame2 =
     [ "UpdateState", "classkin2DFrame2.html#a62c8cf0bdb0c24d385d2bfeafa8c9e49", null ],
     [ "Alpha", "classkin2DFrame2.html#a2bc892820b7c2c244255d80550c3ccfc", null ],
     [ "Lo", "classkin2DFrame2.html#a2856d07ff87e161d7a836cc9e93f87ac", null ],
-    [ "MassForm", "classkin2DFrame2.html#af3573a712755bca3377488848316d8cc", null ],
     [ "theDamping", "classkin2DFrame2.html#a8bb8c454929a78fce92d7da00786addf", null ],
     [ "theNodes", "classkin2DFrame2.html#ac14d2805067f5f3e455cd4804b1a64f9", null ],
     [ "theSection", "classkin2DFrame2.html#a5707d29ab14638b8b559b05ecc0cd97c", null ]

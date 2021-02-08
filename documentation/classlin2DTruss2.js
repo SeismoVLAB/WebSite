@@ -1,6 +1,6 @@
 var classlin2DTruss2 =
 [
-    [ "lin2DTruss2", "classlin2DTruss2.html#ab94549b51fee769bea14d589114d5bb3", null ],
+    [ "lin2DTruss2", "classlin2DTruss2.html#a8bc2405d1c0c68c5ecfad7e7f52db73a", null ],
     [ "~lin2DTruss2", "classlin2DTruss2.html#ae9fa0e3b9648a726fb542e4bb1ab5014", null ],
     [ "CommitState", "classlin2DTruss2.html#a7d6a442eab393f166e8d82928f288f90", null ],
     [ "ComputeBodyForces", "classlin2DTruss2.html#a59f58777c4f8221b0040e4396c0a61eb", null ],
@@ -31,7 +31,6 @@ var classlin2DTruss2 =
     [ "UpdateState", "classlin2DTruss2.html#a6834310f42e0efdd7eaa52620cfa6484", null ],
     [ "A", "classlin2DTruss2.html#aeceafca774fc38f27463679e40832a50", null ],
     [ "Lo", "classlin2DTruss2.html#a097d0823c41d49cee3faa84ad1a9bb42", null ],
-    [ "MassForm", "classlin2DTruss2.html#a75557e01400f7defc8ed6dc8029d8ffd", null ],
     [ "theDamping", "classlin2DTruss2.html#aa0c9b89849aa0aca484c51c6c7e89c27", null ],
     [ "theMaterial", "classlin2DTruss2.html#a645458a3c7091a204f2e560422efa371", null ],
     [ "theNodes", "classlin2DTruss2.html#a0f5bb7327dc648a1e64ce61e6bf2bed4", null ]

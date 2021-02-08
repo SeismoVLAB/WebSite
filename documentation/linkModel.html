@@ -102,8 +102,8 @@ $(document).ready(function(){initNavTree('linkModel.html','');});
 <div class="title">Model </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <b>Seismo-VLAB</b> mesh-file must start by specifying the <a class="el" href="linkModel.html">Model</a> keyword followed by the dimension of the model <a class="el" href="classParser.html#a469000ffc8aa2c888dd6ad9ad9554c6f">Parser::nDimensions</a>, number of total degree of freedom <a class="el" href="Definitions_8hpp.html#a89b7493ff1f84f17b36e1e27b46ff515">Definitions::numberOfTotalDofs</a>, number of free degree of freedom <a class="el" href="Definitions_8hpp.html#a4f871deb2637ae9cbb4cd3ec06f26902">Definitions::numberOfFreeDofs</a>, and mass formulation <a class="el" href="classParser.html#a5bf8ba9fdbdf8d045dcd083aef34f485">Parser::MassForm</a> that is going to be employed in the mass matrix construction. These parameters are used to create the mass, damping, stiffness and transformation matrices (enforce restrains and constraints) in the <a class="el" href="classAssembler.html">Assembler</a>.</p>
-<p>A <a class="el" href="linkModel.html">Model</a> is created using the built-in parse-structure provided in the <a class="el" href="classParser.html" title="Class that translate an input file into Seismo-VLAB classes. ">Parser</a>,</p>
+<div class="textblock"><p>The <b>Seismo-VLAB</b> mesh-file must start by specifying the <a class="el" href="linkModel.html">Model</a> keyword followed by the dimension of the model <a class="el" href="Definitions_8hpp.html#a19e5b03b2be8d78bd8ce30ad81e105d6">Parser::nDimensions</a>, number of total degree of freedom <a class="el" href="Definitions_8hpp.html#a89b7493ff1f84f17b36e1e27b46ff515">Definitions::numberOfTotalDofs</a>, number of free degree of freedom <a class="el" href="Definitions_8hpp.html#a4f871deb2637ae9cbb4cd3ec06f26902">Definitions::numberOfFreeDofs</a>, and mass formulation Parser::MassForm that is going to be employed in the mass matrix construction. These parameters are used to create the mass, damping, stiffness and transformation matrices (enforce restrains and constraints) in the <a class="el" href="classAssembler.html">Assembler</a>.</p>
+<p>A <a class="el" href="linkModel.html">Model</a> is created using the built-in parse-structure provided in the Parser,</p>
 <p><code>MODEL</code> <code>nDims</code> <code>nTotal</code> <code>nFree</code> <code>formulation</code></p>
 <table class="doxtable">
 <tr>
@@ -131,7 +131,7 @@ The parameter <code>nDims</code> is extremely important and must be consistent w
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Wed Jan 27 2021 22:17:09 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

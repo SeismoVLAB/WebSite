@@ -1,6 +1,6 @@
 var classlin2DFrame2 =
 [
-    [ "lin2DFrame2", "classlin2DFrame2.html#a92e6eb24cc7d637ed8bf6a9163d6af40", null ],
+    [ "lin2DFrame2", "classlin2DFrame2.html#a9e0f51c57e854941eb7c7ea1c4838a1c", null ],
     [ "~lin2DFrame2", "classlin2DFrame2.html#ad3057285f520646420e2bbd067bc4acf", null ],
     [ "CommitState", "classlin2DFrame2.html#af8583551fec2a2397abe22709a13fecd", null ],
     [ "ComputeBodyForces", "classlin2DFrame2.html#ad672996f22c6553e4da3cd1c14a44a31", null ],
@@ -32,7 +32,6 @@ var classlin2DFrame2 =
     [ "UpdateState", "classlin2DFrame2.html#a612d55af26b4d5f35808bc485341e786", null ],
     [ "Formulation", "classlin2DFrame2.html#a55c68b71b67f5ab352c5b2b77bdc2bef", null ],
     [ "L", "classlin2DFrame2.html#a5695f553a31304f1dab8e39558dc51ac", null ],
-    [ "MassForm", "classlin2DFrame2.html#ace8fa5e98b3222d676f3274a50d231d1", null ],
     [ "Phi", "classlin2DFrame2.html#a9334f7b99e6087660899d88b7b2bdd18", null ],
     [ "QuadraturePoints", "classlin2DFrame2.html#a714a874773545e1b2e2e67895aba3450", null ],
     [ "theDamping", "classlin2DFrame2.html#a66eeec0536f85b7c61d4081170368c47", null ],
