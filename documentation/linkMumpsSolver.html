@@ -104,9 +104,21 @@ $(document).ready(function(){initNavTree('linkMumpsSolver.html','');});
 <div class="contents">
 <div class="textblock"><p>The <a class="el" href="classMumpsSolver.html" title="Class for solving a linear system using the (MU)ltifrontal (M)assively (P)arallel (S)parse direct Sol...">MumpsSolver</a> keyword creates a <b>MU</b>ltifrontal <b>M</b>assively <b>P</b>arallel <b>S</b>parse direct Solver class that solves the system of equations provided with \(\textbf{K}_{\textrm{eff}}\). This solver is meant to be employed to either symmetric and positive-definite, symmetric, or unsymmetric structure of \(\textbf{K}_{\textrm{eff}}\) matrix.</p>
 <hr/>
-<p>A <a class="el" href="classMumpsSolver.html" title="Class for solving a linear system using the (MU)ltifrontal (M)assively (P)arallel (S)parse direct Sol...">MumpsSolver</a> solver can be created using the built-in parse-structure provided in the Parser as,</p>
-<p><code>SOLVER</code> <code>MUMPS</code> <code>option</code> <code>mode</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classMumpsSolver.html" title="Class for solving a linear system using the (MU)ltifrontal (M)assively (P)arallel (S)parse direct Sol...">MumpsSolver</a> solver can be created using the built-in parse-structure provided in the Parser as, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Simulations"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"algorithm"</b></span>: {
+                    <span style="color:orange"><b>"name"</b></span>: "MUMPS",
+                    <span style="color:orange"><b>"update"</b></span>: int,
+                    <span style="color:orange"><b>"option"</b></span>: int,
+                }
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
@@ -120,7 +132,7 @@ For general unsymmetric matrix <code>option=2</code></li>
 </ul>
 </td></tr>
 <tr>
-<td><code>mode</code> </td><td>Specifies if the analysis is linear <code>mode=1</code> or nonlinear <code>mode=0</code>. In the linear case, the Cholesky decomposition will be stored an computed just once, for the nonlinear case will be computed at each iteration. </td></tr>
+<td><code>update</code> </td><td>Specifies if the analysis is linear <code>mode=1</code> or nonlinear <code>mode=0</code>. In the linear case, the Cholesky decomposition will be stored an computed just once, for the nonlinear case will be computed at each iteration. </td></tr>
 </table>
 <dl class="section attention"><dt>Attention</dt><dd>This solver can be used for either serial or parallel applications. </dd>
 <dd>
@@ -133,7 +145,7 @@ The structure of the \(\textbf{K}_{\textrm{eff}}\) matrix can become symmetric w
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

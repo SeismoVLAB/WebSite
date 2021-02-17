@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linklin3DTruss3.html','');});
 <div class="title"><a class="el" href="classlin3DTruss3.html" title="Class for creating a 3D linearized three-node truss element in a mesh. ">lin3DTruss3</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classlin3DTruss3.html" title="Class for creating a 3D linearized three-node truss element in a mesh. ">lin3DTruss3</a> keywords creates a linearized three-dimensional truss element with three-nodes. Each node has three degrees-of-freedom, and each degree-of-freedom represents a translation in the X-, Y- and Z-directions. The Figure provides a simple representation of this element in which the local coordinates are represented by the r-axis, and (1), (2), and (3) represent the nodes of the element respectively. The element mass, damping and stiffness matrices, as well as internal force vector are computed in local-coordinate and then transformed into global coordinates. Numerical integration is performed to compute matrices and vectors.</p>
+<div class="textblock"><p>The <a class="el" href="classlin3DTruss3.html" title="Class for creating a 3D linearized three-node truss element in a mesh. ">lin3DTruss3</a> class creates a linearized three-dimensional truss element with three-nodes. Each node has three degrees-of-freedom, and each degree-of-freedom represents a translation in the X-, Y- and Z-directions. The Figure provides a simple representation of this element in which the local coordinates are represented by the r-axis, and (1), (2), and (3) represent the nodes of the element respectively. The element mass, damping and stiffness matrices, as well as internal force vector are computed in local-coordinate and then transformed into global coordinates. Numerical integration is performed to compute matrices and vectors.</p>
 <div class="image">
 <img src="lin3DTruss3.png" alt="lin3DTruss3.png" width="38%"/>
 </div>
@@ -130,23 +130,38 @@ $(document).ready(function(){initNavTree('linklin3DTruss3.html','');});
 </p>
 <p>The mass and stiffness matrices as well as the force vector are transformed into global coordinates as \(\textbf{M}^\textrm{e} = \textbf{T}_\textrm{e}^\top \mathcal{M}^\textrm{e} \,\textbf{T}_\textrm{e}\), \(\textbf{K}^\textrm{e} = \textbf{T}_\textrm{e}^\top \mathcal{K}^\textrm{e} \,\textbf{T}_\textrm{e}\), and \(\textbf{F}^\textrm{e} = \textbf{T}_\textrm{e}^\top \mathcal{F}^\textrm{e}\). The transformation matrix from local to global axes is \(\textbf{T}_\textrm{e} = \begin{bmatrix} \hat{\textrm{n}}_1^\top &amp; 0 &amp; 0 \\ 0 &amp; \hat{\textrm{n}}_1^\top &amp; 0 \\ 0 &amp; 0 &amp; \hat{\textrm{n}}_1^\top \end{bmatrix}\), where \(\hat{\textrm{n}}_1 \in \mathbb{R}^{3}\) is the unit vector along the truss. Note that \(\textbf{M}^\textrm{e}, \textbf{C}^\textrm{e} , \textbf{K}^\textrm{e} \in \mathbb{R}^{\textrm{N}_\textrm{dof}^\textrm{e} \times \textrm{N}_\textrm{dof}^\textrm{e}}\) with \(\textrm{N}_\textrm{dof}^\textrm{e} = 9\) in this case.</p>
 <hr/>
-<p>A <a class="el" href="classlin3DTruss3.html" title="Class for creating a 3D linearized three-node truss element in a mesh. ">lin3DTruss3</a> element is created using the built-in parse-structure provided in the Parser,</p>
-<p><code>ELEMENT</code> <code>Tag</code> <code>LIN3DTRUSS3</code> <code>nodes</code> <code>mTag</code> <code>A</code> <code>np</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classlin3DTruss3.html" title="Class for creating a 3D linearized three-node truss element in a mesh. ">lin3DTruss3</a> element is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Elements"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "LIN3DTRUSS3",
+            <span style="color:green"><b>"conn"</b></span> : [ ],
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"np"</b></span>: int
+                <span style="color:maroon"><b>"rule"</b></span>: str
+                <span style="color:maroon"><b>"area"</b></span>: double,
+                <span style="color:maroon"><b>"material"</b></span>: int
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>Unique element object identifier. </td></tr>
 <tr>
-<td><code>nodes</code> </td><td>The element connectivity node array. </td></tr>
+<td><code>conn</code> </td><td>The element connectivity node array. </td></tr>
 <tr>
-<td><code>mTag</code> </td><td>The biaxial material identifier. </td></tr>
-<tr>
-<td><code>A</code> </td><td>The cross-section area of the element. </td></tr>
+<td><code>area</code> </td><td>The cross-section area of the element. </td></tr>
 <tr>
 <td><code>np</code> </td><td>Number of quadrature-points used for the integration. </td></tr>
+<tr>
+<td><code>rule</code> </td><td>The quadrature integration name <code>rule</code>=GAUSS, LOBATTO. </td></tr>
+<tr>
+<td><code>material</code></td><td>The biaxial material identifier. </td></tr>
 </table>
-<dl class="section attention"><dt>Attention</dt><dd>This formulation only allows small defromations. </dd>
+<dl class="section attention"><dt>Attention</dt><dd>This formulation only allows small deformations. </dd>
 <dd>
 <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> non-linearity can be used in this element. </dd>
 <dd>
@@ -158,7 +173,7 @@ For the element size \(\Delta_\textrm{h}\) in wave propagation problems, one can
 <h3>Example</h3>
 <blockquote class="doxtable">
 <p>A 3D linearized truss element of area 0.01 with 3 integration points between nodes 1, 2, and 3, made of material 1 is constructed as: <br />
- <em>ELEMENT 1 LIN3DTRUSS3 1 2 3 1 0.01 3</em></p>
+ { "Elements": { "1": { "name" : "LIN3DTRUSS3", "conn" : [1,2,3], "attributes": { "np": 3 "rule": "GAUSS" "area": 0.01, "material": 1 } } } }</p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -166,7 +181,7 @@ For the element size \(\Delta_\textrm{h}\) in wave propagation problems, one can
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

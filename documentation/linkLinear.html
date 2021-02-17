@@ -103,30 +103,46 @@ $(document).ready(function(){initNavTree('linkLinear.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>The <a class="el" href="classLinear.html" title="Class for solving a linear system in just one-step; therefore, no-iteration or convergence test is pe...">Linear</a> keyword creates an algorithm that solves the linear system between two states in just one step. This algorithm is meant to be used in linear analysis for which the system \(\mathbf{K}_{\textrm{eff}} \, \Delta U = \textrm{F}_{\textrm{eff}}\) is solved. </p><hr/>
-<p>A <a class="el" href="classLinear.html" title="Class for solving a linear system in just one-step; therefore, no-iteration or convergence test is pe...">Linear</a> algorithm object can be created using the built-in parse-structure provided in the Parser as,</p>
-<p><code>ALGORITHM</code> <code>LINEAR</code> <code>Tol</code> <code>N</code> <code>test</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classLinear.html" title="Class for solving a linear system in just one-step; therefore, no-iteration or convergence test is pe...">Linear</a> algorithm object can be created using the built-in parse-structure provided in the Parser as, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Simulations"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"combo"</b></span>: int,
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"algorithm"</b></span>: {
+                    <span style="color:orange"><b>"name"</b></span>: "LINEAR",
+                    <span style="color:orange"><b>"nstep"</b></span>: int,
+                    <span style="color:orange"><b>"cnvgtol"</b></span>: double,
+                    <span style="color:orange"><b>"cnvgtest"</b></span>: int
+                }
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
-<td><code>Tol</code> </td><td>The minimum tolerance allowed to stop iterating. </td></tr>
+<td><code>combo</code> </td><td>The combination to which this <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a> will be defined. </td></tr>
 <tr>
-<td><code>N</code> </td><td>Maximum number of iterations for which the algorithm will be forced to stop. </td></tr>
+<td><code>cnvgtol</code> </td><td>The minimum tolerance allowed to stop iterating. </td></tr>
 <tr>
-<td><code>test</code> </td><td>Test number to compute the residual error. </td></tr>
+<td><code>nstep</code> </td><td>Maximum number of iterations for which the algorithm will be forced to stop. </td></tr>
+<tr>
+<td><code>cnvgtest</code> </td><td>Test number to compute the residual error. </td></tr>
 </table>
-<dl class="section attention"><dt>Attention</dt><dd>The tolerance in this class is not used. </dd>
+<dl class="section attention"><dt>Attention</dt><dd>The <code>cnvgtol</code> in this class is not used. </dd>
 <dd>
-The <code>test</code> number is not used. </dd>
+The <code>cnvgtest</code> number is not used. </dd>
 <dd>
-The maximum number of iterations is <code>N=1</code>, a different value will be ignored. </dd></dl>
+The maximum number of iterations is <code>nstep</code>=1, a different value will be ignored. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

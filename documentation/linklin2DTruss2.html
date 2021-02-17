@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linklin2DTruss2.html','');});
 <div class="title"><a class="el" href="classlin2DTruss2.html" title="Class for creating a 2D linearized two-node truss element in a mesh. ">lin2DTruss2</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classlin2DTruss2.html" title="Class for creating a 2D linearized two-node truss element in a mesh. ">lin2DTruss2</a> keywords creates a linearized two-dimensional truss element with two-nodes. Each node has two degrees-of-freedom, and each degree-of-freedom represents a translation in the X-, and Y-directions. Figure provides a simple representation of this element in which the local coordinates are represented by r-axis, and (1) and (2) represent the start and end nodes of the element respectively. The element mass, damping and stiffness matrices, as well as internal force vector are computed in local-coordinates and then transformed into global coordinates. No numerical integration is employed for this element.</p>
+<div class="textblock"><p>The <a class="el" href="classlin2DTruss2.html" title="Class for creating a 2D linearized two-node truss element in a mesh. ">lin2DTruss2</a> class creates a linearized two-dimensional truss element with two-nodes. Each node has two degrees-of-freedom, and each degree-of-freedom represents a translation in the X-, and Y-directions. Figure provides a simple representation of this element in which the local coordinates are represented by r-axis, and (1) and (2) represent the start and end nodes of the element respectively. The element mass, damping and stiffness matrices, as well as internal force vector are computed in local-coordinates and then transformed into global coordinates. No numerical integration is employed for this element.</p>
 <div class="image">
 <img src="lin2DTruss2.png" alt="lin2DTruss2.png" width="40%"/>
 </div>
@@ -120,19 +120,30 @@ $(document).ready(function(){initNavTree('linklin2DTruss2.html','');});
 \[ \mathcal{K}^\textrm{e} = \frac{EA}{L} \begin{bmatrix} 1 &amp; -1 \\ -1 &amp; 1 \end{bmatrix} \,, \nonumber \]
 </p>
 <p>and the stiffness matrx in global coordinates is \(\textbf{K}^\textrm{e} = \textbf{T}_\textrm{e}^\top \mathcal{K}^\textrm{e} \,\textbf{T}_\textrm{e}\). However, the transformation matrix from local to global axes is \(\textbf{T}_\textrm{e} = \begin{bmatrix} \hat{\textrm{n}}_1^\top &amp; 0 \\ 0 &amp; \hat{\textrm{n}}_1^\top \end{bmatrix}\), where \(\hat{\textrm{n}}_1 \in \mathbb{R}^{2}\) is the unit vector along the truss. Note that \(\textbf{M}^\textrm{e}, \textbf{C}^\textrm{e} , \textbf{K}^\textrm{e} \in \mathbb{R}^{\textrm{N}_\textrm{dof}^\textrm{e} \times \textrm{N}_\textrm{dof}^\textrm{e}}\) with \(\textrm{N}_\textrm{dof}^\textrm{e} = 4\) in this case. </p><hr/>
-<p>A <a class="el" href="classlin2DTruss2.html" title="Class for creating a 2D linearized two-node truss element in a mesh. ">lin2DTruss2</a> element is created using the built-in parse-structure provided in the Parser,</p>
-<p><code>ELEMENT</code> <code>Tag</code> <code>LIN2DTRUSS2</code> <code>nodes</code> <code>mTag</code> <code>Area</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classlin2DTruss2.html" title="Class for creating a 2D linearized two-node truss element in a mesh. ">lin2DTruss2</a> element is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Elements"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "LIN2DTRUSS2",
+            <span style="color:green"><b>"conn"</b></span> : [ ],
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"area"</b></span>: double,
+                <span style="color:maroon"><b>"material"</b></span>: int
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>Unique element object identifier. </td></tr>
 <tr>
-<td><code>nodes</code> </td><td>The element connectivity node array. </td></tr>
+<td><code>conn</code> </td><td>The element connectivity node array. </td></tr>
 <tr>
-<td><code>mTag</code> </td><td>The uniaxial material identifier. </td></tr>
+<td><code>area</code> </td><td>Cross-sectional area of element. </td></tr>
 <tr>
-<td><code>Area</code> </td><td>Cross-sectional area of element. </td></tr>
+<td><code>material</code></td><td>The uniaxial material identifier. </td></tr>
 </table>
 <dl class="section attention"><dt>Attention</dt><dd>This formulation only allows small deformations. </dd>
 <dd>
@@ -140,7 +151,7 @@ $(document).ready(function(){initNavTree('linklin2DTruss2.html','');});
 <h3>Example</h3>
 <blockquote class="doxtable">
 <p>A 3D linearized element between nodes 1 and 2, made of material 1, and area 0.5 is constructed as: <br />
-<em>ELEMENT 1 LIN2DTRUSS2 1 2 1 0.50</em></p>
+{ "Elements": { "1": { "name" : "LIN2DTRUSS2", "conn" : [1,2], "attributes": { "area": 0.5, "material": 1 } } } }</p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -148,7 +159,7 @@ $(document).ready(function(){initNavTree('linklin2DTruss2.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

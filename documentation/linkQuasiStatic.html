@@ -107,11 +107,28 @@ $(document).ready(function(){initNavTree('linkQuasiStatic.html','');});
 \[ \textbf{K}_{\textrm{eff}} = \textbf{K}^{(i-1)} \nonumber \\ \textrm{F}_{\textrm{eff}} = \textrm{R}_{\textrm{n}}^{(i)} - \textrm{F}_{\textrm{int}}^{(i-1)} \nonumber \]
 </p>
 <hr/>
-<p>A <a class="el" href="classQuasiStatic.html" title="Class for defining an static integrator that neglects any damping and inertial forces present in the ...">QuasiStatic</a> integrator can be created using the built-in parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a> as:</p>
-<p><code>INTEGRATOR</code> <code>QUASISTATIC</code> <code>mTol</code> <code>kTol</code> <code>fTol</code> <code>dt</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classQuasiStatic.html" title="Class for defining an static integrator that neglects any damping and inertial forces present in the ...">QuasiStatic</a> integrator can be created using the built-in parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a> as: </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Simulations"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"combo"</b></span>: int,
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"integrator"</b></span>: {
+                    <span style="color:orange"><b>"name"</b></span>: "STATIC",
+                    <span style="color:orange"><b>"ktol"</b></span>: double,
+                    <span style="color:orange"><b>"mtol"</b></span>: double,
+                    <span style="color:orange"><b>"ftol"</b></span>: double,
+                    <span style="color:orange"><b>"dt"</b></span>: double,
+                }
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
+<tr>
+<td><code>combo</code> </td><td>The combination to which this <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic snalysis between two steps is going to be performed...">Integrator</a> will be defined. </td></tr>
 <tr>
 <td><code>mTol</code> </td><td>The specified tolerance for setting \(M_{ij} \sim 0.0\). </td></tr>
 <tr>
@@ -130,7 +147,7 @@ The value <code>dt</code> is not used in static analysis. </dd></dl>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

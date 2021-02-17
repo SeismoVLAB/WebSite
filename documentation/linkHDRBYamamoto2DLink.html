@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linkHDRBYamamoto2DLink.html','');});
 <div class="title"><a class="el" href="classHDRBYamamoto2DLink.html" title="Class for creating a bidirectional 2D two-node link element using Yamamoto HDRB formulation. ">HDRBYamamoto2DLink</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classHDRBYamamoto2DLink.html" title="Class for creating a bidirectional 2D two-node link element using Yamamoto HDRB formulation. ">HDRBYamamoto2DLink</a> keywords creates a bi-axial high-damping rubber bearing element with two-nodes in two-dimensions. The number of degree-of-freedom depend on the node. Currently node with 2 (two translation) and 3 (two translation and one rotation) dofs are supported. The main purpose of this element in 2D is to force a uni-axial behavior along the orthogonal direction to local axis 1. Figure provides a simple representation of this element where (1) and (2) represent the start and end nodes.</p>
+<div class="textblock"><p>The <a class="el" href="classHDRBYamamoto2DLink.html" title="Class for creating a bidirectional 2D two-node link element using Yamamoto HDRB formulation. ">HDRBYamamoto2DLink</a> class creates a bi-axial high-damping rubber bearing element with two-nodes in two-dimensions. The number of degree-of-freedom depend on the node. Currently node with 2 (two translation) and 3 (two translation and one rotation) dofs are supported. The main purpose of this element in 2D is to force a uni-axial behavior along the orthogonal direction to local axis 1. Figure provides a simple representation of this element where (1) and (2) represent the start and end nodes.</p>
 <div class="image">
 <img src="HDRBYamamoto2DLink.png" alt="HDRBYamamoto2DLink.png" width="32%"/>
 </div>
@@ -128,15 +128,28 @@ $(document).ready(function(){initNavTree('linkHDRBYamamoto2DLink.html','');});
 </p>
 <p>and \(\hat{\textbf{N}} = [\hat{\textrm{n}}_1, \hat{\textrm{n}}_2, \hat{\textrm{n}}_3]^\top\) is the unit matrix of local coordinate axes, and \(\hat{\textrm{n}}_\textrm{i}\) is the unit vector of the i-th local coordinate axis. Note that \(\hat{\textbf{N}} \in \mathbb{R}^{3 \times 3}\), and \(\hat{\textrm{n}}_\textrm{i} \in \mathbb{R}^3\). Note that \(\textbf{M}^\textrm{e}, \textbf{K}^\textrm{e} \in \mathbb{R}^{\textrm{N}_\textrm{dof}^\textrm{e} \times \textrm{N}_\textrm{dof}^\textrm{e}}\) with \(\textrm{N}_\textrm{dof}^\textrm{e} = 4, \text{ or } 6\).</p>
 <hr/>
-<p>A <a class="el" href="classHDRBYamamoto2DLink.html" title="Class for creating a bidirectional 2D two-node link element using Yamamoto HDRB formulation. ">HDRBYamamoto2DLink</a> element is created using the built-in parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>,</p>
-<p><code>ELEMENT</code> <code>Tag</code> <code>HDRBYAMAMOTO2DLINK</code> <code>nodes</code> <code>De</code> <code>Di</code> <code>Hr</code> <code>dim</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classHDRBYamamoto2DLink.html" title="Class for creating a bidirectional 2D two-node link element using Yamamoto HDRB formulation. ">HDRBYamamoto2DLink</a> element is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Elements"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "HDRBYAMAMOTO2DLINK",
+            <span style="color:green"><b>"conn"</b></span> : [ ],
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"De"</b></span>: double,
+                <span style="color:maroon"><b>"Di"</b></span>: double,
+                <span style="color:maroon"><b>"Hr"</b></span>: double,
+                <span style="color:maroon"><b>"dim"</b></span>: int
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>Unique positive element identifier. </td></tr>
 <tr>
-<td><code>nodes</code> </td><td>The element connectivity node array. </td></tr>
+<td><code>conn</code> </td><td>The element connectivity node array. </td></tr>
 <tr>
 <td><code>De</code> </td><td>External diameter of rubber. </td></tr>
 <tr>
@@ -164,7 +177,7 @@ Internal force responses are provided in global coordinates.</dd></dl>
 <h3>Example</h3>
 <blockquote class="doxtable">
 <p>A uniaxial <a class="el" href="classHDRBYamamoto2DLink.html" title="Class for creating a bidirectional 2D two-node link element using Yamamoto HDRB formulation. ">HDRBYamamoto2DLink</a> between nodes 1 and 2 with 2 dofs in a 2D problem is constructed as: <br />
- <em>ELEMENT 1 HDRBYAMAMOTO2DLINK 1 2 1.3 0.3 0.216 2</em></p>
+ { "Elements": { "1": { "name" : "HDRBYAMAMOTO2DLINK", "conn" : [1,2], "attributes": { "De": 1.3, "Di": 0.3, "Hr": 0.216, "dim": 2 } } } }</p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -172,7 +185,7 @@ Internal force responses are provided in global coordinates.</dd></dl>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

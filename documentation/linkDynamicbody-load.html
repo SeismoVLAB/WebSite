@@ -103,33 +103,40 @@ $(document).ready(function(){initNavTree('linkDynamicbody-load.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Represent a body/volume force that is applied on an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> object. This force is represented by a varying magnitude and direction that is applied on the element. The <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> object created in this manner is transformed in the element level using its volume into nodal forces and then assembled directly to the global force vector. The dynamic body load direction needs to coincide with the global coordinate system. </p><hr/>
-<p>A dynamic body <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> is created using the built-in parse-structure provided in the Parser,</p>
-<p><code>ELEMENTLOAD</code> <code>Tag</code> <code>DYNAMIC</code> <code>BODY</code> <code>path</code> <code>nd</code> <code>dir</code> <code>ne</code> <code>elems</code></p>
-<table class="doxtable">
+<p>A dynamic body <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> is created using the built-in json parse-structure provided in the Parser, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Loads"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "ELEMENTLOAD",
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"name"</b></span>: "TIMESERIE",
+                <span style="color:maroon"><b>"type"</b></span>: "BODY",
+                <span style="color:maroon"><b>"file"</b></span>: str,
+                <span style="color:maroon"><b>"dir"</b></span>: [ ],
+                <span style="color:maroon"><b>"list"</b></span>: [ ]
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>Unique load object identifier. </td></tr>
 <tr>
-<td><code>path</code> </td><td>Represents the local address where the file is located. </td></tr>
-<tr>
-<td><code>nd</code> </td><td>Number of dimension for the <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a>. </td></tr>
+<td><code>file</code> </td><td>Represents the full path where the file is located. </td></tr>
 <tr>
 <td><code>dir</code> </td><td>Vector containing the direction of the force. </td></tr>
 <tr>
-<td><code>ne</code> </td><td>Number of elements where this <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> will be applied. </td></tr>
-<tr>
-<td><code>elems</code> </td><td>List of <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> identifiers that share this load. </td></tr>
+<td><code>list</code> </td><td>List of <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> identifiers that share this load. </td></tr>
 </table>
 <dl class="section attention"><dt>Attention</dt><dd>Body forces are applied to the specified elements only if the material has density. </dd>
 <dd>
-The number of dimensions <code>nd</code> for this <b>ELEMENTLOAD</b> is the number dimension of that <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>, this is 1, 2, or 3 for 1D, 2D, or 3D problems respectively. </dd>
-<dd>
-The file located at <code>path</code> for dynamic analysis contains the number of time steps, and then a vector with the varying intensities in time. The time step of such intensities is assumed to coincide with the time step of the simulation.</dd></dl>
+The file provided at <code>file</code> for dynamic analysis contains the number of time steps, and then a vector with the varying intensities in time. The time step of such intensities is assumed to coincide with the time step of the simulation.</dd></dl>
 <h3>Example</h3>
 <blockquote class="doxtable">
 <p>A 2D dynamic body load acting on x-direction whose magnitude in time are ../Exterior.txt file and applied on elements 1,3,5, and 7: <br />
- <em>ELEMENTLOAD 1 DYNAMIC BODY ../Exterior.txt 2 1.000 0.000 4 1 3 5 7</em></p>
+ { "Loads": { "1": { "name" : "ELEMENTLOAD", "attributes": { "name": "TIMESERIE", "type": "BODY", "file": "/full/path/to/folder/Exterior.txt", "dir": [1.000, 0.000], "list": [1,3,5,7] } } } } </p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -137,7 +144,7 @@ The file located at <code>path</code> for dynamic analysis contains the number o
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

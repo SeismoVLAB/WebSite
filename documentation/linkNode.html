@@ -102,39 +102,48 @@ $(document).ready(function(){initNavTree('linkNode.html','');});
 <div class="title"><a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classNode.html">Node</a> keyword defines a point in a finite element mesh. This object provides with member functions to obtain the coordinates <a class="el" href="classNode.html#a7b2668a65e828ea8616a2b36a071f955">Node::Coordinates</a> of the node and the numbering for total <a class="el" href="classNode.html#ae45794759a63b572d044f6c73ad791d1">Node::TotalDegreeOfFreedom</a> and free degrees of freedom <a class="el" href="classNode.html#ae465330d294a54b11d29ecdadd29812e">Node::FreeDegreeOfFreedom</a>. This class also stores displacements <a class="el" href="classNode.html#a5b8cd00fc32ef0fa1a35cae3407cc8e1">Node::Displacements</a>, velocities <a class="el" href="classNode.html#a4d29bfa922db5e2f775641a9616de651">Node::Velocities</a> and accelerations <a class="el" href="classNode.html#aa0b9638da475a9666445be272797f53b">Node::Accelerations</a> at each degree of freedom. The Figure bellow shows a schematic representation of a node in 1-dimension, 2-dimensions and 3-dimensions, respectively. The single arrows represent the translational degree-of-freedom, while the triple arrows represent the rotational degree-of-freedom.</p>
+<div class="textblock"><p>The <a class="el" href="classNode.html">Node</a> class defines a point in a finite element mesh. This object provides with member functions to obtain the coordinates <a class="el" href="classNode.html#a7b2668a65e828ea8616a2b36a071f955">Node::Coordinates</a> of the node and the numbering for total <a class="el" href="classNode.html#ae45794759a63b572d044f6c73ad791d1">Node::TotalDegreeOfFreedom</a> and free degrees of freedom <a class="el" href="classNode.html#ae465330d294a54b11d29ecdadd29812e">Node::FreeDegreeOfFreedom</a>. This class also stores displacements <a class="el" href="classNode.html#a5b8cd00fc32ef0fa1a35cae3407cc8e1">Node::Displacements</a>, velocities <a class="el" href="classNode.html#a4d29bfa922db5e2f775641a9616de651">Node::Velocities</a> and accelerations <a class="el" href="classNode.html#aa0b9638da475a9666445be272797f53b">Node::Accelerations</a> at each degree of freedom. The Figure bellow shows a schematic representation of a node in 1-dimension, 2-dimensions and 3-dimensions, respectively. The single arrows represent the translational degree-of-freedom, while the triple arrows represent the rotational degree-of-freedom.</p>
 <div class="image">
 <img src="Node.png" alt="Node.png" width="48%"/>
 </div>
-<p>A <a class="el" href="classNode.html">Node</a> is created using the built-in parse-structure provided in the Parser,</p>
-<p><code>NODE</code> <code>Tag</code> <code>nDof</code> <code>total</code> <code>free</code> <code>coordinates</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classNode.html">Node</a> is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Nodes"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"ndof"</b></span> : int,
+            <span style="color:green"><b>"totaldof"</b></span>: [ ],
+            <span style="color:green"><b>"freedof"</b></span> : [ ],
+            <span style="color:green"><b>"coords"</b></span>  : [ ]
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>A unique node number identifier. </td></tr>
 <tr>
-<td><code>nDof</code> </td><td>Number of degree-of-freedom in the node. </td></tr>
+<td><code>ndof</code> </td><td>Number of degree-of-freedom in the node. </td></tr>
 <tr>
-<td><code>total</code> </td><td>List of total degree-of-freedom identifiers. </td></tr>
+<td><code>totaldof</code></td><td>List of total degree-of-freedom identifiers. </td></tr>
 <tr>
-<td><code>free</code> </td><td>List of free degree-of-freedom identifiers, ( \(= -1\)) is restrain, ( \(\leq -2\)) is constraint, and and ( \(\geq 0\)) is free. </td></tr>
+<td><code>freedof</code> </td><td>List of free degree-of-freedom identifiers, ( \(= -1\)) is restrain, ( \(\leq -2\)) is constraint, and and ( \(\geq 0\)) is free. </td></tr>
 <tr>
-<td><code>coordinates</code> </td><td>The coordinates in 1-, 2-, and 3-dimensions of the node. </td></tr>
+<td><code>coords</code> </td><td>The coordinates in 1-, 2-, and 3-dimensions of the node. </td></tr>
 </table>
 <dl class="section attention"><dt>Attention</dt><dd>The node identifier number must be unique and positive ( \(\geq0\)). </dd>
 <dd>
-The numbering in <code>&lt;total&gt;</code> and <code>&lt;free&gt;</code> defines the sparse matrix pattern. </dd>
+The numbering in <code>totaldof</code> and <code>freedof</code> defines the sparse matrix pattern. </dd>
 <dd>
 The node object handles the domain-reduction motion used in <a class="el" href="classLoad.html">Load</a>. </dd>
 <dd>
-It is worth mentioning that the number of degree of freedom <code>nDof</code> at each node is defined by the user, and such number should be consistent with the element that will be connected to that node. Defining the number of degree of freedom in this manner allows to add explictly internal degree of freedom that can be used to formulate elements, see for instance <a class="el" href="classPML2DQuad4.html" title="Class for creating a 2D linearized four-node perfectly matched layer element in a mesh...">PML2DQuad4</a>.</dd></dl>
+It is worth mentioning that the number of degree of freedom <code>ndof</code> at each node is defined by the user, and such number should be consistent with the element that will be connected to that node. Defining the number of degree of freedom in this manner allows to add explictly internal degree of freedom that can be used to formulate elements, see for instance <a class="el" href="classPML2DQuad4.html" title="Class for creating a 2D linearized four-node perfectly matched layer element in a mesh...">PML2DQuad4</a>.</dd></dl>
 <h3>Example</h3>
 <blockquote class="doxtable">
 <p>A fixed tri-dimensional node with 3 degree of freedom and coordinate (0.0, 0.0, 10.5) <br />
-<em>NODE 4 3 12 13 14 -1 -1 -1 0.00 0.00 10.50</em></p>
+{ "Nodes": { "4": { "ndof" : 3, "totaldof": [12, 13, 14], "freedof" : [-1, -1, -1], "coords" : [0.0, 0.00, 10.50] } } }</p>
 <p>A free two-dimensional node with 3 degree of freedom and coordinate (0.20, 0.50) <br />
-<em>NODE 8 3 345 346 347 327 328 329 0.20 0.50</em></p>
+{ "Nodes": { "48": { "ndof" : 3, "totaldof": [345, 346, 347], "freedof" : [327, 328, 329], "coords" : [0.20, 0.50] } } }</p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -142,7 +151,7 @@ It is worth mentioning that the number of degree of freedom <code>nDof</code> at
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

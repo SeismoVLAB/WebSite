@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linklin3DShell4.html','');});
 <div class="title"><a class="el" href="classlin3DShell4.html" title="Class for creating a 3D linearized four-node shell element in a mesh. ">lin3DShell4</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classlin3DShell4.html" title="Class for creating a 3D linearized four-node shell element in a mesh. ">lin3DShell4</a> keywords creates a linearized two-dimensional shell element with four-nodes. Each node has six degrees-of-freedom, for which three degree-of-freedom represent three translation in the X-, Y-, and Z-directions, and the other three rotation about the X-, Y-, and Z-directions. Figure provides a simple representation of this element in which the local coordinates are represented by the $r$-, $s$-, and $t$-axis, and (1), (2), (3) and (4) represent the nodes of the element respectively. The element mass, damping and stiffness matrices, as well as internal force vector are computed in local-coordinates and then transformed into global coordinates. Numerical integration is performed to compute matrices and vectors.</p>
+<div class="textblock"><p>The <a class="el" href="classlin3DShell4.html" title="Class for creating a 3D linearized four-node shell element in a mesh. ">lin3DShell4</a> class creates a linearized two-dimensional shell element with four-nodes. Each node has six degrees-of-freedom, for which three degree-of-freedom represent three translation in the X-, Y-, and Z-directions, and the other three rotation about the X-, Y-, and Z-directions. Figure provides a simple representation of this element in which the local coordinates are represented by the $r$-, $s$-, and $t$-axis, and (1), (2), (3) and (4) represent the nodes of the element respectively. The element mass, damping and stiffness matrices, as well as internal force vector are computed in local-coordinates and then transformed into global coordinates. Numerical integration is performed to compute matrices and vectors.</p>
 <div class="image">
 <img src="lin3DShell4.png" alt="lin3DShell4.png" width="48%"/>
 </div>
@@ -122,19 +122,33 @@ $(document).ready(function(){initNavTree('linklin3DShell4.html','');});
 <p>and \(\hat{\textbf{N}} = [\hat{\textrm{n}}_1, \hat{\textrm{n}}_2, \hat{\textrm{n}}_3]^\top\) is the unit matrix of local coordinate axes, and \(\hat{\textrm{n}}_\textrm{i}\) is the unit vector of the i-th local coordinate axis. Note that \(\hat{\textbf{N}} \in \mathbb{R}^{3 \times 3}\), and \(\hat{\textrm{n}}_\textrm{i} \in \mathbb{R}^3\). Note that \(\textbf{M}^\textrm{e}, \textbf{K}^\textrm{e} \in \mathbb{R}^{\textrm{N}_\textrm{dof}^\textrm{e} \times \textrm{N}_\textrm{dof}^\textrm{e}}\) with \(\textrm{N}_\textrm{dof}^\textrm{e} = 24\) in this case.</p>
 <p>Note that \(\textbf{M}^\textrm{e}, \textbf{K}^\textrm{e} \in \mathbb{R}^{\textrm{N}_\textrm{dof}^\textrm{e} \times \textrm{N}_\textrm{dof}^\textrm{e}}\) with \(\textrm{N}_\textrm{dof}^\textrm{e} = 24\) in this case.</p>
 <hr/>
-<p>A <a class="el" href="classlin3DShell4.html" title="Class for creating a 3D linearized four-node shell element in a mesh. ">lin3DShell4</a> element is created using the built-in parse-structure provided in the Parser,</p>
-<p><code>ELEMENT</code> <code>Tag</code> <code>LIN3DSHELLl4</code> <code>nodes</code> <code>sTag</code> <code>np</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classlin3DShell4.html" title="Class for creating a 3D linearized four-node shell element in a mesh. ">lin3DShell4</a> element is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Elements"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "LIN3DSHELL4",
+            <span style="color:green"><b>"conn"</b></span> : [ ],
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"np"</b></span>: int,
+                <span style="color:maroon"><b>"rule"</b></span>: str,
+                <span style="color:maroon"><b>"section"</b></span>: int
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>Unique element object identifier. </td></tr>
 <tr>
-<td><code>nodes</code></td><td>The element connectivity node array. </td></tr>
-<tr>
-<td><code>sTag</code> </td><td>The section identifier. </td></tr>
+<td><code>conn</code> </td><td>The element connectivity node array. </td></tr>
 <tr>
 <td><code>np</code> </td><td>Number of quadrature-points used for the integration. </td></tr>
+<tr>
+<td><code>rule</code> </td><td>The quadrature integration name <code>rule</code>=GAUSS, LOBATTO. </td></tr>
+<tr>
+<td><code>section</code> </td><td>The section identifier. </td></tr>
 </table>
 <dl class="section attention"><dt>Attention</dt><dd>This formulation allows small deformations. </dd>
 <dd>
@@ -149,8 +163,8 @@ The section thickness is assumed to be constant over the element and the same at
 The domain reduction force method is incompatible with this element.</dd></dl>
 <h3>Example</h3>
 <blockquote class="doxtable">
-<p>A 3D linearized shell element of thickness 0.01 with 4 integration points between nodes 1, 2, 3 and 4, made of section 1 is constructed as: <br />
-<em>ELEMENT 1 <a class="el" href="classlin3DShell4.html" title="Class for creating a 3D linearized four-node shell element in a mesh. ">lin3DShell4</a> 1 2 3 4 1 0.01 4</em></p>
+<p>A 3D linearized shell element between nodes 1, 2, 3 and 4, made of section 1 using with 9 integration points is constructed as: <br />
+{ "Elements": { "1": { "name" : "LIN3DSHELL4", "conn" : [1,2,3,4], "attributes": { "np": 9, "rule": "GAUSS", "section": 1 } } } }</p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -158,7 +172,7 @@ The domain reduction force method is incompatible with this element.</dd></dl>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

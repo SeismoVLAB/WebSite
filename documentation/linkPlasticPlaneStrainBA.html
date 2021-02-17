@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linkPlasticPlaneStrainBA.html','');});
 <div class="title"><a class="el" href="classPlasticPlaneStrainBA.html" title="Class for creating a biaxial plastic bounding surface material for two-dimensional elements...">PlasticPlaneStrainBA</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classPlasticPlaneStrainBA.html" title="Class for creating a biaxial plastic bounding surface material for two-dimensional elements...">PlasticPlaneStrainBA</a> keywords creates a biaxial material class. The underlying model is a total stress bounding surface plasticity model with vanishing elastic region. The rate of the constitute equation has the form of:</p>
+<div class="textblock"><p>The <a class="el" href="classPlasticPlaneStrainBA.html" title="Class for creating a biaxial plastic bounding surface material for two-dimensional elements...">PlasticPlaneStrainBA</a> class creates a biaxial material class. The underlying model is a total stress bounding surface plasticity model with vanishing elastic region. The rate of the constitute equation has the form of:</p>
 <p class="formulaDsp">
 \[ \dot{\sigma} = K\text{tr}(\dot{\epsilon})\textbf{1} + 2\mu (1+\frac{3\mu}{H&#39;})^{-1}\dot{\epsilon}&#39; \nonumber \]
 </p>
@@ -123,9 +123,24 @@ $(document).ready(function(){initNavTree('linkPlasticPlaneStrainBA.html','');});
 \[ \mathbb{C} = K\textbf{1}\otimes\textbf{1} + \psi \left(\textbf{I}-\frac{1}{3}\textbf{1}\otimes\textbf{1} \right) \nonumber \]
 </p>
 <p>where \(\psi\) is a positive scalar defined such that \(\Delta \sigma&#39; = \psi \Delta \epsilon&#39;\). </p><hr/>
-<p>A <a class="el" href="classPlasticPlaneStrainBA.html" title="Class for creating a biaxial plastic bounding surface material for two-dimensional elements...">PlasticPlaneStrainBA</a> material is created using the built-in parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>,</p>
-<p><code>MATERIAL</code> <code>Tag</code> <code>PLASTICPLANESTRAINBA</code> <code>K</code> <code>G</code> <code>rho</code> <code>0.0</code> <code>h</code> <code>m</code> <code>Su</code> <code>beta</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classPlasticPlaneStrainBA.html" title="Class for creating a biaxial plastic bounding surface material for two-dimensional elements...">PlasticPlaneStrainBA</a> material is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Materials"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "PLASTICPLANESTRAINBA",
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"K"</b></span>: double,
+                <span style="color:maroon"><b>"G"</b></span>: double,
+                <span style="color:maroon"><b>"rho"</b></span>: double,
+                <span style="color:maroon"><b>"h"</b></span>: double,
+                <span style="color:maroon"><b>"m"</b></span>: double,
+                <span style="color:maroon"><b>"Su"</b></span>: double,
+                <span style="color:maroon"><b>"beta"</b></span>: double
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
@@ -154,7 +169,7 @@ At each Gauss point of the elements in the plane strain problem, the strain tens
 <h3>Example</h3>
 <blockquote class="doxtable">
 <p>A plane strain Borja-Amies material with bulk modulus 133, shear modulus 80, no density, exponential hardening h=80 and m=1.5, undrained soil strength 50, with integration parameter 0.5 is defined as: <br />
-<em>MATERIAL 1 PLASTICPLANESTRAINBA 133 80 0.0 0.0 80 1.5 50 0.5</em></p>
+{ "Materials": { "1": { "name" : "PLASTICPLANESTRAINBA", "attributes": { "K": 133.0, "G": 80.0, "rho": 0.0, "h": 80, "m": 1.5, "Su": 50, "beta": 0.5 } } } }</p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -162,7 +177,7 @@ At each Gauss point of the elements in the plane strain problem, the strain tens
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

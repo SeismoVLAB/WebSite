@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linkUnxBoucWen2DLink.html','');});
 <div class="title"><a class="el" href="classUnxBoucWen2DLink.html" title="Class for creating an uniaxial 2D two-node link element using Bouc-Wen formulation. ">UnxBoucWen2DLink</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classUnxBoucWen2DLink.html" title="Class for creating an uniaxial 2D two-node link element using Bouc-Wen formulation. ">UnxBoucWen2DLink</a> keywords creates a uniaxial Bouc-Wen element with two-nodes in two-dimensions. The number of degree-of-freedom depend on the node. Currently node with 2 (two translation) and 3 (two translation and one rotation) dofs are supported. The main purpose of this element is to force uniaxial behavior along a certain direction. Figure provides a simple representation of this element where (1) and (2) represent the start and end nodes.</p>
+<div class="textblock"><p>The <a class="el" href="classUnxBoucWen2DLink.html" title="Class for creating an uniaxial 2D two-node link element using Bouc-Wen formulation. ">UnxBoucWen2DLink</a> class creates a uniaxial Bouc-Wen element with two-nodes in two-dimensions. The number of degree-of-freedom depend on the node. Currently node with 2 (two translation) and 3 (two translation and one rotation) dofs are supported. The main purpose of this element is to force uniaxial behavior along a certain direction. Figure provides a simple representation of this element where (1) and (2) represent the start and end nodes.</p>
 <div class="image">
 <img src="UnxBoucWen2DLink.png" alt="UnxBoucWen2DLink.png" width="28%"/>
 </div>
@@ -124,19 +124,50 @@ $(document).ready(function(){initNavTree('linkUnxBoucWen2DLink.html','');});
 \[ \textbf{K}^\textrm{e} = \textbf{T}_\textrm{e}^\top \, \mathcal{K}^\textrm{e} \, \textbf{T}_\textrm{e} \,, \; \textbf{F}^\textrm{e} = \textbf{T}_\textrm{e}^\top \, \mathcal{F}^\textrm{e} \,,\nonumber \]
 </p>
 <p>and \(\hat{\textbf{N}} = [\hat{\textrm{n}}_1, \hat{\textrm{n}}_2, \hat{\textrm{n}}_3]^\top\) is the unit matrix of local coordinate axes, and \(\hat{\textrm{n}}_\textrm{i}\) is the unit vector of the i-th local coordinate axis. Note that \(\hat{\textbf{N}} \in \mathbb{R}^{3 \times 3}\), and \(\hat{\textrm{n}}_\textrm{i} \in \mathbb{R}^3\). Note that \(\textbf{M}^\textrm{e}, \textbf{K}^\textrm{e} \in \mathbb{R}^{\textrm{N}_\textrm{dof}^\textrm{e} \times \textrm{N}_\textrm{dof}^\textrm{e}}\) with \(\textrm{N}_\textrm{dof}^\textrm{e} = 4, \text{ or } 6\). </p><hr/>
-<p>A <a class="el" href="classUnxBoucWen2DLink.html" title="Class for creating an uniaxial 2D two-node link element using Bouc-Wen formulation. ">UnxBoucWen2DLink</a> element is created using the built-in parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>,</p>
-<p><code>ELEMENT</code> <code>Tag</code> <code>UNXBOUCWEN2DLINK</code> <code>nodes</code> <code>params</code> <code>vars</code> <code>dim</code> <code>dir</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classUnxBoucWen2DLink.html" title="Class for creating an uniaxial 2D two-node link element using Bouc-Wen formulation. ">UnxBoucWen2DLink</a> element is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Elements"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "UNXBOUCWEN2DLINK",
+            <span style="color:green"><b>"conn"</b></span> : [ ],
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"nmax"</b></span>: int,
+                <span style="color:maroon"><b>"Fy"</b></span>: double,
+                <span style="color:maroon"><b>"k0"</b></span>: double,
+                <span style="color:maroon"><b>"alpha"</b></span>: double,
+                <span style="color:maroon"><b>"eta"</b></span>: double,
+                <span style="color:maroon"><b>"beta"</b></span>: double,
+                <span style="color:maroon"><b>"gamma"</b></span>: double,
+                <span style="color:maroon"><b>"tol"</b></span>: double,
+                <span style="color:maroon"><b>"dim"</b></span>: double,
+                <span style="color:maroon"><b>"dir"</b></span>: int
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>Unique positive element identifier. </td></tr>
 <tr>
-<td><code>nodes</code> </td><td>The element connectivity node array. </td></tr>
+<td><code>conn</code> </td><td>The element connectivity node array. </td></tr>
 <tr>
-<td><code>params</code></td><td>List of parameters in this order: \(\alpha, \mu, \eta, \beta, \gamma\), and tol. </td></tr>
+<td><code>Fy</code> </td><td>The yield force. </td></tr>
 <tr>
-<td><code>vars</code> </td><td>List of variables in this order: \(f_y, K_0, \alpha_1, \alpha_2\) </td></tr>
+<td><code>k0</code> </td><td>The initial stiffness. </td></tr>
+<tr>
+<td><code>alpha</code> </td><td>The stiffness ratio \(\alpha \in [0,1]\). </td></tr>
+<tr>
+<td><code>eta</code> </td><td>The hysteresis shape parameter. </td></tr>
+<tr>
+<td><code>beta</code> </td><td>The hysteresis shape parameter. </td></tr>
+<tr>
+<td><code>gamma</code> </td><td>The hysteresis shape parameter. </td></tr>
+<tr>
+<td><code>nmax</code> </td><td>Number of maximum iteration Newton-Raphson. </td></tr>
+<tr>
+<td><code>tol</code> </td><td>Tolerance to accept convergence of solution. </td></tr>
 <tr>
 <td><code>dim</code> </td><td>The number of degree of freedom of the nodes. </td></tr>
 <tr>
@@ -156,7 +187,7 @@ Internal force responses are provided in global coordinates.</dd></dl>
 <h3>Example</h3>
 <blockquote class="doxtable">
 <p>A uniaxial Bouc-Wen element between nodes 1 and 2 with 2 dofs, acting on 1-direction in a 2D problem is constructed as: <br />
- <em>ELEMENT 1 UNXBOUCWEN2DLINK 1 2 1.00000 2.00000 1.00000 0.50000 0.50000 1.000000E-08 2.500000E+02 2.500000E+02 0.10000 0.00000 2 0</em></p>
+ { "Elements": { "1": { "name" : "UNXBOUCWEN2DLINK", "conn" : [1,2], "attributes": { "nmax": 50, "Fy": 250.0, "k0": 250.0, "alpha": 0.1, "eta": 1.0, "beta": 0.5, "gamma": 0.5, "tol": 1.0E-08, "dim": 2, "dir": 0 } } } }</p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -164,7 +195,7 @@ Internal force responses are provided in global coordinates.</dd></dl>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

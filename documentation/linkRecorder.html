@@ -102,51 +102,69 @@ $(document).ready(function(){initNavTree('linkRecorder.html','');});
 <div class="title"><a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> keyword defines a solution output file. Currently, there are two object solution that can be recorded: <a class="el" href="linkNode.html">Node</a>, <a class="el" href="linkSection.html">Section</a> and <a class="el" href="linkElement.html">Element</a>.</p>
+<div class="textblock"><p>The <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> class defines a solution output file. Currently, there are two object solution that can be recorded: <a class="el" href="linkNode.html">Node</a>, <a class="el" href="linkSection.html">Section</a> and <a class="el" href="linkElement.html">Element</a>.</p>
 <h1><a class="anchor" id="linkNodeRecorder"></a>
 Node Responses</h1>
-<p>A <b>NODE</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> can be created using the built-in parse-function provided in the Parser as follows,</p>
-<p><code>RECORDER</code> <code>NODE</code> <code>file</code> <code>nsample</code> <code>precision</code> <code>response</code> <code>nn</code> <code>nodes</code></p>
-<table class="doxtable">
+<p>A <b>NODE</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> can be created using the built-in parse-function provided in the Parser as follows, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Recorders"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span>: "NODE",
+            <span style="color:green"><b>"file"</b></span>: str,
+            <span style="color:green"><b>"ndps"</b></span>: int,
+            <span style="color:green"><b>"resp"</b></span>: str,
+            <span style="color:green"><b>"nsamp"</b></span>: int,
+            <span style="color:green"><b>"list"</b></span> : [ ],
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>file</code> </td><td>The file name where the results are going to be stored. </td></tr>
 <tr>
-<td><code>response</code> </td><td>Depend on the object, see the NOTE bellow. </td></tr>
+<td><code>resp</code> </td><td>Depend on the object, see the NOTE bellow. </td></tr>
 <tr>
-<td><code>nsample</code> </td><td>The number of sampling points to record the solution. </td></tr>
+<td><code>nsamp</code></td><td>The number of sampling points (dynamics analysis) to record the solution. </td></tr>
 <tr>
-<td><code>precision</code> </td><td>The precision number to store the results. </td></tr>
+<td><code>ndps</code> </td><td>The precision number to store the results. </td></tr>
 <tr>
-<td><code>nn</code> </td><td>The number of nodes to be recorded. </td></tr>
-<tr>
-<td><code>node</code> </td><td>The list of <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> identifiers. </td></tr>
+<td><code>list</code> </td><td>The list of <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> identifiers. </td></tr>
 </table>
 <p>The output file of a <b>NODE</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> has the structure showed in the Figure bellow.</p>
 <div class="image">
 <img src="NodeRecorder.png" alt="NodeRecorder.png" width="40%"/>
 </div>
-<dl class="section attention"><dt>Attention</dt><dd>If the <code>response</code> is recorded for a <code>node</code>, then it can be either <code>disp, vel, accel, reaction</code>.</dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>The options available are <code>resp</code>= <code>disp</code>, <code>vel</code>, <code>accel</code>, <code>reaction</code>.</dd></dl>
 <h1><a class="anchor" id="linkElementRecorder"></a>
 Element Responses</h1>
-<p>An <b>ELEMENT</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> can be created using the built-in parse-function provided in the Parser as follows,</p>
-<p><code>RECORDER</code> <code>ELEMENT</code> <code>file</code> <code>nsample</code> <code>precision</code> <code>response</code> <code>ne</code> <code>elements</code></p>
-<table class="doxtable">
+<p>An <b>ELEMENT</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> can be created using the built-in parse-function provided in the Parser as follows, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Recorders"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span>: "ELEMENT",
+            <span style="color:green"><b>"file"</b></span>: str,
+            <span style="color:green"><b>"ndps"</b></span>: int,
+            <span style="color:green"><b>"resp"</b></span>: str,
+            <span style="color:green"><b>"nsamp"</b></span>: int,
+            <span style="color:green"><b>"list"</b></span> : [ ],
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>file</code> </td><td>The file name where the results are going to be stored. </td></tr>
 <tr>
-<td><code>response</code> </td><td>Depend on the object, see the NOTE bellow. </td></tr>
+<td><code>resp</code> </td><td>Depend on the object, see the NOTE bellow. </td></tr>
 <tr>
-<td><code>nsample</code> </td><td>The number of sampling points to record the solution. </td></tr>
+<td><code>nsamp</code> </td><td>The number of sampling points (dynamics analysis) to record the solution. </td></tr>
 <tr>
-<td><code>precision</code> </td><td>The precision number to store the results. </td></tr>
+<td><code>ndps</code> </td><td>The precision number to store the results. </td></tr>
 <tr>
-<td><code>ne</code> </td><td>The number of elements to be recorded. </td></tr>
-<tr>
-<td><code>element</code> </td><td>The list of <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> identifiers. </td></tr>
+<td><code>list</code> </td><td>The list of <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> identifiers. </td></tr>
 </table>
 <p>The output file of a <b>ELEMENT</b> recorder for <code>internal force</code> has the structure showed in the Figure below.</p>
 <div class="image">
@@ -156,54 +174,72 @@ Element Responses</h1>
 <div class="image">
 <img src="StressRecorder.png" alt="StressRecorder.png" width="45%"/>
 </div>
-<dl class="section attention"><dt>Attention</dt><dd>If the <code>response</code> is recorded for a <code>element</code>, then it can be either <code>strain, stress, internalforce, strainrate</code>.</dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>The options available are <code>response</code>=<code>strain</code>, <code>stress</code>, <code>internalforce</code>, <code>strainrate</code>.</dd></dl>
 <h1><a class="anchor" id="linkSectionRecorder"></a>
 Section Responses</h1>
-<p>An <b>SECTION</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> can be created using the built-in parse-function provided in the Parser as follows,</p>
-<p><code>RECORDER</code> <code>SECTION</code> <code>file</code> <code>nsample</code> <code>precision</code> <code>response</code> <code>npos</code> <code>position</code> <code>ne</code> <code>elements</code></p>
-<table class="doxtable">
+<p>An <b>SECTION</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> can be created using the built-in parse-function provided in the Parser as follows, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Recorders"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span>: "SECTION",
+            <span style="color:green"><b>"file"</b></span>: str,
+            <span style="color:green"><b>"ndps"</b></span>: int,
+            <span style="color:green"><b>"resp"</b></span>: str,
+            <span style="color:green"><b>"nsamp"</b></span>: int,
+            <span style="color:green"><b>"coords"</b></span>: int,
+            <span style="color:green"><b>"list"</b></span> : [ ],
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>file</code> </td><td>The file name where the results are going to be stored. </td></tr>
 <tr>
-<td><code>response</code> </td><td>Depend on the object, see the NOTE bellow. </td></tr>
+<td><code>resp</code> </td><td>Depend on the object, see the NOTE bellow. </td></tr>
 <tr>
-<td><code>nsample</code> </td><td>The number of sampling points to record the solution. </td></tr>
+<td><code>nsamp</code> </td><td>The number of sampling points (dynamics analysis) to record the solution. </td></tr>
 <tr>
-<td><code>precision</code> </td><td>The precision number to store the results. </td></tr>
+<td><code>ndps</code> </td><td>The precision number to store the results. </td></tr>
 <tr>
-<td><code>npos</code> </td><td>The number of coordinates specified. </td></tr>
+<td><code>coords</code></td><td>Vector with the section coordinates. </td></tr>
 <tr>
-<td><code>position</code> </td><td>Vector with the section coordinates. </td></tr>
-<tr>
-<td><code>ne</code> </td><td>The number of elements to be recorded. </td></tr>
-<tr>
-<td><code>element</code> </td><td>The list of <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> identifiers. </td></tr>
+<td><code>list</code> </td><td>The list of <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> identifiers. </td></tr>
 </table>
 <dl class="section attention"><dt>Attention</dt><dd>A <b>SECTION</b> for frame elements requires two coordinates ( \(x_3\), \(x_2\)), while a <b>SECTION</b> for shell elements requires only one coordinate \(x_3\). </dd>
 <dd>
-The <b>SECTION</b> <code>response = strain, stress</code> are allowed, and they are computed at each integration point.</dd></dl>
+The <b>SECTION</b> <code>response</code> = <code>strain</code>, <code>stress</code> are allowed, and they are computed at each integration point.</dd></dl>
 <h1><a class="anchor" id="linkParaviewRecorder"></a>
 Paraview Animation</h1>
-<p>An <b>PARAVIEW</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> can be created using the built-in parse-function provided in the Parser as follows,</p>
-<p><code>RECORDER</code> <code>PARAVIEW</code> <code>file</code> <code>nsample</code> <code>precision</code> <code>nfeatures</code></p>
-<table class="doxtable">
+<p>An <b>PARAVIEW</b> <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> can be created using the built-in parse-function provided in the Parser as follows, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Recorders"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span>: "PARAVIEW",
+            <span style="color:green"><b>"file"</b></span>: str,
+            <span style="color:green"><b>"ndps"</b></span>: int,
+            <span style="color:green"><b>"nsamp"</b></span>: int,
+            <span style="color:green"><b>"features"</b></span> : int,
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>file</code> </td><td>The file name where the results are going to be stored. </td></tr>
 <tr>
-<td><code>nsample</code> </td><td>The number of sampling points to record the solution. </td></tr>
+<td><code>nsamp</code> </td><td>The number of sampling points (dynamics analysis) to record the solution. </td></tr>
 <tr>
-<td><code>precision</code> </td><td>The precision number to store the results. </td></tr>
+<td><code>ndps</code> </td><td>The precision number to store the results. </td></tr>
 <tr>
-<td><code>nfeatures</code> </td><td>The number of features (for elements) to be written in paraview. </td></tr>
+<td><code>features</code></td><td>The number of features (for elements) to be written in paraview (computed using Pre-Analysis). </td></tr>
 </table>
 <dl class="section note"><dt>Note</dt><dd>Parallel results are provided in separated files. Thus, the solution within each processor is named as: <code>Animation_PARTp.q.vtk</code>, where <code>p</code> represents the partition number (starting from <code>0</code> to <code>np</code>), and <code>q</code> the solution number (starting from <code>0</code> to <code>nTimeSteps/nsample</code>).</dd></dl>
-<dl class="section attention"><dt>Attention</dt><dd>A <code>nsample = n</code> means the paraview solution will be stored every <code>n</code> time steps. Paraview files are heavy and a default sampling rate of five is assuumed. </dd>
+<dl class="section attention"><dt>Attention</dt><dd>A <code>nsamp = n</code> means the paraview solution will be stored every <code>n</code> time steps. Paraview files are heavy and a default sampling rate of five is assuumed. </dd>
 <dd>
-A <code>nfeatures = n</code> means that the number of connectivities with its length of all elements in the partition is <code>n</code>. This parameter is internally used in Paraview. </dd>
+A <code>features = n</code> means that the number of connectivities with its length of all elements in the partition is <code>n</code>. This parameter is internally used in Paraview. </dd>
 <dd>
 The <b>PARAVIEW</b> option currently saves two types of output:<ul>
 <li><b>POINT</b>: Response at each <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> of the finite element model. Thus, displacement, velocity and accelerations are displayed. The point quantities are represented in global coordinates.</li>
@@ -225,7 +261,7 @@ The <b>PARAVIEW</b> option currently saves two types of output:<ul>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

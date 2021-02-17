@@ -102,73 +102,102 @@ $(document).ready(function(){initNavTree('linkDamping.html','');});
 <div class="title"><a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a> keyword creates a class which emulates loss of energy in an structural element. This object can handle free, Rayleigh, and Caughey damping models.</p>
+<div class="textblock"><p>The <a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a> class creates a class which emulates loss of energy in an structural element. This object can handle free, Rayleigh, and Caughey damping models.</p>
 <p>The <b>FREE</b> damping assumes no viscous contribution, that is,</p>
 <p class="formulaDsp">
 \[ \mathbf{C} = \mathbf{0} \,. \nonumber \]
 </p>
-<p>A <b>FREE</b> damping object is created using the built-in parse-structure provided in the Parser as,</p>
-<p><code>DAMPING</code> <code>Tag</code> <code>FREE</code> <code>ne</code> <code>elems</code></p>
-<table class="doxtable">
+<p>A <b>FREE</b> damping object is created using the built-in parse-structure provided in the Parser as, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Dampings"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "FREE",
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"list"</b></span> : [ ]
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>Unique <a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a> object identifier. </td></tr>
 <tr>
-<td><code>ne</code> </td><td>Number of elements that share this <a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a>. </td></tr>
-<tr>
-<td><code>elems</code> </td><td>List of element identifiers that share this <a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a> model. </td></tr>
+<td><code>list</code> </td><td>List of element identifiers that share this <a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a> model. </td></tr>
 </table>
 <p>The <b>RAYLEIGH</b> damping known as proportional damping or classical damping model expresses damping as a linear combination of the mass and stiffness matrices, that is,</p>
 <p class="formulaDsp">
-\[ \mathbf{C} = a_0 \,\mathbf{M} + a_1 \,\mathbf{K} \,. \nonumber \]
+\[ \mathbf{C} = a_m \,\mathbf{M} + a_k \,\mathbf{K} \,. \nonumber \]
 </p>
-<p>A <b>RAYLEIGH</b> damping object is created using the built-in parse-structure provided in the Parser as,</p>
-<p><code>DAMPING</code> <code>Tag</code> <code>RAYLEIGH</code> <code>a0</code> <code>a1</code> <code>ne</code> <code>elems</code></p>
-<table class="doxtable">
+<p>A <b>RAYLEIGH</b> damping object is created using the built-in parse-structure provided in the Parser as, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Dampings"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "RAYLEIGH",
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"am"</b></span> : double,
+                <span style="color:maroon"><b>"ak"</b></span> : double,
+                <span style="color:maroon"><b>"list"</b></span> : [ ]
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>Unique <a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a> object identifier. </td></tr>
 <tr>
-<td><code>a0, a1</code></td><td>Parameters to construct the damping \(\textbf{C}\) matrix. </td></tr>
+<td><code>am</code> </td><td>Coefficient associated to mass matrix to construct the damping \(\textbf{C}\) matrix. </td></tr>
 <tr>
-<td><code>ne</code> </td><td>Number of elements that share this <a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a>. </td></tr>
+<td><code>ak</code> </td><td>Coefficient associated to stiffness matrix to construct the damping \(\textbf{C}\) matrix. </td></tr>
 <tr>
-<td><code>elems</code> </td><td>List of element identifiers that share this <a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a> model. </td></tr>
+<td><code>list</code> </td><td>List of element identifiers that share this <a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a> model. </td></tr>
 </table>
 <p>The <b>CAUGHEY</b> damping is an extension the classical damping matrix, that is,</p>
 <p class="formulaDsp">
-\[ \mathbf{C} = \mathbf{M} \sum_{\textrm{i}=1}^{N_p} a_\textrm{i} \left( \mathbf{M}^{-1} \mathbf{K} \right) \,. \nonumber \]
+\[ \mathbf{C} = \mathbf{M} \sum_{\textrm{i}=1}^{N_p} a_\textrm{j} \left( \mathbf{M}^{-1} \mathbf{K} \right) \,. \nonumber \]
 </p>
-<p>A <b>CAUGHEY</b> damping object is created using the built-in parse-structure provided in the Parser as,</p>
-<p><code>DAMPING</code> <code>Tag</code> <code>CAUGHEY</code> <code>Np</code> <code>a0 ... an</code> <code>ne</code> <code>elems</code></p>
-<table class="doxtable">
+<p>A <b>CAUGHEY</b> damping object is created using the built-in parse-structure provided in the Parser as, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Dampings"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "CAUGHEY",
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"aj"</b></span> : [ ],
+                <span style="color:maroon"><b>"list"</b></span> : [ ]
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
-<td><code>Tag</code> </td><td>Unique {<a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a>} object identifier. </td></tr>
+<td><code>Tag</code> </td><td>Unique <a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a> object identifier. </td></tr>
 <tr>
-<td><code>Np</code> </td><td>Number of terms to be used in the expansion for this <a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a>. </td></tr>
+<td><code>aj</code> </td><td>List of parameters to construct the damping \(\textbf{C}\) matrix. </td></tr>
 <tr>
-<td><code>a0,..,an</code></td><td>List of parameters to construct the damping ${C}$ matrix. </td></tr>
-<tr>
-<td><code>ne</code> </td><td>Number of elements that share this {<a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a>}. </td></tr>
-<tr>
-<td><code>elems</code> </td><td>List of element identifiers that share this {<a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a>} model. </td></tr>
+<td><code>list</code> </td><td>List of element identifiers that share this <a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a> model. </td></tr>
 </table>
 <dl class="section attention"><dt>Attention</dt><dd>The present formulation allows group of elements to have different damping models. </dd>
 <dd>
 <b>FREE</b> and <b>RAYLEIGH</b> damping models are supported. <b>CAUGHEY</b> damping model will be implemented in the future. </dd>
 <dd>
-The <b>RAYLEIGH</b> damping models considers the initial stiffness matrix to construct the damping \(\textbf{C}\) matrix. </dd></dl>
+The <b>RAYLEIGH</b> damping models considers the initial stiffness matrix to construct the damping \(\textbf{C}\) matrix.</dd></dl>
+<h3>Example</h3>
+<blockquote class="doxtable">
+<p>A FREE damping applied to elements with identifier 1,2, and 3 is constructed as: <br />
+ { "Dampings": { "1": { "name" : "FREE", "attributes": { "list" : [1,2,3] } } } }</p>
+</blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

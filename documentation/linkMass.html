@@ -102,26 +102,33 @@ $(document).ready(function(){initNavTree('linkMass.html','');});
 <div class="title">Mass </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="linkMass.html">Mass</a> keyword sets the mass at a <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>. The mass set in this manner is added to the mass contribution of <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> that share this <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>.</p>
-<p>A <a class="el" href="linkMass.html">Mass</a> is created using the built-in parse-structure provided in the Parser,</p>
-<p><code>MASS</code> <code>Tag</code> <code>nDof</code> <code>masses</code></p>
-<table class="doxtable">
+<div class="textblock"><p>The <a class="el" href="linkMass.html">Mass</a> class sets the mass at a <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>. The mass set in this manner is added to the mass contribution of <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> that share this <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>.</p>
+<p>A <a class="el" href="linkMass.html">Mass</a> is created using the built-in parse-structure provided in the Parser, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Masses"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"ndof"</b></span> : int,
+            <span style="color:green"><b>"mass"</b></span> : [ ]
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>The <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> identifier where the mass is added. </td></tr>
 <tr>
-<td><code>nDof</code> </td><td>Number of degree of freedom in the node. </td></tr>
+<td><code>ndof</code> </td><td>Number of degree of freedom in the node. </td></tr>
 <tr>
-<td><code>masses</code> </td><td>List of mass values applied to each degree of freedom. </td></tr>
+<td><code>mass</code> </td><td>List of mass values applied to each degree of freedom. </td></tr>
 </table>
-<dl class="section attention"><dt>Attention</dt><dd>The mass matrix \(\textbf{M} \in \mathbb{R}^{nTotal \times nTotal}\) can be constructed using only the Mass keyword by specifying mass values in each <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> and each degree of freedom, and using zero density in <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>. However, the resulting mass matrix will coincide with the LUMPED formulation specified in <a class="el" href="linkModel.html">Model</a>.</dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>The mass matrix \(\textbf{M} \in \mathbb{R}^{nTotal \times nTotal}\) can be constructed using only the Mass keyword by specifying mass values in each <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> and each degree of freedom, and using zero density in <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>. However, the resulting mass matrix will coincide with the LUMPED formulation specified in <a class="el" href="linkModel.html">Global</a>.</dd></dl>
 <h3>Example</h3>
 <blockquote class="doxtable">
-<p>A 2D mass of 10.0 applied to node 1 with 3 degree of freedom over the X,Y dierection and rotational mass 100.0 over the \(\theta_Z\) is: <br />
- <em>MASS 1 3 10.0 10.0 100.00</em></p>
-<p>A 3D unit mass applied to node 5 with 6 degree of freedom over the X,Y,Z dierection and zero rotational mass over \(\theta_X,\theta_Y,\theta_Z\) is: <br />
- <em>MASS 5 6 1.00 1.00 1.00 0.00 0.00 0.00</em></p>
+<p>A 2D mass of 10.0 applied to node 1 with 3 degree of freedom over the X,Y direction and rotational mass 100.0 over the \(\theta_Z\) is: <br />
+ { "Masses": { "1": { "ndof" : 3, "mass" : [10.0, 10.0, 100.00] } } }</p>
+<p>A 3D unit mass applied to node 5 with 6 degree of freedom over the X,Y,Z direction and zero rotational mass over \(\theta_X,\theta_Y,\theta_Z\) is: <br />
+ { "Masses": { "5": { "ndof" : 6, "mass" : [1.00, 1.00, 1.00, 0.00, 0.00, 0.00] } } }</p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -129,7 +136,7 @@ $(document).ready(function(){initNavTree('linkMass.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

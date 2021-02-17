@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linkLin3DCircular.html','');});
 <div class="title"><a class="el" href="classLin3DCircular.html" title="Class for creating a solid circular section for 3D analysis with linear elastic material for a frame ...">Lin3DCircular</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <code>LIN3DCIRCULAR</code> (or <code>LIN2DCIRCULAR</code>) keyword creates a line <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> that is represented by its height \(h\), width \(b\), flange thickness \(t_f\), and web thickness \(t_w\). This class computes the cross-sectional properties such as area, shear area, inertias and so on. The figure shows a representation of the <a class="el" href="classLin2DCircular.html" title="Class for creating a solid circular section for 2D analysis with linear elastic material for a frame ...">Lin2DCircular</a> and <a class="el" href="classLin3DCircular.html" title="Class for creating a solid circular section for 3D analysis with linear elastic material for a frame ...">Lin3DCircular</a></p>
+<div class="textblock"><p>The <code>LIN3DCIRCULAR</code> (or <code>LIN2DCIRCULAR</code>) class creates a line <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> that is represented by its height \(h\), width \(b\), flange thickness \(t_f\), and web thickness \(t_w\). This class computes the cross-sectional properties such as area, shear area, inertias and so on. The figure shows a representation of the <a class="el" href="classLin2DCircular.html" title="Class for creating a solid circular section for 2D analysis with linear elastic material for a frame ...">Lin2DCircular</a> and <a class="el" href="classLin3DCircular.html" title="Class for creating a solid circular section for 3D analysis with linear elastic material for a frame ...">Lin3DCircular</a></p>
 <div class="image">
 <img src="Circular.png" alt="Circular.png" width="18%"/>
 </div>
@@ -112,17 +112,34 @@ $(document).ready(function(){initNavTree('linkLin3DCircular.html','');});
 <li>Geometric center from bottom left corner: \(x_3 = r\), and \(x_2 = r\)</li>
 </ul>
 <hr/>
-<p>A <b>LIN3DCIRCULAR</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object can be created using the built-in parse-function provided in the Parse as follows,</p>
-<p><code>SECTION</code> <code>Tag</code> <code>PLAIN</code> <code>mTag</code> <code>LIN3DCIRCULAR</code> <code>r</code></p>
-<table class="doxtable">
+<p>A <b>LIN3DCIRCULAR</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object can be created using the built-in json parse-function provided in the Parse.hpp, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Sections"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "LIN3DCIRCULAR",
+            <span style="color:green"><b>"model"</b></span> : "PLAIN",
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"r"</b></span>: double,
+                <span style="color:maroon"><b>"ip"</b></span>: double,
+                <span style="color:maroon"><b>"theta"</b></span>: double,
+                <span style="color:maroon"><b>"material"</b></span>: int
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>Unique <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object identifier. </td></tr>
 <tr>
-<td><code>mTag</code> </td><td><a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> object identifier. </td></tr>
-<tr>
 <td><code>r</code> </td><td>The radius of the cross section. </td></tr>
+<tr>
+<td><code>ip</code> </td><td>The insertion point, see <a class="el" href="linkSectionInsertionPoint.html">Insertion Point</a>. </td></tr>
+<tr>
+<td><code>theta</code> </td><td>The section rotation angle, see <a class="el" href="linkSectionLocalAxis.html">Local Axes</a>. </td></tr>
+<tr>
+<td><code>material</code></td><td><a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> object identifier. </td></tr>
 </table>
 <dl class="section attention"><dt>Attention</dt><dd>The <b>LIN3DCIRCULAR</b> / <b>LIN2DCIRCULAR</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object is made of one <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>. </dd>
 <dd>
@@ -137,7 +154,7 @@ If stress/strain are evaluated outside the section domain, the response is compu
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

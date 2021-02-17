@@ -102,22 +102,32 @@ $(document).ready(function(){initNavTree('linkSupportmotionload.html','');});
 <div class="title">Static/Dynamic displacement support motion </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="linkSupportMotion.html">Support Motion</a> <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> is applied as a <b>POINTLOAD</b> in the following manner:</p>
-<p><code>POINTLOAD</code> <code>Tag</code> <code>SUPPORTMOTION</code> <code>nn</code> <code>nodes</code></p>
-<table class="doxtable">
+<div class="textblock"><p>The <a class="el" href="linkSupportMotion.html">Support Motion</a> <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> are applied in the following manner: </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Loads"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "SUPPORTMOTION",
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"list"</b></span>: [ ]
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>The <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> identifier to applied the support motion. </td></tr>
 <tr>
-<td><code>nn</code> </td><td>The number of <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> where support motion is applied. </td></tr>
-<tr>
-<td><code>nodes</code> </td><td>The list of <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> identifiers where the support motion are applied. </td></tr>
+<td><code>list</code> </td><td>The list of support identifiers where the motion are applied. </td></tr>
 </table>
+<dl class="section attention"><dt>Attention</dt><dd>The static or dynamic nature of the motion is provided in <a class="el" href="linkSupportMotion.html">Support Motion</a>. </dd>
+<dd>
+Note that Supports must be previously defined. See <a class="el" href="linkSupportMotion.html">Support Motion</a> for more details.</dd></dl>
 <h3>Example</h3>
 <blockquote class="doxtable">
 <p>The load pattern required to applied the support motion in node 5 is created as: <br />
- <em>POINTLOAD 1 SUPPORTMOTION 1 5</em></p>
+ { "Loads": { "1": { "name" : "SUPPORTMOTION", "attributes": { "list": [5] } } } } </p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -125,7 +135,7 @@ $(document).ready(function(){initNavTree('linkSupportmotionload.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

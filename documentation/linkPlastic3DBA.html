@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linkPlastic3DBA.html','');});
 <div class="title"><a class="el" href="classPlastic3DBA.html" title="Class for creating an triaxial plastic bounding surface material for three-dimensional elements...">Plastic3DBA</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classPlastic3DBA.html" title="Class for creating an triaxial plastic bounding surface material for three-dimensional elements...">Plastic3DBA</a> keywords creates a triaxial material class. The underlying model is a total stress bounding surface plasticity model with vanishing elastic region. The rate of the constitute equation has the form of:</p>
+<div class="textblock"><p>The <a class="el" href="classPlastic3DBA.html" title="Class for creating an triaxial plastic bounding surface material for three-dimensional elements...">Plastic3DBA</a> class creates a triaxial material class. The underlying model is a total stress bounding surface plasticity model with vanishing elastic region. The rate of the constitute equation has the form of:</p>
 <p class="formulaDsp">
 \[ \dot{\sigma} = K\text{tr}(\dot{\epsilon})\textbf{1} + 2\mu (1+\frac{3\mu}{H&#39;})^{-1}\dot{\epsilon}&#39; \nonumber \]
 </p>
@@ -127,9 +127,24 @@ $(document).ready(function(){initNavTree('linkPlastic3DBA.html','');});
 \[ \mathbb{C} = K\textbf{1}\otimes\textbf{1} + \psi \left(\textbf{I}-\frac{1}{3}\textbf{1}\otimes\textbf{1} \right) \nonumber \]
 </p>
 <p>where \(\psi\) is a positive scalar defined such that \(\Delta \sigma&#39; = \psi \Delta \epsilon&#39;\). </p><hr/>
-<p>A <a class="el" href="classPlastic3DBA.html" title="Class for creating an triaxial plastic bounding surface material for three-dimensional elements...">Plastic3DBA</a> material is created using the built-in parse-structure provided in the Parser,</p>
-<p><code>MATERIAL</code> <code>Tag</code> <code>PLASTIC3DBA</code> <code>K</code> <code>G</code> <code>rho</code> <code>0.0</code> <code>h</code> <code>m</code> <code>Su</code> <code>beta</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classPlastic3DBA.html" title="Class for creating an triaxial plastic bounding surface material for three-dimensional elements...">Plastic3DBA</a> material is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Materials"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "PLASTIC3DBA",
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"K"</b></span>: double,
+                <span style="color:maroon"><b>"G"</b></span>: double,
+                <span style="color:maroon"><b>"rho"</b></span>: double,
+                <span style="color:maroon"><b>"h"</b></span>: double,
+                <span style="color:maroon"><b>"m"</b></span>: double,
+                <span style="color:maroon"><b>"Su"</b></span>: double,
+                <span style="color:maroon"><b>"beta"</b></span>: double
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
@@ -153,7 +168,7 @@ $(document).ready(function(){initNavTree('linkPlastic3DBA.html','');});
 <h3>Example</h3>
 <blockquote class="doxtable">
 <p>A triaxial Borja-Amies material with bulk modulus 100, shear modulus 20, desity 2000 is defined as: <br />
-<em>MATERIAL 1 PLASTIC3DBA 100 20 2000.0 0.0 50E5 1.5 50E3 0.5</em></p>
+{ "Materials": { "1": { "name" : "PLASTIC3DBA", "attributes": { "K": 100.0, "G": 20.0, "rho": 2000.0, "h": 50E5, "m": 1.5, "Su": 50E5, "beta": 0.5 } } } }</p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -161,7 +176,7 @@ $(document).ready(function(){initNavTree('linkPlastic3DBA.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

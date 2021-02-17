@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linkAssembler.html','');});
 <div class="title"><a class="el" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. ">Assembler</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. ">Assembler</a> is class embedded in an <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic snalysis between two steps is going to be performed...">Integrator</a> object, and its function is to generate the global mass matrix \(\mathcal{M}\), global stiffness matrix \(\mathcal{K}\), global damping matrix \(\mathcal{C}\) as well as the global external force vector \(\mathcal{F}\). This process is done by looping over all the elements and adding their contribution to the total quantity to be assembled.</p>
+<div class="textblock"><p>The <a class="el" href="linkAssembler.html">Assembler</a> is class embedded in an <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic snalysis between two steps is going to be performed...">Integrator</a> object, and its function is to generate the global mass matrix \(\mathcal{M}\), global stiffness matrix \(\mathcal{K}\), global damping matrix \(\mathcal{C}\) as well as the global external force vector \(\mathcal{F}\). This process is done by looping over all the elements and adding their contribution to the total quantity to be assembled.</p>
 <p>The <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> object is employed in the <a class="el" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. ">Assembler</a> to provide with not only the amount of memory allocation for the model matrices and vectors, but also with the transformation matrices to enforce restrains and constrains i.e., \(\textbf{T}\) are enforced in the <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic snalysis between two steps is going to be performed...">Integrator</a> object. In this regard, the assemble process is performed in two steps as follows:</p>
 <ul>
 <li>In the <a class="el" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. ">Assembler</a> object: <p class="formulaDsp">
@@ -124,7 +124,7 @@ The <a class="el" href="classAssembler.html" title="Class for assembling the fin
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

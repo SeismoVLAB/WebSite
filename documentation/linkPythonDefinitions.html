@@ -212,6 +212,7 @@ $(document).ready(function(){initNavTree('linkPythonDefinitions.html','');});
 <li><span style="color:green"><b>dimension</b></span> : The model's dimension, this is '=2' (2D) or '=3' (3D)</li>
 </ul>
 <p>Some other dictionaries are defined. For example: the <code>VTKcolors</code> dictionary stores data to generate the VTK visualization, the <code>SVLclasses</code> stores the information of the material, section, and element classes available in <b>SVL</b>. The <code>SolverOption</code> dictionary has the available option of the solver, and <code>ConvergeTest</code> dictionary the available test that can be performed during the Newton-Raphson method.</p>
+<dl class="section attention"><dt>Attention</dt><dd>Please refer to <span style="color:blue"><b>SVL/01-Pre_Process/Core/Definitions.py</b></span> for more details in declarations and implementation aspects</dd></dl>
 <p><b>Example</b> </p><blockquote class="doxtable">
 <p>The nodes in <b>Entities</b> defined in SVL can be accesses as:<br />
 SVL.Entities['Nodes']<br />
@@ -219,14 +220,13 @@ SVL.Entities['Nodes']<br />
 The <b>Options</b> can be modified in SVL as:<br />
 SVL.Options['numbering'] = 'CutHill-McKee' </p>
 </blockquote>
-<dl class="section attention"><dt>Attention</dt><dd>Please refer to <span style="color:blue"><b>SVL/01-Pre_Process/Core/Definitions.py</b></span> for more details in declarations and implementation aspects </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

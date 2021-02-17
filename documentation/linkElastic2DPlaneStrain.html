@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linkElastic2DPlaneStrain.html','');});
 <div class="title"><a class="el" href="classElastic2DPlaneStrain.html" title="Class for creating a biaxial isotropic linear elastic material in plane strain conditions for two-dim...">Elastic2DPlaneStrain</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classElastic2DPlaneStrain.html" title="Class for creating a biaxial isotropic linear elastic material in plane strain conditions for two-dim...">Elastic2DPlaneStrain</a> keywords creates a biaxial material class with the constitutive equation given as </p><p class="formulaDsp">
+<div class="textblock"><p>The <a class="el" href="classElastic2DPlaneStrain.html" title="Class for creating a biaxial isotropic linear elastic material in plane strain conditions for two-dim...">Elastic2DPlaneStrain</a> class creates a biaxial material class with the constitutive equation given as </p><p class="formulaDsp">
 \[ \sigma = \mathbb{C} \, \epsilon \nonumber \]
 </p>
 <p>where \(\sigma\) is the stress vector, \(\epsilon\) is the strain vector, and \(\mathbb{C}\) is the material constitutive matrix, given as</p>
@@ -110,15 +110,26 @@ $(document).ready(function(){initNavTree('linkElastic2DPlaneStrain.html','');});
 \[ \mathbb{C} = \frac{E}{(1 + \nu)(1 - 2\nu)} \begin{bmatrix} 1 - \nu &amp; \nu &amp; 0 \\ \nu &amp; 1 - \nu &amp; 0 \\ 0 &amp; 0 &amp; \frac{1 - 2 \nu}{2} \end{bmatrix} \nonumber \]
 </p>
  <hr/>
-<p>A <a class="el" href="classElastic2DPlaneStrain.html" title="Class for creating a biaxial isotropic linear elastic material in plane strain conditions for two-dim...">Elastic2DPlaneStrain</a> material is created using the built-in parse-structure provided in the Parser,</p>
-<p><code>MATERIAL</code> <code>Tag</code> <code>ELASTIC2DPLANESTRAIN</code> <code>E</code> <code>nu</code> <code>rho</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classElastic2DPlaneStrain.html" title="Class for creating a biaxial isotropic linear elastic material in plane strain conditions for two-dim...">Elastic2DPlaneStrain</a> material is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Materials"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "ELASTIC2DPLANESTRAIN",
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"E"</b></span>: double,
+                <span style="color:maroon"><b>"nu"</b></span>: double,
+                <span style="color:maroon"><b>"rho"</b></span>: double
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>Unique material object identifier. </td></tr>
 <tr>
-<td><code>E</code> </td><td>Represents the elastiicity modulus. </td></tr>
+<td><code>E</code> </td><td>Represents the elasticity modulus. </td></tr>
 <tr>
 <td><code>nu</code> </td><td>Represents the Poisson's ratio. </td></tr>
 <tr>
@@ -127,8 +138,8 @@ $(document).ready(function(){initNavTree('linkElastic2DPlaneStrain.html','');});
 <dl class="section attention"><dt>Attention</dt><dd>This material can only be assigned to two-dimensional elements such as: <a class="el" href="classlin2DQuad4.html" title="Class for creating a 2D linearized four-node quadrilateral element in a mesh. ">lin2DQuad4</a>, <a class="el" href="classkin2DQuad4.html" title="Class for creating a 2D finite kinematic four-node quadrilateral element in a mesh. ">kin2DQuad4</a>, <a class="el" href="classlin2DQuad8.html" title="Class for creating a 2D linearized eight-node quadrilateral element in a mesh. ">lin2DQuad8</a>, and <a class="el" href="classlin3DShell4.html" title="Class for creating a 3D linearized four-node shell element in a mesh. ">lin3DShell4</a> elements.</dd></dl>
 <h3>Example</h3>
 <blockquote class="doxtable">
-<p>A biaxial elastic material with elasticity modulus 200, Poisson's ratio 0.25, no density is defined as: <br />
- <em>MATERIAL 1 ELASTIC2DPLANESTRAIN 200.0 0.25 0.0</em></p>
+<p>A biaxial ELASTIC2DPLANESTRAIN material with elasticity modulus 200, Poisson's ratio 0.25, no density is defined as: <br />
+ { "Materials": { "1": { "name" : "ELASTIC2DPLANESTRAIN", "attributes": { "E" : 200.0, "nu" : 0.25, "rho": 0.0 } } } }</p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -136,7 +147,7 @@ $(document).ready(function(){initNavTree('linkElastic2DPlaneStrain.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

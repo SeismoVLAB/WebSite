@@ -107,29 +107,37 @@ $(document).ready(function(){initNavTree('linkStaticpoint-load.html','');});
 <img src="StaticPointLoad.png" alt="StaticPointLoad.png" width="15%"/>
 </div>
  <hr/>
-<p>An static point <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> is created using the built-in parse-structure provided in the Parser,</p>
-<p><code>POINTLOAD</code> <code>Tag</code> <code>STATIC</code> <code>value</code> <code>nd</code> <code>dir</code> <code>nn</code> <code>nodes</code></p>
-<table class="doxtable">
+<p>An static point <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> is created using the built-in json parse-structure provided in the Parser, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Loads"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "POINTLOAD",
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"name"</b></span>: "CONSTANT",
+                <span style="color:maroon"><b>"mag"</b></span>: double,
+                <span style="color:maroon"><b>"dir"</b></span>: [ ],
+                <span style="color:maroon"><b>"list"</b></span>: [ ]
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>Unique load object identifier. </td></tr>
 <tr>
-<td><code>value</code> </td><td>Magnitude/intensity of the applied force, traction or body load. </td></tr>
-<tr>
-<td><code>nd</code> </td><td>Number of dimension for the <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a>. </td></tr>
+<td><code>mag</code> </td><td>Magnitude/intensity of the applied force, traction or body load. </td></tr>
 <tr>
 <td><code>dir</code> </td><td>Vector containing the direction of the force. </td></tr>
 <tr>
-<td><code>nn</code> </td><td>Number of nodes where this <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> will be applied. </td></tr>
-<tr>
-<td><code>nodes</code> </td><td>List of <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> identifiers that share this load. </td></tr>
+<td><code>list</code> </td><td>List of <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> identifiers that share this load. </td></tr>
 </table>
-<dl class="section attention"><dt>Attention</dt><dd>The number of dimensions <code>nd</code> is the number of degree-of-freedom of that <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> for <b>POINTLOAD</b>.</dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>The dimensions in <code>dir</code> must be consistent with the number of degree-of-freedom of that <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>.</dd></dl>
 <h3>Example</h3>
 <blockquote class="doxtable">
 <p>A 3D static point load applied downwards on node 2 whose intensities is 0.75 N:<br />
- <em>POINTLOAD 1 STATIC 0.75 3 0.000 0.000 -1.000 1 2</em></p>
+ { "Loads": { "1": { "name" : "POINTLOAD", "attributes": { "name": "CONSTANT", "mag": 0.75, "dir": [0.000, 0.000, -1.000], "list": [2] } } } } </p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -137,7 +145,7 @@ $(document).ready(function(){initNavTree('linkStaticpoint-load.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

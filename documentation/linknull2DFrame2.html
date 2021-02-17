@@ -102,21 +102,28 @@ $(document).ready(function(){initNavTree('linknull2DFrame2.html','');});
 <div class="title"><a class="el" href="classnull2DFrame2.html" title="Class for creating a 2D null frame element (no properties) in a mesh. ">null2DFrame2</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classnull2DFrame2.html" title="Class for creating a 2D null frame element (no properties) in a mesh. ">null2DFrame2</a> keywords creates a two-dimensional frame element with two-nodes. Each node has three degrees-of-freedom, for which two degree-of-freedom represents two translation in the X-, Y-directions, and one rotation in Z-direction. However, this element provides no contribution to the stiffness matrix, mass matrix and damping matrix. This is</p>
+<div class="textblock"><p>The <a class="el" href="classnull2DFrame2.html" title="Class for creating a 2D null frame element (no properties) in a mesh. ">null2DFrame2</a> class creates a two-dimensional frame element with two-nodes. Each node has three degrees-of-freedom, for which two degree-of-freedom represents two translation in the X-, Y-directions, and one rotation in Z-direction. However, this element provides no contribution to the stiffness matrix, mass matrix and damping matrix. This is</p>
 <p class="formulaDsp">
 \[ \textbf{M}^\textrm{e} = \textbf{0}\,, \; \textbf{K}^\textrm{e} = \textbf{0} \,, \; \textbf{F}^\textrm{e} = \textbf{0} \,.\nonumber \]
 </p>
 <p>Note that \(\textbf{M}^\textrm{e}, \textbf{K}^\textrm{e} \in \mathbb{R}^{\textrm{N}_\textrm{dof}^\textrm{e} \times \textrm{N}_\textrm{dof}^\textrm{e}}\) with \(\textrm{N}_\textrm{dof}^\textrm{e} = 6\) in this case.</p>
 <hr/>
-<p>A <a class="el" href="classnull2DFrame2.html" title="Class for creating a 2D null frame element (no properties) in a mesh. ">null2DFrame2</a> element is created using the built-in parse-structure provided in the Parser,</p>
-<p><code>ELEMENT</code> <code>Tag</code> <code>NULL3DFRAME2</code> <code>nodes</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classnull2DFrame2.html" title="Class for creating a 2D null frame element (no properties) in a mesh. ">null2DFrame2</a> element is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Elements"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "NULL2DFRAME2",
+            <span style="color:green"><b>"conn"</b></span> : [ ],
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>Unique element object identifier. </td></tr>
 <tr>
-<td><code>nodes</code> </td><td>The element connectivity node array. </td></tr>
+<td><code>conn</code> </td><td>The element connectivity node array. </td></tr>
 </table>
 <dl class="section attention"><dt>Attention</dt><dd>This element can be used for display purposes when kinematic constraints are employed. </dd>
 <dd>
@@ -124,7 +131,7 @@ The element (in the future) can be used unload distributed load that is applied 
 <h3>Example</h3>
 <blockquote class="doxtable">
 <p>A 2D lnull-frame element between nodes 1 and 2 is constructed as: <br />
-<em>ELEMENT 1 NULL2DFRAME2 1 2 1 Timoshenko</em></p>
+{ "Elements": { "1": { "name" : "NULL2DFRAME2", "conn" : [1,2], } } }</p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -132,7 +139,7 @@ The element (in the future) can be used unload distributed load that is applied 
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linkkin2DQuad4.html','');});
 <div class="title"><a class="el" href="classkin2DQuad4.html" title="Class for creating a 2D finite kinematic four-node quadrilateral element in a mesh. ">kin2DQuad4</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classkin2DQuad4.html" title="Class for creating a 2D finite kinematic four-node quadrilateral element in a mesh. ">kin2DQuad4</a> keywords creates a kinematic two-dimensional quadrilateral element with four-nodes. Each node has two degrees-of-freedom, and each degree-of-freedom represents a translation in the X-, and Y-directions. Figure provides a simple representation of this element in which the local coordinates are represented by the r-, and s-axis, and (1), (2), (3) and (4) represent the nodes of the element respectively. The element mass, damping and stiffness matrices, as well as internal force vector are computed in local coordinates and then transformed into global coordinates. Numerical integration is performed to compute matrices and vectors.</p>
+<div class="textblock"><p>The <a class="el" href="classkin2DQuad4.html" title="Class for creating a 2D finite kinematic four-node quadrilateral element in a mesh. ">kin2DQuad4</a> class creates a kinematic two-dimensional quadrilateral element with four-nodes. Each node has two degrees-of-freedom, and each degree-of-freedom represents a translation in the X-, and Y-directions. Figure provides a simple representation of this element in which the local coordinates are represented by the r-, and s-axis, and (1), (2), (3) and (4) represent the nodes of the element respectively. The element mass, damping and stiffness matrices, as well as internal force vector are computed in local coordinates and then transformed into global coordinates. Numerical integration is performed to compute matrices and vectors.</p>
 <div class="image">
 <img src="kin2DQuad4.png" alt="kin2DQuad4.png" width="50%"/>
 </div>
@@ -133,21 +133,36 @@ $(document).ready(function(){initNavTree('linkkin2DQuad4.html','');});
 </p>
 <p>where \(\rho^\textrm{e}\) is the element density, \(\textbf{N}^\textrm{e}\) is the shape function matrix, \(\mathbb{C}^\textrm{e}\) is the material constitutive law, \(\mathbb{S}\) is the second Piola-Kirchhoff stress matrix, \(\textbf{B}^\textrm{e}(r, s)\) is the well-known linear (material) strain-displacement matrix, and \(\mathcal{B}^\textrm{e}(r, s)\) is nonlinear (geometric) strain-displacement matrix. Note that \(\textbf{M}^\textrm{e}, \textbf{K}^\textrm{e} \in \mathbb{R}^{\textrm{N}_\textrm{dof}^\textrm{e} \times \textrm{N}_\textrm{dof}^\textrm{e}}\) with \(\textrm{N}_\textrm{dof}^\textrm{e} = 8\) in this case.</p>
 <hr/>
-<p>A <a class="el" href="classkin2DQuad4.html" title="Class for creating a 2D finite kinematic four-node quadrilateral element in a mesh. ">kin2DQuad4</a> element is created using the built-in parse-structure provided in the Parser,</p>
-<p><code>ELEMENT</code> <code>Tag</code> <code>KIN2DQUAD4</code> <code>nodes</code> <code>mTag</code> <code>h</code> <code>np</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classkin2DQuad4.html" title="Class for creating a 2D finite kinematic four-node quadrilateral element in a mesh. ">kin2DQuad4</a> element is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Elements"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "KIN2DQUAD4",
+            <span style="color:green"><b>"conn"</b></span> : [ ],
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"th"</b></span>: double,
+                <span style="color:maroon"><b>"np"</b></span>: int,
+                <span style="color:maroon"><b>"rule"</b></span>: str,
+                <span style="color:maroon"><b>"material"</b></span>: int
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>Unique element object identifier. </td></tr>
 <tr>
-<td><code>nodes</code> </td><td>The element connectivity node array. </td></tr>
+<td><code>conn</code> </td><td>The element connectivity node array. </td></tr>
 <tr>
-<td><code>mTag</code> </td><td>The biaxial material identifier. </td></tr>
-<tr>
-<td><code>h</code> </td><td>The thickness of the element. </td></tr>
+<td><code>th</code> </td><td>The thickness of the element. </td></tr>
 <tr>
 <td><code>np</code> </td><td>Number of quadrature-points used for the integration. </td></tr>
+<tr>
+<td><code>rule</code> </td><td>The quadrature integration name <code>rule</code>=GAUSS, LOBATTO. </td></tr>
+<tr>
+<td><code>material</code></td><td>The biaxial material identifier. </td></tr>
 </table>
 <dl class="section attention"><dt>Attention</dt><dd>This formulation allows large deformations. </dd>
 <dd>
@@ -161,7 +176,7 @@ The domain reduction force method is compatible with this element.</dd></dl>
 <h3>Example</h3>
 <blockquote class="doxtable">
 <p>A 2D kinematic quadrilateral element of thickness 0.01 with 4 integration points between nodes 1, 2, 3 and 4, made of material 1 is constructed as: <br />
-<em>ELEMENT 1 KIN2DQUAD4 1 2 3 4 1 0.01 4</em></p>
+{ "Elements": { "1": { "name" : "KIN2DQUAD4", "conn" : [1,2,3,4], "attributes": { "th": 0.01, "np": 4, "rule": "GAUSS", "material": 1 } } } }</p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -169,7 +184,7 @@ The domain reduction force method is compatible with this element.</dd></dl>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

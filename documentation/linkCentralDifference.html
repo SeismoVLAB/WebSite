@@ -111,11 +111,28 @@ $(document).ready(function(){initNavTree('linkCentralDifference.html','');});
 \[ \textbf{K}_{\textrm{eff}} = \frac{1}{\Delta t^2} \textbf{M} + \frac{1}{2 \Delta t} \textbf{C} \nonumber \\ \textrm{F}_{\textrm{eff}} = \rm{R}_n - \rm{F}_n + \left(\frac{1}{\Delta t} \textbf{M} - \frac{1}{2 \Delta t} \textbf{C} \right) \left( U_n - U_{n-1}\right) \nonumber \]
 </p>
 <hr/>
-<p>A <a class="el" href="classCentralDifference.html" title="Class for integrating the equation of motion using an explicit central difference method...">CentralDifference</a> integrator can be created using the built-in parse-structure provided in Parser as,</p>
-<p><code>INTEGRATOR</code> <code>CENTRALDIFFERENCE</code> <code>mTol</code> <code>kTol</code> <code>fTol</code> <code>dt</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classCentralDifference.html" title="Class for integrating the equation of motion using an explicit central difference method...">CentralDifference</a> integrator can be created using the built-in parse-structure provided in Parser as, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Simulations"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"combo"</b></span>: int,
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"integrator"</b></span>: {
+                    <span style="color:orange"><b>"name"</b></span>: "CENTRALDIFFERENCE",
+                    <span style="color:orange"><b>"ktol"</b></span>: double,
+                    <span style="color:orange"><b>"mtol"</b></span>: double,
+                    <span style="color:orange"><b>"ftol"</b></span>: double,
+                    <span style="color:orange"><b>"dt"</b></span>: double,
+                }
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
+<tr>
+<td><code>combo</code> </td><td>The combination to which this <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic snalysis between two steps is going to be performed...">Integrator</a> will be defined. </td></tr>
 <tr>
 <td><code>mTol</code> </td><td>The specified tolerance for setting \(M_{ij} \sim 0.0\). </td></tr>
 <tr>
@@ -132,7 +149,7 @@ $(document).ready(function(){initNavTree('linkCentralDifference.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

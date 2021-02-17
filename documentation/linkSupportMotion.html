@@ -125,9 +125,17 @@ $(document).ready(function(){initNavTree('linkSupportMotion.html','');});
 \[ \mathbf{T}^\top \,\mathbf{K}_\textrm{eff}^{(i-1)}\, \mathbf{T} \Delta \textrm{u}^{(i)} = \mathbf{T}^\top \left( \mathbf{F}_\textrm{eff} - \mathbf{K}_\textrm{eff}^{(i-1)} \Delta g\right) \]
 </p>
 <hr/>
-<p>A <a class="el" href="linkSupportMotion.html">Support Motion</a> for <a class="el" href="classStaticAnalysis.html" title="Class for creating an static analysis and updating the states variables in mesh. ">StaticAnalysis</a> can be created using the built-in parse-structure provided in the Parser as,</p>
-<p><code>SUPPORTMOTION</code> <code>Tag</code> <code>STATIC</code> <code>value</code> <code>dof</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="linkSupportMotion.html">Support Motion</a> for <a class="el" href="classStaticAnalysis.html" title="Class for creating an static analysis and updating the states variables in mesh. ">StaticAnalysis</a> can be created using the built-in parse-structure provided in the Parser as, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Supports"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"type"</b></span>: "CONSTANT",
+            <span style="color:green"><b>"value"</b></span>: [ ],
+            <span style="color:green"><b>"dof"</b></span>: [ ]
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
@@ -137,9 +145,17 @@ $(document).ready(function(){initNavTree('linkSupportMotion.html','');});
 <tr>
 <td><code>dof</code> </td><td>The degree-of-freedom to apply the support motion. </td></tr>
 </table>
-<p>A <a class="el" href="linkSupportMotion.html">Support Motion</a> for <a class="el" href="classDynamicAnalysis.html" title="Class for creating a dynamic analysis and updating the states variables in mesh. ">DynamicAnalysis</a> can be created using the built-in parse-structure provided in the Parser as,</p>
-<p><code>SUPPORTMOTION</code> <code>Tag</code> <code>DYNAMIC</code> <code>file</code> <code>dof</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="linkSupportMotion.html">Support Motion</a> for <a class="el" href="classDynamicAnalysis.html" title="Class for creating a dynamic analysis and updating the states variables in mesh. ">DynamicAnalysis</a> can be created using the built-in parse-structure provided in the Parser as, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Supports"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"type"</b></span>: "TIMESERIE",
+            <span style="color:green"><b>"file"</b></span>: str,
+            <span style="color:green"><b>"dof"</b></span>: [ ]
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
@@ -155,7 +171,7 @@ This formulation allows to add support motion by only adding the incremental vec
 <h3>Example</h3>
 <blockquote class="doxtable">
 <p>A dynamic support motion applied at node 5 along the degree-of-freedom 0 is created as: <br />
- <em>SUPPORTMOTION 5 DYNAMIC load.in 0</em></p>
+ { "Supports": { "5": { "type" : "TIMESERIE", "file": "/path/to/folder/load.in" "dof": [0] } } } </p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -163,7 +179,7 @@ This formulation allows to add support motion by only adding the incremental vec
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

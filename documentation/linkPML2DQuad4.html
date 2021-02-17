@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linkPML2DQuad4.html','');});
 <div class="title"><a class="el" href="classPML2DQuad4.html" title="Class for creating a 2D linearized four-node perfectly matched layer element in a mesh...">PML2DQuad4</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classPML2DQuad4.html" title="Class for creating a 2D linearized four-node perfectly matched layer element in a mesh...">PML2DQuad4</a> keywords creates a plane strain perfectly matched layer (PML) element with four nodes, which can be used to define absorbing boundary layer to encapsulate the regular domain. This element is based on the symmetric hybrid formulation, which results in mixed finite element formulation (displacement and stress fields) in the PML elements. Each node of the PML element has five degrees of freedom, two of which for translation in X and Y directions and three of which for stress tensor histories.</p>
+<div class="textblock"><p>The <a class="el" href="classPML2DQuad4.html" title="Class for creating a 2D linearized four-node perfectly matched layer element in a mesh...">PML2DQuad4</a> class creates a plane strain perfectly matched layer (PML) element with four nodes, which can be used to define absorbing boundary layer to encapsulate the regular domain. This element is based on the symmetric hybrid formulation, which results in mixed finite element formulation (displacement and stress fields) in the PML elements. Each node of the PML element has five degrees of freedom, two of which for translation in X and Y directions and three of which for stress tensor histories.</p>
 <p>The key idea in PML elements is the use of complex coordinate stretching. The complex stretching function in direction s-, which can be either x- or y- directions in the cartesian coordinate system, is defined as:</p>
 <p class="formulaDsp">
 \[ \epsilon_s(s,\omega) = \alpha_s(s)+\frac{\beta_s(s)}{i\omega} \nonumber \]
@@ -120,31 +120,51 @@ $(document).ready(function(){initNavTree('linkPML2DQuad4.html','');});
 <img src="PML2DQuad4.png" alt="PML2DQuad4.png" width="50%"/>
 </div>
 <hr/>
-<p>A <a class="el" href="classPML2DQuad4.html" title="Class for creating a 2D linearized four-node perfectly matched layer element in a mesh...">PML2DQuad4</a> is created using the buit-in parse-structure provided in the Parser,</p>
-<p><code>ELEMENT</code> <code>Tag</code> <code>PML2DQUAD4</code> <code>nodes</code> <code>mTag</code> <code>h</code> <code>m</code> <code>Lpml</code> <code>R</code> <code>x0</code> <code>n</code> <code>np</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classPML2DQuad4.html" title="Class for creating a 2D linearized four-node perfectly matched layer element in a mesh...">PML2DQuad4</a> is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Elements"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "PML2DQUAD4",
+            <span style="color:green"><b>"conn"</b></span> : [ ],
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"th"</b></span>: double,
+                <span style="color:maroon"><b>"n"</b></span>: double,
+                <span style="color:maroon"><b>"L"</b></span>: double,
+                <span style="color:maroon"><b>"R"</b></span>: double,
+                <span style="color:maroon"><b>"x0"</b></span>: [ ],
+                <span style="color:maroon"><b>"npml"</b></span>: [ ],
+                <span style="color:maroon"><b>"np"</b></span>: int,
+                <span style="color:maroon"><b>"rule"</b></span>: str,
+                <span style="color:maroon"><b>"material"</b></span>: int
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>Unique element object identifier. </td></tr>
 <tr>
-<td><code>nodes</code></td><td>The element connectivity node array. </td></tr>
+<td><code>conn</code> </td><td>The element connectivity node array. </td></tr>
 <tr>
-<td><code>mTag</code> </td><td>The biaxial material identifier. </td></tr>
+<td><code>th</code> </td><td>The thickness of the element. </td></tr>
 <tr>
-<td><code>h</code> </td><td>The thickness of the element. </td></tr>
+<td><code>n</code> </td><td>Polynomial degree. </td></tr>
 <tr>
-<td><code>m</code> </td><td>Polynomial degree. </td></tr>
-<tr>
-<td><code>Lpml</code> </td><td>Thickness of the PML region. </td></tr>
+<td><code>L</code> </td><td>Thickness of the PML region. </td></tr>
 <tr>
 <td><code>R</code> </td><td>Reflection coefficient. </td></tr>
 <tr>
 <td><code>x0</code> </td><td>Coordinates \((x_0,y_0)\) of the reference point. </td></tr>
 <tr>
-<td><code>n</code> </td><td>Vector components \((n_x,n_y)\) of the outward normal. </td></tr>
+<td><code>npml</code> </td><td>Vector components \((n_x,n_y)\) of the outward normal. </td></tr>
 <tr>
 <td><code>np</code> </td><td>Number of quadrature-points used for the integration. </td></tr>
+<tr>
+<td><code>rule</code> </td><td>The quadrature integration name <code>rule</code>=GAUSS, LOBATTO. </td></tr>
+<tr>
+<td><code>material</code></td><td>The biaxial material identifier. </td></tr>
 </table>
 <dl class="section attention"><dt>Attention</dt><dd>This formulation only allows small deformations. </dd>
 <dd>
@@ -161,12 +181,15 @@ For the spatial extent of the PML layer&ndash;i.e., \(\textrm{L}_\textrm{pml}\),
 For the PML element size, one can consider about 12 points in one wavelength. Once the mesh size is fixed, satisfying CFL condition to determine \(\Delta_\textrm{t}\) (i.e, \(\Delta_\textrm{t} \leq 0.3\,\Delta_\textrm{h}/V_p\), with \(V_p\) the p-wave velocity) for time marching.</dd></dl>
 <h3>Example</h3>
 <blockquote class="doxtable">
-<p>Consider a domain in Figure with D = 5, L = 20, and H = 5.<br />
- <em>ELEMENT 1 PML2DQUAD4 1 2 3 4 1 1.0 2.0 25.0 0.001 5.0 y0 -1.0 0.0 4</em> <br />
- <em>ELEMENT 2 PML2DQUAD4 1 2 3 4 1 1.0 2.0 25.0 0.001 5.0 5.0 -1.0 0.0 4</em> <br />
- <em>ELEMENT 3 PML2DQUAD4 1 2 3 4 1 1.0 2.0 25.0 0.001 x0 5.0 -1.0 0.0 4</em> <br />
- <em>ELEMENT 4 PML2DQUAD4 1 2 3 4 1 1.0 2.0 25.0 0.001 25 5.0 -1.0 0.0 4</em> <br />
- <em>ELEMENT 5 PML2DQUAD4 1 2 3 4 1 1.0 2.0 25.0 0.001 25 y0 -1.0 0.0 4</em> </p>
+<p>Consider a domain in Figure with D = 5, L = 20, and H = 10.<br />
+ {<br />
+ "Elements": {<br />
+ "1": { "name" : "PML2DQUAD4", "conn" : [1,2,3,4], "attributes": { "th": 1.0, "n": 2.0, "L": 5.0, "R": 0.001, "x0": [5,10], "npml": [-1.0, 0.0], "np": 4, "rule": "GAUSS", "material": 1 } },<br />
+ "2": { "name" : "PML2DQUAD4", "conn" : [1,2,3,4], "attributes": { "th": 1.0, "n": 2.0, "L": 5.0, "R": 0.001, "x0": [5,5], "npml": [-0.707, -0.707], "np": 4, "rule": "GAUSS", "material": 1 } },<br />
+ "3": { "name" : "PML2DQUAD4", "conn" : [1,2,3,4], "attributes": { "th": 1.0, "n": 2.0, "L": 5.0, "R": 0.001, "x0": [15,5], "npml": [0.0, -1.0], "np": 4, "rule": "GAUSS", "material": 1 } },<br />
+ "4": { "name" : "PML2DQUAD4", "conn" : [1,2,3,4], "attributes": { "th": 1.0, "n": 2.0, "L": 5.0, "R": 0.001, "x0": [25,5], "npml": [0.707, -0.707], "np": 4, "rule": "GAUSS", "material": 1 } },<br />
+ "5": { "name" : "PML2DQUAD4", "conn" : [1,2,3,4], "attributes": { "th": 1.0, "n": 2.0, "L": 5.0, "R": 0.001, "x0": [25,10], "npml": [1.0, 0.0], "np": 4, "rule": "GAUSS", "material": 1 } } }<br />
+}</p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -174,7 +197,7 @@ For the PML element size, one can consider about 12 points in one wavelength. On
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

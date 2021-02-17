@@ -106,10 +106,35 @@ $(document).ready(function(){initNavTree('linkDynamicuser-definedwaveload.html',
 <div class="image">
 <img src="GeneralWave.png" alt="GeneralWave.png" width="50%"/>
 </div>
+<p>A <a class="el" href="linkDynamicuser-definedwaveload.html">Dynamic user-defined wave load</a> is created using the built-in json parse-structure provided in the Parser, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Loads"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "ELEMENTLOAD",
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"name"</b></span>: "TIMESERIE",
+                <span style="color:maroon"><b>"type"</b></span>: "GENERALWAVE",
+                <span style="color:maroon"><b>"file"</b></span>: str,
+                <span style="color:maroon"><b>"list"</b></span>: [ ]
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
+<tr>
+<th>Variable </th><th>Description  </th></tr>
+<tr>
+<td><code>Tag</code> </td><td>Unique load object identifier. </td></tr>
+<tr>
+<td><code>file</code> </td><td>Represents the full path where the DRM files are located. </td></tr>
+<tr>
+<td><code>list</code> </td><td>List of <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> identifiers where the general wave pattern is applied. </td></tr>
+</table>
+<dl class="section attention"><dt>Attention</dt><dd>The <code>file</code> path must contain a generic name, for example "DRMForces$.txt", so that the keyword "$" can be replaced by the <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> identifier.</dd></dl>
 <h3>Example</h3>
 <blockquote class="doxtable">
 <p>A 3D user-defined wave applied on elements 1, 11, 16, 21, 26 whose files are loaded at DRM/DRMForces$.txt: <br />
-<em>ELEMENTLOAD 1 DYNAMIC GENERALWAVE DRM/DRMForces$.txt 5 1 6 16 21 26</em></p>
+{ "Loads": { "1": { "name" : "ELEMENTLOAD", "attributes": { "name": "TIMESERIE", "type": "GENERALWAVE", "file": "/full/path/to/folder/DRM/DRMForces$.txt", "list": [1,6,16,21,26] } } } } </p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -117,7 +142,7 @@ $(document).ready(function(){initNavTree('linkDynamicuser-definedwaveload.html',
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

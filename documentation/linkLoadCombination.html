@@ -102,14 +102,24 @@ $(document).ready(function(){initNavTree('linkLoadCombination.html','');});
 <div class="title"><a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> keyword defines how a set of <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> objects are going to be combined for an specific analysis. A load combination is used in the <a class="el" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. ">Assembler</a> combining all prescribed <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> as</p>
+<div class="textblock"><p>The <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> class defines how a set of <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> objects are going to be combined for an specific analysis. A load combination is used in the <a class="el" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. ">Assembler</a> combining all prescribed <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> as</p>
 <p class="formulaDsp">
 \[ \mathbf{C}_{\textrm{loads}} = \sum_{\textrm{i}=1}^{\textrm{N}_\textrm{c}} \alpha_\textrm{i} \mathbf{L}_\textrm{i} \,, \nonumber \]
 </p>
 <p>where \(\mathbf{L}_\textrm{i}\) are the <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> to be combined, and \(\alpha_\textrm{i}\) the combination factors.</p>
-<p>A <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> can be created using the built-in parse-function provided in the Parser as follows,</p>
-<p><code>LOADCOMBO</code> <code>Tag</code> <code>name</code> <code>nc</code> <code>lTag, factor</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Combinations"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : str,
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"load"</b></span> : [ ],
+                <span style="color:maroon"><b>"factor"</b></span> : [ ]
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
@@ -117,21 +127,19 @@ $(document).ready(function(){initNavTree('linkLoadCombination.html','');});
 <tr>
 <td><code>name</code> </td><td>Name of the load combination. </td></tr>
 <tr>
-<td><code>nc</code> </td><td>Number of loads to be combined. </td></tr>
+<td><code>load</code> </td><td>The <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> object identifiers. </td></tr>
 <tr>
-<td><code>lTag</code> </td><td>The {<a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a>} object identifier. </td></tr>
-<tr>
-<td><code>factor</code> </td><td>The combination factor for the {<a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a>} object. </td></tr>
+<td><code>factor</code></td><td>The combination factor for the <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> objects. </td></tr>
 </table>
 <dl class="section attention"><dt>Attention</dt><dd>The  <code>name</code> is used to generate a folder where the solutions are going to be stored. </dd>
 <dd>
-If no <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> is specified in the model, i.e., no loads are present in the mesh (or mesh partition), then the parameter <code>nc = -1</code> and neither <code>lTag</code> nor <code>factor</code> must be provided.</dd></dl>
+If no <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> is specified in the model, i.e., no loads are present in the mesh (or mesh partition), then neither <code>load</code> nor <code>factor</code> must be provided.</dd></dl>
 <h3>Example</h3>
 <blockquote class="doxtable">
 <p>A partition without loads, thus without load combination, is prescribed as: <br />
- <em>LOADCOMBO 1 Earthquake -1</em></p>
+ { "Combinations": { "1": { "name" : "Earthquake", "attributes": { } } } }</p>
 <p>An earthquake load combination of the form \(C = 1.0\, L_1 + 1.2\,L_2 - 0.9\,L_5\): <br />
- <em>LOADCOMBO 1 Earthquake 3 1 1.00 2 1.20 5 -0.90</em></p>
+ { "Combinations": { "1": { "name" : "Earthquake", "attributes": { "load" : [1,2,5], "factor" : [1.0,1.2,-0.9 ] } } } }</p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -139,7 +147,7 @@ If no <a class="el" href="classLoadCombo.html" title="Class for defining how the
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

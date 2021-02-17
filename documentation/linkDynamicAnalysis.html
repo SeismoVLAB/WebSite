@@ -107,13 +107,27 @@ $(document).ready(function(){initNavTree('linkDynamicAnalysis.html','');});
 \[ \textbf{M} \, \ddot{U}(t) + \textbf{C} \, \dot{U}(t) + {\rm{F}}(U,t) = {\rm R}(t) \nonumber \]
 </p>
 <hr/>
-<p>A <a class="el" href="classDynamicAnalysis.html" title="Class for creating a dynamic analysis and updating the states variables in mesh. ">DynamicAnalysis</a> can be created using the built-in parse-function in the Parser as,</p>
-<p><code>ANALYSIS</code> <code>Tag</code> <code>DYNAMIC</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classDynamicAnalysis.html" title="Class for creating a dynamic analysis and updating the states variables in mesh. ">DynamicAnalysis</a> can be created using the built-in parse-function in the Parser as, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Simulations"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"combo"</b></span>: int,
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"analysis"</b></span>: {
+                    <span style="color:orange"><b>"name"</b></span>: "DYNAMIC",
+                    <span style="color:orange"><b>"nt"</b></span>: int
+                }
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
-<td><code>Tag</code> </td><td>The <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> identifier. </td></tr>
+<td><code>combo</code> </td><td>The <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> identifier to which the <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a> will be performed. </td></tr>
+<tr>
+<td><code>nt</code> </td><td>The number of time step to be performed. </td></tr>
 </table>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -121,7 +135,7 @@ $(document).ready(function(){initNavTree('linkDynamicAnalysis.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

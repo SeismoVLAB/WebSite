@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 		<meta name="generator" content="Doxygen 1.8.13"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>Seismo-VLAB: Model</title>
+		<title>Seismo-VLAB: Global</title>
 		<link href="tabs.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="dynsections.js"></script>
@@ -99,31 +99,38 @@ $(document).ready(function(){initNavTree('linkModel.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Model </div>  </div>
+<div class="title">Global </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <b>Seismo-VLAB</b> mesh-file must start by specifying the <a class="el" href="linkModel.html">Model</a> keyword followed by the dimension of the model <a class="el" href="Definitions_8hpp.html#a19e5b03b2be8d78bd8ce30ad81e105d6">Parser::nDimensions</a>, number of total degree of freedom <a class="el" href="Definitions_8hpp.html#a89b7493ff1f84f17b36e1e27b46ff515">Definitions::numberOfTotalDofs</a>, number of free degree of freedom <a class="el" href="Definitions_8hpp.html#a4f871deb2637ae9cbb4cd3ec06f26902">Definitions::numberOfFreeDofs</a>, and mass formulation Parser::MassForm that is going to be employed in the mass matrix construction. These parameters are used to create the mass, damping, stiffness and transformation matrices (enforce restrains and constraints) in the <a class="el" href="classAssembler.html">Assembler</a>.</p>
-<p>A <a class="el" href="linkModel.html">Model</a> is created using the built-in parse-structure provided in the Parser,</p>
-<p><code>MODEL</code> <code>nDims</code> <code>nTotal</code> <code>nFree</code> <code>formulation</code></p>
-<table class="doxtable">
+<div class="textblock"><p>The <b>Seismo-VLAB</b> mesh-file must start by specifying the <a class="el" href="linkModel.html">Global</a> class followed by the dimension of the model <a class="el" href="Definitions_8hpp.html#a19e5b03b2be8d78bd8ce30ad81e105d6">Parser::nDimensions</a>, number of total degree of freedom <a class="el" href="Definitions_8hpp.html#a89b7493ff1f84f17b36e1e27b46ff515">Definitions::numberOfTotalDofs</a>, number of free degree of freedom <a class="el" href="Definitions_8hpp.html#a4f871deb2637ae9cbb4cd3ec06f26902">Definitions::numberOfFreeDofs</a>, and mass formulation Parser::MassForm that is going to be employed in the mass matrix construction. These parameters are used to create the mass, damping, stiffness and transformation matrices (enforce restrains and constraints) in the <a class="el" href="classAssembler.html">Assembler</a>.</p>
+<p>A <a class="el" href="linkModel.html">Global</a> is created using the built-in parse-structure provided in the Parser, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Global"</b></span>: {
+        <span style="color:green"><b>"ndim"</b></span> : int,
+        <span style="color:green"><b>"ntotal"</b></span>: int,
+        <span style="color:green"><b>"nfree"</b></span> : int,
+        <span style="color:green"><b>"mass"</b></span>  : str,
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
-<td><code>nDims</code> </td><td>Model's number of dimensions, for 2D <code>nDims=2</code> and for 3D <code>nDims=3</code>. </td></tr>
+<td><code>ndim</code> </td><td>Model's number of dimensions, for 2D <code>ndim=2</code> and for 3D <code>ndim=3</code>. </td></tr>
 <tr>
-<td><code>nTotal</code> </td><td>Number that specifies the total number of degree of freedom in the mesh. </td></tr>
+<td><code>ntotal</code></td><td>Number that specifies the total number of degree of freedom in the mesh. </td></tr>
 <tr>
-<td><code>nFree</code> </td><td>Number that specifies the free number of degree of freedom in the mesh. This is the total number of degree of freedom minus the restrained and the constrained degree of freedom. </td></tr>
+<td><code>nfree</code> </td><td>Number that specifies the free number of degree of freedom in the mesh. This is the total number of degree of freedom minus the restrained and the constrained degree of freedom. </td></tr>
 <tr>
-<td><code>formulation</code> </td><td>The mass matrix formulation, currently <code>LUMPED, CONSISTENT</code> are allowed. </td></tr>
+<td><code>mass</code> </td><td>The mass matrix formulation, currently <code>LUMPED</code> , <code>CONSISTENT</code> are allowed. </td></tr>
 </table>
 <dl class="section attention"><dt>Attention</dt><dd>Other global control parameters may be added in future for handling specific tasks. </dd>
 <dd>
-The parameter <code>nDims</code> is extremely important and must be consistent with the <a class="el" href="classNode.html">Node</a>, <a class="el" href="classElement.html">Element</a> and <a class="el" href="classMaterial.html">Material</a> employed in the analysis.</dd></dl>
+The parameter <code>ndim</code> is extremely important and must be consistent with the <a class="el" href="classNode.html">Node</a>, <a class="el" href="classElement.html">Element</a> and <a class="el" href="classMaterial.html">Material</a> employed in the analysis.</dd></dl>
 <h3>Example</h3>
 <blockquote class="doxtable">
-<p>A 3D <a class="el" href="linkModel.html">Model</a> with a total of 100 degree of freedom of which 80 are free is created as: <br />
- <em>MODEL 3 100 80 CONSISTENT</em></p>
+<p>A 3D <a class="el" href="linkModel.html">Global</a> with a total of 100 degree of freedom of which 80 are free is created as: <br />
+ { "Global": { "ndim" : 3, "ntotal" : 100, "nfree" : 80, "mass" : "CONSISTENT" } }</p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -131,7 +138,7 @@ The parameter <code>nDims</code> is extremely important and must be consistent w
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -104,13 +104,25 @@ $(document).ready(function(){initNavTree('linkEigenSolver.html','');});
 <div class="contents">
 <div class="textblock"><p>The <a class="el" href="classEigenSolver.html" title="Class for solving a linear system using a Cholesky-decomposition on the effective stiffness matrix...">EigenSolver</a> keyword creates a solver that uses the Cholesky-decomposition on the matrix \(\textbf{K}_{\textrm{eff}}\), and then solves the upper triangular system. This function is meant to be employed to symmetric and positive-definite structure of \(\textbf{K}_{\textrm{eff}}\).</p>
 <hr/>
-<p>An <a class="el" href="classEigenSolver.html" title="Class for solving a linear system using a Cholesky-decomposition on the effective stiffness matrix...">EigenSolver</a> solver can be created using the built-in parse-structure provided in the Parser as,</p>
-<p><code>SOLVER</code> <code>EIGEN</code> <code>mode</code></p>
+<p>An <a class="el" href="classEigenSolver.html" title="Class for solving a linear system using a Cholesky-decomposition on the effective stiffness matrix...">EigenSolver</a> solver can be created using the built-in parse-structure provided in the Parser as, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Simulations"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"algorithm"</b></span>: {
+                    <span style="color:orange"><b>"name"</b></span>: "EIGEN",
+                    <span style="color:orange"><b>"update"</b></span>: int
+                }
+            }
+        }
+    }
+}
+</pre><p><code>SOLVER</code> <code>EIGEN</code> <code>mode</code></p>
 <table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
-<td><code>mode</code> </td><td>Specifies if the analysis is linear <code>mode=1</code> or nonlinear <code>mode=0</code>. In the linear case, the Cholesky decomposition will be stored and computed just once, for the nonlinear case will be computed at each iteration. </td></tr>
+<td><code>update</code> </td><td>Specifies if the analysis is linear <code>update</code>=1 or nonlinear <code>update</code>=0. In the linear case, the Cholesky decomposition will be stored and computed just once, for the nonlinear case will be computed at each iteration. </td></tr>
 </table>
 <dl class="section attention"><dt>Attention</dt><dd>This solver can be used only in serial applications. </dd></dl>
 </div></div><!-- contents -->
@@ -119,7 +131,7 @@ $(document).ready(function(){initNavTree('linkEigenSolver.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

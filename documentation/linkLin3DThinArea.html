@@ -102,22 +102,33 @@ $(document).ready(function(){initNavTree('linkLin3DThinArea.html','');});
 <div class="title"><a class="el" href="classLin3DThinArea.html" title="Class for creating an area section for 3D analysis with linear elastic material for a shell elements...">Lin3DThinArea</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <code>LIN3DTHINAREA</code> keyword creates an area <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> that is represented by its thickness \(t_h\). The figure shows a representation of the <a class="el" href="classLin3DThinArea.html" title="Class for creating an area section for 3D analysis with linear elastic material for a shell elements...">Lin3DThinArea</a></p>
+<div class="textblock"><p>The <code>LIN3DTHINAREA</code> class creates an area <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> that is represented by its thickness \(t_h\). The figure shows a representation of the <a class="el" href="classLin3DThinArea.html" title="Class for creating an area section for 3D analysis with linear elastic material for a shell elements...">Lin3DThinArea</a></p>
 <div class="image">
 <img src="ThinArea.png" alt="ThinArea.png" width="25%"/>
 </div>
 <hr/>
-<p>A <b>LIN3DTHINAREA</b> section object can be created using the built-in parse-function provided in the Parse as follows,</p>
-<p><code>SECTION</code> <code>Tag</code> <code>PLAIN</code> <code>mTag</code> <code>LIN3DTHINAREA</code> <code>th</code></p>
-<table class="doxtable">
+<p>A <b>LIN3DTHINAREA</b> section object can be created using the built-in json parse-function provided in the Parse.hpp, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Sections"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "LIN3DTHINAREA",
+            <span style="color:green"><b>"model"</b></span> : "PLAIN",
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"th"</b></span>: double,
+                <span style="color:maroon"><b>"material"</b></span>: int
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>Unique <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object identifier. </td></tr>
 <tr>
-<td><code>mTag</code> </td><td><a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> object identifier. </td></tr>
-<tr>
 <td><code>th</code> </td><td>The thickness of the area section. </td></tr>
+<tr>
+<td><code>material</code></td><td><a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> object identifier. </td></tr>
 </table>
 <dl class="section attention"><dt>Attention</dt><dd>The <b>LIN3DTHINAREA</b> <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object is made of one <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>. </dd>
 <dd>
@@ -130,7 +141,7 @@ The stress/strain coordinates at <a class="el" href="classSection.html#a1c700c59
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

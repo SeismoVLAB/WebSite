@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linkPlasticPlaneStrainJ2.html','');});
 <div class="title"><a class="el" href="classPlasticPlaneStrainJ2.html" title="Class for creating a biaxial plastic J2 material for two-dimensional elements. ">PlasticPlaneStrainJ2</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classPlasticPlaneStrainJ2.html" title="Class for creating a biaxial plastic J2 material for two-dimensional elements. ">PlasticPlaneStrainJ2</a> keywords creates a plane strain material class with the constitutive equation given as</p>
+<div class="textblock"><p>The <a class="el" href="classPlasticPlaneStrainJ2.html" title="Class for creating a biaxial plastic J2 material for two-dimensional elements. ">PlasticPlaneStrainJ2</a> class creates a plane strain material class with the constitutive equation given as</p>
 <p class="formulaDsp">
 \[ \sigma = \mathbb{C} \left( \epsilon - \epsilon^p \right) \nonumber \]
 </p>
@@ -111,9 +111,23 @@ $(document).ready(function(){initNavTree('linkPlasticPlaneStrainJ2.html','');});
 \[ \mathbb{C} = K \, \textbf{1} \otimes \textbf{1} + 2 \, \mu \left( \mathbb{I} - \frac{1}{3} \textbf{1} \otimes \textbf{1} - \frac{\hat{\textbf{n}} \otimes \hat{\textbf{n}}}{1 + \frac{H}{2 \, \mu}} \right) - 2 \mu \, \gamma \left( \mathbb{I} - \frac{1}{3} \textbf{1} \otimes \textbf{1} - \hat{\textbf{n}} \otimes \hat{\textbf{n}} \right)\nonumber \]
 </p>
 <hr/>
-<p>A <a class="el" href="classPlasticPlaneStrainJ2.html" title="Class for creating a biaxial plastic J2 material for two-dimensional elements. ">PlasticPlaneStrainJ2</a> material is created using the built-in parse-structure provided in the Parser,</p>
-<p><code>MATERIAL</code> <code>Tag</code> <code>PLASTICPLANESTRAINJ2</code> <code>K</code> <code>G</code> <code>rho</code> <code>H</code> <code>beta</code> <code>SigmaY</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classPlasticPlaneStrainJ2.html" title="Class for creating a biaxial plastic J2 material for two-dimensional elements. ">PlasticPlaneStrainJ2</a> material is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Materials"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "PLASTICPLANESTRAINJ2",
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"K"</b></span>: double,
+                <span style="color:maroon"><b>"G"</b></span>: double,
+                <span style="color:maroon"><b>"rho"</b></span>: double,
+                <span style="color:maroon"><b>"h"</b></span>: double,
+                <span style="color:maroon"><b>"Sy"</b></span>: double,
+                <span style="color:maroon"><b>"beta"</b></span>: double
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
@@ -125,11 +139,11 @@ $(document).ready(function(){initNavTree('linkPlasticPlaneStrainJ2.html','');});
 <tr>
 <td><code>rho</code> </td><td>Represents the material density. </td></tr>
 <tr>
-<td><code>H</code> </td><td>Represents the hardening modulus. </td></tr>
+<td><code>h</code> </td><td>Represents the hardening modulus. </td></tr>
 <tr>
 <td><code>beta</code> </td><td>Kinematic/Hardening ratio. </td></tr>
 <tr>
-<td><code>SigmaY</code> </td><td>Represents the yielding stress. </td></tr>
+<td><code>Sy</code> </td><td>Represents the yielding stress. </td></tr>
 </table>
 <dl class="section attention"><dt>Attention</dt><dd>This material can only be assigned to two-dimensional elements such as: <a class="el" href="classlin2DQuad4.html" title="Class for creating a 2D linearized four-node quadrilateral element in a mesh. ">lin2DQuad4</a>, <a class="el" href="classlin2DQuad8.html" title="Class for creating a 2D linearized eight-node quadrilateral element in a mesh. ">lin2DQuad8</a>, and <a class="el" href="classkin2DQuad4.html" title="Class for creating a 2D finite kinematic four-node quadrilateral element in a mesh. ">kin2DQuad4</a> elements. </dd>
 <dd>
@@ -140,7 +154,7 @@ At each gauss point of the elements in the plane strain problem, the strain tens
 <h3>Example</h3>
 <blockquote class="doxtable">
 <p>A plane strain plastic material with bulk modulus 133, shear modulus 80, no density, hardening modulus 80, hardening ratio 1.0, and yield stress 40 is defined as: <br />
- <em>MATERIAL 1 PLASTICPLANESTRAINJ2 133 80 0.0 80 1.0 40</em></p>
+ { "Materials": { "1": { "name" : "PLASTICPLANESTRAINJ2", "attributes": { "K": 133, "G": 80, "rho": 0.0, "h": 80, "Sy": 40.0, "beta": 1.0 } } } }</p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -148,7 +162,7 @@ At each gauss point of the elements in the plane strain problem, the strain tens
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

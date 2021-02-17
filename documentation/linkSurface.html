@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 		<meta name="generator" content="Doxygen 1.8.13"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>Seismo-VLAB: Include.md File Reference</title>
+		<title>Seismo-VLAB: Surface</title>
 		<link href="tabs.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="dynsections.js"></script>
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('Include_8md.html','');});
+$(document).ready(function(){initNavTree('linkSurface.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -99,17 +99,39 @@ $(document).ready(function(){initNavTree('Include_8md.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Include.md File Reference</div>  </div>
+<div class="title">Surface </div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><p>The <a class="el" href="linkSurface.html">Surface</a> class defines an area on an element where tractions can be applied. The face number is provided according to the element connectivity. See Figure bellow for details of face number for line, quadrilateral, and hexahedral elements.</p>
+<div class="image">
+<img src="FaceNumber.png" alt="FaceNumber.png" width="45%"/>
+</div>
+<p>An <a class="el" href="linkSurface.html">Surface</a> is created using the built-in json parse-structure provided in the Parse.hpp, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Surfaces"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"element"</b></span>: int,
+            <span style="color:green"><b>"face"</b></span>: int
+        }
+    }
+}
+</pre><table class="doxtable">
+<tr>
+<th>Variable </th><th>Description  </th></tr>
+<tr>
+<td><code>Tag</code> </td><td>Unique surface object identifier. </td></tr>
+<tr>
+<td><code>face</code> </td><td>The face number on the element according to figure above. </td></tr>
+<tr>
+<td><code>element</code> </td><td>The unique element identifier or Tag. </td></tr>
+</table>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
-				<li class="navelem"><a class="el" href="Include_8md.html">Include.md</a></li>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

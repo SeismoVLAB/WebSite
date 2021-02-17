@@ -107,38 +107,42 @@ $(document).ready(function(){initNavTree('linkStaticsurface-load.html','');});
 <img src="StaticSurfaceLoad.png" alt="StaticSurfaceLoad.png" width="50%"/>
 </div>
  <hr/>
-<p>An static surface <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> is created using the built-in parse-structure provided in the Parse,</p>
-<p><code>ELEMENTLOAD</code> <code>Tag</code> <code>STATIC</code> <code>SURFACE</code> <code>value</code> <code>nd</code> <code>dir</code> <code>ne</code> <code>elems</code> <code>faces</code></p>
-<table class="doxtable">
+<p>An static surface <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> is created using the built-in json parse-structure provided in the Parser, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Loads"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"name"</b></span> : "ELEMENTLOAD",
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"name"</b></span>: "CONSTANT",
+                <span style="color:maroon"><b>"type"</b></span>: "SURFACE",
+                <span style="color:maroon"><b>"mag"</b></span>: double,
+                <span style="color:maroon"><b>"dir"</b></span>: [ ],
+                <span style="color:maroon"><b>"list"</b></span>: [ ]
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
 <td><code>Tag</code> </td><td>Unique load object identifier. </td></tr>
 <tr>
-<td><code>value</code> </td><td>The applied surface load magnitude. </td></tr>
-<tr>
-<td><code>nd</code> </td><td>The number of dimension of this <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a>. </td></tr>
+<td><code>mag</code> </td><td>The applied surface load magnitude. </td></tr>
 <tr>
 <td><code>dir</code> </td><td>The unit vector of the applied surface force. </td></tr>
 <tr>
-<td><code>ne</code> </td><td>Number of elements where this <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> will be applied. </td></tr>
-<tr>
-<td><code>elems</code> </td><td>List of <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> identifiers that share this load. </td></tr>
-<tr>
-<td><code>faces</code> </td><td>List of <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> faces identifiers where the traction is applied. </td></tr>
+<td><code>list</code> </td><td>List of Surface identifiers that share this load. </td></tr>
 </table>
 <dl class="section attention"><dt>Attention</dt><dd>The direction of the load must coincide with the global coordinate system. </dd>
 <dd>
 For Shell elements only out-of-plane tractions can be applied. The out-of-plane face number is 5. </dd>
 <dd>
-The face number is provided according to the element connectivity. See Figure bellow for details of face number for line, quadrilateral, and hexahedral elements.</dd></dl>
-<div class="image">
-<img src="FaceNumber.png" alt="FaceNumber.png" width="45%"/>
-</div>
+See <a class="el" href="linkSurface.html">Surface</a> for more details on how to define a surface in an element.</dd></dl>
 <h3>Example</h3>
 <blockquote class="doxtable">
 <p>A 3D static surface load applied downwards on elements 1,2,3,4,5 on face 6 with magnitude 50.0 N/m^2:<br />
-<em>ELEMENTLOAD 1 STATIC SURFACE 50.00 3 0.000 0.000 -1.000 5 1 2 3 4 5 6 6 6 6 6</em></p>
+{ "Loads": { "1": { "name" : "ELEMENTLOAD", "attributes": { "name": "CONSTANT", "type": "SURFACE", "mag": 50.0, "dir": [0.000 0.000, -1.000], "list": [1,2,3,4,5] } } } } </p>
 </blockquote>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -146,7 +150,7 @@ The face number is provided according to the element connectivity. See Figure be
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

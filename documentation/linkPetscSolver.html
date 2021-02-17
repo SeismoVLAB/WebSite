@@ -103,13 +103,27 @@ $(document).ready(function(){initNavTree('linkPetscSolver.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>The <a class="el" href="classPetscSolver.html" title="Class for solving a linear system using an iterative solver assuming the matrix can be symmetric posi...">PetscSolver</a> keyword creates an iterative Solver class that solves the system of equations provided with \(\textbf{K}_{\textrm{eff}}\). This solver can be employed to symmetric and positive-definite matrix structure using conjugate gradient method, or for unsymmetric matrix using bi-conjugate gradient method. This solver is applicable to sparse systems that are too large to be handled by a direct implementation or other direct methods such as the Cholesky decomposition. </p><hr/>
-<p>A <a class="el" href="classPetscSolver.html" title="Class for solving a linear system using an iterative solver assuming the matrix can be symmetric posi...">PetscSolver</a> solver can be created using the built-in parse-structure provided in the Parser as,</p>
-<p><code>SOLVER</code> <code>PETSC</code> <code>method</code> <code>tol</code> <code>dnz</code> <code>onz</code></p>
-<table class="doxtable">
+<p>A <a class="el" href="classPetscSolver.html" title="Class for solving a linear system using an iterative solver assuming the matrix can be symmetric posi...">PetscSolver</a> solver can be created using the built-in parse-structure provided in the Parser as, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Simulations"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"algorithm"</b></span>: {
+                    <span style="color:orange"><b>"name"</b></span>: "PETSC",
+                    <span style="color:orange"><b>"d_nz"</b></span>: int,
+                    <span style="color:orange"><b>"o_nz"</b></span>: int,
+                    <span style="color:orange"><b>"option"</b></span>: int,
+                    <span style="color:orange"><b>"tol"</b></span>: double
+                }
+            }
+        }
+    }
+}
+</pre><table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
-<td><code>method</code> </td><td>Positive number that represent the iterative method. The following methods are available:<ul>
+<td><code>option</code> </td><td>Positive number that represent the iterative method. The following methods are available:<ul>
 <li>
 Preconditioned Conjugate Gradient iterative method: 0</li>
 <li>
@@ -123,9 +137,9 @@ Biconjugate gradient iterative method: 3</li>
 <tr>
 <td><code>tol</code> </td><td>The maximum allowed convergence tolerance. </td></tr>
 <tr>
-<td><code>dnz</code> </td><td>The maximum number of diagonal values in one row for each block partition. </td></tr>
+<td><code>d_nz</code> </td><td>The maximum number of diagonal values in one row for each block partition. </td></tr>
 <tr>
-<td><code>onz</code> </td><td>The maximum number of off-diagonal values in one row for each block partition. </td></tr>
+<td><code>o_nz</code> </td><td>The maximum number of off-diagonal values in one row for each block partition. </td></tr>
 </table>
 <dl class="section attention"><dt>Attention</dt><dd>This solver can be used for either serial or parallel applications. </dd>
 <dd>
@@ -138,7 +152,7 @@ When using PML elements, the \(\textbf{K}_{\textrm{eff}}\) matrix can become neg
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun Feb 7 2021 20:59:18 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>
