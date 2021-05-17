@@ -102,14 +102,86 @@ $(document).ready(function(){initNavTree('linkExtendedNewmarkBeta.html','');});
 <div class="title"><a class="el" href="classExtendedNewmarkBeta.html" title="Class for integrating the third order differential equation using the implicit Newmark method...">ExtendedNewmarkBeta</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classExtendedNewmarkBeta.html" title="Class for integrating the third order differential equation using the implicit Newmark method...">ExtendedNewmarkBeta</a> keyword creates an implicit second order accurate integrator class for solving third order differential equations that is used for dynamic analysis using <a class="el" href="classPML3DHexa8.html" title="Class for creating a 3D linearized eight-node perfectly matched layer element in a mesh...">PML3DHexa8</a> or PML3DHexa20 elements. This integrator assumes that velocity and acceleration can be approximated as, </p>
+<div class="textblock"><h1>Background</h1>
+<p>The <a class="el" href="classExtendedNewmarkBeta.html" title="Class for integrating the third order differential equation using the implicit Newmark method...">ExtendedNewmarkBeta</a> class creates an implicit second order accurate integrator for solving third order differential equations that is used in a <a class="el" href="linkDynamicAnalysis.html">DynamicAnalysis</a> when using linkPML3DHexa8 or linkPML3DHexa20 elements. This integrator assumes that velocity and acceleration can be approximated as,</p>
+<p>... add some of the derived equations ...</p>
+<p>where \(\textbf{K}_{\textrm{eff}}\) and \(\textrm{F}_{\textrm{eff}}\) are used to compute \(\delta U^{(i)} = \textbf{K}_{\textrm{eff}}^{-1} \textrm{F}_{\textrm{eff}}\) and \(\Delta U = \displaystyle{\sum_i \delta U^{(i)}}\) used in the <a class="el" href="linkAlgorithm.html">Algorithm</a>.</p>
+<p><b>REFERENCE:</b></p><ul>
+<li>Fathi, A., Poursartip, B., &amp; Kallivokas, L. F. (2015). "Time‐domain hybrid formulations for wave simulations in three‐dimensional PML‐truncated heterogeneous media". International Journal for Numerical Methods in Engineering, 101(3), 165-198.</li>
+</ul>
+<h1>Pre-Analysis</h1>
+<p>The python <a class="el" href="linkSoftwareStructure.html#linkPreProcess">Pre-Analysis</a> in the <span style="color:green"><b>01-Pre_Process/Method/Attach.py</b></span> file provides with an interface to create a <a class="el" href="linkExtendedNewmarkBeta.html">ExtendedNewmarkBeta</a> integrator. We use the <span style="color:blue"><b>addIntegrator()</b></span> as follows:</p>
+<ul>
+<li><p class="startli"><span style="color:blue"><b>addIntegrator</b></span>(<b>tag</b>, <b>attributes</b>):</p><ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of this integrator, i.e., tag &gt; -1</li>
+<li><span style="color:green"><b>attributes</b></span> : Specific properties for the created integrator, for example<ul>
+<li><span style="color:blue">'name'</span> : The integrator's name, in this case <b>EXTENDEDNEWMARK</b></li>
+<li><span style="color:blue">'dt'</span> : The integrator's time step</li>
+<li><span style="color:blue">'ktol'</span> : Tolerance to set a stiffness matrix value kij = 0.0</li>
+<li><span style="color:blue">'mtol'</span> : Tolerance to set a mass matrix value mij = 0.0</li>
+<li><span style="color:blue">'ftol'</span> : Tolerance to set a force vector value fj = 0.0</li>
+</ul>
+</li>
+</ul>
+<p class="startli"><b>Example</b> </p><blockquote class="doxtable">
+<p>A <b>EXTENDEDNEWMARK</b> can be defined using the python interface as follows:<br />
+SVL.addIntegrator(<b>tag</b>=1, <b>attributes</b>={'name': 'ExtendedNewmark', 'dt': 0.00100})<br />
+</p>
+</blockquote>
+<p class="startli"><b>Application</b><br />
+ Please refer to <b>J12-DY_Axial_Load_Long_Rod_PML3D.py</b> file located at <span style="color:green"><b>03-Validations/01-Debugging/</b></span> to see an example on how to define a <b>EXTENDEDNEWMARK</b> integrator using the <span style="color:blue"><b>addAlgorithm</b></span> function.</p>
+</li>
+</ul>
+<p>On the contrary, the <span style="color:green"><b>01-Pre_Process/Method/Remove.py</b></span> file provides with an interface to depopulate the <code>Entities</code> dictionary. For example, to remove an already define <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a>, use:</p><ul>
+<li><span style="color:blue"><b>delIntegrator</b></span>(<b>tag</b>):<ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of the integrator to be removed, i.e., tag &gt; -1</li>
+</ul>
+</li>
+</ul>
+<h1>Run-Analysis</h1>
+<p>The C++ <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> in the <span style="color:green"><b>02-Run_Process/10-Integrators/03-Newmark/ExtendedNewmarkBeta.cpp</b></span> file provides the class implementation. A <a class="el" href="linkExtendedNewmarkBeta.html">ExtendedNewmarkBeta</a> is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a> and is defined inside the <span style="color:black"><b>"Simulations"</b></span> json field indicating its <span style="color:blue"><b>"Tag"</b></span> as follows,</p><ul>
+<li><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+{
+    <span style="color:black"><b>"Simulations"</b></span>: {
+        <span style="color:blue"><b>"Tag"</b></span>: {
+            <span style="color:green"><b>"combo"</b></span>: int,
+            <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"integrator"</b></span>: {
+                    <span style="color:orange"><b>"name"</b></span>: "EXTENDEDNEWMARK",
+                    <span style="color:orange"><b>"ktol"</b></span>: double,
+                    <span style="color:orange"><b>"mtol"</b></span>: double,
+                    <span style="color:orange"><b>"ftol"</b></span>: double,
+                    <span style="color:orange"><b>"dt"</b></span>: double,
+                }
+            }
+        }
+    }
+}
+</pre> <table class="doxtable">
+<tr>
+<th>Variable </th><th>Description  </th></tr>
+<tr>
+<td><code>combo</code> </td><td>The combination to which this <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a> will be defined. </td></tr>
+<tr>
+<td><code>mTol</code> </td><td>The specified tolerance for setting \(M_{ij} \sim 0.0\). </td></tr>
+<tr>
+<td><code>kTol</code> </td><td>The specified tolerance for setting \(K_{ij} \sim 0.0\). </td></tr>
+<tr>
+<td><code>fTol</code> </td><td>The specified tolerance for setting \(F_{j} \sim 0.0\). </td></tr>
+<tr>
+<td><code>dt</code> </td><td>The time step for the analysis. </td></tr>
+</table>
+<br />
+<dl class="section attention"><dt>Attention</dt><dd>The default tolerance for \(M_{ij}\), \(K_{ij}\), and \(F_{j}\) is \(10^{-15}\). </dd></dl>
+</li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -102,15 +102,36 @@ $(document).ready(function(){initNavTree('linkLoad.html','');});
 <div class="title"><a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> class defines a forces or traction that can be applied to either a <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> or to an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> respectively. This class provides member functions to compute the load vector that acts on a <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> object or an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> object. The load formulation that can be considered in <b>Seismo-VLAB</b> are:</p>
+<div class="textblock"><p>The <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> class defines a forces or traction that can be applied to either a <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> or to an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> respectively. The <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> class is designed to:</p><ul>
+<li>Have an internal structure suitable for linear and nonlinear behavior.</li>
+<li>Provide with functionalities that allow to construct mass, damping, and stiffness matrices as well as force vector.</li>
+</ul>
+<p>The main member function in <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> are:</p><ul>
+<li><a class="el" href="classLoad.html#a56e2ac850bb7c1ad768209f382177983" title="Returns the nodes index that share this load. ">Load::GetNodes()</a><br />
+ This function returns the <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> list where this <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> is applied.</li>
+<li><a class="el" href="classLoad.html#a394fd60225f4cfe437c25e6ef45b7357" title="Returns the nodes index that share this load. ">Load::GetElements()</a><br />
+ This function returns the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> list where this <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> is applied.</li>
+<li><a class="el" href="classLoad.html#aa80dcb6a41e20fbb83f816438b5e000b" title="Returns the force vector to be applied. ">Load::GetLoadVector()</a><br />
+ This function returns the load force at a certain time step.</li>
+<li><a class="el" href="classLoad.html#af63d22ccdad9748bb15864a163cb3151" title="Returns the load classification. ">Load::GetClassification()</a><br />
+ This function returns an integer associated with the load model. So far, these are available:<ul>
+<li><b>1</b> : Static point load.</li>
+<li><b>2</b> : Dynamic point load.</li>
+<li><b>3</b> : Static surface load.</li>
+<li><b>4</b> : Static body load.</li>
+<li><b>5</b> : Dynamic body load.</li>
+<li><b>7</b> : Dynamic user's define wave load.</li>
+<li><b>8</b> : Static/Dynamic displacement support motion.</li>
+</ul>
+</li>
+</ul>
+<p>The load formulation that can be considered in <b>Seismo-VLAB</b> are:</p>
 <ul>
 <li><a class="el" href="linkStaticpoint-load.html">Static point-load</a><br />
 </li>
 <li><a class="el" href="linkDynamicpoint-load.html">Dynamic point-load</a><br />
 </li>
 <li><a class="el" href="linkStaticsurface-load.html">Static surface-load</a><br />
-</li>
-<li><a class="el" href="linkStaticbody-load.html">Static body-load</a><br />
 </li>
 <li><a class="el" href="linkStaticbody-load.html">Static body-load</a><br />
 </li>
@@ -126,7 +147,7 @@ $(document).ready(function(){initNavTree('linkLoad.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

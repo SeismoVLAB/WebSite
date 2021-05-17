@@ -23,6 +23,8 @@ var classUnxBoucWen2DLink =
     [ "GetStressAt", "classUnxBoucWen2DLink.html#a876cdac80b4cf4b34df04633eec1d272", null ],
     [ "GetTotalDegreeOfFreedom", "classUnxBoucWen2DLink.html#aaf04ac21d365b07656157c9eb96db7ab", null ],
     [ "GetVTKResponse", "classUnxBoucWen2DLink.html#addd52bf077bf00fa5642db2988fc6199", null ],
+    [ "InitialState", "classUnxBoucWen2DLink.html#adea618e667b32802418cedae303dfdf7", null ],
+    [ "ReverseState", "classUnxBoucWen2DLink.html#a561c671723c98071542fa04646b92cee", null ],
     [ "SetDamping", "classUnxBoucWen2DLink.html#a8292c504a2ac932aab12278a190bb6b4", null ],
     [ "SetDomain", "classUnxBoucWen2DLink.html#a01aca59d0599c5ad733973dc0c650c11", null ],
     [ "sign", "classUnxBoucWen2DLink.html#aed8bded1d4695b295a6737a49fcbc215", null ],

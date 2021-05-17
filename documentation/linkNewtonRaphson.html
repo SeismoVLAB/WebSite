@@ -102,40 +102,77 @@ $(document).ready(function(){initNavTree('linkNewtonRaphson.html','');});
 <div class="title"><a class="el" href="classNewtonRaphson.html" title="Class for solving a non-linear system in a few iterations until the norm of the residuals reaches a c...">NewtonRaphson</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classNewtonRaphson.html" title="Class for solving a non-linear system in a few iterations until the norm of the residuals reaches a c...">NewtonRaphson</a> keyword creates an algorithm class that solves the linear system between two states in several steps. The algorithm and its variables is diplayed in the Figure bellow. The Newton-Raphson method solves a nonlinear system of equations written in the following manner:</p>
+<div class="textblock"><h1>Background</h1>
+<p>The <a class="el" href="classNewtonRaphson.html" title="Class for solving a non-linear system in a few iterations until the norm of the residuals reaches a c...">NewtonRaphson</a> keyword creates an algorithm class that solves the linear system between two states in several steps. The algorithm and its variables is displayed in the Figure below. The Newton-Raphson method solves a nonlinear system of equations written in the following manner:</p>
 <p class="formulaDsp">
-\[ \textbf{f} \left( \textbf{U} \right) = \,^{t + \Delta t} \textbf{R} - \,^{t + \Delta t} \textbf{F} = 0 \,. \nonumber \]
+\[ \textbf{f} \left( \textbf{U} \right) = \,^{t + \Delta t} \textbf{R} - \,^{t + \Delta t} \textbf{F} = 0 \,. \]
 </p>
 <p>Provided with the displacement at \(^{t + \Delta t} \textbf{U}^{(i-1)}\), then a Taylor series expansion about that point is:</p>
 <p class="formulaDsp">
-\[ \textbf{f} \left( \textbf{U} \right) = \textbf{f} \left( ^{t + \Delta t} \textbf{U}^{(i-1)} \right) + \left. \frac{\partial \textbf{f}}{\partial \textbf{U}} \right|_{^{t + \Delta t} \textbf{U}^{(i-1)}} \left( \textbf{U} - \,^{t + \Delta t} \textbf{U}^{(i-1)} \right) + \textrm{H.O.T.} \nonumber \]
+\[ \textbf{f} \left( \textbf{U} \right) = \textbf{f} \left( ^{t + \Delta t} \textbf{U}^{(i-1)} \right) + \left. \frac{\partial \textbf{f}}{\partial \textbf{U}} \right|_{^{t + \Delta t} \textbf{U}^{(i-1)}} \left( \textbf{U} - \,^{t + \Delta t} \textbf{U}^{(i-1)} \right) + \textrm{H.O.T.} \]
 </p>
-<p>Substituting the latter two equations and neglecting the higher orden terms, one can write:</p>
+<p>Substituting the latter two equations and neglecting the higher order terms, one can write:</p>
 <p class="formulaDsp">
-\[ \left. \frac{\partial \textbf{F}}{\partial \textbf{U}} \right|_{^{t + \Delta t} \textbf{U}^{(i-1)}} \left( \textbf{U} - \,^{t + \Delta t} \textbf{U}^{(i-1)} \right) = \,^{t + \Delta t} \textbf{R} - \,^{t + \Delta t} \textbf{F}^{(i-1)} \,. \nonumber \]
+\[ \left. \frac{\partial \textbf{F}}{\partial \textbf{U}} \right|_{^{t + \Delta t} \textbf{U}^{(i-1)}} \left( \textbf{U} - \,^{t + \Delta t} \textbf{U}^{(i-1)} \right) = \,^{t + \Delta t} \textbf{R} - \,^{t + \Delta t} \textbf{F}^{(i-1)} \,. \]
 </p>
 <p>The latter expression can be re-written in the following manner:</p>
 <p class="formulaDsp">
-\[ ^{t + \Delta t} \textbf{K}^{(i-1)} \Delta \textbf{U}^{(i)} = \,^{t + \Delta t} \textbf{R} - \,^{t + \Delta t} \textbf{F}^{(i-1)} \,,\nonumber \]
+\[ ^{t + \Delta t} \textbf{K}^{(i-1)} \Delta \textbf{U}^{(i)} = \,^{t + \Delta t} \textbf{R} - \,^{t + \Delta t} \textbf{F}^{(i-1)} \,, \]
 </p>
 <p>where \(^{t + \Delta t} \textbf{K}^{(i-1)}\) is the known tangent stiffness matrix at iteration \(^{(i-1)}\):</p>
 <p class="formulaDsp">
-\[ ^{t + \Delta t} \textbf{K}^{(i-1)} = \left. \frac{\partial \textbf{F}}{\partial \textbf{U}} \right|_{^{t + \Delta t} \textbf{U}^{(i-1)}} \,, \nonumber \]
+\[ ^{t + \Delta t} \textbf{K}^{(i-1)} = \left. \frac{\partial \textbf{F}}{\partial \textbf{U}} \right|_{^{t + \Delta t} \textbf{U}^{(i-1)}} \,, \]
 </p>
 <p>and the effective force becomes:</p>
 <p class="formulaDsp">
-\[ {\textrm{F}}_{{\textrm{eff}}}(\textbf{U}) = \,^{t + \Delta t} \textbf{R} - \,^{t + \Delta t} \textbf{F}^{(i-1)} \,.\nonumber \]
+\[ {\textrm{F}}_{{\textrm{eff}}}(\textbf{U}) = \,^{t + \Delta t} \textbf{R} - \,^{t + \Delta t} \textbf{F}^{(i-1)} \,. \]
 </p>
 <p>The improved displacement solution becomes:</p>
 <p class="formulaDsp">
-\[ ^{t + \Delta t} \textbf{U}^{(i)} = \; ^{t + \Delta t} \textbf{U}^{(i-1)} + \Delta \textbf{U}^{(i)} \,. \nonumber \]
+\[ ^{t + \Delta t} \textbf{U}^{(i)} = \; ^{t + \Delta t} \textbf{U}^{(i-1)} + \Delta \textbf{U}^{(i)} \,. \]
 </p>
 <p>Therefore, this method is meant to be used in non-linear analysis for which the system \(\textbf{K}_{{\textrm{eff}}} \, \Delta U = {\textrm{F}}_{{\textrm{eff}}}(\textbf{U})\) is solved.</p>
 <div class="image">
 <img src="NewtonRaphson.png" alt="NewtonRaphson.png" width="60%"/>
 </div>
-<hr/>
-<p>A <a class="el" href="classNewtonRaphson.html" title="Class for solving a non-linear system in a few iterations until the norm of the residuals reaches a c...">NewtonRaphson</a> algorithm can be created using the built-in parse-structure in the Parser as, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+<p><b>REFERENCE:</b></p><ul>
+<li>Bathe K. Jurgen, "Finite Element Procedures", Chapter 8: pages 755-759, Prentice-Hall, 1996.</li>
+</ul>
+<h1>Pre-Analysis</h1>
+<p>The python <a class="el" href="linkSoftwareStructure.html#linkPreProcess">Pre-Analysis</a> in the <span style="color:green"><b>01-Pre_Process/Method/Attach.py</b></span> file provides with an interface to create a <a class="el" href="linkLinear.html">Linear</a>. We use the <span style="color:blue"><b>addAlgorithm()</b></span> as follows:</p>
+<ul>
+<li><p class="startli"><span style="color:blue"><b>addAlgorithm</b></span>(<b>tag</b>, <b>attributes</b>):</p><ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of this algorithm, i.e., tag &gt; -1</li>
+<li><span style="color:green"><b>attributes</b></span> : Specific properties for the created algorithm, for example<ul>
+<li><span style="color:blue">'name'</span> : The algorithm's name</li>
+<li><span style="color:blue">'nstep'</span> : The algorithm's number of increment steps</li>
+<li><span style="color:blue">'cnvgtol'</span> : Tolerance to accept the solution has converged</li>
+<li><span style="color:blue">'cnvgtest'</span> : The converge test to apply, these can be<ul>
+<li>'UnbalanceForce'</li>
+<li>'IncrementalDisplacement'</li>
+<li>'RelativeUnbalanceForce'</li>
+<li>'RelativeIncrementalDisplacement'</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="startli"><b>Example</b> </p><blockquote class="doxtable">
+<p>A <b>ALGORITHM</b> can be defined using the python interface as follows:<br />
+SVL.addAlgorithm(<b>tag</b>=1, <b>attributes</b>={'name': 'Newton', 'nstep': 50, 'cnvgtol': 1E-06, 'cnvgtest': 'IncrementalDisplacement'}) </p>
+</blockquote>
+<p class="startli"><b>Application</b> Please refer to <b>C09-ST_kin_3DCantilever_Elastic_Truss2</b> file located at <span style="color:green"><b>03-Validations/01-Debugging/</b></span> to see an example on how to define a <b>NEWTON</b> algorithm using the <span style="color:blue"><b>addAlgorithm</b></span> function.</p>
+</li>
+</ul>
+<p>On the contrary, the <span style="color:green"><b>01-Pre_Process/Method/Remove.py</b></span> file provides with an interface to depopulate the <code>Entities</code> dictionary. For example, to remove an already define <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a>, use:</p><ul>
+<li><span style="color:blue"><b>delAlgorithm</b></span>(<b>tag</b>):<ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of the algorithm to be removed, i.e., tag &gt; -1</li>
+</ul>
+</li>
+</ul>
+<h1>Run-Analysis</h1>
+<p>The C++ <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> in the <span style="color:green"><b>02-Run_Process/09-Algorithms/02-Newton/NewtonRaphson.cpp</b></span> file provides the class implementation. A <a class="el" href="linkLinear.html">Linear</a> is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a> and is defined inside the <span style="color:black"><b>"Simulations"</b></span> json field indicating its <span style="color:blue"><b>"Tag"</b></span> as follows,</p><ul>
+<li><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
 {
     <span style="color:black"><b>"Simulations"</b></span>: {
         <span style="color:blue"><b>"Tag"</b></span>: {
@@ -151,7 +188,7 @@ $(document).ready(function(){initNavTree('linkNewtonRaphson.html','');});
         }
     }
 }
-</pre><table class="doxtable">
+</pre> <table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
@@ -163,16 +200,19 @@ $(document).ready(function(){initNavTree('linkNewtonRaphson.html','');});
 <tr>
 <td><code>cnvgtest</code> </td><td>Test number to compute the residual error. </td></tr>
 </table>
+<br />
 <dl class="section attention"><dt>Attention</dt><dd>This method can be used for large-deformation or non-linear material. </dd>
 <dd>
 The <code>cnvgtest</code> number needs to be specified, otherwise <code>cnvgtest</code>=3 is employed. </dd></dl>
+</li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

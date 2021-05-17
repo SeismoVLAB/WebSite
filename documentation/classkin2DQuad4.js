@@ -30,6 +30,8 @@ var classkin2DQuad4 =
     [ "GetStressAt", "classkin2DQuad4.html#a72abd533ca4a41853751b771aab3ee74", null ],
     [ "GetTotalDegreeOfFreedom", "classkin2DQuad4.html#a2aa8f425cea38073e7821ed73e5fa9b4", null ],
     [ "GetVTKResponse", "classkin2DQuad4.html#a93a5ce98e0005519fec1f5e25766fdd8", null ],
+    [ "InitialState", "classkin2DQuad4.html#a2a376e125d0aa9d309ff87c366d06f9b", null ],
+    [ "ReverseState", "classkin2DQuad4.html#ab59cc11d4f9aa240fe469a993dbfbb2c", null ],
     [ "SetDamping", "classkin2DQuad4.html#a3e1b93ed3e8a244fd974b1e6c1e7b63b", null ],
     [ "SetDomain", "classkin2DQuad4.html#a3a81cd668f0770e0889f2fd47b41ce44", null ],
     [ "TransformTensorToVector", "classkin2DQuad4.html#a696115b1e6ee711d9c0c34c3afe7f7d8", null ],

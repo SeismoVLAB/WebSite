@@ -102,8 +102,42 @@ $(document).ready(function(){initNavTree('linkMass.html','');});
 <div class="title">Mass </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="linkMass.html">Mass</a> class sets the mass at a <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>. The mass set in this manner is added to the mass contribution of <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> that share this <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>.</p>
-<p>A <a class="el" href="linkMass.html">Mass</a> is created using the built-in parse-structure provided in the Parser, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+<div class="textblock"><p>The <a class="el" href="linkMass.html">Mass</a> is an entity (not a class) that defines a mass value at a <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>. The mass is set to a <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> using the member function:</p><ul>
+<li><a class="el" href="classNode.html#a8780bd2438230a7a51d0efa61c5a1963" title="Set the node&#39;s mass at each degree of freedom. ">Node::SetMass()</a> : set the vector of mass at each degree-of-freedom.</li>
+</ul>
+<p>The mass is store in the private member variable:</p><ul>
+<li><a class="el" href="classNode.html#a404c87757d0d362e17a885b03ad946aa" title="The applied mass of this Node. ">Node::Mass</a> : stores a vector with the mass at each degree-of-freedom</li>
+</ul>
+<p>The mass set in this manner is added to the mass contribution of <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> that share this <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>.</p>
+<p><b>REFERENCE:</b></p><ul>
+<li>Forde, B. W. R., Foschi, R. O., &amp; Stiemer, S. F. (1990). "Object-oriented finite element analysis". Computers &amp; Structures, 34(3), 355–374.</li>
+<li>Mackie, R. I. (1992). "Object oriented programming of the finite element method". International Journal for Numerical Methods in Engineering, 35(2), 425–436.</li>
+</ul>
+<h1>Pre-Analysis</h1>
+<p>The python <span style="color:green"><b>01-Pre_Process/Method/Attach.py</b></span> file provides with an interface to populate the <code>Entities</code> dictionary. A Mass can be added using the <span style="color:blue"><b>addMass()</b></span> function. This function will transform the provided information into json format to be parse in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a>.</p>
+<ul>
+<li><p class="startli"><span style="color:blue"><b>addMass</b></span>(<b>tag</b>, <b>dof</b>, <b>vals</b>):</p><ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of the <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> to add mass, i.e., tag &gt; -1</li>
+<li><span style="color:green"><b>dof</b></span> : Degree of freedom number where the mass will be added, i.e., ndof &gt; 0</li>
+<li><span style="color:green"><b>vals</b></span> : Mass values to be added to specific degree of freedom</li>
+</ul>
+<p class="startli"><b>Example</b> </p><blockquote class="doxtable">
+<p>A <b>MASS</b> can be defined using the python interface as follows:<br />
+SVL.addMass(<b>tag</b>=2, <b>dof</b>=[1, 2], <b>vals</b>=[1.00, 1.00]) </p>
+</blockquote>
+<p class="startli"><b>Application</b><br />
+ Please refer to the <b>A04-DY_Lin_1DPointMass_Elastic_ZeroLength.py</b> file located at <span style="color:green"><b>03-Validations/01-Debugging/</b></span> to see an example on how to define a point mass using the <span style="color:blue"><b>addMass</b></span> function.</p>
+</li>
+</ul>
+<p>On the contrary, the <span style="color:green"><b>01-Pre_Process/Method/Remove.py</b></span> file provides with an interface to depopulate the <code>Entities</code> dictionary. For example, to remove an already define Mass, use:</p><ul>
+<li><span style="color:blue"><b>delMass</b></span>(<b>tag</b>):<ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of the node to remove the mass, i.e., tag &gt; -1</li>
+</ul>
+</li>
+</ul>
+<h1>Run-Analysis</h1>
+<p>The C++ <span style="color:green"><b>02-Run_Process/01-Node/Node.cpp</b></span> file provides the mass declaration. A Mass is added to a <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> using the <a class="el" href="classNode.html#a8780bd2438230a7a51d0efa61c5a1963" title="Set the node&#39;s mass at each degree of freedom. ">Node::SetMass()</a> member function. A Mass is defined inside the <span style="color:black"><b>"Masses"</b></span> json field indicating its <span style="color:blue"><b>"Tag"</b></span> as follows,</p><ul>
+<li><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
 {
     <span style="color:black"><b>"Masses"</b></span>: {
         <span style="color:blue"><b>"Tag"</b></span>: {
@@ -112,7 +146,7 @@ $(document).ready(function(){initNavTree('linkMass.html','');});
         }
     }
 }
-</pre><table class="doxtable">
+</pre> <table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
@@ -122,21 +156,23 @@ $(document).ready(function(){initNavTree('linkMass.html','');});
 <tr>
 <td><code>mass</code> </td><td>List of mass values applied to each degree of freedom. </td></tr>
 </table>
+<br />
 <dl class="section attention"><dt>Attention</dt><dd>The mass matrix \(\textbf{M} \in \mathbb{R}^{nTotal \times nTotal}\) can be constructed using only the Mass keyword by specifying mass values in each <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> and each degree of freedom, and using zero density in <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>. However, the resulting mass matrix will coincide with the LUMPED formulation specified in <a class="el" href="linkModel.html">Global</a>.</dd></dl>
-<h3>Example</h3>
-<blockquote class="doxtable">
-<p>A 2D mass of 10.0 applied to node 1 with 3 degree of freedom over the X,Y direction and rotational mass 100.0 over the \(\theta_Z\) is: <br />
+<b>Example</b> <blockquote class="doxtable">
+<p>A 2D <b>MASS</b> of 10.0 applied to node 1 with 3 degree of freedom over the X,Y direction and rotational mass 100.0 over the \(\theta_Z\) is: <br />
  { "Masses": { "1": { "ndof" : 3, "mass" : [10.0, 10.0, 100.00] } } }</p>
-<p>A 3D unit mass applied to node 5 with 6 degree of freedom over the X,Y,Z direction and zero rotational mass over \(\theta_X,\theta_Y,\theta_Z\) is: <br />
+<p>A 3D <b>MASS</b> applied to node 5 with 6 degree of freedom over the X,Y,Z direction and zero rotational mass over \(\theta_X,\theta_Y,\theta_Z\) is: <br />
  { "Masses": { "5": { "ndof" : 6, "mass" : [1.00, 1.00, 1.00, 0.00, 0.00, 0.00] } } }</p>
 </blockquote>
+</li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -114,21 +114,12 @@ $(document).ready(function(){initNavTree('classQuasiStatic.html','');});
 <div class="dynheader">
 Inheritance diagram for QuasiStatic:</div>
 <div class="dyncontent">
-<div class="center"><img src="classQuasiStatic__inherit__graph.png" border="0" usemap="#QuasiStatic_inherit__map" alt="Inheritance graph"/></div>
-<map name="QuasiStatic_inherit__map" id="QuasiStatic_inherit__map">
-<area shape="rect" id="node2" href="classIntegrator.html" title="Class for defining how the static/dynamic snalysis between two steps is going to be performed..." alt="" coords="12,5,89,32"/>
+ <div class="center">
+  <img src="classQuasiStatic.png" usemap="#QuasiStatic_map" alt=""/>
+  <map id="QuasiStatic_map" name="QuasiStatic_map">
+<area href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed..." alt="Integrator" shape="rect" coords="0,0,76,24"/>
 </map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for QuasiStatic:</div>
-<div class="dyncontent">
-<div class="center"><img src="classQuasiStatic__coll__graph.png" border="0" usemap="#QuasiStatic_coll__map" alt="Collaboration graph"/></div>
-<map name="QuasiStatic_coll__map" id="QuasiStatic_coll__map">
-<area shape="rect" id="node2" href="classIntegrator.html" title="Class for defining how the static/dynamic snalysis between two steps is going to be performed..." alt="" coords="5,95,83,121"/>
-<area shape="rect" id="node4" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out..." alt="" coords="159,5,236,32"/>
-<area shape="rect" id="node6" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. " alt="" coords="367,5,451,32"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -169,17 +160,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:acc78e49079e60e8a502e3462fe3439d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the incremental nodal support motion vector.  <a href="#acc78e49079e60e8a502e3462fe3439d0">More...</a><br /></td></tr>
 <tr class="separator:acc78e49079e60e8a502e3462fe3439d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4029cb9138a462325db5fd0fedaa3e04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuasiStatic.html#a4029cb9138a462325db5fd0fedaa3e04">ComputeEffectiveForce</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh, Eigen::VectorXd &amp;Feff, double factor=1.00, unsigned int k=0)</td></tr>
-<tr class="memdesc:a4029cb9138a462325db5fd0fedaa3e04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the effective force assiciated to the <a class="el" href="classQuasiStatic.html" title="Class for defining an static integrator that neglects any damping and inertial forces present in the ...">QuasiStatic</a> integrator.  <a href="#a4029cb9138a462325db5fd0fedaa3e04">More...</a><br /></td></tr>
+<tr class="memdesc:a4029cb9138a462325db5fd0fedaa3e04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the effective force associated to the <a class="el" href="classQuasiStatic.html" title="Class for defining an static integrator that neglects any damping and inertial forces present in the ...">QuasiStatic</a> integrator.  <a href="#a4029cb9138a462325db5fd0fedaa3e04">More...</a><br /></td></tr>
 <tr class="separator:a4029cb9138a462325db5fd0fedaa3e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1d7b7501038ad320932797c38800520"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuasiStatic.html#ac1d7b7501038ad320932797c38800520">ComputeEffectiveStiffness</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh, Eigen::SparseMatrix&lt; double &gt; &amp;Keff)</td></tr>
-<tr class="memdesc:ac1d7b7501038ad320932797c38800520"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the effective stiffness assiciated to the <a class="el" href="classQuasiStatic.html" title="Class for defining an static integrator that neglects any damping and inertial forces present in the ...">QuasiStatic</a> integrator.  <a href="#ac1d7b7501038ad320932797c38800520">More...</a><br /></td></tr>
+<tr class="memdesc:ac1d7b7501038ad320932797c38800520"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the effective stiffness associated to the <a class="el" href="classQuasiStatic.html" title="Class for defining an static integrator that neglects any damping and inertial forces present in the ...">QuasiStatic</a> integrator.  <a href="#ac1d7b7501038ad320932797c38800520">More...</a><br /></td></tr>
 <tr class="separator:ac1d7b7501038ad320932797c38800520"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classIntegrator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIntegrator')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIntegrator.html">Integrator</a></td></tr>
 <tr class="memitem:a5fa59e3831f07949f65ab17745a2932b inherit pub_methods_classIntegrator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIntegrator.html#a5fa59e3831f07949f65ab17745a2932b">Integrator</a> (const std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh)</td></tr>
-<tr class="memdesc:a5fa59e3831f07949f65ab17745a2932b inherit pub_methods_classIntegrator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic snalysis between two steps is going to be performed...">Integrator</a> object.  <a href="classIntegrator.html#a5fa59e3831f07949f65ab17745a2932b">More...</a><br /></td></tr>
+<tr class="memdesc:a5fa59e3831f07949f65ab17745a2932b inherit pub_methods_classIntegrator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a> object.  <a href="classIntegrator.html#a5fa59e3831f07949f65ab17745a2932b">More...</a><br /></td></tr>
 <tr class="separator:a5fa59e3831f07949f65ab17745a2932b inherit pub_methods_classIntegrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03a08d2604e15629ff339ab07cf96205 inherit pub_methods_classIntegrator"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIntegrator.html#a03a08d2604e15629ff339ab07cf96205">~Integrator</a> ()=0</td></tr>
-<tr class="memdesc:a03a08d2604e15629ff339ab07cf96205 inherit pub_methods_classIntegrator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic snalysis between two steps is going to be performed...">Integrator</a> object.  <a href="classIntegrator.html#a03a08d2604e15629ff339ab07cf96205">More...</a><br /></td></tr>
+<tr class="memdesc:a03a08d2604e15629ff339ab07cf96205 inherit pub_methods_classIntegrator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a> object.  <a href="classIntegrator.html#a03a08d2604e15629ff339ab07cf96205">More...</a><br /></td></tr>
 <tr class="separator:a03a08d2604e15629ff339ab07cf96205 inherit pub_methods_classIntegrator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -190,6 +181,12 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a9107cd320e15a30715c9272c3c73812e"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuasiStatic.html#a9107cd320e15a30715c9272c3c73812e">U</a></td></tr>
 <tr class="memdesc:a9107cd320e15a30715c9272c3c73812e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total initial/previous displacements.  <a href="#a9107cd320e15a30715c9272c3c73812e">More...</a><br /></td></tr>
 <tr class="separator:a9107cd320e15a30715c9272c3c73812e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00d375363e3d40a7f1d26b1c61ebef9d"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuasiStatic.html#a00d375363e3d40a7f1d26b1c61ebef9d">V</a></td></tr>
+<tr class="memdesc:a00d375363e3d40a7f1d26b1c61ebef9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total initial/previous velocity.  <a href="#a00d375363e3d40a7f1d26b1c61ebef9d">More...</a><br /></td></tr>
+<tr class="separator:a00d375363e3d40a7f1d26b1c61ebef9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bc8455a0b609c838fd32b6f24e1d7e7"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuasiStatic.html#a5bc8455a0b609c838fd32b6f24e1d7e7">A</a></td></tr>
+<tr class="memdesc:a5bc8455a0b609c838fd32b6f24e1d7e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total initial/previous acceleration.  <a href="#a5bc8455a0b609c838fd32b6f24e1d7e7">More...</a><br /></td></tr>
+<tr class="separator:a5bc8455a0b609c838fd32b6f24e1d7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdefa72e08f44c7e002745ff6be741eb"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQuasiStatic.html#abdefa72e08f44c7e002745ff6be741eb">Ubar</a></td></tr>
 <tr class="memdesc:abdefa72e08f44c7e002745ff6be741eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total previous pml history values.  <a href="#abdefa72e08f44c7e002745ff6be741eb">More...</a><br /></td></tr>
 <tr class="separator:abdefa72e08f44c7e002745ff6be741eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -333,7 +330,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Gets the effective force assiciated to the <a class="el" href="classQuasiStatic.html" title="Class for defining an static integrator that neglects any damping and inertial forces present in the ...">QuasiStatic</a> integrator. </p>
+<p>Gets the effective force associated to the <a class="el" href="classQuasiStatic.html" title="Class for defining an static integrator that neglects any damping and inertial forces present in the ...">QuasiStatic</a> integrator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mesh</td><td>Pointer to the <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> object where <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> and <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> are stored. </td></tr>
@@ -384,7 +381,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Gets the effective stiffness assiciated to the <a class="el" href="classQuasiStatic.html" title="Class for defining an static integrator that neglects any damping and inertial forces present in the ...">QuasiStatic</a> integrator. </p>
+<p>Gets the effective stiffness associated to the <a class="el" href="classQuasiStatic.html" title="Class for defining an static integrator that neglects any damping and inertial forces present in the ...">QuasiStatic</a> integrator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mesh</td><td>Pointer to the <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> object where <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> and <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> are stored. </td></tr>
@@ -441,7 +438,7 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Whether or not the <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic snalysis between two steps is going to be performed...">Integrator</a> was successfully applied. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not the <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a> was successfully applied. </dd></dl>
 
 <p>Implements <a class="el" href="classIntegrator.html#ade2662f0925875beb6c51fbf20fe8aff">Integrator</a>.</p>
 
@@ -491,7 +488,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Vector with the reaction forces and external forces. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>More details can be found at <a class="el" href="linkReaction.html">Reaction</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#a54605488417d1378c981e96a65375329" title="Gets the node reaction force. ">Node::GetReaction()</a>, <a class="el" href="classAssembler.html#a8fe7bd64c4a0f7c22e9c8cdbce7b87e7" title="Assemble the internal elastic, inertial, and vicous force vector. ">Assembler::ComputeDynamicInternalForceVector()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#a54605488417d1378c981e96a65375329" title="Gets the node reaction force. ">Node::GetReaction()</a>, <a class="el" href="classAssembler.html#a8fe7bd64c4a0f7c22e9c8cdbce7b87e7" title="Assemble the internal elastic, inertial, and viscous force vector. ">Assembler::ComputeDynamicInternalForceVector()</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classIntegrator.html#a2b869e556a185004b02ca82e798b274f">Integrator</a>.</p>
 
@@ -793,6 +790,30 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a5bc8455a0b609c838fd32b6f24e1d7e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bc8455a0b609c838fd32b6f24e1d7e7">&#9670;&nbsp;</a></span>A</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd QuasiStatic::A</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Total initial/previous acceleration. </p>
+
+</div>
+</div>
 <a id="aed98fd4d5d98a7c4defa9cbc9869384a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aed98fd4d5d98a7c4defa9cbc9869384a">&#9670;&nbsp;</a></span>K</h2>
 
@@ -937,6 +958,30 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a00d375363e3d40a7f1d26b1c61ebef9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00d375363e3d40a7f1d26b1c61ebef9d">&#9670;&nbsp;</a></span>V</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd QuasiStatic::V</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Total initial/previous velocity. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
@@ -944,7 +989,7 @@ Protected Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classQuasiStatic.html">QuasiStatic</a></li>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:51 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -102,8 +102,14 @@ $(document).ready(function(){initNavTree('linkAnalysisModule.html','');});
 <div class="title">Solution Module </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="linkAnalysisModule.html">Solution Module</a> is conformed by the <a class="el" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. ">Assembler</a>, <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a>, <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic snalysis between two steps is going to be performed...">Integrator</a>, <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a>, <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a> classes. The purpose of this module is to provide with all required tools to perform an analysis on the finite element model. In general an <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a> is performed to a <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> object.</p>
-<p>More details can be found at the following sections:</p>
+<div class="textblock"><p>The <a class="el" href="linkAnalysisModule.html">Solution Module</a> is conformed by the <a class="el" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. ">Assembler</a>, <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a>, <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a>, <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a>, and <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a> classes. The purpose of this module is three fold:</p>
+<ul>
+<li>Differentiate between an independent or sequential analysis specified by the user.</li>
+<li>Provide with the required tools to perform an analysis on the finite element model.</li>
+<li>Provide with enough modularity to add new <a class="el" href="linkAlgorithm.html">Algorithm</a>, <a class="el" href="linkIntegrator.html">Integrator</a>, <a class="el" href="linkSolver.html">Linear System</a>.</li>
+</ul>
+<p>A simulation is performed to a <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> object. A <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> is a combination of load that are applied simultaneously on the finite element model.</p>
+<p>The declaration of: <a class="el" href="Assembler_8hpp.html" title="This file contains the &quot;Assembler object&quot; declarations, this object computes the system mass...">Assembler.hpp</a> is found at <span style="color:green"><b>02-Run_Process/07-Assembler</b></span> folder, <a class="el" href="Analysis_8hpp.html" title="This file contains the pure virtual &quot;Analysis object&quot; declarations, so far, static and dynamic analys...">Analysis.hpp</a> is found at <span style="color:green"><b>02-Run_Process/08-Analysis</b></span> folder, <a class="el" href="Algorithm_8hpp.html">Algorithm.hpp</a> is found at <span style="color:green"><b>02-Run_Process/09-Algorithms</b></span> folder, <a class="el" href="Integrator_8hpp.html">Integrator.hpp</a> is found at <span style="color:green"><b>02-Run_Process/10-Integrators</b></span> folder, and <a class="el" href="LinearSystem_8hpp.html" title="This file contains the abstract &quot;LinearSystem object&quot; declarations, which defines the library to solv...">LinearSystem.hpp</a> is found at <span style="color:green"><b>02-Run_Process/11-Solvers</b></span> folder. More details can be found at the following sections:</p>
 <ul>
 <li><a class="el" href="linkAssembler.html">Assembler</a></li>
 <li><a class="el" href="linkReaction.html">Reaction</a></li>
@@ -119,7 +125,7 @@ $(document).ready(function(){initNavTree('linkAnalysisModule.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -17,6 +17,8 @@ var classHertzian1DLinear =
     [ "GetStress", "classHertzian1DLinear.html#acfcfa2b3afed6da1076b63f8864e89f9", null ],
     [ "GetTangentStiffness", "classHertzian1DLinear.html#ad295c11203bc10ad2adc7e4720357466", null ],
     [ "GetTotalStress", "classHertzian1DLinear.html#ac5fd83cf0c62c1cc890c9eab997db197", null ],
+    [ "InitialState", "classHertzian1DLinear.html#a6d73dd48a87b8ab632bca73cc288d180", null ],
+    [ "ReverseState", "classHertzian1DLinear.html#a007a81f51e5de887b48c587472363851", null ],
     [ "UpdateState", "classHertzian1DLinear.html#ab9ab5f6c9e8ee642ed8052f81b3e7a23", null ],
     [ "k1", "classHertzian1DLinear.html#af76ee45ce8060f5b8a0d47d4203aafaf", null ],
     [ "k2", "classHertzian1DLinear.html#ae53f37418ae1dc934b9ee331d02e7a3c", null ],

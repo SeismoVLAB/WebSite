@@ -4,8 +4,8 @@ var searchData=
   ['parse_5ffull',['parse_full',['../classRSJresource.html#a152b985ea8c3693f874952b084ac21db',1,'RSJresource']]],
   ['parseanalysis',['ParseAnalysis',['../Parser_8hpp.html#a4fd81c895529aafa86cafb4a2c28b517',1,'Parser.hpp']]],
   ['parsemesh',['ParseMesh',['../Parser_8hpp.html#a869703bd90a587fd17053df529d8b76a',1,'Parser.hpp']]],
-  ['performchanges',['PerformChanges',['../Parser_8hpp.html#ac2a33052c2cc2a13fbb45638abc43d53',1,'Parser.hpp']]],
   ['petscsolver',['PetscSolver',['../classPetscSolver.html#a0c403a238c86631d4593ea1a2a58f725',1,'PetscSolver']]],
+  ['plastic1dgap',['Plastic1DGap',['../classPlastic1DGap.html#a15226b85d4fff01dd1c499d9df7e405b',1,'Plastic1DGap']]],
   ['plastic1dj2',['Plastic1DJ2',['../classPlastic1DJ2.html#a40d9eaf4c6e6ab92ae688ccfaf8249f9',1,'Plastic1DJ2']]],
   ['plastic3dba',['Plastic3DBA',['../classPlastic3DBA.html#a8d8b8810c5826865acda7eafd0a4d4a8',1,'Plastic3DBA']]],
   ['plastic3dj2',['Plastic3DJ2',['../classPlastic3DJ2.html#a255a3d73d73aea983482fc3583017c43',1,'Plastic3DJ2']]],
@@ -17,6 +17,6 @@ var searchData=
   ['print',['print',['../classRSJresource.html#aed0a40393da143b9daf527f176f768dd',1,'RSJresource']]],
   ['printhelp',['printHelp',['../Utilities_8hpp.html#a0d20b69b0ad703df78459e1033d5c1d4',1,'Utilities.hpp']]],
   ['printlogo',['printLogo',['../Utilities_8hpp.html#ad4952f88b5d628ce55f78bb06d8dedaa',1,'Utilities.hpp']]],
-  ['printprogressbar',['PrintProgressBar',['../classAnalysis.html#a382ce76e7bcc232b91fb2c2bfd2f7179',1,'Analysis']]],
+  ['printprogress',['PrintProgress',['../classAnalysis.html#a7ee239b19a59ccf05eacee5ad79a832e',1,'Analysis']]],
   ['profiler',['Profiler',['../classProfiler.html#a675ebc9207b9aeace1d967c085abeacf',1,'Profiler']]]
 ];

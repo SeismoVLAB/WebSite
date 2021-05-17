@@ -18,6 +18,8 @@ var classLin2DAngle =
     [ "GetStress", "classLin2DAngle.html#a68dbc54692aa8207dce27bdb3648e822", null ],
     [ "GetStressAt", "classLin2DAngle.html#a79016555b04e6a1fc8f0315ed702bf0b", null ],
     [ "GetTangentStiffness", "classLin2DAngle.html#a28f3b906d253777dce60a19144e1248c", null ],
+    [ "InitialState", "classLin2DAngle.html#a521737b9d0713b5063d22028d0a13b5a", null ],
+    [ "ReverseState", "classLin2DAngle.html#a2f81991f6f929817ababd67f1b47c4d8", null ],
     [ "UpdateState", "classLin2DAngle.html#a1fdaff3b7a4286e6a93ae5d611f2e00b", null ],
     [ "b", "classLin2DAngle.html#af5ec615b9e020517257fae517567bb9d", null ],
     [ "h", "classLin2DAngle.html#ad030a7f1707c8e720644939d49353854", null ],

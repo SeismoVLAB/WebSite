@@ -3,6 +3,7 @@ var classSection =
     [ "Section", "classSection.html#a88c594fe9d7010a4552f200b6604fa76", null ],
     [ "~Section", "classSection.html#a0843b12fba72b9304e8096f17a2e47ec", null ],
     [ "CommitState", "classSection.html#ae4035c56d1a01296e8b789b37eb0097b", null ],
+    [ "ComputeLineLocalAxes", "classSection.html#a994193d694e2b9b6e6b87749f1c95892", null ],
     [ "CopySection", "classSection.html#a86bae2358dde4e523a2281a253015870", null ],
     [ "GetAreaRotationMatrix", "classSection.html#af2ddc5c5e0cf887f2946e94b5437c31b", null ],
     [ "GetDensity", "classSection.html#a8151f02324cc760d16119eea392c3b88", null ],
@@ -15,6 +16,9 @@ var classSection =
     [ "GetStress", "classSection.html#a4a8e01f27f69615882f7e6c188ba0980", null ],
     [ "GetStressAt", "classSection.html#ae767384094272d5c375e7b1390e18c35", null ],
     [ "GetTangentStiffness", "classSection.html#a8718a2f57dc5cc2d8040060888b99c3c", null ],
-    [ "UpdateState", "classSection.html#a4cb5c4b07c429d3c600fa1a337ff8bac", null ],
+    [ "InitialState", "classSection.html#a1043262927db3e0c57351b2988f0e53d", null ],
+    [ "InsertionPointCoordinates", "classSection.html#a10ffab57cb1ed7d30cf012da96b82dd0", null ],
+    [ "ReverseState", "classSection.html#a12330840ca18f4c56df809ec1dacaefc", null ],
+    [ "UpdateState", "classSection.html#ab415ce5eb3874147cac6910fa988e2b7", null ],
     [ "Name", "classSection.html#a89e71c24113fbbca93ed2a8fb082020f", null ]
 ];

@@ -102,7 +102,8 @@ $(document).ready(function(){initNavTree('linkPlasticPlaneStrainBA.html','');});
 <div class="title"><a class="el" href="classPlasticPlaneStrainBA.html" title="Class for creating a biaxial plastic bounding surface material for two-dimensional elements...">PlasticPlaneStrainBA</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classPlasticPlaneStrainBA.html" title="Class for creating a biaxial plastic bounding surface material for two-dimensional elements...">PlasticPlaneStrainBA</a> class creates a biaxial material class. The underlying model is a total stress bounding surface plasticity model with vanishing elastic region. The rate of the constitute equation has the form of:</p>
+<div class="textblock"><h1>Background</h1>
+<p>The <a class="el" href="classPlasticPlaneStrainBA.html" title="Class for creating a biaxial plastic bounding surface material for two-dimensional elements...">PlasticPlaneStrainBA</a> class creates a biaxial material class. The underlying model is a total stress bounding surface plasticity model with vanishing elastic region. The rate of the constitute equation has the form of:</p>
 <p class="formulaDsp">
 \[ \dot{\sigma} = K\text{tr}(\dot{\epsilon})\textbf{1} + 2\mu (1+\frac{3\mu}{H&#39;})^{-1}\dot{\epsilon}&#39; \nonumber \]
 </p>
@@ -122,8 +123,52 @@ $(document).ready(function(){initNavTree('linkPlasticPlaneStrainBA.html','');});
 <p class="formulaDsp">
 \[ \mathbb{C} = K\textbf{1}\otimes\textbf{1} + \psi \left(\textbf{I}-\frac{1}{3}\textbf{1}\otimes\textbf{1} \right) \nonumber \]
 </p>
-<p>where \(\psi\) is a positive scalar defined such that \(\Delta \sigma&#39; = \psi \Delta \epsilon&#39;\). </p><hr/>
-<p>A <a class="el" href="classPlasticPlaneStrainBA.html" title="Class for creating a biaxial plastic bounding surface material for two-dimensional elements...">PlasticPlaneStrainBA</a> material is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+<p>where \(\psi\) is a positive scalar defined such that \(\Delta \sigma&#39; = \psi \Delta \epsilon&#39;\).</p>
+<p><b>REFERENCE:</b></p><ul>
+<li>Ronaldo I. Borja and Alexander P. Amies, "Multiaxial Cyclic Plasticity Model for Clays", Journal of Geotechnical Engineering, Vol. 120, No. 6, June, 1994</li>
+</ul>
+<h1>Pre-Analysis</h1>
+<p>The python <a class="el" href="linkSoftwareStructure.html#linkPreProcess">Pre-Analysis</a> in the <span style="color:green"><b>01-Pre_Process/Method/Attach.py</b></span> file provides with an interface to populate the <code>Entities</code> dictionary. This file contains several functions to populate specific fields. For example, to create a <a class="el" href="classPlasticPlaneStrainBA.html" title="Class for creating a biaxial plastic bounding surface material for two-dimensional elements...">PlasticPlaneStrainBA</a> material using json format, use:</p>
+<ul>
+<li><p class="startli"><span style="color:blue"><b>addMaterial</b></span>(<b>tag</b>, <b>name</b>='<a class="el" href="classPlasticPlaneStrainBA.html" title="Class for creating a biaxial plastic bounding surface material for two-dimensional elements...">PlasticPlaneStrainBA</a>', <b>attributes</b>):</p><ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of this material, i.e., tag &gt; -1</li>
+<li><span style="color:green"><b>name</b></span> : Seismo-VLAB material class name</li>
+<li><span style="color:green"><b>attributes</b></span> : Specific properties for the created material, for example<ul>
+<li><span style="color:blue">'K'</span> : is the bulk’s modulus. <br />
+</li>
+<li><span style="color:blue">'G'</span> : is the elastic shear modulus. <br />
+</li>
+<li><span style="color:blue">'rho'</span> : is the material density. <br />
+</li>
+<li><span style="color:blue">'H0'</span> : is the hardening modulus. <br />
+</li>
+<li><span style="color:blue">'Su'</span> : is the Undrained soil strength. <br />
+</li>
+<li><span style="color:blue">'beta'</span> : is the Integration parameter or the Kinematic/Hardening ratio. <br />
+</li>
+<li><span style="color:blue">'h'</span> : the Exponential hardening modulus parameter. <br />
+</li>
+<li><span style="color:blue">'m'</span> : is the Exponential hardening modulus parameter.</li>
+</ul>
+</li>
+</ul>
+<p class="startli"><b>Example</b> </p><blockquote class="doxtable">
+<p>A <b>PLASTICPLANESTRAINBA</b> material can be defined using the python interface as follows:<br />
+SVL.addMaterial(<b>tag</b>=1, <b>name</b>='<a class="el" href="classPlasticPlaneStrainBA.html" title="Class for creating a biaxial plastic bounding surface material for two-dimensional elements...">PlasticPlaneStrainBA</a>', <b>attributes</b>={'K': 133.0, 'G': 80.0, 'h': 80, 'm': 1.5, 'Su': 50}) </p>
+</blockquote>
+<p class="startli"><b>Application</b><br />
+ Please refer to the <b>F04-DY_Lin_2DPointLoad_BAPStrain_Quad4.py</b> file located at <span style="color:green"><b>03-Validations/01-Debugging/</b></span> to see an example on how to define a <a class="el" href="classPlasticPlaneStrainBA.html" title="Class for creating a biaxial plastic bounding surface material for two-dimensional elements...">PlasticPlaneStrainBA</a> material.</p>
+</li>
+</ul>
+<p>On the contrary, the <span style="color:green"><b>01-Pre_Process/Method/Remove.py</b></span> file provides with an interface to depopulate the <code>Entities</code> dictionary. For example, to remove an already define <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>, use:</p><ul>
+<li><span style="color:blue"><b>delMaterial</b></span>(<b>tag</b>):<ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of the material to be removed, i.e., tag &gt; -1</li>
+</ul>
+</li>
+</ul>
+<h1>Run-Analysis</h1>
+<p>The C++ <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> in the <span style="color:green"><b>02-Run_Process/02-Materials/02-NonLinear/PlasticPlaneStrainBA.cpp</b></span> file provides the class implementation. A <a class="el" href="classPlasticPlaneStrainBA.html" title="Class for creating a biaxial plastic bounding surface material for two-dimensional elements...">PlasticPlaneStrainBA</a> material is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>. A <a class="el" href="classPlasticPlaneStrainBA.html" title="Class for creating a biaxial plastic bounding surface material for two-dimensional elements...">PlasticPlaneStrainBA</a> is defined inside the <span style="color:black"><b>"Materials"</b></span> json field indicating its <span style="color:blue"><b>"Tag"</b></span> as follows,</p><ul>
+<li><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
 {
     <span style="color:black"><b>"Materials"</b></span>: {
         <span style="color:blue"><b>"Tag"</b></span>: {
@@ -140,7 +185,7 @@ $(document).ready(function(){initNavTree('linkPlasticPlaneStrainBA.html','');});
         }
     }
 }
-</pre><table class="doxtable">
+</pre> <table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
@@ -160,24 +205,26 @@ $(document).ready(function(){initNavTree('linkPlasticPlaneStrainBA.html','');});
 <tr>
 <td><code>beta</code> </td><td>Integration parameter between 0.0 (explicit) and 1.0 (implicit). </td></tr>
 </table>
+<br />
 <dl class="section attention"><dt>Attention</dt><dd>This material can only be assigned to two-dimensional elements such as: <a class="el" href="classlin2DQuad4.html" title="Class for creating a 2D linearized four-node quadrilateral element in a mesh. ">lin2DQuad4</a>, <a class="el" href="classlin2DQuad8.html" title="Class for creating a 2D linearized eight-node quadrilateral element in a mesh. ">lin2DQuad8</a>, and <a class="el" href="classkin2DQuad4.html" title="Class for creating a 2D finite kinematic four-node quadrilateral element in a mesh. ">kin2DQuad4</a> elements. </dd>
 <dd>
 At each Gauss point of the elements in the plane strain problem, the strain tensor is given as: <p class="formulaDsp">
 \[ \epsilon = \begin{bmatrix} 0 &amp; \epsilon_{11} &amp; \epsilon_{22} &amp; 0 &amp; \epsilon_{12} &amp; 0\end{bmatrix} \nonumber \]
 </p>
  and only the corresponding components are stored for the stress and tangent stiffness tensors.</dd></dl>
-<h3>Example</h3>
-<blockquote class="doxtable">
-<p>A plane strain Borja-Amies material with bulk modulus 133, shear modulus 80, no density, exponential hardening h=80 and m=1.5, undrained soil strength 50, with integration parameter 0.5 is defined as: <br />
+<b>Example</b> <blockquote class="doxtable">
+<p>A <b>PLASTICPLANESTRAINBA</b> material with bulk modulus 133, shear modulus 80, no density, exponential hardening h=80 and m=1.5, undrained soil strength 50, with integration parameter 0.5 is defined as: <br />
 { "Materials": { "1": { "name" : "PLASTICPLANESTRAINBA", "attributes": { "K": 133.0, "G": 80.0, "rho": 0.0, "h": 80, "m": 1.5, "Su": 50, "beta": 0.5 } } } }</p>
 </blockquote>
+</li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

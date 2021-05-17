@@ -102,24 +102,58 @@ $(document).ready(function(){initNavTree('linkLoadCombination.html','');});
 <div class="title"><a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> class defines how a set of <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> objects are going to be combined for an specific analysis. A load combination is used in the <a class="el" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. ">Assembler</a> combining all prescribed <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> as</p>
+<div class="textblock"><h1>Background</h1>
+<p>The <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> class defines how a set of <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> objects are going to be combined for an specific analysis. A load combination is used in the <a class="el" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. ">Assembler</a> combining all prescribed <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> as</p>
 <p class="formulaDsp">
-\[ \mathbf{C}_{\textrm{loads}} = \sum_{\textrm{i}=1}^{\textrm{N}_\textrm{c}} \alpha_\textrm{i} \mathbf{L}_\textrm{i} \,, \nonumber \]
+\[ \mathbf{C}_{\textrm{loads}} = \sum_{\textrm{i}=1}^{\textrm{N}_\textrm{c}} \alpha_\textrm{i} \mathbf{L}_\textrm{i} \,, \]
 </p>
 <p>where \(\mathbf{L}_\textrm{i}\) are the <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> to be combined, and \(\alpha_\textrm{i}\) the combination factors.</p>
-<p>A <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+<p><b>REFERENCES:</b></p><ul>
+<li>SAP2000, "CSI Analysis Reference Manual", Chapter XVIII: <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> Cases, <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> Combinations (Combos), page 351.</li>
+</ul>
+<h1>Pre-Analysis</h1>
+<p>The python <span style="color:green"><b>01-Pre_Process/Method/Attach.py</b></span> file provides with an interface to populate the <code>Entities</code> dictionary. A <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> can be created using the <span style="color:blue"><b>addCombinationCase()</b></span> function. This function will transform the provided information into json format to be parse in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a>.</p>
+<ul>
+<li><p class="startli"><span style="color:blue"><b>addCombinationCase</b></span>(<b>tag</b>, <b>name</b>, <b>attributes</b>):</p><ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of this combination, i.e., tag &gt; -1</li>
+<li><span style="color:green"><b>name</b></span> : The combination case name</li>
+<li><span style="color:green"><b>attributes</b></span> : Specific properties for the created combination, for example<ul>
+<li><span style="color:blue">'folder'</span> : Name of the folder to store solution</li>
+<li><span style="color:blue">'load'</span> : <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> identifiers to be combined</li>
+<li><span style="color:blue">'factor'</span> : Combinational factors</li>
+</ul>
+</li>
+</ul>
+<p class="startli"><b>Example</b> </p><blockquote class="doxtable">
+<p>A <b>LOAD COMBINATION</b> can be defined using the python interface as follows:<br />
+SVL.addCombinationCase(tag=1, name='SoilColumn', attributes={'load': [1, 2, 3, 4], 'factor': [1.0, 1.0, 1.0, 1.0]}) </p>
+</blockquote>
+<p class="startli"><b>Application</b><br />
+ Please refer to any Debugging example located at <span style="color:green"><b>03-Validations/01-Debugging/</b></span> to see an example on how to define <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> using the <span style="color:blue"><b>addCombinationCase</b></span> function.</p>
+</li>
+</ul>
+<p>On the contrary, the <span style="color:green"><b>01-Pre_Process/Method/Remove.py</b></span> file provides with an interface to depopulate the <code>Entities</code> dictionary. For example, to remove an already define load combination, use:</p><ul>
+<li><span style="color:blue"><b>delCombinationCase</b></span>(<b>tag</b>):<ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of the load combination to be removed, i.e., tag &gt; -1</li>
+</ul>
+</li>
+</ul>
+<h1>Run-Analysis</h1>
+<p>The C++ <span style="color:green"><b>02-Run_Process/05-Loads/LoadCombo.cpp</b></span> file provides with the <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> class implementation. A <a class="el" href="linkLoadCombination.html">LoadCombo</a> is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>. A LoadCombination is defined inside the <span style="color:black"><b>"Combinations"</b></span> json field indicating its <span style="color:blue"><b>"Tag"</b></span> as follows,</p><ul>
+<li><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
 {
     <span style="color:black"><b>"Combinations"</b></span>: {
         <span style="color:blue"><b>"Tag"</b></span>: {
             <span style="color:green"><b>"name"</b></span> : str,
             <span style="color:green"><b>"attributes"</b></span>: {
+                <span style="color:maroon"><b>"folder"</b></span> : str,
                 <span style="color:maroon"><b>"load"</b></span> : [ ],
                 <span style="color:maroon"><b>"factor"</b></span> : [ ]
             }
         }
     }
 }
-</pre><table class="doxtable">
+</pre> <table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
@@ -127,27 +161,31 @@ $(document).ready(function(){initNavTree('linkLoadCombination.html','');});
 <tr>
 <td><code>name</code> </td><td>Name of the load combination. </td></tr>
 <tr>
+<td><code>folder</code> </td><td>The name of the folder where results will be stored. </td></tr>
+<tr>
 <td><code>load</code> </td><td>The <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> object identifiers. </td></tr>
 <tr>
 <td><code>factor</code></td><td>The combination factor for the <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> objects. </td></tr>
 </table>
+<br />
 <dl class="section attention"><dt>Attention</dt><dd>The  <code>name</code> is used to generate a folder where the solutions are going to be stored. </dd>
 <dd>
 If no <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> is specified in the model, i.e., no loads are present in the mesh (or mesh partition), then neither <code>load</code> nor <code>factor</code> must be provided.</dd></dl>
-<h3>Example</h3>
-<blockquote class="doxtable">
-<p>A partition without loads, thus without load combination, is prescribed as: <br />
+<b>Example</b> <blockquote class="doxtable">
+<p>A partition without loads, thus without <b>LOAD COMBINATION</b>, is prescribed as: <br />
  { "Combinations": { "1": { "name" : "Earthquake", "attributes": { } } } }</p>
-<p>An earthquake load combination of the form \(C = 1.0\, L_1 + 1.2\,L_2 - 0.9\,L_5\): <br />
- { "Combinations": { "1": { "name" : "Earthquake", "attributes": { "load" : [1,2,5], "factor" : [1.0,1.2,-0.9 ] } } } }</p>
+<p>An earthquake <b>LOAD COMBINATION</b> of the form \(C = 1.0\, L_1 + 1.2\,L_2 - 0.9\,L_5\): <br />
+ { "Combinations": { "1": { "name" : "Earthquake", "attributes": { "load" : [1,2,5], "factor" : [1.0,1.2,-0.9 ] } } } } </p>
 </blockquote>
+</li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -26,6 +26,8 @@ var classlin3DTruss2 =
     [ "GetStressAt", "classlin3DTruss2.html#ace43fe30c6affc95099d6c43ad22e83a", null ],
     [ "GetTotalDegreeOfFreedom", "classlin3DTruss2.html#adc5309e5974f78c46c86982f5e49021b", null ],
     [ "GetVTKResponse", "classlin3DTruss2.html#a254fb71b2b1558e2887ce2587800feb2", null ],
+    [ "InitialState", "classlin3DTruss2.html#a89cf8fe832199d84fe3f92d728e0861d", null ],
+    [ "ReverseState", "classlin3DTruss2.html#a440d6f2b2ee102f31627f03bc07951e4", null ],
     [ "SetDamping", "classlin3DTruss2.html#abd4f58ad376bc69bb2c5ef312a9cfcf5", null ],
     [ "SetDomain", "classlin3DTruss2.html#a075d078a5e43e99d61497ee9347acc47", null ],
     [ "UpdateState", "classlin3DTruss2.html#aad2df323f14b06f22dc08328478ad0ae", null ],

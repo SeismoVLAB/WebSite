@@ -17,6 +17,8 @@ var classLin2DTee =
     [ "GetStress", "classLin2DTee.html#acda35ba1768c9d6abd3dfae4a8ab2d97", null ],
     [ "GetStressAt", "classLin2DTee.html#a7fc6b572598cc87fdb2db286138bde39", null ],
     [ "GetTangentStiffness", "classLin2DTee.html#aff1defc0a07b219cc23b0752dac9f3ae", null ],
+    [ "InitialState", "classLin2DTee.html#a4d412e246caaee8ab957498d70e4edb9", null ],
+    [ "ReverseState", "classLin2DTee.html#ad5e95f09ff94c545bca58bd1f71c3c21", null ],
     [ "UpdateState", "classLin2DTee.html#a6ef02e4d0e1e7f3b92ebbcd6e85b2c6a", null ],
     [ "b", "classLin2DTee.html#a3f1bd1be440f612e305b4078a3b61b6a", null ],
     [ "h", "classLin2DTee.html#a21a7d9536f28127c26506be443ace3a9", null ],

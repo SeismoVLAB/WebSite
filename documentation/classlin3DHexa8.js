@@ -26,6 +26,8 @@ var classlin3DHexa8 =
     [ "GetStressAt", "classlin3DHexa8.html#aeb05f11fc034fd3ed01e188ba53bc7ff", null ],
     [ "GetTotalDegreeOfFreedom", "classlin3DHexa8.html#a182bf6376e0eedc5c4e069f0ffa2047d", null ],
     [ "GetVTKResponse", "classlin3DHexa8.html#a9d6080de8bc32215a2cf854dc2347be4", null ],
+    [ "InitialState", "classlin3DHexa8.html#adc78b97d8d85d9e3e4a228701477f18f", null ],
+    [ "ReverseState", "classlin3DHexa8.html#ae14574c339ee11085b3abd0be0a4f297", null ],
     [ "SetDamping", "classlin3DHexa8.html#afdd993eddc1ccf664b56f259337beb15", null ],
     [ "SetDomain", "classlin3DHexa8.html#a012dccf9a94cb99f0bf7d3bcc9d81577", null ],
     [ "UpdateState", "classlin3DHexa8.html#a58f3865b8996c6ba07547c1bbd1bbc41", null ],

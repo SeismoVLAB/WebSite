@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linkElement.html','');});
 <div class="title"><a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> class defines an element in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>. This objects provides member functions to compute the mass, damping, and stiffness matrices as well as the internal force vector in global coordinates. The implementation of each element is provided in each derived-class. The name of each element derived-class has the following structure:</p>
+<div class="textblock"><p>The implementation of each element is provided in each derived-class. The name of each element derived-class has the following structure:</p>
 <div class="image">
 <img src="../style/filecpp.png" width="32" height="42.5" style="float:left"/>
 </div>
@@ -120,13 +120,35 @@ $(document).ready(function(){initNavTree('linkElement.html','');});
 <tr>
 <td>nNodes </td><td>The number of nodes that conforms the element. </td></tr>
 </table>
-<p>The follwing are elements available in <b>SVL</b>:</p>
+<p>The <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> class defines an element in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>. The <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> class is designed to:</p><ul>
+<li>Have an internal structure suitable for linear and nonlinear behavior.</li>
+<li>Provide with functionalities that allow to construct mass, damping, and stiffness matrices as well as force vector.</li>
+</ul>
+<p>The main member function in <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> are:</p><ul>
+<li><a class="el" href="classElement.html#ae3707c66dc2119715065f74e169552e7" title="Save the material/section states in the element. ">Element::CommitState()</a><br />
+ This function sets the trial stated as converged ones in <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> or <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a>.</li>
+<li><a class="el" href="classElement.html#a0a95bf73cb5f414a3f551a02557a13df" title="Update the material/section states in the element. ">Element::UpdateState()</a><br />
+ This function updates the <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> and <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> states.</li>
+</ul>
+<p>Each derived class are provided with the member function:</p><ul>
+<li><a class="el" href="classElement.html#aca10062cfee57ae5270744e504e28045" title="Compute the lumped/consistent mass matrix of the element or close form solutions. ...">Element::ComputeMassMatrix()</a><br />
+ This function compute the lumped/consistent mass matrix of the element.</li>
+<li><a class="el" href="classElement.html#a7a3de7d3765b7f1a690c9ad68e5914ad" title="Compute the stiffness matrix of the element using gauss-integration or close form solutions...">Element::ComputeStiffnessMatrix()</a><br />
+ This function compute the stiffness matrix of the element using gauss-integration or close form solutions.</li>
+<li><a class="el" href="classElement.html#a44fd58f936c3e2452798f351b6fb896d" title="Compute the internal forces acting on the element. ">Element::ComputeInternalForces()</a><br />
+ This function compute the internal vector forces acting on the element.</li>
+</ul>
+<p>The following are element derived classes available in <b>SVL</b>:</p>
 <ul>
 <li><a class="el" href="linkZeroLength1D.html">ZeroLength1D</a><br />
 </li>
 <li><a class="el" href="linkUnxBoucWen2DLink.html">UnxBoucWen2DLink</a><br />
 </li>
+<li><a class="el" href="linkUnxBoucWen3DLink.html">UnxBoucWen3DLink</a><br />
+</li>
 <li><a class="el" href="linkHDRBYamamoto2DLink.html">HDRBYamamoto2DLink</a><br />
+</li>
+<li><a class="el" href="linkHDRBYamamoto3DLink.html">HDRBYamamoto3DLink</a><br />
 </li>
 <li><a class="el" href="linklin2DTruss2.html">lin2DTruss2</a><br />
 </li>
@@ -134,19 +156,29 @@ $(document).ready(function(){initNavTree('linkElement.html','');});
 </li>
 <li><a class="el" href="linklin2DTruss3.html">lin2DTruss3</a><br />
 </li>
+<li><a class="el" href="linklin3DTruss2.html">lin3DTruss2</a><br />
+</li>
+<li><a class="el" href="linkkin3DTruss2.html">kin3DTruss2</a><br />
+</li>
+<li><a class="el" href="linklin3DTruss3.html">lin3DTruss3</a><br />
+</li>
 <li><a class="el" href="linklin2DFrame2.html">lin2DFrame2</a><br />
+</li>
+<li><a class="el" href="linkkin2DFrame2.html">kin2DFrame2</a><br />
+</li>
+<li><a class="el" href="linklin3DFrame2.html">lin3DFrame2</a><br />
 </li>
 <li><a class="el" href="linknull2DFrame2.html">null2DFrame2</a><br />
 </li>
-<li><a class="el" href="linkkin2DFrame2.html">kin2DFrame2</a><br />
+<li><a class="el" href="linknull3DFrame2.html">null3DFrame2</a><br />
+</li>
+<li><a class="el" href="linklin2DTria3.html">lin2DTria3</a><br />
+</li>
+<li><a class="el" href="linkkin2DTria6.html">lin2DTria6</a><br />
 </li>
 <li><a class="el" href="linklin2DQuad4.html">lin2DQuad4</a><br />
 </li>
 <li><a class="el" href="linkkin2DQuad4.html">kin2DQuad4</a><br />
-</li>
-<li><a class="el" href="linkEQlin2DQuad4.html">EQlin2DQuad4</a><br />
-</li>
-<li><a class="el" href="linkTIEQlin2DQuad4.html">TIEQlin2DQuad4</a><br />
 </li>
 <li><a class="el" href="linklin2DQuad8.html">lin2DQuad8</a><br />
 </li>
@@ -154,21 +186,15 @@ $(document).ready(function(){initNavTree('linkElement.html','');});
 </li>
 <li><a class="el" href="linkPML2DQuad8.html">PML2DQuad8</a><br />
 </li>
-<li><a class="el" href="linkUnxBoucWen3DLink.html">UnxBoucWen3DLink</a><br />
+<li><a class="el" href="linkEQlin2DQuad4.html">EQlin2DQuad4</a><br />
 </li>
-<li><a class="el" href="linkHDRBYamamoto3DLink.html">HDRBYamamoto3DLink</a><br />
-</li>
-<li><a class="el" href="linklin3DTruss2.html">lin3DTruss2</a><br />
-</li>
-<li><a class="el" href="linkkin3DTruss2.html">kin3DTruss2</a><br />
-</li>
-<li><a class="el" href="linklin3DTruss3.html">lin3DTruss3</a><br />
-</li>
-<li><a class="el" href="linklin3DFrame2.html">lin3DFrame2</a><br />
-</li>
-<li><a class="el" href="linknull3DFrame2.html">null3DFrame2</a><br />
+<li><a class="el" href="linkTIEQlin2DQuad4.html">TIEQlin2DQuad4</a><br />
 </li>
 <li><a class="el" href="linklin3DShell4.html">lin3DShell4</a><br />
+</li>
+<li><a class="el" href="linklin3DTetra4.html">lin3DTetra4</a><br />
+</li>
+<li><a class="el" href="linklin3DTetra10.html">lin3DTetra10</a><br />
 </li>
 <li><a class="el" href="linklin3DHexa8.html">lin3DHexa8</a><br />
 </li>
@@ -178,15 +204,16 @@ $(document).ready(function(){initNavTree('linkElement.html','');});
 </li>
 <li><a class="el" href="linkElementLocalAxis.html">Element Local Axes</a><br />
 </li>
-<li><a class="el" href="linkQuadratureRule.html">Quadrature Rule</a> </li>
+<li><a class="el" href="linkQuadratureRule.html">Quadrature Rule</a></li>
 </ul>
+<dl class="section attention"><dt>Attention</dt><dd>Not all the listed elements have been verified. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -2,9 +2,9 @@ var classAlgorithm =
 [
     [ "Algorithm", "classAlgorithm.html#aed8fbb2c95c9981be09b23904fa0305b", null ],
     [ "~Algorithm", "classAlgorithm.html#ad9f2d3cf714050f89095d552fff3400e", null ],
-    [ "ComputeConvergence", "classAlgorithm.html#a12548a35e3474440ebf9272403eed7bc", null ],
+    [ "ComputeConvergence", "classAlgorithm.html#aba5bc684210145a4119138f7448277aa", null ],
     [ "ComputeNewIncrement", "classAlgorithm.html#ac0e4aa7482e95e0a4b7f00bc8f2ae381", null ],
-    [ "GetDisplacementIncrement", "classAlgorithm.html#a65d545e5c442ed3c4339d9b50e930f7e", null ],
+    [ "GetDisplacementIncrement", "classAlgorithm.html#a6a8fdbb56ea1ea0bc47a7706c71b5386", null ],
     [ "ReducedParallelResidual", "classAlgorithm.html#af091b4ced43a2075685840e3ec415782", null ],
     [ "SetIntegrator", "classAlgorithm.html#a8207f5036233c08d84c4df161983ed84", null ],
     [ "SetLoadFactor", "classAlgorithm.html#a69a9e4b74419ad01f06127540e6bf4ec", null ],

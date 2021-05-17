@@ -113,13 +113,14 @@ $(document).ready(function(){initNavTree('classLinearSystem.html','');});
 <div class="dynheader">
 Inheritance diagram for LinearSystem:</div>
 <div class="dyncontent">
-<div class="center"><img src="classLinearSystem__inherit__graph.png" border="0" usemap="#LinearSystem_inherit__map" alt="Inheritance graph"/></div>
-<map name="LinearSystem_inherit__map" id="LinearSystem_inherit__map">
-<area shape="rect" id="node2" href="classEigenSolver.html" title="Class for solving a linear system using a Cholesky&#45;decomposition on the effective stiffness matrix..." alt="" coords="5,80,97,107"/>
-<area shape="rect" id="node3" href="classMumpsSolver.html" title="Class for solving a linear system using the (MU)ltifrontal (M)assively (P)arallel (S)parse direct Sol..." alt="" coords="121,80,224,107"/>
-<area shape="rect" id="node4" href="classPetscSolver.html" title="Class for solving a linear system using an iterative solver assuming the matrix can be symmetric posi..." alt="" coords="249,80,342,107"/>
+ <div class="center">
+  <img src="classLinearSystem.png" usemap="#LinearSystem_map" alt=""/>
+  <map id="LinearSystem_map" name="LinearSystem_map">
+<area href="classEigenSolver.html" title="Class for solving a linear system using a Cholesky-decomposition on the effective stiffness matrix..." alt="EigenSolver" shape="rect" coords="0,56,89,80"/>
+<area href="classMumpsSolver.html" title="Class for solving a linear system using the (MU)ltifrontal (M)assively (P)arallel (S)parse direct Sol..." alt="MumpsSolver" shape="rect" coords="99,56,188,80"/>
+<area href="classPetscSolver.html" title="Class for solving a linear system using an iterative solver assuming the matrix can be symmetric posi..." alt="PetscSolver" shape="rect" coords="198,56,287,80"/>
 </map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -129,9 +130,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aadad602df8c07f30aa60a2cbb458ab53"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinearSystem.html#aadad602df8c07f30aa60a2cbb458ab53">~LinearSystem</a> ()=0</td></tr>
 <tr class="memdesc:aadad602df8c07f30aa60a2cbb458ab53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a> object.  <a href="#aadad602df8c07f30aa60a2cbb458ab53">More...</a><br /></td></tr>
 <tr class="separator:aadad602df8c07f30aa60a2cbb458ab53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44215bbf76e7a830613be7a36126342e"><td class="memItemLeft" align="right" valign="top">virtual Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinearSystem.html#a44215bbf76e7a830613be7a36126342e">GetSolution</a> ()=0</td></tr>
-<tr class="memdesc:a44215bbf76e7a830613be7a36126342e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the solution vector.  <a href="#a44215bbf76e7a830613be7a36126342e">More...</a><br /></td></tr>
-<tr class="separator:a44215bbf76e7a830613be7a36126342e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8db3254b92b27d099ab00a61738e88c0"><td class="memItemLeft" align="right" valign="top">virtual Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinearSystem.html#a8db3254b92b27d099ab00a61738e88c0">GetSolution</a> ()=0</td></tr>
+<tr class="memdesc:a8db3254b92b27d099ab00a61738e88c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the solution vector.  <a href="#a8db3254b92b27d099ab00a61738e88c0">More...</a><br /></td></tr>
+<tr class="separator:a8db3254b92b27d099ab00a61738e88c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a681e592abd26b51d1f01c90133ba319f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinearSystem.html#a681e592abd26b51d1f01c90133ba319f">SolveSystem</a> (Eigen::SparseMatrix&lt; double &gt; &amp;A, Eigen::VectorXd &amp;b)=0</td></tr>
 <tr class="memdesc:a681e592abd26b51d1f01c90133ba319f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the linear system.  <a href="#a681e592abd26b51d1f01c90133ba319f">More...</a><br /></td></tr>
 <tr class="separator:a681e592abd26b51d1f01c90133ba319f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,8 +188,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a44215bbf76e7a830613be7a36126342e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44215bbf76e7a830613be7a36126342e">&#9670;&nbsp;</a></span>GetSolution()</h2>
+<a id="a8db3254b92b27d099ab00a61738e88c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8db3254b92b27d099ab00a61738e88c0">&#9670;&nbsp;</a></span>GetSolution()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,7 +198,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual Eigen::VectorXd LinearSystem::GetSolution </td>
+          <td class="memname">virtual Eigen::VectorXd&amp; LinearSystem::GetSolution </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -213,7 +214,7 @@ Public Member Functions</h2></td></tr>
 <p>Gets the solution vector. </p>
 <dl class="section return"><dt>Returns</dt><dd>The solution vector. </dd></dl>
 
-<p>Implemented in <a class="el" href="classPetscSolver.html#a02bff58c74774ef51b00c232f10b7c2f">PetscSolver</a>, <a class="el" href="classMumpsSolver.html#a76e289c56bcf3c48ddd7438280faccf8">MumpsSolver</a>, and <a class="el" href="classEigenSolver.html#a39bb51d3d42fdb4b1b25e2483edbcf86">EigenSolver</a>.</p>
+<p>Implemented in <a class="el" href="classPetscSolver.html#a1e115a5693c6df65deb2dafb21b3394d">PetscSolver</a>, <a class="el" href="classMumpsSolver.html#ae7d0ad6bff0b48813e6d09871c098fe6">MumpsSolver</a>, and <a class="el" href="classEigenSolver.html#af42fabe00a5c39c688d72c335b709fd3">EigenSolver</a>.</p>
 
 </div>
 </div>
@@ -260,7 +261,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether or not the system was successfully solved. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force assiciated to the integrator. ">Integrator::ComputeEffectiveForce()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness assiciated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force associated to the integrator. ">Integrator::ComputeEffectiveForce()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness associated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
 
 <p>Implemented in <a class="el" href="classPetscSolver.html#a375bf8231f1b5f7a4fc8e358ecc6bad7">PetscSolver</a>, <a class="el" href="classMumpsSolver.html#a26184ee3727fc1c9103b254eb2cde75f">MumpsSolver</a>, and <a class="el" href="classEigenSolver.html#a76baad00c42b23c04f1a907af6e25fe1">EigenSolver</a>.</p>
 
@@ -273,7 +274,7 @@ Public Member Functions</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classLinearSystem.html">LinearSystem</a></li>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

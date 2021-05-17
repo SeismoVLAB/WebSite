@@ -102,25 +102,47 @@ $(document).ready(function(){initNavTree('linkReaction.html','');});
 <div class="title">Reaction </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="el" href="linkReaction.html">Reaction</a> are forces that are developed at the fixed (restrained) <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>. Figure bellow shown schematically in blue arrows the external forces excerted on the model, while the red arrows represents the reactions forces.</p>
+<div class="textblock"><h1>Background</h1>
+<p><a class="el" href="linkReaction.html">Reaction</a> are forces that are developed at the fixed (restrained) <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>. Figure below shown schematically in blue arrows the external forces exserted on the model, while the red arrows represents the reactions forces.</p>
 <div class="image">
 <img src="Reactions.png" alt="Reactions.png" width="30%"/>
 </div>
-<p>Once the <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a> is done, and the state vectors (displacements, velocities, and accelerations) are known, the <b>REACTION</b> can be computed assembling all force contribution in the model as follows:</p>
-<p class="formulaDsp">
+<p>The <a class="el" href="linkReaction.html">Reaction</a> are computed once the solution has converged. Depending on the type of analysis the reaction are computed at</p>
+<ul>
+<li><a class="el" href="classStaticAnalysis.html#ae04f3aa664cb77dab3cc673a7e9678c4" title="Performs changes in mesh. ">StaticAnalysis::UpdateDomain()</a><br />
+ Compute the reaction forces considering internal and external forces. This process is performed independently in ech processor.</li>
+<li><a class="el" href="classDynamicAnalysis.html#a50a3136b7f436c6381fed4c95274a562" title="Performs changes in mesh. ">DynamicAnalysis::UpdateDomain()</a><br />
+ Compute the reaction forces considering inertial, viscous, internal and external forces. This process is performed independently in ech processor as well.</li>
+</ul>
+<p>In order to guarantee continuity in the solution, if parallel processor are used, the <a class="el" href="linkReaction.html">Reaction</a> are collected using:</p><ul>
+<li><a class="el" href="classAnalysis.html#a9842ce8c4990b55717f6d87d534be669" title="Construct the reaction vector force from each processor. ">Analysis::ReducedParallelReaction()</a><br />
+ This function adds the reaction vector across processor and distribute the solution.</li>
+</ul>
+<p>Once the <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a> is done, and the state vectors (displacements, velocities, and accelerations) are known, the <a class="el" href="linkReaction.html">Reaction</a> can be computed assembling all force contribution in the model. The process depend on the <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a>, thus:</p>
+<ul>
+<li>For <a class="el" href="classStaticAnalysis.html" title="Class for creating an static analysis and updating the states variables in mesh. ">StaticAnalysis</a> <p class="formulaDsp">
+\[ \mathcal{R} = \sum_\textrm{e = 1}^{\textrm{N}_\textrm{e}} {\mathbf{A}^\textrm{e}}^\top \mathbf{F}^\textrm{e}_{\textrm{int}} \mathbf{A}^\textrm{e} - \mathbf{F}_{\textrm{ext}}\,. \]
+</p>
+</li>
+<li>For <a class="el" href="classDynamicAnalysis.html" title="Class for creating a dynamic analysis and updating the states variables in mesh. ">DynamicAnalysis</a> <p class="formulaDsp">
 \[ \mathcal{R} = \sum_\textrm{n = 1}^{\textrm{N}_\textrm{n}} {\mathbf{A}^\textrm{n}}^\top \textbf{M}^\textrm{n} \ddot{\textrm{U}}^\textrm{n} \mathbf{A}^\textrm{n} + \sum_\textrm{e = 1}^{\textrm{N}_\textrm{e}} {\mathbf{A}^\textrm{e}}^\top \left( \textbf{M}^\textrm{e} \ddot{\textrm{U}}^\textrm{e} + \textbf{C}^\textrm{e} \dot{\textrm{U}}^\textrm{e} + \mathbf{F}^\textrm{e}_{\textrm{int}} \right) \mathbf{A}^\textrm{e} - \mathbf{F}_{\textrm{ext}}\,, \]
 </p>
+</li>
+</ul>
 <p>where \(\mathbf{A}^\textrm{n} : \mathbb{R}^{\textrm{N}_\textrm{dof}^\textrm{n}} \to \mathbb{R}^{\textrm{N}_{\textrm{total}}}\) is the nodal assembly operator, \(\mathbf{A}^\textrm{e} : \mathbb{R}^{\textrm{N}_\textrm{dof}^\textrm{e}} \to \mathbb{R}^{\textrm{N}_{\textrm{total}}}\) is the element assembly operator, \(\mathbf{M}^\textrm{e}, \mathbf{C}^\textrm{e}, \mathbf{K}^\textrm{e}\) are the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> mass, damping, and stiffness respectively, \(\mathbf{M}^\textrm{n}\) is the point masses applied to the <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>, \(\mathbf{F}_{\textrm{ext}}\) the vector of external forces, \(\mathbf{F}^\textrm{e}_{\textrm{int}}\) the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> internal forces, and \(\textrm{N}_\textrm{n}\) are the number of <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> in the model, and \(\textrm{N}_\textrm{e}\) the number of <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> in the model.</p>
 <dl class="section attention"><dt>Attention</dt><dd>The vector \(\mathcal{R}\) only has non-zero values where there is fixed support. </dd>
 <dd>
-By construction, this gives the total reaction forces developed at the supports. </dd></dl>
+By construction, this gives the total reaction forces developed at the supports.</dd></dl>
+<p><b>REFERENCE:</b></p><ul>
+<li>Bathe K. Jurgen, "Finite Element Procedures", Chapter 4: pages 187-188, Prentice-Hall, 1996. </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

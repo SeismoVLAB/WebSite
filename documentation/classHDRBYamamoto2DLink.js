@@ -23,6 +23,8 @@ var classHDRBYamamoto2DLink =
     [ "GetStressAt", "classHDRBYamamoto2DLink.html#ab7f019f0826e2242aaa4d1e35da54dcf", null ],
     [ "GetTotalDegreeOfFreedom", "classHDRBYamamoto2DLink.html#ab2c19b68db2cf3fc9f90f2fa018b3aac", null ],
     [ "GetVTKResponse", "classHDRBYamamoto2DLink.html#adeb27f5daad8362cb954fc8a3e2720f0", null ],
+    [ "InitialState", "classHDRBYamamoto2DLink.html#a3972288c81930369efdaf3a78f75890e", null ],
+    [ "ReverseState", "classHDRBYamamoto2DLink.html#a1551727a548e148deb6afcc8f8a0c0bb", null ],
     [ "SetDamping", "classHDRBYamamoto2DLink.html#a885516d97984623ddacae66d7f7f75e4", null ],
     [ "SetDomain", "classHDRBYamamoto2DLink.html#a2f59bb85c36c31b4b3b98ade41e2d721", null ],
     [ "UpdateState", "classHDRBYamamoto2DLink.html#a92095f3268403eb9adae15928f6dacf3", null ],

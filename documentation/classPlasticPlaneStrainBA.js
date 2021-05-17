@@ -26,6 +26,8 @@ var classPlasticPlaneStrainBA =
     [ "GetStress", "classPlasticPlaneStrainBA.html#a529c833b51fe82254800686c3c6e9cb8", null ],
     [ "GetTangentStiffness", "classPlasticPlaneStrainBA.html#a5721b5ea8c1273e7a485ae173965ee21", null ],
     [ "GetTotalStress", "classPlasticPlaneStrainBA.html#ae55972a828046a331451e37647e0c646", null ],
+    [ "InitialState", "classPlasticPlaneStrainBA.html#ae72f4444cba95f509f1bfbd9684b852a", null ],
+    [ "ReverseState", "classPlasticPlaneStrainBA.html#aa8e3f98e09a3ca0f071d2ded243faa3c", null ],
     [ "UpdateState", "classPlasticPlaneStrainBA.html#a2398e486f792c1391fddcb2a32c7ccac", null ],
     [ "beta", "classPlasticPlaneStrainBA.html#ab4a38200a85afaf459756630078937f3", null ],
     [ "DeviatoricStress0", "classPlasticPlaneStrainBA.html#aa4f9a0e12b9e32dc0c6a28daa4b8bd05", null ],

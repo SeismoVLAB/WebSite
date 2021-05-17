@@ -17,6 +17,8 @@ var classLin2DChannel =
     [ "GetStress", "classLin2DChannel.html#a1fb37946a69256032926c1e36923cd1d", null ],
     [ "GetStressAt", "classLin2DChannel.html#a721d0e8e893aeb442a2e637c13da641d", null ],
     [ "GetTangentStiffness", "classLin2DChannel.html#a135be475bf0fc6ec3e047e1203953eb4", null ],
+    [ "InitialState", "classLin2DChannel.html#a9f9944e5a63fff5e68ec4d652b2fd0ee", null ],
+    [ "ReverseState", "classLin2DChannel.html#a895e1ed9c335825d4ab792124239f873", null ],
     [ "UpdateState", "classLin2DChannel.html#a2451caa5bf4f984d27b0405087650990", null ],
     [ "b", "classLin2DChannel.html#a4182129acc08eb63ae6c04b97da71eb8", null ],
     [ "h", "classLin2DChannel.html#ae3a257a65cb416641f9bfc5c611b2c7f", null ],

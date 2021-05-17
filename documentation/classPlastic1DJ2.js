@@ -17,6 +17,8 @@ var classPlastic1DJ2 =
     [ "GetStress", "classPlastic1DJ2.html#a001dfc6f6169df83d1f4fa3c10de7107", null ],
     [ "GetTangentStiffness", "classPlastic1DJ2.html#a0ddde2f78cca082b7e4cb5383d75da41", null ],
     [ "GetTotalStress", "classPlastic1DJ2.html#aeb3dd86c71c7dccd1385efcf887713f4", null ],
+    [ "InitialState", "classPlastic1DJ2.html#a9cf7ad2722e32a0019fb292919fb08ce", null ],
+    [ "ReverseState", "classPlastic1DJ2.html#ad1b9115f5aca642d493a702a50cdb1b6", null ],
     [ "UpdateState", "classPlastic1DJ2.html#ae29226da1b75081dc57fa2948435f86e", null ],
     [ "alpha", "classPlastic1DJ2.html#a2c3b0b97ba0c760ec9c09d064bc15e30", null ],
     [ "BackStress", "classPlastic1DJ2.html#a78b84e44d2b6e529b8427edfdd13030f", null ],

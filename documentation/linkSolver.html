@@ -102,23 +102,33 @@ $(document).ready(function(){initNavTree('linkSolver.html','');});
 <div class="title"><a class="el" href="classLinear.html" title="Class for solving a linear system in just one-step; therefore, no-iteration or convergence test is pe...">Linear</a> System </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a> class creates an abstract object that solves the system of equations provided with \(\textbf{K}_{\textrm{eff}}\), and \(\textrm{F}_{\textrm{eff}}\) that comes from the <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic snalysis between two steps is going to be performed...">Integrator</a>. This abstract class control if a direct/iterative method of solution will be employed for solving the linear system.</p>
-<p>The available solvers in Seismo-VLAB are:</p>
+<div class="textblock"><p>The <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a> class creates an abstract object that solves a system of equations. The analysis class is designed to:</p><ul>
+<li>Be simple to be interfaced with external solvers</li>
+<li>Provide with \(\textbf{K}_{\textrm{eff}}\), and \(\textrm{F}_{\textrm{eff}}\) that comes from the <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a>.</li>
+</ul>
+<p>The main member function in <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a> are:</p><ul>
+<li><a class="el" href="classLinearSystem.html#a8db3254b92b27d099ab00a61738e88c0" title="Gets the solution vector. ">LinearSystem::GetSolution()</a> <br />
+ This function returns the incremental displacement solution.</li>
+<li><a class="el" href="classLinearSystem.html#a681e592abd26b51d1f01c90133ba319f" title="Solve the linear system. ">LinearSystem::SolveSystem()</a> <br />
+ This function solves the linear systems</li>
+</ul>
+<p>This abstract class control if a direct/iterative method of solution will be employed for solving the linear system. As a rule of thumb, <b>Direct Solvers</b> are recommended for small to medium size model ( \(\leq 500 000\) degree-of-freedom) using parallel computing. These solvers work even better if the Cholesky decomposition is computed once, situation that occurs in linear problems, while <b>Iterative Solvers</b> such as Conjugate Gradient will be available in future. Iterative solvers are recommended for large problems ( \(\gg 500 000\) degree-of-freedom) using parallel computing. These solvers trade accuracy for speed, thus for nonlinear problem the tolerance must be small. More information regarding the derived solver classes can be found at:</p>
 <ul>
 <li><a class="el" href="linkEigenSolver.html">EigenSolver</a> (serial)</li>
 <li><a class="el" href="linkMumpsSolver.html">MumpsSolver</a> (parallel)</li>
 <li><a class="el" href="linkPetscSolver.html">PetscSolver</a> (parallel)</li>
 </ul>
-<dl class="section attention"><dt>Attention</dt><dd>Direct solvers are recommended for small to medium size model ( \(\leq 500 000\) degree-of-freedom) using pararllel computing. These solvers work even better if the Cholesky decomposition is computed once, situation that occurs in linear problems. </dd>
-<dd>
-Iterative solvers such as Conjugate Gradient will be available in future. Iterative solvers are recommended for large problems ( \(\gg 500 000\) degree-of-freedom) using pararllel computing. These solvers trade accuracy for speed, thus for nonlinear problem the tolerance must be small. </dd></dl>
+<p><b>REFERENCE:</b></p><ul>
+<li>Forde, B. W. R., Foschi, R. O., &amp; Stiemer, S. F. (1990). "Object-oriented finite element analysis". Computers &amp; Structures, 34(3), 355–374.</li>
+<li>Mackie, R. I. (1992). "Object oriented programming of the finite element method". International Journal for Numerical Methods in Engineering, 35(2), 425–436. </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

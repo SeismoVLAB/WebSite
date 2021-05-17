@@ -120,6 +120,11 @@ $(document).ready(function(){initNavTree('Parser_8hpp.html','');});
 <code>#include &quot;<a class="el" href="Plastic1DJ2_8hpp_source.html">Plastic1DJ2.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Plastic3DJ2_8hpp_source.html">Plastic3DJ2.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Plastic3DBA_8hpp_source.html">Plastic3DBA.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Elastic1DGap_8hpp_source.html">Elastic1DGap.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Plastic1DGap_8hpp_source.html">Plastic1DGap.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Elastic1DFiber_8hpp_source.html">Elastic1DFiber.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Steel1DFiber_8hpp_source.html">Steel1DFiber.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Concrete1DFiber_8hpp_source.html">Concrete1DFiber.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Lin2DRectangular_8hpp_source.html">Lin2DRectangular.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Lin3DRectangular_8hpp_source.html">Lin3DRectangular.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Lin2DAngle_8hpp_source.html">Lin2DAngle.hpp</a>&quot;</code><br />
@@ -137,6 +142,7 @@ $(document).ready(function(){initNavTree('Parser_8hpp.html','');});
 <code>#include &quot;<a class="el" href="Lin2DCircularTube_8hpp_source.html">Lin2DCircularTube.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Lin3DCircularTube_8hpp_source.html">Lin3DCircularTube.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Lin3DThinArea_8hpp_source.html">Lin3DThinArea.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Fib3DLineSection_8hpp_source.html">Fib3DLineSection.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ZeroLength1D_8hpp_source.html">ZeroLength1D.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="lin2DTruss2_8hpp_source.html">lin2DTruss2.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="kin2DTruss2_8hpp_source.html">kin2DTruss2.hpp</a>&quot;</code><br />
@@ -147,12 +153,16 @@ $(document).ready(function(){initNavTree('Parser_8hpp.html','');});
 <code>#include &quot;<a class="el" href="lin2DFrame2_8hpp_source.html">lin2DFrame2.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="kin2DFrame2_8hpp_source.html">kin2DFrame2.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="lin3DFrame2_8hpp_source.html">lin3DFrame2.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lin2DTria3_8hpp_source.html">lin2DTria3.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lin2DTria6_8hpp_source.html">lin2DTria6.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="lin2DQuad4_8hpp_source.html">lin2DQuad4.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="lin2DQuad8_8hpp_source.html">lin2DQuad8.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="PML2DQuad4_8hpp_source.html">PML2DQuad4.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="kin2DQuad4_8hpp_source.html">kin2DQuad4.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="PML2DQuad8_8hpp_source.html">PML2DQuad8.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="lin3DShell4_8hpp_source.html">lin3DShell4.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lin3DTetra4_8hpp_source.html">lin3DTetra4.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lin3DTetra10_8hpp_source.html">lin3DTetra10.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="lin3DHexa8_8hpp_source.html">lin3DHexa8.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="kin3DHexa8_8hpp_source.html">kin3DHexa8.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="PML3DHexa8_8hpp_source.html">PML3DHexa8.hpp</a>&quot;</code><br />
@@ -195,8 +205,8 @@ Functions</h2></td></tr>
 <tr class="separator:a869703bd90a587fd17053df529d8b76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fd81c895529aafa86cafb4a2c28b517"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Parser_8hpp.html#a4fd81c895529aafa86cafb4a2c28b517">ParseAnalysis</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;theMesh, std::unique_ptr&lt; <a class="el" href="classAnalysis.html">Analysis</a> &gt; &amp;theAnalysis, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classRecorder.html">Recorder</a> &gt; &gt; &amp;Recorders, std::map&lt; unsigned int, std::shared_ptr&lt; <a class="el" href="classLoadCombo.html">LoadCombo</a> &gt; &gt; &amp;LoadCombos, std::string sim, std::string InputFile)</td></tr>
 <tr class="separator:a4fd81c895529aafa86cafb4a2c28b517"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2a33052c2cc2a13fbb45638abc43d53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Parser_8hpp.html#ac2a33052c2cc2a13fbb45638abc43d53">PerformChanges</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;<a class="el" href="Definitions_8hpp.html#a86d500a34c624c2cae56bc25a31b12f3">UNUSED</a>(theMesh), std::string <a class="el" href="Definitions_8hpp.html#a86d500a34c624c2cae56bc25a31b12f3">UNUSED</a>(InputFile))</td></tr>
-<tr class="separator:ac2a33052c2cc2a13fbb45638abc43d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ba7144f88e8f35f5145bf1ee186855d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Parser_8hpp.html#a6ba7144f88e8f35f5145bf1ee186855d">UpateDomain</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;<a class="el" href="Definitions_8hpp.html#a86d500a34c624c2cae56bc25a31b12f3">UNUSED</a>(theMesh), std::string <a class="el" href="Definitions_8hpp.html#a86d500a34c624c2cae56bc25a31b12f3">UNUSED</a>(InputFile))</td></tr>
+<tr class="separator:a6ba7144f88e8f35f5145bf1ee186855d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada1d5cdeadd2035d086508b0d31e1885"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Parser_8hpp.html#ada1d5cdeadd2035d086508b0d31e1885">RunFromJSON</a> ()</td></tr>
 <tr class="separator:ada1d5cdeadd2035d086508b0d31e1885"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -389,14 +399,31 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac2a33052c2cc2a13fbb45638abc43d53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2a33052c2cc2a13fbb45638abc43d53">&#9670;&nbsp;</a></span>PerformChanges()</h2>
+<a id="ada1d5cdeadd2035d086508b0d31e1885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada1d5cdeadd2035d086508b0d31e1885">&#9670;&nbsp;</a></span>RunFromJSON()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void PerformChanges </td>
+          <td class="memname">void RunFromJSON </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ba7144f88e8f35f5145bf1ee186855d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ba7144f88e8f35f5145bf1ee186855d">&#9670;&nbsp;</a></span>UpateDomain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpateDomain </td>
           <td>(</td>
           <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>UNUSED</em>theMesh, </td>
@@ -417,23 +444,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ada1d5cdeadd2035d086508b0d31e1885"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada1d5cdeadd2035d086508b0d31e1885">&#9670;&nbsp;</a></span>RunFromJSON()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RunFromJSON </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
@@ -441,7 +451,7 @@ Functions</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="dir_c4c3cc1ef075e8c2dbf7a9cdab7d21b3.html">12-Utilities</a></li><li class="navelem"><a class="el" href="Parser_8hpp.html">Parser.hpp</a></li>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

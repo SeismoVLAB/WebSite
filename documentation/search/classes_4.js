@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gaussquadrature',['GaussQuadrature',['../classGaussQuadrature.html',1,'']]]
+  ['fib3dlinesection',['Fib3DLineSection',['../classFib3DLineSection.html',1,'']]]
 ];

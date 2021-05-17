@@ -1,7 +1,0 @@
-<map id="lin2DFrame2" name="lin2DFrame2">
-<area shape="rect" id="node2" href="$classElement.html" title="Virtual class for creating an element in a mesh. " alt="" coords="441,30,512,57"/>
-<area shape="rect" id="node3" title="STL class. " alt="" coords="215,103,295,130"/>
-<area shape="rect" id="node8" href="$classSection.html" title="Virtual class for creating a section object. " alt="" coords="443,102,510,129"/>
-<area shape="rect" id="node11" href="$classQuadratureRule.html" title="Virtual class for defining a Quadrature Rule to integrate quantities in the iso&#45;parametric elements..." alt="" coords="420,153,533,179"/>
-<area shape="rect" id="node4" title="STL class. " alt="" coords="5,96,132,137"/>
-</map>

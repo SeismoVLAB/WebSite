@@ -102,27 +102,60 @@ $(document).ready(function(){initNavTree('linkkin3DTruss2.html','');});
 <div class="title"><a class="el" href="classkin3DTruss2.html" title="Class for creating a 3D finite kinematic two-node truss element in a mesh. ">kin3DTruss2</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classkin3DTruss2.html" title="Class for creating a 3D finite kinematic two-node truss element in a mesh. ">kin3DTruss2</a> class creates a kinematic three-dimensional truss element with two-nodes. Each node has three degrees-of-freedom, and each degree-of-freedom represents a translation in the X-, Y-, and Z-directions. Figure provides a simple representation of this element in which the local coordinates are represented by the \(\hat{\textrm{n}}_1\)-, \(\hat{\textrm{n}}_2\)-, and \(\hat{\textrm{n}}_3\)-axis. The element mass, damping and stiffness matrices, as well as internal force vector are computed in local-coordinates and then transformed into global coordinates.</p>
+<div class="textblock"><h1>Background</h1>
+<p>The <a class="el" href="classkin3DTruss2.html" title="Class for creating a 3D finite kinematic two-node truss element in a mesh. ">kin3DTruss2</a> class creates a kinematic three-dimensional truss element with two-nodes. Each node has three degrees-of-freedom, and each degree-of-freedom represents a translation in the X-, Y-, and Z-directions. Figure provides a simple representation of this element in which the local coordinates are represented by the \(\hat{\textrm{n}}_1\)-, \(\hat{\textrm{n}}_2\)-, and \(\hat{\textrm{n}}_3\)-axis. The element mass, damping and stiffness matrices, as well as internal force vector are computed in local-coordinates and then transformed into global coordinates.</p>
 <div class="image">
 <img src="kin3DTruss2.png" alt="kin3DTruss2.png" width="50%"/>
 </div>
-<p>The <a class="el" href="classkin3DTruss2.html" title="Class for creating a 3D finite kinematic two-node truss element in a mesh. ">kin3DTruss2</a> lumped and conistent mass matrix \(\textbf{M}^\textrm{e}\) in global coordinates are computed in the same manner as <a class="el" href="classlin3DTruss2.html" title="Class for creating a 3D linearized two-node truss element in a mesh. ">lin3DTruss2</a>. On the other hand, the stiffness matrix is computed using a corrotational formulation.</p>
+<p>The <a class="el" href="classkin3DTruss2.html" title="Class for creating a 3D finite kinematic two-node truss element in a mesh. ">kin3DTruss2</a> lumped and consistent mass matrix \(\textbf{M}^\textrm{e}\) in global coordinates are computed in the same manner as <a class="el" href="classlin3DTruss2.html" title="Class for creating a 3D linearized two-node truss element in a mesh. ">lin3DTruss2</a>. On the other hand, the stiffness matrix is computed using a corrotational formulation.</p>
 <p>In the corrotational formulation, the axial displacement \(u_\textrm{l}\) of the frame element is computed as</p>
 <p class="formulaDsp">
-\[ u_\textrm{l} = \textrm{L} - \textrm{L}_\textrm{0} = \frac{\textrm{L}^2 - \textrm{L}_\textrm{0}^2}{\textrm{L} + \textrm{L}_\textrm{0}} \,, \nonumber \]
+\[ u_\textrm{l} = \textrm{L} - \textrm{L}_\textrm{0} = \frac{\textrm{L}^2 - \textrm{L}_\textrm{0}^2}{\textrm{L} + \textrm{L}_\textrm{0}} \,, \]
 </p>
 <p>where \(\textrm{L}\) is the frame length in the current configuration, and \(\textrm{L}_0\) the length in the initial configuration. Note that the last equality is to increase the condition of the subtraction.</p>
 <p>The consistent tanget stiffness matrix is then computed as</p>
 <p class="formulaDsp">
-\[ \textbf{K}^\textrm{e} = \textbf{T}_\textrm{e}^\top \frac{\textrm{EA}}{\mathrm{L}_0} \textbf{T}_\textrm{e} + \frac{\textrm{N}}{\textrm{L}} \mathbf{z}^\top \mathbf{z} \,, \nonumber \]
+\[ \textbf{K}^\textrm{e} = \textbf{T}_\textrm{e}^\top \frac{\textrm{EA}}{\mathrm{L}_0} \textbf{T}_\textrm{e} + \frac{\textrm{N}}{\textrm{L}} \mathbf{z}^\top \mathbf{z} \,, \]
 </p>
 <p>where the first term is nothing but the material contribution obtained in <a class="el" href="classlin3DTruss2.html" title="Class for creating a 3D linearized two-node truss element in a mesh. ">lin3DTruss2</a>, and \(\textrm{N}\) is the axial force developed in the current configuration, and the vector</p>
 <p class="formulaDsp">
-\[ \mathbf{z} = \begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; -1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; -1 \end{bmatrix} \,, \nonumber \]
+\[ \mathbf{z} = \begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; -1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; -1 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; -1 \end{bmatrix} \,, \]
 </p>
 <p>is the variation of the global displacement vector, and \(\textbf{T}_\textrm{e} = [-\hat{\textrm{n}}_1^\top, \hat{\textrm{n}}_1]\). Note that \(\textbf{T}_\textrm{e} \in \mathbb{R}^6\) and \(\mathbf{z} \in \mathbb{R}^{3 \times 6}\), and \(\textbf{M}^\textrm{e}, \textbf{K}^\textrm{e} \in \mathbb{R}^{\textrm{N}_\textrm{dof}^\textrm{e} \times \textrm{N}_\textrm{dof}^\textrm{e}}\) with \(\textrm{N}_\textrm{dof}^\textrm{e} = 6\) in this case.</p>
-<hr/>
-<p>A <a class="el" href="classkin3DTruss2.html" title="Class for creating a 3D finite kinematic two-node truss element in a mesh. ">kin3DTruss2</a> element is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+<p><b>REFERENCE:</b></p><ul>
+<li>Louie L. Yaw, "3D Co-rotational Truss Formulation", E. F. Cross School of Engineering, Walla Walla University, November 28, 2011.</li>
+</ul>
+<h1>Pre-Analysis</h1>
+<p>The python <a class="el" href="linkSoftwareStructure.html#linkPreProcess">Pre-Analysis</a> in the <span style="color:green"><b>01-Pre_Process/Method/Attach.py</b></span> file provides with an interface to populate the <code>Entities</code> dictionary. This file contains several functions to populate specific fields. For example, to create a <a class="el" href="classkin3DTruss2.html" title="Class for creating a 3D finite kinematic two-node truss element in a mesh. ">kin3DTruss2</a>, using json format, use:</p>
+<ul>
+<li><p class="startli"><span style="color:blue"><b>addElement</b></span>(<b>tag</b>, <b>name</b>='<a class="el" href="classkin3DTruss2.html" title="Class for creating a 3D finite kinematic two-node truss element in a mesh. ">kin3DTruss2</a>', <b>conn</b>, <b>attributes</b>):</p><ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of this element, i.e., tag &gt; -1</li>
+<li><span style="color:green"><b>name</b></span> : Seismo-VLAB element class name</li>
+<li><span style="color:green"><b>conn</b></span> : Connectivity array of this element</li>
+<li><span style="color:green"><b>attributes</b></span> : Specific properties for the created element, for example<ul>
+<li><span style="color:blue">'material'</span> is the hight of the line cross section. <br />
+</li>
+<li><span style="color:blue">'area'</span> is the cross section area.</li>
+</ul>
+</li>
+</ul>
+<p class="startli"><b>Example</b> </p><blockquote class="doxtable">
+<p>A <b>KIN3DTRUSS2</b> element can be defined using the python interface as follows:<br />
+SVL.addElement(<b>tag</b>=1, <b>name</b>='<a class="el" href="classkin3DTruss2.html" title="Class for creating a 3D finite kinematic two-node truss element in a mesh. ">kin3DTruss2</a>', <b>conn</b>=[1,2], <b>attributes</b>={'area': 0.5, 'material': 1}) </p>
+</blockquote>
+<p class="startli"><b>Application</b><br />
+ Please refer to the <b>C09-ST_kin_3DCantilever_Elastic_Truss2.py</b> file located at <span style="color:green"><b>03-Validations/01-Debugging/</b></span> to see an example on how to define a <a class="el" href="classkin3DTruss2.html" title="Class for creating a 3D finite kinematic two-node truss element in a mesh. ">kin3DTruss2</a> element.</p>
+</li>
+</ul>
+<p>On the contrary, the <span style="color:green"><b>01-Pre_Process/Method/Remove.py</b></span> file provides with an interface to depopulate the <code>Entities</code> dictionary. For example, to remove an already define <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>, use:</p><ul>
+<li><span style="color:blue"><b>delElement</b></span>(<b>tag</b>):<ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of the element to be removed, i.e., tag &gt; -1</li>
+</ul>
+</li>
+</ul>
+<h1>Run-Analysis</h1>
+<p>The C++ <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> in the <span style="color:green"><b>02-Run_Process/04-Elements/03-Truss/kin3DTruss2.cpp</b></span> file provides the class implementation. A <a class="el" href="classkin3DTruss2.html" title="Class for creating a 3D finite kinematic two-node truss element in a mesh. ">kin3DTruss2</a> element is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>. A <a class="el" href="classkin3DTruss2.html" title="Class for creating a 3D finite kinematic two-node truss element in a mesh. ">kin3DTruss2</a> is defined inside the <span style="color:black"><b>"Elements"</b></span> json field indicating its <span style="color:blue"><b>"Tag"</b></span> as follows,</p><ul>
+<li><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
 {
     <span style="color:black"><b>"Elements"</b></span>: {
         <span style="color:blue"><b>"Tag"</b></span>: {
@@ -135,7 +168,7 @@ $(document).ready(function(){initNavTree('linkkin3DTruss2.html','');});
         }
     }
 }
-</pre><table class="doxtable">
+</pre> <table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
@@ -147,21 +180,23 @@ $(document).ready(function(){initNavTree('linkkin3DTruss2.html','');});
 <tr>
 <td><code>material</code></td><td>The uniaxial material identifier. </td></tr>
 </table>
+<br />
 <dl class="section attention"><dt>Attention</dt><dd>This formulation allows large deformations. </dd>
 <dd>
 <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> non-linearity can be used in this element.</dd></dl>
-<h3>Example</h3>
-<blockquote class="doxtable">
-<p>A 3D finite kinematic element between nodes 1 and 2, made of material 1, and area 0.5 is constructed as: <br />
- { "Elements": { "1": { "name" : "KIN3DTRUSS2", "conn" : [1,2], "attributes": { "Area": 0.50, "material": 1 } } } }</p>
+<b>Example</b> <blockquote class="doxtable">
+<p>A <b>KIN3DTRUSS2</b> element between nodes 1 and 2, made of material 1, and area 0.5 is constructed as: <br />
+ { "Elements": { "1": { "name" : "KIN3DTRUSS2", "conn" : [1,2], "attributes": { "area": 0.50, "material": 1 } } } }</p>
 </blockquote>
+</li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

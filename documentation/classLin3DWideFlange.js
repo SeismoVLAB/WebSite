@@ -18,6 +18,8 @@ var classLin3DWideFlange =
     [ "GetStress", "classLin3DWideFlange.html#ac8a492217d846790fb3fee26c3a7b3e0", null ],
     [ "GetStressAt", "classLin3DWideFlange.html#a81c0d84fb470a16dfe02b30ba1224bf6", null ],
     [ "GetTangentStiffness", "classLin3DWideFlange.html#ad1997d5864204e0371ff53bc8d9bb89f", null ],
+    [ "InitialState", "classLin3DWideFlange.html#a96e8a9fdc85482f41f940d361eee38de", null ],
+    [ "ReverseState", "classLin3DWideFlange.html#ad6060b9e59c0bf2c499291539c011d40", null ],
     [ "UpdateState", "classLin3DWideFlange.html#a215312570ba17ca48c5bac109a88958a", null ],
     [ "b", "classLin3DWideFlange.html#a1fcfcfb4b49912eaca4b7651633b3996", null ],
     [ "h", "classLin3DWideFlange.html#abd2ba5ff574cceb1d52c09dc222dcca0", null ],

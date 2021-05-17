@@ -18,8 +18,10 @@ var classMaterial =
     [ "GetStress", "classMaterial.html#a8211b95871f0b10ec3dd7d7ce6d10fba", null ],
     [ "GetTangentStiffness", "classMaterial.html#a8c5d0f6ae8341b5307f34b54db8b3e88", null ],
     [ "GetTotalStress", "classMaterial.html#a306d59e1eec6236521c9369b7196b60b", null ],
+    [ "InitialState", "classMaterial.html#a722d61cfb7d6acf68f3e9b0febc6af56", null ],
     [ "IsViscous", "classMaterial.html#a943853b5885cf02e13ed30e61f28c611", null ],
-    [ "UpdateState", "classMaterial.html#af355dad3a019f02ef89d8ad0b9184644", null ],
+    [ "ReverseState", "classMaterial.html#aad432b6af57882bfd36131a8fcf1bcaa", null ],
+    [ "UpdateState", "classMaterial.html#a9906db0b9a38150280e10743410cb648", null ],
     [ "isViscous", "classMaterial.html#a296a7cda82b1ada173d06650e02399c0", null ],
     [ "Name", "classMaterial.html#a793dc9034c137caf3d8b3b4b0f9d451b", null ]
 ];

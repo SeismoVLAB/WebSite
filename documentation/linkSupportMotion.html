@@ -102,11 +102,19 @@ $(document).ready(function(){initNavTree('linkSupportMotion.html','');});
 <div class="title">Support Motion </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Support in a structure is a member which helps others member to resist loads. Supports transfers the load to the ground and provides stability to the structure. However, supports can induce internal forces in the structure if they mode. Figure shows schematically a portal frame structure whose support at <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> (4) undergoes motion.</p>
+<div class="textblock"><h1>Background</h1>
+<p>Supports in a structure are members which helps to resist external and internal loads. Supports transfers the load to the ground and provides stability to the structure. Figure shows schematically a portal frame structure whose support at <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> (4) undergoes motion.</p>
 <div class="image">
 <img src="SupportMotion.png" alt="SupportMotion.png" width="27%"/>
 </div>
-<p>A <a class="el" href="linkSupportMotion.html">Support Motion</a> conditions can be prescribed as inhomogeneous linear <a class="el" href="classConstraint.html" title="Class for creating a linear kinematic relations between degree-of-freedom in the model. ">Constraint</a> as</p>
+<p><a class="el" href="linkSupportMotion.html">Support Motion</a> force effects in <b>SVL</b> are computed in two levels:</p>
+<ul>
+<li><a class="el" href="classAssembler.html#ab1c1218154138eeb898a6bdc4f5c4324" title="Assemble the support motion displacement vector. ">Assembler::ComputeSupportMotionIncrement()</a><br />
+ This function assembles the incremental ground motion ( \(\Delta g\)) that is applied to restrained degree-of-freedom for a given time step.</li>
+<li><a class="el" href="classIntegrator.html#ae94b39eb6bfd81071cf74d234964fe34" title="Gets the incremental nodal support motion vector. ">Integrator::ComputeSupportMotionVector()</a><br />
+ This function transforms the incremental ground motion into external forces ( \(\mathbf{K}_\textrm{eff}^{(i-1)} \Delta g\)) applied to the free degree-of-freedom.</li>
+</ul>
+<p>The <a class="el" href="linkSupportMotion.html">Support Motion</a> conditions in <b>SVL</b> are prescribed as inhomogeneous linear <a class="el" href="classConstraint.html" title="Class for creating a linear kinematic relations between degree-of-freedom in the model. ">Constraint</a>:</p>
 <p class="formulaDsp">
 \[ \textrm{U}_{n+1} = \mathbf{T}^\top \textrm{u}_{n+1} + G_{n+1} \,, \]
 </p>
@@ -124,8 +132,43 @@ $(document).ready(function(){initNavTree('linkSupportMotion.html','');});
 <p class="formulaDsp">
 \[ \mathbf{T}^\top \,\mathbf{K}_\textrm{eff}^{(i-1)}\, \mathbf{T} \Delta \textrm{u}^{(i)} = \mathbf{T}^\top \left( \mathbf{F}_\textrm{eff} - \mathbf{K}_\textrm{eff}^{(i-1)} \Delta g\right) \]
 </p>
-<hr/>
-<p>A <a class="el" href="linkSupportMotion.html">Support Motion</a> for <a class="el" href="classStaticAnalysis.html" title="Class for creating an static analysis and updating the states variables in mesh. ">StaticAnalysis</a> can be created using the built-in parse-structure provided in the Parser as, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+<p><b>REFERENCE:</b></p><ul>
+<li>Carlos Felippa. "Introduction to Finite Element Methods (ASEN 5007)": Multifreedom Constraints I, Fall 2005.</li>
+</ul>
+<h1>Pre-Analysis</h1>
+<p>The python <a class="el" href="linkSoftwareStructure.html#linkPreProcess">Pre-Analysis</a> in the <span style="color:green"><b>01-Pre_Process/Method/Attach.py</b></span> file provides with an interface to create a support motion. We use the <span style="color:blue"><b>addSupportMotion()</b></span> as follows:</p>
+<ul>
+<li><p class="startli"><span style="color:blue"><b>addSupportMotion</b></span>(<b>tag</b>, <b>attributes</b>):</p><ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of the restrained node, i.e., tag &gt; 1 to apply the support motion</li>
+<li><span style="color:green"><b>attributes</b></span> : Dictionary containing the support motion action on a Nodes in a direction<ul>
+<li><span style="color:blue">'type'</span> : Constant or TimeSerie</li>
+<li><span style="color:blue">'value'</span> : Displacement value if type=static</li>
+<li><span style="color:blue">'file'</span> : Displacement time series file if type=dynamic</li>
+<li><span style="color:blue">'dof'</span> : Degree of freedom to apply the support motion</li>
+</ul>
+</li>
+</ul>
+<p class="startli">The file format specified at <b>attributes</b>[<span style="color:blue">'file'</span>]='Ricker.txt' must have the structure shown in the figure: </p><div class="image">
+<img src="PointLoadFile.png" alt="PointLoadFile.png" width="22%"/>
+</div>
+<p class="startli"><b>Example</b> </p><blockquote class="doxtable">
+<p>A <b>SUPPORT MOTION</b> can be defined using the python interface as follows:<br />
+SVL.addSupportMotion(<b>tag</b>=708, <b>attributes</b>={'file': 'Ricker.txt', 'type': 'TimeSerie', 'dof': 1}) </p>
+</blockquote>
+<p class="startli"><b>Application</b><br />
+ Please refer to the <b>A06-DY_Lin_1DPointMass_Elastic_ZeroLength_SupportMotion.py</b> file located at <span style="color:green"><b>03-Validations/01-Debugging/</b></span> to see an example on how to define a support motion.</p>
+</li>
+</ul>
+<p>On the contrary, the <span style="color:green"><b>01-Pre_Process/Method/Remove.py</b></span> file provides with an interface to depopulate the <code>Entities</code> dictionary. For example, to remove an already define support motion, use:</p><ul>
+<li><span style="color:blue"><b>delSupportMotion</b></span>(<b>tag</b>):<ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of the restrained node where the support motion was applied, i.e., tag &gt; -1</li>
+</ul>
+</li>
+</ul>
+<h1>Run-Analysis</h1>
+<p>The C++ <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> in the <span style="color:green"><b>02-Run_Process/07-Assembler/Assembler.cpp</b></span> and <span style="color:green"><b>02-Run_Process/10-Integrators/Integrators.cpp</b></span> files provides with the implementation. A <a class="el" href="linkSupportMotion.html">Support Motion</a> is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a> and is defined inside the <span style="color:black"><b>"Supports"</b></span> json field indicating its <span style="color:blue"><b>"Tag"</b></span>.</p>
+<ul>
+<li>A <a class="el" href="linkSupportMotion.html">Support Motion</a> for <a class="el" href="classDynamicAnalysis.html" title="Class for creating a dynamic analysis and updating the states variables in mesh. ">DynamicAnalysis</a> can be created using the built-in parse-structure provided in the Parser as, <pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
 {
     <span style="color:black"><b>"Supports"</b></span>: {
         <span style="color:blue"><b>"Tag"</b></span>: {
@@ -135,7 +178,7 @@ $(document).ready(function(){initNavTree('linkSupportMotion.html','');});
         }
     }
 }
-</pre><table class="doxtable">
+</pre> <table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
@@ -145,17 +188,22 @@ $(document).ready(function(){initNavTree('linkSupportMotion.html','');});
 <tr>
 <td><code>dof</code> </td><td>The degree-of-freedom to apply the support motion. </td></tr>
 </table>
-<p>A <a class="el" href="linkSupportMotion.html">Support Motion</a> for <a class="el" href="classDynamicAnalysis.html" title="Class for creating a dynamic analysis and updating the states variables in mesh. ">DynamicAnalysis</a> can be created using the built-in parse-structure provided in the Parser as, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+<b>Example</b> <blockquote class="doxtable">
+<p>A static <b>SUPPORT MOTION</b> of 0.5 applied at node 5 along the degree-of-freedom 0 is created as: <br />
+ { "Supports": { "5": { "type" : "CONSTANT", "value": [0.5] "dof": [0] } } } </p>
+</blockquote>
+</li>
+<li>A <a class="el" href="linkSupportMotion.html">Support Motion</a> for <a class="el" href="classDynamicAnalysis.html" title="Class for creating a dynamic analysis and updating the states variables in mesh. ">DynamicAnalysis</a> can be created using the built-in parse-structure provided in the Parser as, <pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
 {
     <span style="color:black"><b>"Supports"</b></span>: {
         <span style="color:blue"><b>"Tag"</b></span>: {
             <span style="color:green"><b>"type"</b></span>: "TIMESERIE",
-            <span style="color:green"><b>"file"</b></span>: str,
+            <span style="color:green"><b>"file"</b></span>: [str],
             <span style="color:green"><b>"dof"</b></span>: [ ]
         }
     }
 }
-</pre><table class="doxtable">
+</pre> <table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
@@ -165,21 +213,19 @@ $(document).ready(function(){initNavTree('linkSupportMotion.html','');});
 <tr>
 <td><code>dof</code> </td><td>The degree-of-freedom to apply the support motion. </td></tr>
 </table>
-<dl class="section note"><dt>Note</dt><dd>The transformation matrix \(\mathbf{T}\) is exactly the same as the one employed in the <a class="el" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. ">Assembler</a>. </dd>
-<dd>
-This formulation allows to add support motion by only adding the incremental vector of support motions \(\Delta g\).</dd></dl>
-<h3>Example</h3>
-<blockquote class="doxtable">
-<p>A dynamic support motion applied at node 5 along the degree-of-freedom 0 is created as: <br />
- { "Supports": { "5": { "type" : "TIMESERIE", "file": "/path/to/folder/load.in" "dof": [0] } } } </p>
+<b>Example</b> <blockquote class="doxtable">
+<p>A dynamic <b>SUPPORT MOTION</b> applied at node 5 along the degree-of-freedom 0 is created as: <br />
+ { "Supports": { "5": { "type" : "TIMESERIE", "file": ["/path/to/folder/load.in"] "dof": [0] } } } </p>
 </blockquote>
+</li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

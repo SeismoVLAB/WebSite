@@ -102,11 +102,52 @@ $(document).ready(function(){initNavTree('linkNode.html','');});
 <div class="title"><a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classNode.html">Node</a> class defines a point in a finite element mesh. This object provides with member functions to obtain the coordinates <a class="el" href="classNode.html#a7b2668a65e828ea8616a2b36a071f955">Node::Coordinates</a> of the node and the numbering for total <a class="el" href="classNode.html#ae45794759a63b572d044f6c73ad791d1">Node::TotalDegreeOfFreedom</a> and free degrees of freedom <a class="el" href="classNode.html#ae465330d294a54b11d29ecdadd29812e">Node::FreeDegreeOfFreedom</a>. This class also stores displacements <a class="el" href="classNode.html#a5b8cd00fc32ef0fa1a35cae3407cc8e1">Node::Displacements</a>, velocities <a class="el" href="classNode.html#a4d29bfa922db5e2f775641a9616de651">Node::Velocities</a> and accelerations <a class="el" href="classNode.html#aa0b9638da475a9666445be272797f53b">Node::Accelerations</a> at each degree of freedom. The Figure bellow shows a schematic representation of a node in 1-dimension, 2-dimensions and 3-dimensions, respectively. The single arrows represent the translational degree-of-freedom, while the triple arrows represent the rotational degree-of-freedom.</p>
+<div class="textblock"><h1>Background</h1>
+<p>The <a class="el" href="classNode.html">Node</a> class defines a point in a finite element mesh. This class provides with member functions that allow</p><ul>
+<li><a class="el" href="classNode.html#a7b2668a65e828ea8616a2b36a071f955">Node::Coordinates</a> : to obtain the coordinates of the node</li>
+<li><a class="el" href="classNode.html#ae45794759a63b572d044f6c73ad791d1">Node::TotalDegreeOfFreedom</a> : to obtain the numbering for total degrees of freedom (without restrain and constraint)</li>
+<li><a class="el" href="classNode.html#ae465330d294a54b11d29ecdadd29812e">Node::FreeDegreeOfFreedom</a> : to obtain the numbering for free degrees of freedom (with restrain and constraint).</li>
+</ul>
+<p>This class also provided with private member variables that stores information regarding</p><ul>
+<li><a class="el" href="classNode.html#a5b8cd00fc32ef0fa1a35cae3407cc8e1">Node::Displacements</a> displacements of the node at each degree of freedom,</li>
+<li><a class="el" href="classNode.html#a4d29bfa922db5e2f775641a9616de651">Node::Velocities</a> velocities of the node at each degree of freedom,</li>
+<li><a class="el" href="classNode.html#aa0b9638da475a9666445be272797f53b">Node::Accelerations</a> accelerations of the node at each degree of freedom.</li>
+</ul>
+<p>The Figure below shows a schematic representation of a node in <b>1</b> dimension, <b>2</b> dimensions and <b>3</b> dimensions, respectively. The single arrows represent the translational degree-of-freedom, while the triple arrows represent the rotational degree-of-freedom.</p>
 <div class="image">
-<img src="Node.png" alt="Node.png" width="48%"/>
+<img src="Node.png" alt="Node.png" width="50%"/>
 </div>
-<p>A <a class="el" href="classNode.html">Node</a> is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+<p><b>REFERENCE:</b></p><ul>
+<li>Forde, B. W. R., Foschi, R. O., &amp; Stiemer, S. F. (1990). "Object-oriented finite element analysis". Computers &amp; Structures, 34(3), 355–374.</li>
+<li>Mackie, R. I. (1992). "Object oriented programming of the finite element method". International Journal for Numerical Methods in Engineering, 35(2), 425–436.</li>
+</ul>
+<h1>Pre-Analysis</h1>
+<p>The python <span style="color:green"><b>01-Pre_Process/Method/Attach.py</b></span> file provides with an interface to populate the <code>Entities</code> dictionary. A <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> can be created using the <span style="color:blue"><b>addNode()</b></span> function. This function will transform the provided information into json format to be parse in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a>.</p>
+<ul>
+<li><p class="startli"><span style="color:blue"><b>addNode</b></span>(<b>tag</b>, <b>ndof</b>, <b>coords</b>, <b>freedof</b>, <b>totaldof</b>):</p><ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of this node, i.e., tag &gt; -1</li>
+<li><span style="color:green"><b>ndof</b></span> : Number of degree of freedom, i.e., ndof &gt; 0</li>
+<li><span style="color:green"><b>coords</b></span> : Coordinates of the node, i.e., (x,y) or (x,y,z)</li>
+<li><span style="color:green"><b>freedof</b></span> : The free (with restrain/constraint) degree of freedom numbering of this node</li>
+<li><span style="color:green"><b>totaldof</b></span> : The total (without restrain/constraint) degree of freedom numbering of this node</li>
+</ul>
+<p class="startli"><b>Example</b> </p><blockquote class="doxtable">
+<p>A <b>NODE</b> can be defined using the python interface as follows:<br />
+SVL.addNode(<b>tag</b>=6, <b>ndof</b>=3, <b>coords</b>=[1.00, 0.00, 0.00]) </p>
+</blockquote>
+<p class="startli"><b>Application</b><br />
+ Please refer to the <b>D05-ST_Lin_2DBernoulliArc_Elastic_Frame2.py</b> file located at <span style="color:green"><b>03-Validations/01-Debugging/</b></span> to see an example on how to define nodes using the <span style="color:blue"><b>addNode</b></span> function.</p>
+</li>
+</ul>
+<p>On the contrary, the <span style="color:green"><b>01-Pre_Process/Method/Remove.py</b></span> file provides with an interface to depopulate the <code>Entities</code> dictionary. For example, to remove an already define <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>, use:</p><ul>
+<li><span style="color:blue"><b>delNode</b></span>(<b>tag</b>):<ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of the node to be removed, i.e., tag &gt; -1</li>
+</ul>
+</li>
+</ul>
+<h1>Run-Analysis</h1>
+<p>The C++ <span style="color:green"><b>02-Run_Process/01-Node/Node.cpp</b></span> file provides with the <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> class implementation. A <a class="el" href="classNode.html">Node</a> is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>. A <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> is defined inside the <span style="color:black"><b>"Nodes"</b></span> json field indicating its <span style="color:blue"><b>"Tag"</b></span> as follows,</p><ul>
+<li><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
 {
     <span style="color:black"><b>"Nodes"</b></span>: {
         <span style="color:blue"><b>"Tag"</b></span>: {
@@ -117,7 +158,7 @@ $(document).ready(function(){initNavTree('linkNode.html','');});
         }
     }
 }
-</pre><table class="doxtable">
+</pre> <table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
@@ -131,27 +172,29 @@ $(document).ready(function(){initNavTree('linkNode.html','');});
 <tr>
 <td><code>coords</code> </td><td>The coordinates in 1-, 2-, and 3-dimensions of the node. </td></tr>
 </table>
+<br />
 <dl class="section attention"><dt>Attention</dt><dd>The node identifier number must be unique and positive ( \(\geq0\)). </dd>
 <dd>
 The numbering in <code>totaldof</code> and <code>freedof</code> defines the sparse matrix pattern. </dd>
 <dd>
 The node object handles the domain-reduction motion used in <a class="el" href="classLoad.html">Load</a>. </dd>
 <dd>
-It is worth mentioning that the number of degree of freedom <code>ndof</code> at each node is defined by the user, and such number should be consistent with the element that will be connected to that node. Defining the number of degree of freedom in this manner allows to add explictly internal degree of freedom that can be used to formulate elements, see for instance <a class="el" href="classPML2DQuad4.html" title="Class for creating a 2D linearized four-node perfectly matched layer element in a mesh...">PML2DQuad4</a>.</dd></dl>
-<h3>Example</h3>
-<blockquote class="doxtable">
-<p>A fixed tri-dimensional node with 3 degree of freedom and coordinate (0.0, 0.0, 10.5) <br />
+It is worth mentioning that the number of degree of freedom <code>ndof</code> at each node is defined by the user, and such number should be consistent with the element that will be connected to that node. Defining the number of degree of freedom in this manner allows to add explicitly internal degree of freedom that can be used to formulate elements, see for instance <a class="el" href="classPML2DQuad4.html" title="Class for creating a 2D linearized four-node perfectly matched layer element in a mesh...">PML2DQuad4</a>.</dd></dl>
+<b>Example</b> <blockquote class="doxtable">
+<p>A fixed tri-dimensional <b>NODE</b> with 3 degree of freedom and coordinate (0.0, 0.0, 10.5) <br />
 { "Nodes": { "4": { "ndof" : 3, "totaldof": [12, 13, 14], "freedof" : [-1, -1, -1], "coords" : [0.0, 0.00, 10.50] } } }</p>
-<p>A free two-dimensional node with 3 degree of freedom and coordinate (0.20, 0.50) <br />
+<p>A free two-dimensional <b>NODE</b> with 3 degree of freedom and coordinate (0.20, 0.50) <br />
 { "Nodes": { "48": { "ndof" : 3, "totaldof": [345, 346, 347], "freedof" : [327, 328, 329], "coords" : [0.20, 0.50] } } }</p>
 </blockquote>
+</li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

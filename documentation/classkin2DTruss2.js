@@ -28,6 +28,8 @@ var classkin2DTruss2 =
     [ "GetStressAt", "classkin2DTruss2.html#a23e2695a0d81565e7824abda8139e33c", null ],
     [ "GetTotalDegreeOfFreedom", "classkin2DTruss2.html#a85d6f10236bfd3174ebbc4a8eb2d1a9b", null ],
     [ "GetVTKResponse", "classkin2DTruss2.html#ac8e4da9f79ac417df6da4ddf07d4eff5", null ],
+    [ "InitialState", "classkin2DTruss2.html#a23112d3c80e65d2d2accb9247c04a7c9", null ],
+    [ "ReverseState", "classkin2DTruss2.html#afb8d5b5b4602f38f0fb8373d3a2d1977", null ],
     [ "SetDamping", "classkin2DTruss2.html#a19f6e1e127daf144d8182242e8ad9985", null ],
     [ "SetDomain", "classkin2DTruss2.html#a0b614f613c72dfb39f2ed958c66cad81", null ],
     [ "UpdateState", "classkin2DTruss2.html#a89f3020fc7285d62a71587f4c3eaa425", null ],

@@ -8,6 +8,7 @@ var linkSection =
     [ "Lin3DCircular", "linkLin3DCircular.html", null ],
     [ "Lin3DRectangularTube", "linkLin3DRectangularTube.html", null ],
     [ "Lin3DCircularTube", "linkLin3DCircularTube.html", null ],
+    [ "Fib3DLineSection", "linkFib3DLineSection.html", null ],
     [ "Lin3DThinArea", "linkLin3DThinArea.html", null ],
     [ "Local Axes", "linkSectionLocalAxis.html", null ],
     [ "Insertion Point", "linkSectionInsertionPoint.html", null ]

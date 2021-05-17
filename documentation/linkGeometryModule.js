@@ -5,11 +5,12 @@ var linkGeometryModule =
     [ "Constraint", "linkConstraint.html", null ],
     [ "Mass", "linkMass.html", null ],
     [ "Surface", "linkSurface.html", null ],
-    [ "Element", "linkElement.html", "linkElement" ],
     [ "Material", "linkMaterial.html", "linkMaterial" ],
     [ "Section", "linkSection.html", "linkSection" ],
+    [ "Element", "linkElement.html", "linkElement" ],
     [ "Damping", "linkDamping.html", null ],
     [ "Load", "linkLoad.html", "linkLoad" ],
     [ "LoadCombo", "linkLoadCombination.html", null ],
-    [ "Mesh", "linkMesh.html", null ]
+    [ "Mesh", "linkMesh.html", null ],
+    [ "Partition", "linkPartition.html", null ]
 ];

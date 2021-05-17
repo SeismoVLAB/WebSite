@@ -23,6 +23,8 @@ var classPlastic3DJ2 =
     [ "GetStress", "classPlastic3DJ2.html#a43802160e1df2f486d78a71d4ecb60af", null ],
     [ "GetTangentStiffness", "classPlastic3DJ2.html#ad48f84784381eccc3b437a19cfcf9576", null ],
     [ "GetTotalStress", "classPlastic3DJ2.html#a845d3d4bf10527f6e9376244506af045", null ],
+    [ "InitialState", "classPlastic3DJ2.html#a9b2c3253e4e71f51d3025aa60eee6091", null ],
+    [ "ReverseState", "classPlastic3DJ2.html#a4b5e79b08bdb8f73fc7c0ab825256a07", null ],
     [ "UpdateState", "classPlastic3DJ2.html#a50df593a64a79c114e7d5350b90955f7", null ],
     [ "alpha", "classPlastic3DJ2.html#a6f40ca4dc47491dc264843895dce91ff", null ],
     [ "BackStress", "classPlastic3DJ2.html#af18aef1c2bc64a0b37d1d7bd706e3f7d", null ],

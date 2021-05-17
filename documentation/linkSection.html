@@ -102,9 +102,9 @@ $(document).ready(function(){initNavTree('linkSection.html','');});
 <div class="title"><a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> class defines a cross-section to be assigned in an structural element. This object provides member functions to compute the section's geometric properties as well as internal forces developed in the section. The implementation of each section is provided in each derived-class. A <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object is meant to be used in frame elements such as <a class="el" href="classlin2DFrame2.html" title="Class for creating a 2D linearized two-node frame element in a mesh. ">lin2DFrame2</a>, <a class="el" href="classkin2DFrame2.html" title="Class for creating a 2D finite kinematic two-node frame element in a mesh. ">kin2DFrame2</a>, <a class="el" href="classlin3DFrame2.html" title="Class for creating a 3D linearized two-node frame element in a mesh. ">lin3DFrame2</a>, and kin3DFrame2, as well as shell elements like <a class="el" href="classlin3DShell4.html" title="Class for creating a 3D linearized four-node shell element in a mesh. ">lin3DShell4</a>. The name of each section derived-class has the following structure:</p>
+<div class="textblock"><p>The implementation of each section is provided in each derived-class. The name of each section derived-class has the following structure:</p>
 <div class="image">
-<img src="../style/filecpp.png" alt="Smiley face" width="28" height="37" style="float:left"/>
+<img src="../style/filecpp.png" width="32" height="42.5" style="float:left"/>
 </div>
 <p> <span style="color:blue"> <b>Formulation-Dimension-Name.hpp</b> </span></p>
 <p><span style="color:white"> . </span></p>
@@ -112,13 +112,32 @@ $(document).ready(function(){initNavTree('linkSection.html','');});
 <tr>
 <th>Name </th><th>Description  </th></tr>
 <tr>
-<td>Formulation </td><td>Stands for either Linearized (lin), or Fiber (fiber). </td></tr>
+<td>Formulation </td><td>Stands for either Linearized (lin), or Fiber (fib). </td></tr>
 <tr>
-<td>Dimension </td><td>One-dimensional (1D), two-dimensional (2D), or three-dimensional (3D). </td></tr>
+<td>Dimension </td><td>One-dimensional (1D) or two-dimensional (2D). </td></tr>
 <tr>
 <td>Name </td><td>The name of the section. </td></tr>
 </table>
-<p>The following sections are available in <b>SVL</b></p>
+<p>The <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> class defines a cross-section to be assigned in an structural element. The <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> class is designed to:</p><ul>
+<li>Have an internal structure suitable for linear and nonlinear behavior.</li>
+<li>Provide with a richer structure to allow pre-defined and user-define geometries.</li>
+</ul>
+<p>The main member function in <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> are:</p><ul>
+<li><a class="el" href="classSection.html#ae4035c56d1a01296e8b789b37eb0097b" title="Perform converged section state update. ">Section::CommitState()</a><br />
+ This function sets the trial variables as converged ones.</li>
+<li><a class="el" href="classSection.html#ab415ce5eb3874147cac6910fa988e2b7" title="Update the section state for this iteration. ">Section::UpdateState()</a><br />
+ This function computes the new trial states dor a given strain.</li>
+</ul>
+<p>Each derived class are provided with the member function:</p><ul>
+<li><a class="el" href="classSection.html#abfdd587c15a5b07d26ee61c5aa3bdd5f" title="Returns the resultant (generalised) strain vector over the section. ">Section::GetStrain()</a><br />
+ This function returns the generalized trial strain.</li>
+<li><a class="el" href="classSection.html#a4a8e01f27f69615882f7e6c188ba0980" title="Returns the resultant (generalised) stress vector over the section. ">Section::GetStress()</a><br />
+ This function returns the generalized stress associated to the trial strain.</li>
+<li><a class="el" href="classSection.html#a7d1214cf28377ecc0a00bf5096dac661" title="Returns the section initial stiffness matrix. ">Section::GetInitialTangentStiffness()</a><br />
+ This function returns the tangent stiffness associated to the trial strain.</li>
+</ul>
+<p>This object also provides with private member functions to compute the section's geometric properties as well as internal forces developed in the section. A <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object is meant to be used in frame elements such as <a class="el" href="classlin2DFrame2.html" title="Class for creating a 2D linearized two-node frame element in a mesh. ">lin2DFrame2</a>, <a class="el" href="classkin2DFrame2.html" title="Class for creating a 2D finite kinematic two-node frame element in a mesh. ">kin2DFrame2</a>, <a class="el" href="classlin3DFrame2.html" title="Class for creating a 3D linearized two-node frame element in a mesh. ">lin3DFrame2</a>, and kin3DFrame2, as well as shell elements like <a class="el" href="classlin3DShell4.html" title="Class for creating a 3D linearized four-node shell element in a mesh. ">lin3DShell4</a>.</p>
+<p>The following section derived classes are available in <b>SVL</b>:</p>
 <ul>
 <li><a class="el" href="linkLin3DRectangular.html">Lin3DRectangular</a></li>
 <li><a class="el" href="linkLin3DAngle.html">Lin3DAngle</a></li>
@@ -128,17 +147,19 @@ $(document).ready(function(){initNavTree('linkSection.html','');});
 <li><a class="el" href="linkLin3DCircular.html">Lin3DCircular</a></li>
 <li><a class="el" href="linkLin3DRectangularTube.html">Lin3DRectangularTube</a></li>
 <li><a class="el" href="linkLin3DCircularTube.html">Lin3DCircularTube</a></li>
+<li><a class="el" href="linkFib3DLineSection.html">Fib3DLineSection</a></li>
 <li><a class="el" href="linkLin3DThinArea.html">Lin3DThinArea</a></li>
 <li><a class="el" href="linkSectionLocalAxis.html">Local Axes</a></li>
-<li><a class="el" href="linkSectionInsertionPoint.html">Insertion Point</a> </li>
+<li><a class="el" href="linkSectionInsertionPoint.html">Insertion Point</a></li>
 </ul>
+<dl class="section attention"><dt>Attention</dt><dd>Not all the listed sections have been verified. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

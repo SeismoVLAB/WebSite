@@ -17,6 +17,8 @@ var classLin2DCircular =
     [ "GetStress", "classLin2DCircular.html#affbfc8914d9a762f503cd0b87b43e2e7", null ],
     [ "GetStressAt", "classLin2DCircular.html#a6daa1c778c88c7034478fb3a3a9e2d28", null ],
     [ "GetTangentStiffness", "classLin2DCircular.html#ad5800b8aa2e635b8568fc09e9932cfcb", null ],
+    [ "InitialState", "classLin2DCircular.html#a9256876445fe80def8625a86ebd7d4a3", null ],
+    [ "ReverseState", "classLin2DCircular.html#ad9e3401ac1c282a35b6555ec09630154", null ],
     [ "UpdateState", "classLin2DCircular.html#a84492feae0fb85791759606367b5a4a9", null ],
     [ "InsertPoint", "classLin2DCircular.html#a7000d1ca66d1d8b42208d295cbc66f2a", null ],
     [ "r", "classLin2DCircular.html#a33347b15e47af2b0da9ec5d3976fea12", null ],

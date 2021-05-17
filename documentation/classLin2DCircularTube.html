@@ -115,27 +115,17 @@ $(document).ready(function(){initNavTree('classLin2DCircularTube.html','');});
 <div class="dynheader">
 Inheritance diagram for Lin2DCircularTube:</div>
 <div class="dyncontent">
-<div class="center"><img src="classLin2DCircularTube__inherit__graph.png" border="0" usemap="#Lin2DCircularTube_inherit__map" alt="Inheritance graph"/></div>
-<map name="Lin2DCircularTube_inherit__map" id="Lin2DCircularTube_inherit__map">
-<area shape="rect" id="node2" href="classSection.html" title="Virtual class for creating a section object. " alt="" coords="37,5,104,32"/>
+ <div class="center">
+  <img src="classLin2DCircularTube.png" usemap="#Lin2DCircularTube_map" alt=""/>
+  <map id="Lin2DCircularTube_map" name="Lin2DCircularTube_map">
+<area href="classSection.html" title="Virtual class for creating a section object. " alt="Section" shape="rect" coords="0,0,119,24"/>
 </map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Lin2DCircularTube:</div>
-<div class="dyncontent">
-<div class="center"><img src="classLin2DCircularTube__coll__graph.png" border="0" usemap="#Lin2DCircularTube_coll__map" alt="Collaboration graph"/></div>
-<map name="Lin2DCircularTube_coll__map" id="Lin2DCircularTube_coll__map">
-<area shape="rect" id="node2" href="classSection.html" title="Virtual class for creating a section object. " alt="" coords="29,236,96,263"/>
-<area shape="rect" id="node3" title="STL class. " alt="" coords="84,96,164,123"/>
-<area shape="rect" id="node6" href="classMaterial.html" title="Virtual class for creating a material object. " alt="" coords="134,185,202,212"/>
-<area shape="rect" id="node4" title="STL class. " alt="" coords="61,5,187,47"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9a1facd73785ebee4935f43fb6a4b85f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin2DCircularTube.html#a9a1facd73785ebee4935f43fb6a4b85f">Lin2DCircularTube</a> (double <a class="el" href="classLin2DCircularTube.html#a9fe9dbc340e95398479063fb70045163">re</a>, double <a class="el" href="classLin2DCircularTube.html#afd6e640374684f17afc935e4268856bf">ri</a>, std::unique_ptr&lt; <a class="el" href="classMaterial.html">Material</a> &gt; &amp;material, double theta=0.0, unsigned int ip=10)</td></tr>
-<tr class="memdesc:a9a1facd73785ebee4935f43fb6a4b85f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> to be especified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>.  <a href="#a9a1facd73785ebee4935f43fb6a4b85f">More...</a><br /></td></tr>
+<tr class="memdesc:a9a1facd73785ebee4935f43fb6a4b85f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> to be specified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>.  <a href="#a9a1facd73785ebee4935f43fb6a4b85f">More...</a><br /></td></tr>
 <tr class="separator:a9a1facd73785ebee4935f43fb6a4b85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08510d5dd4da33e06d8ce7127c7f160f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin2DCircularTube.html#a08510d5dd4da33e06d8ce7127c7f160f">~Lin2DCircularTube</a> ()</td></tr>
 <tr class="memdesc:a08510d5dd4da33e06d8ce7127c7f160f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classLin2DCircularTube.html" title="Class for creating a solid circular tube section for 2D analysis with linear elastic material for a f...">Lin2DCircularTube</a> object.  <a href="#a08510d5dd4da33e06d8ce7127c7f160f">More...</a><br /></td></tr>
@@ -167,12 +157,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa425df2506f2e297fdffb4de431bd2b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin2DCircularTube.html#aa425df2506f2e297fdffb4de431bd2b5">CommitState</a> ()</td></tr>
 <tr class="memdesc:aa425df2506f2e297fdffb4de431bd2b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform converged section state update.  <a href="#aa425df2506f2e297fdffb4de431bd2b5">More...</a><br /></td></tr>
 <tr class="separator:aa425df2506f2e297fdffb4de431bd2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d190af8790ef67f27cbac9ec149fa84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin2DCircularTube.html#a1d190af8790ef67f27cbac9ec149fa84">ReverseState</a> ()</td></tr>
+<tr class="memdesc:a1d190af8790ef67f27cbac9ec149fa84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse the section states to previous converged state.  <a href="#a1d190af8790ef67f27cbac9ec149fa84">More...</a><br /></td></tr>
+<tr class="separator:a1d190af8790ef67f27cbac9ec149fa84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6602b1db087861dfd25469dbe2e57e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin2DCircularTube.html#ad6602b1db087861dfd25469dbe2e57e4">InitialState</a> ()</td></tr>
+<tr class="memdesc:ad6602b1db087861dfd25469dbe2e57e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Brings the section states to its initial state.  <a href="#ad6602b1db087861dfd25469dbe2e57e4">More...</a><br /></td></tr>
+<tr class="separator:ad6602b1db087861dfd25469dbe2e57e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a389b658d4a4590f95e5f6de1ca0967ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLin2DCircularTube.html#a389b658d4a4590f95e5f6de1ca0967ab">UpdateState</a> (const Eigen::VectorXd strain, const unsigned int cond)</td></tr>
 <tr class="memdesc:a389b658d4a4590f95e5f6de1ca0967ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the section state for this iteration.  <a href="#a389b658d4a4590f95e5f6de1ca0967ab">More...</a><br /></td></tr>
 <tr class="separator:a389b658d4a4590f95e5f6de1ca0967ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classSection"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSection')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classSection.html">Section</a></td></tr>
 <tr class="memitem:a88c594fe9d7010a4552f200b6604fa76 inherit pub_methods_classSection"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSection.html#a88c594fe9d7010a4552f200b6604fa76">Section</a> (std::string name)</td></tr>
-<tr class="memdesc:a88c594fe9d7010a4552f200b6604fa76 inherit pub_methods_classSection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> to be especified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>.  <a href="classSection.html#a88c594fe9d7010a4552f200b6604fa76">More...</a><br /></td></tr>
+<tr class="memdesc:a88c594fe9d7010a4552f200b6604fa76 inherit pub_methods_classSection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> to be specified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>.  <a href="classSection.html#a88c594fe9d7010a4552f200b6604fa76">More...</a><br /></td></tr>
 <tr class="separator:a88c594fe9d7010a4552f200b6604fa76 inherit pub_methods_classSection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0843b12fba72b9304e8096f17a2e47ec inherit pub_methods_classSection"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSection.html#a0843b12fba72b9304e8096f17a2e47ec">~Section</a> ()=0</td></tr>
 <tr class="memdesc:a0843b12fba72b9304e8096f17a2e47ec inherit pub_methods_classSection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> object.  <a href="classSection.html#a0843b12fba72b9304e8096f17a2e47ec">More...</a><br /></td></tr>
@@ -211,6 +207,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:afc5d4443343205b6ecf94d077091d631 inherit pro_methods_classSection"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSection.html#afc5d4443343205b6ecf94d077091d631">GetLineTranslationMatrix</a> (double h, double b, double zc, double yc, unsigned int ip)</td></tr>
 <tr class="memdesc:afc5d4443343205b6ecf94d077091d631 inherit pro_methods_classSection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets centroid translation axis for Line <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> according to insertion point.  <a href="classSection.html#afc5d4443343205b6ecf94d077091d631">More...</a><br /></td></tr>
 <tr class="separator:afc5d4443343205b6ecf94d077091d631 inherit pro_methods_classSection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10ffab57cb1ed7d30cf012da96b82dd0 inherit pro_methods_classSection"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSection.html#a10ffab57cb1ed7d30cf012da96b82dd0">InsertionPointCoordinates</a> (double &amp;x3, double &amp;x2, double h, double b, double zc, double yc, unsigned int ip)</td></tr>
+<tr class="memdesc:a10ffab57cb1ed7d30cf012da96b82dd0 inherit pro_methods_classSection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the coordinate according to insertion point.  <a href="classSection.html#a10ffab57cb1ed7d30cf012da96b82dd0">More...</a><br /></td></tr>
+<tr class="separator:a10ffab57cb1ed7d30cf012da96b82dd0 inherit pro_methods_classSection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a994193d694e2b9b6e6b87749f1c95892 inherit pro_methods_classSection"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSection.html#a994193d694e2b9b6e6b87749f1c95892">ComputeLineLocalAxes</a> (double h, double b, double zcm, double ycm, double angle, unsigned int ip)</td></tr>
+<tr class="memdesc:a994193d694e2b9b6e6b87749f1c95892 inherit pro_methods_classSection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms generalised strain/stresses from <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> to <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> local coordinate.  <a href="classSection.html#a994193d694e2b9b6e6b87749f1c95892">More...</a><br /></td></tr>
+<tr class="separator:a994193d694e2b9b6e6b87749f1c95892 inherit pro_methods_classSection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -281,7 +283,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> to be especified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>. </p>
+<p>Creates a <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a> to be specified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">re</td><td>The external radius. </td></tr>
@@ -565,7 +567,7 @@ Private Attributes</h2></td></tr>
 
 <p>Returns the section initial stiffness matrix. </p>
 <dl class="section return"><dt>Returns</dt><dd>Matrix with the initial section tangent stiffness matrix. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The initial tangent stiifness matrix is computed when the generalized strain vector is zero. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The initial tangent stiffness matrix is computed when the generalized strain vector is zero. </dd></dl>
 
 <p>Implements <a class="el" href="classSection.html#a7d1214cf28377ecc0a00bf5096dac661">Section</a>.</p>
 
@@ -815,6 +817,66 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ad6602b1db087861dfd25469dbe2e57e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6602b1db087861dfd25469dbe2e57e4">&#9670;&nbsp;</a></span>InitialState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lin2DCircularTube::InitialState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Brings the section states to its initial state. </p>
+<dl class="section note"><dt>Note</dt><dd>This function returns the material states to the beginning. </dd></dl>
+
+<p>Implements <a class="el" href="classSection.html#a1043262927db3e0c57351b2988f0e53d">Section</a>.</p>
+
+</div>
+</div>
+<a id="a1d190af8790ef67f27cbac9ec149fa84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d190af8790ef67f27cbac9ec149fa84">&#9670;&nbsp;</a></span>ReverseState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lin2DCircularTube::ReverseState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reverse the section states to previous converged state. </p>
+<dl class="section note"><dt>Note</dt><dd>This function returns the material states to previous converged states. </dd></dl>
+
+<p>Implements <a class="el" href="classSection.html#a12330840ca18f4c56df809ec1dacaefc">Section</a>.</p>
+
+</div>
+</div>
 <a id="a389b658d4a4590f95e5f6de1ca0967ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a389b658d4a4590f95e5f6de1ca0967ab">&#9670;&nbsp;</a></span>UpdateState()</h2>
 
@@ -853,13 +915,13 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">strain</td><td>Vector with the strain components at this Gauss-point. </td></tr>
-    <tr><td class="paramname">cond</td><td>If the the elatic/platic material components will be updated. </td></tr>
+    <tr><td class="paramname">cond</td><td>If the the elastic/plastic material components will be updated. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>This function computes the strain and tanget stiffness matrix once the trial strain converged. </dd></dl>
 
-<p>Implements <a class="el" href="classSection.html#a4cb5c4b07c429d3c600fa1a337ff8bac">Section</a>.</p>
+<p>Implements <a class="el" href="classSection.html#ab415ce5eb3874147cac6910fa988e2b7">Section</a>.</p>
 
 </div>
 </div>
@@ -1015,7 +1077,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classLin2DCircularTube.html">Lin2DCircularTube</a></li>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

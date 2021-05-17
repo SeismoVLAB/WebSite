@@ -102,7 +102,8 @@ $(document).ready(function(){initNavTree('linkElastic1DLinear.html','');});
 <div class="title"><a class="el" href="classElastic1DLinear.html" title="Class for creating an uniaxial isotropic linear elastic material for one-dimensional elements...">Elastic1DLinear</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classElastic1DLinear.html" title="Class for creating an uniaxial isotropic linear elastic material for one-dimensional elements...">Elastic1DLinear</a> class creates a uniaxial material class with the constitutive equation given as</p>
+<div class="textblock"><h1>Background</h1>
+<p>The <a class="el" href="classElastic1DLinear.html" title="Class for creating an uniaxial isotropic linear elastic material for one-dimensional elements...">Elastic1DLinear</a> class creates a uniaxial material class with the constitutive equation given as</p>
 <p class="formulaDsp">
 \[ \sigma = E \, \epsilon \nonumber \]
 </p>
@@ -110,8 +111,41 @@ $(document).ready(function(){initNavTree('linkElastic1DLinear.html','');});
 <div class="image">
 <img src="Elastic1DLinear.png" alt="Elastic1DLinear.png" width="28%"/>
 </div>
- <hr/>
-<p>A <a class="el" href="classElastic1DLinear.html" title="Class for creating an uniaxial isotropic linear elastic material for one-dimensional elements...">Elastic1DLinear</a> material is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+<p><b>REFERENCE:</b></p><ul>
+<li>Bathe K. Jurgen, "Finite Element Procedures", Chapter 4: pages 194, Table 4.3, Prentice-Hall, 1996.</li>
+</ul>
+<h1>Pre-Analysis</h1>
+<p>The python <a class="el" href="linkSoftwareStructure.html#linkPreProcess">Pre-Analysis</a> in the <span style="color:green"><b>01-Pre_Process/Method/Attach.py</b></span> file provides with an interface to populate the <code>Entities</code> dictionary. This file contains several functions to populate specific fields. For example, to create a <a class="el" href="classElastic1DLinear.html" title="Class for creating an uniaxial isotropic linear elastic material for one-dimensional elements...">Elastic1DLinear</a> material using json format, use:</p>
+<ul>
+<li><p class="startli"><span style="color:blue"><b>addMaterial</b></span>(<b>tag</b>, <b>name</b>='<a class="el" href="classElastic1DLinear.html" title="Class for creating an uniaxial isotropic linear elastic material for one-dimensional elements...">Elastic1DLinear</a>', <b>attributes</b>):</p><ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of this material, i.e., tag &gt; -1</li>
+<li><span style="color:green"><b>name</b></span> : Seismo-VLAB material class name</li>
+<li><span style="color:green"><b>attributes</b></span> : Specific properties for the created material, for example<ul>
+<li><span style="color:blue">'E'</span> : is the elastic modulus of elasticity. <br />
+</li>
+<li><span style="color:blue">'nu'</span> : is the Poisson’s ratio. <br />
+</li>
+<li><span style="color:blue">'rho'</span> : is the material density. Can be omitted for static analysis.</li>
+</ul>
+</li>
+</ul>
+<p class="startli"><b>Example</b> </p><blockquote class="doxtable">
+<p>A <b>ELASTIC1DLINEAR</b> material can be defined using the python interface as follows:<br />
+SVL.addMaterial(<b>tag</b>=1, <b>name</b>='<a class="el" href="classElastic1DLinear.html" title="Class for creating an uniaxial isotropic linear elastic material for one-dimensional elements...">Elastic1DLinear</a>', <b>attributes</b>={'E': 200.0, 'nu': 0.25, 'rho': 0.0}) </p>
+</blockquote>
+<p class="startli"><b>Application</b><br />
+ Please refer to the <b>A01-DY_Lin_2D_Elastic_ZeroLength.py</b> file located at <span style="color:green"><b>03-Validations/01-Debugging/</b></span> to see an example on how to define a <a class="el" href="classElastic1DLinear.html" title="Class for creating an uniaxial isotropic linear elastic material for one-dimensional elements...">Elastic1DLinear</a> material.</p>
+</li>
+</ul>
+<p>On the contrary, the <span style="color:green"><b>01-Pre_Process/Method/Remove.py</b></span> file provides with an interface to depopulate the <code>Entities</code> dictionary. For example, to remove an already define <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>, use:</p><ul>
+<li><span style="color:blue"><b>delMaterial</b></span>(<b>tag</b>):<ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of the material to be removed, i.e., tag &gt; -1</li>
+</ul>
+</li>
+</ul>
+<h1>Run-Analysis</h1>
+<p>The C++ <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> in the <span style="color:green"><b>02-Run_Process/02-Materials/01-Linear/Elastic1DLinear.cpp</b></span> file provides the class implementation. A <a class="el" href="classElastic1DLinear.html" title="Class for creating an uniaxial isotropic linear elastic material for one-dimensional elements...">Elastic1DLinear</a> material is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>. A <a class="el" href="classElastic1DLinear.html" title="Class for creating an uniaxial isotropic linear elastic material for one-dimensional elements...">Elastic1DLinear</a> is defined inside the <span style="color:black"><b>"Materials"</b></span> json field indicating its <span style="color:blue"><b>"Tag"</b></span> as follows,</p><ul>
+<li><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
 {
     <span style="color:black"><b>"Materials"</b></span>: {
         <span style="color:blue"><b>"Tag"</b></span>: {
@@ -124,7 +158,7 @@ $(document).ready(function(){initNavTree('linkElastic1DLinear.html','');});
         }
     }
 }
-</pre><table class="doxtable">
+</pre> <table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
@@ -136,19 +170,21 @@ $(document).ready(function(){initNavTree('linkElastic1DLinear.html','');});
 <tr>
 <td><code>rho</code> </td><td>Represents the material density. </td></tr>
 </table>
+<br />
 <dl class="section attention"><dt>Attention</dt><dd>This material can only be assigned to one-dimensional elements such as: <a class="el" href="classlin2DTruss2.html" title="Class for creating a 2D linearized two-node truss element in a mesh. ">lin2DTruss2</a>, <a class="el" href="classkin2DTruss2.html" title="Class for creating a 2D finite kinematic two-node truss element in a mesh. ">kin2DTruss2</a>, <a class="el" href="classlin3DTruss2.html" title="Class for creating a 3D linearized two-node truss element in a mesh. ">lin3DTruss2</a>, <a class="el" href="classkin3DTruss2.html" title="Class for creating a 3D finite kinematic two-node truss element in a mesh. ">kin3DTruss2</a> and <a class="el" href="classZeroLength1D.html" title="Class for creating a 2D/3D two-node zero length element in a mesh. ">ZeroLength1D</a> elements.</dd></dl>
-<h3>Example</h3>
-<blockquote class="doxtable">
-<p>A uniaxial ELASTIC1DLINEAR material with elasticity modulus 200, Poisson's ratio 0.25, and no density is defined: <br />
+<b>Example</b> <blockquote class="doxtable">
+<p>A uniaxial <b>ELASTIC1DLINEAR</b> material with elasticity modulus 200, Poisson's ratio 0.25, and no density is defined: <br />
  { "Materials": { "1": { "name" : "ELASTIC1DLINEAR", "attributes": { "E" : 200.0, "nu" : 0.25, "rho": 0.0 } } } }</p>
 </blockquote>
+</li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

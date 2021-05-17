@@ -111,18 +111,6 @@ $(document).ready(function(){initNavTree('classMesh.html','');});
  <a href="classMesh.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Mesh_8hpp_source.html">Mesh.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for Mesh:</div>
-<div class="dyncontent">
-<div class="center"><img src="classMesh__coll__graph.png" border="0" usemap="#Mesh_coll__map" alt="Collaboration graph"/></div>
-<map name="Mesh_coll__map" id="Mesh_coll__map">
-<area shape="rect" id="node5" href="classConstraint.html" title="Class for creating a linear kinematic relations between degree&#45;of&#45;freedom in the model. " alt="" coords="452,93,535,120"/>
-<area shape="rect" id="node10" href="classSection.html" title="Virtual class for creating a section object. " alt="" coords="460,181,527,208"/>
-<area shape="rect" id="node11" title="STL class. " alt="" coords="215,207,295,233"/>
-<area shape="rect" id="node15" href="classMaterial.html" title="Virtual class for creating a material object. " alt="" coords="459,232,527,259"/>
-<area shape="rect" id="node12" title="STL class. " alt="" coords="5,199,132,241"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -135,12 +123,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae2e3df728a9e3c1e2f16351cc3918a21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#ae2e3df728a9e3c1e2f16351cc3918a21">Initialize</a> ()</td></tr>
 <tr class="memdesc:ae2e3df728a9e3c1e2f16351cc3918a21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> and compute memory storage.  <a href="#ae2e3df728a9e3c1e2f16351cc3918a21">More...</a><br /></td></tr>
 <tr class="separator:ae2e3df728a9e3c1e2f16351cc3918a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf5a201e4431686ba2b59a0bd57752a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#aaf5a201e4431686ba2b59a0bd57752a7">NextSimulation</a> ()</td></tr>
+<tr class="memdesc:aaf5a201e4431686ba2b59a0bd57752a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update internal variables according to form of simulation.  <a href="#aaf5a201e4431686ba2b59a0bd57752a7">More...</a><br /></td></tr>
+<tr class="separator:aaf5a201e4431686ba2b59a0bd57752a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac209e2605ddb9ff0888dbbb81b0c7758"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#ac209e2605ddb9ff0888dbbb81b0c7758">AddNode</a> (unsigned int tag, std::shared_ptr&lt; <a class="el" href="classNode.html">Node</a> &gt; &amp;node)</td></tr>
 <tr class="memdesc:ac209e2605ddb9ff0888dbbb81b0c7758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> object to the <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.  <a href="#ac209e2605ddb9ff0888dbbb81b0c7758">More...</a><br /></td></tr>
 <tr class="separator:ac209e2605ddb9ff0888dbbb81b0c7758"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dc49c31061fb7ab66a1b682ed6f29fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a0dc49c31061fb7ab66a1b682ed6f29fb">AddConstraint</a> (unsigned int tag, std::unique_ptr&lt; <a class="el" href="classConstraint.html">Constraint</a> &gt; &amp;constraint)</td></tr>
 <tr class="memdesc:a0dc49c31061fb7ab66a1b682ed6f29fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a <a class="el" href="classConstraint.html" title="Class for creating a linear kinematic relations between degree-of-freedom in the model. ">Constraint</a> to the <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.  <a href="#a0dc49c31061fb7ab66a1b682ed6f29fb">More...</a><br /></td></tr>
 <tr class="separator:a0dc49c31061fb7ab66a1b682ed6f29fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab13f87df9874d55430e70ba1d58b1d1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#ab13f87df9874d55430e70ba1d58b1d1d">AddFiber</a> (unsigned int tag, std::unique_ptr&lt; <a class="el" href="classMaterial.html">Material</a> &gt; &amp;fiber)</td></tr>
+<tr class="memdesc:ab13f87df9874d55430e70ba1d58b1d1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> to the <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.  <a href="#ab13f87df9874d55430e70ba1d58b1d1d">More...</a><br /></td></tr>
+<tr class="separator:ab13f87df9874d55430e70ba1d58b1d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64814741e9e2ad80d016c0c843bc3c23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a64814741e9e2ad80d016c0c843bc3c23">AddMaterial</a> (unsigned int tag, std::unique_ptr&lt; <a class="el" href="classMaterial.html">Material</a> &gt; &amp;material)</td></tr>
 <tr class="memdesc:a64814741e9e2ad80d016c0c843bc3c23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> to the <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.  <a href="#a64814741e9e2ad80d016c0c843bc3c23">More...</a><br /></td></tr>
 <tr class="separator:a64814741e9e2ad80d016c0c843bc3c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -369,6 +363,44 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>. </dd></dl>
+
+</div>
+</div>
+<a id="ab13f87df9874d55430e70ba1d58b1d1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab13f87df9874d55430e70ba1d58b1d1d">&#9670;&nbsp;</a></span>AddFiber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mesh::AddFiber </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classMaterial.html">Material</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>fiber</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> to the <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tag</td><td>the <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> identifier. </td></tr>
+    <tr><td class="paramname">fiber</td><td>the <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> object to be added in fiber. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>. </dd></dl>
 
 </div>
 </div>
@@ -733,7 +765,7 @@ Protected Attributes</h2></td></tr>
 <p>Gets operator that impose restrains/constraints on the model. </p>
 <dl class="section return"><dt>Returns</dt><dd>A matrix that enforce the linear kinematic constraints. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>More details can be found at <a class="el" href="linkMesh.html">Mesh</a>, and <a class="el" href="linkAssembler.html">Assembler</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classConstraint.html" title="Class for creating a linear kinematic relations between degree-of-freedom in the model. ">Constraint</a>, <a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force assiciated to the integrator. ">Integrator::ComputeEffectiveForce</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness assiciated to the integrator. ">Integrator::ComputeEffectiveStiffness</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classConstraint.html" title="Class for creating a linear kinematic relations between degree-of-freedom in the model. ">Constraint</a>, <a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force associated to the integrator. ">Integrator::ComputeEffectiveForce</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness associated to the integrator. ">Integrator::ComputeEffectiveStiffness</a>. </dd></dl>
 
 </div>
 </div>
@@ -753,6 +785,26 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialize the <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> and compute memory storage. </p>
+
+</div>
+</div>
+<a id="aaf5a201e4431686ba2b59a0bd57752a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf5a201e4431686ba2b59a0bd57752a7">&#9670;&nbsp;</a></span>NextSimulation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mesh::NextSimulation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update internal variables according to form of simulation. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classMesh.html#a15336f346ed691b23252b408b8c2f71e" title="Container/map of nodes for this partition. ">Mesh::Nodes</a> <a class="el" href="classMesh.html#a7811e9082830157dd63e68b536308a88" title="Container/map of elements for this partition. ">Mesh::Elements</a>. </dd></dl>
 
 </div>
 </div>
@@ -835,7 +887,7 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#a9ba144be2d8cd3b51342f29fd2782d10" title="Sets the vector of displacement associated with this Node. ">Node::SetDisplacements</a>, <a class="el" href="classNode.html#a689f2ae4f9007456026e97332a75f50c" title="Sets the current velocity state associated with this Node. ">Node::SetVelocities</a>, <a class="el" href="classNode.html#a63c2b54c1a58b3ad53ecbcc997d1f0ac" title="Sets the current cceleration state associated with this Node. ">Node::SetAccelerations</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#a9ba144be2d8cd3b51342f29fd2782d10" title="Sets the vector of displacement associated with this Node. ">Node::SetDisplacements</a>, <a class="el" href="classNode.html#a689f2ae4f9007456026e97332a75f50c" title="Sets the current velocity state associated with this Node. ">Node::SetVelocities</a>, <a class="el" href="classNode.html#a63c2b54c1a58b3ad53ecbcc997d1f0ac" title="Sets the current acceleration state associated with this Node. ">Node::SetAccelerations</a>. </dd></dl>
 
 </div>
 </div>
@@ -1060,7 +1112,7 @@ Protected Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classMesh.html">Mesh</a></li>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

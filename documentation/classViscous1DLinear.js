@@ -17,6 +17,8 @@ var classViscous1DLinear =
     [ "GetStress", "classViscous1DLinear.html#aed973ca7f43bebf68419f847e1613ee7", null ],
     [ "GetTangentStiffness", "classViscous1DLinear.html#a43897e1d8b598c9e8b5770fb06ce3cf8", null ],
     [ "GetTotalStress", "classViscous1DLinear.html#a4c177bfa793092c9eb0f1b2621df17df", null ],
+    [ "InitialState", "classViscous1DLinear.html#a5d20110b1449332d014a6b0207ef5454", null ],
+    [ "ReverseState", "classViscous1DLinear.html#a68d3bcf66401db6a1cfaf5ed5b615304", null ],
     [ "UpdateState", "classViscous1DLinear.html#a671ab0ee650129f76ddda0955d016cb6", null ],
     [ "Damping", "classViscous1DLinear.html#a1028e6fb0635a59c2dc22bb45fc93bcb", null ],
     [ "eta", "classViscous1DLinear.html#a6d7a12a2e8c2f9446a7f0652f667a90e", null ],

@@ -121,11 +121,13 @@ $(document).ready(function(){initNavTree('classMaterial.html','');});
   <tr><td class="entry"><a class="el" href="classMaterial.html#a8211b95871f0b10ec3dd7d7ce6d10fba">GetStress</a>() const =0</td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classMaterial.html#a8c5d0f6ae8341b5307f34b54db8b3e88">GetTangentStiffness</a>() const =0</td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classMaterial.html#a306d59e1eec6236521c9369b7196b60b">GetTotalStress</a>() const =0</td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classMaterial.html#a943853b5885cf02e13ed30e61f28c611">IsViscous</a>()</td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classMaterial.html#a722d61cfb7d6acf68f3e9b0febc6af56">InitialState</a>()=0</td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classMaterial.html#a296a7cda82b1ada173d06650e02399c0">isViscous</a></td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classMaterial.html#a4e51c99736625c951b8910cee909c685">Material</a>(std::string name, bool model)</td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classMaterial.html#a793dc9034c137caf3d8b3b4b0f9d451b">Name</a></td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classMaterial.html#af355dad3a019f02ef89d8ad0b9184644">UpdateState</a>(const Eigen::VectorXd strain, const unsigned int cond)=0</td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classMaterial.html#a943853b5885cf02e13ed30e61f28c611">IsViscous</a>()</td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classMaterial.html#a4e51c99736625c951b8910cee909c685">Material</a>(std::string name, bool model)</td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classMaterial.html#a793dc9034c137caf3d8b3b4b0f9d451b">Name</a></td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classMaterial.html#aad432b6af57882bfd36131a8fcf1bcaa">ReverseState</a>()=0</td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classMaterial.html#a9906db0b9a38150280e10743410cb648">UpdateState</a>(const Eigen::VectorXd strain, const unsigned int cond=0)=0</td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classMaterial.html#a216a675d064866d5ce280ad5d48769d5">~Material</a>()=0</td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
@@ -133,7 +135,7 @@ $(document).ready(function(){initNavTree('classMaterial.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

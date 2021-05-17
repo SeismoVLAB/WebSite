@@ -18,6 +18,8 @@ var classLin3DRectangularTube =
     [ "GetStress", "classLin3DRectangularTube.html#a3451cf919315b97d6c906be116b7993e", null ],
     [ "GetStressAt", "classLin3DRectangularTube.html#a8d4f21a3d326f73c01dcdd5d8956f2e8", null ],
     [ "GetTangentStiffness", "classLin3DRectangularTube.html#a106c8bff9cb4011df435363e4c1c9b78", null ],
+    [ "InitialState", "classLin3DRectangularTube.html#a280f51402f1e5495c2d9b2d622007f3d", null ],
+    [ "ReverseState", "classLin3DRectangularTube.html#a8bd8572342e80850fba7599c2b699222", null ],
     [ "UpdateState", "classLin3DRectangularTube.html#a6d421ebacd72fd8caa447b236f3e1837", null ],
     [ "b", "classLin3DRectangularTube.html#a2851498e1427139395bf61b3bddda3c3", null ],
     [ "h", "classLin3DRectangularTube.html#ae6436a12d13b74f93e549fefb82f9298", null ],

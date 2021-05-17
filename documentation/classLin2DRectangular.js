@@ -17,6 +17,8 @@ var classLin2DRectangular =
     [ "GetStress", "classLin2DRectangular.html#a4b2ba24d39f02c9b2eebd8eba1df4223", null ],
     [ "GetStressAt", "classLin2DRectangular.html#af703066d9ca564a5b38d5c4be0591a2d", null ],
     [ "GetTangentStiffness", "classLin2DRectangular.html#aea7959faf771200759f58b8a5ceb5bb2", null ],
+    [ "InitialState", "classLin2DRectangular.html#a1c0f4d6be908583f96d1aeba16f235d0", null ],
+    [ "ReverseState", "classLin2DRectangular.html#a797d1a4f02a95c0c90d5e9c5edc2154c", null ],
     [ "UpdateState", "classLin2DRectangular.html#aad74a8d756c69962f48846adf1325d98", null ],
     [ "b", "classLin2DRectangular.html#aea127fa430c95466d947d1f6d56920fe", null ],
     [ "h", "classLin2DRectangular.html#a5ae62f9eac920d1764a3a18da0b7e631", null ],

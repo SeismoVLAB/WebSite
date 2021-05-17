@@ -18,6 +18,8 @@ var classLin3DRectangular =
     [ "GetStress", "classLin3DRectangular.html#add043310707eb56b22f4a8a254d6bbf4", null ],
     [ "GetStressAt", "classLin3DRectangular.html#af093ea295f48198040e805f55c11e9f9", null ],
     [ "GetTangentStiffness", "classLin3DRectangular.html#a99016dcc796a5f04d10956ffea4c56b4", null ],
+    [ "InitialState", "classLin3DRectangular.html#a542bf474b98f36f74601057da5976603", null ],
+    [ "ReverseState", "classLin3DRectangular.html#ac5cf8ab16db62798c692dc3a4310386f", null ],
     [ "UpdateState", "classLin3DRectangular.html#a8d5aa3671786ae7b318d62bdb7807b75", null ],
     [ "b", "classLin3DRectangular.html#a3a8a1ead5e1c2b94dc090a4b00d9bd0c", null ],
     [ "h", "classLin3DRectangular.html#ab8692de69735ca5913e346614ad05c4b", null ],

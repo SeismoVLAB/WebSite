@@ -20,6 +20,8 @@ var classnull3DFrame2 =
     [ "GetStressAt", "classnull3DFrame2.html#af69900d6157d2725511bdc93be6277cc", null ],
     [ "GetTotalDegreeOfFreedom", "classnull3DFrame2.html#a7284310bd510cb0fbe6a6e24b985da9f", null ],
     [ "GetVTKResponse", "classnull3DFrame2.html#a87abaf070b36ad74801bb1f6ec713b73", null ],
+    [ "InitialState", "classnull3DFrame2.html#a6f9a48059da2fbc82850d5dc32f032c0", null ],
+    [ "ReverseState", "classnull3DFrame2.html#a95e9b8fb69fde9a5b9bdbda4cbb6317d", null ],
     [ "SetDamping", "classnull3DFrame2.html#a5f2f0a55add6f602391a216c4cab29f8", null ],
     [ "SetDomain", "classnull3DFrame2.html#a729facd332a42166f07c2fe7824daad5", null ],
     [ "UpdateState", "classnull3DFrame2.html#a94a3c2abb31d003cedb024213af8282e", null ],

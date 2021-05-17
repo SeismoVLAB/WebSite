@@ -115,26 +115,17 @@ $(document).ready(function(){initNavTree('classPlastic3DBA.html','');});
 <div class="dynheader">
 Inheritance diagram for Plastic3DBA:</div>
 <div class="dyncontent">
-<div class="center"><img src="classPlastic3DBA__inherit__graph.png" border="0" usemap="#Plastic3DBA_inherit__map" alt="Inheritance graph"/></div>
-<map name="Plastic3DBA_inherit__map" id="Plastic3DBA_inherit__map">
-<area shape="rect" id="node2" href="classMaterial.html" title="Virtual class for creating a material object. " alt="" coords="20,5,88,32"/>
+ <div class="center">
+  <img src="classPlastic3DBA.png" usemap="#Plastic3DBA_map" alt=""/>
+  <map id="Plastic3DBA_map" name="Plastic3DBA_map">
+<area href="classMaterial.html" title="Virtual class for creating a material object. " alt="Material" shape="rect" coords="0,0,82,24"/>
 </map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Plastic3DBA:</div>
-<div class="dyncontent">
-<div class="center"><img src="classPlastic3DBA__coll__graph.png" border="0" usemap="#Plastic3DBA_coll__map" alt="Collaboration graph"/></div>
-<map name="Plastic3DBA_coll__map" id="Plastic3DBA_coll__map">
-<area shape="rect" id="node2" href="classMaterial.html" title="Virtual class for creating a material object. " alt="" coords="35,185,103,212"/>
-<area shape="rect" id="node3" title="STL class. " alt="" coords="29,96,109,123"/>
-<area shape="rect" id="node4" title="STL class. " alt="" coords="5,5,132,47"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8d8b8810c5826865acda7eafd0a4d4a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlastic3DBA.html#a8d8b8810c5826865acda7eafd0a4d4a8">Plastic3DBA</a> (const double <a class="el" href="classPlastic3DBA.html#a28bff0913f636d89e8d441f992288e19">K</a>, const double <a class="el" href="classPlastic3DBA.html#a5e42a44b27dfa5fe93def1e28aba531c">G</a>, const double rho, const double <a class="el" href="classPlastic3DBA.html#aa15cae42fa2288e38f83426436a3392c">H0</a>, const double <a class="el" href="classPlastic3DBA.html#ad2cbc9f6491d758f34683b98b6b7526a">h</a>, const double <a class="el" href="classPlastic3DBA.html#a122434c57fbe4b4ac2f6190272db08b7">m</a>, const double <a class="el" href="classPlastic3DBA.html#a22ebb9af17d1287f4dd07a5ec31b3561">Su</a>, const double <a class="el" href="classPlastic3DBA.html#a7c09a407be879cc1fa377c801fd2d352">beta</a>)</td></tr>
-<tr class="memdesc:a8d8b8810c5826865acda7eafd0a4d4a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classPlastic3DBA.html" title="Class for creating an triaxial plastic bounding surface material for three-dimensional elements...">Plastic3DBA</a> material to be especified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>.  <a href="#a8d8b8810c5826865acda7eafd0a4d4a8">More...</a><br /></td></tr>
+<tr class="memdesc:a8d8b8810c5826865acda7eafd0a4d4a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classPlastic3DBA.html" title="Class for creating an triaxial plastic bounding surface material for three-dimensional elements...">Plastic3DBA</a> material to be specified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>.  <a href="#a8d8b8810c5826865acda7eafd0a4d4a8">More...</a><br /></td></tr>
 <tr class="separator:a8d8b8810c5826865acda7eafd0a4d4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20ca77d0e904e86f36d08fbe8c1e31c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlastic3DBA.html#a20ca77d0e904e86f36d08fbe8c1e31c0">~Plastic3DBA</a> ()</td></tr>
 <tr class="memdesc:a20ca77d0e904e86f36d08fbe8c1e31c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classPlastic3DBA.html" title="Class for creating an triaxial plastic bounding surface material for three-dimensional elements...">Plastic3DBA</a> material.  <a href="#a20ca77d0e904e86f36d08fbe8c1e31c0">More...</a><br /></td></tr>
@@ -183,12 +174,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ada477a962fb41a7fc8d0e16cbfa12f2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlastic3DBA.html#ada477a962fb41a7fc8d0e16cbfa12f2d">CommitState</a> ()</td></tr>
 <tr class="memdesc:ada477a962fb41a7fc8d0e16cbfa12f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform converged material state update.  <a href="#ada477a962fb41a7fc8d0e16cbfa12f2d">More...</a><br /></td></tr>
 <tr class="separator:ada477a962fb41a7fc8d0e16cbfa12f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26981f4f9ad8caa978c985535430a972"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlastic3DBA.html#a26981f4f9ad8caa978c985535430a972">ReverseState</a> ()</td></tr>
+<tr class="memdesc:a26981f4f9ad8caa978c985535430a972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse the material states to previous converged state.  <a href="#a26981f4f9ad8caa978c985535430a972">More...</a><br /></td></tr>
+<tr class="separator:a26981f4f9ad8caa978c985535430a972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a664a767978381156d0d0540b7492e826"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlastic3DBA.html#a664a767978381156d0d0540b7492e826">InitialState</a> ()</td></tr>
+<tr class="memdesc:a664a767978381156d0d0540b7492e826"><td class="mdescLeft">&#160;</td><td class="mdescRight">Brings the material states to its initial state in the element.  <a href="#a664a767978381156d0d0540b7492e826">More...</a><br /></td></tr>
+<tr class="separator:a664a767978381156d0d0540b7492e826"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81351b3454fae3573b42aad829732931"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlastic3DBA.html#a81351b3454fae3573b42aad829732931">UpdateState</a> (const Eigen::VectorXd strain, const unsigned int cond)</td></tr>
 <tr class="memdesc:a81351b3454fae3573b42aad829732931"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the material state for this iteration.  <a href="#a81351b3454fae3573b42aad829732931">More...</a><br /></td></tr>
 <tr class="separator:a81351b3454fae3573b42aad829732931"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classMaterial"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classMaterial')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classMaterial.html">Material</a></td></tr>
 <tr class="memitem:a4e51c99736625c951b8910cee909c685 inherit pub_methods_classMaterial"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaterial.html#a4e51c99736625c951b8910cee909c685">Material</a> (std::string name, bool model)</td></tr>
-<tr class="memdesc:a4e51c99736625c951b8910cee909c685 inherit pub_methods_classMaterial"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> to be especified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>.  <a href="classMaterial.html#a4e51c99736625c951b8910cee909c685">More...</a><br /></td></tr>
+<tr class="memdesc:a4e51c99736625c951b8910cee909c685 inherit pub_methods_classMaterial"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> to be specified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>.  <a href="classMaterial.html#a4e51c99736625c951b8910cee909c685">More...</a><br /></td></tr>
 <tr class="separator:a4e51c99736625c951b8910cee909c685 inherit pub_methods_classMaterial"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a216a675d064866d5ce280ad5d48769d5 inherit pub_methods_classMaterial"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaterial.html#a216a675d064866d5ce280ad5d48769d5">~Material</a> ()=0</td></tr>
 <tr class="memdesc:a216a675d064866d5ce280ad5d48769d5 inherit pub_methods_classMaterial"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> object.  <a href="classMaterial.html#a216a675d064866d5ce280ad5d48769d5">More...</a><br /></td></tr>
@@ -359,7 +356,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a <a class="el" href="classPlastic3DBA.html" title="Class for creating an triaxial plastic bounding surface material for three-dimensional elements...">Plastic3DBA</a> material to be especified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>. </p>
+<p>Creates a <a class="el" href="classPlastic3DBA.html" title="Class for creating an triaxial plastic bounding surface material for three-dimensional elements...">Plastic3DBA</a> material to be specified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">K</td><td>The material bulk modulus. </td></tr>
@@ -954,7 +951,7 @@ Private Attributes</h2></td></tr>
 
 <p>Returns the initial material stiffness. </p>
 <dl class="section return"><dt>Returns</dt><dd>Matrix with the initial material tangent stiffness matrix. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The initial tangent stiifness matrix is computed when the strain vector is zero. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The initial tangent stiffness matrix is computed when the strain vector is zero. </dd></dl>
 
 <p>Implements <a class="el" href="classMaterial.html#af817c97bfaca9193d6b0a8dfb5cc302f">Material</a>.</p>
 
@@ -1179,6 +1176,66 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a664a767978381156d0d0540b7492e826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a664a767978381156d0d0540b7492e826">&#9670;&nbsp;</a></span>InitialState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Plastic3DBA::InitialState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Brings the material states to its initial state in the element. </p>
+<dl class="section note"><dt>Note</dt><dd>This funtion returns the material states to the beginning. </dd></dl>
+
+<p>Implements <a class="el" href="classMaterial.html#a722d61cfb7d6acf68f3e9b0febc6af56">Material</a>.</p>
+
+</div>
+</div>
+<a id="a26981f4f9ad8caa978c985535430a972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26981f4f9ad8caa978c985535430a972">&#9670;&nbsp;</a></span>ReverseState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Plastic3DBA::ReverseState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reverse the material states to previous converged state. </p>
+<dl class="section note"><dt>Note</dt><dd>This funtion returns the material states to previous converged states. </dd></dl>
+
+<p>Implements <a class="el" href="classMaterial.html#aad432b6af57882bfd36131a8fcf1bcaa">Material</a>.</p>
+
+</div>
+</div>
 <a id="a81351b3454fae3573b42aad829732931"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a81351b3454fae3573b42aad829732931">&#9670;&nbsp;</a></span>UpdateState()</h2>
 
@@ -1217,13 +1274,13 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">strain</td><td>Vector with the strain components at this Gauss-point. </td></tr>
-    <tr><td class="paramname">cond</td><td>If the the elatic/platic material components will be updated. </td></tr>
+    <tr><td class="paramname">cond</td><td>If the the elastic/plastic material components will be updated. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>This function computes the strain and tanget stiffness matrix once the trial strain converged. </dd></dl>
 
-<p>Implements <a class="el" href="classMaterial.html#af355dad3a019f02ef89d8ad0b9184644">Material</a>.</p>
+<p>Implements <a class="el" href="classMaterial.html#a9906db0b9a38150280e10743410cb648">Material</a>.</p>
 
 </div>
 </div>
@@ -1715,7 +1772,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classPlastic3DBA.html">Plastic3DBA</a></li>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:51 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

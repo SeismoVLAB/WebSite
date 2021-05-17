@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 		<meta name="generator" content="Doxygen 1.8.13"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>Seismo-VLAB: External Libraries</title>
+		<title>Seismo-VLAB: Libraries</title>
 		<link href="tabs.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="dynsections.js"></script>
@@ -99,17 +99,17 @@ $(document).ready(function(){initNavTree('linkExternalPackages.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">External Libraries </div>  </div>
+<div class="title">Libraries </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Exernal libraries are only used in the <a class="el" href="linkRunProcess.html">Run-Analysis</a>. In order to obtain good-performance at the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> level, specifically in tasks involving numerical integration, the well-developed and optimize free-libraries <b>Eigen C++ Template Library</b> is employed throughout the Run-Analysis in <b>Seismo-VLAB</b>. The advantage of using Eigen C++ is two-fold:</p>
+<div class="textblock"><p>Exernal libraries are only used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a>. In order to obtain good-performance at the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> level, specifically in tasks involving numerical integration, the well-developed and optimize free-libraries <b>Eigen C++ Template Library</b> is employed throughout the Run-Analysis in <b>Seismo-VLAB</b>. The advantage of using Eigen C++ is two-fold:</p>
 <ul>
 <li>It minimizes the debugging process since the structure of matrices and vector operations are similar to those in Matlab and Python.</li>
 <li>It is already optimize &ndash; comparison against the Intel Math Kernel Library (MKL) are simply outstanding &ndash; specially in ranges where matrices and vectors are not to large. This is indeed the main usage of Eigen C++ in <b>Seismo-VLAB</b>.</li>
 </ul>
-<p>In addition, scalability of parallel implementation for large simulations is usually subjected to the solver&ndash;i.e., solving the linear system, which in general is performed using direct solver that exploit LDL decomposition. A very optimize library that solves linear system using LDL-decomposition is the <b>MU</b>ltifrontal <b>M</b>assively <b>P</b>arallel <b>S</b>parse direct solver (MUMPS). The structure in which MUMPS solves a linear system is well-suited with the domain decomposition structure presented in <a class="el" href="linkRunProcess.html">Run-Analysis</a>. Thus, if parallel simulation are run in <b>Seismo-VLAB</b>, the MUMPS solver is chosen to deal with this task. Unfortunately, MUMPS is optimal for medium to large problems, since very large problems will not only require a large number of processors, but also a long time of execution.</p>
-<p>Nevertheless, very large problem can be approached using iterative solvers. The Krylov space methods for solving linear systems turn out to be very efficient at the expense of lost of accuracy. In particular, a conjugate gradient method is the best option when using symmetric and positive definite matrices. In this regard, a very optimize library that solves linear system using Krylov space methods is the <b>P</b>ortable and <b>E</b>xtensible <b>T</b>oolkit for <b>S</b>cientific <b>C</b>omputation (PETSc). Once again, the structure in which PETSc solves a linear system is well-suited with the domain decomposition structure presented in <a class="el" href="linkRunProcess.html">Run-Analysis</a>. Thus, the PETCc solver for parallel simulation in <b>Seismo-VLAB</b> is ideal to deal with this task. Therefore, the preconditioned conjugate gradient (PCG), stabilized version of Bi-Conjugate gradient (BiCGStab), conjugate Gradient Squared (CGS), and Bi-conjugate gradient iterative method (BiCG) are available in <b>Seismo-VLAB</b>. These versions are very optimized, and it provides good-agreement and speedups for a given tolerance.</p>
-<p>Please check linkPerformance for scalabilty and performance of <b>Seismo-VLAB</b>.</p>
+<p>In addition, scalability of parallel implementation for large simulations is usually subjected to the solver&ndash;i.e., solving the linear system, which in general is performed using direct solver that exploit LDL decomposition. A very optimize library that solves linear system using LDL-decomposition is the <b>MU</b>ltifrontal <b>M</b>assively <b>P</b>arallel <b>S</b>parse direct solver (MUMPS). The structure in which MUMPS solves a linear system is well-suited with the domain decomposition structure presented in <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a>. Thus, if parallel simulation are run in <b>Seismo-VLAB</b>, the MUMPS solver is chosen to deal with this task. Unfortunately, MUMPS is optimal for medium to large problems, since very large problems will not only require a large number of processors, but also a long time of execution.</p>
+<p>Nevertheless, very large problem can be approached using iterative solvers. The Krylov space methods for solving linear systems turn out to be very efficient at the expense of lost of accuracy. In particular, a conjugate gradient method is the best option when using symmetric and positive definite matrices. In this regard, a very optimize library that solves linear system using Krylov space methods is the <b>P</b>ortable and <b>E</b>xtensible <b>T</b>oolkit for <b>S</b>cientific <b>C</b>omputation (PETSc). Once again, the structure in which PETSc solves a linear system is well-suited with the domain decomposition structure presented in <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a>. Thus, the PETCc solver for parallel simulation in <b>Seismo-VLAB</b> is ideal to deal with this task. Therefore, the preconditioned conjugate gradient (PCG), stabilized version of Bi-Conjugate gradient (BiCGStab), conjugate Gradient Squared (CGS), and Bi-conjugate gradient iterative method (BiCG) are available in <b>Seismo-VLAB</b>. These versions are very optimized, and it provides good-agreement and speedups for a given tolerance.</p>
+<p>Please check linkPerformance for scalability and performance of <b>Seismo-VLAB</b>.</p>
 <dl class="section note"><dt>Note</dt><dd><b>MUMPS</b> can be downloaded for free at <a href="http://mumps.enseeiht.fr/">http://mumps.enseeiht.fr/</a>. </dd>
 <dd>
 <b>PETSc</b> can be downloaded for free at <a href="https://www.mcs.anl.gov/petsc/">https://www.mcs.anl.gov/petsc/</a>. </dd>
@@ -122,7 +122,7 @@ $(document).ready(function(){initNavTree('linkExternalPackages.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

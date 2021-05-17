@@ -26,6 +26,8 @@ var classTIEQlin2DQuad4 =
     [ "GetStressAt", "classTIEQlin2DQuad4.html#a994fd50cfb19ab147821aeb3d270aa1a", null ],
     [ "GetTotalDegreeOfFreedom", "classTIEQlin2DQuad4.html#a530517ad226b9d2c8ddb070fd8e410eb", null ],
     [ "GetVTKResponse", "classTIEQlin2DQuad4.html#aafc55c21269fa6fea525e68a72d38741", null ],
+    [ "InitialState", "classTIEQlin2DQuad4.html#aff8375b106ed82aa5674b5dc596daad5", null ],
+    [ "ReverseState", "classTIEQlin2DQuad4.html#aad3801cd69c5974275984818fa2fcf66", null ],
     [ "SetDamping", "classTIEQlin2DQuad4.html#a9f9bc5d796df568e9f8ea7121f87e5be", null ],
     [ "SetDomain", "classTIEQlin2DQuad4.html#a402d3cfbfeb3c35c0083d1e561ae8b3f", null ],
     [ "UpdateState", "classTIEQlin2DQuad4.html#af1255cd98871eba3bfc758b411d312a3", null ],

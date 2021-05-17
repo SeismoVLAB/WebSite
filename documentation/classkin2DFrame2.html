@@ -115,22 +115,12 @@ $(document).ready(function(){initNavTree('classkin2DFrame2.html','');});
 <div class="dynheader">
 Inheritance diagram for kin2DFrame2:</div>
 <div class="dyncontent">
-<div class="center"><img src="classkin2DFrame2__inherit__graph.png" border="0" usemap="#kin2DFrame2_inherit__map" alt="Inheritance graph"/></div>
-<map name="kin2DFrame2_inherit__map" id="kin2DFrame2_inherit__map">
-<area shape="rect" id="node2" href="classElement.html" title="Virtual class for creating an element in a mesh. " alt="" coords="20,5,91,32"/>
+ <div class="center">
+  <img src="classkin2DFrame2.png" usemap="#kin2DFrame2_map" alt=""/>
+  <map id="kin2DFrame2_map" name="kin2DFrame2_map">
+<area href="classElement.html" title="Virtual class for creating an element in a mesh. " alt="Element" shape="rect" coords="0,0,87,24"/>
 </map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for kin2DFrame2:</div>
-<div class="dyncontent">
-<div class="center"><img src="classkin2DFrame2__coll__graph.png" border="0" usemap="#kin2DFrame2_coll__map" alt="Collaboration graph"/></div>
-<map name="kin2DFrame2_coll__map" id="kin2DFrame2_coll__map">
-<area shape="rect" id="node2" href="classElement.html" title="Virtual class for creating an element in a mesh. " alt="" coords="183,200,254,227"/>
-<area shape="rect" id="node3" title="STL class. " alt="" coords="55,103,135,130"/>
-<area shape="rect" id="node8" href="classSection.html" title="Virtual class for creating a section object. " alt="" coords="60,200,127,227"/>
-<area shape="rect" id="node4" title="STL class. " alt="" coords="31,5,158,47"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -143,6 +133,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9765103fd5650b20aa124cb6c1349fa5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkin2DFrame2.html#a9765103fd5650b20aa124cb6c1349fa5">CommitState</a> ()</td></tr>
 <tr class="memdesc:a9765103fd5650b20aa124cb6c1349fa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the material states in the element.  <a href="#a9765103fd5650b20aa124cb6c1349fa5">More...</a><br /></td></tr>
 <tr class="separator:a9765103fd5650b20aa124cb6c1349fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65454affe0c75a391f35bc34beb2eb9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkin2DFrame2.html#a65454affe0c75a391f35bc34beb2eb9d">ReverseState</a> ()</td></tr>
+<tr class="memdesc:a65454affe0c75a391f35bc34beb2eb9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse the material/section states to previous converged state in this element.  <a href="#a65454affe0c75a391f35bc34beb2eb9d">More...</a><br /></td></tr>
+<tr class="separator:a65454affe0c75a391f35bc34beb2eb9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed87c39561e79d181d8a295e3f9674b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkin2DFrame2.html#aaed87c39561e79d181d8a295e3f9674b">InitialState</a> ()</td></tr>
+<tr class="memdesc:aaed87c39561e79d181d8a295e3f9674b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Brings the material/section state to its initial state in this element.  <a href="#aaed87c39561e79d181d8a295e3f9674b">More...</a><br /></td></tr>
+<tr class="separator:aaed87c39561e79d181d8a295e3f9674b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62c8cf0bdb0c24d385d2bfeafa8c9e49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkin2DFrame2.html#a62c8cf0bdb0c24d385d2bfeafa8c9e49">UpdateState</a> ()</td></tr>
 <tr class="memdesc:a62c8cf0bdb0c24d385d2bfeafa8c9e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the material states in the element.  <a href="#a62c8cf0bdb0c24d385d2bfeafa8c9e49">More...</a><br /></td></tr>
 <tr class="separator:a62c8cf0bdb0c24d385d2bfeafa8c9e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,7 +188,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2a89d4a6ecde2004b579d06120b6ba15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the internal (elastic) forces acting on the element.  <a href="#a2a89d4a6ecde2004b579d06120b6ba15">More...</a><br /></td></tr>
 <tr class="separator:a2a89d4a6ecde2004b579d06120b6ba15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71774ff0741ccde3c936cb5e8fa4c27d"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkin2DFrame2.html#a71774ff0741ccde3c936cb5e8fa4c27d">ComputeInternalDynamicForces</a> ()</td></tr>
-<tr class="memdesc:a71774ff0741ccde3c936cb5e8fa4c27d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the elastic, inertial, and vicous forces acting on the element.  <a href="#a71774ff0741ccde3c936cb5e8fa4c27d">More...</a><br /></td></tr>
+<tr class="memdesc:a71774ff0741ccde3c936cb5e8fa4c27d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the elastic, inertial, and viscous forces acting on the element.  <a href="#a71774ff0741ccde3c936cb5e8fa4c27d">More...</a><br /></td></tr>
 <tr class="separator:a71774ff0741ccde3c936cb5e8fa4c27d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63a00e38159d61d3ad362ee2ff671f47"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkin2DFrame2.html#a63a00e38159d61d3ad362ee2ff671f47">ComputeSurfaceForces</a> (const std::shared_ptr&lt; <a class="el" href="classLoad.html">Load</a> &gt; &amp;surface, unsigned int face)</td></tr>
 <tr class="memdesc:a63a00e38159d61d3ad362ee2ff671f47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the surface forces acting on the element.  <a href="#a63a00e38159d61d3ad362ee2ff671f47">More...</a><br /></td></tr>
@@ -223,7 +219,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a34e4f3cfd76955fca7a8593be1559bc0 inherit pub_methods_classElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns total number of degree of freedom in the element.  <a href="classElement.html#a34e4f3cfd76955fca7a8593be1559bc0">More...</a><br /></td></tr>
 <tr class="separator:a34e4f3cfd76955fca7a8593be1559bc0 inherit pub_methods_classElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fdd16a2c5bc4deffb9be1b27fdd0f7b inherit pub_methods_classElement"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a0fdd16a2c5bc4deffb9be1b27fdd0f7b">GetNodes</a> () const</td></tr>
-<tr class="memdesc:a0fdd16a2c5bc4deffb9be1b27fdd0f7b inherit pub_methods_classElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> Connectivity Indeces.  <a href="classElement.html#a0fdd16a2c5bc4deffb9be1b27fdd0f7b">More...</a><br /></td></tr>
+<tr class="memdesc:a0fdd16a2c5bc4deffb9be1b27fdd0f7b inherit pub_methods_classElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> Connectivity Indexes.  <a href="classElement.html#a0fdd16a2c5bc4deffb9be1b27fdd0f7b">More...</a><br /></td></tr>
 <tr class="separator:a0fdd16a2c5bc4deffb9be1b27fdd0f7b inherit pub_methods_classElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae86d3250af2c438f0562ebf161fc6c9 inherit pub_methods_classElement"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#aae86d3250af2c438f0562ebf161fc6c9">HasFixedNode</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="classNode.html">Node</a> &gt; &gt; &amp;nodes) const</td></tr>
 <tr class="memdesc:aae86d3250af2c438f0562ebf161fc6c9 inherit pub_methods_classElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if the element has fixed nodes.  <a href="classElement.html#aae86d3250af2c438f0562ebf161fc6c9">More...</a><br /></td></tr>
@@ -371,7 +367,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Save the material states in the element. </p>
-<dl class="section note"><dt>Note</dt><dd>This funtion sets the trial states as converged ones in <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function sets the trial states as converged ones in <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classElement.html#ae3707c66dc2119715065f74e169552e7">Element</a>.</p>
 
@@ -458,7 +454,7 @@ Private Attributes</h2></td></tr>
 
 <p>Computes the current bending moments. </p>
 <dl class="section return"><dt>Returns</dt><dd>Vector with the bending moments at each <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The bending momments are according to <a class="el" href="linkkin2DFrame2.html">kin2DFrame2</a>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The bending moments are according to <a class="el" href="linkkin2DFrame2.html">kin2DFrame2</a>. </dd></dl>
 
 </div>
 </div>
@@ -506,7 +502,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Vector with the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> surface force. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The body force vector can be revisited in <a class="el" href="linkZeroLength1D.html">ZeroLength1D</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#af92caa95acacce4ffd61c2778aabbfe6" title="Assemble the external force vector. ">Assembler::ComputeExternalForceVector()</a>, <a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force assiciated to the integrator. ">Integrator::ComputeEffectiveForce()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#af92caa95acacce4ffd61c2778aabbfe6" title="Assemble the external force vector. ">Assembler::ComputeExternalForceVector()</a>, <a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force associated to the integrator. ">Integrator::ComputeEffectiveForce()</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classElement.html#a19ade63e2e7ef3e0e419e1bb8ea8ef2d">Element</a>.</p>
 
@@ -538,7 +534,7 @@ Private Attributes</h2></td></tr>
 <p>Compute the damping matrix of the element using gauss-integration. </p>
 <dl class="section return"><dt>Returns</dt><dd>Matrix with the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> damping matrix. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The damping matrix can be revisited in <a class="el" href="linkkin2DFrame2.html">kin2DFrame2</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#aa1a91c63e490e93e583f3699ce3fcde6" title="Assemble the stiffness matrix. ">Assembler::ComputeDampingMatrix()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness assiciated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#aa1a91c63e490e93e583f3699ce3fcde6" title="Assemble the stiffness matrix. ">Assembler::ComputeDampingMatrix()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness associated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classElement.html#a2f0c9594ed5b6ffaa1a99067e65c2c5a">Element</a>.</p>
 
@@ -588,7 +584,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Vector with the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> domain reduction forces. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The DRM force vector can be revisited in <a class="el" href="linkZeroLength1D.html">ZeroLength1D</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#af92caa95acacce4ffd61c2778aabbfe6" title="Assemble the external force vector. ">Assembler::ComputeExternalForceVector()</a>, <a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force assiciated to the integrator. ">Integrator::ComputeEffectiveForce()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#af92caa95acacce4ffd61c2778aabbfe6" title="Assemble the external force vector. ">Assembler::ComputeExternalForceVector()</a>, <a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force associated to the integrator. ">Integrator::ComputeEffectiveForce()</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classElement.html#a41c1d4cacb1ac26cd0f7debeae50359a">Element</a>.</p>
 
@@ -729,10 +725,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compute the elastic, inertial, and vicous forces acting on the element. </p>
+<p>Compute the elastic, inertial, and viscous forces acting on the element. </p>
 <dl class="section return"><dt>Returns</dt><dd>Vector with the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> dynamic internal force. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The internal force vector can be revisited in <a class="el" href="linkElement.html">Element</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#a8fe7bd64c4a0f7c22e9c8cdbce7b87e7" title="Assemble the internal elastic, inertial, and vicous force vector. ">Assembler::ComputeDynamicInternalForceVector()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#a8fe7bd64c4a0f7c22e9c8cdbce7b87e7" title="Assemble the internal elastic, inertial, and viscous force vector. ">Assembler::ComputeDynamicInternalForceVector()</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classElement.html#aad5d31a9b1ea724bd409a48b6606e3c6">Element</a>.</p>
 
@@ -764,7 +760,7 @@ Private Attributes</h2></td></tr>
 <p>Compute the internal (elastic) forces acting on the element. </p>
 <dl class="section return"><dt>Returns</dt><dd>Vector with the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> internal force. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The internal force vector can be revisited in <a class="el" href="linkkin2DFrame2.html">kin2DFrame2</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#a47e85d549587ec6421e9f92b94b1d870" title="Assemble the internal force vector. ">Assembler::ComputeInternalForceVector()</a>, <a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force assiciated to the integrator. ">Integrator::ComputeEffectiveForce()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#a47e85d549587ec6421e9f92b94b1d870" title="Assemble the internal force vector. ">Assembler::ComputeInternalForceVector()</a>, <a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force associated to the integrator. ">Integrator::ComputeEffectiveForce()</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classElement.html#a44fd58f936c3e2452798f351b6fb896d">Element</a>.</p>
 
@@ -916,7 +912,7 @@ Private Attributes</h2></td></tr>
 <p>Compute the lumped/consistent mass matrix of the element. </p>
 <dl class="section return"><dt>Returns</dt><dd>Matrix with the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> mass matrix. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The mass matrix can be revisited in <a class="el" href="linkkin2DFrame2.html">kin2DFrame2</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#a573ec05093f94f301cc2ca0c2fe9b918" title="Assemble the mass matrix. ">Assembler::ComputeMassMatrix()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness assiciated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#a573ec05093f94f301cc2ca0c2fe9b918" title="Assemble the mass matrix. ">Assembler::ComputeMassMatrix()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness associated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classElement.html#aca10062cfee57ae5270744e504e28045">Element</a>.</p>
 
@@ -948,7 +944,7 @@ Private Attributes</h2></td></tr>
 <p>Compute the PML history matrix using gauss-integration. </p>
 <dl class="section return"><dt>Returns</dt><dd>Matrix with the PML <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> matrix. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The PML matrix is none existent for this element. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#ab2d1f2de89c922d6ecae3e4520594212" title="Assemble the integrated history matrix for Perfectly-Matched Layer (PML). ">Assembler::ComputePMLHistoryMatrix()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness assiciated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#ab2d1f2de89c922d6ecae3e4520594212" title="Assemble the integrated history matrix for Perfectly-Matched Layer (PML). ">Assembler::ComputePMLHistoryMatrix()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness associated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classElement.html#aa82f54d3bb38d7161ddd1e9d28858de7">Element</a>.</p>
 
@@ -980,7 +976,7 @@ Private Attributes</h2></td></tr>
 <p>Compute the stiffness matrix of the element using gauss-integration. </p>
 <dl class="section return"><dt>Returns</dt><dd>Matrix with the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> stiffness matrix. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The stiffness matrix can be revisited in <a class="el" href="linkkin2DFrame2.html">kin2DFrame2</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#a225cb38fa729fc8e6f988186dcb71d67" title="Assemble the stiffness matrix. ">Assembler::ComputeStiffnessMatrix()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness assiciated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#a225cb38fa729fc8e6f988186dcb71d67" title="Assemble the stiffness matrix. ">Assembler::ComputeStiffnessMatrix()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness associated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classElement.html#a7a3de7d3765b7f1a690c9ad68e5914ad">Element</a>.</p>
 
@@ -1086,7 +1082,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Vector with the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> surface force. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The surface force vector can be revisited in <a class="el" href="linkZeroLength1D.html">ZeroLength1D</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#af92caa95acacce4ffd61c2778aabbfe6" title="Assemble the external force vector. ">Assembler::ComputeExternalForceVector()</a>, <a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force assiciated to the integrator. ">Integrator::ComputeEffectiveForce()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#af92caa95acacce4ffd61c2778aabbfe6" title="Assemble the external force vector. ">Assembler::ComputeExternalForceVector()</a>, <a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force associated to the integrator. ">Integrator::ComputeEffectiveForce()</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classElement.html#a39ced5654444f81d4ddc60deaccb947a">Element</a>.</p>
 
@@ -1351,6 +1347,66 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aaed87c39561e79d181d8a295e3f9674b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed87c39561e79d181d8a295e3f9674b">&#9670;&nbsp;</a></span>InitialState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kin2DFrame2::InitialState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Brings the material/section state to its initial state in this element. </p>
+<dl class="section note"><dt>Note</dt><dd>This function returns the meterial states to the beginning. </dd></dl>
+
+<p>Implements <a class="el" href="classElement.html#af9898dbc94c8e5977276fd51fdd1e515">Element</a>.</p>
+
+</div>
+</div>
+<a id="a65454affe0c75a391f35bc34beb2eb9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65454affe0c75a391f35bc34beb2eb9d">&#9670;&nbsp;</a></span>ReverseState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kin2DFrame2::ReverseState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reverse the material/section states to previous converged state in this element. </p>
+<dl class="section note"><dt>Note</dt><dd>This function returns the trial states to previous converged states at the <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> level. </dd></dl>
+
+<p>Implements <a class="el" href="classElement.html#abda1b167d76310e763c8ab866670e073">Element</a>.</p>
+
+</div>
+</div>
 <a id="ae617a162bcc5c20143569a0b166fff1a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae617a162bcc5c20143569a0b166fff1a">&#9670;&nbsp;</a></span>SetDamping()</h2>
 
@@ -1419,7 +1475,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>This funtion sets the relation between <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> and <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> objects. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function sets the relation between <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> and <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> objects. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classlin2DQuad4.html#a062e0edda5824336c4ea8cd1fe9095db" title="The Element Nodes. ">lin2DQuad4::theNodes</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classElement.html#af1b8729c09c0ef4ca8cee27242033445">Element</a>.</p>
@@ -1450,7 +1506,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Update the material states in the element. </p>
-<dl class="section note"><dt>Note</dt><dd>This funtion update the trial states at the <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> level. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function update the trial states at the <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> level. </dd></dl>
 
 <p>Implements <a class="el" href="classElement.html#a0a95bf73cb5f414a3f551a02557a13df">Element</a>.</p>
 
@@ -1584,7 +1640,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classkin2DFrame2.html">kin2DFrame2</a></li>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

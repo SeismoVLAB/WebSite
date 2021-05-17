@@ -102,24 +102,60 @@ $(document).ready(function(){initNavTree('linkCompositeBathe.html','');});
 <div class="title"><a class="el" href="classCompositeBathe.html" title="Class for integrating the equation of motion using an implicit second-order composite method...">CompositeBathe</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classCompositeBathe.html" title="Class for integrating the equation of motion using an implicit second-order composite method...">CompositeBathe</a> keyword creates a two-step implicit second order accurate integrator class that is used for dynamic analysis. First step assumes trapezoidal rule, this is displacement and velocity are approximated as,</p>
+<div class="textblock"><h1>Background</h1>
+<p>The <a class="el" href="linkCompositeBathe.html">CompositeBathe</a> class creates a two-step implicit second order integrator that is used in a <a class="el" href="linkDynamicAnalysis.html">DynamicAnalysis</a>. First step assumes trapezoidal rule, this is displacement and velocity are approximated as,</p>
 <p class="formulaDsp">
-\[ V_{n+{^1/{_2}}} = V_{n} + \frac{\Delta t}{4} \left( A_{n+{^1/{_2}}} + A_n \right) \nonumber \\ U_{n+{^1/{_2}}} = U_{n} + \frac{\Delta t}{4} \left( V_{n+{^1/{_2}}} + V_n \right) \nonumber \]
+\[ V_{n+{^1/{_2}}} = V_{n} + \frac{\Delta t}{4} \left( A_{n+{^1/{_2}}} + A_n \right) \,,\\ U_{n+{^1/{_2}}} = U_{n} + \frac{\Delta t}{4} \left( V_{n+{^1/{_2}}} + V_n \right) \,, \]
 </p>
 <p>thus, the effective stiffness matrix and force vector are computed as,</p>
 <p class="formulaDsp">
-\[ \textbf{K}_{\textrm{eff}} = \textbf{K}^{(i-1)}_{n+{^1/{_2}}} + \frac{16}{\Delta t^2} \textbf{M} + \frac{4}{\Delta t} \textbf{C} \nonumber \\ \textrm{F}_{\textrm{eff}} = \rm{R}_{n+{^1/{_2}}}^{(i)} - \textrm{F}_{n+{^1/{_2}}}^{(i-1)} + \textbf{M} \left(\frac{8}{\Delta t}V_n + A_n - \frac{16}{\Delta t^2} \Delta U \right) + \textbf{C} \left(V_n - \frac{4}{\Delta t} \Delta U\right) \nonumber \]
+\[ \textbf{K}_{\textrm{eff}} = \textbf{K}^{(i-1)}_{n+{^1/{_2}}} + \frac{16}{\Delta t^2} \textbf{M} + \frac{4}{\Delta t} \textbf{C} \,,\\ \textrm{F}_{\textrm{eff}} = \rm{R}_{n+{^1/{_2}}}^{(i)} - \textrm{F}_{n+{^1/{_2}}}^{(i-1)} + \textbf{M} \left(\frac{8}{\Delta t}V_n + A_n - \frac{16}{\Delta t^2} \Delta U \right) + \textbf{C} \left(V_n - \frac{4}{\Delta t} \Delta U\right) \,, \]
 </p>
 <p>Second step assumes a 3-point Euler backward method, this is velocity and acceleration are approximated as,</p>
 <p class="formulaDsp">
-\[ V_{n+1} = \frac{1}{\Delta t} \left( U_{n} - 4\, U_{n+{^1/{_2}}} + 3\, U_{n+1}\right) \nonumber \\ A_{n+1} = \frac{1}{\Delta t} \left( V_{n} - 4\, V_{n+{^1/{_2}}} + 3\, V_{n+1}\right) \nonumber \]
+\[ V_{n+1} = \frac{1}{\Delta t} \left( U_{n} - 4\, U_{n+{^1/{_2}}} + 3\, U_{n+1}\right)\,, \\ A_{n+1} = \frac{1}{\Delta t} \left( V_{n} - 4\, V_{n+{^1/{_2}}} + 3\, V_{n+1}\right)\,, \]
 </p>
 <p>thus, the effective stiffness matrix and force vector are now computed as,</p>
 <p class="formulaDsp">
-\[ \textbf{K}_{\textrm{eff}} = \textbf{K}^{(i-1)}_{n+1} + \frac{9}{\Delta t^2} \textbf{M} + \frac{3}{\Delta t} \textbf{C} \nonumber \\ \textrm{F}_{\rm{eff}} = \textrm{R}_{n+1}^{(i)} - \textrm{F}_{n+1}^{(i-1)} + \textbf{C} \left( \frac{3}{\Delta t}U_{n+1}^{(i-1)} - \frac{4}{\Delta t}U_{n+{^1/{_2}}} + \frac{1}{\Delta t}U_{n}\right) - \textbf{M} \left(\frac{9}{\Delta t^2}U_{n+1}^{(i-1)} - \frac{12}{\Delta t^2}U_{n+{^1/{_2}}} + \frac{3}{\Delta t^2}U_{n} - \frac{4}{\Delta t}V_{n+{^1/{_2}}} + \frac{1}{\Delta t}V_{n}\right) \nonumber \]
+\[ \textbf{K}_{\textrm{eff}} = \textbf{K}^{(i-1)}_{n+1} + \frac{9}{\Delta t^2} \textbf{M} + \frac{3}{\Delta t} \textbf{C} \\ \textrm{F}_{\rm{eff}} = \textrm{R}_{n+1}^{(i)} - \textrm{F}_{n+1}^{(i-1)} + \textbf{C} \left( \frac{3}{\Delta t}U_{n+1}^{(i-1)} - \frac{4}{\Delta t}U_{n+{^1/{_2}}} + \frac{1}{\Delta t}U_{n}\right) - \textbf{M} \left(\frac{9}{\Delta t^2}U_{n+1}^{(i-1)} - \frac{12}{\Delta t^2}U_{n+{^1/{_2}}} + \frac{3}{\Delta t^2}U_{n} - \frac{4}{\Delta t}V_{n+{^1/{_2}}} + \frac{1}{\Delta t}V_{n}\right) \]
 </p>
-<hr/>
-<p>A <a class="el" href="classCompositeBathe.html" title="Class for integrating the equation of motion using an implicit second-order composite method...">CompositeBathe</a> integrator can be created using the built-in parse-structure provided in the Parser as, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+<p>where \(\textbf{K}_{\textrm{eff}}\) and \(\textrm{F}_{\textrm{eff}}\) are used to compute \(\delta U^{(i)} = \textbf{K}_{\textrm{eff}}^{-1} \textrm{F}_{\textrm{eff}}\) and \(\Delta U = \displaystyle{\sum_i \delta U^{(i)}}\) used in the <a class="el" href="linkAlgorithm.html">Algorithm</a>.</p>
+<p><b>REFERENCE:</b></p><ul>
+<li>Bathe, K. Jurgen, "Finite Element Procedures", Chapter 6: pages 779-782. Prentice-Hall, 1996.</li>
+<li>Bathe, K. Jurgen, "Conserving Energy and Momentum in Nonlinear Dynamics: A Simple Implicit Time Integration Scheme", Computers and Structures, Vol(85), 437-445, 2007.</li>
+<li>Bathe K. Jurgen and Gunwoo Noh, "Insight into an implicit time integration scheme for structural dynamics", Computers and Structures, Vol(98-99), 1-6, 2012.</li>
+</ul>
+<h1>Pre-Analysis</h1>
+<p>The python <a class="el" href="linkSoftwareStructure.html#linkPreProcess">Pre-Analysis</a> in the <span style="color:green"><b>01-Pre_Process/Method/Attach.py</b></span> file provides with an interface to create a <a class="el" href="linkCompositeBathe.html">CompositeBathe</a> integrator. We use the <span style="color:blue"><b>addIntegrator()</b></span> as follows:</p>
+<ul>
+<li><p class="startli"><span style="color:blue"><b>addIntegrator</b></span>(<b>tag</b>, <b>attributes</b>):</p><ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of this integrator, i.e., tag &gt; -1</li>
+<li><span style="color:green"><b>attributes</b></span> : Specific properties for the created integrator, for example<ul>
+<li><span style="color:blue">'name'</span> : The integrator's name, in this case <b>BATHE</b></li>
+<li><span style="color:blue">'dt'</span> : The integrator's time step</li>
+<li><span style="color:blue">'ktol'</span> : Tolerance to set a stiffness matrix value kij = 0.0</li>
+<li><span style="color:blue">'mtol'</span> : Tolerance to set a mass matrix value mij = 0.0</li>
+<li><span style="color:blue">'ftol'</span> : Tolerance to set a force vector value fj = 0.0</li>
+</ul>
+</li>
+</ul>
+<p class="startli"><b>Example</b> </p><blockquote class="doxtable">
+<p>A <b>BATHE</b> integrator can be defined using the python interface as follows:<br />
+SVL.addIntegrator(<b>tag</b>=1, <b>attributes</b>={'name': 'Bathe', 'dt': 0.00100}) </p>
+</blockquote>
+<p class="startli"><b>Application</b><br />
+ This integrator has not been validated yet.</p>
+</li>
+</ul>
+<p>On the contrary, the <span style="color:green"><b>01-Pre_Process/Method/Remove.py</b></span> file provides with an interface to depopulate the <code>Entities</code> dictionary. For example, to remove an already define <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a>, use:</p><ul>
+<li><span style="color:blue"><b>delIntegrator</b></span>(<b>tag</b>):<ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of the integrator to be removed, i.e., tag &gt; -1</li>
+</ul>
+</li>
+</ul>
+<h1>Run-Analysis</h1>
+<p>The C++ <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> in the <span style="color:green"><b>02-Run_Process/10-Integrators/04-Bathe/CompositeBathe.cpp</b></span> file provides the class implementation. A <a class="el" href="linkCompositeBathe.html">CompositeBathe</a> is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a> and is defined inside the <span style="color:black"><b>"Simulations"</b></span> json field indicating its <span style="color:blue"><b>"Tag"</b></span> as follows,</p><ul>
+<li><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
 {
     <span style="color:black"><b>"Simulations"</b></span>: {
         <span style="color:blue"><b>"Tag"</b></span>: {
@@ -136,11 +172,11 @@ $(document).ready(function(){initNavTree('linkCompositeBathe.html','');});
         }
     }
 }
-</pre><table class="doxtable">
+</pre> <table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
-<td><code>combo</code> </td><td>The combination to which this <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic snalysis between two steps is going to be performed...">Integrator</a> will be defined. </td></tr>
+<td><code>combo</code> </td><td>The combination to which this <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a> will be defined. </td></tr>
 <tr>
 <td><code>mTol</code> </td><td>The specified tolerance for setting \(M_{ij} \sim 0.0\). </td></tr>
 <tr>
@@ -150,14 +186,17 @@ $(document).ready(function(){initNavTree('linkCompositeBathe.html','');});
 <tr>
 <td><code>dt</code> </td><td>The time step for the analysis. </td></tr>
 </table>
+<br />
 <dl class="section attention"><dt>Attention</dt><dd>The default tolerance for \(M_{ij}\), \(K_{ij}\), and \(F_{j}\) is \(10^{-15}\). </dd></dl>
+</li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

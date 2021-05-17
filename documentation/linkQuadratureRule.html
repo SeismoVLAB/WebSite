@@ -102,22 +102,27 @@ $(document).ready(function(){initNavTree('linkQuadratureRule.html','');});
 <div class="title">Quadrature Rule </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>A <a class="el" href="classQuadratureRule.html" title="Virtual class for defining a Quadrature Rule to integrate quantities in the iso-parametric elements...">QuadratureRule</a> is an approximation of the definite integral of a function, usually stated as a weighted sum of function values at specified points within the domain of integration. The most common domain of integration for such a rule is taken as [−1, 1], so the rule is stated as:</p>
+<div class="textblock"><h1>Background</h1>
+<p>A <a class="el" href="classQuadratureRule.html" title="Virtual class for defining a Quadrature Rule to integrate quantities in the iso-parametric elements...">QuadratureRule</a> is an approximation of the definite integral of a function, usually stated as a weighted sum of function values at specified points within the domain of integration. The most common domain of integration for such a rule is taken as [−1, 1], so the rule is stated as:</p>
 <ul>
-<li>One-dimenional case: <p class="formulaDsp">
+<li>One-dimensional case: <p class="formulaDsp">
 \[ \displaystyle{ \int _{-1}^{1}f(x)\,dx \approx \sum_{i=1}^{n} w_{i} \, f(x_{i})} \]
 </p>
 </li>
-<li>Two-dimenional case: <p class="formulaDsp">
+<li>Two-dimensional case: <p class="formulaDsp">
 \[ \displaystyle{ \int_{-1}^{1} \int_{-1}^{1} f(x,y) \,dx\,dy \approx \sum_{i=1}^{n} \sum_{j=1}^{n} w_{i} \, w_{j} \, f(x_{i},y_{j}) } \]
 </p>
 </li>
-<li>Three-dimenional case: <p class="formulaDsp">
+<li>Three-dimensional case: <p class="formulaDsp">
 \[ \displaystyle{ \int_{-1}^{1} \int_{-1}^{1} \int_{-1}^{1}f(x,y,z)\,dx\,dy\,dz \approx \sum_{i=1}^{n} \sum_{j=1}^{n} \sum_{k=1}^{n} w_{i} \, w_{j} \, w_{k} \, f(x_{i},y_{j},z_{k})} \]
 </p>
 </li>
 </ul>
 <p>where \(xi\) are the quadrature points and \(w_i\) for \(i = 1, \ldots, n\) the weights.</p>
+<p><b>REFERENCES:</b></p><ul>
+<li>Bathe, K. Jurgen, "Finite Element Procedures", Chapter 5: pages 465-468. Prentice-Hall, 1996.</li>
+<li>R. Lobatto, "Lessen over de differentiaal- en integraalrekening" , 1–2 , 's Gravenhage (1851–1852)</li>
+</ul>
 <h1><a class="anchor" id="linkGaussQuadrature"></a>
 Gauss Quadrature</h1>
 <p>Gaussian quadrature is optimal because it fits all polynomials up to degree \(2n - 1\) exactly, where \(n\) is the number of integration points.</p>
@@ -234,7 +239,7 @@ Lobatto Quadrature</h1>
 <br />
 <dl class="section note"><dt>Note</dt><dd>Integration in higher dimensions are performed using the the same information provided above. </dd>
 <dd>
-Currently integration for Tria and Tetra are performed using Gauss quadrature. </dd></dl>
+Currently integration for <b>TRIA</b> and <b>TETRA</b> are performed using Gauss quadrature. </dd></dl>
 </li>
 </ul>
 </div></div><!-- contents -->
@@ -243,7 +248,7 @@ Currently integration for Tria and Tetra are performed using Gauss quadrature. <
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

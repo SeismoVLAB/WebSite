@@ -23,6 +23,8 @@ var classPlasticPlaneStrainJ2 =
     [ "GetStress", "classPlasticPlaneStrainJ2.html#a219b2f304340d1d9eab1c5f0b4243a75", null ],
     [ "GetTangentStiffness", "classPlasticPlaneStrainJ2.html#a6753b2fd27a59902bc635edf7bd11f93", null ],
     [ "GetTotalStress", "classPlasticPlaneStrainJ2.html#a626502338655c4ecfdaf4c513e03d5b8", null ],
+    [ "InitialState", "classPlasticPlaneStrainJ2.html#a4d2cf5dc4e01de8bd8aaecc9973af20e", null ],
+    [ "ReverseState", "classPlasticPlaneStrainJ2.html#a777914bdcefc9ee992a6f65cceb84732", null ],
     [ "UpdateState", "classPlasticPlaneStrainJ2.html#ad977aed4905ec9ef8cc380f7ace68cee", null ],
     [ "alpha", "classPlasticPlaneStrainJ2.html#a52fdaa81fc4df133da2a5a99227162b6", null ],
     [ "BackStress", "classPlasticPlaneStrainJ2.html#a07d852dae7acc2cafa9a19ab41309bf5", null ],

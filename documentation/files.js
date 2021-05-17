@@ -15,6 +15,9 @@ var files =
     [ "CompositeBathe.hpp", "CompositeBathe_8hpp.html", [
       [ "CompositeBathe", "classCompositeBathe.html", "classCompositeBathe" ]
     ] ],
+    [ "Concrete1DFiber.hpp", "Concrete1DFiber_8hpp.html", [
+      [ "Concrete1DFiber", "classConcrete1DFiber.html", "classConcrete1DFiber" ]
+    ] ],
     [ "Constraint.hpp", "Constraint_8hpp.html", [
       [ "Constraint", "classConstraint.html", "classConstraint" ]
     ] ],
@@ -27,6 +30,12 @@ var files =
     ] ],
     [ "EigenSolver.hpp", "EigenSolver_8hpp.html", [
       [ "EigenSolver", "classEigenSolver.html", "classEigenSolver" ]
+    ] ],
+    [ "Elastic1DFiber.hpp", "Elastic1DFiber_8hpp.html", [
+      [ "Elastic1DFiber", "classElastic1DFiber.html", "classElastic1DFiber" ]
+    ] ],
+    [ "Elastic1DGap.hpp", "Elastic1DGap_8hpp.html", [
+      [ "Elastic1DGap", "classElastic1DGap.html", "classElastic1DGap" ]
     ] ],
     [ "Elastic1DLinear.hpp", "Elastic1DLinear_8hpp.html", [
       [ "Elastic1DLinear", "classElastic1DLinear.html", "classElastic1DLinear" ]
@@ -48,6 +57,9 @@ var files =
     ] ],
     [ "ExtendedNewmarkBeta.hpp", "ExtendedNewmarkBeta_8hpp.html", [
       [ "ExtendedNewmarkBeta", "classExtendedNewmarkBeta.html", "classExtendedNewmarkBeta" ]
+    ] ],
+    [ "Fib3DLineSection.hpp", "Fib3DLineSection_8hpp.html", [
+      [ "Fib3DLineSection", "classFib3DLineSection.html", "classFib3DLineSection" ]
     ] ],
     [ "GaussQuadrature.hpp", "GaussQuadrature_8hpp.html", [
       [ "GaussQuadrature", "classGaussQuadrature.html", "classGaussQuadrature" ]
@@ -109,6 +121,12 @@ var files =
     [ "Lin2DTee.hpp", "Lin2DTee_8hpp.html", [
       [ "Lin2DTee", "classLin2DTee.html", "classLin2DTee" ]
     ] ],
+    [ "lin2DTria3.hpp", "lin2DTria3_8hpp.html", [
+      [ "lin2DTria3", "classlin2DTria3.html", "classlin2DTria3" ]
+    ] ],
+    [ "lin2DTria6.hpp", "lin2DTria6_8hpp.html", [
+      [ "lin2DTria6", "classlin2DTria6.html", "classlin2DTria6" ]
+    ] ],
     [ "lin2DTruss2.hpp", "lin2DTruss2_8hpp.html", [
       [ "lin2DTruss2", "classlin2DTruss2.html", "classlin2DTruss2" ]
     ] ],
@@ -150,6 +168,12 @@ var files =
     ] ],
     [ "Lin3DTee.hpp", "Lin3DTee_8hpp.html", [
       [ "Lin3DTee", "classLin3DTee.html", "classLin3DTee" ]
+    ] ],
+    [ "lin3DTetra10.hpp", "lin3DTetra10_8hpp.html", [
+      [ "lin3DTetra10", "classlin3DTetra10.html", "classlin3DTetra10" ]
+    ] ],
+    [ "lin3DTetra4.hpp", "lin3DTetra4_8hpp.html", [
+      [ "lin3DTetra4", "classlin3DTetra4.html", "classlin3DTetra4" ]
     ] ],
     [ "Lin3DThinArea.hpp", "Lin3DThinArea_8hpp.html", [
       [ "Lin3DThinArea", "classLin3DThinArea.html", "classLin3DThinArea" ]
@@ -204,6 +228,9 @@ var files =
     [ "PetscSolver.hpp", "PetscSolver_8hpp.html", [
       [ "PetscSolver", "classPetscSolver.html", "classPetscSolver" ]
     ] ],
+    [ "Plastic1DGap.hpp", "Plastic1DGap_8hpp.html", [
+      [ "Plastic1DGap", "classPlastic1DGap.html", "classPlastic1DGap" ]
+    ] ],
     [ "Plastic1DJ2.hpp", "Plastic1DJ2_8hpp.html", [
       [ "Plastic1DJ2", "classPlastic1DJ2.html", "classPlastic1DJ2" ]
     ] ],
@@ -244,6 +271,9 @@ var files =
     ] ],
     [ "StaticAnalysis.hpp", "StaticAnalysis_8hpp.html", [
       [ "StaticAnalysis", "classStaticAnalysis.html", "classStaticAnalysis" ]
+    ] ],
+    [ "Steel1DFiber.hpp", "Steel1DFiber_8hpp.html", [
+      [ "Steel1DFiber", "classSteel1DFiber.html", "classSteel1DFiber" ]
     ] ],
     [ "TIEQlin2DQuad4.hpp", "TIEQlin2DQuad4_8hpp.html", [
       [ "TIEQlin2DQuad4", "classTIEQlin2DQuad4.html", "classTIEQlin2DQuad4" ]

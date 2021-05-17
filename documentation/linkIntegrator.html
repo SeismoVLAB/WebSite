@@ -99,17 +99,34 @@ $(document).ready(function(){initNavTree('linkIntegrator.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title"><a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic snalysis between two steps is going to be performed...">Integrator</a> </div>  </div>
+<div class="title"><a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic snalysis between two steps is going to be performed...">Integrator</a> class specifies how the <a class="el" href="classStaticAnalysis.html" title="Class for creating an static analysis and updating the states variables in mesh. ">StaticAnalysis</a> or <a class="el" href="classDynamicAnalysis.html" title="Class for creating a dynamic analysis and updating the states variables in mesh. ">DynamicAnalysis</a> is performed. This abstract class have member functions that uses the <a class="el" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. ">Assembler</a> class to compute the effective stiffness matrix \(\textbf{K}_{\textrm{eff}}\) and effective force vector \(\textrm{F}_{\textrm{eff}}\) to be provided to the <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a> object to compute the displacements \(U\), velocities \(V\) and acceleration \(A\) vector states for the incremental analysis. In the incremental analysis, at each (pseudo) time step \(t_n\), one needs to solve nonlinear systems of equations iteratively until satisfying the given tolerance and convergence criterion.</p>
-<p>The available integrators in <b>Seismo-VLAB</b> are:</p>
+<div class="textblock"><p>The <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a> class specifies how the <a class="el" href="linkStaticAnalysis.html">StaticAnalysis</a> or <a class="el" href="linkDynamicAnalysis.html">DynamicAnalysis</a> is performed. The <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a> class is designed to:</p><ul>
+<li>Compute the state variables, i.e., displacement \(U\), velocity \(V\) and acceleration \(A\)</li>
+<li>Compute the effective stiffness matrix \(\textbf{K}_{\textrm{eff}}\) and effective force vector \(\textrm{F}_{\textrm{eff}}\) required to compute the incremental displacement \(\Delta U\).</li>
+</ul>
+<p>The main member function in <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a> are:</p><ul>
+<li><a class="el" href="classIntegrator.html#ade2662f0925875beb6c51fbf20fe8aff" title="Computes a new time step. ">Integrator::ComputeNewStep()</a> <br />
+ This function computes the states variables (displacement, velocity and acceleration) once the incremental displacement is obtained.</li>
+<li><a class="el" href="classIntegrator.html#aede2ec16a0cc42fdfbc23f8bc46932d3" title="Gets the displacement vector. ">Integrator::GetDisplacements()</a> <br />
+ This function returns the displacement states variables \(U\) at the current time step.</li>
+<li><a class="el" href="classIntegrator.html#a5a0ea34280a28a1da235c7a6a312e133" title="Gets the velocity vector. ">Integrator::GetVelocities()</a> <br />
+ This function returns the velocity states variables \(V\) at the current time step.</li>
+<li><a class="el" href="classIntegrator.html#a1f4f24dc95e487e4f0646275ac848194" title="Gets the acceleration vector. ">Integrator::GetAccelerations()</a> <br />
+ This function returns the acceleration states variables \(A\) at the current time step.</li>
+</ul>
+<p>In general, the <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a> class uses the <a class="el" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. ">Assembler</a> class to compute the effective stiffness matrix \(\textbf{K}_{\textrm{eff}}\) and effective force vector \(\textrm{F}_{\textrm{eff}}\) to be provided to the <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a> object to compute the displacements \(U\), velocities \(V\) and acceleration \(A\) vector states for the incremental analysis. In the incremental analysis, at each (pseudo) time step \(t_n\), one needs to solve nonlinear systems of equations iteratively until satisfying the given tolerance and convergence criterion. More information regarding the derived integrator classes can be found at:</p>
 <ul>
 <li><a class="el" href="linkQuasiStatic.html">QuasiStatic</a></li>
 <li><a class="el" href="linkCentralDifference.html">CentralDifference</a></li>
 <li><a class="el" href="linkNewmarkBeta.html">NewmarkBeta</a></li>
 <li><a class="el" href="linkExtendedNewmarkBeta.html">ExtendedNewmarkBeta</a></li>
-<li><a class="el" href="linkCompositeBathe.html">CompositeBathe</a> </li>
+<li><a class="el" href="linkCompositeBathe.html">CompositeBathe</a></li>
+</ul>
+<p><b>REFERENCE:</b></p><ul>
+<li>Forde, B. W. R., Foschi, R. O., &amp; Stiemer, S. F. (1990). "Object-oriented finite element analysis". Computers &amp; Structures, 34(3), 355–374.</li>
+<li>Mackie, R. I. (1992). "Object oriented programming of the finite element method". International Journal for Numerical Methods in Engineering, 35(2), 425–436. </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -117,7 +134,7 @@ $(document).ready(function(){initNavTree('linkIntegrator.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

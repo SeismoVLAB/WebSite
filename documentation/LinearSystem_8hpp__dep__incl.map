@@ -1,8 +1,0 @@
-<map id="LinearSystem.hpp" name="LinearSystem.hpp">
-<area shape="rect" id="node2" href="$Linear_8hpp.html" title="This file contains the &quot;Linear&quot; algorithm declarations, which solves the linear system of equations i..." alt="" coords="5,80,88,107"/>
-<area shape="rect" id="node4" href="$NewtonRaphson_8hpp.html" title="This file contains the &quot;NewtonRaphson&quot; algorithm declarations, which solves the non&#45;linear system of ..." alt="" coords="112,80,256,107"/>
-<area shape="rect" id="node5" href="$EigenSolver_8hpp.html" title="This file contains the &quot;EigenSolver&quot; solver declaration; the object performs Cholesky&#45;decomposition o..." alt="" coords="280,80,397,107"/>
-<area shape="rect" id="node6" href="$MumpsSolver_8hpp.html" title="MumpsSolver.hpp" alt="" coords="422,80,549,107"/>
-<area shape="rect" id="node7" href="$PetscSolver_8hpp.html" title="This file contains the &quot;PetscSolver&quot; solver declaration; this object is an iterative solver..." alt="" coords="573,80,691,107"/>
-<area shape="rect" id="node3" href="$Parser_8hpp.html" title="Parser.hpp" alt="" coords="296,155,381,181"/>
-</map>

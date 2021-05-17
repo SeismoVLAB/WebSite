@@ -26,6 +26,8 @@ var classPML3DHexa8 =
     [ "GetStressAt", "classPML3DHexa8.html#a6674ea38189f956312d5af24eb859c0d", null ],
     [ "GetTotalDegreeOfFreedom", "classPML3DHexa8.html#a83d9376c574aeef2428d209dc03acb8e", null ],
     [ "GetVTKResponse", "classPML3DHexa8.html#a8ae60546433a1e0d79412666c29afef8", null ],
+    [ "InitialState", "classPML3DHexa8.html#af401a19a5ba65114a2abfcb6befd4c99", null ],
+    [ "ReverseState", "classPML3DHexa8.html#a52cc317e9c10ac249122b91cc33d4450", null ],
     [ "SetDamping", "classPML3DHexa8.html#a83e1144ba13f3aaacccde138ec12ee83", null ],
     [ "SetDomain", "classPML3DHexa8.html#afdc6bb97b04a52fe3f2ee9fa5c05a9ce", null ],
     [ "UpdateState", "classPML3DHexa8.html#a494cc6d767200c67816c4059a5082608", null ],

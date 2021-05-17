@@ -17,6 +17,8 @@ var classLin2DCircularTube =
     [ "GetStress", "classLin2DCircularTube.html#a48a28018759891d9aeb4b9e306119f70", null ],
     [ "GetStressAt", "classLin2DCircularTube.html#aa9479de4b21cd1db0fadea2399eb6766", null ],
     [ "GetTangentStiffness", "classLin2DCircularTube.html#a781a379471cb5385ea9cfd45fec398f2", null ],
+    [ "InitialState", "classLin2DCircularTube.html#ad6602b1db087861dfd25469dbe2e57e4", null ],
+    [ "ReverseState", "classLin2DCircularTube.html#a1d190af8790ef67f27cbac9ec149fa84", null ],
     [ "UpdateState", "classLin2DCircularTube.html#a389b658d4a4590f95e5f6de1ca0967ab", null ],
     [ "InsertPoint", "classLin2DCircularTube.html#a28ac53af24d688f08e896f34599e3d65", null ],
     [ "re", "classLin2DCircularTube.html#a9fe9dbc340e95398479063fb70045163", null ],

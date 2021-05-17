@@ -102,15 +102,159 @@ $(document).ready(function(){initNavTree('linkMesh.html','');});
 <div class="title"><a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> is a class which encapsulates <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>, <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>, Elements, <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a>, and <a class="el" href="classConstraint.html" title="Class for creating a linear kinematic relations between degree-of-freedom in the model. ">Constraint</a> objects that defines a finite element model. This object provides several member functions to add/erase/get <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>, <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>, <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>, and <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> objects to be used in the <a class="el" href="linkAnalysisModule.html">Solution Module</a>.</p>
+<div class="textblock"><h1>Background</h1>
+<p>The <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> is a class which encapsulates <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>, <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>, Elements, <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a>, and <a class="el" href="classConstraint.html" title="Class for creating a linear kinematic relations between degree-of-freedom in the model. ">Constraint</a> objects that defines a finite element model. This object provides several member functions to add/erase/get <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>, <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>, <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>, and <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> objects to be used in the <a class="el" href="linkAnalysisModule.html">Solution Module</a>.</p>
 <div class="image">
 <img src="Mesh.png" alt="Mesh.png" width="70%"/>
 </div>
 <p>The previous Figure shows an example of a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>. The depicted <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> has <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> that are schematically represented by white-solid dots. The <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> is also constructed with <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> such as frame (represented in black-lines) and quadrilateral (represented in blue-rectangles). Each <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> has two degree-of-freedom (in blue arrows) or three degree-of-freedom (in red arrows) depending on the element that forms. <code>RESTRAIN</code> are applied to the <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> that belongs to semi-circle boundary in thick-black line. In a similar manner, the connection between frame and quadrilateral elements is performed using <a class="el" href="classConstraint.html" title="Class for creating a linear kinematic relations between degree-of-freedom in the model. ">Constraint</a>. A point <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> is prescribed at <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> (1). In addition, several surface <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> are prescribed to elements from 1 to 10.</p>
-<dl class="section note"><dt>Note</dt><dd>There is no <code>RESTRAIN</code> class since fixed degree of freedom are declared by negative numbers in the free-degree-of-freedom list at each <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>.</dd></dl>
-<dl class="section attention"><dt>Attention</dt><dd>The <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> object is not needed to be parsed since it is created internally as soon as input file is specified. </dd>
+<p><b>REFERENCE:</b></p><ul>
+<li>Forde, B. W. R., Foschi, R. O., &amp; Stiemer, S. F. (1990). "Object-oriented finite element analysis". Computers &amp; Structures, 34(3), 355–374.</li>
+<li>Mackie, R. I. (1992). "Object oriented programming of the finite element method". International Journal for Numerical Methods in Engineering, 35(2), 425–436.</li>
+</ul>
+<h1>Pre-Analysis</h1>
+<p>The python <span style="color:green"><b>01-Pre_Process/Method/Builder.py</b></span> file provides with an interface to populate the <code>Entities</code> dictionary with <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>, <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>, <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> and <a class="el" href="classConstraint.html" title="Class for creating a linear kinematic relations between degree-of-freedom in the model. ">Constraint</a>. A Domain can be created using the <span style="color:blue"><b>makeDomainVolume()</b></span>, <span style="color:blue"><b>makeDomainArea()</b></span> or <span style="color:blue"><b>makeDomainLine()</b></span> function. These functions will transform the provided information into json format to be parse in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a>.</p>
+<ul>
+<li><p class="startli"><span style="color:blue"><b>makeDomainVolume</b></span>(<b>option</b>):<br />
+ Creates a volume domain in 3D. This function returns a dictionary with the fields 'Nodes' and 'Elements'. The <b>option</b> dictionary specifies the geometry, number of elements, type of elements for this mesh, some fields are:</p><ul>
+<li><span style="color:green"><b>'ne'</b></span> : The number of elements per dimension, i.e., ne = [nx,ny,nz]</li>
+<li><span style="color:green"><b>'ndof'</b></span> : Number of degree of freedom per node</li>
+<li><span style="color:green"><b>'class'</b></span> : SeismoVLAB element class name for the generated elements</li>
+<li><span style="color:green"><b>'P0'</b></span> : The origin point of the volume element</li>
+<li><span style="color:green"><b>'P1'</b></span> : The corner point (x-side) of the volume element</li>
+<li><span style="color:green"><b>'P2'</b></span> : The corner point (y-side) of the volume element</li>
+<li><span style="color:green"><b>'P3'</b></span> : The corner point (z-side) of the volume element</li>
+<li><span style="color:green"><b>'elems'</b></span> : The type of element during meshing,i.e., TETRA4, TETRA10, HEXA8, HEXA20</li>
+<li><span style="color:green"><b>'attributes'</b></span> : A dictionary to specify attributes in 'Elements'</li>
+</ul>
+<div class="image">
+<img src="makeDomainVolume.png" alt="makeDomainVolume.png" width="50%"/>
+</div>
+<p class="startli"><b>Example</b> </p><blockquote class="doxtable">
+<p>A <b>3D rectangular domain</b> of 1 x 1 x 10 [m] with <a class="el" href="classPML3DHexa8.html" title="Class for creating a 3D linearized eight-node perfectly matched layer element in a mesh...">PML3DHexa8</a> elements is created using the python interface as follows:<br />
+opts = {<br />
+ 'ne' : [1, 1, 10], <br />
+ 'class': '<a class="el" href="classPML3DHexa8.html" title="Class for creating a 3D linearized eight-node perfectly matched layer element in a mesh...">PML3DHexa8</a>', <br />
+ 'ndof' : 9, <br />
+ 'P0' : [0, 0, 0], <br />
+ 'P1' : [1.0, 0, 0], <br />
+ 'P2' : [0, 1.0, 0], <br />
+ 'P3' : [0, 0, 10.0],<br />
+ 'elems': 'HEXA8',<br />
+ 'attributes': {'material': 2, 'n': 2.0, 'L': 10.0, 'R': 1E-5, 'x0': [0.5, 0.5, 10.0], 'npml': [0.0, 0.0, -1.0], 'rule': 'Gauss', 'np': 8}<br />
+ }<br />
+mesh = SVL.makeDomainVolume(<b>options</b>=opts) </p>
+</blockquote>
+</li>
+<li><p class="startli"><span style="color:blue"><b>makeDomainArea</b></span>(<b>option</b>):<br />
+ Creates an are domain in 2D/3D. This function returns a dictionary with the fields 'Nodes' and 'Elements'. The <b>option</b> dictionary specifies the geometry, number of elements, type of elements for this mesh, some fields are:</p><ul>
+<li><span style="color:green"><b>'ne'</b></span> : The number of elements per dimension, i.e., ne = [nx,ny]</li>
+<li><span style="color:green"><b>'ndof'</b></span> : Number of degree of freedom per node</li>
+<li><span style="color:green"><b>'class'</b></span> : SeismoVLAB element class name for the generated elements</li>
+<li><span style="color:green"><b>'P0'</b></span> : The origin point of the volume element</li>
+<li><span style="color:green"><b>'P1'</b></span> : The corner point (x-side) of the volume element</li>
+<li><span style="color:green"><b>'P2'</b></span> : The corner point (y-side) of the volume element</li>
+<li><span style="color:green"><b>'elems'</b></span> : The type of element during meshing,i.e., TRIA3, TRIA6, QUAD4, QUAD8</li>
+<li><span style="color:green"><b>'attributes'</b></span> : A dictionary to specify attributes in 'Elements'</li>
+</ul>
+<div class="image">
+<img src="makeDomainArea.png" alt="makeDomainArea.png" width="42.5%"/>
+</div>
+<p class="startli"><b>Example</b> </p><blockquote class="doxtable">
+<p>A <b>2D rectangular domain</b> of 5 x 10 [m] with Lin2DQuad4 elements is created using the python interface as follows:<br />
+opts = {<br />
+ 'ne' : [5, 10], <br />
+ 'class': 'Lin2DQuad4', <br />
+ 'ndof' : 2, <br />
+ 'P0' : [0, 0, 0], <br />
+ 'P1' : [1.0, 0, 0], <br />
+ 'P2' : [0, 1.0, 0], <br />
+ 'elems': 'QUAD4',<br />
+ 'attributes': {'material': 2, 'rule': 'Gauss', 'np': 4}<br />
+ }<br />
+mesh = SVL.makeDomainArea(<b>options</b>=opts) </p>
+</blockquote>
+</li>
+<li><p class="startli"><span style="color:blue"><b>makeDomainLine</b></span>(<b>option</b>):<br />
+ Creates an are domain in 1D/2D/3D. This function returns a dictionary with the fields 'Nodes' and 'Elements'. The <b>option</b> dictionary specifies the geometry, number of elements, type of elements for this mesh, some fields are:</p><ul>
+<li><span style="color:green"><b>'ne'</b></span> : The number of elements per dimension, i.e., ne = [nx]</li>
+<li><span style="color:green"><b>'ndof'</b></span> : Number of degree of freedom per node</li>
+<li><span style="color:green"><b>'class'</b></span> : SeismoVLAB element class name for the generated elements</li>
+<li><span style="color:green"><b>'P0'</b></span> : The origin point of the volume element</li>
+<li><span style="color:green"><b>'P1'</b></span> : The corner point (x-side) of the volume element</li>
+<li><span style="color:green"><b>'P2'</b></span> : The corner point (y-side) of the volume element</li>
+<li><span style="color:green"><b>'elems'</b></span> : The type of element during meshing,i.e., LINE2, LINE3</li>
+<li><span style="color:green"><b>'attributes'</b></span> : A dictionary to specify attributes in 'Elements'</li>
+</ul>
+<div class="image">
+<img src="makeDomainLine.png" alt="makeDomainLine.png" width="32.5%"/>
+</div>
+<p class="startli"><b>Example</b> </p><blockquote class="doxtable">
+<p>A <b>2D rectangular domain</b> of 10 [m] with Lin2DFrame2 elements is created using the python interface as follows:<br />
+opts = {<br />
+ 'ne' : 10, <br />
+ 'class': 'Lin2DFrame2', <br />
+ 'ndof' : 3, <br />
+ 'P0' : [0, 0, 0], <br />
+ 'P1' : [1.0, 0, 0], <br />
+ 'elems': 'LINE2',<br />
+ 'attributes': {'section': 2, 'rule': 'Gauss', 'np': 5}<br />
+ }<br />
+mesh = SVL.makeDomainArea(<b>options</b>=opts) </p>
+</blockquote>
+</li>
+</ul>
+<p>The python <span style="color:green"><b>01-Pre_Process/Method/Builder.py</b></span> file also provides with function that allows to <span style="color:blue"><b>mergeDomain()</b></span>, <span style="color:blue"><b>removeDomain()</b></span> or <span style="color:blue"><b>setPMLDomain()</b></span> function. These functions will transform the provided mesh information that can be later transformed into json format to be parse in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a>.</p>
+<ul>
+<li><p class="startli"><span style="color:blue"><b>mergeDomain</b></span>(<b>mesh1</b>, <b>mesh2</b>, <b>TOL</b>):<br />
+ This function essentially merge two domain. This function returns a merged dictionary with the fields 'Nodes' and 'Elements' in <b>mesh1</b>. The function does not merge nodes that are the same in both meshes, it just re-number them so that these are 2 independent meshes. Therefore, kinematic constraints should be applied to those nodes.</p>
+<div class="image">
+<img src="mergeDomain.png" alt="mergeDomain.png" width="50%"/>
+</div>
+</li>
+<li><span style="color:blue"><b>removeDomain</b></span>(<b>mesh</b>,<b>attributes</b>):<br />
+ This function removes a rectangular domain. The dictionary <b>mesh</b> is where the elements and nodes are going to be removed, and <b>attributes</b> is a dictionary containing the information of the domain to be removed. The <b>attributes</b> dictionary has the following fields<ul>
+<li><p class="startli"><span style="color:green"><b>'attributes'</b></span></p><ul>
+<li>'sides' The length of the sides in x,y, and z</li>
+<li>'center' The center of the rectangular domain</li>
+</ul>
+<div class="image">
+<img src="removeDomain.png" alt="removeDomain.png" width="50%"/>
+</div>
+</li>
+</ul>
+</li>
+<li><span style="color:blue"><b>setPMLDomain</b></span>((<b>attributes</b>, <b>x0</b>, <b>xl</b>)):<br />
+<ul>
+<li><span style="color:green"><b>'attributes'</b></span>: Same as <b>options</b> in makeDomainVolume, makeDomainArea, or makeDomainLine.</li>
+<li><span style="color:green"><b>'x0'</b></span>: The center of the rectangle</li>
+<li><p class="startli"><span style="color:green"><b>'xl'</b></span>: The side half-length in each direction</p>
+<div class="image">
+<img src="setPMLDomain.png" alt="setPMLDomain.png" width="40%"/>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<p>More complex domain can be parsed from other formats. The functions provided in <span style="color:green"><b>01-Pre_Process/Parser/Formats.py</b></span> allows currently to parse from <b>SAP2000</b>, <b>ETABS</b>, and <b>VTK</b> formats:</p>
+<ul>
+<li><span style="color:blue"><b>parseFile</b></span>(<b>filepath</b>, <b>fileformat</b>):<br />
+ This is the main parsing function. The <b>filepath</b> specifies the path where the files is located, while <b>fileformat</b> is the format of this file. Currently the available formats are: ETABS, SAP, and VTK.</li>
+<li><p class="startli"><span style="color:blue"><b>parseJSON</b></span>(<b>filepath</b>):<br />
+ This function parses a model in JSON (.json) format that is located at <b>filepath</b>. The structure of the JSON file must be consistent to the one defined in <code>Entities</code>.</p>
+<dl class="section attention"><dt>Attention</dt><dd>Please refer to <span style="color:blue"><b>SVL/01-Pre_Process/Parser/Formats.py</b></span> for more details in declarations and implementation aspects </dd>
 <dd>
-The <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> object computes the memory needed for the storage of model matrices such as total stiffness matrix \(\textbf{K}\), total mass matrix \(\textbf{M}\), and total damping matrix \(\textbf{C}\) as well as the external force vector \(F\). </dd>
+Other formats for <b>ANSYS</b> and <b>ABAQUS</b> are under construction.</dd></dl>
+<p><b>Example</b> </p><blockquote class="doxtable">
+<p>A <b>SAP</b> file can be loaded using the python interface as follows:<br />
+SVL.parseFile('/path/to/sap/file.s2k','SAP') </p>
+</blockquote>
+</li>
+</ul>
+<h1>Run-Analysis</h1>
+<p>The <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> object is not needed to be parsed since it is created internally as soon as input file is specified.</p>
+<dl class="section note"><dt>Note</dt><dd>There is no <code>RESTRAIN</code> class since fixed degree of freedom are declared by negative numbers in the free-degree-of-freedom list at each <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>.</dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>The <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> object computes the memory needed for the storage of model matrices such as total stiffness matrix \(\textbf{K}\), total mass matrix \(\textbf{M}\), and total damping matrix \(\textbf{C}\) as well as the external force vector \(F\). </dd>
 <dd>
 The <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> object is responsible of creating the transformation matrix \(\textbf{T}\) to enforce restrains and constraints that are used in the <a class="el" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. ">Assembler</a> to generate the global mass matrix \(\textbf{M}\), global stiffness matrix \(\textbf{K}\), global damping matrix \(\textbf{C}\) as well as the global external force vector \(\textrm{F}_{\textrm{ext}}\). </dd></dl>
 </div></div><!-- contents -->
@@ -119,7 +263,7 @@ The <a class="el" href="classMesh.html" title="Class for defining a mesh that st
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -8,7 +8,6 @@ var classRecorder =
     [ "Finalize", "classRecorder.html#a1be2313f3dad1690ab79cb73b3a1d9b2", null ],
     [ "GetSpacedName", "classRecorder.html#afdc1ed926bdd136a3f360d998f6eac19", null ],
     [ "Initialize", "classRecorder.html#a38a1396b7e978c5e6b89695e23cfbf39", null ],
-    [ "MakeFolder", "classRecorder.html#ada5cb797189a212d117cca472a35205a", null ],
     [ "SetComboName", "classRecorder.html#a44d433be994deb74168abe39de8bf941", null ],
     [ "WriteElementResponse", "classRecorder.html#a2670ca73c290fb68b6774e946101e133", null ],
     [ "WriteNodalResponse", "classRecorder.html#a4c07f05856a31335cdfdd81fa474ba84", null ],

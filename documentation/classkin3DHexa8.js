@@ -30,6 +30,8 @@ var classkin3DHexa8 =
     [ "GetStressAt", "classkin3DHexa8.html#aac62450d13bd054e3cfc1f7b8f2c5d25", null ],
     [ "GetTotalDegreeOfFreedom", "classkin3DHexa8.html#aafa5a0e7a35cb5dc5ffb3668b7232882", null ],
     [ "GetVTKResponse", "classkin3DHexa8.html#a0add640902767e45a477d42f38913597", null ],
+    [ "InitialState", "classkin3DHexa8.html#a7ed97dc4281122045c1c459c2f9b2dde", null ],
+    [ "ReverseState", "classkin3DHexa8.html#a913bd5da58b4019311756610f811e6ba", null ],
     [ "SetDamping", "classkin3DHexa8.html#aaabf4a40bcf2ad66852b327687148a69", null ],
     [ "SetDomain", "classkin3DHexa8.html#aa0c2e14b8b738e1f11d8d239a7bc65f5", null ],
     [ "TransformTensorToVector", "classkin3DHexa8.html#a09f99fd35b3a38d31f6d6885b06c7cae", null ],

@@ -111,11 +111,6 @@ $(document).ready(function(){initNavTree('classNode.html','');});
  <a href="classNode.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Node_8hpp_source.html">Node.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for Node:</div>
-<div class="dyncontent">
-<div class="center"><img src="classNode__coll__graph.png" border="0" usemap="#Node_coll__map" alt="Collaboration graph"/></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -128,9 +123,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a805ac1e765fe9ee49b41cf75f575664a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a805ac1e765fe9ee49b41cf75f575664a">IsFixed</a> () const</td></tr>
 <tr class="memdesc:a805ac1e765fe9ee49b41cf75f575664a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the node is fixed or free.  <a href="#a805ac1e765fe9ee49b41cf75f575664a">More...</a><br /></td></tr>
 <tr class="separator:a805ac1e765fe9ee49b41cf75f575664a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0dd9fc2d0d708c1d71b1eee3e36d69f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#ae0dd9fc2d0d708c1d71b1eee3e36d69f">IsAbsorbent</a> () const</td></tr>
-<tr class="memdesc:ae0dd9fc2d0d708c1d71b1eee3e36d69f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the node is absorbent.  <a href="#ae0dd9fc2d0d708c1d71b1eee3e36d69f">More...</a><br /></td></tr>
-<tr class="separator:ae0dd9fc2d0d708c1d71b1eee3e36d69f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51181554225850ac671c48a89af19073"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a51181554225850ac671c48a89af19073">InitialState</a> ()</td></tr>
+<tr class="memdesc:a51181554225850ac671c48a89af19073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all node variables to be zero.  <a href="#a51181554225850ac671c48a89af19073">More...</a><br /></td></tr>
+<tr class="separator:a51181554225850ac671c48a89af19073"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8780bd2438230a7a51d0efa61c5a1963"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a8780bd2438230a7a51d0efa61c5a1963">SetMass</a> (Eigen::VectorXd &amp;mass)</td></tr>
 <tr class="memdesc:a8780bd2438230a7a51d0efa61c5a1963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the node's mass at each degree of freedom.  <a href="#a8780bd2438230a7a51d0efa61c5a1963">More...</a><br /></td></tr>
 <tr class="separator:a8780bd2438230a7a51d0efa61c5a1963"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,7 +148,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a689f2ae4f9007456026e97332a75f50c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current velocity state associated with this <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>.  <a href="#a689f2ae4f9007456026e97332a75f50c">More...</a><br /></td></tr>
 <tr class="separator:a689f2ae4f9007456026e97332a75f50c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63c2b54c1a58b3ad53ecbcc997d1f0ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a63c2b54c1a58b3ad53ecbcc997d1f0ac">SetAccelerations</a> (Eigen::VectorXd &amp;Ao)</td></tr>
-<tr class="memdesc:a63c2b54c1a58b3ad53ecbcc997d1f0ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current cceleration state associated with this <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>.  <a href="#a63c2b54c1a58b3ad53ecbcc997d1f0ac">More...</a><br /></td></tr>
+<tr class="memdesc:a63c2b54c1a58b3ad53ecbcc997d1f0ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current acceleration state associated with this <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>.  <a href="#a63c2b54c1a58b3ad53ecbcc997d1f0ac">More...</a><br /></td></tr>
 <tr class="separator:a63c2b54c1a58b3ad53ecbcc997d1f0ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8729afbb96f639d3876b4de1a77519f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#ae8729afbb96f639d3876b4de1a77519f">SetIncrementalDisplacements</a> (Eigen::VectorXd &amp;dU)</td></tr>
 <tr class="memdesc:ae8729afbb96f639d3876b4de1a77519f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current incremental displacement associated with this <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>.  <a href="#ae8729afbb96f639d3876b4de1a77519f">More...</a><br /></td></tr>
@@ -162,7 +157,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a896dc294d0b7cc8569010175e4f652d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the domain-reduction nodal displacements.  <a href="#a896dc294d0b7cc8569010175e4f652d6">More...</a><br /></td></tr>
 <tr class="separator:a896dc294d0b7cc8569010175e4f652d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe5807800fc8d3e12b85c7cae84e2449"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#afe5807800fc8d3e12b85c7cae84e2449">SetPMLVector</a> (Eigen::VectorXd &amp;Ub)</td></tr>
-<tr class="memdesc:afe5807800fc8d3e12b85c7cae84e2449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the nodel absorbent integrated history values.  <a href="#afe5807800fc8d3e12b85c7cae84e2449">More...</a><br /></td></tr>
+<tr class="memdesc:afe5807800fc8d3e12b85c7cae84e2449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vector of absorbent integrated history values.  <a href="#afe5807800fc8d3e12b85c7cae84e2449">More...</a><br /></td></tr>
 <tr class="separator:afe5807800fc8d3e12b85c7cae84e2449"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3cdfbd50ca5ea713a63e1f6844e0cb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#ab3cdfbd50ca5ea713a63e1f6844e0cb1">SetSupportMotion</a> (unsigned int k, std::vector&lt; double &gt; &amp;Uo)</td></tr>
 <tr class="memdesc:ab3cdfbd50ca5ea713a63e1f6844e0cb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the displacements support motion associated with this <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>.  <a href="#ab3cdfbd50ca5ea713a63e1f6844e0cb1">More...</a><br /></td></tr>
@@ -183,7 +178,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac4241f9122118e86020daeb8f411bde8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current velocity state of this node.  <a href="#ac4241f9122118e86020daeb8f411bde8">More...</a><br /></td></tr>
 <tr class="separator:ac4241f9122118e86020daeb8f411bde8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8140027e5229c37a351d42079a29ccb"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#ae8140027e5229c37a351d42079a29ccb">GetAccelerations</a> () const</td></tr>
-<tr class="memdesc:ae8140027e5229c37a351d42079a29ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current cceleration state of this node.  <a href="#ae8140027e5229c37a351d42079a29ccb">More...</a><br /></td></tr>
+<tr class="memdesc:ae8140027e5229c37a351d42079a29ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current acceleration state of this node.  <a href="#ae8140027e5229c37a351d42079a29ccb">More...</a><br /></td></tr>
 <tr class="separator:ae8140027e5229c37a351d42079a29ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae57b226c7df1e79e0c29b313b32d3856"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#ae57b226c7df1e79e0c29b313b32d3856">GetInertialForces</a> () const</td></tr>
 <tr class="memdesc:ae57b226c7df1e79e0c29b313b32d3856"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the inertial forces associated to this node.  <a href="#ae57b226c7df1e79e0c29b313b32d3856">More...</a><br /></td></tr>
@@ -195,7 +190,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0ce8861716980d4126915680adf25a6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current incremental displacement of this node.  <a href="#a0ce8861716980d4126915680adf25a6a">More...</a><br /></td></tr>
 <tr class="separator:a0ce8861716980d4126915680adf25a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c1ab451f2b5f44548491ccff013f060"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a0c1ab451f2b5f44548491ccff013f060">GetDomainReductionMotion</a> (unsigned int k) const</td></tr>
-<tr class="memdesc:a0c1ab451f2b5f44548491ccff013f060"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current domin reduction displacements, velocities and accelerations.  <a href="#a0c1ab451f2b5f44548491ccff013f060">More...</a><br /></td></tr>
+<tr class="memdesc:a0c1ab451f2b5f44548491ccff013f060"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current domain reduction displacements, velocities and accelerations.  <a href="#a0c1ab451f2b5f44548491ccff013f060">More...</a><br /></td></tr>
 <tr class="separator:a0c1ab451f2b5f44548491ccff013f060"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f9af38a86d13ae479ee2b79e0d0aa0c"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a6f9af38a86d13ae479ee2b79e0d0aa0c">GetSupportMotion</a> (unsigned int k)</td></tr>
 <tr class="memdesc:a6f9af38a86d13ae479ee2b79e0d0aa0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the nodal support motion displacement of this node.  <a href="#a6f9af38a86d13ae479ee2b79e0d0aa0c">More...</a><br /></td></tr>
@@ -242,7 +237,7 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a8e5b3ae6c3357a88e9568a7001ded8a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The reaction forces of this node.  <a href="#a8e5b3ae6c3357a88e9568a7001ded8a9">More...</a><br /></td></tr>
 <tr class="separator:a8e5b3ae6c3357a88e9568a7001ded8a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fd684f0be388ebc3a8286a301d6a53b"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a9fd684f0be388ebc3a8286a301d6a53b">PMLIntegratedVector</a></td></tr>
-<tr class="memdesc:a9fd684f0be388ebc3a8286a301d6a53b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The 3D perfectly-meatched history verctor.  <a href="#a9fd684f0be388ebc3a8286a301d6a53b">More...</a><br /></td></tr>
+<tr class="memdesc:a9fd684f0be388ebc3a8286a301d6a53b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The 3D perfectly-matched history verctor.  <a href="#a9fd684f0be388ebc3a8286a301d6a53b">More...</a><br /></td></tr>
 <tr class="separator:a9fd684f0be388ebc3a8286a301d6a53b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae465330d294a54b11d29ecdadd29812e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#ae465330d294a54b11d29ecdadd29812e">FreeDegreeOfFreedom</a></td></tr>
 <tr class="memdesc:ae465330d294a54b11d29ecdadd29812e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The free-degree-of-freedom list.  <a href="#ae465330d294a54b11d29ecdadd29812e">More...</a><br /></td></tr>
@@ -294,7 +289,7 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">numberDofs</td><td>Number of degree-of-freedom for this node. </td></tr>
-    <tr><td class="paramname">coordinates</td><td>Matrix that specifies the coordinat of this node. </td></tr>
+    <tr><td class="paramname">coordinates</td><td>Matrix that specifies the coordinates of this node. </td></tr>
     <tr><td class="paramname">isFixed</td><td>Whether the node is fixed or free. </td></tr>
     <tr><td class="paramname">isAbsorbent</td><td>Whether the node is belongs is absorbent (PML 3D). </td></tr>
   </table>
@@ -321,7 +316,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Destroys this <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> object. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#a7b2668a65e828ea8616a2b36a071f955" title="The location of this node within the Mesh.. ">Node::Coordinates</a> </dd></dl>
 
 </div>
 </div>
@@ -341,7 +335,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the current cceleration state of this node. </p>
+<p>Gets the current acceleration state of this node. </p>
 <dl class="section return"><dt>Returns</dt><dd>Vector with the accelerations for each degree-of-freedom. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#aa0b9638da475a9666445be272797f53b" title="The current acceleration vectors of this Node. ">Node::Accelerations</a>. </dd></dl>
 
@@ -406,7 +400,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the current domin reduction displacements, velocities and accelerations. </p>
+<p>Gets the current domain reduction displacements, velocities and accelerations. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">k</td><td>Time step at which the domain reduction information is retrieved. </td></tr>
@@ -543,7 +537,7 @@ Private Attributes</h2></td></tr>
 
 <p>Gets the current PML history vector of this node. </p>
 <dl class="section return"><dt>Returns</dt><dd>Vector with the integrated PML states at each degree-of-freedom. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#a9fd684f0be388ebc3a8286a301d6a53b" title="The 3D perfectly-meatched history verctor. ">Node::PMLIntegratedVector</a> <a class="el" href="classNode.html#afe5807800fc8d3e12b85c7cae84e2449" title="Sets the nodel absorbent integrated history values. ">Node::SetPMLVector</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#a9fd684f0be388ebc3a8286a301d6a53b" title="The 3D perfectly-matched history verctor. ">Node::PMLIntegratedVector</a> <a class="el" href="classNode.html#afe5807800fc8d3e12b85c7cae84e2449" title="Sets the vector of absorbent integrated history values. ">Node::SetPMLVector</a>. </dd></dl>
 
 </div>
 </div>
@@ -639,23 +633,22 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae0dd9fc2d0d708c1d71b1eee3e36d69f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0dd9fc2d0d708c1d71b1eee3e36d69f">&#9670;&nbsp;</a></span>IsAbsorbent()</h2>
+<a id="a51181554225850ac671c48a89af19073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51181554225850ac671c48a89af19073">&#9670;&nbsp;</a></span>InitialState()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Node::IsAbsorbent </td>
+          <td class="memname">void Node::InitialState </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Whether the node is absorbent. </p>
-<dl class="section see"><dt>See also</dt><dd>Node::Absorbent. </dd></dl>
+<p>Set all node variables to be zero. </p>
 
 </div>
 </div>
@@ -695,7 +688,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the current cceleration state associated with this <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>. </p>
+<p>Sets the current acceleration state associated with this <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Ao</td><td>Vector of accelertions. </td></tr>
@@ -867,6 +860,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#a404c87757d0d362e17a885b03ad946aa" title="The applied mass of this Node. ">Node::Mass</a>. </dd></dl>
 
 </div>
@@ -887,14 +881,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the nodel absorbent integrated history values. </p>
+<p>Sets the vector of absorbent integrated history values. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Ub</td><td>Vector of integrated (states) history values. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#a9fd684f0be388ebc3a8286a301d6a53b" title="The 3D perfectly-meatched history verctor. ">Node::PMLIntegratedVector</a> <a class="el" href="classNode.html#aac94c202e6d65bcc364416de0fcd9298" title="Gets the current PML history vector of this node. ">Node::GetPMLVector</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#a9fd684f0be388ebc3a8286a301d6a53b" title="The 3D perfectly-matched history verctor. ">Node::PMLIntegratedVector</a> <a class="el" href="classNode.html#aac94c202e6d65bcc364416de0fcd9298" title="Gets the current PML history vector of this node. ">Node::GetPMLVector</a>. </dd></dl>
 
 </div>
 </div>
@@ -921,6 +915,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#a8e5b3ae6c3357a88e9568a7001ded8a9" title="The reaction forces of this node. ">Node::Reaction</a>. </dd></dl>
 
 </div>
@@ -1253,7 +1248,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The 3D perfectly-meatched history verctor. </p>
+<p>The 3D perfectly-matched history verctor. </p>
 
 </div>
 </div>
@@ -1360,7 +1355,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classNode.html">Node</a></li>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:51 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

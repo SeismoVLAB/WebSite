@@ -23,6 +23,8 @@ var classZeroLength1D =
     [ "GetStressAt", "classZeroLength1D.html#ad574370d89dc810d6cee957a663f8dc0", null ],
     [ "GetTotalDegreeOfFreedom", "classZeroLength1D.html#a7cf999d5b289f06b32015bf83ab60015", null ],
     [ "GetVTKResponse", "classZeroLength1D.html#ac5c75d0eb7d9d58425a5a4f17fb8138f", null ],
+    [ "InitialState", "classZeroLength1D.html#a36f6d29916861e6abbbf1432926daf82", null ],
+    [ "ReverseState", "classZeroLength1D.html#a433d94505d850692ee4885952e8cb39c", null ],
     [ "SetDamping", "classZeroLength1D.html#a2d1069c9a2634d5a166e19945b8710eb", null ],
     [ "SetDomain", "classZeroLength1D.html#ae7e9a917aa6bd5484a7ffc56fd17bfc7", null ],
     [ "UpdateState", "classZeroLength1D.html#a893d601d81d57e8dfc61535203ddd102", null ],

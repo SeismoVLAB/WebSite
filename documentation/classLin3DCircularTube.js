@@ -18,6 +18,8 @@ var classLin3DCircularTube =
     [ "GetStress", "classLin3DCircularTube.html#af32befc780b688f4204e01f0ce70a571", null ],
     [ "GetStressAt", "classLin3DCircularTube.html#a9c90722d2bcbed890b30a2f049952a5a", null ],
     [ "GetTangentStiffness", "classLin3DCircularTube.html#a713aad400f9dc3f750c633ce25443768", null ],
+    [ "InitialState", "classLin3DCircularTube.html#a9c38230b3503a80051052745e89e01e4", null ],
+    [ "ReverseState", "classLin3DCircularTube.html#a71fb0538720c7e4a0a037e230bc616a8", null ],
     [ "UpdateState", "classLin3DCircularTube.html#a865dcd295e1af937877085a18a0984b9", null ],
     [ "InsertPoint", "classLin3DCircularTube.html#a7817711103982aa1766f022cde7501db", null ],
     [ "re", "classLin3DCircularTube.html#a663734fc846934b5de73061194404424", null ],

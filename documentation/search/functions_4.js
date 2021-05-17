@@ -1,6 +1,8 @@
 var searchData=
 [
   ['eigensolver',['EigenSolver',['../classEigenSolver.html#acc80b3e63ece0ca7900127cd8ae58e36',1,'EigenSolver']]],
+  ['elastic1dfiber',['Elastic1DFiber',['../classElastic1DFiber.html#abbdb1c914bfbb3200457125f80831612',1,'Elastic1DFiber']]],
+  ['elastic1dgap',['Elastic1DGap',['../classElastic1DGap.html#a0da8f1df2af07ceba125c26027d6e0ce',1,'Elastic1DGap']]],
   ['elastic1dlinear',['Elastic1DLinear',['../classElastic1DLinear.html#a9a79e43b02f9498fa66713850db3616d',1,'Elastic1DLinear']]],
   ['elastic2dplanestrain',['Elastic2DPlaneStrain',['../classElastic2DPlaneStrain.html#a5c006b521baf7c1fe792b7f86ba1f993',1,'Elastic2DPlaneStrain']]],
   ['elastic2dplanestress',['Elastic2DPlaneStress',['../classElastic2DPlaneStress.html#ad74e1ff2f62b637c80500267184fbba8',1,'Elastic2DPlaneStress']]],

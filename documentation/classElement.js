@@ -26,6 +26,8 @@ var classElement =
     [ "GetVTKCellType", "classElement.html#ac815c6d39c37002c32b88ea63cfa403b", null ],
     [ "GetVTKResponse", "classElement.html#a3786efb8f9fb389fb5190f9f0933a28a", null ],
     [ "HasFixedNode", "classElement.html#aae86d3250af2c438f0562ebf161fc6c9", null ],
+    [ "InitialState", "classElement.html#af9898dbc94c8e5977276fd51fdd1e515", null ],
+    [ "ReverseState", "classElement.html#abda1b167d76310e763c8ab866670e073", null ],
     [ "SetDamping", "classElement.html#aaf62c1d3d30ec151664c597136784955", null ],
     [ "SetDomain", "classElement.html#af1b8729c09c0ef4ca8cee27242033445", null ],
     [ "UpdateState", "classElement.html#a0a95bf73cb5f414a3f551a02557a13df", null ],

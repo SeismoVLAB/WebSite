@@ -132,11 +132,13 @@ $(document).ready(function(){initNavTree('classPlastic3DJ2.html','');});
   <tr class="even"><td class="entry"><a class="el" href="classPlastic3DJ2.html#ad48f84784381eccc3b437a19cfcf9576">GetTangentStiffness</a>() const</td><td class="entry"><a class="el" href="classPlastic3DJ2.html">Plastic3DJ2</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classPlastic3DJ2.html#a845d3d4bf10527f6e9376244506af045">GetTotalStress</a>() const</td><td class="entry"><a class="el" href="classPlastic3DJ2.html">Plastic3DJ2</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classPlastic3DJ2.html#af4daec39301d2f8e6af7994ac570c2ab">H</a></td><td class="entry"><a class="el" href="classPlastic3DJ2.html">Plastic3DJ2</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classMaterial.html#a943853b5885cf02e13ed30e61f28c611">IsViscous</a>()</td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classPlastic3DJ2.html#a46e53adbcbba846eb984ef845a7f17ce">K</a></td><td class="entry"><a class="el" href="classPlastic3DJ2.html">Plastic3DJ2</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classMaterial.html#a4e51c99736625c951b8910cee909c685">Material</a>(std::string name, bool model)</td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classPlastic3DJ2.html#a255a3d73d73aea983482fc3583017c43">Plastic3DJ2</a>(const double K, const double G, const double rho, const double Hbar, const double beta, const double SigmaY)</td><td class="entry"><a class="el" href="classPlastic3DJ2.html">Plastic3DJ2</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classPlastic3DJ2.html#ad21d80fcafd400a46b615371c4b4bf56">PlasticStrain</a></td><td class="entry"><a class="el" href="classPlastic3DJ2.html">Plastic3DJ2</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classPlastic3DJ2.html#a9b2c3253e4e71f51d3025aa60eee6091">InitialState</a>()</td><td class="entry"><a class="el" href="classPlastic3DJ2.html">Plastic3DJ2</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classMaterial.html#a943853b5885cf02e13ed30e61f28c611">IsViscous</a>()</td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classPlastic3DJ2.html#a46e53adbcbba846eb984ef845a7f17ce">K</a></td><td class="entry"><a class="el" href="classPlastic3DJ2.html">Plastic3DJ2</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classMaterial.html#a4e51c99736625c951b8910cee909c685">Material</a>(std::string name, bool model)</td><td class="entry"><a class="el" href="classMaterial.html">Material</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classPlastic3DJ2.html#a255a3d73d73aea983482fc3583017c43">Plastic3DJ2</a>(const double K, const double G, const double rho, const double Hbar, const double beta, const double SigmaY)</td><td class="entry"><a class="el" href="classPlastic3DJ2.html">Plastic3DJ2</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classPlastic3DJ2.html#ad21d80fcafd400a46b615371c4b4bf56">PlasticStrain</a></td><td class="entry"><a class="el" href="classPlastic3DJ2.html">Plastic3DJ2</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classPlastic3DJ2.html#a4b5e79b08bdb8f73fc7c0ab825256a07">ReverseState</a>()</td><td class="entry"><a class="el" href="classPlastic3DJ2.html">Plastic3DJ2</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classPlastic3DJ2.html#ac36f6e6e39347fd7a1146320521db00b">Rho</a></td><td class="entry"><a class="el" href="classPlastic3DJ2.html">Plastic3DJ2</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="classPlastic3DJ2.html#ab059102fba9cb19ac27c4cb344f2b0ea">SigmaY</a></td><td class="entry"><a class="el" href="classPlastic3DJ2.html">Plastic3DJ2</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classPlastic3DJ2.html#a6a8e62092896e596d097283221fec9c8">Strain</a></td><td class="entry"><a class="el" href="classPlastic3DJ2.html">Plastic3DJ2</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
@@ -151,7 +153,7 @@ $(document).ready(function(){initNavTree('classPlastic3DJ2.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:51 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

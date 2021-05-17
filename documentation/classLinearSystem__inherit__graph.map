@@ -1,5 +1,0 @@
-<map id="LinearSystem" name="LinearSystem">
-<area shape="rect" id="node2" href="$classEigenSolver.html" title="Class for solving a linear system using a Cholesky&#45;decomposition on the effective stiffness matrix..." alt="" coords="5,80,97,107"/>
-<area shape="rect" id="node3" href="$classMumpsSolver.html" title="Class for solving a linear system using the (MU)ltifrontal (M)assively (P)arallel (S)parse direct Sol..." alt="" coords="121,80,224,107"/>
-<area shape="rect" id="node4" href="$classPetscSolver.html" title="Class for solving a linear system using an iterative solver assuming the matrix can be symmetric posi..." alt="" coords="249,80,342,107"/>
-</map>

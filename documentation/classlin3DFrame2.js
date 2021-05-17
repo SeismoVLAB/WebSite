@@ -27,6 +27,8 @@ var classlin3DFrame2 =
     [ "GetStressAt", "classlin3DFrame2.html#a35420209298d120b17943f53d438f586", null ],
     [ "GetTotalDegreeOfFreedom", "classlin3DFrame2.html#a38ca0e6075543f89e723b25dcd252742", null ],
     [ "GetVTKResponse", "classlin3DFrame2.html#ad376d5ebe9607a3def1a865cfd675efd", null ],
+    [ "InitialState", "classlin3DFrame2.html#abb9dc872c7e96361339e7bd16c5826ec", null ],
+    [ "ReverseState", "classlin3DFrame2.html#ad6f6d61693a46fdb169fb3b72be368b7", null ],
     [ "SetDamping", "classlin3DFrame2.html#a8534627224b78565bdbc06b7d8f7cb6d", null ],
     [ "SetDomain", "classlin3DFrame2.html#a5ba8dde32db2575223e029317063468a", null ],
     [ "UpdateState", "classlin3DFrame2.html#a05e92788996064267a138c9a82e8a9fe", null ],

@@ -7,6 +7,7 @@ var searchData=
   ['addelementdynamicforces',['AddElementDynamicForces',['../classAssembler.html#a782f7969850c9907d74b9ac43954cd9a',1,'Assembler']]],
   ['addelements',['AddElements',['../classLoad.html#abdefea0f3621488281fb7e6486e00b6c',1,'Load']]],
   ['addfaces',['AddFaces',['../classLoad.html#ac5892badbf983b973f05585f1686dd5c',1,'Load']]],
+  ['addfiber',['AddFiber',['../classMesh.html#ab13f87df9874d55430e70ba1d58b1d1d',1,'Mesh']]],
   ['addload',['AddLoad',['../classMesh.html#a23562e16ddb73d5e93ec2b50c2ac4e37',1,'Mesh']]],
   ['addmass',['AddMass',['../classMesh.html#a8ac29cd534bf0a142356d337bfbbf3f4',1,'Mesh']]],
   ['addmaterial',['AddMaterial',['../classMesh.html#a64814741e9e2ad80d016c0c843bc3c23',1,'Mesh']]],

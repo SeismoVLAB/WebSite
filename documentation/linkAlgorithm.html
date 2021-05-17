@@ -102,32 +102,67 @@ $(document).ready(function(){initNavTree('linkAlgorithm.html','');});
 <div class="title"><a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a> class creates an abstract class that specifies how the <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a> will handle the iterations for solving the linear/nonlinear system within a time interval [ \(t_n\), \(t_{n+1}\) ] is going to be performed. In general, this abstract class control the accuracy of the non-linear system solution. The abstract class is also responsible for obtaining the displacements, velocities and acceleration and update such quantities at the <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> objects level, so that internal quantities at the Elements and at the <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> objects level can be updated as well.</p>
-<p>The available algorithms in <b>Seismo-VLAB</b> are:</p>
+<div class="textblock"><p>The <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a> class specifies how the <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a> will be solved. In other words, handles the iteration process when solving the linear/nonlinear system within a time interval [ \(t_n\), \(t_{n+1}\) ]. The <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a> class is designed to:</p>
 <ul>
+<li>Control the accuracy of the non-linear system solution.</li>
+<li>Obtain the displacements, velocities and acceleration and update <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>, <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>, and <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> objects states.</li>
+</ul>
+<p>The main member function in <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a> are:</p>
+<ul>
+<li><a class="el" href="classAlgorithm.html#ac0e4aa7482e95e0a4b7f00bc8f2ae381" title="Computes a new incremental solution. ">Algorithm::ComputeNewIncrement()</a> <br />
+ This function obtains the updated incremental solution of the linearized system and updates the <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> and <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> states.</li>
+<li><a class="el" href="classAlgorithm.html#a6a8fdbb56ea1ea0bc47a7706c71b5386" title="Gets the displacement increment. ">Algorithm::GetDisplacementIncrement()</a> <br />
+ This function return the total incremental solution \(\Delta U^{(i)} = \sum_{k=0}^{k=i} \delta U^{(k)} \) at \(i\)-th iteration of the linearized system.</li>
+<li><a class="el" href="classAlgorithm.html#a3d98a95ddc8b615587d7b283012f1b92" title="Update the incremental state variables in the mesh. ">Algorithm::UpdateStatesIncrements()</a> <br />
+ This function updates the <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> and <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> states provided with the total incremental solution \(\Delta U^{(i)}\).</li>
+</ul>
+<p>In general, the <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a> class is also responsible for satisfying the convergence criteria at the <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a> level when an implicit integrator is specified. <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a> class can handle the following convergence <code>test</code> to compute the residual:</p>
+<ul>
+<li><b>Unbalanced Force Norm</b> corresponds to <code>test=1</code> and is computed as: <p class="formulaDsp">
+\[\epsilon = \|\textrm{R}_{n+1} - \textrm{F}^{(i)}_n\|_{\ell_2}\]
+</p>
+</li>
+<li><b>Increment Displacement Norm</b> correspond to <code>test=2</code> and is computed as: <p class="formulaDsp">
+\[\epsilon = \|\delta U^{(i)}\|_{\ell_2}\]
+</p>
+</li>
+<li><b>Energy Increment Norm</b> corresponds to <code>test=3</code> and is computed as: <p class="formulaDsp">
+\[\epsilon = |\delta U^{(i)} \cdot (\textrm{R}_{n+1} - \textrm{F}^{(i)}_n)^\top|\]
+</p>
+</li>
+<li><b>Relative Unbalanced Force Norm</b> corresponds to <code>test=4</code>and is computed as: <p class="formulaDsp">
+\[\epsilon = \displaystyle{\frac{\|\textrm{R}_{n+1} - \textrm{F}^{(i)}_n\|_{\ell_2}}{\|\textrm{R}_{n+1} - \textrm{F}^{(0)}_n\|_{\ell_2}}}\]
+</p>
+</li>
+<li><b>Relative Increment Displacement Norm</b> corresponds to <code>test=5</code> and is computed as: <p class="formulaDsp">
+\[\epsilon = \displaystyle{\frac{\|\delta U^{(i)}\|_{\ell_2}}{\|\Delta U^{(0)}\|_{\ell_2}}}\]
+</p>
+</li>
+<li><b>Relative Energy Increment Norm</b> corresponds to <code>test=6</code> and is computed as: <p class="formulaDsp">
+\[\epsilon = \displaystyle{\frac{|\delta U^{(i)} \cdot (\textrm{R}_{n+1} - \textrm{F}^{(i)}_n)^\top|}{|\delta U^{(0)} \cdot (\textrm{R}_{n+1} - \textrm{F}^{(0)}_n)^\top|}}\]
+</p>
+</li>
+<li><b>Total Relative Increment Displacement Norm</b> corresponds to <code>test=7</code> and is computed as: <p class="formulaDsp">
+\[\epsilon = \displaystyle{\frac{\|\delta U^{(i)}\|_{\ell_2}}{\| \Delta U^{(i)}\|_{\ell_2}}}\]
+</p>
+</li>
+<li><b>Maximum Number of Iterations</b> corresponds to <code>test=8</code> and iterates until the number of iteration reaches this value (specified in the <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a>).</li>
+</ul>
+<p>where the \(\|x\|_{\ell_2}^2 = \displaystyle{\sum_{k=1}^n x_k^2}\) represent the Euclidean-norm, and \(|x|\) is the absolute value function. More information regarding the derived <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a> classes can be found at:</p><ul>
 <li><a class="el" href="linkLinear.html">Linear</a></li>
 <li><a class="el" href="linkNewtonRaphson.html">NewtonRaphson</a></li>
 </ul>
-<dl class="section attention"><dt>Attention</dt><dd>The <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a> class is also responsible for satisfying the convergence criteria at the <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a> level when an implicit integrator is specified. </dd>
-<dd>
-<a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a> class is also responsible for updating the displacements, velocities and acceleration vector states at each time step. </dd>
-<dd>
-<a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a> class can handle the following convergence <code>test</code> to compute the residual:<ul>
-<li>Unbalanced Force Norm is computed as: \(\|\textrm{R}_{n+1} - \textrm{F}^{(i)}_n\|_{\ell_2}\), and correspond to <code>test=1</code>.</li>
-<li>Increment Displacement Norm is computed as: \(\|\Delta U^{(i)}\|_{\ell_2}\), and correspond to <code>test=2</code>.</li>
-<li>Relative Unbalanced Force Norm is computed as: \(\displaystyle{\frac{\|\textrm{R}_{n+1} - \textrm{F}^{(i)}_n\|_{\ell_2}}{\|\textrm{R}_{n+1} - \textrm{F}^{0}_n\|_{\ell_2}}}\), and correspond to <code>test=3</code>.</li>
-<li>Relative Increment Displacement Norm is computed as: \(\displaystyle{\frac{\|\delta U^{(i)}\|_{\ell_2}}{\|\Delta U^{0}\|_{\ell_2}}}\), and correspond to <code>test=4</code>. </li>
+<p><b>REFERENCE:</b></p><ul>
+<li>Forde, B. W. R., Foschi, R. O., &amp; Stiemer, S. F. (1990). "Object-oriented finite element analysis". Computers &amp; Structures, 34(3), 355–374.</li>
+<li>Mackie, R. I. (1992). "Object oriented programming of the finite element method". International Journal for Numerical Methods in Engineering, 35(2), 425–436. </li>
 </ul>
-</dd>
-<dd>
-where the \(\|x\|_{\ell_2}^2 = \displaystyle{\sum_{k=1}^n x_k^2}\) represent the Euclidean-norm. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -102,12 +102,41 @@ $(document).ready(function(){initNavTree('linkDynamicAnalysis.html','');});
 <div class="title"><a class="el" href="classDynamicAnalysis.html" title="Class for creating a dynamic analysis and updating the states variables in mesh. ">DynamicAnalysis</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classDynamicAnalysis.html" title="Class for creating a dynamic analysis and updating the states variables in mesh. ">DynamicAnalysis</a> keyword creates an analysis that computes \(U(t)\), \(\dot{U}(t)\) and \(\ddot{U}(t)\) at each time step satisfying:</p>
+<div class="textblock"><h1>Background</h1>
+<p>The <a class="el" href="classDynamicAnalysis.html" title="Class for creating a dynamic analysis and updating the states variables in mesh. ">DynamicAnalysis</a> keyword creates an analysis that computes \(U(t)\), \(\dot{U}(t)\) and \(\ddot{U}(t)\) at each time step satisfying:</p>
 <p class="formulaDsp">
-\[ \textbf{M} \, \ddot{U}(t) + \textbf{C} \, \dot{U}(t) + {\rm{F}}(U,t) = {\rm R}(t) \nonumber \]
+\[ \textbf{M} \, \ddot{U}(t) + \textbf{C} \, \dot{U}(t) + {\rm{F}}(U,t) = {\rm R}(t) \]
 </p>
-<hr/>
-<p>A <a class="el" href="classDynamicAnalysis.html" title="Class for creating a dynamic analysis and updating the states variables in mesh. ">DynamicAnalysis</a> can be created using the built-in parse-function in the Parser as, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+<p><b>REFERENCE:</b></p><ul>
+<li>Bathe K. Jurgen, "Finite Element Procedures", Chapter 9, Prentice-Hall, 1996.</li>
+</ul>
+<h1>Pre-Analysis</h1>
+<p>The python <a class="el" href="linkSoftwareStructure.html#linkPreProcess">Pre-Analysis</a> in the <span style="color:green"><b>01-Pre_Process/Method/Attach.py</b></span> file provides with an interface to create a <a class="el" href="linkStaticAnalysis.html">StaticAnalysis</a>. We use the <span style="color:blue"><b>addAnalysis()</b></span> as follows:</p>
+<ul>
+<li><span style="color:blue"><b>addAnalysis</b></span>(<b>tag</b>, <b>attributes</b>):<ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of this analysis, i.e., tag &gt; -1</li>
+<li><span style="color:green"><b>attributes</b></span> : Specific properties for the created analysis, for example<ul>
+<li><span style="color:blue">'name'</span> : The analysis's name</li>
+<li><span style="color:blue">'nt'</span> : The integrator's time step</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><b>Example</b> </p><blockquote class="doxtable">
+<p>A <b>DYNAMIC ANALYSIS</b> can be defined using the python interface as follows:<br />
+SVL.addAnalysis(<b>tag</b>=1, <b>attributes</b>={'name': 'Dynamic', 'nt': 901}) </p>
+</blockquote>
+<p><b>Application</b> Please refer to any python file located at <span style="color:green"><b>03-Validations/01-Debugging/</b></span> that starts with <b>DY</b> abbreviation.</p>
+<p>On the contrary, the <span style="color:green"><b>01-Pre_Process/Method/Remove.py</b></span> file provides with an interface to depopulate the <code>Entities</code> dictionary. For example, to remove an already define <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a>, use:</p><ul>
+<li><span style="color:blue"><b>delAnalysis</b></span>(<b>tag</b>):<ul>
+<li><span style="color:green"><b>tag</b></span> : The identifier of the analysis to be removed, i.e., tag &gt; -1</li>
+</ul>
+</li>
+</ul>
+<h1>Run-Analysis</h1>
+<p>The C++ <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> in the <span style="color:green"><b>02-Run_Process/08-Analysis/02-Dynamic/DynamicAnalysis.cpp</b></span> file provides the class implementation. A <a class="el" href="linkStaticAnalysis.html">StaticAnalysis</a> is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a> and is defined inside the <span style="color:black"><b>"Simulations"</b></span> json field indicating its <span style="color:blue"><b>"Tag"</b></span> as follows,</p><ul>
+<li><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
 {
     <span style="color:black"><b>"Simulations"</b></span>: {
         <span style="color:blue"><b>"Tag"</b></span>: {
@@ -121,7 +150,7 @@ $(document).ready(function(){initNavTree('linkDynamicAnalysis.html','');});
         }
     }
 }
-</pre><table class="doxtable">
+</pre> <table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
@@ -129,13 +158,15 @@ $(document).ready(function(){initNavTree('linkDynamicAnalysis.html','');});
 <tr>
 <td><code>nt</code> </td><td>The number of time step to be performed. </td></tr>
 </table>
+</li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -104,24 +104,28 @@ $(document).ready(function(){initNavTree('linkElementLocalAxis.html','');});
 <div class="contents">
 <div class="textblock"><p><a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> require the definition of a local coordinates system so that quantities such as mass and stiffness matrices as well as force vectors can be transformed into global coordinates. The local axis computation is done internally on each element. The local axis definition depends on the element, and they are encapsulated into two categories: <code>Line</code> and <code>Area</code> local axis.</p>
 <ul>
-<li>For <code>LINE</code> elements such as <a class="el" href="classlin3DTruss2.html" title="Class for creating a 3D linearized two-node truss element in a mesh. ">lin3DTruss2</a> and <a class="el" href="classlin3DFrame2.html" title="Class for creating a 3D linearized two-node frame element in a mesh. ">lin3DFrame2</a>, the local axis 1 is always the longitudinal axis of the element, the positive direction being from <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> (1) to (2). This axis is always located at the centroid of the cross section. The default orientation of the local 2- and 3-axes is determined by the relationship between the local $1$-axis and the global Z-axis. The local 1-2 plane is taken to be vertical i.e., parallel to Z. The local 2-axis is taken to have upward +Z sense unless the element is vertical, in which the case the local 2-axis is taken to be horizontal along the global +X axis. The local 3-axis is horizontal, i.e., lies in the X-Y plane. This convension is explained in further details in next Figure for the case of a inclined element and a vertical element.</li>
+<li>For <code>LINE</code> elements such as <a class="el" href="classlin3DTruss2.html" title="Class for creating a 3D linearized two-node truss element in a mesh. ">lin3DTruss2</a> and <a class="el" href="classlin3DFrame2.html" title="Class for creating a 3D linearized two-node frame element in a mesh. ">lin3DFrame2</a>, the local axis 1 is always the longitudinal axis of the element, the positive direction being from <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> (1) to (2). This axis is always located at the centroid of the cross section. The default orientation of the local 2- and 3-axes is determined by the relationship between the local $1$-axis and the global Z-axis. The local 1-2 plane is taken to be vertical i.e., parallel to Z. The local 2-axis is taken to have upward +Z sense unless the element is vertical, in which the case the local 2-axis is taken to be horizontal along the global +X axis. The local 3-axis is horizontal, i.e., lies in the X-Y plane. This convention is explained in further details in next Figure for the case of a inclined element and a vertical element.</li>
 </ul>
 <div class="image">
 <img src="LocalAxisFrame.png" alt="LocalAxisFrame.png" width="28%"/>
 </div>
 <ul>
-<li>For <code>AREA</code> elements such as <a class="el" href="classlin3DShell4.html" title="Class for creating a 3D linearized four-node shell element in a mesh. ">lin3DShell4</a>, the local axis 3 is always normal to the plane of the shell element, the positive direction being from <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> (1) to (4) counterclockwise. The default orientation of the local 1- and 2-axes is determined by the relationship between the local 3-axis and the global Z-axis. The local 2-3 plane is taken to be vertical i.e., parallel to Z. The local 2-axis is taken to have upward +Z sense unless the element is horizontal, in which the case the local 2-axis is taken to be along the global +Y axis. The local 1-axis is horizontal, i.e., lies in the X-Y plane. This convension is explained in further details in next Figure for the case of a inclined element and a vertical element.</li>
+<li>For <code>AREA</code> elements such as <a class="el" href="classlin3DShell4.html" title="Class for creating a 3D linearized four-node shell element in a mesh. ">lin3DShell4</a>, the local axis 3 is always normal to the plane of the shell element, the positive direction being from <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> (1) to (4) counterclockwise. The default orientation of the local 1- and 2-axes is determined by the relationship between the local 3-axis and the global Z-axis. The local 2-3 plane is taken to be vertical i.e., parallel to Z. The local 2-axis is taken to have upward +Z sense unless the element is horizontal, in which the case the local 2-axis is taken to be along the global +Y axis. The local 1-axis is horizontal, i.e., lies in the X-Y plane. This convention is explained in further details in next Figure for the case of a inclined element and a vertical element.</li>
 </ul>
 <div class="image">
 <img src="LocalAxisShell.png" alt="LocalAxisShell.png" width="30%"/>
 </div>
- </div></div><!-- contents -->
+<p><b>REFERENCES:</b></p><ul>
+<li>SAP2000, "CSI Analysis Reference Manual", Chapter VII: The Frame <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>, Local Coordinate System, Default Orientation, page 108-110.</li>
+<li>SAP2000, "CSI Analysis Reference Manual", Chapter X: The Shell <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>, Local Coordinate System, Default Orientation, page 185-186. </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -17,6 +17,8 @@ var classElastic2DPlaneStrain =
     [ "GetStress", "classElastic2DPlaneStrain.html#a2208b61eb872831fdf806653592cf788", null ],
     [ "GetTangentStiffness", "classElastic2DPlaneStrain.html#a062bd19cc2a3a800686529b799358cce", null ],
     [ "GetTotalStress", "classElastic2DPlaneStrain.html#a8275b1423bfcefba3821837a435a0a40", null ],
+    [ "InitialState", "classElastic2DPlaneStrain.html#a3c82ade4c6d77add83bf9750cb361c65", null ],
+    [ "ReverseState", "classElastic2DPlaneStrain.html#a79aef63dea449c9b4035d567d8035faa", null ],
     [ "UpdateState", "classElastic2DPlaneStrain.html#a791ef505d3503f28b62b805822f020fd", null ],
     [ "E", "classElastic2DPlaneStrain.html#a42e628f827e50c45105808e53b643e07", null ],
     [ "nu", "classElastic2DPlaneStrain.html#aeca6dce104c2a1fa7067f19f364ad378", null ],

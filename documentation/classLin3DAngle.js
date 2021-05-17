@@ -19,6 +19,8 @@ var classLin3DAngle =
     [ "GetStress", "classLin3DAngle.html#af83311bf533162255f1e1a5ef640a6dd", null ],
     [ "GetStressAt", "classLin3DAngle.html#abefa7f69731e2b36807fcfd886c170e7", null ],
     [ "GetTangentStiffness", "classLin3DAngle.html#aa207f44bdad7fcfcf0ef9ab95bc09eaa", null ],
+    [ "InitialState", "classLin3DAngle.html#af417c24bdc8fddbb48b6bfb642f062bc", null ],
+    [ "ReverseState", "classLin3DAngle.html#a9ab5f665dde5fc69038e8ba12e69130a", null ],
     [ "UpdateState", "classLin3DAngle.html#af3334b1e88d49992cfe3636ffb384fd8", null ],
     [ "b", "classLin3DAngle.html#aaba5124c23fd045d71e2fd1647339c95", null ],
     [ "h", "classLin3DAngle.html#ac1ba324586946e92efad34789f256077", null ],

@@ -25,3 +25,30 @@ dd code {
 	font-size: 150%;
 	line-height: 150%;
 }
+
+/*********************************************/
+/**              H1 in textblocks           **/
+/*********************************************/
+.textblock h1 {
+    /*border-bottom: 1px solid  #0D4F8B ;*/
+    /*border-left: 3px solid  #0D4F8B ;*/
+	/*border-right: 3px solid  #0D4F8B ;*/
+	/*border-top: 1px solid  #0D4F8B ;*/
+    margin: 40px 0px 10px 0px;
+	background: linear-gradient(to bottom, #F0F8FF 0%, #ffffff 100%);
+	color: #104E8B;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.textblock h1:first-child {
+	margin-top: 10px;
+}
+
+/*********************************************/
+/**               Resizable UI              **/
+/*********************************************/
+.ui-resizable-e {
+	width: 10px;
+}

@@ -102,8 +102,105 @@ $(document).ready(function(){initNavTree('linkModel.html','');});
 <div class="title">Global </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <b>Seismo-VLAB</b> mesh-file must start by specifying the <a class="el" href="linkModel.html">Global</a> class followed by the dimension of the model <a class="el" href="Definitions_8hpp.html#a19e5b03b2be8d78bd8ce30ad81e105d6">Parser::nDimensions</a>, number of total degree of freedom <a class="el" href="Definitions_8hpp.html#a89b7493ff1f84f17b36e1e27b46ff515">Definitions::numberOfTotalDofs</a>, number of free degree of freedom <a class="el" href="Definitions_8hpp.html#a4f871deb2637ae9cbb4cd3ec06f26902">Definitions::numberOfFreeDofs</a>, and mass formulation Parser::MassForm that is going to be employed in the mass matrix construction. These parameters are used to create the mass, damping, stiffness and transformation matrices (enforce restrains and constraints) in the <a class="el" href="classAssembler.html">Assembler</a>.</p>
-<p>A <a class="el" href="linkModel.html">Global</a> is created using the built-in parse-structure provided in the Parser, </p><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+<div class="textblock"><h1>Background</h1>
+<p>The <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> requires some <a class="el" href="linkModel.html">Global</a> variables to be defined before creating a finite element model. Variables such as:</p><ul>
+<li><a class="el" href="Definitions_8hpp.html#a19e5b03b2be8d78bd8ce30ad81e105d6">Definitions::nDimensions</a> : the dimension of the model.</li>
+<li><a class="el" href="Definitions_8hpp.html#a89b7493ff1f84f17b36e1e27b46ff515">Definitions::numberOfTotalDofs</a> : number of total degree of freedom.</li>
+<li><a class="el" href="Definitions_8hpp.html#a4f871deb2637ae9cbb4cd3ec06f26902">Definitions::numberOfFreeDofs</a> : number of free degree of freedom.</li>
+<li><a class="el" href="Definitions_8hpp.html#a6c113dfaf37c3366c2cd4a54e0d4b000">Definitions::MassFormulation</a> : and mass formulation to be employed in the mass matrix.</li>
+</ul>
+<p>These variables are employed in order to allocate memory to create the mass, damping, stiffness and transformation matrices (enforce restrains and constraints) in the <a class="el" href="classAssembler.html">Assembler</a>. These variables are computed during the <a class="el" href="linkSoftwareStructure.html#linkPreProcess">Pre-Analysis</a>, specifically at <span style="color:green"><b>01-Pre_Process/Core/Numberer.py</b></span> functions <span style="color:blue"><b>FindDefectiveNodes</b></span> and <span style="color:blue"><b>PlainScheme</b></span>.</p>
+<p><b>REFERENCE:</b></p><ul>
+<li>Forde, B. W. R., Foschi, R. O., &amp; Stiemer, S. F. (1990). "Object-oriented finite element analysis". Computers &amp; Structures, 34(3), 355–374.</li>
+<li>Mackie, R. I. (1992). "Object oriented programming of the finite element method". International Journal for Numerical Methods in Engineering, 35(2), 425–436.</li>
+</ul>
+<h1>Pre-Analysis</h1>
+<p>Global properties are handled by two dictionaries: <code>Entities</code> and <code>Options</code></p>
+<p>The <code>Entities</code> dictionary is defined at <span style="color:green"><b>01-Pre_Process/Core/Definitions.py</b></span> and stores all information regarding the finite element simulation. Some of the fields defines are:</p>
+<ul>
+<li><span style="color:blue"><b>Nodes</b></span> : Dictionary that stores all node information defined by the user. The dictionary is transformed into json format to be used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> with the structure specified in <a class="el" href="linkNode.html">Node</a>.</li>
+<li><span style="color:blue"><b>Masses</b></span> : Dictionary that stores all mass information defined by the user. The dictionary is transformed into json format to be used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> with the structure specified in <a class="el" href="linkMass.html">Mass</a>.</li>
+<li><span style="color:blue"><b>Constraints</b></span> : Dictionary that stores all constraints applied to a degree of freedom. The dictionary is transformed into json format to be used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> with the structure specified in <a class="el" href="linkConstraint.html">Constraint</a>.</li>
+<li><span style="color:blue"><b>RigidLinks</b></span> : Dictionary that stores rigid link information defined by the user. The dictionary is transformed into json format to be used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> with the structure specified in <a class="el" href="linkConstraint.html">Constraint</a>.</li>
+<li><span style="color:blue"><b>Diaphragms</b></span> : Dictionary that stores rigid diaphragm information defined by the user. The dictionary is transformed into json format to be used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> with the structure specified in <a class="el" href="linkConstraint.html">Constraint</a>.</li>
+<li><span style="color:blue"><b>RigidBodies</b></span> : Dictionary that stores rigid body information defined by the user. The dictionary is transformed into json format to be used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> with the structure specified in <a class="el" href="linkConstraint.html">Constraint</a>.</li>
+<li><span style="color:blue"><b>Supports</b></span> : Dictionary that stores all support motions applied to a certain fixed degree of freedom. The dictionary is transformed into json format to be used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> with the structure specified in <a class="el" href="linkSupportMotion.html">Support Motion</a>.</li>
+<li><span style="color:blue"><b>Fibers</b></span> : Dictionary that stores all fiber information (fiber sections). The dictionary is transformed into json format with the structure specified in linkFiber.</li>
+<li><span style="color:blue"><b>Materials</b></span> : Dictionary that stores all material information. The dictionary is transformed into json format to be used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> with the structure specified in <a class="el" href="linkMaterial.html">Material</a>.</li>
+<li><span style="color:blue"><b>Sections</b></span> : Dictionary that stores all section information. The dictionary is transformed into json format to be used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> with the structure specified in <a class="el" href="linkSection.html">Section</a>.</li>
+<li><span style="color:blue"><b>Elements</b></span> : Dictionary that stores all element information. The dictionary is transformed into json format to be used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> with the structure specified in <a class="el" href="linkElement.html">Element</a>.</li>
+<li><span style="color:blue"><b>Surfaces</b></span> : Dictionary that stores all surfaces information. The dictionary is transformed into json format to be used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> with the structure specified in <a class="el" href="linkSurface.html">Surface</a>.</li>
+<li><span style="color:blue"><b>Dampings</b></span> : Dictionary that stores all damping information. The dictionary is transformed into json format to be used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> with the structure specified in <a class="el" href="linkDamping.html">Damping</a>.</li>
+<li><span style="color:blue"><b>Combinations</b></span> : Dictionary that stores the combination information. The dictionary is transformed into json format to be used in the linkRunProcesswith the structure specified in <a class="el" href="linkLoadCombination.html">LoadCombo</a>.</li>
+<li><span style="color:blue"><b>Recorders</b></span> : Dictionary that stores the recorder information. The dictionary is transformed into json format to be used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> with the structure specified in <a class="el" href="linkRecorder.html">Recorder</a>.</li>
+<li><span style="color:blue"><b>Solvers</b></span> : Dictionary that stores the linear system information. The dictionary is transformed into json format to be used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> with the structure specified in <a class="el" href="linkSolver.html">Linear System</a>.</li>
+<li><span style="color:blue"><b>Algorithms</b></span> : Dictionary that stores the algorithm information. The dictionary is transformed into json format to be used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> with the structure specified in <a class="el" href="linkAlgorithm.html">Algorithm</a>.</li>
+<li><span style="color:blue"><b>Integrators</b></span> : Dictionary that stores the integrator information. The dictionary is transformed into json format to be used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> with the structure specified in <a class="el" href="linkIntegrator.html">Integrator</a>.</li>
+<li><span style="color:blue"><b>Analyses</b></span> : Dictionary that stores the analyses information. The dictionary is transformed into json format to be used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> with the structure specified in <a class="el" href="linkAnalysis.html">Analysis</a>.</li>
+<li><p class="startli"><span style="color:blue"><b>Simulations</b></span> : Dictionary that stores the simulation information. The dictionary is transformed into json format to be used in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> with the structure specified as follows:</p><ul>
+<li><span style="color:green"><b>analysis</b></span> : The analysis identifier (<b>Tag</b>) to be used</li>
+<li><span style="color:green"><b>algorithm</b></span> : The algorithm identifier (<b>Tag</b>) to be used</li>
+<li><span style="color:green"><b>integrator</b></span> : The integrator identifier (<b>Tag</b>) to be used</li>
+<li><span style="color:green"><b>solver</b></span> : The solver identifier (<b>Tag</b>) to be used</li>
+</ul>
+<p class="startli"><b>Example</b> </p><blockquote class="doxtable">
+<p>The nodes in <b>Entities</b> defined in SVL can be accesses as:<br />
+SVL.Entities['Nodes']<br />
+</p>
+</blockquote>
+<p class="startli"><b>Application</b><br />
+ Please refer to any file in <span style="color:green"><b>03-Validations/01-Debugging/</b></span> to see examples on how to modify the <code>Entities</code> fields.</p>
+</li>
+</ul>
+<p>Similarly, the dictionary <code>Options</code> is defined at <span style="color:green"><b>01-Pre_Process/Core/Definitions.py</b></span> and stores all user's inputs or configuration. Some of the fields defines are:</p>
+<ul>
+<li><span style="color:green"><b>solution</b></span> : Specifies how the simulations are going to be executed, 'Independent' or 'Sequential'.</li>
+<li><span style="color:green"><b>numbering</b></span> : The degree of freedom numbering scheme, these can be 'plain', 'cuthill-McKee', 'minimum degree'</li>
+<li><span style="color:green"><b>metispath</b></span> : The path where the Metis program is located. Default is '/usr/bin/mpmetis' (Linux)</li>
+<li><span style="color:green"><b>massform</b></span> : The mass matrix formulation. These can be 'consistent' or 'lumped'</li>
+<li><span style="color:green"><b>nparts</b></span> : The number of partition to divide the finite element mesh</li>
+<li><span style="color:green"><b>dimension</b></span> : The model's dimension, this is '=2' (2D) or '=3' (3D)</li>
+<li><span style="color:green"><b>nfree</b></span> : The number of free degree of freedom (after restrain and constraint are applied) in the entire model.</li>
+<li><span style="color:green"><b>ntotal</b></span> : The total number of degree of freedom in the entire model.</li>
+<li><span style="color:green"><b>nconstraint</b></span> : The total number of constraint (rigid link, rigid body, diaphragm) in the entire model.</li>
+<li><span style="color:green"><b>nlumped</b></span> : The number of diagonal terms in the stiffness/mass matrix.</li>
+<li><p class="startli"><span style="color:green"><b>nconsistent</b></span> : The number of sparse terms in the stiffness/mass matrix.</p>
+<p class="startli"><b>Example</b> </p><blockquote class="doxtable">
+<p>The <b>Options</b> can be modified in SVL as:<br />
+SVL.Options['numbering'] = 'CutHill-McKee'<br />
+SVL.Options['dimension'] = 3 </p>
+</blockquote>
+<p class="startli"><b>Application</b><br />
+ Please refer to any file located at <span style="color:green"><b>03-Validations/01-Debugging/</b></span> to see examples on how to modify the <code>Options</code> fields.</p>
+</li>
+</ul>
+<p>In addition, some useful functions are defined at <span style="color:green"><b>01-Pre_Process/Core/Utilities.py</b></span> when using the Python command interface. For example,</p><ul>
+<li><span style="color:blue"><b>clc</b></span>():<br />
+ This function clears the command line screen and prints the <b>SVL</b> header</li>
+<li><span style="color:blue"><b>cleanAll</b></span>():<br />
+ Sets all <b>SVL</b> dictionaries to its initial values. All pre-loaded data will be erased.</li>
+<li><span style="color:blue"><b>printAll</b></span>(<b>name</b>):<br />
+ Prints on the screen everything that is generated in a particular field (<b>name</b>) in <code>Entities</code>. See linkPythonDefinitions for some field names</li>
+<li><p class="startli"><span style="color:blue"><b>saveAs</b></span>(<b>name</b>):<br />
+ This function saves in a python file all <code>Entities</code> defined so far in python command prompt</p>
+<p class="startli"><b>Example</b> </p><blockquote class="doxtable">
+<p>The command line screen can be <b>cleaned</b> as:<br />
+SVL.clc()<br />
+<br />
+The nodes in <b>Entities</b> can be printed on the screen as:<br />
+SVL.printAll('Nodes') </p>
+</blockquote>
+</li>
+</ul>
+<dl class="section attention"><dt>Attention</dt><dd>The user can add or costumize other functions inside these files that may find useful.<br />
+Please refer to <span style="color:green"><b>SVL/01-Pre_Process/Core/Utilities.py</b></span> for more details in declarations and implementation aspects </dd>
+<dd>
+Please refer to <span style="color:green"><b>SVL/01-Pre_Process/Core/Definitions.py</b></span> for more details in declarations and implementation aspects </dd>
+<dd>
+The <code>SVLclasses</code> stores the information of the material, section, and element classes available in <b>SVL</b>. The <code>SolverOption</code> dictionary has the available option of the solver, and <code>ConvergeTest</code> dictionary the available test that can be performed during the Newton-Raphson method.</dd></dl>
+<h1>Run-Analysis</h1>
+<p>The C++ <span style="color:green"><b>02-Run_Process/12-Utilities/Definitions.cpp</b></span> file provides with the Global variable declarations. These variables are defined inside the <span style="color:black"><b>"Global"</b></span> json field indicating its property as follows,</p><ul>
+<li><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
 {
     <span style="color:black"><b>"Global"</b></span>: {
         <span style="color:green"><b>"ndim"</b></span> : int,
@@ -112,7 +209,7 @@ $(document).ready(function(){initNavTree('linkModel.html','');});
         <span style="color:green"><b>"mass"</b></span>  : str,
     }
 }
-</pre><table class="doxtable">
+</pre> <table class="doxtable">
 <tr>
 <th>Variable </th><th>Description  </th></tr>
 <tr>
@@ -124,21 +221,23 @@ $(document).ready(function(){initNavTree('linkModel.html','');});
 <tr>
 <td><code>mass</code> </td><td>The mass matrix formulation, currently <code>LUMPED</code> , <code>CONSISTENT</code> are allowed. </td></tr>
 </table>
+<br />
 <dl class="section attention"><dt>Attention</dt><dd>Other global control parameters may be added in future for handling specific tasks. </dd>
 <dd>
 The parameter <code>ndim</code> is extremely important and must be consistent with the <a class="el" href="classNode.html">Node</a>, <a class="el" href="classElement.html">Element</a> and <a class="el" href="classMaterial.html">Material</a> employed in the analysis.</dd></dl>
-<h3>Example</h3>
-<blockquote class="doxtable">
-<p>A 3D <a class="el" href="linkModel.html">Global</a> with a total of 100 degree of freedom of which 80 are free is created as: <br />
- { "Global": { "ndim" : 3, "ntotal" : 100, "nfree" : 80, "mass" : "CONSISTENT" } }</p>
+<b>Example</b> <blockquote class="doxtable">
+<p>A 3D <b>GLOBAL</b> environment is set with a total of 100 degree of freedom of which 80 are free as follows: <br />
+ { "Global": { "ndim" : 3, "ntotal" : 100, "nfree" : 80, "mass" : "CONSISTENT" } } </p>
 </blockquote>
+</li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

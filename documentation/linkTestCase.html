@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 		<meta name="generator" content="Doxygen 1.8.13"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>Seismo-VLAB: Validation Test Cases</title>
+		<title>Seismo-VLAB: Validation</title>
 		<link href="tabs.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="dynsections.js"></script>
@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('linkTestCase.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Validation Test Cases </div>  </div>
+<div class="title">Validation </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>We are aware that users at some point may need to modify <b>Seismo-VLAB</b> at the <b>Pre-Analysis</b> or <b>Run-Analysis</b> level. In order to ensure that such modification does not affect/interfere with other classes, we have developed several test cases that covers a range from simple to sophisticated examples. The test cases are mainly divided in two categories:</p>
@@ -110,17 +110,14 @@ $(document).ready(function(){initNavTree('linkTestCase.html','');});
 <li><span style="color:green">Performance test cases</span> (<code>~SVL/03-Validations/02-Performance</code>): Set of examples designed to check if the parallel features implemented in <b>SVL</b> works properly. Scalability of the code for medium-to-large size problems can be tested using these cases.</li>
 </ul>
 <p>In particular, the debugging test cases can be run and a pdf-report will be generated after completion of this task. The report provide not only with a brief description of the problem that is being solved, but also produce comparison of results between <b>SVL</b> solution against analytical solution or simulated solution using another software such as OpenSEES and SAP2000. This report will guide the user to easily identify places where the performed modifications affected the <b>SVL</b> code.</p>
-<p>The PDF-report can be generated as:</p>
-<pre>
-<span style="color:green">~/SVL/03-Validations/05-Debugging_Report_Cases$</span> python3 runValidation.py
-</pre><p>The report will be located at <code>~/05-Debugging_Report_Cases/LaTeX/Verification.pdf</code>. </p>
+<p>The PDF-report can be generated as: </p><div class="fragment"><div class="line">python3 runValidation.py</div></div><!-- fragment --><p>The report will be located at <code>~/05-Debugging_Report_Cases/LaTeX/Verification.pdf</code>. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

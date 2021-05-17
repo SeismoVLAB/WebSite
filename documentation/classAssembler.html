@@ -149,7 +149,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a47e85d549587ec6421e9f92b94b1d870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble the internal force vector.  <a href="#a47e85d549587ec6421e9f92b94b1d870">More...</a><br /></td></tr>
 <tr class="separator:a47e85d549587ec6421e9f92b94b1d870"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fe7bd64c4a0f7c22e9c8cdbce7b87e7"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssembler.html#a8fe7bd64c4a0f7c22e9c8cdbce7b87e7">ComputeDynamicInternalForceVector</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh)</td></tr>
-<tr class="memdesc:a8fe7bd64c4a0f7c22e9c8cdbce7b87e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble the internal elastic, inertial, and vicous force vector.  <a href="#a8fe7bd64c4a0f7c22e9c8cdbce7b87e7">More...</a><br /></td></tr>
+<tr class="memdesc:a8fe7bd64c4a0f7c22e9c8cdbce7b87e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble the internal elastic, inertial, and viscous force vector.  <a href="#a8fe7bd64c4a0f7c22e9c8cdbce7b87e7">More...</a><br /></td></tr>
 <tr class="separator:a8fe7bd64c4a0f7c22e9c8cdbce7b87e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af92caa95acacce4ffd61c2778aabbfe6"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssembler.html#af92caa95acacce4ffd61c2778aabbfe6">ComputeExternalForceVector</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh, unsigned int k)</td></tr>
 <tr class="memdesc:af92caa95acacce4ffd61c2778aabbfe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble the external force vector.  <a href="#af92caa95acacce4ffd61c2778aabbfe6">More...</a><br /></td></tr>
@@ -167,7 +167,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:aa45ba18d80a40768f299ca57d12f416c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the inertial forces contribution associated to the nodes.  <a href="#aa45ba18d80a40768f299ca57d12f416c">More...</a><br /></td></tr>
 <tr class="separator:aa45ba18d80a40768f299ca57d12f416c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a782f7969850c9907d74b9ac43954cd9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssembler.html#a782f7969850c9907d74b9ac43954cd9a">AddElementDynamicForces</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh, Eigen::VectorXd &amp;DynamicForces)</td></tr>
-<tr class="memdesc:a782f7969850c9907d74b9ac43954cd9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the elastic, inertial, and vicous forces associated to the elements.  <a href="#a782f7969850c9907d74b9ac43954cd9a">More...</a><br /></td></tr>
+<tr class="memdesc:a782f7969850c9907d74b9ac43954cd9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the elastic, inertial, and viscous forces associated to the elements.  <a href="#a782f7969850c9907d74b9ac43954cd9a">More...</a><br /></td></tr>
 <tr class="separator:a782f7969850c9907d74b9ac43954cd9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a976ce8ac13c6ad7e5ebe505b919a7d33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssembler.html#a976ce8ac13c6ad7e5ebe505b919a7d33">AssembleNodalMass</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh, Eigen::SparseMatrix&lt; double &gt; &amp;nodemass)</td></tr>
 <tr class="memdesc:a976ce8ac13c6ad7e5ebe505b919a7d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble Nodal Mass matrix.  <a href="#a976ce8ac13c6ad7e5ebe505b919a7d33">More...</a><br /></td></tr>
@@ -269,7 +269,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Adds the elastic, inertial, and vicous forces associated to the elements. </p>
+<p>Adds the elastic, inertial, and viscous forces associated to the elements. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mesh</td><td>The finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> object. </td></tr>
@@ -277,7 +277,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>, <a class="el" href="classElement.html#aad5d31a9b1ea724bd409a48b6606e3c6" title="Compute the elastic, inertial, and vicous forces acting on the element. ">Element::ComputeInternalDynamicForces()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>, <a class="el" href="classElement.html#aad5d31a9b1ea724bd409a48b6606e3c6" title="Compute the elastic, inertial, and viscous forces acting on the element. ">Element::ComputeInternalDynamicForces()</a>. </dd></dl>
 
 </div>
 </div>
@@ -369,7 +369,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>, <a class="el" href="classElement.html#aca10062cfee57ae5270744e504e28045" title="Compute the lumped/consistent mass matrix of the element. ">Element::ComputeMassMatrix()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>, <a class="el" href="classElement.html#aca10062cfee57ae5270744e504e28045" title="Compute the lumped/consistent mass matrix of the element or close form solutions. ...">Element::ComputeMassMatrix()</a>. </dd></dl>
 
 </div>
 </div>
@@ -444,7 +444,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A matrix with the model damping. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>More details can be found at <a class="el" href="linkAssembler.html">Assembler</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html#a2f0c9594ed5b6ffaa1a99067e65c2c5a" title="Compute the damping matrix of the element using gauss-integration. ">Element::ComputeDampingMatrix()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness assiciated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html#a2f0c9594ed5b6ffaa1a99067e65c2c5a" title="Compute the damping matrix of the element using gauss-integration or close form solutions. ">Element::ComputeDampingMatrix()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness associated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
 
 </div>
 </div>
@@ -464,14 +464,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Assemble the internal elastic, inertial, and vicous force vector. </p>
+<p>Assemble the internal elastic, inertial, and viscous force vector. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mesh</td><td>The finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> object. return A vector with the model total (inertial, viscous, elastic) internal force. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html#aad5d31a9b1ea724bd409a48b6606e3c6" title="Compute the elastic, inertial, and vicous forces acting on the element. ">Element::ComputeInternalDynamicForces()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html#aad5d31a9b1ea724bd409a48b6606e3c6" title="Compute the elastic, inertial, and viscous forces acting on the element. ">Element::ComputeInternalDynamicForces()</a>. </dd></dl>
 
 </div>
 </div>
@@ -511,7 +511,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A vector with the model total external force. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>More details can be found at <a class="el" href="linkAssembler.html">Assembler</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html#a39ced5654444f81d4ddc60deaccb947a" title="Compute the surface forces acting on the element. ">Element::ComputeSurfaceForces()</a>, <a class="el" href="classElement.html#a19ade63e2e7ef3e0e419e1bb8ea8ef2d" title="Compute the body forces acting on the element. ">Element::ComputeBodyForces()</a>, <a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force assiciated to the integrator. ">Integrator::ComputeEffectiveForce()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html#a39ced5654444f81d4ddc60deaccb947a" title="Compute the surface forces acting on the element. ">Element::ComputeSurfaceForces()</a>, <a class="el" href="classElement.html#a19ade63e2e7ef3e0e419e1bb8ea8ef2d" title="Compute the body forces acting on the element. ">Element::ComputeBodyForces()</a>, <a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force associated to the integrator. ">Integrator::ComputeEffectiveForce()</a>. </dd></dl>
 
 </div>
 </div>
@@ -538,7 +538,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html#a44fd58f936c3e2452798f351b6fb896d" title="Compute the internal forces acting on the element. ">Element::ComputeInternalForces()</a>, <a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force assiciated to the integrator. ">Integrator::ComputeEffectiveForce()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html#a44fd58f936c3e2452798f351b6fb896d" title="Compute the internal forces acting on the element. ">Element::ComputeInternalForces()</a>, <a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force associated to the integrator. ">Integrator::ComputeEffectiveForce()</a>. </dd></dl>
 
 </div>
 </div>
@@ -566,7 +566,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>More details can be found at <a class="el" href="linkAssembler.html">Assembler</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html#aca10062cfee57ae5270744e504e28045" title="Compute the lumped/consistent mass matrix of the element. ">Element::ComputeMassMatrix()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness assiciated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html#aca10062cfee57ae5270744e504e28045" title="Compute the lumped/consistent mass matrix of the element or close form solutions. ...">Element::ComputeMassMatrix()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness associated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
 
 </div>
 </div>
@@ -595,7 +595,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A vector with the PML history values. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>More details can be found at <a class="el" href="linkAssembler.html">Assembler</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html#a2f0c9594ed5b6ffaa1a99067e65c2c5a" title="Compute the damping matrix of the element using gauss-integration. ">Element::ComputeDampingMatrix()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness assiciated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html#a2f0c9594ed5b6ffaa1a99067e65c2c5a" title="Compute the damping matrix of the element using gauss-integration or close form solutions. ">Element::ComputeDampingMatrix()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness associated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
 
 </div>
 </div>
@@ -623,7 +623,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A vector with the PML history values. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force assiciated to the integrator. ">Integrator::ComputeEffectiveForce()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness assiciated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force associated to the integrator. ">Integrator::ComputeEffectiveForce()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness associated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a> </dd></dl>
 
 </div>
 </div>
@@ -652,7 +652,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A matrix with the model stiffness. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>More details can be found at <a class="el" href="linkAssembler.html">Assembler</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html#a7a3de7d3765b7f1a690c9ad68e5914ad" title="Compute the stiffness matrix of the element using gauss-integration. ">Element::ComputeStiffnessMatrix()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness assiciated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElement.html#a7a3de7d3765b7f1a690c9ad68e5914ad" title="Compute the stiffness matrix of the element using gauss-integration or close form solutions...">Element::ComputeStiffnessMatrix()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness associated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
 
 </div>
 </div>
@@ -691,7 +691,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A vector with the model support motion displacements. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force assiciated to the integrator. ">Integrator::ComputeEffectiveForce()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness assiciated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force associated to the integrator. ">Integrator::ComputeEffectiveForce()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness associated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a> </dd></dl>
 
 </div>
 </div>
@@ -903,7 +903,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classAssembler.html">Assembler</a></li>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

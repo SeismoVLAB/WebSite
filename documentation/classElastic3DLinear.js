@@ -17,6 +17,8 @@ var classElastic3DLinear =
     [ "GetStress", "classElastic3DLinear.html#a3d6ab25708cb797234c2aef7f328c88a", null ],
     [ "GetTangentStiffness", "classElastic3DLinear.html#a01e0eb1639ed24675c36865e0ff94ea3", null ],
     [ "GetTotalStress", "classElastic3DLinear.html#a1240c56d82c0996dca5d1b878da7002b", null ],
+    [ "InitialState", "classElastic3DLinear.html#a4d28bc884067270615e9bb2e20cabe5f", null ],
+    [ "ReverseState", "classElastic3DLinear.html#a451b7e15772b9897681d0ea613fd1994", null ],
     [ "UpdateState", "classElastic3DLinear.html#a4094c7d3a2df277bf5a04dc1e3ecb1c5", null ],
     [ "E", "classElastic3DLinear.html#acc5f76edc11855097fd36a7b615ade97", null ],
     [ "nu", "classElastic3DLinear.html#a2d211e51677c7ae5bc47a4f05736021f", null ],

@@ -114,26 +114,17 @@ $(document).ready(function(){initNavTree('classHertzian1DLinear.html','');});
 <div class="dynheader">
 Inheritance diagram for Hertzian1DLinear:</div>
 <div class="dyncontent">
-<div class="center"><img src="classHertzian1DLinear__inherit__graph.png" border="0" usemap="#Hertzian1DLinear_inherit__map" alt="Inheritance graph"/></div>
-<map name="Hertzian1DLinear_inherit__map" id="Hertzian1DLinear_inherit__map">
-<area shape="rect" id="node2" href="classMaterial.html" title="Virtual class for creating a material object. " alt="" coords="33,5,101,32"/>
+ <div class="center">
+  <img src="classHertzian1DLinear.png" usemap="#Hertzian1DLinear_map" alt=""/>
+  <map id="Hertzian1DLinear_map" name="Hertzian1DLinear_map">
+<area href="classMaterial.html" title="Virtual class for creating a material object. " alt="Material" shape="rect" coords="0,0,111,24"/>
 </map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Hertzian1DLinear:</div>
-<div class="dyncontent">
-<div class="center"><img src="classHertzian1DLinear__coll__graph.png" border="0" usemap="#Hertzian1DLinear_coll__map" alt="Collaboration graph"/></div>
-<map name="Hertzian1DLinear_coll__map" id="Hertzian1DLinear_coll__map">
-<area shape="rect" id="node2" href="classMaterial.html" title="Virtual class for creating a material object. " alt="" coords="35,185,103,212"/>
-<area shape="rect" id="node3" title="STL class. " alt="" coords="29,96,109,123"/>
-<area shape="rect" id="node4" title="STL class. " alt="" coords="5,5,132,47"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a71ef5193a463c85c961feb30e872df90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHertzian1DLinear.html#a71ef5193a463c85c961feb30e872df90">Hertzian1DLinear</a> (const double <a class="el" href="classHertzian1DLinear.html#af76ee45ce8060f5b8a0d47d4203aafaf">k1</a>, const double <a class="el" href="classHertzian1DLinear.html#ae53f37418ae1dc934b9ee331d02e7a3c">k2</a>, const double <a class="el" href="classHertzian1DLinear.html#ad520c57b9c27c9ec6d05a482cbd34ee2">k3</a>, const double rho=0.0)</td></tr>
-<tr class="memdesc:a71ef5193a463c85c961feb30e872df90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classHertzian1DLinear.html" title="Class for creating an uniaxial hertzian contact material for one-dimensional elements. ">Hertzian1DLinear</a> material to be especified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>.  <a href="#a71ef5193a463c85c961feb30e872df90">More...</a><br /></td></tr>
+<tr class="memdesc:a71ef5193a463c85c961feb30e872df90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classHertzian1DLinear.html" title="Class for creating an uniaxial hertzian contact material for one-dimensional elements. ">Hertzian1DLinear</a> material to be specified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>.  <a href="#a71ef5193a463c85c961feb30e872df90">More...</a><br /></td></tr>
 <tr class="separator:a71ef5193a463c85c961feb30e872df90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af69f7a540015955d4811e944fa206a83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHertzian1DLinear.html#af69f7a540015955d4811e944fa206a83">~Hertzian1DLinear</a> ()</td></tr>
 <tr class="memdesc:af69f7a540015955d4811e944fa206a83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classHertzian1DLinear.html" title="Class for creating an uniaxial hertzian contact material for one-dimensional elements. ">Hertzian1DLinear</a> material.  <a href="#af69f7a540015955d4811e944fa206a83">More...</a><br /></td></tr>
@@ -183,12 +174,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a427ab0ee19cfcc98260f3d7cf4d3b9db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHertzian1DLinear.html#a427ab0ee19cfcc98260f3d7cf4d3b9db">CommitState</a> ()</td></tr>
 <tr class="memdesc:a427ab0ee19cfcc98260f3d7cf4d3b9db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform converged material state update.  <a href="#a427ab0ee19cfcc98260f3d7cf4d3b9db">More...</a><br /></td></tr>
 <tr class="separator:a427ab0ee19cfcc98260f3d7cf4d3b9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a007a81f51e5de887b48c587472363851"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHertzian1DLinear.html#a007a81f51e5de887b48c587472363851">ReverseState</a> ()</td></tr>
+<tr class="memdesc:a007a81f51e5de887b48c587472363851"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse the material states to previous converged state.  <a href="#a007a81f51e5de887b48c587472363851">More...</a><br /></td></tr>
+<tr class="separator:a007a81f51e5de887b48c587472363851"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d73dd48a87b8ab632bca73cc288d180"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHertzian1DLinear.html#a6d73dd48a87b8ab632bca73cc288d180">InitialState</a> ()</td></tr>
+<tr class="memdesc:a6d73dd48a87b8ab632bca73cc288d180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Brings the material states to its initial state in the element.  <a href="#a6d73dd48a87b8ab632bca73cc288d180">More...</a><br /></td></tr>
+<tr class="separator:a6d73dd48a87b8ab632bca73cc288d180"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9ab5f6c9e8ee642ed8052f81b3e7a23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHertzian1DLinear.html#ab9ab5f6c9e8ee642ed8052f81b3e7a23">UpdateState</a> (const Eigen::VectorXd strain, const unsigned int cond)</td></tr>
 <tr class="memdesc:ab9ab5f6c9e8ee642ed8052f81b3e7a23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the material state for this iteration.  <a href="#ab9ab5f6c9e8ee642ed8052f81b3e7a23">More...</a><br /></td></tr>
 <tr class="separator:ab9ab5f6c9e8ee642ed8052f81b3e7a23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classMaterial"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classMaterial')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classMaterial.html">Material</a></td></tr>
 <tr class="memitem:a4e51c99736625c951b8910cee909c685 inherit pub_methods_classMaterial"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaterial.html#a4e51c99736625c951b8910cee909c685">Material</a> (std::string name, bool model)</td></tr>
-<tr class="memdesc:a4e51c99736625c951b8910cee909c685 inherit pub_methods_classMaterial"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> to be especified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>.  <a href="classMaterial.html#a4e51c99736625c951b8910cee909c685">More...</a><br /></td></tr>
+<tr class="memdesc:a4e51c99736625c951b8910cee909c685 inherit pub_methods_classMaterial"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> to be specified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>.  <a href="classMaterial.html#a4e51c99736625c951b8910cee909c685">More...</a><br /></td></tr>
 <tr class="separator:a4e51c99736625c951b8910cee909c685 inherit pub_methods_classMaterial"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a216a675d064866d5ce280ad5d48769d5 inherit pub_methods_classMaterial"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaterial.html#a216a675d064866d5ce280ad5d48769d5">~Material</a> ()=0</td></tr>
 <tr class="memdesc:a216a675d064866d5ce280ad5d48769d5 inherit pub_methods_classMaterial"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> object.  <a href="classMaterial.html#a216a675d064866d5ce280ad5d48769d5">More...</a><br /></td></tr>
@@ -266,7 +263,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a <a class="el" href="classHertzian1DLinear.html" title="Class for creating an uniaxial hertzian contact material for one-dimensional elements. ">Hertzian1DLinear</a> material to be especified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>. </p>
+<p>Creates a <a class="el" href="classHertzian1DLinear.html" title="Class for creating an uniaxial hertzian contact material for one-dimensional elements. ">Hertzian1DLinear</a> material to be specified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">k1</td><td>The linear spring value. </td></tr>
@@ -537,7 +534,7 @@ Private Attributes</h2></td></tr>
 
 <p>Returns the initial material stiffness. </p>
 <dl class="section return"><dt>Returns</dt><dd>Matrix with the initial material tangent stiffness matrix. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The initial tangent stiifness matrix is computed when the strain vector is zero. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The initial tangent stiffness matrix is computed when the strain vector is zero. </dd></dl>
 
 <p>Implements <a class="el" href="classMaterial.html#af817c97bfaca9193d6b0a8dfb5cc302f">Material</a>.</p>
 
@@ -757,6 +754,66 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a6d73dd48a87b8ab632bca73cc288d180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d73dd48a87b8ab632bca73cc288d180">&#9670;&nbsp;</a></span>InitialState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Hertzian1DLinear::InitialState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Brings the material states to its initial state in the element. </p>
+<dl class="section note"><dt>Note</dt><dd>This funtion returns the material states to the beginning. </dd></dl>
+
+<p>Implements <a class="el" href="classMaterial.html#a722d61cfb7d6acf68f3e9b0febc6af56">Material</a>.</p>
+
+</div>
+</div>
+<a id="a007a81f51e5de887b48c587472363851"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a007a81f51e5de887b48c587472363851">&#9670;&nbsp;</a></span>ReverseState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Hertzian1DLinear::ReverseState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reverse the material states to previous converged state. </p>
+<dl class="section note"><dt>Note</dt><dd>This funtion returns the material states to previous converged states. </dd></dl>
+
+<p>Implements <a class="el" href="classMaterial.html#aad432b6af57882bfd36131a8fcf1bcaa">Material</a>.</p>
+
+</div>
+</div>
 <a id="ab9ab5f6c9e8ee642ed8052f81b3e7a23"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab9ab5f6c9e8ee642ed8052f81b3e7a23">&#9670;&nbsp;</a></span>UpdateState()</h2>
 
@@ -795,13 +852,13 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">strain</td><td>Vector with the strain components at this Gauss-point. </td></tr>
-    <tr><td class="paramname">cond</td><td>If the the elatic/platic material components will be updated. </td></tr>
+    <tr><td class="paramname">cond</td><td>If the the elastic/plastic material components will be updated. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>This function computes the strain and tanget stiffness matrix once the trial strain converged. </dd></dl>
 
-<p>Implements <a class="el" href="classMaterial.html#af355dad3a019f02ef89d8ad0b9184644">Material</a>.</p>
+<p>Implements <a class="el" href="classMaterial.html#a9906db0b9a38150280e10743410cb648">Material</a>.</p>
 
 </div>
 </div>
@@ -981,7 +1038,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classHertzian1DLinear.html">Hertzian1DLinear</a></li>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -106,10 +106,10 @@ $(document).ready(function(){initNavTree('classLinear.html','');});
 <p>This is the complete list of members for <a class="el" href="classLinear.html">Linear</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classAlgorithm.html#aed8fbb2c95c9981be09b23904fa0305b">Algorithm</a>(const std::shared_ptr&lt; Mesh &gt; &amp;mesh, unsigned int flag=1, double NormFactor=1.0)</td><td class="entry"><a class="el" href="classAlgorithm.html">Algorithm</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classAlgorithm.html#a12548a35e3474440ebf9272403eed7bc">ComputeConvergence</a>(const Eigen::VectorXd &amp;Force, double Delta, bool isFirstIteration)</td><td class="entry"><a class="el" href="classAlgorithm.html">Algorithm</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classAlgorithm.html#aba5bc684210145a4119138f7448277aa">ComputeConvergence</a>(const Eigen::VectorXd &amp;Force, const Eigen::VectorXd &amp;delta, double Delta, unsigned int k)</td><td class="entry"><a class="el" href="classAlgorithm.html">Algorithm</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classLinear.html#af28720bde3ad8dde9d38e68c8cba99df">ComputeNewIncrement</a>(std::shared_ptr&lt; Mesh &gt; &amp;mesh, unsigned int i=0)</td><td class="entry"><a class="el" href="classLinear.html">Linear</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classLinear.html#a292dd4627557318ac5e94eec08b7ad60">dU</a></td><td class="entry"><a class="el" href="classLinear.html">Linear</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classLinear.html#a0211055aa2600ebe5937279d2ad45f3a">GetDisplacementIncrement</a>()</td><td class="entry"><a class="el" href="classLinear.html">Linear</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classLinear.html#ad9847e32ea0e86a49bb0304de3f48633">GetDisplacementIncrement</a>()</td><td class="entry"><a class="el" href="classLinear.html">Linear</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classLinear.html#aaf63c4651a450c874a6e68ba1d144eee">Linear</a>(std::unique_ptr&lt; LinearSystem &gt; &amp;solver, std::shared_ptr&lt; Mesh &gt; &amp;mesh, double tol=1E-6, double ldFactor=1.00, unsigned int nIters=1)</td><td class="entry"><a class="el" href="classLinear.html">Linear</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classLinear.html#acb395c5cfbf961505e7d7b0638098722">LoadFactor</a></td><td class="entry"><a class="el" href="classLinear.html">Linear</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr><td class="entry"><a class="el" href="classLinear.html#a31d1745303e79412360661a2bb920ad2">nMaxIterations</a></td><td class="entry"><a class="el" href="classLinear.html">Linear</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
@@ -129,7 +129,7 @@ $(document).ready(function(){initNavTree('classLinear.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

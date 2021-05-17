@@ -114,26 +114,17 @@ $(document).ready(function(){initNavTree('classElastic1DLinear.html','');});
 <div class="dynheader">
 Inheritance diagram for Elastic1DLinear:</div>
 <div class="dyncontent">
-<div class="center"><img src="classElastic1DLinear__inherit__graph.png" border="0" usemap="#Elastic1DLinear_inherit__map" alt="Inheritance graph"/></div>
-<map name="Elastic1DLinear_inherit__map" id="Elastic1DLinear_inherit__map">
-<area shape="rect" id="node2" href="classMaterial.html" title="Virtual class for creating a material object. " alt="" coords="29,5,97,32"/>
+ <div class="center">
+  <img src="classElastic1DLinear.png" usemap="#Elastic1DLinear_map" alt=""/>
+  <map id="Elastic1DLinear_map" name="Elastic1DLinear_map">
+<area href="classMaterial.html" title="Virtual class for creating a material object. " alt="Material" shape="rect" coords="0,0,101,24"/>
 </map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Elastic1DLinear:</div>
-<div class="dyncontent">
-<div class="center"><img src="classElastic1DLinear__coll__graph.png" border="0" usemap="#Elastic1DLinear_coll__map" alt="Collaboration graph"/></div>
-<map name="Elastic1DLinear_coll__map" id="Elastic1DLinear_coll__map">
-<area shape="rect" id="node2" href="classMaterial.html" title="Virtual class for creating a material object. " alt="" coords="35,185,103,212"/>
-<area shape="rect" id="node3" title="STL class. " alt="" coords="29,96,109,123"/>
-<area shape="rect" id="node4" title="STL class. " alt="" coords="5,5,132,47"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9a79e43b02f9498fa66713850db3616d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DLinear.html#a9a79e43b02f9498fa66713850db3616d">Elastic1DLinear</a> (const double <a class="el" href="classElastic1DLinear.html#a7ef603f307ccc3a846d9c0546393dc58">E</a>, const double <a class="el" href="classElastic1DLinear.html#a40afd520f38560d4a84fc4bb79a7ac42">nu</a>=0, const double rho=0.0)</td></tr>
-<tr class="memdesc:a9a79e43b02f9498fa66713850db3616d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classElastic1DLinear.html" title="Class for creating an uniaxial isotropic linear elastic material for one-dimensional elements...">Elastic1DLinear</a> material to be especified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>.  <a href="#a9a79e43b02f9498fa66713850db3616d">More...</a><br /></td></tr>
+<tr class="memdesc:a9a79e43b02f9498fa66713850db3616d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classElastic1DLinear.html" title="Class for creating an uniaxial isotropic linear elastic material for one-dimensional elements...">Elastic1DLinear</a> material to be specified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>.  <a href="#a9a79e43b02f9498fa66713850db3616d">More...</a><br /></td></tr>
 <tr class="separator:a9a79e43b02f9498fa66713850db3616d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af906b7f004d7ac8700b6af38df771259"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DLinear.html#af906b7f004d7ac8700b6af38df771259">~Elastic1DLinear</a> ()</td></tr>
 <tr class="memdesc:af906b7f004d7ac8700b6af38df771259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classElastic1DLinear.html" title="Class for creating an uniaxial isotropic linear elastic material for one-dimensional elements...">Elastic1DLinear</a> material.  <a href="#af906b7f004d7ac8700b6af38df771259">More...</a><br /></td></tr>
@@ -182,12 +173,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac1a6e31cd5bdbfb9e86edc2806026dcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DLinear.html#ac1a6e31cd5bdbfb9e86edc2806026dcd">CommitState</a> ()</td></tr>
 <tr class="memdesc:ac1a6e31cd5bdbfb9e86edc2806026dcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform converged material state update.  <a href="#ac1a6e31cd5bdbfb9e86edc2806026dcd">More...</a><br /></td></tr>
 <tr class="separator:ac1a6e31cd5bdbfb9e86edc2806026dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe0d6a8044ea59c4d1c350e25745faeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DLinear.html#afe0d6a8044ea59c4d1c350e25745faeb">ReverseState</a> ()</td></tr>
+<tr class="memdesc:afe0d6a8044ea59c4d1c350e25745faeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse the material states to previous converged state.  <a href="#afe0d6a8044ea59c4d1c350e25745faeb">More...</a><br /></td></tr>
+<tr class="separator:afe0d6a8044ea59c4d1c350e25745faeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae15a388fada627d3d87664590f0dd28b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DLinear.html#ae15a388fada627d3d87664590f0dd28b">InitialState</a> ()</td></tr>
+<tr class="memdesc:ae15a388fada627d3d87664590f0dd28b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Brings the material states to its initial state in the element.  <a href="#ae15a388fada627d3d87664590f0dd28b">More...</a><br /></td></tr>
+<tr class="separator:ae15a388fada627d3d87664590f0dd28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6124c07edc45f5eea8198b8300d43cce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DLinear.html#a6124c07edc45f5eea8198b8300d43cce">UpdateState</a> (const Eigen::VectorXd strain, const unsigned int cond)</td></tr>
 <tr class="memdesc:a6124c07edc45f5eea8198b8300d43cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the material state for this iteration.  <a href="#a6124c07edc45f5eea8198b8300d43cce">More...</a><br /></td></tr>
 <tr class="separator:a6124c07edc45f5eea8198b8300d43cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classMaterial"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classMaterial')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classMaterial.html">Material</a></td></tr>
 <tr class="memitem:a4e51c99736625c951b8910cee909c685 inherit pub_methods_classMaterial"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaterial.html#a4e51c99736625c951b8910cee909c685">Material</a> (std::string name, bool model)</td></tr>
-<tr class="memdesc:a4e51c99736625c951b8910cee909c685 inherit pub_methods_classMaterial"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> to be especified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>.  <a href="classMaterial.html#a4e51c99736625c951b8910cee909c685">More...</a><br /></td></tr>
+<tr class="memdesc:a4e51c99736625c951b8910cee909c685 inherit pub_methods_classMaterial"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> to be specified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>.  <a href="classMaterial.html#a4e51c99736625c951b8910cee909c685">More...</a><br /></td></tr>
 <tr class="separator:a4e51c99736625c951b8910cee909c685 inherit pub_methods_classMaterial"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a216a675d064866d5ce280ad5d48769d5 inherit pub_methods_classMaterial"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaterial.html#a216a675d064866d5ce280ad5d48769d5">~Material</a> ()=0</td></tr>
 <tr class="memdesc:a216a675d064866d5ce280ad5d48769d5 inherit pub_methods_classMaterial"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> object.  <a href="classMaterial.html#a216a675d064866d5ce280ad5d48769d5">More...</a><br /></td></tr>
@@ -256,7 +253,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a <a class="el" href="classElastic1DLinear.html" title="Class for creating an uniaxial isotropic linear elastic material for one-dimensional elements...">Elastic1DLinear</a> material to be especified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>. </p>
+<p>Creates a <a class="el" href="classElastic1DLinear.html" title="Class for creating an uniaxial isotropic linear elastic material for one-dimensional elements...">Elastic1DLinear</a> material to be specified at a Gauss-point in an <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">E</td><td>The material elasticity modulus. </td></tr>
@@ -525,7 +522,7 @@ Private Attributes</h2></td></tr>
 
 <p>Returns the initial material stiffness. </p>
 <dl class="section return"><dt>Returns</dt><dd>Matrix with the initial material tangent stiffness matrix. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The initial tangent stiifness matrix is computed when the strain vector is zero. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The initial tangent stiffness matrix is computed when the strain vector is zero. </dd></dl>
 
 <p>Implements <a class="el" href="classMaterial.html#af817c97bfaca9193d6b0a8dfb5cc302f">Material</a>.</p>
 
@@ -751,6 +748,66 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ae15a388fada627d3d87664590f0dd28b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae15a388fada627d3d87664590f0dd28b">&#9670;&nbsp;</a></span>InitialState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Elastic1DLinear::InitialState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Brings the material states to its initial state in the element. </p>
+<dl class="section note"><dt>Note</dt><dd>This funtion returns the material states to the beginning. </dd></dl>
+
+<p>Implements <a class="el" href="classMaterial.html#a722d61cfb7d6acf68f3e9b0febc6af56">Material</a>.</p>
+
+</div>
+</div>
+<a id="afe0d6a8044ea59c4d1c350e25745faeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe0d6a8044ea59c4d1c350e25745faeb">&#9670;&nbsp;</a></span>ReverseState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Elastic1DLinear::ReverseState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reverse the material states to previous converged state. </p>
+<dl class="section note"><dt>Note</dt><dd>This funtion returns the material states to previous converged states. </dd></dl>
+
+<p>Implements <a class="el" href="classMaterial.html#aad432b6af57882bfd36131a8fcf1bcaa">Material</a>.</p>
+
+</div>
+</div>
 <a id="a6124c07edc45f5eea8198b8300d43cce"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6124c07edc45f5eea8198b8300d43cce">&#9670;&nbsp;</a></span>UpdateState()</h2>
 
@@ -789,13 +846,13 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">strain</td><td>Vector with the strain components at this Gauss-point. </td></tr>
-    <tr><td class="paramname">cond</td><td>If the the elatic/platic material components will be updated. </td></tr>
+    <tr><td class="paramname">cond</td><td>If the the elastic/plastic material components will be updated. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>This function computes the strain and tanget stiffness matrix once the trial strain converged. </dd></dl>
 
-<p>Implements <a class="el" href="classMaterial.html#af355dad3a019f02ef89d8ad0b9184644">Material</a>.</p>
+<p>Implements <a class="el" href="classMaterial.html#a9906db0b9a38150280e10743410cb648">Material</a>.</p>
 
 </div>
 </div>
@@ -951,7 +1008,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classElastic1DLinear.html">Elastic1DLinear</a></li>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

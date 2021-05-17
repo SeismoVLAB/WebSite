@@ -12,5 +12,7 @@ var searchData=
   ['massformulation',['MassFormulation',['../Definitions_8hpp.html#a6c113dfaf37c3366c2cd4a54e0d4b000',1,'Definitions.hpp']]],
   ['masstolerance',['MassTolerance',['../classAssembler.html#a3861d0ff46641cba0687aef1d0aa3865',1,'Assembler']]],
   ['master',['Master',['../classConstraint.html#aa02535d2e6f6d452f614b1d933c9c08e',1,'Constraint']]],
-  ['materials',['Materials',['../classMesh.html#a308c58835993c6eb900379b1b8e53557',1,'Mesh']]]
+  ['materials',['Materials',['../classMesh.html#a308c58835993c6eb900379b1b8e53557',1,'Mesh']]],
+  ['maxyieldstrain',['maxYieldStrain',['../classPlastic1DGap.html#ada5067248952f1b22ce3a6d5c1c21c41',1,'Plastic1DGap']]],
+  ['minyieldstrain',['minYieldStrain',['../classPlastic1DGap.html#a33b34fac4452aed4ed21715d01a61e6c',1,'Plastic1DGap']]]
 ];

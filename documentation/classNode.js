@@ -16,7 +16,7 @@ var classNode =
     [ "GetSupportMotion", "classNode.html#a6f9af38a86d13ae479ee2b79e0d0aa0c", null ],
     [ "GetTotalDegreeOfFreedom", "classNode.html#a3f0ac74b85be4e48221a583b8f570c02", null ],
     [ "GetVelocities", "classNode.html#ac4241f9122118e86020daeb8f411bde8", null ],
-    [ "IsAbsorbent", "classNode.html#ae0dd9fc2d0d708c1d71b1eee3e36d69f", null ],
+    [ "InitialState", "classNode.html#a51181554225850ac671c48a89af19073", null ],
     [ "IsFixed", "classNode.html#a805ac1e765fe9ee49b41cf75f575664a", null ],
     [ "SetAccelerations", "classNode.html#a63c2b54c1a58b3ad53ecbcc997d1f0ac", null ],
     [ "SetCoordinates", "classNode.html#af216ec356a122d7a27c7a7d2275b45b9", null ],

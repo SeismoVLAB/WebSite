@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['viscous1dlinear',['Viscous1DLinear',['../classViscous1DLinear.html',1,'']]]
+  ['unxboucwen2dlink',['UnxBoucWen2DLink',['../classUnxBoucWen2DLink.html',1,'']]],
+  ['unxboucwen3dlink',['UnxBoucWen3DLink',['../classUnxBoucWen3DLink.html',1,'']]]
 ];

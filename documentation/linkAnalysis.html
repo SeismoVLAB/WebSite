@@ -102,20 +102,37 @@ $(document).ready(function(){initNavTree('linkAnalysis.html','');});
 <div class="title"><a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a> class performs a simulation. The analysis that can be performed are either <b>STATIC</b> or <b>DYNAMIC</b> and they are applied to a certain <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a>. In this regard, this class performs modification on the finite element mesh by solving a <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a>. The linear system uses an specified <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic snalysis between two steps is going to be performed...">Integrator</a> to compute the model effective stiffness \(\mathbf{K}_{\textrm{eff}}\) and effective force vector \(\textrm{F}_{\textrm{eff}}\). Finally, the integrator with the aid of an specified <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a> enforces the convergence criterion for the linear/nonlinear system of equations.</p>
-<p>The available analyses in <b>Seismo-VLAB</b> are:</p>
+<div class="textblock"><p>The <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a> class performs a simulation. The analysis abstract class that can be either <a class="el" href="linkStaticAnalysis.html">StaticAnalysis</a> and <a class="el" href="linkDynamicAnalysis.html">DynamicAnalysis</a>. The analysis class is designed to:</p>
+<ul>
+<li>Be applied to a certain <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a>.</li>
+<li>Provide with an interface in which the results are passed to the <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> class.</li>
+</ul>
+<p>The main member function in <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a> is:</p><ul>
+<li><a class="el" href="classAnalysis.html#a13e64fdb25b141c9fb26a87576de0420" title="Performs the required analysis on the domain. ">Analysis::Analyze()</a><br />
+ This function is in charge of perform the analysis, update the solution and write the desire solution.</li>
+</ul>
+<p>Each derived class are provided with the member function:</p><ul>
+<li><a class="el" href="classStaticAnalysis.html#ae04f3aa664cb77dab3cc673a7e9678c4" title="Performs changes in mesh. ">StaticAnalysis::UpdateDomain()</a> <br />
+ This function update the displacement states, material and section internal states as well as compute the reaction forces.</li>
+<li><a class="el" href="classDynamicAnalysis.html#a50a3136b7f436c6381fed4c95274a562" title="Performs changes in mesh. ">DynamicAnalysis::UpdateDomain()</a> <br />
+ This function update the displacement. velocity and acceleration states. It also update the element material and section internal states as well as compute the reaction forces.</li>
+</ul>
+<p>In general, the <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a> class performs modification on the finite element mesh by solving a <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a>. The linear system uses an specified <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a> to compute the model effective stiffness \(\mathbf{K}_{\textrm{eff}}\) and effective force vector \(\textrm{F}_{\textrm{eff}}\). Finally, the integrator with the aid of an specified <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a> enforces the convergence criterion for the linear/nonlinear system of equations. More information regarding the derived analyses classes can be found at:</p>
 <ul>
 <li><a class="el" href="linkStaticAnalysis.html">StaticAnalysis</a></li>
 <li><a class="el" href="linkDynamicAnalysis.html">DynamicAnalysis</a></li>
 </ul>
-<dl class="section attention"><dt>Attention</dt><dd>The <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a> also provides the interface in which the results are passed to the <a class="el" href="classRecorder.html" title="Class that stores the node, element, and section responses for a given analysis. ">Recorder</a> class, so that the results are written in files. </dd></dl>
+<p><b>REFERENCE:</b></p><ul>
+<li>Forde, B. W. R., Foschi, R. O., &amp; Stiemer, S. F. (1990). "Object-oriented finite element analysis". Computers &amp; Structures, 34(3), 355–374.</li>
+<li>Mackie, R. I. (1992). "Object oriented programming of the finite element method". International Journal for Numerical Methods in Engineering, 35(2), 425–436. </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

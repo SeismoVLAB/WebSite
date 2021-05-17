@@ -35,6 +35,8 @@ var classlin3DShell4 =
     [ "GetStressAt", "classlin3DShell4.html#a26efbee8daa3745cf7d24d17d42b054b", null ],
     [ "GetTotalDegreeOfFreedom", "classlin3DShell4.html#a89181db948c0a5e530516a6e9f1c00ae", null ],
     [ "GetVTKResponse", "classlin3DShell4.html#a27f93fd77143eb1e0f56664f9b741782", null ],
+    [ "InitialState", "classlin3DShell4.html#a32864b174613c185d1e49c4067b54b9d", null ],
+    [ "ReverseState", "classlin3DShell4.html#af0cc84d57e46ca2cfcd2e11f2bd2b402", null ],
     [ "SetDamping", "classlin3DShell4.html#ac5f2e9ba40cc014ff87b090d860ceeef", null ],
     [ "SetDomain", "classlin3DShell4.html#aa44257d52f60fae13574ae79f50ce952", null ],
     [ "UpdateState", "classlin3DShell4.html#aeea8a4eddec8b699bb01c670179b5f2c", null ],

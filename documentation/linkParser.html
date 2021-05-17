@@ -102,15 +102,31 @@ $(document).ready(function(){initNavTree('linkParser.html','');});
 <div class="title">Parser </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="Parser_8hpp.html">Parser.hpp</a> file defines an instance to translate an input's format file into <b>Seismo-VLAB</b> objects. The user manual explains extensively how the objects can be constructed using the built-in <a class="el" href="Parser_8hpp.html">Parser.hpp</a> file. In particular, we have used the JSON parser <a class="el" href="RSJparser_8hpp.html">RSJparser.hpp</a> developed by Subhrajit Bhattacharya <b>A Ridiculously Simple JSON Parser</b> for C++.</p>
-<dl class="section attention"><dt>Attention</dt><dd>The <a class="el" href="Parser_8hpp.html">Parser.hpp</a> file is defined internally in <b>Seismo-VLAB</b>. The Parser object does not check correctness of the input values. Thus, an inappropriate path to a files may crush the program. </dd></dl>
+<div class="textblock"><h1>Background</h1>
+<p>The <a class="el" href="Parser_8hpp.html">Parser.hpp</a> file defines an instance to translate the <b>JSON</b> input's format file into <b>Seismo-VLAB</b> objects. In particular, <a class="el" href="linkGeometryModule.html">Geometry Module</a>, <a class="el" href="linkAnalysisModule.html">Solution Module</a>, and <a class="el" href="linkIOModule.html">Input/Output Module</a> explain in details the structure of the <b>JSON</b> format.</p>
+<p>The <a class="el" href="linkParser.html">Parser</a> main function are:</p><ul>
+<li><a class="el" href="Parser_8hpp.html#ada1d5cdeadd2035d086508b0d31e1885">RunFromJSON()</a> <br />
+ which parse the domain file and then perform the analysis. This function calls internally:<ul>
+<li><a class="el" href="Parser_8hpp.html#a869703bd90a587fd17053df529d8b76a">ParseMesh()</a> <br />
+ which transform the json structure into recognizable objects defined at <a class="el" href="linkGeometryModule.html">Geometry Module</a>. Therefore <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>, <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>, <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>, Fiber, <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a>, <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> objects are created within this function.</li>
+<li><a class="el" href="Parser_8hpp.html#a4fd81c895529aafa86cafb4a2c28b517">ParseAnalysis()</a> <br />
+ which transform the json structure into recognizable objects defined at <a class="el" href="linkAnalysisModule.html">Solution Module</a>. Therefore <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a>, <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a>, <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a>, <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a>, objects are created within this function.</li>
+</ul>
+</li>
+<li><a class="el" href="Parser_8hpp.html#a6ba7144f88e8f35f5145bf1ee186855d">UpateDomain()</a> <br />
+ which performs modification in the model after an analysis is performed.</li>
+</ul>
+<p>In <b>SVL</b> we use <a class="el" href="RSJparser_8hpp.html">RSJparser.hpp</a> <em><b>JSON</b></em> parser, because it resembles the same structure used in python dictionaries. Below is a simple example (extracted from the RSJparser documentation) on how to use <b>RSJparser</b> in an implementation file: </p><div class="fragment"><div class="line">std::string str = <span class="stringliteral">&quot;{&#39;RSJ&#39;: &#39;string data&#39;, &#39;keyName&#39;: [2,3,5,7]}&quot;</span>;</div><div class="line"><a class="code" href="classRSJresource.html">RSJresource</a> my_json(str);</div><div class="line">std::cout  &lt;&lt;  my_json[<span class="stringliteral">&quot;keyName&quot;</span>][2].as&lt;<span class="keywordtype">int</span>&gt;() &lt;&lt; std::endl;     <span class="comment">// prints 5</span></div><div class="line">std::cout  &lt;&lt;  my_json[<span class="stringliteral">&quot;RSJ&quot;</span>].as&lt;std::string&gt;(<span class="stringliteral">&quot;default string&quot;</span>) &lt;&lt; std::endl; <span class="comment">// prints &quot;string data&quot;</span></div><div class="line">std::cout  &lt;&lt;  my_json[<span class="stringliteral">&quot;JSON&quot;</span>].as&lt;std::string&gt;(<span class="stringliteral">&quot;default string&quot;</span>) &lt;&lt; std::endl; <span class="comment">// prints &quot;default string&quot;</span></div></div><!-- fragment --><p>The previous format is found extensively in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a> which are mostly used in the <a class="el" href="Parser_8hpp.html#a869703bd90a587fd17053df529d8b76a">ParseMesh()</a> and <a class="el" href="Parser_8hpp.html#a4fd81c895529aafa86cafb4a2c28b517">ParseAnalysis()</a> functions.</p>
+<p><b>REFERENCE:</b></p><ul>
+<li>Subhrajit Bhattacharya, "A Ridiculously Simple JSON Parser for C++", homepage <a href="https://www.lehigh.edu/~sub216/">https://www.lehigh.edu/~sub216/</a> or visit <a href="https://github.com/subh83/RSJp-cpp">https://github.com/subh83/RSJp-cpp</a> . </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -26,6 +26,8 @@ var classPML2DQuad8 =
     [ "GetStressAt", "classPML2DQuad8.html#ac0348575626b0f9bb1df322c5f2f1a2e", null ],
     [ "GetTotalDegreeOfFreedom", "classPML2DQuad8.html#a66218ef80d61030a53c190543683f0a8", null ],
     [ "GetVTKResponse", "classPML2DQuad8.html#a358bf1f3846e3296a5659875ff02c1da", null ],
+    [ "InitialState", "classPML2DQuad8.html#af138436981bd4c2d5a77ac37cb8dec86", null ],
+    [ "ReverseState", "classPML2DQuad8.html#aef9699f0572e4858294aa1e32132b641", null ],
     [ "SetDamping", "classPML2DQuad8.html#a326604d8d7445af42836c9d2c7b51202", null ],
     [ "SetDomain", "classPML2DQuad8.html#a5cad3d2a682fc3e8a6d395943ba540c3", null ],
     [ "UpdateState", "classPML2DQuad8.html#a5e07d65f091435d46882de8a98058c14", null ],

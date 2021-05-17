@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linkMaterial.html','');});
 <div class="title"><a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> class defines a material to be assigned in an element. This object provides member functions to compute the strain, stress, and stiffness. The implementation of each material is provided in each derived-class. The name of each material derived-class has the following structure:</p>
+<div class="textblock"><p>The implementation of each material is provided in each derived-class. The name of each material derived-class has the following structure:</p>
 <div class="image">
 <img src="../style/filecpp.png" width="32" height="42.5" style="float:left"/>
 </div>
@@ -118,6 +118,24 @@ $(document).ready(function(){initNavTree('linkMaterial.html','');});
 <tr>
 <td>Name </td><td>The name of the material. </td></tr>
 </table>
+<p>The <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> class defines a material to be assigned in an element or a section. The <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> class is designed to:</p><ul>
+<li>Have an internal structure suitable for linear and nonlinear behavior.</li>
+<li>Provide with a richer structure to allow internally complex behavior.</li>
+</ul>
+<p>The main member function in <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> are:</p><ul>
+<li><a class="el" href="classMaterial.html#a14450efce044dc9b861bc41ac0602c92" title="Perform converged material state update. ">Material::CommitState()</a><br />
+ This function sets the trial variables as converged ones.</li>
+<li><a class="el" href="classMaterial.html#a9906db0b9a38150280e10743410cb648" title="Update the material state for this iteration. ">Material::UpdateState()</a><br />
+ This function computes the new trial states dor a given strain.</li>
+</ul>
+<p>Each derived class are provided with the member function:</p><ul>
+<li><a class="el" href="classMaterial.html#a1b37670a0b68808b2f291eabd69e1912" title="Computes the material strain in Voight notation. ">Material::GetStrain()</a><br />
+ This function returns the trial strain.</li>
+<li><a class="el" href="classMaterial.html#a8211b95871f0b10ec3dd7d7ce6d10fba" title="Computes the material stress in Voight notation. ">Material::GetStress()</a><br />
+ This function returns the stress associated to the trial strain.</li>
+<li><a class="el" href="classMaterial.html#af817c97bfaca9193d6b0a8dfb5cc302f" title="Computes the initial material stiffness in Voight notation. ">Material::GetInitialTangentStiffness()</a><br />
+ This function returns the tangent stiffness associated to the trial strain.</li>
+</ul>
 <p>In several derived <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> classes, the main material constants are presented in pairs:</p><ul>
 <li>Modulus of elasticity ( \(E\) ) and Poisson's ratio ( \(\nu\) ),</li>
 <li>Bulk's modulus ( \(K\) ) and Shear's modulus ( \(G\) ).</li>
@@ -126,7 +144,7 @@ $(document).ready(function(){initNavTree('linkMaterial.html','');});
 <p class="formulaDsp">
 \[ G = \frac{E}{2 (1 + \nu)}\,, K = \frac{E}{3 (1 - 2\,\nu)}\,, E = \frac{9\,K\,G}{3\,K + G}\,, \nu = \frac{3\,K - 2\,G}{2(3\,K + G)} \]
 </p>
-<p>The following materials are available in <b>SVL</b></p>
+<p>The following material derived classes are available in <b>SVL</b>:</p>
 <ul>
 <li><a class="el" href="linkViscous1DLinear.html">Viscous1DLinear</a><br />
 </li>
@@ -134,7 +152,17 @@ $(document).ready(function(){initNavTree('linkMaterial.html','');});
 </li>
 <li><a class="el" href="linkHertzian1DLinear.html">Hertzian1DLinear</a><br />
 </li>
+<li><a class="el" href="linkElastic1DGap.html">Elastic1DGap</a><br />
+</li>
+<li><a class="el" href="linkPlastic1DGap.html">Plastic1DGap</a><br />
+</li>
 <li><a class="el" href="linkPlastic1DJ2.html">Plastic1DJ2</a><br />
+</li>
+<li><a class="el" href="linkElastic1DFiber.html">Elastic1DFiber</a><br />
+</li>
+<li><a class="el" href="linkConcrete1DFiber.html">Concrete1DFiber</a><br />
+</li>
+<li><a class="el" href="linkSteel1DFiber.html">Steel1DFiber</a><br />
 </li>
 <li><a class="el" href="linkElastic2DPlaneStress.html">Elastic2DPlaneStress</a><br />
 </li>
@@ -148,15 +176,16 @@ $(document).ready(function(){initNavTree('linkMaterial.html','');});
 </li>
 <li><a class="el" href="linkPlastic3DJ2.html">Plastic3DJ2</a><br />
 </li>
-<li><a class="el" href="linkPlastic3DBA.html">Plastic3DBA</a> </li>
+<li><a class="el" href="linkPlastic3DBA.html">Plastic3DBA</a></li>
 </ul>
+<dl class="section attention"><dt>Attention</dt><dd>Not all the listed materials have been verified. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Feb 16 2021 22:00:50 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

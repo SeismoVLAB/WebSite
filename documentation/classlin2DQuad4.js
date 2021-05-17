@@ -26,6 +26,8 @@ var classlin2DQuad4 =
     [ "GetStressAt", "classlin2DQuad4.html#a97984f2f4065778b0516ad473039b2ba", null ],
     [ "GetTotalDegreeOfFreedom", "classlin2DQuad4.html#a46b776584e2380827da4cfecb8cd1153", null ],
     [ "GetVTKResponse", "classlin2DQuad4.html#afbd085c21cc3657051c7a45d72be6307", null ],
+    [ "InitialState", "classlin2DQuad4.html#a8c82320b061ed90ec65b42c3c55096d0", null ],
+    [ "ReverseState", "classlin2DQuad4.html#a8685ade4734927e80cf8f8b28bb27bb2", null ],
     [ "SetDamping", "classlin2DQuad4.html#ab19ef0b48af113928202e4bb4399cf49", null ],
     [ "SetDomain", "classlin2DQuad4.html#a5949f971535867f3f787f3a0fe6e14d9", null ],
     [ "UpdateState", "classlin2DQuad4.html#a455bb495c89060b0dd2e1dbcdff5bed2", null ],

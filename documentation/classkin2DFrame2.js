@@ -31,6 +31,8 @@ var classkin2DFrame2 =
     [ "GetStressAt", "classkin2DFrame2.html#aa4e1ad9a4b476254591f162d7a1d0674", null ],
     [ "GetTotalDegreeOfFreedom", "classkin2DFrame2.html#aca8ede7bb9586a68866ea048a5e2480d", null ],
     [ "GetVTKResponse", "classkin2DFrame2.html#a2e6181fbe450d7fe18a9a1334d06de10", null ],
+    [ "InitialState", "classkin2DFrame2.html#aaed87c39561e79d181d8a295e3f9674b", null ],
+    [ "ReverseState", "classkin2DFrame2.html#a65454affe0c75a391f35bc34beb2eb9d", null ],
     [ "SetDamping", "classkin2DFrame2.html#ae617a162bcc5c20143569a0b166fff1a", null ],
     [ "SetDomain", "classkin2DFrame2.html#aeebf2bbf9888a6bdada7e5b8f1d65998", null ],
     [ "UpdateState", "classkin2DFrame2.html#a62c8cf0bdb0c24d385d2bfeafa8c9e49", null ],

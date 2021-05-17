@@ -18,6 +18,8 @@ var classLin3DCircular =
     [ "GetStress", "classLin3DCircular.html#a5f09c3523725d3535c2c2d2302551e42", null ],
     [ "GetStressAt", "classLin3DCircular.html#a0eab5fb66505330399766573684e83ad", null ],
     [ "GetTangentStiffness", "classLin3DCircular.html#ac99330a947fe4209850c60c8b3130dc9", null ],
+    [ "InitialState", "classLin3DCircular.html#af1973502250d32a1626a363464150d85", null ],
+    [ "ReverseState", "classLin3DCircular.html#aa63d1642eeedfe7e24a966cfd198ab5f", null ],
     [ "UpdateState", "classLin3DCircular.html#abbe800017cd2465149ca5f7b0c5db120", null ],
     [ "InsertPoint", "classLin3DCircular.html#a84c5b08668bbce1757b0720fa081ba62", null ],
     [ "r", "classLin3DCircular.html#ac23b1f9426b51d42a76860837b2cdfe2", null ],

@@ -2,8 +2,13 @@ var NAVTREE =
 [
   [ "Seismo-VLAB", "index.html", [
     [ "Installation", "linkInstallation.html", "linkInstallation" ],
-    [ "Software Structure", "linkSoftwareStructure.html", "linkSoftwareStructure" ],
-    [ "Extensions and More", "linkExtensions.html", "linkExtensions" ],
+    [ "Structure", "linkSoftwareStructure.html", [
+      [ "Pre-Analysis", "linkSoftwareStructure.html#linkPreProcess", null ],
+      [ "Run-Analysis", "linkSoftwareStructure.html#linkRunProcess", null ],
+      [ "The Workflow", "linkSoftwareStructure.html#linkSVLworkflow", null ]
+    ] ],
+    [ "Modules", "linkModules.html", "linkModules" ],
+    [ "Extensions", "linkExtensions.html", "linkExtensions" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -32,17 +37,19 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Algorithm_8hpp.html",
-"classAssembler.html#ab1c1218154138eeb898a6bdc4f5c4324",
-"classElement.html#a41c1d4cacb1ac26cd0f7debeae50359a",
-"classLin2DCircular.html#a33347b15e47af2b0da9ec5d3976fea12",
-"classLin3DCircularTube.html#ac539df907e58d85463b084d4177d75f4",
-"classMumpsSolver.html#a76e289c56bcf3c48ddd7438280faccf8",
-"classPlastic1DJ2.html#ae574f2adc93c43974c997922181a1b63",
-"classRSJresource.html#ab4ae66ae97fa7e18ae6c6eb87cfcb10c",
-"classZeroLength1D.html#adb2d1930c1a364b3ddb425b5d1a284b5",
-"classlin2DQuad4.html#a403fdd9db21a065c7317f3475390d5c1",
-"classlin3DShell4.html#a627685c75b4f663ba7390782821b7bc4",
-"kin2DTruss2_8hpp_source.html"
+"classAssembler.html#a47e85d549587ec6421e9f92b94b1d870",
+"classElastic1DLinear.html#a0e738a756f2d9e0f5007b6865f50b4bc",
+"classHDRBYamamoto2DLink.html#ad815fa7c8e66008e6244fcffffd9b719",
+"classLin2DRectangularTube.html#aa1e65be94759c652c4fbfc9f1aa7e243",
+"classLin3DTee.html#a4deaeadbdc639f1044ed612dea49fc42",
+"classNode.html#a404c87757d0d362e17a885b03ad946aa",
+"classPlastic3DBA.html#a26981f4f9ad8caa978c985535430a972",
+"classRSJresource.html#af495d1c6e5bfd42a920755b3cd286098",
+"classUnxBoucWen3DLink.html#ae4ea3a7cbb9ed6700d9d3ec5413d79c7",
+"classkin3DTruss2.html#a5ac5257055f75d8574036a88c762f727",
+"classlin2DTruss3.html#a1685cac712f9c1ca03e78af259cb3743",
+"classlin3DTetra4.html#a9b4d02157e53e9f7a2130d5f8c8b21e6",
+"lin2DFrame2_8hpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

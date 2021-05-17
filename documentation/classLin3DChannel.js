@@ -18,6 +18,8 @@ var classLin3DChannel =
     [ "GetStress", "classLin3DChannel.html#a70d376c36548d408c942028c8f790095", null ],
     [ "GetStressAt", "classLin3DChannel.html#aa56aee7a5414da17e20749e097d6ec1b", null ],
     [ "GetTangentStiffness", "classLin3DChannel.html#a4f392c40797b4b4245636062d41a8e3f", null ],
+    [ "InitialState", "classLin3DChannel.html#a8a6d9fd9a27e9c7e628804e148af10c7", null ],
+    [ "ReverseState", "classLin3DChannel.html#a18f45114e878ca7c0005f86fb8cefb8b", null ],
     [ "UpdateState", "classLin3DChannel.html#a5c384d5abba06ba2ee3c0ec774ff8c36", null ],
     [ "b", "classLin3DChannel.html#a5d5eefd8e70585a55d2146c0f53ddc66", null ],
     [ "h", "classLin3DChannel.html#ada00b13884d130abe3a466f9a5e1a83a", null ],
