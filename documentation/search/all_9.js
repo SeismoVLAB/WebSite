@@ -6,6 +6,7 @@ var searchData=
   ['damping_2emd',['Damping.md',['../Damping_8md.html',1,'']]],
   ['dampings',['Dampings',['../classMesh.html#ae0b2a40dc55c69603e1a42a5003821fe',1,'Mesh']]],
   ['data',['data',['../classRSJresource.html#afe5853cc77bf02f531114fbb86188952',1,'RSJresource']]],
+  ['debian_2emd',['Debian.md',['../Debian_8md.html',1,'']]],
   ['definitions_2ehpp',['Definitions.hpp',['../Definitions_8hpp.html',1,'']]],
   ['deviatoricstress0',['DeviatoricStress0',['../classPlastic3DBA.html#aef9288fa8cf406098040814dae536c12',1,'Plastic3DBA::DeviatoricStress0()'],['../classPlasticPlaneStrainBA.html#aa4f9a0e12b9e32dc0c6a28daa4b8bd05',1,'PlasticPlaneStrainBA::DeviatoricStress0()']]],
   ['dimension',['Dimension',['../classHDRBYamamoto2DLink.html#ac3bdda635f3781845b865b64d4217c08',1,'HDRBYamamoto2DLink::Dimension()'],['../classHDRBYamamoto3DLink.html#ae05d179eb7acaf2179865a6b4999fd23',1,'HDRBYamamoto3DLink::Dimension()'],['../classUnxBoucWen2DLink.html#a554307dc557dfec2a7c56743f0352935',1,'UnxBoucWen2DLink::Dimension()'],['../classUnxBoucWen3DLink.html#acc9c125d5e2d535589829dbde0e89547',1,'UnxBoucWen3DLink::Dimension()']]],

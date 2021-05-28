@@ -2,7 +2,7 @@ var classPetscSolver =
 [
     [ "PetscSolver", "classPetscSolver.html#a0c403a238c86631d4593ea1a2a58f725", null ],
     [ "~PetscSolver", "classPetscSolver.html#a9994e903dad8e7a506dd451ae9cb5b1b", null ],
-    [ "GetSolution", "classPetscSolver.html#a1e115a5693c6df65deb2dafb21b3394d", null ],
+    [ "GetSolution", "classPetscSolver.html#a02bff58c74774ef51b00c232f10b7c2f", null ],
     [ "SolveSystem", "classPetscSolver.html#a375bf8231f1b5f7a4fc8e358ecc6bad7", null ],
     [ "d_nz", "classPetscSolver.html#aeef6daa03b3e87d2d0416cfb60133a0b", null ],
     [ "o_nz", "classPetscSolver.html#a29e8d079a42c9ba9010933c451803e21", null ],

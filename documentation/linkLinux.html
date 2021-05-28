@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 		<meta name="generator" content="Doxygen 1.8.13"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>Seismo-VLAB: Linux Operating System</title>
+		<title>Seismo-VLAB: Linux/Unix Operating System</title>
 		<link href="tabs.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="dynsections.js"></script>
@@ -99,41 +99,39 @@ $(document).ready(function(){initNavTree('linkLinux.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Linux Operating System </div>  </div>
+<div class="title">Linux/Unix Operating System </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Installation of <b>Seismo-VLAB</b> on Linux requires to download <code>Eigen C++ library</code>, <code>MUMPS Library</code>, and <code>Pestc Library</code>.</p>
-<ul>
-<li>The <b>Eigen C++ library</b> can be downloaded from the website <a href="http://eigen.tuxfamily.org/">http://eigen.tuxfamily.org/</a>. This package needs to be unzip and its content move (for instance) to <br />
- <code>/usr/include/Eigen</code>.</li>
-<li>The <b>MUMPS library</b> can be downloaded from the website <a href="http://mumps.enseeiht.fr/">http://mumps.enseeiht.fr/</a>. This package needs to be unzip and compiled (for instance) at <br />
- <code>/usr/include/Mumps</code>.</li>
-<li>The <b>Pestc Library</b> library can be downloaded at the website <a href="https://www.mcs.anl.gov/petsc/">https://www.mcs.anl.gov/petsc/</a>. This package needs to be unzip and compiled (for instance) at <br />
- <code>/usr/include/Petsc</code>.</li>
+<div class="textblock"><p>Installation of <b>SVL</b> in a general Linux/Unix operating system requires setting up your machine to handle <code>C++</code> and <code>Python</code>. This means that an appropriate C++ compiler is required as well as some high-performance numerical algebra library packages must be installed.<br />
+</p><ul>
+<li><p class="startli">The <b>SVL</b> <a class="el" href="linkSoftwareStructure.html#linkPreProcess">Pre-Analysis</a> requires the following <code>python3</code> libraries:</p><ul>
+<li><b>Numpy</b> (<a href="https://numpy.org/">https://numpy.org/</a>)</li>
+<li><b>Scipy</b> (<a href="https://www.scipy.org/">https://www.scipy.org/</a>)</li>
+<li><b>Matplotlib</b> (<a href="https://matplotlib.org/">https://matplotlib.org/</a>)</li>
+<li><b>Json</b> (<a href="https://docs.python.org/3/library/json.html">https://docs.python.org/3/library/json.html</a>)</li>
 </ul>
-<p>Modify the <code>Makefile.mk</code> file such the previous path point to the right libraries:</p>
-<pre>
-EIGEN_DIR = /usr/include/Eigen
-PETSC_DIR = /usr/include/Petsc
-MUMPS_DIR = /usr/include/Mumps
-</pre><p>Also, check that : <code>MPI_DIR, METIS_DIR, SCOTCH_DIR</code> have the correct path where these libraries are installed. Make sure libraries such as: <code>-lscalapack-openmpi -lblacs-openmpi -llapack -lblas</code> and <code>-lparmetis -lmetis -lptesmumps -lptscotch -lptscotcherr</code> are also installed.</p>
-<p>Finally, write in terminal: </p><pre>
-make -s DEBUG=False
-</pre><dl class="section note"><dt>Note</dt><dd>Some libraries can be easily installed using Debian repositories:<ul>
-<li><b>LAPACK :</b> sudo apt-get install liblapack-dev</li>
-<li><b>ATLAS :</b> sudo apt-get install libatlas-dev libatlas-base-dev</li>
-<li><b>BLAS :</b> sudo apt-get install libblas-dev libblas-common libblacs-mpi-dev</li>
-<li><b>METIS :</b> sudo apt-get install metis libmetis-dev libparmetis-dev</li>
-<li><b>SCOTCH :</b> sudo apt-get install libscotch-dev libptscotch-dev libscotchmetis-dev libscotchparmetis-dev </li>
+<p class="startli">These libraries can be installed using <code>pip</code> or from Linux/Unix repositories. In the case of Debian-based system use <code>apt-get</code>, for Fedora-based system use <code>yum</code>, and for MacOS use <code>brew</code>.</p>
+</li>
+<li><p class="startli">The <b>SVL</b> <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> requires to download <code>Eigen</code> <code>MUMPS</code> and <code>PETSc</code> libraries.</p><ul>
+<li>The <b>Eigen C++ library</b> can be downloaded from the website <a href="http://eigen.tuxfamily.org/">http://eigen.tuxfamily.org/</a>. <br />
+ This package needs to be unzip and its content move (for instance) to /usr/include/eigen.</li>
+<li>The <b>MUMPS library</b> can be downloaded from the website <a href="http://mumps.enseeiht.fr/">http://mumps.enseeiht.fr/</a>. <br />
+ This package needs to be unzip and compiled (for instance) at /usr/include/mumps.</li>
+<li>The <b>Pestc Library</b> library can be downloaded at the website <a href="https://www.mcs.anl.gov/petsc/">https://www.mcs.anl.gov/petsc/</a>. <br />
+ This package needs to be unzip and compiled (for instance) at /usr/include/petsc.</li>
 </ul>
-</dd></dl>
+<p class="startli">Modify the <code>Makefile.mk</code> file so that the previous path point to the right libraries:<br />
+ </p><div class="fragment"><div class="line">MPI_DIR   = /usr/include/mpi</div><div class="line">EIGEN_DIR = /usr/include/eigen</div><div class="line">PETSC_DIR = /usr/lib/petsc</div></div><!-- fragment --><p> Also, make sure libraries such as: <code>-lscalapack-openmpi</code> <code>-lblacs-openmpi</code> <code>-llapack</code> <code>-lblas</code> and <code>-lparmetis</code> <code>-lmetis</code> are also installed. Refer to the <a class="el" href="linkDebian.html">Ubuntu Operating System</a> example to see all the required dependencies. Finally, write in terminal: </p><div class="fragment"><div class="line">make -s DEBUG=False</div></div><!-- fragment --></li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>This installation process assumes the user is able to compile/build <b>PETSc</b> and <b>MUMPS</b> from the source code provided. <br />
+In MacOS (Unix) a similar described for the <a class="el" href="linkDebian.html">Ubuntu Operating System</a> process can be followed using brew (<a href="https://brew.sh/">https://brew.sh/</a>). </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Fri May 28 2021 10:43:26 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

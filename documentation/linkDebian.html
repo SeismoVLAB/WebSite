@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 		<meta name="generator" content="Doxygen 1.8.13"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>Seismo-VLAB: Mac Operating System</title>
+		<title>Seismo-VLAB: Ubuntu Operating System</title>
 		<link href="tabs.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="dynsections.js"></script>
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('linkMac.html','');});
+$(document).ready(function(){initNavTree('linkDebian.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -99,34 +99,73 @@ $(document).ready(function(){initNavTree('linkMac.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Mac Operating System </div>  </div>
+<div class="title">Ubuntu Operating System </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Installation of <b>Seismo-VLAB</b> on Mac system requires to download <code>Eigen C++ library</code>, <code>MUMPS Library</code>, and <code>Pestc Library</code>.</p>
-<ul>
-<li>The <b>Eigen C++ library</b> can be downloaded from the website <a href="http://eigen.tuxfamily.org/">http://eigen.tuxfamily.org/</a>. This package needs to be unzip and its content move (for instance) to <br />
- <code>/usr/local/include/Eigen</code>.</li>
-<li>The <b>MUMPS library</b> can be downloaded from the website <a href="http://mumps.enseeiht.fr/">http://mumps.enseeiht.fr/</a>. This package needs to be unzip and compiled (for instance) at <br />
- <code>/usr/local/include/Mumps</code>.</li>
-<li>The <b>Pestc Library</b> library can be downloaded at the website <a href="https://www.mcs.anl.gov/petsc/">https://www.mcs.anl.gov/petsc/</a>. This package needs to be unzip and compiled (for instance) at <br />
- <code>/usr/local/include/Petsc</code>.</li>
-</ul>
-<p>Modify the <code>Makefile.mk</code> file such the previous path point to the right libraries:</p>
-<pre>
-EIGEN_DIR = /usr/local/include/Eigen
-PETSC_DIR = /usr/local/include/Petsc
-MUMPS_DIR = /usr/local/include/Mumps
-</pre><p>Also, check that : <code>MPI_DIR, METIS_DIR, SCOTCH_DIR</code> have the correct path where these libraries are installed. Make sure libraries such as: <code>-lscalapack-openmpi -lblacs-openmpi -llapack -lblas</code> and <code>-lparmetis -lmetis -lptesmumps -lptscotch -lptscotcherr</code> are also installed.</p>
-<p>Finally, write in terminal:</p>
-<pre>
-make -s DEBUG=False
-</pre> </div></div><!-- contents -->
+<div class="textblock"><p>Installation of <b>SVL</b> in Ubuntu (Debian) requires a <code>C++</code> and <code>Python</code>. These libraries can be easily installed using Debian repositories.</p>
+<p>For example, in <b>Ubuntu 18.04</b>, the complete installation can be done executing the following commands in a terminal: <br />
+</p><blockquote class="doxtable">
+<p><b>Install C++/Fortran Compilers</b> <br />
+sudo apt-get update<br />
+sudo apt-get install wget<br />
+sudo apt-get install bash<br />
+sudo apt-get install gcc<br />
+sudo apt-get install gfortran<br />
+sudo apt-get install g++<br />
+sudo apt-get install make<br />
+<br />
+ <b>Install Python libraries</b><br />
+sudo apt-get install python3.8 <code>(*)</code><br />
+sudo apt-get install python3-numpy<br />
+sudo apt-get install python3-scipy<br />
+sudo apt-get install python3-matplotlib<br />
+<br />
+ <b>Install parallel computing libraries</b><br />
+sudo apt-get install libomp-dev<br />
+sudo apt-get install openmpi-bin<br />
+sudo apt-get install openmpi-common<br />
+sudo apt-get install libopenmpi-dev<br />
+<br />
+ <b>Download and Install Eigen C++ library</b><br />
+wget -nv <a href="https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.tar.gz">https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.tar.gz</a><br />
+tar -xvf eigen-3.3.9.tar.gz<br />
+mv eigen-3.3.9 eigen<br />
+mv eigen /usr/include<br />
+rm eigen-3.3.9.tar.gz<br />
+<br />
+ <b>Install partition and numerical libraries</b><br />
+sudo apt-get install metis<br />
+sudo apt-get install libmetis-dev<br />
+sudo apt-get install libparmetis-dev<br />
+sudo apt-get install libscotch-dev<br />
+sudo apt-get install libptscotch-dev<br />
+sudo apt-get install libatlas-base-dev<br />
+sudo apt-get install liblapack-dev<br />
+sudo apt-get install libblacs-mpi-dev<br />
+<br />
+ <b>Move metis library to Pre-Analysis folder</b><br />
+cp /usr/bin/mpmetis /SVL/01-Pre_Process/Metis<br />
+<br />
+ <b>Install MUMPS direct solver library</b><br />
+sudo apt-get install libmumps-5.1.2 <code>(*)</code><br />
+<br />
+ <b>Install PETSc iterative solver library</b><br />
+sudo apt-get install petsc-dev<br />
+<br />
+ <b>Compile the SVL library</b><br />
+cd /SVL/02-Run_Process<br />
+make -s DEBUG=False </p>
+</blockquote>
+<dl class="section note"><dt>Note</dt><dd>In <b>Ubuntu 16.04</b> the same process can be done, but <b>python3.5</b> and <b>libmumps-4.10.0</b> should be employed at <code>(*)</code> for packages consistency. </dd>
+<dd>
+In <b>Ubuntu 20.04</b> the same process can be done, but <b>python3.9</b> and <b>libmumps-5.2.1</b> should be employed at <code>(*)</code> for packages consistency. </dd></dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Fri May 28 2021 10:43:26 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

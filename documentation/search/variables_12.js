@@ -4,6 +4,7 @@ var searchData=
   ['sigmay',['SigmaY',['../classPlastic1DJ2.html#a9e89434367a73cd3cca5c0fb6b353aa5',1,'Plastic1DJ2::SigmaY()'],['../classPlastic3DJ2.html#ab059102fba9cb19ac27c4cb344f2b0ea',1,'Plastic3DJ2::SigmaY()'],['../classPlasticPlaneStrainJ2.html#a2ad7542541ecc35d8081989c1b9ca05b',1,'PlasticPlaneStrainJ2::SigmaY()']]],
   ['size',['size',['../Definitions_8hpp.html#a439227feff9d7f55384e8780cfc2eb82',1,'Definitions.hpp']]],
   ['slave',['Slave',['../classConstraint.html#ac0ec12034100bea32ed513600ab131b5',1,'Constraint']]],
+  ['sol',['sol',['../classMumpsSolver.html#a93b1ce47f2ecc162073b6eb9a85fb88d',1,'MumpsSolver']]],
   ['solver',['Solver',['../classEigenSolver.html#ac0d2d7c289b3e7e6be6545360d92cdc3',1,'EigenSolver']]],
   ['start',['Start',['../structProfileResult.html#ae4eb86f9180b8e39cb6e8faeeffd8416',1,'ProfileResult']]],
   ['stiffnesstolerance',['StiffnessTolerance',['../classAssembler.html#afe72767784337062642ccbdab4202ac0',1,'Assembler']]],

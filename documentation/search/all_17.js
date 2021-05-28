@@ -43,5 +43,5 @@ var searchData=
   ['rsjresource',['RSJresource',['../classRSJresource.html',1,'RSJresource'],['../classRSJresource.html#aa91ef135a85235b925def87e693ae543',1,'RSJresource::RSJresource()'],['../classRSJresource.html#ac9acd27c2a7d2703fad62c698abd29d7',1,'RSJresource::RSJresource(std::string str)'],['../classRSJresource.html#a94a9188ffea5dcbd48825ee1def8bc66',1,'RSJresource::RSJresource(const char *str)'],['../classRSJresource.html#a7541d185abe8ceb68669b5deec4abf8b',1,'RSJresource::RSJresource(dataType d)'],['../classRSJresource.html#a2de9317189332a21a4a67f4789ca99d6',1,'RSJresource::RSJresource(std::istream &amp;is)'],['../classRSJresource.html#a590263de8aeee9f594343f4a1d5003f8',1,'RSJresource::RSJresource(std::ifstream &amp;ifs)'],['../classRSJresource.html#ab7207c3c686cb3cc857914bb8b5cf91c',1,'RSJresource::RSJresource(const RSJresource &amp;r)']]],
   ['rsjresourcetype',['RSJresourceType',['../RSJparser_8hpp.html#a1c0d9523adb82203d51e1e1f5a9426d1',1,'RSJparser.hpp']]],
   ['rsjstringquotes',['RSJstringquotes',['../RSJparser_8hpp.html#a574791801a2676354fe09131f661336b',1,'RSJparser.hpp']]],
-  ['runfromjson',['RunFromJSON',['../Parser_8hpp.html#ada1d5cdeadd2035d086508b0d31e1885',1,'Parser.hpp']]]
+  ['runfromjson',['RunFromJSON',['../Parser_8hpp.html#aa145c899bb8db751c64e06a458b90d89',1,'Parser.hpp']]]
 ];

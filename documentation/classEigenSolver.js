@@ -2,7 +2,7 @@ var classEigenSolver =
 [
     [ "EigenSolver", "classEigenSolver.html#acc80b3e63ece0ca7900127cd8ae58e36", null ],
     [ "~EigenSolver", "classEigenSolver.html#ab057ac6281e132eb435356663272e080", null ],
-    [ "GetSolution", "classEigenSolver.html#af42fabe00a5c39c688d72c335b709fd3", null ],
+    [ "GetSolution", "classEigenSolver.html#a39bb51d3d42fdb4b1b25e2483edbcf86", null ],
     [ "SolveSystem", "classEigenSolver.html#a76baad00c42b23c04f1a907af6e25fe1", null ],
     [ "Factored", "classEigenSolver.html#a54024b5aabe64b78bf0b43c1850acd74", null ],
     [ "Flag", "classEigenSolver.html#a3d3fc940fd8c10ef8ea9ed3605a32ffc", null ],

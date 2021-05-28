@@ -64,7 +64,7 @@ var searchData=
   ['position',['Position',['../classRecorder.html#ab69fd494ade0b78b26fa98305a27bde1',1,'Recorder']]],
   ['precision',['Precision',['../classRecorder.html#afa38c594b07d6f81af110eda03f516e5',1,'Recorder']]],
   ['print',['print',['../classRSJresource.html#aed0a40393da143b9daf527f176f768dd',1,'RSJresource']]],
-  ['printhelp',['printHelp',['../Utilities_8hpp.html#a0d20b69b0ad703df78459e1033d5c1d4',1,'Utilities.hpp']]],
+  ['printhelp',['printHelp',['../Utilities_8hpp.html#a7ebbb6a32c8c4f7d512decade12e1b70',1,'Utilities.hpp']]],
   ['printlogo',['printLogo',['../Utilities_8hpp.html#ad4952f88b5d628ce55f78bb06d8dedaa',1,'Utilities.hpp']]],
   ['printprogress',['PrintProgress',['../classAnalysis.html#a7ee239b19a59ccf05eacee5ad79a832e',1,'Analysis']]],
   ['profile_5ffunction',['PROFILE_FUNCTION',['../Profiler_8hpp.html#aea5bb1ebe0e3e32e5927e899daa2011d',1,'Profiler.hpp']]],

@@ -102,31 +102,70 @@ $(document).ready(function(){initNavTree('linkWindows.html','');});
 <div class="title">Windows Operating System </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The Windows installation requires of a C++ compiler. We recommend to install MSYS2 (Download from <a href="https://www.msys2.org/">https://www.msys2.org/</a>) C/C++/make. Follow for instance a tutorial on youtube (<a href="https://www.youtube.com/watch?v=sMbPdSx5i8o">https://www.youtube.com/watch?v=sMbPdSx5i8o</a>). In addition to the directory <code>C:\msys64\mingw64\bin</code> mentioned in the above video, also add <code>C:\msys64\usr\bin</code> to the variable named <code>Path</code> in <code>Environment Variables</code>. The procedure is identical. Next, make sure these two directories have priority (are on top of the list) to all other directories otherwisethe system will confuse similar Linux and Windows commands (such as <code>find</code>) and compilation will fail. Then, download <code>Eigen C++ library</code>, <code>MUMPS Library</code>, and <code>Pestc Library</code>.</p>
-<ul>
-<li>The <b>Eigen C++ library</b> can be downloaded from the website <a href="http://eigen.tuxfamily.org/">http://eigen.tuxfamily.org/</a>. This package needs to be unzip and its content move (for instance) to <br />
- <code>C:\msys64\usr\include\Eigen</code>.</li>
-<li>The <b>MUMPS library</b> can be downloaded from the website <a href="http://mumps.enseeiht.fr/">http://mumps.enseeiht.fr/</a>. This package needs to be unzip and compiled (for instance) at <br />
- <code>C:\msys64\usr\include\Mumps</code>.</li>
-<li>The <b>Pestc Library</b> library can be downloaded at the website <a href="https://www.mcs.anl.gov/petsc/">https://www.mcs.anl.gov/petsc/</a>. This package needs to be unzip and compiled (for instance) at <br />
- <code>C:\msys64\usr\include\Petsc</code>.</li>
-</ul>
-<p>Modify the <code>Makefile.mk</code> file such the previous path point to the right libraries:</p>
-<pre>
-EIGEN_DIR = C:\msys64\usr\include\Eigen
-PETSC_DIR = C:\msys64\usr\include\Petsc
-MUMPS_DIR = C:\msys64\usr\include\Mumps
-</pre><p>Also, check that : <code>MPI_DIR, METIS_DIR, SCOTCH_DIR</code> have the correct path where these libraries are installed. Make sure libraries such as: <code>-lscalapack-openmpi -lblacs-openmpi -llapack -lblas</code> and <code>-lparmetis -lmetis -lptesmumps -lptscotch -lptscotcherr</code> are also installed.</p>
-<p>Finally, write in terminal:</p>
-<pre>
-make -s DEBUG=False
-</pre> </div></div><!-- contents -->
+<div class="textblock"><p>Installation of <b>SVL</b> on a Windows machine can be done indirectly using <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">WSL</a>. This method is in fact recommended in order to avoid Windows' troubleshooting issues. Please, follow the instructions provided in this <a href="https://www.youtube.com/watch?v=_fntjriRe48&amp;t=168s" target="_blank">YouTube</a> video, to properly install <b>WSL</b> on Windows.</p>
+<p>On Linux (Ubuntu) the <code>C:\</code> HDD is located at <code>/mnt/c/</code> which is Windows 10 <code>C:\</code> mounted on Linux. Therefore, moving/coping files from Window to Linux and viceversa can be done as:</p>
+<div class="fragment"><div class="line">cp /mnt/c/path-to-file-on-windows /home/path-to-file-on-linux</div></div><!-- fragment --><p>For more information on how to copy files, we recommend to watch this <a href="https://www.youtube.com/watch?v=5lA1UKuQbf0" target="_blank">YouTube</a> video.</p>
+<p>Once <b>WSL</b> is properly installed, the <b>SVL</b> installation can be done as described in <a class="el" href="linkDebian.html">Ubuntu Operating System</a>. For example, to instal <b>SVL</b> on Ubuntu 20.04, open a terminal and paste the following list of commands: </p><blockquote class="doxtable">
+<p><b>Install C++/Fortran Compilers</b> <br />
+sudo apt-get update<br />
+sudo apt-get install wget<br />
+sudo apt-get install bash<br />
+sudo apt-get install gcc<br />
+sudo apt-get install gfortran<br />
+sudo apt-get install g++<br />
+sudo apt-get install make<br />
+<br />
+ <b>Install Python libraries</b><br />
+sudo apt-get install python3.9<br />
+sudo apt-get install python3-numpy<br />
+sudo apt-get install python3-scipy<br />
+sudo apt-get install python3-matplotlib<br />
+<br />
+ <b>Install parallel computing libraries</b><br />
+sudo apt-get install libomp-dev<br />
+sudo apt-get install openmpi-bin<br />
+sudo apt-get install openmpi-common<br />
+sudo apt-get install libopenmpi-dev<br />
+<br />
+ <b>Download and Install Eigen C++ library</b><br />
+wget -nv <a href="https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.tar.gz">https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.tar.gz</a><br />
+tar -xvf eigen-3.3.9.tar.gz<br />
+mv eigen-3.3.9 eigen<br />
+mv eigen /usr/include<br />
+rm eigen-3.3.9.tar.gz<br />
+<br />
+ <b>Install partition and numerical libraries</b><br />
+sudo apt-get install metis<br />
+sudo apt-get install libmetis-dev<br />
+sudo apt-get install libparmetis-dev<br />
+sudo apt-get install libscotch-dev<br />
+sudo apt-get install libptscotch-dev<br />
+sudo apt-get install libatlas-base-dev<br />
+sudo apt-get install liblapack-dev<br />
+sudo apt-get install libscalapack-mpi-dev<br />
+<br />
+ <b>Move metis library to Pre-Analysis folder</b><br />
+cp /usr/bin/mpmetis /SVL/01-Pre_Process/Metis<br />
+<br />
+ <b>Install MUMPS direct solver library</b><br />
+sudo apt-get install libmumps-5.2.1`<br />
+<br />
+ <b>Install PETSc iterative solver library</b><br />
+sudo apt-get install petsc-dev<br />
+<br />
+ <b>Compile the SVL library</b><br />
+cd /SVL/02-Run_Process<br />
+make -s DEBUG=False </p>
+</blockquote>
+<dl class="section note"><dt>Note</dt><dd>This process requires <b>WSL</b> to be installed on Windows.<br />
+This process requires to move the <b>SVL</b> folder to the Ubuntu 20.04 directory. </dd></dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Fri May 28 2021 10:43:26 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

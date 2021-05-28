@@ -18,7 +18,7 @@ var searchData=
   ['is_5fbracket',['is_bracket',['../RSJparser_8hpp.html#a264a1bc7f38c054194cc60bf23252299',1,'RSJparser.hpp']]],
   ['is_5fparsed',['is_parsed',['../classRSJresource.html#a09664a491d51460e3d6d2eda93a5249a',1,'RSJresource']]],
   ['isfixed',['IsFixed',['../classNode.html#a805ac1e765fe9ee49b41cf75f575664a',1,'Node']]],
-  ['isviscous',['isViscous',['../classMaterial.html#a296a7cda82b1ada173d06650e02399c0',1,'Material::isViscous()'],['../classMaterial.html#a943853b5885cf02e13ed30e61f28c611',1,'Material::IsViscous()']]],
+  ['isviscous',['IsViscous',['../classMaterial.html#a943853b5885cf02e13ed30e61f28c611',1,'Material::IsViscous()'],['../classMaterial.html#a296a7cda82b1ada173d06650e02399c0',1,'Material::isViscous()']]],
   ['installation',['Installation',['../linkInstallation.html',1,'']]],
   ['integrator',['Integrator',['../linkIntegrator.html',1,'linkAnalysisModule']]],
   ['input_2foutput_20module',['Input/Output Module',['../linkIOModule.html',1,'linkModules']]],

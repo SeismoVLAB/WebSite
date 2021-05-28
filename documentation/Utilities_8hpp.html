@@ -114,15 +114,15 @@ $(document).ready(function(){initNavTree('Utilities_8hpp.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0d20b69b0ad703df78459e1033d5c1d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Utilities_8hpp.html#a0d20b69b0ad703df78459e1033d5c1d4">printHelp</a> ()</td></tr>
-<tr class="memdesc:a0d20b69b0ad703df78459e1033d5c1d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints out Command Line help.  <a href="#a0d20b69b0ad703df78459e1033d5c1d4">More...</a><br /></td></tr>
-<tr class="separator:a0d20b69b0ad703df78459e1033d5c1d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ebbb6a32c8c4f7d512decade12e1b70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Utilities_8hpp.html#a7ebbb6a32c8c4f7d512decade12e1b70">printHelp</a> (bool &amp;help)</td></tr>
+<tr class="memdesc:a7ebbb6a32c8c4f7d512decade12e1b70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints out Command Line help.  <a href="#a7ebbb6a32c8c4f7d512decade12e1b70">More...</a><br /></td></tr>
+<tr class="separator:a7ebbb6a32c8c4f7d512decade12e1b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4952f88b5d628ce55f78bb06d8dedaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Utilities_8hpp.html#ad4952f88b5d628ce55f78bb06d8dedaa">printLogo</a> ()</td></tr>
 <tr class="memdesc:ad4952f88b5d628ce55f78bb06d8dedaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints Seismo-VLAB software header.  <a href="#ad4952f88b5d628ce55f78bb06d8dedaa">More...</a><br /></td></tr>
 <tr class="separator:ad4952f88b5d628ce55f78bb06d8dedaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af517170a919110843756c69561470f45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Utilities_8hpp.html#af517170a919110843756c69561470f45">CommandLine</a> (int argc, char **argv)</td></tr>
-<tr class="memdesc:af517170a919110843756c69561470f45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse Command Line Inputs.  <a href="#af517170a919110843756c69561470f45">More...</a><br /></td></tr>
-<tr class="separator:af517170a919110843756c69561470f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a366395fdafa5ecc05c4ea4abe2eb7a1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Utilities_8hpp.html#a366395fdafa5ecc05c4ea4abe2eb7a1a">CommandLine</a> (int argc, char **argv, bool &amp;parsefile)</td></tr>
+<tr class="memdesc:a366395fdafa5ecc05c4ea4abe2eb7a1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse Command Line Inputs.  <a href="#a366395fdafa5ecc05c4ea4abe2eb7a1a">More...</a><br /></td></tr>
+<tr class="separator:a366395fdafa5ecc05c4ea4abe2eb7a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Danilo S. Kusanovic (<a href="#" onclick="location.href='mai'+'lto:'+'dku'+'sa'+'nov'+'@c'+'alt'+'ec'+'h.e'+'du'; return false;">dkusa<span style="display: none;">.nosp@m.</span>nov@<span style="display: none;">.nosp@m.</span>calte<span style="display: none;">.nosp@m.</span>ch.e<span style="display: none;">.nosp@m.</span>du</a>) </dd></dl>
@@ -130,8 +130,8 @@ Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0</dd></dl>
 <dl class="section see"><dt>See also</dt><dd>main.cpp </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="af517170a919110843756c69561470f45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af517170a919110843756c69561470f45">&#9670;&nbsp;</a></span>CommandLine()</h2>
+<a id="a366395fdafa5ecc05c4ea4abe2eb7a1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a366395fdafa5ecc05c4ea4abe2eb7a1a">&#9670;&nbsp;</a></span>CommandLine()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,7 +146,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>argv</em>&#160;</td>
+          <td class="paramname"><em>argv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>parsefile</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -160,8 +166,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a0d20b69b0ad703df78459e1033d5c1d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d20b69b0ad703df78459e1033d5c1d4">&#9670;&nbsp;</a></span>printHelp()</h2>
+<a id="a7ebbb6a32c8c4f7d512decade12e1b70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ebbb6a32c8c4f7d512decade12e1b70">&#9670;&nbsp;</a></span>printHelp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,7 +175,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void printHelp </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>help</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -205,7 +212,7 @@ Functions</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="dir_c4c3cc1ef075e8c2dbf7a9cdab7d21b3.html">12-Utilities</a></li><li class="navelem"><a class="el" href="Utilities_8hpp.html">Utilities.hpp</a></li>
 				<li class="footer">
-					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Fri May 28 2021 10:43:26 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -106,10 +106,10 @@ $(document).ready(function(){initNavTree('classNewtonRaphson.html','');});
 <p>This is the complete list of members for <a class="el" href="classNewtonRaphson.html">NewtonRaphson</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classAlgorithm.html#aed8fbb2c95c9981be09b23904fa0305b">Algorithm</a>(const std::shared_ptr&lt; Mesh &gt; &amp;mesh, unsigned int flag=1, double NormFactor=1.0)</td><td class="entry"><a class="el" href="classAlgorithm.html">Algorithm</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classAlgorithm.html#aba5bc684210145a4119138f7448277aa">ComputeConvergence</a>(const Eigen::VectorXd &amp;Force, const Eigen::VectorXd &amp;delta, double Delta, unsigned int k)</td><td class="entry"><a class="el" href="classAlgorithm.html">Algorithm</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classAlgorithm.html#a12548a35e3474440ebf9272403eed7bc">ComputeConvergence</a>(const Eigen::VectorXd &amp;Force, double Delta, bool isFirstIteration)</td><td class="entry"><a class="el" href="classAlgorithm.html">Algorithm</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classNewtonRaphson.html#af8d6672e04be52082a7d0848848ac573">ComputeNewIncrement</a>(std::shared_ptr&lt; Mesh &gt; &amp;mesh, unsigned int i=0)</td><td class="entry"><a class="el" href="classNewtonRaphson.html">NewtonRaphson</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classNewtonRaphson.html#a093d99669d7a61db1de477f051d2b625">dU</a></td><td class="entry"><a class="el" href="classNewtonRaphson.html">NewtonRaphson</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classNewtonRaphson.html#a195d1447678d7e67a856514e300f7b31">GetDisplacementIncrement</a>()</td><td class="entry"><a class="el" href="classNewtonRaphson.html">NewtonRaphson</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classNewtonRaphson.html#a6bf855f046be2921fe6aabd56ffee472">GetDisplacementIncrement</a>()</td><td class="entry"><a class="el" href="classNewtonRaphson.html">NewtonRaphson</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classNewtonRaphson.html#a7b4f148e384352e5d155c93ce674116b">LoadFactor</a></td><td class="entry"><a class="el" href="classNewtonRaphson.html">NewtonRaphson</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classNewtonRaphson.html#af83c3993e224886903892573e0cd2798">NewtonRaphson</a>(std::unique_ptr&lt; LinearSystem &gt; &amp;solver, std::shared_ptr&lt; Mesh &gt; &amp;mesh, double tol=1E-6, unsigned int nIters=50, unsigned int flag=1, double ldFactor=0.02)</td><td class="entry"><a class="el" href="classNewtonRaphson.html">NewtonRaphson</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classNewtonRaphson.html#ab0b9a116310318ca329ef556454bb042">nMaxIterations</a></td><td class="entry"><a class="el" href="classNewtonRaphson.html">NewtonRaphson</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
@@ -129,7 +129,7 @@ $(document).ready(function(){initNavTree('classNewtonRaphson.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Fri May 28 2021 10:43:27 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

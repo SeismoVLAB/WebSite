@@ -134,9 +134,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac0e4aa7482e95e0a4b7f00bc8f2ae381"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#ac0e4aa7482e95e0a4b7f00bc8f2ae381">ComputeNewIncrement</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh, unsigned int i)=0</td></tr>
 <tr class="memdesc:ac0e4aa7482e95e0a4b7f00bc8f2ae381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a new incremental solution.  <a href="#ac0e4aa7482e95e0a4b7f00bc8f2ae381">More...</a><br /></td></tr>
 <tr class="separator:ac0e4aa7482e95e0a4b7f00bc8f2ae381"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a8fdbb56ea1ea0bc47a7706c71b5386"><td class="memItemLeft" align="right" valign="top">virtual Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a6a8fdbb56ea1ea0bc47a7706c71b5386">GetDisplacementIncrement</a> ()=0</td></tr>
-<tr class="memdesc:a6a8fdbb56ea1ea0bc47a7706c71b5386"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the displacement increment.  <a href="#a6a8fdbb56ea1ea0bc47a7706c71b5386">More...</a><br /></td></tr>
-<tr class="separator:a6a8fdbb56ea1ea0bc47a7706c71b5386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65d545e5c442ed3c4339d9b50e930f7e"><td class="memItemLeft" align="right" valign="top">virtual Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a65d545e5c442ed3c4339d9b50e930f7e">GetDisplacementIncrement</a> ()=0</td></tr>
+<tr class="memdesc:a65d545e5c442ed3c4339d9b50e930f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the displacement increment.  <a href="#a65d545e5c442ed3c4339d9b50e930f7e">More...</a><br /></td></tr>
+<tr class="separator:a65d545e5c442ed3c4339d9b50e930f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8207f5036233c08d84c4df161983ed84"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a8207f5036233c08d84c4df161983ed84">SetIntegrator</a> (std::shared_ptr&lt; <a class="el" href="classIntegrator.html">Integrator</a> &gt; &amp;integrator)=0</td></tr>
 <tr class="memdesc:a8207f5036233c08d84c4df161983ed84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the integrator for this algorithm.  <a href="#a8207f5036233c08d84c4df161983ed84">More...</a><br /></td></tr>
 <tr class="separator:a8207f5036233c08d84c4df161983ed84"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,9 +149,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af091b4ced43a2075685840e3ec415782"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#af091b4ced43a2075685840e3ec415782">ReducedParallelResidual</a> (const Eigen::VectorXd &amp;Feff, double &amp;Residual)</td></tr>
 <tr class="memdesc:af091b4ced43a2075685840e3ec415782"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the residual vector force from each processor.  <a href="#af091b4ced43a2075685840e3ec415782">More...</a><br /></td></tr>
 <tr class="separator:af091b4ced43a2075685840e3ec415782"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba5bc684210145a4119138f7448277aa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#aba5bc684210145a4119138f7448277aa">ComputeConvergence</a> (const Eigen::VectorXd &amp;Force, const Eigen::VectorXd &amp;delta, double Delta, unsigned int k)</td></tr>
-<tr class="memdesc:aba5bc684210145a4119138f7448277aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes convergence tests for this algorithm.  <a href="#aba5bc684210145a4119138f7448277aa">More...</a><br /></td></tr>
-<tr class="separator:aba5bc684210145a4119138f7448277aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12548a35e3474440ebf9272403eed7bc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a12548a35e3474440ebf9272403eed7bc">ComputeConvergence</a> (const Eigen::VectorXd &amp;Force, double Delta, bool isFirstIteration)</td></tr>
+<tr class="memdesc:a12548a35e3474440ebf9272403eed7bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes convergence tests for this algorithm.  <a href="#a12548a35e3474440ebf9272403eed7bc">More...</a><br /></td></tr>
+<tr class="separator:a12548a35e3474440ebf9272403eed7bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -245,8 +245,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aba5bc684210145a4119138f7448277aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba5bc684210145a4119138f7448277aa">&#9670;&nbsp;</a></span>ComputeConvergence()</h2>
+<a id="a12548a35e3474440ebf9272403eed7bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12548a35e3474440ebf9272403eed7bc">&#9670;&nbsp;</a></span>ComputeConvergence()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,20 +260,14 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
-          <td class="paramname"><em>delta</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>Delta</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>k</em>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isFirstIteration</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -287,25 +281,18 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Force</td><td>The residual force vector. </td></tr>
-    <tr><td class="paramname">delta</td><td>The incremental displacement vector. </td></tr>
-    <tr><td class="paramname">Delta</td><td>The total incremental displacement norm. </td></tr>
-    <tr><td class="paramname">k</td><td>The iteration number. </td></tr>
+    <tr><td class="paramname">Delta</td><td>The incremental displacement norm. </td></tr>
+    <tr><td class="paramname">isFirstIteration</td><td>Whether this step in <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a> is the first iteration. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 1: Unbalanced Force Norm. </dd>
 <dd>
-If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 2: Incremental Displacement Norm. </dd>
+If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 2: Increment Displacement Norm. </dd>
 <dd>
-If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 3: Incremental Energy Norm. </dd>
+If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 3: Relative Unbalanced Force Norm. </dd>
 <dd>
-If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 4: Relative Unbalanced Force Norm. </dd>
-<dd>
-If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 5: Relative Incremental Displacement Norm. </dd>
-<dd>
-If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 6: Relative Incremental Energy Norm. </dd>
-<dd>
-If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 7: Total Relative Incremental Displacement Norm. </dd></dl>
+If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 4: Relative Increment Displacement Norm. </dd></dl>
 
 </div>
 </div>
@@ -357,8 +344,8 @@ If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" ti
 
 </div>
 </div>
-<a id="a6a8fdbb56ea1ea0bc47a7706c71b5386"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a8fdbb56ea1ea0bc47a7706c71b5386">&#9670;&nbsp;</a></span>GetDisplacementIncrement()</h2>
+<a id="a65d545e5c442ed3c4339d9b50e930f7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65d545e5c442ed3c4339d9b50e930f7e">&#9670;&nbsp;</a></span>GetDisplacementIncrement()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -367,7 +354,7 @@ If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" ti
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual Eigen::VectorXd&amp; Algorithm::GetDisplacementIncrement </td>
+          <td class="memname">virtual Eigen::VectorXd Algorithm::GetDisplacementIncrement </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -383,7 +370,7 @@ If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" ti
 <p>Gets the displacement increment. </p>
 <dl class="section return"><dt>Returns</dt><dd>The incremental displacement vector. </dd></dl>
 
-<p>Implemented in <a class="el" href="classNewtonRaphson.html#a195d1447678d7e67a856514e300f7b31">NewtonRaphson</a>, and <a class="el" href="classLinear.html#ad9847e32ea0e86a49bb0304de3f48633">Linear</a>.</p>
+<p>Implemented in <a class="el" href="classNewtonRaphson.html#a6bf855f046be2921fe6aabd56ffee472">NewtonRaphson</a>, and <a class="el" href="classLinear.html#a0211055aa2600ebe5937279d2ad45f3a">Linear</a>.</p>
 
 </div>
 </div>
@@ -616,7 +603,7 @@ If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" ti
 			<ul>
 				<li class="navelem"><a class="el" href="classAlgorithm.html">Algorithm</a></li>
 				<li class="footer">
-					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Fri May 28 2021 10:43:26 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

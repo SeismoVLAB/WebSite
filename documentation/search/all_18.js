@@ -54,6 +54,7 @@ var searchData=
   ['sign',['sign',['../classUnxBoucWen2DLink.html#aed8bded1d4695b295a6737a49fcbc215',1,'UnxBoucWen2DLink::sign()'],['../classUnxBoucWen3DLink.html#af6deca76526eda6b0fc7562f5eecb339',1,'UnxBoucWen3DLink::sign()']]],
   ['size',['size',['../classRSJresource.html#a9b4a0887b6cf8d699106ca73075381c7',1,'RSJresource::size()'],['../classRSJparsedData.html#ae65d6583eb4f9e6ee837e784d7cafd1b',1,'RSJparsedData::size()'],['../Definitions_8hpp.html#a439227feff9d7f55384e8780cfc2eb82',1,'size():&#160;Definitions.hpp']]],
   ['slave',['Slave',['../classConstraint.html#ac0ec12034100bea32ed513600ab131b5',1,'Constraint']]],
+  ['sol',['sol',['../classMumpsSolver.html#a93b1ce47f2ecc162073b6eb9a85fb88d',1,'MumpsSolver']]],
   ['solver',['Solver',['../classEigenSolver.html#ac0d2d7c289b3e7e6be6545360d92cdc3',1,'EigenSolver']]],
   ['solvesystem',['SolveSystem',['../classLinearSystem.html#a681e592abd26b51d1f01c90133ba319f',1,'LinearSystem::SolveSystem()'],['../classEigenSolver.html#a76baad00c42b23c04f1a907af6e25fe1',1,'EigenSolver::SolveSystem()'],['../classMumpsSolver.html#a26184ee3727fc1c9103b254eb2cde75f',1,'MumpsSolver::SolveSystem()'],['../classPetscSolver.html#a375bf8231f1b5f7a4fc8e358ecc6bad7',1,'PetscSolver::SolveSystem()']]],
   ['split_5frsj_5farray',['split_RSJ_array',['../RSJparser_8hpp.html#a15778a28489722e81385975afc2c9a5b',1,'RSJparser.hpp']]],

@@ -132,9 +132,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af8d6672e04be52082a7d0848848ac573"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNewtonRaphson.html#af8d6672e04be52082a7d0848848ac573">ComputeNewIncrement</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh, unsigned int i=0)</td></tr>
 <tr class="memdesc:af8d6672e04be52082a7d0848848ac573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a new incremental solution.  <a href="#af8d6672e04be52082a7d0848848ac573">More...</a><br /></td></tr>
 <tr class="separator:af8d6672e04be52082a7d0848848ac573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a195d1447678d7e67a856514e300f7b31"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNewtonRaphson.html#a195d1447678d7e67a856514e300f7b31">GetDisplacementIncrement</a> ()</td></tr>
-<tr class="memdesc:a195d1447678d7e67a856514e300f7b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the displacement increment.  <a href="#a195d1447678d7e67a856514e300f7b31">More...</a><br /></td></tr>
-<tr class="separator:a195d1447678d7e67a856514e300f7b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bf855f046be2921fe6aabd56ffee472"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNewtonRaphson.html#a6bf855f046be2921fe6aabd56ffee472">GetDisplacementIncrement</a> ()</td></tr>
+<tr class="memdesc:a6bf855f046be2921fe6aabd56ffee472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the displacement increment.  <a href="#a6bf855f046be2921fe6aabd56ffee472">More...</a><br /></td></tr>
+<tr class="separator:a6bf855f046be2921fe6aabd56ffee472"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82b1f4b5bc48bef15ed3e7999394e8d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNewtonRaphson.html#a82b1f4b5bc48bef15ed3e7999394e8d2">SetLoadFactor</a> (double factor)</td></tr>
 <tr class="memdesc:a82b1f4b5bc48bef15ed3e7999394e8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the load factor.  <a href="#a82b1f4b5bc48bef15ed3e7999394e8d2">More...</a><br /></td></tr>
 <tr class="separator:a82b1f4b5bc48bef15ed3e7999394e8d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,9 +154,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af091b4ced43a2075685840e3ec415782 inherit pub_methods_classAlgorithm"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#af091b4ced43a2075685840e3ec415782">ReducedParallelResidual</a> (const Eigen::VectorXd &amp;Feff, double &amp;Residual)</td></tr>
 <tr class="memdesc:af091b4ced43a2075685840e3ec415782 inherit pub_methods_classAlgorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the residual vector force from each processor.  <a href="classAlgorithm.html#af091b4ced43a2075685840e3ec415782">More...</a><br /></td></tr>
 <tr class="separator:af091b4ced43a2075685840e3ec415782 inherit pub_methods_classAlgorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba5bc684210145a4119138f7448277aa inherit pub_methods_classAlgorithm"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#aba5bc684210145a4119138f7448277aa">ComputeConvergence</a> (const Eigen::VectorXd &amp;Force, const Eigen::VectorXd &amp;delta, double Delta, unsigned int k)</td></tr>
-<tr class="memdesc:aba5bc684210145a4119138f7448277aa inherit pub_methods_classAlgorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes convergence tests for this algorithm.  <a href="classAlgorithm.html#aba5bc684210145a4119138f7448277aa">More...</a><br /></td></tr>
-<tr class="separator:aba5bc684210145a4119138f7448277aa inherit pub_methods_classAlgorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12548a35e3474440ebf9272403eed7bc inherit pub_methods_classAlgorithm"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a12548a35e3474440ebf9272403eed7bc">ComputeConvergence</a> (const Eigen::VectorXd &amp;Force, double Delta, bool isFirstIteration)</td></tr>
+<tr class="memdesc:a12548a35e3474440ebf9272403eed7bc inherit pub_methods_classAlgorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes convergence tests for this algorithm.  <a href="classAlgorithm.html#a12548a35e3474440ebf9272403eed7bc">More...</a><br /></td></tr>
+<tr class="separator:a12548a35e3474440ebf9272403eed7bc inherit pub_methods_classAlgorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -323,8 +323,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a195d1447678d7e67a856514e300f7b31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a195d1447678d7e67a856514e300f7b31">&#9670;&nbsp;</a></span>GetDisplacementIncrement()</h2>
+<a id="a6bf855f046be2921fe6aabd56ffee472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bf855f046be2921fe6aabd56ffee472">&#9670;&nbsp;</a></span>GetDisplacementIncrement()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -333,7 +333,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::VectorXd&amp; NewtonRaphson::GetDisplacementIncrement </td>
+          <td class="memname">Eigen::VectorXd NewtonRaphson::GetDisplacementIncrement </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -350,7 +350,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The incremental displacement vector. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>More details can be found at <a class="el" href="linkNewtonRaphson.html">NewtonRaphson</a>. </dd></dl>
 
-<p>Implements <a class="el" href="classAlgorithm.html#a6a8fdbb56ea1ea0bc47a7706c71b5386">Algorithm</a>.</p>
+<p>Implements <a class="el" href="classAlgorithm.html#a65d545e5c442ed3c4339d9b50e930f7e">Algorithm</a>.</p>
 
 </div>
 </div>
@@ -578,7 +578,7 @@ Protected Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classNewtonRaphson.html">NewtonRaphson</a></li>
 				<li class="footer">
-					Generated on Sun May 16 2021 20:38:17 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Fri May 28 2021 10:43:27 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>
