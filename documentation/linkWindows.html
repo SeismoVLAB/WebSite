@@ -131,7 +131,7 @@ sudo apt-get install libopenmpi-dev<br />
 wget -nv <a href="https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.tar.gz">https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.tar.gz</a><br />
 tar -xvf eigen-3.3.9.tar.gz<br />
 mv eigen-3.3.9 eigen<br />
-mv eigen /usr/include<br />
+sudo mv eigen /usr/include<br />
 rm eigen-3.3.9.tar.gz<br />
 <br />
  <b>Install partition and numerical libraries</b><br />
@@ -148,7 +148,7 @@ sudo apt-get install libscalapack-mpi-dev<br />
 cp /usr/bin/mpmetis /SVL/01-Pre_Process/Metis<br />
 <br />
  <b>Install MUMPS direct solver library</b><br />
-sudo apt-get install libmumps-5.2.1`<br />
+sudo apt-get install libmumps-5.2.1<br />
 <br />
  <b>Install PETSc iterative solver library</b><br />
 sudo apt-get install petsc-dev<br />
@@ -157,15 +157,17 @@ sudo apt-get install petsc-dev<br />
 cd /SVL/02-Run_Process<br />
 make -s DEBUG=False </p>
 </blockquote>
+<p>Before compiling <b>SVL</b>, please check in the Makefile.mk that the mpi library path is right. This library can be locate at <code>MPI_DIR = /usr/include/mpi</code> or <code>MPI_DIR = /usr/include/x86_64-linux-gnu/mpi</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>This process requires <b>WSL</b> to be installed on Windows.<br />
-This process requires to move the <b>SVL</b> folder to the Ubuntu 20.04 directory. </dd></dl>
+This process requires to move the <b>SVL</b> folder to the Ubuntu 20.04 directory.<br />
+The <b>WSL</b> version on Windows 10 S does not allow to install Linux Distros. Theredore, you may need to install the Windows10Upgrade9250.exe or similar. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Fri May 28 2021 10:43:26 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Fri May 28 2021 20:18:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -121,7 +121,7 @@ $(document).ready(function(){initNavTree('linkLinux.html','');});
  This package needs to be unzip and compiled (for instance) at /usr/include/petsc.</li>
 </ul>
 <p class="startli">Modify the <code>Makefile.mk</code> file so that the previous path point to the right libraries:<br />
- </p><div class="fragment"><div class="line">MPI_DIR   = /usr/include/mpi</div><div class="line">EIGEN_DIR = /usr/include/eigen</div><div class="line">PETSC_DIR = /usr/lib/petsc</div></div><!-- fragment --><p> Also, make sure libraries such as: <code>-lscalapack-openmpi</code> <code>-lblacs-openmpi</code> <code>-llapack</code> <code>-lblas</code> and <code>-lparmetis</code> <code>-lmetis</code> are also installed. Refer to the <a class="el" href="linkDebian.html">Ubuntu Operating System</a> example to see all the required dependencies. Finally, write in terminal: </p><div class="fragment"><div class="line">make -s DEBUG=False</div></div><!-- fragment --></li>
+ </p><div class="fragment"><div class="line">MPI_DIR   = /usr/include/mpi</div><div class="line">EIGEN_DIR = /usr/include/eigen</div><div class="line">PETSC_DIR = /usr/lib/petsc</div></div><!-- fragment --><p> Also, make sure libraries such as: <code>-lscalapack-openmpi</code> <code>-lblacs-openmpi</code> <code>-llapack</code> <code>-lblas</code> and <code>-lparmetis</code> <code>-lmetis</code> are also installed. Refer to the <a class="el" href="linkDebian.html">Ubuntu Operating System</a> example to see all the required dependencies. Finally, inside <code>SVL/02-Run_Process</code> directory, write in terminal: </p><div class="fragment"><div class="line">make -s DEBUG=False</div></div><!-- fragment --></li>
 </ul>
 <dl class="section note"><dt>Note</dt><dd>This installation process assumes the user is able to compile/build <b>PETSc</b> and <b>MUMPS</b> from the source code provided. <br />
 In MacOS (Unix) a similar described for the <a class="el" href="linkDebian.html">Ubuntu Operating System</a> process can be followed using brew (<a href="https://brew.sh/">https://brew.sh/</a>). </dd></dl>
@@ -131,7 +131,7 @@ In MacOS (Unix) a similar described for the <a class="el" href="linkDebian.html"
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Fri May 28 2021 10:43:26 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Fri May 28 2021 20:18:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

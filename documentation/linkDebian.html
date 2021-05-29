@@ -130,7 +130,7 @@ sudo apt-get install libopenmpi-dev<br />
 wget -nv <a href="https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.tar.gz">https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.tar.gz</a><br />
 tar -xvf eigen-3.3.9.tar.gz<br />
 mv eigen-3.3.9 eigen<br />
-mv eigen /usr/include<br />
+sudo mv eigen /usr/include<br />
 rm eigen-3.3.9.tar.gz<br />
 <br />
  <b>Install partition and numerical libraries</b><br />
@@ -156,6 +156,7 @@ sudo apt-get install petsc-dev<br />
 cd /SVL/02-Run_Process<br />
 make -s DEBUG=False </p>
 </blockquote>
+<p>Before compiling <b>SVL</b>, please check in the Makefile.mk that the mpi library path is right. This library can be locate at <code>MPI_DIR = /usr/include/mpi</code> or <code>MPI_DIR = /usr/include/x86_64-linux-gnu/mpi</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>In <b>Ubuntu 16.04</b> the same process can be done, but <b>python3.5</b> and <b>libmumps-4.10.0</b> should be employed at <code>(*)</code> for packages consistency. </dd>
 <dd>
 In <b>Ubuntu 20.04</b> the same process can be done, but <b>python3.9</b> and <b>libmumps-5.2.1</b> should be employed at <code>(*)</code> for packages consistency. </dd></dl>
@@ -165,7 +166,7 @@ In <b>Ubuntu 20.04</b> the same process can be done, but <b>python3.9</b> and <b
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Fri May 28 2021 10:43:26 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Fri May 28 2021 20:18:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>
