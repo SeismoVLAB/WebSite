@@ -103,9 +103,27 @@ $(document).ready(function(){initNavTree('linkExtendedNewmarkBeta.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1>Background</h1>
-<p>The <a class="el" href="classExtendedNewmarkBeta.html" title="Class for integrating the third order differential equation using the implicit Newmark method...">ExtendedNewmarkBeta</a> class creates an implicit second order accurate integrator for solving third order differential equations that is used in a <a class="el" href="linkDynamicAnalysis.html">DynamicAnalysis</a> when using linkPML3DHexa8 or linkPML3DHexa20 elements. This integrator assumes that velocity and acceleration can be approximated as,</p>
-<p>... add some of the derived equations ...</p>
-<p>where \(\textbf{K}_{\textrm{eff}}\) and \(\textrm{F}_{\textrm{eff}}\) are used to compute \(\delta U^{(i)} = \textbf{K}_{\textrm{eff}}^{-1} \textrm{F}_{\textrm{eff}}\) and \(\Delta U = \displaystyle{\sum_i \delta U^{(i)}}\) used in the <a class="el" href="linkAlgorithm.html">Algorithm</a>.</p>
+<p>The <a class="el" href="classExtendedNewmarkBeta.html" title="Class for integrating the third order differential equation using the implicit Newmark method...">ExtendedNewmarkBeta</a> class creates an implicit second order accurate integrator for solving a third order differential equation:</p>
+<p class="formulaDsp">
+\[ \textbf{M} \ddot{U}_{n+1} + \textbf{C} \dot{U}_{n+1} + \textbf{K} U_{n+1} + \textbf{G} \bar{U}_{n+1} = f_{n+1} \,,\]
+</p>
+<p>which is used in a <a class="el" href="linkDynamicAnalysis.html">DynamicAnalysis</a> when using <a class="el" href="linkPML3DHexa8.html">PML3DHexa8</a> or <a class="el" href="linkPML3DHexa20.html">PML3DHexa20</a> elements. This integrator assumes that velocity and acceleration can be approximated as,</p>
+<p class="formulaDsp">
+\[ \dot{U}_{n+1} = \frac{\gamma}{\beta \Delta t}\Delta U + \left(1-\frac{\gamma}{\beta} \right)\dot{U}_n + \left(1-\frac{\gamma}{2\beta} \right)\Delta t \, \ddot{U}_n \,, \\ \ddot{U}_{n+1} = \frac{1}{\beta \Delta t^2}\Delta U - \frac{1}{\beta \Delta t} \dot{U}_n - \left(\frac{1}{2\beta}-1 \right)\ddot{U}_n \,, \]
+</p>
+<p>where the \(\bar{U}_{n+1}\) is given as:</p>
+<p class="formulaDsp">
+\[ \bar{U}_{n+1} = \frac{\alpha}{\beta}\Delta t \, \Delta U + \left(\frac{1}{2}-\frac{\alpha}{\beta} \right)\Delta t^2 \dot{U}_n+ \left(\frac{1}{6}-\frac{\alpha}{2\beta} \right)\Delta t^3 \ddot{U}_n + \bar{U}_n + \Delta t \, U_n \]
+</p>
+<p>thus, the effective stiffness matrix and force vector are computed as,</p>
+<p class="formulaDsp">
+\[ \textbf{K}_{\textrm{eff}} = \frac{1}{\beta \Delta t^2} \textbf{M} + \frac{\gamma}{\beta \Delta t} \textbf{C} + \textbf{K} + \frac{\alpha}{\beta}\Delta t \, \textbf{G} \quad\\ \textrm{F}_{\textrm{eff}} = f_{n+1}-\bar{\textbf{M}}\, \ddot{U}_n -\bar{\textbf{C}} \, \dot{U}_n - \bar{\textbf{K}} \, U_n - \textbf{G}\bar{U}_n \]
+</p>
+<p>where \(\textbf{K}_{\textrm{eff}}\) and \(\textrm{F}_{\textrm{eff}}\) are used to compute \(\delta U^{(i)} = \textbf{K}_{\textrm{eff}}^{-1} \textrm{F}_{\textrm{eff}}\) and \(\Delta U = \displaystyle{\sum_i \delta U^{(i)}}\) used in the <a class="el" href="linkAlgorithm.html">Algorithm</a>, and</p>
+<p class="formulaDsp">
+\[ \bar{M} = \left(1-\frac{1}{2\beta} \right) \textbf{M} + \left(1-\frac{\gamma}{2\beta} \right)\Delta t \, \textbf{C} + \left(\frac{1}{6}-\frac{\alpha}{2\beta}\right)\Delta t^2 \, \textbf{G} \\ \bar{C} = -\frac{\Delta t}{\beta} \textbf{M} + \left(1-\frac{\gamma}{\beta} \right) \textbf{C} + \left(\frac{1}{2}-\frac{\alpha}{\beta} \right)\Delta t^2 \textbf{G} \quad\quad\quad\quad\quad\\ \bar{K} = \textbf{K} + \Delta t \, \textbf{G} \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \]
+</p>
+<p>Note that \(\alpha=1/12,\, \beta =1/4,\, \gamma = 1/2\).</p>
 <p><b>REFERENCE:</b></p><ul>
 <li>Fathi, A., Poursartip, B., &amp; Kallivokas, L. F. (2015). "Time‐domain hybrid formulations for wave simulations in three‐dimensional PML‐truncated heterogeneous media". International Journal for Numerical Methods in Engineering, 101(3), 165-198.</li>
 </ul>
@@ -181,7 +199,7 @@ SVL.addIntegrator(<b>tag</b>=1, <b>attributes</b>={'name': 'ExtendedNewmark', 'd
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Fri May 28 2021 20:18:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sat May 29 2021 13:32:27 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

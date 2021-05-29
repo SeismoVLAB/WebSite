@@ -107,10 +107,9 @@ $(document).ready(function(){initNavTree('linkTIEQlin2DQuad4.html','');});
 <div class="image">
 <img src="lin2DQuad4.png" alt="lin2DQuad4.png" width="38%"/>
 </div>
-<p>... add some theory explaining the element ...</p>
+<p>This element can be used for modeling equivalent linear soil behavior in two-dimensional problems. For that, one needs to define element damping and stiffness matrices at each iteration using the shear modulus reduction and damping curves. Two type element is defined. <b>DARENDELI</b> uses Darendeli's equations to define the shear modulus reduction and damping curves. On the other hand, <b>SMALLSTRAIN</b> uses Gmax and Darendeli's small strain damping. Also, to use this element, one needs to define the effective shear strain in the element <code>eref</code>, two corner frequencies <code>cf1</code> and <code>cf2</code> for defining Rayleigh damping, and the depth <code>zref</code> at which the element is located.</p>
 <p><b>REFERENCE:</b></p><ul>
-<li>reference I.</li>
-<li>reference II.</li>
+<li>Darendeli, M. B. (2001). "Development of a new family of normalized modulus reduction and material damping curves." The university of Texas at Austin.</li>
 </ul>
 <h1>Pre-Analysis</h1>
 <p>The python <a class="el" href="linkSoftwareStructure.html#linkPreProcess">Pre-Analysis</a> in the <span style="color:green"><b>01-Pre_Process/Method/Attach.py</b></span> file provides with an interface to populate the <code>Entities</code> dictionary. This file contains several functions to populate specific fields. For example, to create a <a class="el" href="classTIEQlin2DQuad4.html" title="Class for creating a 2D time invariant equivalent linear four-node quadrilateral element in a mesh...">TIEQlin2DQuad4</a>, using json format, use:</p>
@@ -142,10 +141,10 @@ $(document).ready(function(){initNavTree('linkTIEQlin2DQuad4.html','');});
 </ul>
 <p class="startli"><b>Example</b> </p><blockquote class="doxtable">
 <p>A <b>TIEQLIN2DQUAD4</b> element can be defined using the python interface as follows:<br />
-SVL.addElement(<b>tag</b>=1, <b>name</b>='<a class="el" href="classTIEQlin2DQuad4.html" title="Class for creating a 2D time invariant equivalent linear four-node quadrilateral element in a mesh...">TIEQlin2DQuad4</a>', <b>conn</b>=[1,2,3,4], <b>attributes</b>={'cf1': ???, 'cf2': ???, 'zref': ???, 'eref': ???, 'th': 0.01, 'material': 1, 'np': 4, 'rule': Gauss}) </p>
+SVL.addElement(<b>tag</b>=1, <b>name</b>='<a class="el" href="classTIEQlin2DQuad4.html" title="Class for creating a 2D time invariant equivalent linear four-node quadrilateral element in a mesh...">TIEQlin2DQuad4</a>', <b>conn</b>=[1,2,3,4], <b>attributes</b>={'cf1': 0.1, 'cf2': 10.0, 'zref': ???, 'eref': ???, 'th': 0.01, 'material': 1, 'np': 4, 'rule': Gauss}) </p>
 </blockquote>
 <p class="startli"><b>Application</b><br />
- Please refer to the <b>???.py</b> file located at <span style="color:green"><b>03-Validations/01-Debugging/</b></span> to see an example on how to define a <a class="el" href="classTIEQlin2DQuad4.html" title="Class for creating a 2D time invariant equivalent linear four-node quadrilateral element in a mesh...">TIEQlin2DQuad4</a> element.</p>
+ <span style="color:red"><b>This element has not been validated yet.</b></span></p>
 </li>
 </ul>
 <p>On the contrary, the <span style="color:green"><b>01-Pre_Process/Method/Remove.py</b></span> file provides with an interface to depopulate the <code>Entities</code> dictionary. For example, to remove an already define <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>, use:</p><ul>
@@ -205,7 +204,7 @@ SVL.addElement(<b>tag</b>=1, <b>name</b>='<a class="el" href="classTIEQlin2DQuad
 <br />
 <dl class="section attention"><dt>Attention</dt><dd>This formulation only allows small deformations. </dd>
 <dd>
-Currently the number of integration points <code>np</code>= 1,4,9,16 are supported, another value assumes <code>np</code>=4. </dd>
+Currently the number of integration points <code>np</code>= 1,4,9,16,25,36,49 are supported, another value assumes <code>np</code>=4. </dd>
 <dd>
 The material is considered to be the same at each quadrature point. </dd>
 <dd>
@@ -222,7 +221,7 @@ The domain reduction force method is incompatible with this element.</dd></dl>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Fri May 28 2021 20:18:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sat May 29 2021 13:32:27 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

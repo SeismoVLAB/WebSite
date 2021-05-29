@@ -31,6 +31,8 @@ var linkElement =
     [ "lin3DHexa8", "linklin3DHexa8.html", null ],
     [ "kin3DHexa8", "linkkin3DHexa8.html", null ],
     [ "lin3DHexa20", "linklin3DHexa20.html", null ],
+    [ "PML3DHexa8", "linkPML3DHexa8.html", null ],
+    [ "PML3DHexa20", "linkPML3DHexa20.html", null ],
     [ "Element Local Axes", "linkElementLocalAxis.html", null ],
     [ "Quadrature Rule", "linkQuadratureRule.html", [
       [ "Gauss Quadrature", "linkQuadratureRule.html#linkGaussQuadrature", null ],

@@ -12,5 +12,7 @@ var searchData=
   ['plasticplanestrainj2',['PlasticPlaneStrainJ2',['../linkPlasticPlaneStrainJ2.html',1,'linkMaterial']]],
   ['pml2dquad4',['PML2DQuad4',['../linkPML2DQuad4.html',1,'linkElement']]],
   ['pml2dquad8',['PML2DQuad8',['../linkPML2DQuad8.html',1,'linkElement']]],
+  ['pml3dhexa20',['PML3DHexa20',['../linkPML3DHexa20.html',1,'linkElement']]],
+  ['pml3dhexa8',['PML3DHexa8',['../linkPML3DHexa8.html',1,'linkElement']]],
   ['profiler',['Profiler',['../linkProfiler.html',1,'linkExtensions']]]
 ];
