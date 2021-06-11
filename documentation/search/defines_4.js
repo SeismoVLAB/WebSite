@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['unused',['UNUSED',['../Definitions_8hpp.html#a86d500a34c624c2cae56bc25a31b12f3',1,'Definitions.hpp']]],
-  ['use_5fcomm_5fworld',['USE_COMM_WORLD',['../MumpsSolver_8hpp.html#afae138fe6fce12375972645ba2b67285',1,'MumpsSolver.hpp']]]
+  ['rsjarray',['rsjArray',['../RSJparser_8hpp.html#a9564173f46396596eff69a2f5016e35e',1,'RSJparser.hpp']]],
+  ['rsjas',['rsjAs',['../RSJparser_8hpp.html#a80edec6f8e680e2e61ffc4438950ede5',1,'RSJparser.hpp']]],
+  ['rsjobject',['rsjObject',['../RSJparser_8hpp.html#a8f89675025f261c57b01c06ca58a0c38',1,'RSJparser.hpp']]]
 ];

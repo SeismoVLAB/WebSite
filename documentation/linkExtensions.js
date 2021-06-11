@@ -5,6 +5,7 @@ var linkExtensions =
     [ "Features", "linkAddFeature.html", null ],
     [ "Libraries", "linkExternalPackages.html", null ],
     [ "ParaView", "linkParaview.html", [
+      [ "Variables", "linkParaview.html#Variables", null ],
       [ "Open", "linkParaview.html#Open", null ],
       [ "Display", "linkParaview.html#Display", null ],
       [ "Clip", "linkParaview.html#Clip", null ],

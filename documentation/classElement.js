@@ -1,6 +1,6 @@
 var classElement =
 [
-    [ "Element", "classElement.html#af197fb773690c612f6925bb83643c7bf", null ],
+    [ "Element", "classElement.html#a60573241def1d5069032b4364639fecd", null ],
     [ "~Element", "classElement.html#aa8e673cb4344265e0c698a2b780e0cd5", null ],
     [ "CommitState", "classElement.html#ae3707c66dc2119715065f74e169552e7", null ],
     [ "ComputeBodyForces", "classElement.html#a19ade63e2e7ef3e0e419e1bb8ea8ef2d", null ],
@@ -24,6 +24,7 @@ var classElement =
     [ "GetStressAt", "classElement.html#a56d75b9e091b3e653730fe1bc3a91336", null ],
     [ "GetTotalDegreeOfFreedom", "classElement.html#a4735dbbd25ea42b887ec0dfb3cd545ef", null ],
     [ "GetVTKCellType", "classElement.html#ac815c6d39c37002c32b88ea63cfa403b", null ],
+    [ "GetVTKGroupType", "classElement.html#a0d4f78906ce1eb118670393a1e788075", null ],
     [ "GetVTKResponse", "classElement.html#a3786efb8f9fb389fb5190f9f0933a28a", null ],
     [ "HasFixedNode", "classElement.html#aae86d3250af2c438f0562ebf161fc6c9", null ],
     [ "InitialState", "classElement.html#af9898dbc94c8e5977276fd51fdd1e515", null ],
@@ -35,5 +36,6 @@ var classElement =
     [ "Nodes", "classElement.html#a23b566358c774f44f1ddb4e8f121760a", null ],
     [ "NumberOfDegreeOfFreedom", "classElement.html#aa2ee0e6a973233bb70ae5dc74536b27c", null ],
     [ "NumberOfNodes", "classElement.html#a58153fb8be6ef2d93522c59d9fcbd404", null ],
+    [ "SVLCell", "classElement.html#a37c6a64e254577e78c81beae8ae55d65", null ],
     [ "VTKCell", "classElement.html#a6bd24cd16ae0c9b49a6ba2889d1b6cc8", null ]
 ];

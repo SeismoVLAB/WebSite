@@ -1,0 +1,7 @@
+<map id="lin2DTria3" name="lin2DTria3">
+<area shape="rect" id="node2" href="$classElement.html" title="Virtual class for creating an element in a mesh. " alt="" coords="441,13,512,39"/>
+<area shape="rect" id="node3" title="STL class. " alt="" coords="215,123,295,150"/>
+<area shape="rect" id="node8" href="$classMaterial.html" title="Virtual class for creating a material object. " alt="" coords="443,123,511,150"/>
+<area shape="rect" id="node10" href="$classQuadratureRule.html" title="Virtual class for defining a Quadrature Rule to integrate quantities in the iso&#45;parametric elements..." alt="" coords="420,175,533,202"/>
+<area shape="rect" id="node4" title="STL class. " alt="" coords="5,116,132,157"/>
+</map>

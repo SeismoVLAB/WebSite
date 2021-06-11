@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['r',['R',['../classPlastic3DBA.html#aaeb410689c6a8303fbc0c662422ba854',1,'Plastic3DBA::R()'],['../classPlasticPlaneStrainBA.html#a73c9f69417cb915d6c66657ef5f39b80',1,'PlasticPlaneStrainBA::R()'],['../classLin2DCircular.html#a33347b15e47af2b0da9ec5d3976fea12',1,'Lin2DCircular::r()'],['../classLin3DCircular.html#ac23b1f9426b51d42a76860837b2cdfe2',1,'Lin3DCircular::r()']]],
+  ['r',['r',['../classLin2DCircular.html#a33347b15e47af2b0da9ec5d3976fea12',1,'Lin2DCircular::r()'],['../classLin3DCircular.html#ac23b1f9426b51d42a76860837b2cdfe2',1,'Lin3DCircular::r()'],['../classPlastic3DBA.html#aaeb410689c6a8303fbc0c662422ba854',1,'Plastic3DBA::R()'],['../classPlasticPlaneStrainBA.html#a73c9f69417cb915d6c66657ef5f39b80',1,'PlasticPlaneStrainBA::R()']]],
   ['r0',['R0',['../classSteel1DFiber.html#a4f6b66e146449ba90df54e856b1b1548',1,'Steel1DFiber']]],
   ['r_5fpml',['R_pml',['../classPML2DQuad4.html#aafe20877e35503bd3e93b97195d114e3',1,'PML2DQuad4::R_pml()'],['../classPML2DQuad8.html#a763b546a655ad14f49e0ea4f7af9882a',1,'PML2DQuad8::R_pml()'],['../classPML3DHexa8.html#a5ba97da74b82d4b7a11a210667d61149',1,'PML3DHexa8::R_pml()']]],
   ['rank',['rank',['../Definitions_8hpp.html#a6cfd95afd0afebd625b889fb6e58371c',1,'Definitions.hpp']]],

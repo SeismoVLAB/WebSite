@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed..." alt="" coords="5,107,83,133"/>
+<area shape="rect" id="node2" href="$classCentralDifference.html" title="Class for integrating the equation of motion using an explicit central difference method..." alt="" coords="149,5,273,32"/>
+<area shape="rect" id="node3" href="$classCompositeBathe.html" title="Class for integrating the equation of motion using an implicit second&#45;order composite method..." alt="" coords="151,56,270,83"/>
+<area shape="rect" id="node4" href="$classExtendedNewmarkBeta.html" title="Class for integrating the third order differential equation using the implicit Newmark method..." alt="" coords="131,107,291,133"/>
+<area shape="rect" id="node5" href="$classNewmarkBeta.html" title="Class for integrating the equation of motion using the implicit Newmark method. " alt="" coords="158,157,263,184"/>
+<area shape="rect" id="node6" href="$classQuasiStatic.html" title="Class for defining an static integrator that neglects any damping and inertial forces present in the ..." alt="" coords="165,208,256,235"/>
+</map>

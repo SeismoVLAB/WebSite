@@ -1,0 +1,4 @@
+<map id="QuadratureRule" name="QuadratureRule">
+<area shape="rect" id="node2" href="$classGaussQuadrature.html" title="Class for creating a Gauss Quadrature declarations to integrate quantities in the iso&#45;parametric elem..." alt="" coords="5,80,129,107"/>
+<area shape="rect" id="node3" href="$classLobattoQuadrature.html" title="Class for creating a Gauss&#45;Lobatto Quadrature declarations to integrate quantities in the iso&#45;paramet..." alt="" coords="153,80,283,107"/>
+</map>

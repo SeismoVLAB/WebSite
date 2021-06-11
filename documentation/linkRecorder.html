@@ -317,18 +317,11 @@ A <code>features = n</code> means that the number of connectivities with its len
 <dd>
 The <b>PARAVIEW</b> option currently saves two types of output:<ul>
 <li><b>POINT</b>: Response at each <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> of the finite element model. Thus, displacement, velocity and accelerations are displayed. The point quantities are represented in global coordinates.</li>
-<li><b>CELL</b>: Response at each <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> of the finite element model. Thus, stresses and strains are displayed. Note that these quantities are computed at the integration points, for now SeismoVLAB interpolates these results to the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> center. Additionally, solid elements (truss, quadrilateral, hexahedra) represents the cell quantities in local coordinates, thus <p class="formulaDsp">
-\[ \text{Strains : } \textrm{XX} = \epsilon_\textrm{11}, \textrm{YY} = \epsilon_\textrm{22}, \textrm{ZZ} = \epsilon_\textrm{33}, \textrm{XY} = \epsilon_\textrm{12}, \textrm{YZ} = \epsilon_\textrm{23}, \textrm{XZ} = \epsilon_\textrm{13}, \\ \text{Stresses : } \textrm{XX} = \sigma_\textrm{11}, \textrm{YY} = \sigma_\textrm{22}, \textrm{ZZ} = \sigma_\textrm{33}, \textrm{XY} = \sigma_\textrm{12}, \textrm{YZ} = \sigma_\textrm{23}, \textrm{XZ} = \sigma_\textrm{13}. \]
-</p>
- However, for structural elements (frames, and shells) stresses are generalized section forces, and thus for frames: <p class="formulaDsp">
-\[ \text{Strains : }\textrm{XX} = \epsilon_{11}, \textrm{YY} = \gamma_2, \textrm{ZZ} = \gamma_3, \textrm{XY} = \varphi_1, \textrm{YZ} = \kappa_2, \textrm{XZ} = \kappa_3, \\ \text{Stresses : }\textrm{XX} = \textrm{N}_1, \textrm{YY} = \textrm{V}_2, \textrm{ZZ} = \textrm{V}_3, \textrm{XY} = \textrm{T}, \textrm{YZ} = \textrm{M}_2, \textrm{XZ} = \textrm{M}_3. \]
-</p>
- and for shell elements: <p class="formulaDsp">
-\[ \text{Strains : }\textrm{XX} = \epsilon_{11}, \textrm{YY} = \epsilon_{22}, \textrm{ZZ} = \epsilon_{12}, \textrm{XY} = \kappa_1, \textrm{YZ} = \kappa_2, \textrm{XZ} = \kappa_{12}, \\ \text{Stresses : }\textrm{XX} = \textrm{N}_1, \textrm{YY} = \textrm{N}_2, \textrm{ZZ} = \textrm{N}_{12}, \textrm{XY} = \textrm{M}_1, \textrm{YZ} = \textrm{M}_2, \textrm{XZ} = \textrm{M}_{12}. \]
-</p>
- </li>
+<li><b>CELL</b>: Response at each <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> of the finite element model. Thus, stresses and strains are displayed. Note that these quantities are computed at the integration points, for now SeismoVLAB interpolates these results to the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> center. </li>
 </ul>
-</dd></dl>
+</dd>
+<dd>
+Please refer to the <a class="el" href="linkParaview.html">ParaView</a> section for more details. </dd></dl>
 </li>
 </ul>
 </div></div><!-- contents -->
@@ -337,7 +330,7 @@ The <b>PARAVIEW</b> option currently saves two types of output:<ul>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sat May 29 2021 13:32:27 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Fri Jun 11 2021 15:44:41 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

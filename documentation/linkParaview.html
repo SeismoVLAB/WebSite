@@ -108,6 +108,23 @@ $(document).ready(function(){initNavTree('linkParaview.html','');});
 <li>J. Ahrens, B. Geveci, C. Law, "Paraview:   An  end-user  tool  for  large-data  visualization,  in:   The  Visualization Handbook", 2005.</li>
 <li>U. Ayachit, "The ParaView Guide:  A Parallel Visualization Application", Kitware, Inc., USA, 2015.</li>
 </ul>
+<h1><a class="anchor" id="Variables"></a>
+Variables</h1>
+<p>The <b>SVL</b> output options are shown in the figure below:</p>
+<div class="image">
+<img src="VTKOptions.png" alt="VTKOptions.png" width="10%"/>
+</div>
+<p>The <b>POINT</b> and <b>CELL</b> variables are:</p><ul>
+<li><b>Displacements</b> : The nodal displacement vector field. Its components are given as Ux, Uy, and Uz.</li>
+<li><b>Velocities</b> : The nodal velocity vector field. Its components are given as Vx, Vy, and Vz.</li>
+<li><b>Accelerations</b> : The nodal acceleration vector field. Its components are given as Ax, Ay, and Az.</li>
+<li><b>GlobalNodeId</b> : The node identifier (tag) provided by the user.</li>
+<li><b>ElementStrains</b> : The element internal strains (computed at the center of the element). These values are divided in solid (usual stresses) and structural (generalized stresses).</li>
+<li><b>ElementStresses</b> : The element internal stresses (computed at the center of the element). These values are divided in solid (usual stresses) and structural (generalized stresses).</li>
+<li><b>ElementGlobalId</b> : The element group identifier, the groups are: <em>TRUSS</em> (10), <em>TRIA</em> (11), <em>QUAD</em> (12), <em>TETRA</em> (13), <em>HEXA</em> (14), <em>FRAME</em> (20), <em>SHELL</em> (21), <em>ZERO</em> (31), <em>PML</em> (32), <em>BWEN</em> (41), <em>HDRB</em> (42), and <em>NULL</em> (50).</li>
+<li><b>GroupElementId</b> : The element identifier (tag) provided by the user.</li>
+</ul>
+<dl class="section attention"><dt>Attention</dt><dd>Please use ParaView version 5.9.0 (or above) to have all functionalities available in <b>SeismoVLAB</b>.</dd></dl>
 <h1><a class="anchor" id="Open"></a>
 Open</h1>
 <p>The <b>SVL</b> output files can be opened in <a class="el" href="linkParaview.html">ParaView</a> as follows:</p><ul>
@@ -289,7 +306,7 @@ Range</h1>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sat May 29 2021 13:32:27 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Fri Jun 11 2021 15:44:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

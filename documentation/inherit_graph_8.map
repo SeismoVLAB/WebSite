@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. " alt="" coords="5,56,108,83"/>
+<area shape="rect" id="node2" href="$classEigenSolver.html" title="Class for solving a linear system using a Cholesky&#45;decomposition on the effective stiffness matrix..." alt="" coords="161,5,253,32"/>
+<area shape="rect" id="node3" href="$classMumpsSolver.html" title="Class for solving a linear system using the (MU)ltifrontal (M)assively (P)arallel (S)parse direct Sol..." alt="" coords="156,56,259,83"/>
+<area shape="rect" id="node4" href="$classPetscSolver.html" title="Class for solving a linear system using an iterative solver assuming the matrix can be symmetric posi..." alt="" coords="161,107,254,133"/>
+</map>
