@@ -113,6 +113,19 @@ $(document).ready(function(){initNavTree('linkMesh.html','');});
 <li>Mackie, R. I. (1992). "Object oriented programming of the finite element method". International Journal for Numerical Methods in Engineering, 35(2), 425–436.</li>
 </ul>
 <h1>Pre-Analysis</h1>
+<p>The python <span style="color:green"><b>01-Pre_Process/Method/Display.py</b></span> file provides with an interface to show the finite element mesh defined so far. The generated file (with extension .vtu) can be opened using <a class="el" href="linkParaview.html">ParaView</a>. The <b>SVL</b> output options defined for <b>POINT</b> and <b>CELL</b> variables are:</p>
+<div class="image">
+<img src="VTKOptionsRenderData.png" alt="VTKOptionsRenderData.png" width="10%"/>
+</div>
+<ul>
+<li><b>GlobalNodeId</b> : The node identifier (tag) provided by the user.</li>
+<li><b>DegreeOfFreedom</b>: The number of degree of freedom for each node.</li>
+<li><b>NodeConditions</b>: The applied node condition. The value <em>0</em> means the node is free, the value <em>1</em> means the node is restrained (fixed), and the value <em>-1</em> means the node is constrained (kinematic).</li>
+<li><b>ElementGlobalId</b> : The element group identifier, the groups are: <em>TRUSS</em> (10), <em>TRIA</em> (11), <em>QUAD</em> (12), <em>TETRA</em> (13), <em>HEXA</em> (14), <em>FRAME</em> (20), <em>SHELL</em> (21), <em>ZERO</em> (31), <em>PML</em> (32), <em>BWEN</em> (41), <em>HDRB</em> (42), and <em>NULL</em> (50).</li>
+<li><b>GroupElementId</b> : The element identifier (tag) provided by the user.</li>
+<li><b>DomainPartition</b>: The domain partition that will be used in each processor.</li>
+</ul>
+<dl class="section attention"><dt>Attention</dt><dd>Please use ParaView version 5.9.0 (or above) to have all functionalities available in <b>SeismoVLAB</b>.</dd></dl>
 <p>The python <span style="color:green"><b>01-Pre_Process/Method/Builder.py</b></span> file provides with an interface to populate the <code>Entities</code> dictionary with <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>, <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>, <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> and <a class="el" href="classConstraint.html" title="Class for creating a linear kinematic relations between degree-of-freedom in the model. ">Constraint</a>. A Domain can be created using the <span style="color:blue"><b>makeDomainVolume()</b></span>, <span style="color:blue"><b>makeDomainArea()</b></span> or <span style="color:blue"><b>makeDomainLine()</b></span> function. These functions will transform the provided information into json format to be parse in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a>.</p>
 <ul>
 <li><p class="startli"><span style="color:blue"><b>makeDomainVolume</b></span>(<b>option</b>):<br />
@@ -263,7 +276,7 @@ The <a class="el" href="classMesh.html" title="Class for defining a mesh that st
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Fri Jun 11 2021 15:44:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sat Jun 19 2021 20:25:55 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

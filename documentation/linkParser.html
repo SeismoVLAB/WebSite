@@ -113,7 +113,7 @@ $(document).ready(function(){initNavTree('linkParser.html','');});
  which transform the json structure into recognizable objects defined at <a class="el" href="linkAnalysisModule.html">Solution Module</a>. Therefore <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a>, <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a>, <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a>, <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a>, objects are created within this function.</li>
 </ul>
 </li>
-<li><a class="el" href="Parser_8hpp.html#a6ba7144f88e8f35f5145bf1ee186855d">UpateDomain()</a> <br />
+<li>UpateDomain() <br />
  which performs modification in the model after an analysis is performed.</li>
 </ul>
 <p>In <b>SVL</b> we use <a class="el" href="RSJparser_8hpp.html">RSJparser.hpp</a> <em><b>JSON</b></em> parser, because it resembles the same structure used in python dictionaries. Below is a simple example (extracted from the RSJparser documentation) on how to use <b>RSJparser</b> in an implementation file: </p><div class="fragment"><div class="line">std::string str = <span class="stringliteral">&quot;{&#39;RSJ&#39;: &#39;string data&#39;, &#39;keyName&#39;: [2,3,5,7]}&quot;</span>;</div><div class="line"><a class="code" href="classRSJresource.html">RSJresource</a> my_json(str);</div><div class="line">std::cout  &lt;&lt;  my_json[<span class="stringliteral">&quot;keyName&quot;</span>][2].as&lt;<span class="keywordtype">int</span>&gt;() &lt;&lt; std::endl;     <span class="comment">// prints 5</span></div><div class="line">std::cout  &lt;&lt;  my_json[<span class="stringliteral">&quot;RSJ&quot;</span>].as&lt;std::string&gt;(<span class="stringliteral">&quot;default string&quot;</span>) &lt;&lt; std::endl; <span class="comment">// prints &quot;string data&quot;</span></div><div class="line">std::cout  &lt;&lt;  my_json[<span class="stringliteral">&quot;JSON&quot;</span>].as&lt;std::string&gt;(<span class="stringliteral">&quot;default string&quot;</span>) &lt;&lt; std::endl; <span class="comment">// prints &quot;default string&quot;</span></div></div><!-- fragment --><p>The previous format is found extensively in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a> which are mostly used in the <a class="el" href="Parser_8hpp.html#a869703bd90a587fd17053df529d8b76a">ParseMesh()</a> and <a class="el" href="Parser_8hpp.html#a4fd81c895529aafa86cafb4a2c28b517">ParseAnalysis()</a> functions.</p>
@@ -126,7 +126,7 @@ $(document).ready(function(){initNavTree('linkParser.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Fri Jun 11 2021 15:44:40 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Sat Jun 19 2021 20:25:55 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

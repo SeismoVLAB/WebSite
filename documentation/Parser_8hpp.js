@@ -6,5 +6,5 @@ var Parser_8hpp =
     [ "ParseAnalysis", "Parser_8hpp.html#a4fd81c895529aafa86cafb4a2c28b517", null ],
     [ "ParseMesh", "Parser_8hpp.html#a869703bd90a587fd17053df529d8b76a", null ],
     [ "RunFromJSON", "Parser_8hpp.html#aa145c899bb8db751c64e06a458b90d89", null ],
-    [ "UpateDomain", "Parser_8hpp.html#a6ba7144f88e8f35f5145bf1ee186855d", null ]
+    [ "UpdateDomain", "Parser_8hpp.html#ab50ede242bfb0b30198d9aa097c1f6ee", null ]
 ];
