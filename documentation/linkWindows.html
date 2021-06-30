@@ -104,9 +104,12 @@ $(document).ready(function(){initNavTree('linkWindows.html','');});
 <div class="contents">
 <div class="textblock"><p>Installation of <b>SVL</b> on a Windows machine can be done indirectly using <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">WSL</a>. This method is in fact recommended in order to avoid Windows' troubleshooting issues. Please, follow the instructions provided in this <a href="https://www.youtube.com/watch?v=_fntjriRe48&amp;t=168s" target="_blank">YouTube</a> video, to properly install <b>WSL</b> on Windows.</p>
 <p>On Linux (Ubuntu) the <code>C:\</code> HDD is located at <code>/mnt/c/</code> which is Windows 10 <code>C:\</code> mounted on Linux. Therefore, moving/coping files from Window to Linux and viceversa can be done as:</p>
-<div class="fragment"><div class="line">cp /mnt/c/path-to-file-on-windows /home/path-to-file-on-linux</div></div><!-- fragment --><p>For more information on how to copy files, we recommend to watch this <a href="https://www.youtube.com/watch?v=5lA1UKuQbf0" target="_blank">YouTube</a> video.</p>
+<div class="fragment"><div class="line">cp -r /mnt/c/path-to-file-on-windows /home/path-to-file-on-linux</div></div><!-- fragment --><p>For more information on how to copy files, we recommend to watch this <a href="https://www.youtube.com/watch?v=5lA1UKuQbf0" target="_blank">YouTube</a> video.</p>
 <p>Once <b>WSL</b> is properly installed, the <b>SVL</b> installation can be done as described in <a class="el" href="linkDebian.html">Ubuntu Operating System</a>. For example, to instal <b>SVL</b> on Ubuntu 20.04, open a terminal and paste the following list of commands: </p><blockquote class="doxtable">
-<p><b>Install C++/Fortran Compilers</b> <br />
+<p><b>Copy SVL folder from Windows to Linux</b><br />
+cp -r /mnt/c/path-to-SVL-folder-on-windows /home/path-to-directory-on-linux<br />
+<br />
+ <b>Install C++/Fortran Compilers</b> <br />
 sudo apt-get update<br />
 sudo apt-get install wget<br />
 sudo apt-get install bash<br />
@@ -145,7 +148,7 @@ sudo apt-get install liblapack-dev<br />
 sudo apt-get install libscalapack-mpi-dev<br />
 <br />
  <b>Move metis library to Pre-Analysis folder</b><br />
-cp /usr/bin/mpmetis /SVL/01-Pre_Process/Metis<br />
+cp /usr/bin/mpmetis ~/SVL/01-Pre_Process/Metis<br />
 <br />
  <b>Install MUMPS direct solver library</b><br />
 sudo apt-get install libmumps-5.2.1<br />
@@ -160,14 +163,19 @@ make -s DEBUG=False </p>
 <p>Before compiling <b>SVL</b>, please check in the Makefile.mk that the mpi library path is right. This library can be locate at <code>MPI_DIR = /usr/include/mpi</code> or <code>MPI_DIR = /usr/include/x86_64-linux-gnu/mpi</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>This process requires <b>WSL</b> to be installed on Windows.<br />
 This process requires to move the <b>SVL</b> folder to the Ubuntu 20.04 directory.<br />
-The <b>WSL</b> version on Windows 10 S does not allow to install Linux Distros. Theredore, you may need to install the Windows10Upgrade9250.exe or similar. </dd></dl>
+This process assumes the folder <code>SVL</code> is located at <code>/home/username</code>, that is why the path <code>~/SVL/01-Pre_Process/Metis</code> is employed.<br />
+The <b>WSL</b> version on Windows 10 S does not allow to install Linux Distros. Therefore, you may need to install the Windows10Upgrade9250.exe or similar.<br />
+If <b>SVL</b> is compiled successfully, you should see the following message: SUCCESSFUL LINKAGE. The executable SeismoVLAB.exe was generated, as shown in the following figure: <div class="image">
+<img src="WindowsWSL.png" alt="WindowsWSL.png" width="50%"/>
+</div>
+ </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Sat Jun 19 2021 20:56:05 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>
