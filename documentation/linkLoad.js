@@ -2,6 +2,8 @@ var linkLoad =
 [
     [ "Static point-load", "linkStaticpoint-load.html", null ],
     [ "Dynamic point-load", "linkDynamicpoint-load.html", null ],
+    [ "Static point-body-load", "linkStaticpoint-body-load.html", null ],
+    [ "Dynamic point-body-load", "linkDynamicpoint-body-load.html", null ],
     [ "Static surface-load", "linkStaticsurface-load.html", null ],
     [ "Static body-load", "linkStaticbody-load.html", null ],
     [ "Dynamic body-load", "linkDynamicbody-load.html", null ],

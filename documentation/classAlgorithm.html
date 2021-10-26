@@ -133,24 +133,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac0e4aa7482e95e0a4b7f00bc8f2ae381"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#ac0e4aa7482e95e0a4b7f00bc8f2ae381">ComputeNewIncrement</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh, unsigned int i)=0</td></tr>
 <tr class="memdesc:ac0e4aa7482e95e0a4b7f00bc8f2ae381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a new incremental solution.  <a href="#ac0e4aa7482e95e0a4b7f00bc8f2ae381">More...</a><br /></td></tr>
 <tr class="separator:ac0e4aa7482e95e0a4b7f00bc8f2ae381"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65d545e5c442ed3c4339d9b50e930f7e"><td class="memItemLeft" align="right" valign="top">virtual Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a65d545e5c442ed3c4339d9b50e930f7e">GetDisplacementIncrement</a> ()=0</td></tr>
-<tr class="memdesc:a65d545e5c442ed3c4339d9b50e930f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the displacement increment.  <a href="#a65d545e5c442ed3c4339d9b50e930f7e">More...</a><br /></td></tr>
-<tr class="separator:a65d545e5c442ed3c4339d9b50e930f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a621efc48758d619bfcbf98840fed7d7c"><td class="memItemLeft" align="right" valign="top">virtual const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a621efc48758d619bfcbf98840fed7d7c">GetDisplacementIncrement</a> ()=0</td></tr>
+<tr class="memdesc:a621efc48758d619bfcbf98840fed7d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the displacement increment.  <a href="#a621efc48758d619bfcbf98840fed7d7c">More...</a><br /></td></tr>
+<tr class="separator:a621efc48758d619bfcbf98840fed7d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8207f5036233c08d84c4df161983ed84"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a8207f5036233c08d84c4df161983ed84">SetIntegrator</a> (std::shared_ptr&lt; <a class="el" href="classIntegrator.html">Integrator</a> &gt; &amp;integrator)=0</td></tr>
 <tr class="memdesc:a8207f5036233c08d84c4df161983ed84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the integrator for this algorithm.  <a href="#a8207f5036233c08d84c4df161983ed84">More...</a><br /></td></tr>
 <tr class="separator:a8207f5036233c08d84c4df161983ed84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69a9e4b74419ad01f06127540e6bf4ec"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a69a9e4b74419ad01f06127540e6bf4ec">SetLoadFactor</a> (double factor)=0</td></tr>
 <tr class="memdesc:a69a9e4b74419ad01f06127540e6bf4ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the load factor.  <a href="#a69a9e4b74419ad01f06127540e6bf4ec">More...</a><br /></td></tr>
 <tr class="separator:a69a9e4b74419ad01f06127540e6bf4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6caf80271bb29da10ced16eba78491a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a6caf80271bb29da10ced16eba78491a5">ReverseStatesIncrements</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh)</td></tr>
+<tr class="memdesc:a6caf80271bb29da10ced16eba78491a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse the incremental state variables to its pervious converged one in the mesh.  <a href="#a6caf80271bb29da10ced16eba78491a5">More...</a><br /></td></tr>
+<tr class="separator:a6caf80271bb29da10ced16eba78491a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d98a95ddc8b615587d7b283012f1b92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a3d98a95ddc8b615587d7b283012f1b92">UpdateStatesIncrements</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh, const Eigen::VectorXd &amp;dU)</td></tr>
 <tr class="memdesc:a3d98a95ddc8b615587d7b283012f1b92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the incremental state variables in the mesh.  <a href="#a3d98a95ddc8b615587d7b283012f1b92">More...</a><br /></td></tr>
 <tr class="separator:a3d98a95ddc8b615587d7b283012f1b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af091b4ced43a2075685840e3ec415782"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#af091b4ced43a2075685840e3ec415782">ReducedParallelResidual</a> (const Eigen::VectorXd &amp;Feff, double &amp;Residual)</td></tr>
 <tr class="memdesc:af091b4ced43a2075685840e3ec415782"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the residual vector force from each processor.  <a href="#af091b4ced43a2075685840e3ec415782">More...</a><br /></td></tr>
 <tr class="separator:af091b4ced43a2075685840e3ec415782"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12548a35e3474440ebf9272403eed7bc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a12548a35e3474440ebf9272403eed7bc">ComputeConvergence</a> (const Eigen::VectorXd &amp;Force, double Delta, bool isFirstIteration)</td></tr>
-<tr class="memdesc:a12548a35e3474440ebf9272403eed7bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes convergence tests for this algorithm.  <a href="#a12548a35e3474440ebf9272403eed7bc">More...</a><br /></td></tr>
-<tr class="separator:a12548a35e3474440ebf9272403eed7bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c49b05644027e2b24e3bc664c9ab67d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a8c49b05644027e2b24e3bc664c9ab67d">ComputeConvergence</a> (const Eigen::VectorXd &amp;Force, const Eigen::VectorXd &amp;Delta, const Eigen::VectorXd &amp;delta, unsigned int k)</td></tr>
+<tr class="memdesc:a8c49b05644027e2b24e3bc664c9ab67d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes convergence tests for this algorithm.  <a href="#a8c49b05644027e2b24e3bc664c9ab67d">More...</a><br /></td></tr>
+<tr class="separator:a8c49b05644027e2b24e3bc664c9ab67d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -244,8 +247,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a12548a35e3474440ebf9272403eed7bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12548a35e3474440ebf9272403eed7bc">&#9670;&nbsp;</a></span>ComputeConvergence()</h2>
+<a id="a8c49b05644027e2b24e3bc664c9ab67d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c49b05644027e2b24e3bc664c9ab67d">&#9670;&nbsp;</a></span>ComputeConvergence()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,14 +262,20 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
           <td class="paramname"><em>Delta</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isFirstIteration</em>&#160;</td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>delta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -280,7 +289,8 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Force</td><td>The residual force vector. </td></tr>
-    <tr><td class="paramname">Delta</td><td>The incremental displacement norm. </td></tr>
+    <tr><td class="paramname">Delta</td><td>The accumulated incremental displacement vector. </td></tr>
+    <tr><td class="paramname">delta</td><td>The incremental displacement vector . </td></tr>
     <tr><td class="paramname">isFirstIteration</td><td>Whether this step in <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a> is the first iteration. </td></tr>
   </table>
   </dd>
@@ -289,9 +299,17 @@ Private Attributes</h2></td></tr>
 <dd>
 If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 2: Increment Displacement Norm. </dd>
 <dd>
-If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 3: Relative Unbalanced Force Norm. </dd>
+If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 3: Energy Incremental Norm. </dd>
 <dd>
-If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 4: Relative Increment Displacement Norm. </dd></dl>
+If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 4: Relative Unbalanced Force Norm. </dd>
+<dd>
+If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 5: Relative Incremental Displacement Norm. </dd>
+<dd>
+If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 6: Relative Energy Incremental Norm. </dd>
+<dd>
+If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 7: Total Relative Increment Displacement Norm. </dd>
+<dd>
+If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" title="Convergence test to be performed. ">Algorithm::flag</a> = 8: Maximum Number of Iterations. </dd></dl>
 
 </div>
 </div>
@@ -343,8 +361,8 @@ If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" ti
 
 </div>
 </div>
-<a id="a65d545e5c442ed3c4339d9b50e930f7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65d545e5c442ed3c4339d9b50e930f7e">&#9670;&nbsp;</a></span>GetDisplacementIncrement()</h2>
+<a id="a621efc48758d619bfcbf98840fed7d7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a621efc48758d619bfcbf98840fed7d7c">&#9670;&nbsp;</a></span>GetDisplacementIncrement()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -353,7 +371,7 @@ If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" ti
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual Eigen::VectorXd Algorithm::GetDisplacementIncrement </td>
+          <td class="memname">virtual const Eigen::VectorXd&amp; Algorithm::GetDisplacementIncrement </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -369,7 +387,7 @@ If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" ti
 <p>Gets the displacement increment. </p>
 <dl class="section return"><dt>Returns</dt><dd>The incremental displacement vector. </dd></dl>
 
-<p>Implemented in <a class="el" href="classNewtonRaphson.html#a6bf855f046be2921fe6aabd56ffee472">NewtonRaphson</a>, and <a class="el" href="classLinear.html#a0211055aa2600ebe5937279d2ad45f3a">Linear</a>.</p>
+<p>Implemented in <a class="el" href="classNewtonRaphson.html#a033e209b2bb8613404159787b9a83e00">NewtonRaphson</a>, and <a class="el" href="classLinear.html#a66d1b1859cc17e45dc779cbaefcbc8f0">Linear</a>.</p>
 
 </div>
 </div>
@@ -408,6 +426,33 @@ If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" ti
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>In parallel execution Feff is gathered across processors. </dd></dl>
+
+</div>
+</div>
+<a id="a6caf80271bb29da10ced16eba78491a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6caf80271bb29da10ced16eba78491a5">&#9670;&nbsp;</a></span>ReverseStatesIncrements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Algorithm::ReverseStatesIncrements </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reverse the incremental state variables to its pervious converged one in the mesh. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>Pointer to the <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> container to extract <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> and <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>. note This function zeroes out incremental displacements at each <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> in <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#ae8729afbb96f639d3876b4de1a77519f" title="Sets the current incremental displacement associated with this Node. ">Node::SetIncrementalDisplacements()</a>, <a class="el" href="classElement.html#abda1b167d76310e763c8ab866670e073" title="Reverse the material/section states to previous converged state in this element. ">Element::ReverseState()</a>. </dd></dl>
 
 </div>
 </div>
@@ -517,7 +562,7 @@ If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" ti
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#ae8729afbb96f639d3876b4de1a77519f" title="Sets the current incremental displacement associated with this Node. ">Node::SetIncrementalDisplacements()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#ae8729afbb96f639d3876b4de1a77519f" title="Sets the current incremental displacement associated with this Node. ">Node::SetIncrementalDisplacements()</a> <a class="el" href="classElement.html#a0a95bf73cb5f414a3f551a02557a13df" title="Update the material/section states in the element. ">Element::UpdateState()</a>. </dd></dl>
 
 </div>
 </div>
@@ -602,7 +647,7 @@ If <a class="el" href="classAlgorithm.html#a343c7475f5c21f8fa6941ad587554d95" ti
 			<ul>
 				<li class="navelem"><a class="el" href="classAlgorithm.html">Algorithm</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

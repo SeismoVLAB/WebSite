@@ -230,9 +230,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a34e4f3cfd76955fca7a8593be1559bc0 inherit pub_methods_classElement"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a34e4f3cfd76955fca7a8593be1559bc0">GetNumberOfDegreeOfFreedom</a> () const</td></tr>
 <tr class="memdesc:a34e4f3cfd76955fca7a8593be1559bc0 inherit pub_methods_classElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns total number of degree of freedom in the element.  <a href="classElement.html#a34e4f3cfd76955fca7a8593be1559bc0">More...</a><br /></td></tr>
 <tr class="separator:a34e4f3cfd76955fca7a8593be1559bc0 inherit pub_methods_classElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fdd16a2c5bc4deffb9be1b27fdd0f7b inherit pub_methods_classElement"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a0fdd16a2c5bc4deffb9be1b27fdd0f7b">GetNodes</a> () const</td></tr>
-<tr class="memdesc:a0fdd16a2c5bc4deffb9be1b27fdd0f7b inherit pub_methods_classElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> Connectivity Indexes.  <a href="classElement.html#a0fdd16a2c5bc4deffb9be1b27fdd0f7b">More...</a><br /></td></tr>
-<tr class="separator:a0fdd16a2c5bc4deffb9be1b27fdd0f7b inherit pub_methods_classElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09641ce45857e9b1bb9b71d85db8162d inherit pub_methods_classElement"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; unsigned int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a09641ce45857e9b1bb9b71d85db8162d">GetNodes</a> () const</td></tr>
+<tr class="memdesc:a09641ce45857e9b1bb9b71d85db8162d inherit pub_methods_classElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> Connectivity Indexes.  <a href="classElement.html#a09641ce45857e9b1bb9b71d85db8162d">More...</a><br /></td></tr>
+<tr class="separator:a09641ce45857e9b1bb9b71d85db8162d inherit pub_methods_classElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae86d3250af2c438f0562ebf161fc6c9 inherit pub_methods_classElement"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#aae86d3250af2c438f0562ebf161fc6c9">HasFixedNode</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="classNode.html">Node</a> &gt; &gt; &amp;nodes) const</td></tr>
 <tr class="memdesc:aae86d3250af2c438f0562ebf161fc6c9 inherit pub_methods_classElement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if the element has fixed nodes.  <a href="classElement.html#aae86d3250af2c438f0562ebf161fc6c9">More...</a><br /></td></tr>
 <tr class="separator:aae86d3250af2c438f0562ebf161fc6c9 inherit pub_methods_classElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -290,9 +290,15 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ab64d87dd3abd0854c5c10ac26b82638a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen2DLink.html#ab64d87dd3abd0854c5c10ac26b82638a">qbw</a></td></tr>
 <tr class="memdesc:ab64d87dd3abd0854c5c10ac26b82638a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-linear Bouc-Wen internal force.  <a href="#ab64d87dd3abd0854c5c10ac26b82638a">More...</a><br /></td></tr>
 <tr class="separator:ab64d87dd3abd0854c5c10ac26b82638a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af424cbf6bb6c32aacd6597744e4bf135"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen2DLink.html#af424cbf6bb6c32aacd6597744e4bf135">qbc</a></td></tr>
+<tr class="memdesc:af424cbf6bb6c32aacd6597744e4bf135"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-linear commited Bouc-Wen internal force.  <a href="#af424cbf6bb6c32aacd6597744e4bf135">More...</a><br /></td></tr>
+<tr class="separator:af424cbf6bb6c32aacd6597744e4bf135"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebb267786fe5ebdbbd0ee5b5766d588c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen2DLink.html#aebb267786fe5ebdbbd0ee5b5766d588c">kbw</a></td></tr>
 <tr class="memdesc:aebb267786fe5ebdbbd0ee5b5766d588c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consistent Bouc-Wen stiffness.  <a href="#aebb267786fe5ebdbbd0ee5b5766d588c">More...</a><br /></td></tr>
 <tr class="separator:aebb267786fe5ebdbbd0ee5b5766d588c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b162e3e6c43dce77f54b4a9750b0e83"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen2DLink.html#a7b162e3e6c43dce77f54b4a9750b0e83">kbc</a></td></tr>
+<tr class="memdesc:a7b162e3e6c43dce77f54b4a9750b0e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consistent commited Bouc-Wen stiffness.  <a href="#a7b162e3e6c43dce77f54b4a9750b0e83">More...</a><br /></td></tr>
+<tr class="separator:a7b162e3e6c43dce77f54b4a9750b0e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a878f6ca1846f882f0d94117ab4049ff8"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnxBoucWen2DLink.html#a878f6ca1846f882f0d94117ab4049ff8">nMax</a></td></tr>
 <tr class="memdesc:a878f6ca1846f882f0d94117ab4049ff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Newton-Raphson maximum number of iterations.  <a href="#a878f6ca1846f882f0d94117ab4049ff8">More...</a><br /></td></tr>
 <tr class="separator:a878f6ca1846f882f0d94117ab4049ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1513,6 +1519,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a7b162e3e6c43dce77f54b4a9750b0e83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b162e3e6c43dce77f54b4a9750b0e83">&#9670;&nbsp;</a></span>kbc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnxBoucWen2DLink::kbc</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Consistent commited Bouc-Wen stiffness. </p>
+
+</div>
+</div>
 <a id="aebb267786fe5ebdbbd0ee5b5766d588c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aebb267786fe5ebdbbd0ee5b5766d588c">&#9670;&nbsp;</a></span>kbw</h2>
 
@@ -1582,6 +1612,30 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Newton-Raphson maximum number of iterations. </p>
+
+</div>
+</div>
+<a id="af424cbf6bb6c32aacd6597744e4bf135"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af424cbf6bb6c32aacd6597744e4bf135">&#9670;&nbsp;</a></span>qbc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnxBoucWen2DLink::qbc</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Non-linear commited Bouc-Wen internal force. </p>
 
 </div>
 </div>
@@ -1760,7 +1814,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classUnxBoucWen2DLink.html">UnxBoucWen2DLink</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:02 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

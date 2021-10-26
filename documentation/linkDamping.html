@@ -234,24 +234,26 @@ SVL.addDamping(<b>tag</b>=1, <b>name</b>='Rayleigh', <b>attributes</b>={'am': 0.
 <td><code>list</code> </td><td>List of element identifiers that share this <a class="el" href="classDamping.html" title="Class for applying a certain damping model to a group of elements. ">Damping</a> model. </td></tr>
 </table>
 <br />
+ <b>Example</b> <blockquote class="doxtable">
+<p>A FREE <b>DAMPING</b> applied to elements with identifier 1,2, and 3 is constructed as: <br />
+ { "Dampings": { "1": { "name" : "FREE", "attributes": { "list" : [1,2,3] } } } } </p>
+</blockquote>
+</li>
+</ul>
 <dl class="section attention"><dt>Attention</dt><dd>The present formulation allows group of elements to have different damping models. </dd>
 <dd>
 <b>FREE</b> and <b>RAYLEIGH</b> damping models are supported. <b>CAUGHEY</b> damping model will be implemented in the future. </dd>
 <dd>
-The <b>RAYLEIGH</b> damping models considers the initial stiffness matrix to construct the damping \(\textbf{C}\) matrix.</dd></dl>
-<b>Example</b> <blockquote class="doxtable">
-<p>A FREE <b>DAMPING</b> applied to elements with identifier 1,2, and 3 is constructed as: <br />
- { "Dampings": { "1": { "name" : "FREE", "attributes": { "list" : [1,2,3] } } } }</p>
-</blockquote>
-</li>
-</ul>
+The <b>RAYLEIGH</b> damping models considers the initial stiffness matrix to construct the damping \(\textbf{C}\) matrix. </dd>
+<dd>
+A element can have associated only one damping model. If several damping model are defined (for the same element), only the last one will be active. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:53 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

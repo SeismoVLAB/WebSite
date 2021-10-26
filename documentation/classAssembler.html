@@ -145,6 +145,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab2d1f2de89c922d6ecae3e4520594212"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssembler.html#ab2d1f2de89c922d6ecae3e4520594212">ComputePMLHistoryMatrix</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh)</td></tr>
 <tr class="memdesc:ab2d1f2de89c922d6ecae3e4520594212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble the integrated history matrix for Perfectly-Matched Layer (PML).  <a href="#ab2d1f2de89c922d6ecae3e4520594212">More...</a><br /></td></tr>
 <tr class="separator:ab2d1f2de89c922d6ecae3e4520594212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55ac3d8f50711d95974e1e529af45b2d"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssembler.html#a55ac3d8f50711d95974e1e529af45b2d">ComputeProgressiveForceVector</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh)</td></tr>
+<tr class="memdesc:a55ac3d8f50711d95974e1e529af45b2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble the external force vector accumulated from previous analyses.  <a href="#a55ac3d8f50711d95974e1e529af45b2d">More...</a><br /></td></tr>
+<tr class="separator:a55ac3d8f50711d95974e1e529af45b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47e85d549587ec6421e9f92b94b1d870"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssembler.html#a47e85d549587ec6421e9f92b94b1d870">ComputeInternalForceVector</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh)</td></tr>
 <tr class="memdesc:a47e85d549587ec6421e9f92b94b1d870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble the internal force vector.  <a href="#a47e85d549587ec6421e9f92b94b1d870">More...</a><br /></td></tr>
 <tr class="separator:a47e85d549587ec6421e9f92b94b1d870"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -627,6 +630,35 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a55ac3d8f50711d95974e1e529af45b2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55ac3d8f50711d95974e1e529af45b2d">&#9670;&nbsp;</a></span>ComputeProgressiveForceVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd Assembler::ComputeProgressiveForceVector </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assemble the external force vector accumulated from previous analyses. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>The finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector with the total accumulated external force. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>More details can be found at <a class="el" href="linkAssembler.html">Assembler</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force associated to the integrator. ">Integrator::ComputeEffectiveForce()</a>. </dd></dl>
+
+</div>
+</div>
 <a id="a225cb38fa729fc8e6f988186dcb71d67"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a225cb38fa729fc8e6f988186dcb71d67">&#9670;&nbsp;</a></span>ComputeStiffnessMatrix()</h2>
 
@@ -903,7 +935,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classAssembler.html">Assembler</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

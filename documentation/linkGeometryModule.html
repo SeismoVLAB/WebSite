@@ -108,10 +108,11 @@ $(document).ready(function(){initNavTree('linkGeometryModule.html','');});
 <li>Provide with enough modularity to add new <a class="el" href="linkMaterial.html">Material</a>, <a class="el" href="linkSection.html">Section</a>, and <a class="el" href="linkElement.html">Element</a>.</li>
 </ul>
 <p>The declaration and implementation of classes are provided in different folders. For example, the declaration of: <a class="el" href="Node_8hpp.html" title="This file contains the &quot;Node object&quot; declarations, which is stores the coordinates, state variables, degrees-of-freedom, and total-degree of freedom lists of a node in a finite element mesh. ">Node.hpp</a> is found at <span style="color:green"><b>02-Run_Process/01-Node</b></span> folder, <a class="el" href="Material_8hpp.html" title="This file contains the abstract &quot;Material object&quot; declarations, which computes the strain...">Material.hpp</a> is found at <span style="color:green"><b>02-Run_Process/02-Materials</b></span> folder, <a class="el" href="Section_8hpp.html" title="This file contains the abstract &quot;Section object&quot; declarations, which computes the strain...">Section.hpp</a> is found at <span style="color:green"><b>02-Run_Process/03-Sections</b></span> folder, <a class="el" href="Element_8hpp.html" title="This file contains the &quot;Element&quot; object declarations, which defines an element in a finite element me...">Element.hpp</a> is found at <span style="color:green"><b>02-Run_Process/04-Elements</b></span> folder, <a class="el" href="Load_8hpp.html" title="This file contains the &quot;Load&quot; class declarations, which defines a load that can act in a node or an e...">Load.hpp</a> is found at <span style="color:green"><b>02-Run_Process/05-Loads</b></span> folder, and <a class="el" href="Mesh_8hpp.html" title="This file contains the &quot;Mesh object&quot; declarations, which stores nodes, materials, elements...">Mesh.hpp</a> is found at <span style="color:green"><b>02-Run_Process/06-Mesh</b></span> folder. Similarly, derived classes are declared and implemented in sub-folders.</p>
-<p>The information contained in <code>./Partition/File.$.json</code> files, generated in the <b>Pre-Analysis</b>, are used at the <a class="el" href="linkGeometryModule.html">Geometry Module</a> to create the required objects. The format format will be parsed by the <a class="el" href="Parser_8hpp.html">Parser.hpp</a> file using the <b>RSJparser</b> described in <a class="el" href="linkParser.html">Parser</a>. More specific details can be found at the following sections:</p>
+<p>The information contained in <code>./Partition/File.#.$.json</code> files, generated in the <b>Pre-Analysis</b>, are used at the <a class="el" href="linkGeometryModule.html">Geometry Module</a> to create the required objects. The format format will be parsed by the <a class="el" href="Driver_8hpp.html" title="This file contains the &quot;parsing&quot; functions to create, modify and analyze a finite element model provi...">Driver.hpp</a> file using the <b>RSJparser</b> described in <a class="el" href="linkDriver.html">Driver</a> section. More specific details can be found at the following sub-sections:</p>
 <ul>
 <li><a class="el" href="linkModel.html">Global</a></li>
 <li><a class="el" href="linkNode.html">Node</a></li>
+<li><a class="el" href="linkRestrain.html">Restraint</a></li>
 <li><a class="el" href="linkConstraint.html">Constraint</a></li>
 <li><a class="el" href="linkMass.html">Mass</a></li>
 <li><a class="el" href="linkSurface.html">Surface</a></li>
@@ -130,7 +131,7 @@ $(document).ready(function(){initNavTree('linkGeometryModule.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:53 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

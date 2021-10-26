@@ -114,14 +114,16 @@ $(document).ready(function(){initNavTree('linkLoad.html','');});
 <li><a class="el" href="classLoad.html#aa80dcb6a41e20fbb83f816438b5e000b" title="Returns the force vector to be applied. ">Load::GetLoadVector()</a><br />
  This function returns the load force at a certain time step.</li>
 <li><a class="el" href="classLoad.html#af63d22ccdad9748bb15864a163cb3151" title="Returns the load classification. ">Load::GetClassification()</a><br />
- This function returns an integer associated with the load model. So far, these are available:<ul>
+ This function returns an integer associated with the load model. The classification identifier are provided at <a class="el" href="Definitions_8hpp.html" title="This file sets the global variables to be used during SeismoVLAB execution. ">Definitions.hpp</a> and they are used in <a class="el" href="Assembler_8hpp.html" title="This file contains the &quot;Assembler object&quot; declarations, this object computes the system mass...">Assembler.hpp</a> at <a class="el" href="classAssembler.html#af92caa95acacce4ffd61c2778aabbfe6" title="Assemble the external force vector. ">Assembler::ComputeExternalForceVector()</a> member function. So far, these are available:<ul>
 <li><b>1</b> : Static point load.</li>
 <li><b>2</b> : Dynamic point load.</li>
-<li><b>3</b> : Static surface load.</li>
-<li><b>4</b> : Static body load.</li>
-<li><b>5</b> : Dynamic body load.</li>
-<li><b>7</b> : Dynamic user's define wave load.</li>
-<li><b>8</b> : Static/Dynamic displacement support motion.</li>
+<li><b>3</b> : Static point body load.</li>
+<li><b>4</b> : Dynamic point body load.</li>
+<li><b>5</b> : Static surface load.</li>
+<li><b>7</b> : Static body load.</li>
+<li><b>8</b> : Dynamic body load.</li>
+<li><b>9</b> : Dynamic user's define wave load.</li>
+<li><b>10</b> : Static/Dynamic displacement support motion.</li>
 </ul>
 </li>
 </ul>
@@ -131,6 +133,8 @@ $(document).ready(function(){initNavTree('linkLoad.html','');});
 </li>
 <li><a class="el" href="linkDynamicpoint-load.html">Dynamic point-load</a><br />
 </li>
+<li><a class="el" href="linkStaticpoint-body-load.html">Static point-body-load</a></li>
+<li><a class="el" href="linkDynamicpoint-body-load.html">Dynamic point-body-load</a></li>
 <li><a class="el" href="linkStaticsurface-load.html">Static surface-load</a><br />
 </li>
 <li><a class="el" href="linkStaticbody-load.html">Static body-load</a><br />
@@ -147,7 +151,7 @@ $(document).ready(function(){initNavTree('linkLoad.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:53 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

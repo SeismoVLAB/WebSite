@@ -1,6 +1,6 @@
 var linkIOModule =
 [
-    [ "Parser", "linkParser.html", null ],
+    [ "Driver", "linkDriver.html", null ],
     [ "Recorder", "linkRecorder.html", [
       [ "Node", "linkRecorder.html#linkNodeRecorder", null ],
       [ "Element", "linkRecorder.html#linkElementRecorder", null ],

@@ -164,7 +164,7 @@ SVL.addElement(<b>tag</b>=1, <b>name</b>='PML3DHexa20', <b>conn</b>=[1,2,3,4,5,6
 </li>
 </ul>
 <h1>Run-Analysis</h1>
-<p>The C++ <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> in the <span style="color:green"><b>02-Run_Process/04-Elements/06-Quadrilateral/PML3DHexa20.cpp</b></span> file provides the class implementation. A PML3DHexa20 element is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a>. A PML3DHexa20 is defined inside the <span style="color:black"><b>"Elements"</b></span> json field indicating its <span style="color:blue"><b>"Tag"</b></span> as follows,</p><ul>
+<p>The C++ <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> in the <span style="color:green"><b>02-Run_Process/04-Elements/06-Quadrilateral/PML3DHexa20.cpp</b></span> file provides the class implementation. A PML3DHexa20 element is created using the built-in json parse-structure provided in the <a class="el" href="Driver_8hpp.html" title="This file contains the &quot;parsing&quot; functions to create, modify and analyze a finite element model provi...">Driver.hpp</a>. A PML3DHexa20 is defined inside the <span style="color:black"><b>"Elements"</b></span> json field indicating its <span style="color:blue"><b>"Tag"</b></span> as follows,</p><ul>
 <li><pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
 {
     <span style="color:black"><b>"Elements"</b></span>: {
@@ -229,7 +229,7 @@ For the PML element size, one can consider about 12 points in one wavelength. On
  "1": { "name" : "PML3DHEXA20", "conn" : [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], "attributes": { "n": 2.0, "L": 5.0, "R": 0.001, "x0": [D,0,0], "npml": [-0.707, 0.0, -0.707], "np": 27, "rule": "GAUSS", "material": 1 } },<br />
  "2": { "name" : "PML2DQUAD20", "conn" : [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], "attributes": { "n": 2.0, "L": 5.0, "R": 0.001, "x0": [0,0,0], "npml": [0.0, 0.0, -1.0], "np": 27, "rule": "GAUSS", "material": 1 } },<br />
  "3": { "name" : "PML2DQUAD20", "conn" : [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], "attributes": { "n": 2.0, "L": 5.0, "R": 0.001, "x0": [0,D,H/2], "npml": [0.0, 1.0, 0.0], "np": 27, "rule": "GAUSS", "material": 1 } } }<br />
-} </p>
+}</p>
 </blockquote>
 </li>
 </ul>
@@ -239,7 +239,7 @@ For the PML element size, one can consider about 12 points in one wavelength. On
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:53 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

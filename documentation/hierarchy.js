@@ -98,6 +98,7 @@ var hierarchy =
       [ "Lin2DRectangular", "classLin2DRectangular.html", null ],
       [ "Lin2DRectangularTube", "classLin2DRectangularTube.html", null ],
       [ "Lin2DTee", "classLin2DTee.html", null ],
+      [ "Lin2DUserDefined", "classLin2DUserDefined.html", null ],
       [ "Lin2DWideFlange", "classLin2DWideFlange.html", null ],
       [ "Lin3DAngle", "classLin3DAngle.html", null ],
       [ "Lin3DChannel", "classLin3DChannel.html", null ],
@@ -107,6 +108,7 @@ var hierarchy =
       [ "Lin3DRectangularTube", "classLin3DRectangularTube.html", null ],
       [ "Lin3DTee", "classLin3DTee.html", null ],
       [ "Lin3DThinArea", "classLin3DThinArea.html", null ],
+      [ "Lin3DUserDefined", "classLin3DUserDefined.html", null ],
       [ "Lin3DWideFlange", "classLin3DWideFlange.html", null ]
     ] ],
     [ "Timer", "classTimer.html", null ]

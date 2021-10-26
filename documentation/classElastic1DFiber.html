@@ -216,9 +216,12 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a427fe47e3bcb70fea8e86d26a9ee82e0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DFiber.html#a427fe47e3bcb70fea8e86d26a9ee82e0">Rho</a></td></tr>
 <tr class="memdesc:a427fe47e3bcb70fea8e86d26a9ee82e0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a> density.  <a href="#a427fe47e3bcb70fea8e86d26a9ee82e0">More...</a><br /></td></tr>
 <tr class="separator:a427fe47e3bcb70fea8e86d26a9ee82e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa939e254352285bc6257a06ae1f834ef"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DFiber.html#aa939e254352285bc6257a06ae1f834ef">Strain</a></td></tr>
-<tr class="memdesc:aa939e254352285bc6257a06ae1f834ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strain vector.  <a href="#aa939e254352285bc6257a06ae1f834ef">More...</a><br /></td></tr>
-<tr class="separator:aa939e254352285bc6257a06ae1f834ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06dfe46989de4aafc7853225e3b523ce"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DFiber.html#a06dfe46989de4aafc7853225e3b523ce">oldStrain</a></td></tr>
+<tr class="memdesc:a06dfe46989de4aafc7853225e3b523ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updated Strain vector.  <a href="#a06dfe46989de4aafc7853225e3b523ce">More...</a><br /></td></tr>
+<tr class="separator:a06dfe46989de4aafc7853225e3b523ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b2ec531ff012b70d694114f3a652669"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DFiber.html#a0b2ec531ff012b70d694114f3a652669">newStrain</a></td></tr>
+<tr class="memdesc:a0b2ec531ff012b70d694114f3a652669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Commited Strain vector.  <a href="#a0b2ec531ff012b70d694114f3a652669">More...</a><br /></td></tr>
+<tr class="separator:a0b2ec531ff012b70d694114f3a652669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for creating an uniaxial linear elastic material compatible with fiber section. </p>
@@ -617,7 +620,7 @@ Private Attributes</h2></td></tr>
 <p>Returns the material strain. </p>
 <dl class="section return"><dt>Returns</dt><dd>Vector with the material strain components. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The strain can be revisited in <a class="el" href="linkElastic1DFiber.html">Elastic1DFiber</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElastic1DFiber.html#aa939e254352285bc6257a06ae1f834ef" title="Strain vector. ">Elastic1DFiber::Strain</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Elastic1DFiber::Strain. </dd></dl>
 
 <p>Implements <a class="el" href="classMaterial.html#a1b37670a0b68808b2f291eabd69e1912">Material</a>.</p>
 
@@ -883,6 +886,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a0b2ec531ff012b70d694114f3a652669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b2ec531ff012b70d694114f3a652669">&#9670;&nbsp;</a></span>newStrain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd Elastic1DFiber::newStrain</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Commited Strain vector. </p>
+
+</div>
+</div>
 <a id="a7c5e1b1c227b5582c438878dcb3d6101"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7c5e1b1c227b5582c438878dcb3d6101">&#9670;&nbsp;</a></span>nu</h2>
 
@@ -904,6 +931,30 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Modulus of elasticity. </p>
+
+</div>
+</div>
+<a id="a06dfe46989de4aafc7853225e3b523ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06dfe46989de4aafc7853225e3b523ce">&#9670;&nbsp;</a></span>oldStrain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd Elastic1DFiber::oldStrain</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updated Strain vector. </p>
 
 </div>
 </div>
@@ -931,30 +982,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aa939e254352285bc6257a06ae1f834ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa939e254352285bc6257a06ae1f834ef">&#9670;&nbsp;</a></span>Strain</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::VectorXd Elastic1DFiber::Strain</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Strain vector. </p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
@@ -962,7 +989,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classElastic1DFiber.html">Elastic1DFiber</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

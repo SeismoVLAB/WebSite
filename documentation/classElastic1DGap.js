@@ -23,5 +23,6 @@ var classElastic1DGap =
     [ "Behavior", "classElastic1DGap.html#a3f12a13e8ae0ef7e98d4f173d53ead8e", null ],
     [ "E", "classElastic1DGap.html#af2db6e5ea5ffc6d7b5329777fd593f67", null ],
     [ "Gap", "classElastic1DGap.html#abb1596818f103766bdeaca1af544d681", null ],
+    [ "newStrain", "classElastic1DGap.html#a7fc44708d66dfc9a46e01fbfa18f3f58", null ],
     [ "oldStrain", "classElastic1DGap.html#ab99f8d37edc29f086b0c458791a672f2", null ]
 ];

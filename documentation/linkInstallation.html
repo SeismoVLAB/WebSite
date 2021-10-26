@@ -102,14 +102,13 @@ $(document).ready(function(){initNavTree('linkInstallation.html','');});
 <div class="title">Installation </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This section presents how <b>Seismo-VLAB</b> can be installed in your local machine. Although we strongly recommend <b>SVL</b> to be installed in Linux or Unix environment, we provide a simple way to minimize Microsoft Windows (troubleshooting) issues.</p>
-<p>A detailed explanation on how to install <b>SVL</b> is provided in the following sections:</p>
+<div class="textblock"><p>This section presents how <b>Seismo-VLAB</b> can be installed in your local machine. Although we strongly recommend <b>SVL</b> to be installed in Linux or Unix environment, we provide a simple way to minimize Microsoft Windows (troubleshooting) issues. A detailed explanation on how to install <b>SVL</b> is provided in the following sections:</p>
 <ul>
 <li><a class="el" href="linkDebian.html">Ubuntu Operating System</a></li>
 <li><a class="el" href="linkWindows.html">Windows Operating System</a></li>
 <li><a class="el" href="linkLinux.html">Linux/Unix Operating System</a></li>
 </ul>
-<p>Once <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> python libraries are installed, we recommend to export the <b>SVL</b> python path as follows: </p><div class="fragment"><div class="line">export PYTHONPATH=&quot;/path/to/SeismoVLAB/01-Pre_Process&quot;</div></div><!-- fragment --><p>The later will allow the user to import <b>SeismoVLAB</b> as a normal python module (in any Python script) as follows:<br />
+<p>Once <a class="el" href="linkSoftwareStructure.html#linkPreProcess">Pre-Analysis</a> python libraries are installed, we recommend to export the <b>SVL</b> python path as follows: </p><div class="fragment"><div class="line">export PYTHONPATH=&quot;/path/to/SeismoVLAB/01-Pre_Process&quot;</div></div><!-- fragment --><p>The later will allow the user to import <b>SVL</b> <a class="el" href="linkSoftwareStructure.html#linkPreProcess">Pre-Analysis</a> in any Python script as a normal python module:<br />
 </p><div class="fragment"><div class="line">from Core import SeismoVLAB as SVL </div></div><!-- fragment --><p>The user can then verify the proper <b>SVL</b> <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> installation by executing in a terminal: </p><div class="fragment"><div class="line">/path/to/SVL/02-Run_Process/SeismoVLAB.exe --help</div></div><!-- fragment --><p>The following message should be printed on the screen: </p><pre>
                 ░                                              
   ███████╗ ░░░░   ░░░░ ░░░░░░░ ░░░░ ██╗   ██╗ ██╗   ░░░  ░░░░  
@@ -128,14 +127,14 @@ $(document).ready(function(){initNavTree('linkInstallation.html','');});
      -dir  : Location of the working directory.                  
      -file : Name of the SeismoVLAB input file to be loaded.      
 </pre><p>Finally, a serial/parallel execution of <b>Seismo-VLAB</b> is performed in the following manner:</p>
-<div class="fragment"><div class="line">mpirun -np n /path/to/SeismoVLAB.exe -dir &#39;/path/to/simulation/directory&#39; -file &#39;model.$.json&#39;</div></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>the flag <code>-np = n</code> specifies that the number of processors are <code>n</code>, this requires the mesh and simulation files to be partitioned in such number of files. The latter explains the <code>.$.</code> token which internally is replaced by the processor number. </dd></dl>
+<div class="fragment"><div class="line">mpirun -np n /path/to/SeismoVLAB.exe -dir &#39;/path/to/simulation/directory&#39; -file &#39;model.#.$.json&#39;</div></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>the flag <code>-np = n</code> specifies that the number of processors are <code>n</code>. This requires the mesh and simulation files to be partitioned in such number of files. The <code>.$.</code> token represents a number that internally is replaced by the processor number, and <code>.#.</code> represents the load combination identifier (defined by the user) that is being solver. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:53 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -119,13 +119,13 @@ $(document).ready(function(){initNavTree('linkDynamicpoint-load.html','');});
 <li><span style="color:green"><b>attributes</b></span> : Specific properties for the <b>PointLoad</b>, for example<ul>
 <li><span style="color:blue">'fun'</span>: The function identifier</li>
 <li><span style="color:blue">'list'</span>: The identifier of the nodes where this load acts upon</li>
-<li><span style="color:blue">'type'</span>: The type of load, in this case: '<b>TimeSeries</b>'.</li>
+<li><span style="color:blue">'type'</span>: The type of load, in this case: '<b>Concentrated</b>'.</li>
 </ul>
 </li>
 </ul>
 <p class="startli"><b>Example</b> </p><blockquote class="doxtable">
 <p>A <b>DYNAMIC POINT LOAD</b> can be defined using the python interface as follows:<br />
-SVL.addLoad(<b>tag</b>=1, <b>name</b>='PointLoad', <b>attributes</b>={'fun': 1, 'type': 'TimeSeries', 'list': [1]}) </p>
+SVL.addLoad(<b>tag</b>=1, <b>name</b>='PointLoad', <b>attributes</b>={'fun': 1, 'type': 'Concentrated', 'list': [1]}) </p>
 </blockquote>
 </li>
 </ul>
@@ -144,7 +144,7 @@ SVL.addLoad(<b>tag</b>=1, <b>name</b>='PointLoad', <b>attributes</b>={'fun': 1, 
 </div>
 <p class="startli"><b>Example</b> </p><blockquote class="doxtable">
 <p>A <b>DYNAMIC FUNCTION</b> can be defined using the python interface as follows:<br />
-SVL.addFunction(<b>tag</b>=1, <b>name</b>='TimeSerie', <b>attributes</b>={'file': 'PointLoad.txt', 'dir': [0.0, 0.0, -1.0, 0.0, 0.0, 0.0])<br />
+SVL.addFunction(<b>tag</b>=1, <b>name</b>='TimeSeries', <b>attributes</b>={'file': 'PointLoad.txt', 'dir': [0.0, 0.0, -1.0, 0.0, 0.0, 0.0])<br />
 </p>
 </blockquote>
 </li>
@@ -171,7 +171,8 @@ Please refer to the <b>D16-DY_Free_Rectangular_3DPointLoad_Elastic_Frame2.py</b>
         <span style="color:blue"><b>"Tag"</b></span>: {
             <span style="color:green"><b>"name"</b></span> : "POINTLOAD",
             <span style="color:green"><b>"attributes"</b></span>: {
-                <span style="color:maroon"><b>"name"</b></span>: "TIMESERIE",
+                <span style="color:maroon"><b>"name"</b></span>: "TIMESERIES",
+                <span style="color:maroon"><b>"type"</b></span>: "CONCENTRATED",
                 <span style="color:maroon"><b>"file"</b></span>: str,
                 <span style="color:maroon"><b>"dir"</b></span>: [ ],
                 <span style="color:maroon"><b>"list"</b></span>: [ ]
@@ -197,7 +198,7 @@ Please refer to the <b>D16-DY_Free_Rectangular_3DPointLoad_Elastic_Frame2.py</b>
 The file provided in <code>file</code> for dynamic analysis contains the number of time steps, and then a vector with the varying intensities in time. The time step of such intensities is assumed to coincide with the time step of the simulation.</dd></dl>
 <b>Example</b> <blockquote class="doxtable">
 <p>A 2D <b>DYNAMIC POINT LOAD</b> applied downwards on node 2 whose intensities are located at ../Exterior.txt: <br />
-{ "Loads": { "1": { "name" : "POINTLOAD", "attributes": { "name": "TIMESERIE", "file": "/full/path/to/folder/Exterior.txt", "dir": [0.000, -1.000], "list": [2] } } } }</p>
+{ "Loads": { "1": { "name" : "POINTLOAD", "attributes": { "name": "TIMESERIES", "type": "CONCENTRATED", "file": "/full/path/to/folder/Exterior.txt", "dir": [0.000, -1.000], "list": [2] } } } }</p>
 </blockquote>
 </li>
 </ul>
@@ -207,7 +208,7 @@ The file provided in <code>file</code> for dynamic analysis contains the number 
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

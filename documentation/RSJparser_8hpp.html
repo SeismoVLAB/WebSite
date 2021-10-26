@@ -109,6 +109,9 @@ $(document).ready(function(){initNavTree('RSJparser_8hpp.html','');});
 <div class="title">RSJparser.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This file contains the implementation of "A Ridiculously Simple JSON Parser for C++." This great parsing class was taken from <a href="http://subhrajit.net/">http://subhrajit.net/</a>.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
@@ -127,7 +130,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="RSJparser_8hpp__dep__incl.png" border="0" usemap="#RSJparser_8hppdep" alt=""/></div>
 <map name="RSJparser_8hppdep" id="RSJparser_8hppdep">
-<area shape="rect" id="node2" href="Parser_8hpp.html" title="Parser.hpp" alt="" coords="17,80,103,107"/>
+<area shape="rect" id="node2" href="Driver_8hpp.html" title="This file contains the &quot;parsing&quot; functions to create, modify and analyze a finite element model provi..." alt="" coords="19,80,101,107"/>
 </map>
 </div>
 </div>
@@ -197,12 +200,6 @@ Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a6cd9834bd17cd6e34a73b7fa99bf8dde"><td class="memItemLeft" align="right" valign="top">static char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RSJparser_8hpp.html#a6cd9834bd17cd6e34a73b7fa99bf8dde">RSJobjectbrackets</a> = &quot;{}&quot;</td></tr>
-<tr class="memdesc:a6cd9834bd17cd6e34a73b7fa99bf8dde"><td class="mdescLeft">&#160;</td><td class="mdescRight"><hr/>
-<ul>
-<li>A Ridiculously Simple JSON Parser for C++ (RSJp-cpp) * Version 2.x * -------------------------------------------------------&mdash; * Copyright (C) 2018 Subhrajit Bhattacharya *</li>
-<li>This program is free software: you can redistribute it and/or modify * it under the terms of the GNU General Public License as published by * the Free Software Foundation, either version 3 of the License, or * (at your option) any later version. </li>
-</ul>
- <a href="#a6cd9834bd17cd6e34a73b7fa99bf8dde">More...</a><br /></td></tr>
 <tr class="separator:a6cd9834bd17cd6e34a73b7fa99bf8dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1cecf38b9292acd22afa5f4b0cfd31c"><td class="memItemLeft" align="right" valign="top">static char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RSJparser_8hpp.html#ae1cecf38b9292acd22afa5f4b0cfd31c">RSJarraybrackets</a> = &quot;[]&quot;</td></tr>
 <tr class="separator:ae1cecf38b9292acd22afa5f4b0cfd31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -221,7 +218,13 @@ Variables</h2></td></tr>
 <tr class="memitem:a3e95754cd96f231c38c44e2cf21be0eb"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="RSJparser_8hpp.html#a3e95754cd96f231c38c44e2cf21be0eb">RSJprinttab</a> = &quot; &quot;</td></tr>
 <tr class="separator:a3e95754cd96f231c38c44e2cf21be0eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This file contains the implementation of "A Ridiculously Simple JSON Parser for C++." This great parsing class was taken from <a href="http://subhrajit.net/">http://subhrajit.net/</a>. </p>
+<dl class="section author"><dt>Author</dt><dd>Subhrajit Bhattacharya (<a href="http://subhrajit.net/">http://subhrajit.net/</a>) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2018 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>2.x</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>main.cpp <a class="el" href="Driver_8hpp.html" title="This file contains the &quot;parsing&quot; functions to create, modify and analyze a finite element model provi...">Driver.hpp</a> </dd></dl>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a9564173f46396596eff69a2f5016e35e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9564173f46396596eff69a2f5016e35e">&#9670;&nbsp;</a></span>rsjArray</h2>
 
@@ -766,23 +769,6 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p><hr/>
-<ul>
-<li>A Ridiculously Simple JSON Parser for C++ (RSJp-cpp) * Version 2.x * -------------------------------------------------------&mdash; * Copyright (C) 2018 Subhrajit Bhattacharya *</li>
-<li>This program is free software: you can redistribute it and/or modify * it under the terms of the GNU General Public License as published by * the Free Software Foundation, either version 3 of the License, or * (at your option) any later version. </li>
-</ul>
-</p>
-<ul>
-<li><ul>
-<li>This program is distributed in the hope that it will be useful, * but WITHOUT ANY WARRANTY; without even the implied warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the * GNU General Public License for more details <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>. *</li>
-<li></li>
-<li>Contact: <a href="#" onclick="location.href='mai'+'lto:'+'sub'+'hr'+'aji'+'t@'+'gma'+'il'+'.co'+'m'; return false;">subhr<span style="display: none;">.nosp@m.</span>ajit<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> * <a href="https://www.lehigh.edu/~sub216/">https://www.lehigh.edu/~sub216/</a> , <a href="http://subhrajit.net/">http://subhrajit.net/</a> *</li>
-<li></li>
-<li></li>
-</ul>
-</li>
-</ul>
-
 </div>
 </div>
 <a id="a3e95754cd96f231c38c44e2cf21be0eb"></a>
@@ -836,7 +822,7 @@ template&lt;&gt; </div>
 			<ul>
 				<li class="navelem"><a class="el" href="dir_c4c3cc1ef075e8c2dbf7a9cdab7d21b3.html">12-Utilities</a></li><li class="navelem"><a class="el" href="RSJparser_8hpp.html">RSJparser.hpp</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:53 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

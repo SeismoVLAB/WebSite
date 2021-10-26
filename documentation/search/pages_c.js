@@ -1,7 +1,6 @@
 var searchData=
 [
   ['paraview',['ParaView',['../linkParaview.html',1,'linkExtensions']]],
-  ['parser',['Parser',['../linkParser.html',1,'linkIOModule']]],
   ['partition',['Partition',['../linkPartition.html',1,'linkGeometryModule']]],
   ['petscsolver',['PetscSolver',['../linkPetscSolver.html',1,'linkSolver']]],
   ['plastic1dgap',['Plastic1DGap',['../linkPlastic1DGap.html',1,'linkMaterial']]],

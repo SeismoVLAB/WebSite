@@ -228,6 +228,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a2c3b0b97ba0c760ec9c09d064bc15e30"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlastic1DJ2.html#a2c3b0b97ba0c760ec9c09d064bc15e30">alpha</a></td></tr>
 <tr class="memdesc:a2c3b0b97ba0c760ec9c09d064bc15e30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal hardening variable.  <a href="#a2c3b0b97ba0c760ec9c09d064bc15e30">More...</a><br /></td></tr>
 <tr class="separator:a2c3b0b97ba0c760ec9c09d064bc15e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32ce8bfa9e121c9d3cc9b34505843855"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlastic1DJ2.html#a32ce8bfa9e121c9d3cc9b34505843855">alpha_n</a></td></tr>
+<tr class="memdesc:a32ce8bfa9e121c9d3cc9b34505843855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal hardening variable at time n.  <a href="#a32ce8bfa9e121c9d3cc9b34505843855">More...</a><br /></td></tr>
+<tr class="separator:a32ce8bfa9e121c9d3cc9b34505843855"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af29dd3c3a608e2c9dca5c8d3b8ddc8d4"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlastic1DJ2.html#af29dd3c3a608e2c9dca5c8d3b8ddc8d4">Strain</a></td></tr>
 <tr class="memdesc:af29dd3c3a608e2c9dca5c8d3b8ddc8d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strain vector.  <a href="#af29dd3c3a608e2c9dca5c8d3b8ddc8d4">More...</a><br /></td></tr>
 <tr class="separator:af29dd3c3a608e2c9dca5c8d3b8ddc8d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -243,6 +246,21 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:af5885d7b007830910c794fe4e13d87b6"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlastic1DJ2.html#af5885d7b007830910c794fe4e13d87b6">TangentStiffness</a></td></tr>
 <tr class="memdesc:af5885d7b007830910c794fe4e13d87b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consistent tangent stiffness.  <a href="#af5885d7b007830910c794fe4e13d87b6">More...</a><br /></td></tr>
 <tr class="separator:af5885d7b007830910c794fe4e13d87b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3760728dff8311af7d8504a0b2ec3ac3"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlastic1DJ2.html#a3760728dff8311af7d8504a0b2ec3ac3">BackStress_n</a></td></tr>
+<tr class="memdesc:a3760728dff8311af7d8504a0b2ec3ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Back stress at time n.  <a href="#a3760728dff8311af7d8504a0b2ec3ac3">More...</a><br /></td></tr>
+<tr class="separator:a3760728dff8311af7d8504a0b2ec3ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae51373b3383ec5348b501e975b0aa496"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlastic1DJ2.html#ae51373b3383ec5348b501e975b0aa496">PlasticStrain_n</a></td></tr>
+<tr class="memdesc:ae51373b3383ec5348b501e975b0aa496"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plastic strain at time n.  <a href="#ae51373b3383ec5348b501e975b0aa496">More...</a><br /></td></tr>
+<tr class="separator:ae51373b3383ec5348b501e975b0aa496"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae25dfb93a76d8f20a11e948ef44fdcfd"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlastic1DJ2.html#ae25dfb93a76d8f20a11e948ef44fdcfd">Strain_n</a></td></tr>
+<tr class="memdesc:ae25dfb93a76d8f20a11e948ef44fdcfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strain at time n.  <a href="#ae25dfb93a76d8f20a11e948ef44fdcfd">More...</a><br /></td></tr>
+<tr class="separator:ae25dfb93a76d8f20a11e948ef44fdcfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a149dc84350162012e6cd1d288b614cd2"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlastic1DJ2.html#a149dc84350162012e6cd1d288b614cd2">Stress_n</a></td></tr>
+<tr class="memdesc:a149dc84350162012e6cd1d288b614cd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stress vector at time n.  <a href="#a149dc84350162012e6cd1d288b614cd2">More...</a><br /></td></tr>
+<tr class="separator:a149dc84350162012e6cd1d288b614cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a299d13629bc275021737bb6633bdd9cd"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlastic1DJ2.html#a299d13629bc275021737bb6633bdd9cd">TangentStiffness_n</a></td></tr>
+<tr class="memdesc:a299d13629bc275021737bb6633bdd9cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consistent tangent stiffness at time n.  <a href="#a299d13629bc275021737bb6633bdd9cd">More...</a><br /></td></tr>
+<tr class="separator:a299d13629bc275021737bb6633bdd9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for creating an uniaxial isotropic plastic material for one-dimensional elements. </p>
@@ -930,6 +948,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a32ce8bfa9e121c9d3cc9b34505843855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32ce8bfa9e121c9d3cc9b34505843855">&#9670;&nbsp;</a></span>alpha_n</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Plastic1DJ2::alpha_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Internal hardening variable at time n. </p>
+
+</div>
+</div>
 <a id="a78b84e44d2b6e529b8427edfdd13030f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a78b84e44d2b6e529b8427edfdd13030f">&#9670;&nbsp;</a></span>BackStress</h2>
 
@@ -951,6 +993,30 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Back stress. </p>
+
+</div>
+</div>
+<a id="a3760728dff8311af7d8504a0b2ec3ac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3760728dff8311af7d8504a0b2ec3ac3">&#9670;&nbsp;</a></span>BackStress_n</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd Plastic1DJ2::BackStress_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Back stress at time n. </p>
 
 </div>
 </div>
@@ -1074,6 +1140,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ae51373b3383ec5348b501e975b0aa496"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae51373b3383ec5348b501e975b0aa496">&#9670;&nbsp;</a></span>PlasticStrain_n</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd Plastic1DJ2::PlasticStrain_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Plastic strain at time n. </p>
+
+</div>
+</div>
 <a id="acf2046912a9e5056d1347a7df0e4c702"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acf2046912a9e5056d1347a7df0e4c702">&#9670;&nbsp;</a></span>Rho</h2>
 
@@ -1146,6 +1236,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ae25dfb93a76d8f20a11e948ef44fdcfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae25dfb93a76d8f20a11e948ef44fdcfd">&#9670;&nbsp;</a></span>Strain_n</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd Plastic1DJ2::Strain_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Strain at time n. </p>
+
+</div>
+</div>
 <a id="af69ff97900806944f20ec3eca15b5717"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af69ff97900806944f20ec3eca15b5717">&#9670;&nbsp;</a></span>Stress</h2>
 
@@ -1167,6 +1281,30 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Stress vector. </p>
+
+</div>
+</div>
+<a id="a149dc84350162012e6cd1d288b614cd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a149dc84350162012e6cd1d288b614cd2">&#9670;&nbsp;</a></span>Stress_n</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd Plastic1DJ2::Stress_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stress vector at time n. </p>
 
 </div>
 </div>
@@ -1194,6 +1332,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a299d13629bc275021737bb6633bdd9cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a299d13629bc275021737bb6633bdd9cd">&#9670;&nbsp;</a></span>TangentStiffness_n</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd Plastic1DJ2::TangentStiffness_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Consistent tangent stiffness at time n. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
@@ -1201,7 +1363,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classPlastic1DJ2.html">Plastic1DJ2</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

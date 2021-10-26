@@ -208,13 +208,20 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:af2db6e5ea5ffc6d7b5329777fd593f67"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DGap.html#af2db6e5ea5ffc6d7b5329777fd593f67">E</a></td></tr>
+<tr class="memdesc:af2db6e5ea5ffc6d7b5329777fd593f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">The elastic moduli of this material.  <a href="#af2db6e5ea5ffc6d7b5329777fd593f67">More...</a><br /></td></tr>
 <tr class="separator:af2db6e5ea5ffc6d7b5329777fd593f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb1596818f103766bdeaca1af544d681"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DGap.html#abb1596818f103766bdeaca1af544d681">Gap</a></td></tr>
+<tr class="memdesc:abb1596818f103766bdeaca1af544d681"><td class="mdescLeft">&#160;</td><td class="mdescRight">The separation from which the material start reacting.  <a href="#abb1596818f103766bdeaca1af544d681">More...</a><br /></td></tr>
 <tr class="separator:abb1596818f103766bdeaca1af544d681"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f12a13e8ae0ef7e98d4f173d53ead8e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DGap.html#a3f12a13e8ae0ef7e98d4f173d53ead8e">Behavior</a></td></tr>
+<tr class="memdesc:a3f12a13e8ae0ef7e98d4f173d53ead8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The material behavior (true: Tension, false: Compression)  <a href="#a3f12a13e8ae0ef7e98d4f173d53ead8e">More...</a><br /></td></tr>
 <tr class="separator:a3f12a13e8ae0ef7e98d4f173d53ead8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab99f8d37edc29f086b0c458791a672f2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DGap.html#ab99f8d37edc29f086b0c458791a672f2">oldStrain</a></td></tr>
+<tr class="memdesc:ab99f8d37edc29f086b0c458791a672f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elastic Gap history variables:  <a href="#ab99f8d37edc29f086b0c458791a672f2">More...</a><br /></td></tr>
 <tr class="separator:ab99f8d37edc29f086b0c458791a672f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fc44708d66dfc9a46e01fbfa18f3f58"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DGap.html#a7fc44708d66dfc9a46e01fbfa18f3f58">newStrain</a></td></tr>
+<tr class="memdesc:a7fc44708d66dfc9a46e01fbfa18f3f58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Commited Elastic Gap history variables:  <a href="#a7fc44708d66dfc9a46e01fbfa18f3f58">More...</a><br /></td></tr>
+<tr class="separator:a7fc44708d66dfc9a46e01fbfa18f3f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for creating an uniaxial elastic gap material compatible with zero-length element. </p>
@@ -261,7 +268,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElastic1DGap.html#af2db6e5ea5ffc6d7b5329777fd593f67">Elastic1DGap::E</a>, Elastic1DGap::gap. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElastic1DGap.html#af2db6e5ea5ffc6d7b5329777fd593f67" title="The elastic moduli of this material. ">Elastic1DGap::E</a>, Elastic1DGap::gap. </dd></dl>
 
 </div>
 </div>
@@ -459,7 +466,7 @@ Private Attributes</h2></td></tr>
 
 <p>Access modulus of elasticity. </p>
 <dl class="section return"><dt>Returns</dt><dd>The material Elasticity's (E) modulus. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElastic1DGap.html#af2db6e5ea5ffc6d7b5329777fd593f67">Elastic1DGap::E</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElastic1DGap.html#af2db6e5ea5ffc6d7b5329777fd593f67" title="The elastic moduli of this material. ">Elastic1DGap::E</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classMaterial.html#ae487dcb9bcb0ca2f9fc6cee80749b2c6">Material</a>.</p>
 
@@ -612,7 +619,7 @@ Private Attributes</h2></td></tr>
 <p>Returns the material strain. </p>
 <dl class="section return"><dt>Returns</dt><dd>Vector with the material strain components. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The strain can be revisited in <a class="el" href="linkElastic1DGap.html">Elastic1DGap</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElastic1DGap.html#ab99f8d37edc29f086b0c458791a672f2">Elastic1DGap::oldStrain</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElastic1DGap.html#ab99f8d37edc29f086b0c458791a672f2" title="Elastic Gap history variables: ">Elastic1DGap::oldStrain</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classMaterial.html#a1b37670a0b68808b2f291eabd69e1912">Material</a>.</p>
 
@@ -874,6 +881,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The material behavior (true: Tension, false: Compression) </p>
+
 </div>
 </div>
 <a id="af2db6e5ea5ffc6d7b5329777fd593f67"></a>
@@ -895,6 +904,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The elastic moduli of this material. </p>
 
 </div>
 </div>
@@ -918,6 +929,32 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The separation from which the material start reacting. </p>
+
+</div>
+</div>
+<a id="a7fc44708d66dfc9a46e01fbfa18f3f58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fc44708d66dfc9a46e01fbfa18f3f58">&#9670;&nbsp;</a></span>newStrain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Elastic1DGap::newStrain</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Commited Elastic Gap history variables: </p>
+
 </div>
 </div>
 <a id="ab99f8d37edc29f086b0c458791a672f2"></a>
@@ -940,6 +977,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Elastic Gap history variables: </p>
+
 </div>
 </div>
 </div><!-- contents -->
@@ -949,7 +988,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classElastic1DGap.html">Elastic1DGap</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

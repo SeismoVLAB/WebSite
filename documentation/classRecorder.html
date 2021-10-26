@@ -180,6 +180,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:afdc1ed926bdd136a3f360d998f6eac19"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRecorder.html#afdc1ed926bdd136a3f360d998f6eac19">GetSpacedName</a> (std::string theFile, std::string toReplace)</td></tr>
 <tr class="memdesc:afdc1ed926bdd136a3f360d998f6eac19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fix blank spaces provided by user in path.  <a href="#afdc1ed926bdd136a3f360d998f6eac19">More...</a><br /></td></tr>
 <tr class="separator:afdc1ed926bdd136a3f360d998f6eac19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a441b91c39cd02de55df29874fce790b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRecorder.html#a441b91c39cd02de55df29874fce790b2">SetThreshold</a> (Eigen::VectorXd &amp;U, double WinTol=1E-33)</td></tr>
+<tr class="memdesc:a441b91c39cd02de55df29874fce790b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Windows patch for small values.  <a href="#a441b91c39cd02de55df29874fce790b2">More...</a><br /></td></tr>
+<tr class="separator:a441b91c39cd02de55df29874fce790b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -636,6 +639,51 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">DRMElems</td><td>Maps that specify if the <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> is DRM. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a441b91c39cd02de55df29874fce790b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a441b91c39cd02de55df29874fce790b2">&#9670;&nbsp;</a></span>SetThreshold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Recorder::SetThreshold </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>U</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>WinTol</em> = <code>1E-33</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Windows patch for small values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">U</td><td>The vector to set threshold </td></tr>
+    <tr><td class="paramname">WinTol</td><td>The threshold value for windows machines </td></tr>
   </table>
   </dd>
 </dl>
@@ -1146,7 +1194,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classRecorder.html">Recorder</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:02 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

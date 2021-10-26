@@ -11,6 +11,7 @@ var classRecorder =
     [ "Initialize", "classRecorder.html#a38a1396b7e978c5e6b89695e23cfbf39", null ],
     [ "SetComboName", "classRecorder.html#a44d433be994deb74168abe39de8bf941", null ],
     [ "SetDRMParaviewInterface", "classRecorder.html#aeec61548a7e8c519e4573dc9f998baeb", null ],
+    [ "SetThreshold", "classRecorder.html#a441b91c39cd02de55df29874fce790b2", null ],
     [ "WriteElementResponse", "classRecorder.html#a2670ca73c290fb68b6774e946101e133", null ],
     [ "WriteNodalResponse", "classRecorder.html#a4c07f05856a31335cdfdd81fa474ba84", null ],
     [ "WriteResponse", "classRecorder.html#ae01873999c1de0d6a87f2b34135fb165", null ],

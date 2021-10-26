@@ -33,6 +33,7 @@ var classHDRBYamamoto2DLink =
     [ "cr", "classHDRBYamamoto2DLink.html#a30f92c9c15e427ae7574959262ef1b06", null ],
     [ "cs", "classHDRBYamamoto2DLink.html#a025dad43d762a8cc942d1880ad66ecda", null ],
     [ "Dimension", "classHDRBYamamoto2DLink.html#ac3bdda635f3781845b865b64d4217c08", null ],
+    [ "Fc", "classHDRBYamamoto2DLink.html#a8733ec09f2face870a13522ccf93d2a2", null ],
     [ "Fn", "classHDRBYamamoto2DLink.html#afe025abc1e6827cbc688e115c90da22f", null ],
     [ "Hr", "classHDRBYamamoto2DLink.html#a209a43aa281aa610bb1aaccc3ec0d211", null ],
     [ "Krb", "classHDRBYamamoto2DLink.html#a9e6ad2c479b1cd2cd40f41fd5480bcf7", null ],

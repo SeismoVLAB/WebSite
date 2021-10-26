@@ -139,15 +139,18 @@ Collaboration diagram for Analysis:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1ddbe949bfe5b1789ab958a2265d75c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnalysis.html#a1ddbe949bfe5b1789ab958a2265d75c7">Analysis</a> (std::shared_ptr&lt; <a class="el" href="classLoadCombo.html">LoadCombo</a> &gt; &amp;loadcombo)</td></tr>
-<tr class="memdesc:a1ddbe949bfe5b1789ab958a2265d75c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a> object.  <a href="#a1ddbe949bfe5b1789ab958a2265d75c7">More...</a><br /></td></tr>
-<tr class="separator:a1ddbe949bfe5b1789ab958a2265d75c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2b84b4e508f6aa61371243e8dafa59e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnalysis.html#ab2b84b4e508f6aa61371243e8dafa59e">Analysis</a> (std::shared_ptr&lt; <a class="el" href="classLoadCombo.html">LoadCombo</a> &gt; &amp;loadcombo, unsigned int nteps)</td></tr>
+<tr class="memdesc:ab2b84b4e508f6aa61371243e8dafa59e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a> object.  <a href="#ab2b84b4e508f6aa61371243e8dafa59e">More...</a><br /></td></tr>
+<tr class="separator:ab2b84b4e508f6aa61371243e8dafa59e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c3f87041212885d29ba88dbf9e2d51a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnalysis.html#a8c3f87041212885d29ba88dbf9e2d51a">~Analysis</a> ()=0</td></tr>
 <tr class="memdesc:a8c3f87041212885d29ba88dbf9e2d51a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a> object.  <a href="#a8c3f87041212885d29ba88dbf9e2d51a">More...</a><br /></td></tr>
 <tr class="separator:a8c3f87041212885d29ba88dbf9e2d51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13e64fdb25b141c9fb26a87576de0420"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnalysis.html#a13e64fdb25b141c9fb26a87576de0420">Analyze</a> ()=0</td></tr>
 <tr class="memdesc:a13e64fdb25b141c9fb26a87576de0420"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs the required analysis on the domain.  <a href="#a13e64fdb25b141c9fb26a87576de0420">More...</a><br /></td></tr>
 <tr class="separator:a13e64fdb25b141c9fb26a87576de0420"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11be95e9006496df242a149225355bd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnalysis.html#a11be95e9006496df242a149225355bd6">UpdateMesh</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh, std::shared_ptr&lt; <a class="el" href="classIntegrator.html">Integrator</a> &gt; &amp;integrator)</td></tr>
+<tr class="memdesc:a11be95e9006496df242a149225355bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update internal variables in <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> according to form of simulation.  <a href="#a11be95e9006496df242a149225355bd6">More...</a><br /></td></tr>
+<tr class="separator:a11be95e9006496df242a149225355bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2bd07b822b9bba5204b5ef60bd1ba9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnalysis.html#aa2bd07b822b9bba5204b5ef60bd1ba9c">SetRecorder</a> (std::shared_ptr&lt; <a class="el" href="classRecorder.html">Recorder</a> &gt; &amp;recorder)</td></tr>
 <tr class="memdesc:aa2bd07b822b9bba5204b5ef60bd1ba9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the recorder for the analysis.  <a href="#aa2bd07b822b9bba5204b5ef60bd1ba9c">More...</a><br /></td></tr>
 <tr class="separator:aa2bd07b822b9bba5204b5ef60bd1ba9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,6 +178,9 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:ab6514f5922095083d352e51f56d7ba27"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnalysis.html#ab6514f5922095083d352e51f56d7ba27">NumberOfSteps</a></td></tr>
+<tr class="memdesc:ab6514f5922095083d352e51f56d7ba27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of time increments.  <a href="#ab6514f5922095083d352e51f56d7ba27">More...</a><br /></td></tr>
+<tr class="separator:ab6514f5922095083d352e51f56d7ba27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6494574eb86ef9d172199f8e9ab5a094"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classLoadCombo.html">LoadCombo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnalysis.html#a6494574eb86ef9d172199f8e9ab5a094">theLoadCombo</a></td></tr>
 <tr class="memdesc:a6494574eb86ef9d172199f8e9ab5a094"><td class="mdescLeft">&#160;</td><td class="mdescRight">The load combination to be used.  <a href="#a6494574eb86ef9d172199f8e9ab5a094">More...</a><br /></td></tr>
 <tr class="separator:a6494574eb86ef9d172199f8e9ab5a094"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,8 +192,8 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>Virtual class for defining the analysis type to be performed. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="StaticAnalysis_8hpp.html" title="This file contains the &quot;Static Analysis object&quot; declarations, and updates information in the mesh...">StaticAnalysis.hpp</a> <a class="el" href="DynamicAnalysis_8hpp.html" title="This file contains the &quot;Dynamic Analysis object&quot; declarations, and updates information in the mesh...">DynamicAnalysis.hpp</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a1ddbe949bfe5b1789ab958a2265d75c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ddbe949bfe5b1789ab958a2265d75c7">&#9670;&nbsp;</a></span>Analysis()</h2>
+<a id="ab2b84b4e508f6aa61371243e8dafa59e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2b84b4e508f6aa61371243e8dafa59e">&#9670;&nbsp;</a></span>Analysis()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,8 +202,18 @@ Private Attributes</h2></td></tr>
           <td class="memname">Analysis::Analysis </td>
           <td>(</td>
           <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classLoadCombo.html">LoadCombo</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>loadcombo</em></td><td>)</td>
+          <td class="paramname"><em>loadcombo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>nteps</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -206,6 +222,7 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">loadcombo</td><td>Pointer to the <a class="el" href="classLoadCombo.html" title="Class for defining how the loads are going to be combined for an specific analysis. ">LoadCombo</a> object. </td></tr>
+    <tr><td class="paramname">nteps</td><td>The number of time steps to evolve solution. </td></tr>
   </table>
   </dd>
 </dl>
@@ -451,6 +468,44 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a11be95e9006496df242a149225355bd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11be95e9006496df242a149225355bd6">&#9670;&nbsp;</a></span>UpdateMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Analysis::UpdateMesh </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classIntegrator.html">Integrator</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>integrator</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update internal variables in <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> according to form of simulation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>The finite element mesh object where changes are performed </td></tr>
+    <tr><td class="paramname">integrator</td><td>The integrator object where changed are taken from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classMesh.html#a15336f346ed691b23252b408b8c2f71e" title="Container/map of nodes for this partition. ">Mesh::Nodes</a> <a class="el" href="classMesh.html#a7811e9082830157dd63e68b536308a88" title="Container/map of elements for this partition. ">Mesh::Elements</a>. </dd></dl>
+
+</div>
+</div>
 <a id="a2603ddf807d4086ac2b5d132b8813890"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2603ddf807d4086ac2b5d132b8813890">&#9670;&nbsp;</a></span>WriteRecorders()</h2>
 
@@ -497,6 +552,30 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab6514f5922095083d352e51f56d7ba27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6514f5922095083d352e51f56d7ba27">&#9670;&nbsp;</a></span>NumberOfSteps</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Analysis::NumberOfSteps</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Total number of time increments. </p>
+
+</div>
+</div>
 <a id="a6494574eb86ef9d172199f8e9ab5a094"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6494574eb86ef9d172199f8e9ab5a094">&#9670;&nbsp;</a></span>theLoadCombo</h2>
 
@@ -552,7 +631,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classAnalysis.html">Analysis</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

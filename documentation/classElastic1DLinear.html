@@ -219,9 +219,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a6373ddfcfe2276c5e323ebcd71a4d0bf"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DLinear.html#a6373ddfcfe2276c5e323ebcd71a4d0bf">Strain</a></td></tr>
 <tr class="memdesc:a6373ddfcfe2276c5e323ebcd71a4d0bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strain vector.  <a href="#a6373ddfcfe2276c5e323ebcd71a4d0bf">More...</a><br /></td></tr>
 <tr class="separator:a6373ddfcfe2276c5e323ebcd71a4d0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4c8be44e8b7f5d73aed7debe2aaefd5"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DLinear.html#ac4c8be44e8b7f5d73aed7debe2aaefd5">Stress</a></td></tr>
-<tr class="memdesc:ac4c8be44e8b7f5d73aed7debe2aaefd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stress vector.  <a href="#ac4c8be44e8b7f5d73aed7debe2aaefd5">More...</a><br /></td></tr>
-<tr class="separator:ac4c8be44e8b7f5d73aed7debe2aaefd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c3249a314b8c3c29bcb1268f13c1506"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DLinear.html#a7c3249a314b8c3c29bcb1268f13c1506">newStrain</a></td></tr>
+<tr class="memdesc:a7c3249a314b8c3c29bcb1268f13c1506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Commited Strain vector.  <a href="#a7c3249a314b8c3c29bcb1268f13c1506">More...</a><br /></td></tr>
+<tr class="separator:a7c3249a314b8c3c29bcb1268f13c1506"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0100e49c85e9458ecf665be4cda852ff"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic1DLinear.html#a0100e49c85e9458ecf665be4cda852ff">TangentStiffness</a></td></tr>
 <tr class="memdesc:a0100e49c85e9458ecf665be4cda852ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tangent stiffness matrix.  <a href="#a0100e49c85e9458ecf665be4cda852ff">More...</a><br /></td></tr>
 <tr class="separator:a0100e49c85e9458ecf665be4cda852ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -687,7 +687,7 @@ Private Attributes</h2></td></tr>
 <p>Returns the material stress. </p>
 <dl class="section return"><dt>Returns</dt><dd>Vector with the material stress components. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The stress can be revisited in <a class="el" href="linkElastic1DLinear.html">Elastic1DLinear</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElastic1DLinear.html#ac4c8be44e8b7f5d73aed7debe2aaefd5" title="Stress vector. ">Elastic1DLinear::Stress</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Elastic1DLinear::Stress. </dd></dl>
 
 <p>Implements <a class="el" href="classMaterial.html#a8211b95871f0b10ec3dd7d7ce6d10fba">Material</a>.</p>
 
@@ -751,7 +751,7 @@ Private Attributes</h2></td></tr>
 <p>Computes the material total stress. </p>
 <dl class="section return"><dt>Returns</dt><dd>Vector with the material total stress components. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The damping can be revisited in <a class="el" href="linkElastic1DLinear.html">Elastic1DLinear</a>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classElastic1DLinear.html#ac4c8be44e8b7f5d73aed7debe2aaefd5" title="Stress vector. ">Elastic1DLinear::Stress</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Elastic1DLinear::Stress. </dd></dl>
 
 <p>Implements <a class="el" href="classMaterial.html#a306d59e1eec6236521c9369b7196b60b">Material</a>.</p>
 
@@ -890,6 +890,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a7c3249a314b8c3c29bcb1268f13c1506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c3249a314b8c3c29bcb1268f13c1506">&#9670;&nbsp;</a></span>newStrain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd Elastic1DLinear::newStrain</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Commited Strain vector. </p>
+
+</div>
+</div>
 <a id="a40afd520f38560d4a84fc4bb79a7ac42"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40afd520f38560d4a84fc4bb79a7ac42">&#9670;&nbsp;</a></span>nu</h2>
 
@@ -962,30 +986,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac4c8be44e8b7f5d73aed7debe2aaefd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4c8be44e8b7f5d73aed7debe2aaefd5">&#9670;&nbsp;</a></span>Stress</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::VectorXd Elastic1DLinear::Stress</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Stress vector. </p>
-
-</div>
-</div>
 <a id="a0100e49c85e9458ecf665be4cda852ff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0100e49c85e9458ecf665be4cda852ff">&#9670;&nbsp;</a></span>TangentStiffness</h2>
 
@@ -1017,7 +1017,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classElastic1DLinear.html">Elastic1DLinear</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('classStaticAnalysis.html','');});
 
 <p>This is the complete list of members for <a class="el" href="classStaticAnalysis.html">StaticAnalysis</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classAnalysis.html#a1ddbe949bfe5b1789ab958a2265d75c7">Analysis</a>(std::shared_ptr&lt; LoadCombo &gt; &amp;loadcombo)</td><td class="entry"><a class="el" href="classAnalysis.html">Analysis</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAnalysis.html#ab2b84b4e508f6aa61371243e8dafa59e">Analysis</a>(std::shared_ptr&lt; LoadCombo &gt; &amp;loadcombo, unsigned int nteps)</td><td class="entry"><a class="el" href="classAnalysis.html">Analysis</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classStaticAnalysis.html#a705bb94d798560fa41157ea77d877e3c">Analyze</a>()</td><td class="entry"><a class="el" href="classStaticAnalysis.html">StaticAnalysis</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classAnalysis.html#aa79b9bba8f5ea0b10271816986f7a6f1">EndRecorders</a>()</td><td class="entry"><a class="el" href="classAnalysis.html">Analysis</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr><td class="entry"><a class="el" href="classAnalysis.html#abb1936a619cfa4e18afc316025904120">GetCombinationName</a>()</td><td class="entry"><a class="el" href="classAnalysis.html">Analysis</a></td><td class="entry"></td></tr>
@@ -119,16 +119,17 @@ $(document).ready(function(){initNavTree('classStaticAnalysis.html','');});
   <tr><td class="entry"><a class="el" href="classStaticAnalysis.html#a41edaa17036ed18716d85e87905afc43">theIntegrator</a></td><td class="entry"><a class="el" href="classStaticAnalysis.html">StaticAnalysis</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classStaticAnalysis.html#a9c40b8f58b8cbf2fb13334b73cf63021">theMesh</a></td><td class="entry"><a class="el" href="classStaticAnalysis.html">StaticAnalysis</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="classStaticAnalysis.html#ae04f3aa664cb77dab3cc673a7e9678c4">UpdateDomain</a>(unsigned int k)</td><td class="entry"><a class="el" href="classStaticAnalysis.html">StaticAnalysis</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classAnalysis.html#a2603ddf807d4086ac2b5d132b8813890">WriteRecorders</a>(std::shared_ptr&lt; Mesh &gt; &amp;mesh, unsigned int step)</td><td class="entry"><a class="el" href="classAnalysis.html">Analysis</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classAnalysis.html#a8c3f87041212885d29ba88dbf9e2d51a">~Analysis</a>()=0</td><td class="entry"><a class="el" href="classAnalysis.html">Analysis</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classStaticAnalysis.html#a09356aeee794525f047efd6ee0735698">~StaticAnalysis</a>()</td><td class="entry"><a class="el" href="classStaticAnalysis.html">StaticAnalysis</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAnalysis.html#a11be95e9006496df242a149225355bd6">UpdateMesh</a>(std::shared_ptr&lt; Mesh &gt; &amp;mesh, std::shared_ptr&lt; Integrator &gt; &amp;integrator)</td><td class="entry"><a class="el" href="classAnalysis.html">Analysis</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classAnalysis.html#a2603ddf807d4086ac2b5d132b8813890">WriteRecorders</a>(std::shared_ptr&lt; Mesh &gt; &amp;mesh, unsigned int step)</td><td class="entry"><a class="el" href="classAnalysis.html">Analysis</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAnalysis.html#a8c3f87041212885d29ba88dbf9e2d51a">~Analysis</a>()=0</td><td class="entry"><a class="el" href="classAnalysis.html">Analysis</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classStaticAnalysis.html#a09356aeee794525f047efd6ee0735698">~StaticAnalysis</a>()</td><td class="entry"><a class="el" href="classStaticAnalysis.html">StaticAnalysis</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:02 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

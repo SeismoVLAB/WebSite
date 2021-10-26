@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('linkMesh.html','');});
 <div class="textblock"><h1>Background</h1>
 <p>The <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> is a class which encapsulates <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>, <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>, Elements, <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a>, and <a class="el" href="classConstraint.html" title="Class for creating a linear kinematic relations between degree-of-freedom in the model. ">Constraint</a> objects that defines a finite element model. This object provides several member functions to add/erase/get <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>, <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>, <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>, and <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> objects to be used in the <a class="el" href="linkAnalysisModule.html">Solution Module</a>.</p>
 <div class="image">
-<img src="Mesh.png" alt="Mesh.png" width="70%"/>
+<img src="Mesh.png" alt="Mesh.png" width="60%"/>
 </div>
 <p>The previous Figure shows an example of a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>. The depicted <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> has <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> that are schematically represented by white-solid dots. The <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> is also constructed with <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> such as frame (represented in black-lines) and quadrilateral (represented in blue-rectangles). Each <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> has two degree-of-freedom (in blue arrows) or three degree-of-freedom (in red arrows) depending on the element that forms. <code>RESTRAIN</code> are applied to the <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> that belongs to semi-circle boundary in thick-black line. In a similar manner, the connection between frame and quadrilateral elements is performed using <a class="el" href="classConstraint.html" title="Class for creating a linear kinematic relations between degree-of-freedom in the model. ">Constraint</a>. A point <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> is prescribed at <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> (1). In addition, several surface <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> are prescribed to elements from 1 to 10.</p>
 <p><b>REFERENCE:</b></p><ul>
@@ -125,7 +125,12 @@ $(document).ready(function(){initNavTree('linkMesh.html','');});
 <li><b>GroupElementId</b> : The element group identifier, the groups are: <em>TRUSS</em> (10), <em>TRIA</em> (11), <em>QUAD</em> (12), <em>TETRA</em> (13), <em>HEXA</em> (14), <em>FRAME</em> (20), <em>SHELL</em> (21), <em>ZERO</em> (31), <em>PML</em> (32), <em>BWEN</em> (41), <em>HDRB</em> (42), and <em>NULL</em> (50).</li>
 <li><b>DomainPartition</b>: The domain partition that will be used in each processor.</li>
 </ul>
-<dl class="section attention"><dt>Attention</dt><dd>Please use ParaView version 5.9.0 (or above) to have all functionalities available in <b>SeismoVLAB</b>.</dd></dl>
+<p>The python mesh can be visualized at any level of the scripting process using the <span style="color:blue"><b>renderData()</b></span> function. Once this function is called, a '.vtu' file will be created inside the Paraview folder.</p>
+<p><b>Example</b> </p><blockquote class="doxtable">
+<p>A <b>ParaView</b> file with name 'output.vtu' is generated as follows:<br />
+SVL.renderData('output') </p>
+</blockquote>
+<dl class="section attention"><dt>Attention</dt><dd>Please use ParaView version 5.9.0 (or above) to have all functionalities available in <b>Seismo-VLAB</b>.</dd></dl>
 <p>The python <span style="color:green"><b>01-Pre_Process/Method/Builder.py</b></span> file provides with an interface to populate the <code>Entities</code> dictionary with <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>, <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>, <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> and <a class="el" href="classConstraint.html" title="Class for creating a linear kinematic relations between degree-of-freedom in the model. ">Constraint</a>. A Domain can be created using the <span style="color:blue"><b>makeDomainVolume()</b></span>, <span style="color:blue"><b>makeDomainArea()</b></span> or <span style="color:blue"><b>makeDomainLine()</b></span> function. These functions will transform the provided information into json format to be parse in the <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a>.</p>
 <ul>
 <li><p class="startli"><span style="color:blue"><b>makeDomainVolume</b></span>(<b>option</b>):<br />
@@ -141,7 +146,7 @@ $(document).ready(function(){initNavTree('linkMesh.html','');});
 <li><span style="color:green"><b>'attributes'</b></span> : A dictionary to specify attributes in 'Elements'</li>
 </ul>
 <div class="image">
-<img src="makeDomainVolume.png" alt="makeDomainVolume.png" width="50%"/>
+<img src="makeDomainVolume.png" alt="makeDomainVolume.png" width="40%"/>
 </div>
 <p class="startli"><b>Example</b> </p><blockquote class="doxtable">
 <p>A <b>3D rectangular domain</b> of 1 x 1 x 10 [m] with <a class="el" href="classPML3DHexa8.html" title="Class for creating a 3D linearized eight-node perfectly matched layer element in a mesh...">PML3DHexa8</a> elements is created using the python interface as follows:<br />
@@ -171,7 +176,7 @@ mesh = SVL.makeDomainVolume(<b>options</b>=opts) </p>
 <li><span style="color:green"><b>'attributes'</b></span> : A dictionary to specify attributes in 'Elements'</li>
 </ul>
 <div class="image">
-<img src="makeDomainArea.png" alt="makeDomainArea.png" width="42.5%"/>
+<img src="makeDomainArea.png" alt="makeDomainArea.png" width="40%"/>
 </div>
 <p class="startli"><b>Example</b> </p><blockquote class="doxtable">
 <p>A <b>2D rectangular domain</b> of 5 x 10 [m] with Lin2DQuad4 elements is created using the python interface as follows:<br />
@@ -200,7 +205,7 @@ mesh = SVL.makeDomainArea(<b>options</b>=opts) </p>
 <li><span style="color:green"><b>'attributes'</b></span> : A dictionary to specify attributes in 'Elements'</li>
 </ul>
 <div class="image">
-<img src="makeDomainLine.png" alt="makeDomainLine.png" width="32.5%"/>
+<img src="makeDomainLine.png" alt="makeDomainLine.png" width="30%"/>
 </div>
 <p class="startli"><b>Example</b> </p><blockquote class="doxtable">
 <p>A <b>2D rectangular domain</b> of 10 [m] with Lin2DFrame2 elements is created using the python interface as follows:<br />
@@ -245,11 +250,15 @@ mesh = SVL.makeDomainArea(<b>options</b>=opts) </p>
 <div class="image">
 <img src="setPMLDomain.png" alt="setPMLDomain.png" width="40%"/>
 </div>
+ <dl class="section attention"><dt>Attention</dt><dd>The python functions <span style="color:blue"><b>makeDomainVolume</b></span>, <span style="color:blue"><b>makeDomainArea</b></span>, <span style="color:blue"><b>makeDomainLine</b></span>, <span style="color:blue"><b>mergeDomain</b></span>, <span style="color:blue"><b>removeDomain</b></span> are extremely simple and they are not recommended to be used to create complex geometry. </dd>
+<dd>
+The user can modify the above functions to account for more sophisticated geometries.</dd></dl>
+<p><span style="color:white"><b>.</b></span></p>
 </li>
 </ul>
 </li>
 </ul>
-<p>More complex domain can be parsed from other formats. The functions provided in <span style="color:green"><b>01-Pre_Process/Parser/Formats.py</b></span> allows currently to parse from <b>SAP2000</b>, <b>ETABS</b>, and <b>VTK</b> formats:</p>
+<p>More complex domain can be parsed from other formats. The functions provided in <span style="color:green"><b>01-Pre_Process/Parser/Formats.py</b></span> allows currently to parse from <b>SAP2000</b>, <b>ETABS</b>, and <b>GMSH</b> formats:</p>
 <ul>
 <li><span style="color:blue"><b>parseFile</b></span>(<b>filepath</b>, <b>fileformat</b>):<br />
  This is the main parsing function. The <b>filepath</b> specifies the path where the files is located, while <b>fileformat</b> is the format of this file. Currently the available formats are: ETABS, SAP, and VTK.</li>
@@ -259,13 +268,13 @@ mesh = SVL.makeDomainArea(<b>options</b>=opts) </p>
 <dd>
 Other formats for <b>ANSYS</b> and <b>ABAQUS</b> are under construction.</dd></dl>
 <p><b>Example</b> </p><blockquote class="doxtable">
-<p>A <b>SAP</b> file can be loaded using the python interface as follows:<br />
+<p>A <b>SAP2000</b> file can be loaded using the python interface as follows:<br />
 SVL.parseFile('/path/to/sap/file.s2k','SAP') </p>
 </blockquote>
 </li>
 </ul>
 <h1>Run-Analysis</h1>
-<p>The <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> object is not needed to be parsed since it is created internally as soon as input file is specified.</p>
+<p>The <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> object is not needed to be parsed since it is created internally as soon as the JSON input file is specified.</p>
 <dl class="section note"><dt>Note</dt><dd>There is no <code>RESTRAIN</code> class since fixed degree of freedom are declared by negative numbers in the free-degree-of-freedom list at each <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>.</dd></dl>
 <dl class="section attention"><dt>Attention</dt><dd>The <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> object computes the memory needed for the storage of model matrices such as total stiffness matrix \(\textbf{K}\), total mass matrix \(\textbf{M}\), and total damping matrix \(\textbf{C}\) as well as the external force vector \(F\). </dd>
 <dd>
@@ -276,7 +285,7 @@ The <a class="el" href="classMesh.html" title="Class for defining a mesh that st
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:53 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

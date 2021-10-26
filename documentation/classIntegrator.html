@@ -141,24 +141,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a74c05f9dd2b53e743b96f5ab47e1cea1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIntegrator.html#a74c05f9dd2b53e743b96f5ab47e1cea1">SetAlgorithm</a> (std::shared_ptr&lt; <a class="el" href="classAlgorithm.html">Algorithm</a> &gt; &amp;algorithm)=0</td></tr>
 <tr class="memdesc:a74c05f9dd2b53e743b96f5ab47e1cea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the integrator for this algorithm.  <a href="#a74c05f9dd2b53e743b96f5ab47e1cea1">More...</a><br /></td></tr>
 <tr class="separator:a74c05f9dd2b53e743b96f5ab47e1cea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aede2ec16a0cc42fdfbc23f8bc46932d3"><td class="memItemLeft" align="right" valign="top">virtual Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIntegrator.html#aede2ec16a0cc42fdfbc23f8bc46932d3">GetDisplacements</a> ()=0</td></tr>
-<tr class="memdesc:aede2ec16a0cc42fdfbc23f8bc46932d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the displacement vector.  <a href="#aede2ec16a0cc42fdfbc23f8bc46932d3">More...</a><br /></td></tr>
-<tr class="separator:aede2ec16a0cc42fdfbc23f8bc46932d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a0ea34280a28a1da235c7a6a312e133"><td class="memItemLeft" align="right" valign="top">virtual Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIntegrator.html#a5a0ea34280a28a1da235c7a6a312e133">GetVelocities</a> ()=0</td></tr>
-<tr class="memdesc:a5a0ea34280a28a1da235c7a6a312e133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the velocity vector.  <a href="#a5a0ea34280a28a1da235c7a6a312e133">More...</a><br /></td></tr>
-<tr class="separator:a5a0ea34280a28a1da235c7a6a312e133"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f4f24dc95e487e4f0646275ac848194"><td class="memItemLeft" align="right" valign="top">virtual Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIntegrator.html#a1f4f24dc95e487e4f0646275ac848194">GetAccelerations</a> ()=0</td></tr>
-<tr class="memdesc:a1f4f24dc95e487e4f0646275ac848194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the acceleration vector.  <a href="#a1f4f24dc95e487e4f0646275ac848194">More...</a><br /></td></tr>
-<tr class="separator:a1f4f24dc95e487e4f0646275ac848194"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abccdb95cd3971c26b0f5991a0b00155f"><td class="memItemLeft" align="right" valign="top">virtual Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIntegrator.html#abccdb95cd3971c26b0f5991a0b00155f">GetPMLHistoryVector</a> ()=0</td></tr>
-<tr class="memdesc:abccdb95cd3971c26b0f5991a0b00155f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the perfectly-matched layer history vector.  <a href="#abccdb95cd3971c26b0f5991a0b00155f">More...</a><br /></td></tr>
-<tr class="separator:abccdb95cd3971c26b0f5991a0b00155f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cb93d309e8552432b3d03c84d94aed6"><td class="memItemLeft" align="right" valign="top">virtual const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIntegrator.html#a2cb93d309e8552432b3d03c84d94aed6">GetDisplacements</a> ()=0</td></tr>
+<tr class="memdesc:a2cb93d309e8552432b3d03c84d94aed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the displacement vector.  <a href="#a2cb93d309e8552432b3d03c84d94aed6">More...</a><br /></td></tr>
+<tr class="separator:a2cb93d309e8552432b3d03c84d94aed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fb53d8c5817ad58dfe23d76a964b4b6"><td class="memItemLeft" align="right" valign="top">virtual const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIntegrator.html#a2fb53d8c5817ad58dfe23d76a964b4b6">GetVelocities</a> ()=0</td></tr>
+<tr class="memdesc:a2fb53d8c5817ad58dfe23d76a964b4b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the velocity vector.  <a href="#a2fb53d8c5817ad58dfe23d76a964b4b6">More...</a><br /></td></tr>
+<tr class="separator:a2fb53d8c5817ad58dfe23d76a964b4b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58279e2e957c9fb2fd63147debdb0d7d"><td class="memItemLeft" align="right" valign="top">virtual const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIntegrator.html#a58279e2e957c9fb2fd63147debdb0d7d">GetAccelerations</a> ()=0</td></tr>
+<tr class="memdesc:a58279e2e957c9fb2fd63147debdb0d7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the acceleration vector.  <a href="#a58279e2e957c9fb2fd63147debdb0d7d">More...</a><br /></td></tr>
+<tr class="separator:a58279e2e957c9fb2fd63147debdb0d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42382071439d9c42e72e210e699eaf43"><td class="memItemLeft" align="right" valign="top">virtual const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIntegrator.html#a42382071439d9c42e72e210e699eaf43">GetPMLHistoryVector</a> ()=0</td></tr>
+<tr class="memdesc:a42382071439d9c42e72e210e699eaf43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the perfectly-matched layer history vector.  <a href="#a42382071439d9c42e72e210e699eaf43">More...</a><br /></td></tr>
+<tr class="separator:a42382071439d9c42e72e210e699eaf43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade2662f0925875beb6c51fbf20fe8aff"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIntegrator.html#ade2662f0925875beb6c51fbf20fe8aff">ComputeNewStep</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh, unsigned int k=0)=0</td></tr>
 <tr class="memdesc:ade2662f0925875beb6c51fbf20fe8aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a new time step.  <a href="#ade2662f0925875beb6c51fbf20fe8aff">More...</a><br /></td></tr>
 <tr class="separator:ade2662f0925875beb6c51fbf20fe8aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b869e556a185004b02ca82e798b274f"><td class="memItemLeft" align="right" valign="top">virtual Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIntegrator.html#a2b869e556a185004b02ca82e798b274f">ComputeReactionForce</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh, unsigned int k=0)=0</td></tr>
 <tr class="memdesc:a2b869e556a185004b02ca82e798b274f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the reaction force ins this step.  <a href="#a2b869e556a185004b02ca82e798b274f">More...</a><br /></td></tr>
 <tr class="separator:a2b869e556a185004b02ca82e798b274f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b1887f398897793b8fd07668d5d63a0"><td class="memItemLeft" align="right" valign="top">virtual Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIntegrator.html#a6b1887f398897793b8fd07668d5d63a0">ComputeProgressiveForce</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh, unsigned int k=0)=0</td></tr>
+<tr class="memdesc:a6b1887f398897793b8fd07668d5d63a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the external force vector from previous analysis.  <a href="#a6b1887f398897793b8fd07668d5d63a0">More...</a><br /></td></tr>
+<tr class="separator:a6b1887f398897793b8fd07668d5d63a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae94b39eb6bfd81071cf74d234964fe34"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIntegrator.html#ae94b39eb6bfd81071cf74d234964fe34">ComputeSupportMotionVector</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh, Eigen::VectorXd &amp;Feff, double factor=1.00, unsigned int k=0)=0</td></tr>
 <tr class="memdesc:ae94b39eb6bfd81071cf74d234964fe34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the incremental nodal support motion vector.  <a href="#ae94b39eb6bfd81071cf74d234964fe34">More...</a><br /></td></tr>
 <tr class="separator:ae94b39eb6bfd81071cf74d234964fe34"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -394,6 +397,54 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a6b1887f398897793b8fd07668d5d63a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b1887f398897793b8fd07668d5d63a0">&#9670;&nbsp;</a></span>ComputeProgressiveForce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Eigen::VectorXd Integrator::ComputeProgressiveForce </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>k</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the external force vector from previous analysis. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>Pointer to the <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> object where <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a> and <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a> are stored. </td></tr>
+    <tr><td class="paramname">k</td><td>The time step number to be solved. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAssembler.html#af92caa95acacce4ffd61c2778aabbfe6" title="Assemble the external force vector. ">Assembler::ComputeExternalForceVector()</a>. </dd></dl>
+
+<p>Implemented in <a class="el" href="classCompositeBathe.html#a6139257b0259cfe3d50b9b8933be42d7">CompositeBathe</a>, <a class="el" href="classNewmarkBeta.html#aefe1bf500deb43daca8ad9dc462ed392">NewmarkBeta</a>, <a class="el" href="classExtendedNewmarkBeta.html#a52ecadf4cc72737b0bfc2f005a382ae8">ExtendedNewmarkBeta</a>, <a class="el" href="classCentralDifference.html#a268721de97ec7bf2980c773b2843972d">CentralDifference</a>, and <a class="el" href="classQuasiStatic.html#a8d61fa2023b736dfdaefad1f8dd12cd1">QuasiStatic</a>.</p>
+
+</div>
+</div>
 <a id="a2b869e556a185004b02ca82e798b274f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2b869e556a185004b02ca82e798b274f">&#9670;&nbsp;</a></span>ComputeReactionForce()</h2>
 
@@ -506,8 +557,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a1f4f24dc95e487e4f0646275ac848194"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f4f24dc95e487e4f0646275ac848194">&#9670;&nbsp;</a></span>GetAccelerations()</h2>
+<a id="a58279e2e957c9fb2fd63147debdb0d7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58279e2e957c9fb2fd63147debdb0d7d">&#9670;&nbsp;</a></span>GetAccelerations()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -516,7 +567,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual Eigen::VectorXd&amp; Integrator::GetAccelerations </td>
+          <td class="memname">virtual const Eigen::VectorXd&amp; Integrator::GetAccelerations </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -532,12 +583,12 @@ Protected Attributes</h2></td></tr>
 <p>Gets the acceleration vector. </p>
 <dl class="section return"><dt>Returns</dt><dd>Vector with the acceleration states at current time step. </dd></dl>
 
-<p>Implemented in <a class="el" href="classCompositeBathe.html#ab0c17237826066b69e63c443e348d7f3">CompositeBathe</a>, <a class="el" href="classNewmarkBeta.html#aba297845d7400853fa674a177f6a655d">NewmarkBeta</a>, <a class="el" href="classExtendedNewmarkBeta.html#a83647567025811b7681ca52dfc549d86">ExtendedNewmarkBeta</a>, <a class="el" href="classCentralDifference.html#a460a13ddb125a9962c8f5b57981e163f">CentralDifference</a>, and <a class="el" href="classQuasiStatic.html#a62c87359b7c358318dc4113df90f9596">QuasiStatic</a>.</p>
+<p>Implemented in <a class="el" href="classCompositeBathe.html#aeb88a9593d5cd01a4d0ffe1cd4812c28">CompositeBathe</a>, <a class="el" href="classNewmarkBeta.html#a3c15bd7e6ea0d694ba64b723c5e5a49c">NewmarkBeta</a>, <a class="el" href="classExtendedNewmarkBeta.html#a8c17807fded6575c3aedc505bfb9f945">ExtendedNewmarkBeta</a>, <a class="el" href="classCentralDifference.html#ad0e260a6351ed30a7d32f3087dc15d4d">CentralDifference</a>, and <a class="el" href="classQuasiStatic.html#ab9a4216a82d0f222a3f70b8031d72108">QuasiStatic</a>.</p>
 
 </div>
 </div>
-<a id="aede2ec16a0cc42fdfbc23f8bc46932d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aede2ec16a0cc42fdfbc23f8bc46932d3">&#9670;&nbsp;</a></span>GetDisplacements()</h2>
+<a id="a2cb93d309e8552432b3d03c84d94aed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cb93d309e8552432b3d03c84d94aed6">&#9670;&nbsp;</a></span>GetDisplacements()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -546,7 +597,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual Eigen::VectorXd&amp; Integrator::GetDisplacements </td>
+          <td class="memname">virtual const Eigen::VectorXd&amp; Integrator::GetDisplacements </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -562,12 +613,12 @@ Protected Attributes</h2></td></tr>
 <p>Gets the displacement vector. </p>
 <dl class="section return"><dt>Returns</dt><dd>Vector with the displacement states at current time step. </dd></dl>
 
-<p>Implemented in <a class="el" href="classCompositeBathe.html#ac9b8bff5e303bee96964f62707b17e14">CompositeBathe</a>, <a class="el" href="classNewmarkBeta.html#a37ab0c6b68a214f7920ecd21f7ffa59f">NewmarkBeta</a>, <a class="el" href="classExtendedNewmarkBeta.html#ac9d8cedc7d2cf079f03ac8fd2f1393a8">ExtendedNewmarkBeta</a>, <a class="el" href="classCentralDifference.html#a8a5c29a34318f61821637671e267e560">CentralDifference</a>, and <a class="el" href="classQuasiStatic.html#aa44b16e439b618918dc29fbe1d4ded48">QuasiStatic</a>.</p>
+<p>Implemented in <a class="el" href="classCompositeBathe.html#ace1adbab548fa1542be5ee5bc9c2f397">CompositeBathe</a>, <a class="el" href="classNewmarkBeta.html#a92f27ad38342cf5513e06e412efdff81">NewmarkBeta</a>, <a class="el" href="classExtendedNewmarkBeta.html#a27d3b97b2a2a731ac21155b11c6485c0">ExtendedNewmarkBeta</a>, <a class="el" href="classCentralDifference.html#ad8ad6b8ec255c36c46afb4e7d7bad881">CentralDifference</a>, and <a class="el" href="classQuasiStatic.html#adf8d630c4e020e112ae8de550da5d8a7">QuasiStatic</a>.</p>
 
 </div>
 </div>
-<a id="abccdb95cd3971c26b0f5991a0b00155f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abccdb95cd3971c26b0f5991a0b00155f">&#9670;&nbsp;</a></span>GetPMLHistoryVector()</h2>
+<a id="a42382071439d9c42e72e210e699eaf43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42382071439d9c42e72e210e699eaf43">&#9670;&nbsp;</a></span>GetPMLHistoryVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -576,7 +627,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual Eigen::VectorXd&amp; Integrator::GetPMLHistoryVector </td>
+          <td class="memname">virtual const Eigen::VectorXd&amp; Integrator::GetPMLHistoryVector </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -592,12 +643,12 @@ Protected Attributes</h2></td></tr>
 <p>Gets the perfectly-matched layer history vector. </p>
 <dl class="section return"><dt>Returns</dt><dd>Vector with the PML history states at current time step. </dd></dl>
 
-<p>Implemented in <a class="el" href="classCompositeBathe.html#a0f81efcf2fddbb863ccade41625bc69e">CompositeBathe</a>, <a class="el" href="classNewmarkBeta.html#a459d2547d987de83299a1b55ff34e733">NewmarkBeta</a>, <a class="el" href="classExtendedNewmarkBeta.html#a332264cc4c03fd9158cbad6fc9dd38ae">ExtendedNewmarkBeta</a>, <a class="el" href="classCentralDifference.html#a44e4cd1e9414eed3c99b4a1e7894debd">CentralDifference</a>, and <a class="el" href="classQuasiStatic.html#a4f175415de4353ea18f33179f281a770">QuasiStatic</a>.</p>
+<p>Implemented in <a class="el" href="classCompositeBathe.html#a611064836d86818d8adb58ff9d60f25f">CompositeBathe</a>, <a class="el" href="classNewmarkBeta.html#a8ef94635066e5f8dc4b10b3ac995bc00">NewmarkBeta</a>, <a class="el" href="classExtendedNewmarkBeta.html#a7811b01829c5bf6c0e7e8f2bf5d3dc9a">ExtendedNewmarkBeta</a>, <a class="el" href="classCentralDifference.html#a390fb5d8587326d1050a3f4bfee84098">CentralDifference</a>, and <a class="el" href="classQuasiStatic.html#aea3a52a519d96b7fb4b0f51b8274bc4b">QuasiStatic</a>.</p>
 
 </div>
 </div>
-<a id="a5a0ea34280a28a1da235c7a6a312e133"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a0ea34280a28a1da235c7a6a312e133">&#9670;&nbsp;</a></span>GetVelocities()</h2>
+<a id="a2fb53d8c5817ad58dfe23d76a964b4b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fb53d8c5817ad58dfe23d76a964b4b6">&#9670;&nbsp;</a></span>GetVelocities()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -606,7 +657,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual Eigen::VectorXd&amp; Integrator::GetVelocities </td>
+          <td class="memname">virtual const Eigen::VectorXd&amp; Integrator::GetVelocities </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -622,7 +673,7 @@ Protected Attributes</h2></td></tr>
 <p>Gets the velocity vector. </p>
 <dl class="section return"><dt>Returns</dt><dd>Vector with the velocity states at current time step. </dd></dl>
 
-<p>Implemented in <a class="el" href="classCompositeBathe.html#a56133bef0a94e58bada954ac80a6b3ea">CompositeBathe</a>, <a class="el" href="classNewmarkBeta.html#ada45cfc688b85e76ba9c3309cfffc665">NewmarkBeta</a>, <a class="el" href="classExtendedNewmarkBeta.html#a3153573e142c59ad65a96d602ca170da">ExtendedNewmarkBeta</a>, <a class="el" href="classCentralDifference.html#ad5812d801babca6ab6fcd2f6523b7475">CentralDifference</a>, and <a class="el" href="classQuasiStatic.html#a4644953a804096e85a1e06e45e5c2c66">QuasiStatic</a>.</p>
+<p>Implemented in <a class="el" href="classCompositeBathe.html#a3230d6f1f1ceeb97eef6192aa8ac86f2">CompositeBathe</a>, <a class="el" href="classNewmarkBeta.html#a255cc9b96d90b1cb2daafacf0edf0239">NewmarkBeta</a>, <a class="el" href="classExtendedNewmarkBeta.html#a47bcc1795570284a59350b613942d078">ExtendedNewmarkBeta</a>, <a class="el" href="classCentralDifference.html#af6796f6e589b86d247196ddffa402ef2">CentralDifference</a>, and <a class="el" href="classQuasiStatic.html#aaecf62814097c812c716c8297f3651b8">QuasiStatic</a>.</p>
 
 </div>
 </div>
@@ -792,7 +843,7 @@ Protected Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classIntegrator.html">Integrator</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

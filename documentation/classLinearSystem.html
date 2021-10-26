@@ -129,16 +129,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aadad602df8c07f30aa60a2cbb458ab53"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinearSystem.html#aadad602df8c07f30aa60a2cbb458ab53">~LinearSystem</a> ()=0</td></tr>
 <tr class="memdesc:aadad602df8c07f30aa60a2cbb458ab53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a> object.  <a href="#aadad602df8c07f30aa60a2cbb458ab53">More...</a><br /></td></tr>
 <tr class="separator:aadad602df8c07f30aa60a2cbb458ab53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44215bbf76e7a830613be7a36126342e"><td class="memItemLeft" align="right" valign="top">virtual Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinearSystem.html#a44215bbf76e7a830613be7a36126342e">GetSolution</a> ()=0</td></tr>
-<tr class="memdesc:a44215bbf76e7a830613be7a36126342e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the solution vector.  <a href="#a44215bbf76e7a830613be7a36126342e">More...</a><br /></td></tr>
-<tr class="separator:a44215bbf76e7a830613be7a36126342e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb201970b5393bf8739389f7f6d07919"><td class="memItemLeft" align="right" valign="top">virtual const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinearSystem.html#adb201970b5393bf8739389f7f6d07919">GetSolution</a> ()=0</td></tr>
+<tr class="memdesc:adb201970b5393bf8739389f7f6d07919"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the solution vector.  <a href="#adb201970b5393bf8739389f7f6d07919">More...</a><br /></td></tr>
+<tr class="separator:adb201970b5393bf8739389f7f6d07919"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a681e592abd26b51d1f01c90133ba319f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinearSystem.html#a681e592abd26b51d1f01c90133ba319f">SolveSystem</a> (Eigen::SparseMatrix&lt; double &gt; &amp;A, Eigen::VectorXd &amp;b)=0</td></tr>
 <tr class="memdesc:a681e592abd26b51d1f01c90133ba319f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the linear system.  <a href="#a681e592abd26b51d1f01c90133ba319f">More...</a><br /></td></tr>
 <tr class="separator:a681e592abd26b51d1f01c90133ba319f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Virtual class for solving a linear system of the form Ax = b. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="EigenSolver_8hpp.html" title="This file contains the &quot;EigenSolver&quot; solver declaration; the object performs Cholesky-decomposition o...">EigenSolver.hpp</a> <a class="el" href="MumpsSolver_8hpp.html">MumpsSolver.hpp</a> <a class="el" href="PetscSolver_8hpp.html" title="This file contains the &quot;PetscSolver&quot; solver declaration; this object is an iterative solver...">PetscSolver.hpp</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="EigenSolver_8hpp.html" title="This file contains the &quot;EigenSolver&quot; solver declaration; the object performs Cholesky-decomposition o...">EigenSolver.hpp</a> <a class="el" href="MumpsSolver_8hpp.html" title="This file contains the &quot;MumpsSolver&quot; solver declaration; this object performs a (MU)ltifrontal (M)ass...">MumpsSolver.hpp</a> <a class="el" href="PetscSolver_8hpp.html" title="This file contains the &quot;PetscSolver&quot; solver declaration; this object is an iterative solver...">PetscSolver.hpp</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3f75bddc5fb799e7daab008f415bd1fa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f75bddc5fb799e7daab008f415bd1fa">&#9670;&nbsp;</a></span>LinearSystem()</h2>
@@ -187,8 +187,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a44215bbf76e7a830613be7a36126342e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44215bbf76e7a830613be7a36126342e">&#9670;&nbsp;</a></span>GetSolution()</h2>
+<a id="adb201970b5393bf8739389f7f6d07919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb201970b5393bf8739389f7f6d07919">&#9670;&nbsp;</a></span>GetSolution()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,7 +197,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual Eigen::VectorXd LinearSystem::GetSolution </td>
+          <td class="memname">virtual const Eigen::VectorXd&amp; LinearSystem::GetSolution </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -213,7 +213,7 @@ Public Member Functions</h2></td></tr>
 <p>Gets the solution vector. </p>
 <dl class="section return"><dt>Returns</dt><dd>The solution vector. </dd></dl>
 
-<p>Implemented in <a class="el" href="classPetscSolver.html#a02bff58c74774ef51b00c232f10b7c2f">PetscSolver</a>, <a class="el" href="classMumpsSolver.html#a76e289c56bcf3c48ddd7438280faccf8">MumpsSolver</a>, and <a class="el" href="classEigenSolver.html#a39bb51d3d42fdb4b1b25e2483edbcf86">EigenSolver</a>.</p>
+<p>Implemented in <a class="el" href="classMumpsSolver.html#a50f7bd14c1fb8b75b8346a87c3c86d4e">MumpsSolver</a>, <a class="el" href="classPetscSolver.html#a8a3b123632da29e0e2b734d69550db4a">PetscSolver</a>, and <a class="el" href="classEigenSolver.html#ab055900b72af1114fdf6f77ba7042f71">EigenSolver</a>.</p>
 
 </div>
 </div>
@@ -262,7 +262,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Whether or not the system was successfully solved. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classIntegrator.html#adf86da0b2615816543528515c6ae46b8" title="Gets the effective force associated to the integrator. ">Integrator::ComputeEffectiveForce()</a>, <a class="el" href="classIntegrator.html#a668626c2c18d6c7205e0c510c72152c8" title="Gets the effective stiffness associated to the integrator. ">Integrator::ComputeEffectiveStiffness()</a>. </dd></dl>
 
-<p>Implemented in <a class="el" href="classPetscSolver.html#a375bf8231f1b5f7a4fc8e358ecc6bad7">PetscSolver</a>, <a class="el" href="classMumpsSolver.html#a26184ee3727fc1c9103b254eb2cde75f">MumpsSolver</a>, and <a class="el" href="classEigenSolver.html#a76baad00c42b23c04f1a907af6e25fe1">EigenSolver</a>.</p>
+<p>Implemented in <a class="el" href="classMumpsSolver.html#a26184ee3727fc1c9103b254eb2cde75f">MumpsSolver</a>, <a class="el" href="classPetscSolver.html#a375bf8231f1b5f7a4fc8e358ecc6bad7">PetscSolver</a>, and <a class="el" href="classEigenSolver.html#a76baad00c42b23c04f1a907af6e25fe1">EigenSolver</a>.</p>
 
 </div>
 </div>
@@ -273,7 +273,7 @@ Public Member Functions</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classLinearSystem.html">LinearSystem</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

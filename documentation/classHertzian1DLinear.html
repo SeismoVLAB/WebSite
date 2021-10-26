@@ -223,12 +223,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:aa00d3e09eca5f1b104f7f2782dfe8e90"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHertzian1DLinear.html#aa00d3e09eca5f1b104f7f2782dfe8e90">Strain</a></td></tr>
 <tr class="memdesc:aa00d3e09eca5f1b104f7f2782dfe8e90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strain vector.  <a href="#aa00d3e09eca5f1b104f7f2782dfe8e90">More...</a><br /></td></tr>
 <tr class="separator:aa00d3e09eca5f1b104f7f2782dfe8e90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ddce3155794e553d477e6306f6fb483"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHertzian1DLinear.html#a5ddce3155794e553d477e6306f6fb483">Stress</a></td></tr>
-<tr class="memdesc:a5ddce3155794e553d477e6306f6fb483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stress vector.  <a href="#a5ddce3155794e553d477e6306f6fb483">More...</a><br /></td></tr>
-<tr class="separator:a5ddce3155794e553d477e6306f6fb483"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e76c1ed2310188229c6863bdc4297ca"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHertzian1DLinear.html#a4e76c1ed2310188229c6863bdc4297ca">TangentStiffness</a></td></tr>
-<tr class="memdesc:a4e76c1ed2310188229c6863bdc4297ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tangent stiffness matrix.  <a href="#a4e76c1ed2310188229c6863bdc4297ca">More...</a><br /></td></tr>
-<tr class="separator:a4e76c1ed2310188229c6863bdc4297ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8983dfe43a3903370dcca3f9b59af1eb"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHertzian1DLinear.html#a8983dfe43a3903370dcca3f9b59af1eb">newStrain</a></td></tr>
+<tr class="memdesc:a8983dfe43a3903370dcca3f9b59af1eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Commited Strain vector.  <a href="#a8983dfe43a3903370dcca3f9b59af1eb">More...</a><br /></td></tr>
+<tr class="separator:a8983dfe43a3903370dcca3f9b59af1eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for creating an uniaxial hertzian contact material for one-dimensional elements. </p>
@@ -944,6 +941,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a8983dfe43a3903370dcca3f9b59af1eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8983dfe43a3903370dcca3f9b59af1eb">&#9670;&nbsp;</a></span>newStrain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd Hertzian1DLinear::newStrain</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Commited Strain vector. </p>
+
+</div>
+</div>
 <a id="ae7da74886ed513bf51161ea13903d171"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae7da74886ed513bf51161ea13903d171">&#9670;&nbsp;</a></span>Rho</h2>
 
@@ -992,54 +1013,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a5ddce3155794e553d477e6306f6fb483"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ddce3155794e553d477e6306f6fb483">&#9670;&nbsp;</a></span>Stress</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::VectorXd Hertzian1DLinear::Stress</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Stress vector. </p>
-
-</div>
-</div>
-<a id="a4e76c1ed2310188229c6863bdc4297ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e76c1ed2310188229c6863bdc4297ca">&#9670;&nbsp;</a></span>TangentStiffness</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::MatrixXd Hertzian1DLinear::TangentStiffness</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Tangent stiffness matrix. </p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
@@ -1047,7 +1020,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classHertzian1DLinear.html">Hertzian1DLinear</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

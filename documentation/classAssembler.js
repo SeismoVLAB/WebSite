@@ -13,6 +13,7 @@ var classAssembler =
     [ "ComputeMassMatrix", "classAssembler.html#a573ec05093f94f301cc2ca0c2fe9b918", null ],
     [ "ComputePMLHistoryMatrix", "classAssembler.html#ab2d1f2de89c922d6ecae3e4520594212", null ],
     [ "ComputePMLHistoryVector", "classAssembler.html#ac26c07211f333ae12d06efab1f0201aa", null ],
+    [ "ComputeProgressiveForceVector", "classAssembler.html#a55ac3d8f50711d95974e1e529af45b2d", null ],
     [ "ComputeStiffnessMatrix", "classAssembler.html#a225cb38fa729fc8e6f988186dcb71d67", null ],
     [ "ComputeSupportMotionIncrement", "classAssembler.html#ab1c1218154138eeb898a6bdc4f5c4324", null ],
     [ "SetForceTolerance", "classAssembler.html#ae26e23c90b90711941c450445a1fc7a6", null ],

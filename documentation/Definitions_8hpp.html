@@ -106,9 +106,10 @@ $(document).ready(function(){initNavTree('Definitions_8hpp.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>This file sets the global variables to be used during execution.  
+<p>This file sets the global variables to be used during SeismoVLAB execution.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Definitions.hpp:</div>
 <div class="dyncontent">
@@ -119,9 +120,9 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="Definitions_8hpp__dep__incl.png" border="0" usemap="#Definitions_8hppdep" alt=""/></div>
 <map name="Definitions_8hppdep" id="Definitions_8hppdep">
-<area shape="rect" id="node2" href="Parser_8hpp.html" title="Parser.hpp" alt="" coords="5,155,91,181"/>
-<area shape="rect" id="node3" href="Profiler_8hpp.html" title="Profiler.hpp" alt="" coords="45,80,133,107"/>
-<area shape="rect" id="node4" href="Utilities_8hpp.html" title="Utilities.hpp" alt="" coords="157,80,248,107"/>
+<area shape="rect" id="node2" href="Driver_8hpp.html" title="This file contains the &quot;parsing&quot; functions to create, modify and analyze a finite element model provi..." alt="" coords="5,155,88,181"/>
+<area shape="rect" id="node3" href="Profiler_8hpp.html" title="This file contains the &quot;Profiler object&quot; declarations to compute how long it takes for a program to b..." alt="" coords="44,80,132,107"/>
+<area shape="rect" id="node4" href="Utilities_8hpp.html" title="Sets of functions used to parse command line information and to display SeismoVLAB information..." alt="" coords="156,80,247,107"/>
 </map>
 </div>
 </div>
@@ -135,31 +136,105 @@ Macros</h2></td></tr>
 <tr class="memitem:a86d500a34c624c2cae56bc25a31b12f3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a86d500a34c624c2cae56bc25a31b12f3">UNUSED</a>(x)</td></tr>
 <tr class="memdesc:a86d500a34c624c2cae56bc25a31b12f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define macro for unused parameter.  <a href="#a86d500a34c624c2cae56bc25a31b12f3">More...</a><br /></td></tr>
 <tr class="separator:a86d500a34c624c2cae56bc25a31b12f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a706dc35d062bff25f0c3f625ef7bf58c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a706dc35d062bff25f0c3f625ef7bf58c">GROUPTRUSS</a>&#160;&#160;&#160;10</td></tr>
-<tr class="memdesc:a706dc35d062bff25f0c3f625ef7bf58c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define group of elements for ParaView.  <a href="#a706dc35d062bff25f0c3f625ef7bf58c">More...</a><br /></td></tr>
-<tr class="separator:a706dc35d062bff25f0c3f625ef7bf58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae93049b6eb0dc86f2985e54db8f556e8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#ae93049b6eb0dc86f2985e54db8f556e8">GROUPTRIA</a>&#160;&#160;&#160;11</td></tr>
-<tr class="separator:ae93049b6eb0dc86f2985e54db8f556e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d662f1f8ee25742943ad6249805d56c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a0d662f1f8ee25742943ad6249805d56c">GROUPQUAD</a>&#160;&#160;&#160;12</td></tr>
-<tr class="separator:a0d662f1f8ee25742943ad6249805d56c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a698ae0f0b39ebbf6bd36e1f9a884dc69"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a698ae0f0b39ebbf6bd36e1f9a884dc69">GROUPTETRA</a>&#160;&#160;&#160;13</td></tr>
-<tr class="separator:a698ae0f0b39ebbf6bd36e1f9a884dc69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98365bfe5708563e90e12a55a72d1741"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a98365bfe5708563e90e12a55a72d1741">GROUPHEXA</a>&#160;&#160;&#160;14</td></tr>
-<tr class="separator:a98365bfe5708563e90e12a55a72d1741"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a754e672b35bf6ccbe58c65792fe30d89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a754e672b35bf6ccbe58c65792fe30d89">GROUPFRAME</a>&#160;&#160;&#160;20</td></tr>
-<tr class="separator:a754e672b35bf6ccbe58c65792fe30d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b97f698c4a9dfb1b569954aa65b1d88"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a5b97f698c4a9dfb1b569954aa65b1d88">GROUPSHELL</a>&#160;&#160;&#160;21</td></tr>
-<tr class="separator:a5b97f698c4a9dfb1b569954aa65b1d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80cd3dd28f1c1b802bc6650421165fa8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a80cd3dd28f1c1b802bc6650421165fa8">GROUPZERO</a>&#160;&#160;&#160;31</td></tr>
-<tr class="separator:a80cd3dd28f1c1b802bc6650421165fa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3a5711db5b288d80c2ed31633912c9c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#ac3a5711db5b288d80c2ed31633912c9c">GROUPPML</a>&#160;&#160;&#160;32</td></tr>
-<tr class="separator:ac3a5711db5b288d80c2ed31633912c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a252d98e915d4acdc83f95411c75ee94d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a252d98e915d4acdc83f95411c75ee94d">GROUPBWEN</a>&#160;&#160;&#160;41</td></tr>
-<tr class="separator:a252d98e915d4acdc83f95411c75ee94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a782eb8201fb601bf41699c6ee3ac44b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a782eb8201fb601bf41699c6ee3ac44b8">GROUPHDRB</a>&#160;&#160;&#160;42</td></tr>
-<tr class="separator:a782eb8201fb601bf41699c6ee3ac44b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c4d45632f52a784a44b6e6a3534815f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a5c4d45632f52a784a44b6e6a3534815f">GROUPNULL</a>&#160;&#160;&#160;50</td></tr>
-<tr class="separator:a5c4d45632f52a784a44b6e6a3534815f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7786ae33f2e269d70eeaf4bc4cdbaa2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a7786ae33f2e269d70eeaf4bc4cdbaa2d">GROUP_ELEMENT_TRUSS</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memdesc:a7786ae33f2e269d70eeaf4bc4cdbaa2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define group of truss elements, i.e, linear and quadratic for ParaView visualization.  <a href="#a7786ae33f2e269d70eeaf4bc4cdbaa2d">More...</a><br /></td></tr>
+<tr class="separator:a7786ae33f2e269d70eeaf4bc4cdbaa2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8a7176fa1341b2fe357a7d7c50f3d7c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#ae8a7176fa1341b2fe357a7d7c50f3d7c">GROUP_ELEMENT_TRIA</a>&#160;&#160;&#160;11</td></tr>
+<tr class="memdesc:ae8a7176fa1341b2fe357a7d7c50f3d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define group of triangular elements, i.e, linear and quadratic for ParaView visualization.  <a href="#ae8a7176fa1341b2fe357a7d7c50f3d7c">More...</a><br /></td></tr>
+<tr class="separator:ae8a7176fa1341b2fe357a7d7c50f3d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a045b20f123b6656f79a19fd6ed738784"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a045b20f123b6656f79a19fd6ed738784">GROUP_ELEMENT_QUAD</a>&#160;&#160;&#160;12</td></tr>
+<tr class="memdesc:a045b20f123b6656f79a19fd6ed738784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define group of quadrilateral elements, i.e, linear and quadratic for ParaView visualization.  <a href="#a045b20f123b6656f79a19fd6ed738784">More...</a><br /></td></tr>
+<tr class="separator:a045b20f123b6656f79a19fd6ed738784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf7b77d3742c3c87dc5aab5814b06e4d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#aaf7b77d3742c3c87dc5aab5814b06e4d">GROUP_ELEMENT_TETRA</a>&#160;&#160;&#160;13</td></tr>
+<tr class="memdesc:aaf7b77d3742c3c87dc5aab5814b06e4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define group of tetrahedra elements, i.e, linear and quadratic for ParaView visualization.  <a href="#aaf7b77d3742c3c87dc5aab5814b06e4d">More...</a><br /></td></tr>
+<tr class="separator:aaf7b77d3742c3c87dc5aab5814b06e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5d3b46a16d5d1f3831ac9373a38e3f9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#aa5d3b46a16d5d1f3831ac9373a38e3f9">GROUP_ELEMENT_HEXA</a>&#160;&#160;&#160;14</td></tr>
+<tr class="memdesc:aa5d3b46a16d5d1f3831ac9373a38e3f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define group of hexahedra elements, i.e, linear and quadratic for ParaView visualization.  <a href="#aa5d3b46a16d5d1f3831ac9373a38e3f9">More...</a><br /></td></tr>
+<tr class="separator:aa5d3b46a16d5d1f3831ac9373a38e3f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a735338062c1393d3968c7448668f4fb8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a735338062c1393d3968c7448668f4fb8">GROUP_ELEMENT_FRAME</a>&#160;&#160;&#160;20</td></tr>
+<tr class="memdesc:a735338062c1393d3968c7448668f4fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define group of frame elements, i.e, linear and quadratic for ParaView visualization.  <a href="#a735338062c1393d3968c7448668f4fb8">More...</a><br /></td></tr>
+<tr class="separator:a735338062c1393d3968c7448668f4fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad42533bd685812c5c619396c0599392f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#ad42533bd685812c5c619396c0599392f">GROUP_ELEMENT_SHELL</a>&#160;&#160;&#160;21</td></tr>
+<tr class="memdesc:ad42533bd685812c5c619396c0599392f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define group of shell elements, i.e, linear and quadratic for ParaView visualization.  <a href="#ad42533bd685812c5c619396c0599392f">More...</a><br /></td></tr>
+<tr class="separator:ad42533bd685812c5c619396c0599392f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af870d6ef158df6cad1988ce07fef9735"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#af870d6ef158df6cad1988ce07fef9735">GROUP_ELEMENT_ZERO</a>&#160;&#160;&#160;31</td></tr>
+<tr class="memdesc:af870d6ef158df6cad1988ce07fef9735"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define group of zero length elements, i.e, linear and quadratic for ParaView visualization.  <a href="#af870d6ef158df6cad1988ce07fef9735">More...</a><br /></td></tr>
+<tr class="separator:af870d6ef158df6cad1988ce07fef9735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae49e95ef2ddc96a8be9c2c8288c72b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a0ae49e95ef2ddc96a8be9c2c8288c72b">GROUP_ELEMENT_PML</a>&#160;&#160;&#160;32</td></tr>
+<tr class="memdesc:a0ae49e95ef2ddc96a8be9c2c8288c72b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define group of perfectly-matched layer elements, i.e, linear and quadratic for ParaView visualization.  <a href="#a0ae49e95ef2ddc96a8be9c2c8288c72b">More...</a><br /></td></tr>
+<tr class="separator:a0ae49e95ef2ddc96a8be9c2c8288c72b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17343bff609b904f600c354d937544e5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a17343bff609b904f600c354d937544e5">GROUP_ELEMENT_BWEN</a>&#160;&#160;&#160;41</td></tr>
+<tr class="memdesc:a17343bff609b904f600c354d937544e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define group of bouc-wen device elements, i.e, linear and quadratic for ParaView visualization.  <a href="#a17343bff609b904f600c354d937544e5">More...</a><br /></td></tr>
+<tr class="separator:a17343bff609b904f600c354d937544e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaca6bdd905e8173aae202d8c84766057"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#aaca6bdd905e8173aae202d8c84766057">GROUP_ELEMENT_HDRB</a>&#160;&#160;&#160;42</td></tr>
+<tr class="memdesc:aaca6bdd905e8173aae202d8c84766057"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define group of high-damping rubber bearing device elements, i.e, linear and quadratic for ParaView visualization.  <a href="#aaca6bdd905e8173aae202d8c84766057">More...</a><br /></td></tr>
+<tr class="separator:aaca6bdd905e8173aae202d8c84766057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfa0b1f400c190a3fca44b9aa34d55e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#abfa0b1f400c190a3fca44b9aa34d55e7">GROUP_ELEMENT_NULL</a>&#160;&#160;&#160;50</td></tr>
+<tr class="memdesc:abfa0b1f400c190a3fca44b9aa34d55e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define group of null elements, i.e, linear and quadratic for ParaView visualization.  <a href="#abfa0b1f400c190a3fca44b9aa34d55e7">More...</a><br /></td></tr>
+<tr class="separator:abfa0b1f400c190a3fca44b9aa34d55e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1636599de3a27a68aefd71ef05a1f756"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a1636599de3a27a68aefd71ef05a1f756">VTK_POINT</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:a1636599de3a27a68aefd71ef05a1f756"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define ParaView VTK point (1 nodes) element types.  <a href="#a1636599de3a27a68aefd71ef05a1f756">More...</a><br /></td></tr>
+<tr class="separator:a1636599de3a27a68aefd71ef05a1f756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79395dba0ee26492709a639a9d549255"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a79395dba0ee26492709a639a9d549255">VTK_LINEAR_LINE</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:a79395dba0ee26492709a639a9d549255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define ParaView VTK line (2 nodes) element types.  <a href="#a79395dba0ee26492709a639a9d549255">More...</a><br /></td></tr>
+<tr class="separator:a79395dba0ee26492709a639a9d549255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a982b1fbf6e96c53b73fc7c04caf30a75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a982b1fbf6e96c53b73fc7c04caf30a75">VTK_QUADRATIC_LINE</a>&#160;&#160;&#160;21</td></tr>
+<tr class="memdesc:a982b1fbf6e96c53b73fc7c04caf30a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define ParaView VTK line (3 nodes) element types.  <a href="#a982b1fbf6e96c53b73fc7c04caf30a75">More...</a><br /></td></tr>
+<tr class="separator:a982b1fbf6e96c53b73fc7c04caf30a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8f277c7c3ac826ca8ac95e9441ebc85"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#af8f277c7c3ac826ca8ac95e9441ebc85">VTK_LINEAR_TRIA</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:af8f277c7c3ac826ca8ac95e9441ebc85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define ParaView VTK triangular (2 nodes) element types.  <a href="#af8f277c7c3ac826ca8ac95e9441ebc85">More...</a><br /></td></tr>
+<tr class="separator:af8f277c7c3ac826ca8ac95e9441ebc85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5de499ca7b043d4d488aece222107c12"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a5de499ca7b043d4d488aece222107c12">VTK_QUADRATIC_TRIA</a>&#160;&#160;&#160;22</td></tr>
+<tr class="memdesc:a5de499ca7b043d4d488aece222107c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define ParaView VTK triangular (3 nodes) element types.  <a href="#a5de499ca7b043d4d488aece222107c12">More...</a><br /></td></tr>
+<tr class="separator:a5de499ca7b043d4d488aece222107c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9d15eeb66452b151b02ee0f429d5a5f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#ad9d15eeb66452b151b02ee0f429d5a5f">VTK_LINEAR_QUAD</a>&#160;&#160;&#160;9</td></tr>
+<tr class="memdesc:ad9d15eeb66452b151b02ee0f429d5a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define ParaView VTK quadrilateral (4 nodes) element types.  <a href="#ad9d15eeb66452b151b02ee0f429d5a5f">More...</a><br /></td></tr>
+<tr class="separator:ad9d15eeb66452b151b02ee0f429d5a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a690d9317401acd1763062e511699b935"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a690d9317401acd1763062e511699b935">VTK_QUADRATIC_QUAD</a>&#160;&#160;&#160;23</td></tr>
+<tr class="memdesc:a690d9317401acd1763062e511699b935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define ParaView VTK quadrilateral (8 nodes) element types.  <a href="#a690d9317401acd1763062e511699b935">More...</a><br /></td></tr>
+<tr class="separator:a690d9317401acd1763062e511699b935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a826b98b576b5c91154f243b2d5de2900"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a826b98b576b5c91154f243b2d5de2900">VTK_LINEAR_TETRA</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memdesc:a826b98b576b5c91154f243b2d5de2900"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define ParaView VTK tetrahedron (4 nodes) element types.  <a href="#a826b98b576b5c91154f243b2d5de2900">More...</a><br /></td></tr>
+<tr class="separator:a826b98b576b5c91154f243b2d5de2900"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae44510c0baf69ed0370387ad86ce2c0c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#ae44510c0baf69ed0370387ad86ce2c0c">VTK_QUADRATIC_TETRA</a>&#160;&#160;&#160;24</td></tr>
+<tr class="memdesc:ae44510c0baf69ed0370387ad86ce2c0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define ParaView VTK tetrahedron (10 nodes) element types.  <a href="#ae44510c0baf69ed0370387ad86ce2c0c">More...</a><br /></td></tr>
+<tr class="separator:ae44510c0baf69ed0370387ad86ce2c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1ba9f7b7eccaeeeb307cd53f9019848"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#ad1ba9f7b7eccaeeeb307cd53f9019848">VTK_LINEAR_HEXA</a>&#160;&#160;&#160;12</td></tr>
+<tr class="memdesc:ad1ba9f7b7eccaeeeb307cd53f9019848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define ParaView VTK hexahedron (8 nodes) element types.  <a href="#ad1ba9f7b7eccaeeeb307cd53f9019848">More...</a><br /></td></tr>
+<tr class="separator:ad1ba9f7b7eccaeeeb307cd53f9019848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3587abd6661d273f7d606f334e42cbab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a3587abd6661d273f7d606f334e42cbab">VTK_QUADRATIC_HEXA</a>&#160;&#160;&#160;25</td></tr>
+<tr class="memdesc:a3587abd6661d273f7d606f334e42cbab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define ParaView VTK hexahedron (20 nodes) element types.  <a href="#a3587abd6661d273f7d606f334e42cbab">More...</a><br /></td></tr>
+<tr class="separator:a3587abd6661d273f7d606f334e42cbab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12185030d56aae7dd777f4cc36657409"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a12185030d56aae7dd777f4cc36657409">POINTLOAD_CONCENTRATED_CONSTANT</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:a12185030d56aae7dd777f4cc36657409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define global load pattern constant concentrated load.  <a href="#a12185030d56aae7dd777f4cc36657409">More...</a><br /></td></tr>
+<tr class="separator:a12185030d56aae7dd777f4cc36657409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a982ef6233cf13a4f3de75cec41436ac4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a982ef6233cf13a4f3de75cec41436ac4">POINTLOAD_CONCENTRATED_DYNAMIC</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:a982ef6233cf13a4f3de75cec41436ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define global load pattern time dependant concentrated load.  <a href="#a982ef6233cf13a4f3de75cec41436ac4">More...</a><br /></td></tr>
+<tr class="separator:a982ef6233cf13a4f3de75cec41436ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45230d5868ae4cc42bcd003e34cb0ff0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a45230d5868ae4cc42bcd003e34cb0ff0">POINTLOAD_BODY_CONSTANT</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:a45230d5868ae4cc42bcd003e34cb0ff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define global load pattern for a node body load.  <a href="#a45230d5868ae4cc42bcd003e34cb0ff0">More...</a><br /></td></tr>
+<tr class="separator:a45230d5868ae4cc42bcd003e34cb0ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b3d3c2b13baf4c0daed1792d03fc578"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a8b3d3c2b13baf4c0daed1792d03fc578">POINTLOAD_BODY_DYNAMIC</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memdesc:a8b3d3c2b13baf4c0daed1792d03fc578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define global load pattern time dependant for a body load.  <a href="#a8b3d3c2b13baf4c0daed1792d03fc578">More...</a><br /></td></tr>
+<tr class="separator:a8b3d3c2b13baf4c0daed1792d03fc578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76f6eedcb96385a72ffa6ac188a40950"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a76f6eedcb96385a72ffa6ac188a40950">ELEMENTLOAD_SURFACE_CONSTANT</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:a76f6eedcb96385a72ffa6ac188a40950"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define global load pattern for a constant surface load.  <a href="#a76f6eedcb96385a72ffa6ac188a40950">More...</a><br /></td></tr>
+<tr class="separator:a76f6eedcb96385a72ffa6ac188a40950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a477ab7e0e9bc6b5e50b3da3af8e86c44"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a477ab7e0e9bc6b5e50b3da3af8e86c44">ELEMENTLOAD_SURFACE_DYNAMIC</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memdesc:a477ab7e0e9bc6b5e50b3da3af8e86c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define global load pattern for a time dependant surface load.  <a href="#a477ab7e0e9bc6b5e50b3da3af8e86c44">More...</a><br /></td></tr>
+<tr class="separator:a477ab7e0e9bc6b5e50b3da3af8e86c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10aa655dd06681dcf9f37f10abea34e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a10aa655dd06681dcf9f37f10abea34e6">ELEMENTLOAD_BODY_CONSTANT</a>&#160;&#160;&#160;7</td></tr>
+<tr class="memdesc:a10aa655dd06681dcf9f37f10abea34e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define global load pattern for a constant body load.  <a href="#a10aa655dd06681dcf9f37f10abea34e6">More...</a><br /></td></tr>
+<tr class="separator:a10aa655dd06681dcf9f37f10abea34e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43e60eeae925b79b47a38db32f4f0921"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a43e60eeae925b79b47a38db32f4f0921">ELEMENTLOAD_BODY_DYNAMIC</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memdesc:a43e60eeae925b79b47a38db32f4f0921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define global load pattern for a time dependant body load.  <a href="#a43e60eeae925b79b47a38db32f4f0921">More...</a><br /></td></tr>
+<tr class="separator:a43e60eeae925b79b47a38db32f4f0921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72974d3d2c2064a4c7298fe7d0ca6f27"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a72974d3d2c2064a4c7298fe7d0ca6f27">ELEMENTLOAD_DOMAIN_REDUCTION</a>&#160;&#160;&#160;9</td></tr>
+<tr class="memdesc:a72974d3d2c2064a4c7298fe7d0ca6f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define global load pattern time dependant general wave load.  <a href="#a72974d3d2c2064a4c7298fe7d0ca6f27">More...</a><br /></td></tr>
+<tr class="separator:a72974d3d2c2064a4c7298fe7d0ca6f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f68c4f3bd3a0e4f5831233249b49314"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a2f68c4f3bd3a0e4f5831233249b49314">POINTLOAD_SUPPORT_MOTION</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memdesc:a2f68c4f3bd3a0e4f5831233249b49314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define global load pattern constant/time-dependant support motion load.  <a href="#a2f68c4f3bd3a0e4f5831233249b49314">More...</a><br /></td></tr>
+<tr class="separator:a2f68c4f3bd3a0e4f5831233249b49314"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -172,18 +247,21 @@ Variables</h2></td></tr>
 <tr class="memitem:a19e5b03b2be8d78bd8ce30ad81e105d6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a19e5b03b2be8d78bd8ce30ad81e105d6">nDimensions</a></td></tr>
 <tr class="memdesc:a19e5b03b2be8d78bd8ce30ad81e105d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The problem dimension (1D, 2D, 3D).  <a href="#a19e5b03b2be8d78bd8ce30ad81e105d6">More...</a><br /></td></tr>
 <tr class="separator:a19e5b03b2be8d78bd8ce30ad81e105d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac81f9269c8d57eed4d5b56f054fc84de"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#ac81f9269c8d57eed4d5b56f054fc84de">fileName</a></td></tr>
-<tr class="memdesc:ac81f9269c8d57eed4d5b56f054fc84de"><td class="mdescLeft">&#160;</td><td class="mdescRight">The file name to be loaded.  <a href="#ac81f9269c8d57eed4d5b56f054fc84de">More...</a><br /></td></tr>
-<tr class="separator:ac81f9269c8d57eed4d5b56f054fc84de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa770d80493fae04dd6a59446cceb8e75"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#aa770d80493fae04dd6a59446cceb8e75">filePath</a></td></tr>
 <tr class="memdesc:aa770d80493fae04dd6a59446cceb8e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">The folder path where the file is loaded.  <a href="#aa770d80493fae04dd6a59446cceb8e75">More...</a><br /></td></tr>
 <tr class="separator:aa770d80493fae04dd6a59446cceb8e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2660a677f4b723b49c190ec5c5ba32b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#ae2660a677f4b723b49c190ec5c5ba32b">FormOfExecution</a></td></tr>
-<tr class="memdesc:ae2660a677f4b723b49c190ec5c5ba32b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Execution for each simulation.  <a href="#ae2660a677f4b723b49c190ec5c5ba32b">More...</a><br /></td></tr>
-<tr class="separator:ae2660a677f4b723b49c190ec5c5ba32b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bbc404bddbc4cafd5e1f86b9b8ff50d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a3bbc404bddbc4cafd5e1f86b9b8ff50d">fileName</a></td></tr>
+<tr class="memdesc:a3bbc404bddbc4cafd5e1f86b9b8ff50d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The file name to be loaded.  <a href="#a3bbc404bddbc4cafd5e1f86b9b8ff50d">More...</a><br /></td></tr>
+<tr class="separator:a3bbc404bddbc4cafd5e1f86b9b8ff50d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dd78b5562ceaf8a4bcb551ef9b8e6c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a2dd78b5562ceaf8a4bcb551ef9b8e6c5">driverFile</a></td></tr>
+<tr class="memdesc:a2dd78b5562ceaf8a4bcb551ef9b8e6c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the driver (JSON) file is provided.  <a href="#a2dd78b5562ceaf8a4bcb551ef9b8e6c5">More...</a><br /></td></tr>
+<tr class="separator:a2dd78b5562ceaf8a4bcb551ef9b8e6c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c113dfaf37c3366c2cd4a54e0d4b000"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a6c113dfaf37c3366c2cd4a54e0d4b000">MassFormulation</a></td></tr>
 <tr class="memdesc:a6c113dfaf37c3366c2cd4a54e0d4b000"><td class="mdescLeft">&#160;</td><td class="mdescRight">The element mass formulation.  <a href="#a6c113dfaf37c3366c2cd4a54e0d4b000">More...</a><br /></td></tr>
 <tr class="separator:a6c113dfaf37c3366c2cd4a54e0d4b000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32b84648602f633e8db5b7f73f49a6b6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a32b84648602f633e8db5b7f73f49a6b6">UpdateOption</a></td></tr>
+<tr class="memdesc:a32b84648602f633e8db5b7f73f49a6b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The update option for member in <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.  <a href="#a32b84648602f633e8db5b7f73f49a6b6">More...</a><br /></td></tr>
+<tr class="separator:a32b84648602f633e8db5b7f73f49a6b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a660ccb16de86e113372e3ff256bab21d"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Definitions_8hpp.html#a660ccb16de86e113372e3ff256bab21d">LumpedStorage</a></td></tr>
 <tr class="memdesc:a660ccb16de86e113372e3ff256bab21d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum memory for lumped storage sparse matrix.  <a href="#a660ccb16de86e113372e3ff256bab21d">More...</a><br /></td></tr>
 <tr class="separator:a660ccb16de86e113372e3ff256bab21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,179 +282,361 @@ Variables</h2></td></tr>
 <tr class="separator:a05ab73edcff12b04c3cd77e6538ff42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This file sets the global variables to be used during execution. </p>
+<div class="textblock"><p>This file sets the global variables to be used during SeismoVLAB execution. </p>
 <dl class="section author"><dt>Author</dt><dd>Danilo S. Kusanovic (<a href="#" onclick="location.href='mai'+'lto:'+'dku'+'sa'+'nov'+'@c'+'alt'+'ec'+'h.e'+'du'; return false;">dkusa<span style="display: none;">.nosp@m.</span>nov@<span style="display: none;">.nosp@m.</span>calte<span style="display: none;">.nosp@m.</span>ch.e<span style="display: none;">.nosp@m.</span>du</a>) </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>June 9, 2020 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="Utilities_8hpp.html">Utilities.hpp</a> and <a class="el" href="Profiler_8hpp.html">Profiler.hpp</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="Utilities_8hpp.html" title="Sets of functions used to parse command line information and to display SeismoVLAB information...">Utilities.hpp</a> and <a class="el" href="Profiler_8hpp.html" title="This file contains the &quot;Profiler object&quot; declarations to compute how long it takes for a program to b...">Profiler.hpp</a> </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a252d98e915d4acdc83f95411c75ee94d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a252d98e915d4acdc83f95411c75ee94d">&#9670;&nbsp;</a></span>GROUPBWEN</h2>
+<a id="a10aa655dd06681dcf9f37f10abea34e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10aa655dd06681dcf9f37f10abea34e6">&#9670;&nbsp;</a></span>ELEMENTLOAD_BODY_CONSTANT</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define GROUPBWEN&#160;&#160;&#160;41</td>
+          <td class="memname">#define ELEMENTLOAD_BODY_CONSTANT&#160;&#160;&#160;7</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Define global load pattern for a constant body load. </p>
+
 </div>
 </div>
-<a id="a754e672b35bf6ccbe58c65792fe30d89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a754e672b35bf6ccbe58c65792fe30d89">&#9670;&nbsp;</a></span>GROUPFRAME</h2>
+<a id="a43e60eeae925b79b47a38db32f4f0921"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43e60eeae925b79b47a38db32f4f0921">&#9670;&nbsp;</a></span>ELEMENTLOAD_BODY_DYNAMIC</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define GROUPFRAME&#160;&#160;&#160;20</td>
+          <td class="memname">#define ELEMENTLOAD_BODY_DYNAMIC&#160;&#160;&#160;8</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Define global load pattern for a time dependant body load. </p>
+
 </div>
 </div>
-<a id="a782eb8201fb601bf41699c6ee3ac44b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a782eb8201fb601bf41699c6ee3ac44b8">&#9670;&nbsp;</a></span>GROUPHDRB</h2>
+<a id="a72974d3d2c2064a4c7298fe7d0ca6f27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72974d3d2c2064a4c7298fe7d0ca6f27">&#9670;&nbsp;</a></span>ELEMENTLOAD_DOMAIN_REDUCTION</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define GROUPHDRB&#160;&#160;&#160;42</td>
+          <td class="memname">#define ELEMENTLOAD_DOMAIN_REDUCTION&#160;&#160;&#160;9</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Define global load pattern time dependant general wave load. </p>
+
 </div>
 </div>
-<a id="a98365bfe5708563e90e12a55a72d1741"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98365bfe5708563e90e12a55a72d1741">&#9670;&nbsp;</a></span>GROUPHEXA</h2>
+<a id="a76f6eedcb96385a72ffa6ac188a40950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76f6eedcb96385a72ffa6ac188a40950">&#9670;&nbsp;</a></span>ELEMENTLOAD_SURFACE_CONSTANT</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define GROUPHEXA&#160;&#160;&#160;14</td>
+          <td class="memname">#define ELEMENTLOAD_SURFACE_CONSTANT&#160;&#160;&#160;5</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Define global load pattern for a constant surface load. </p>
+
 </div>
 </div>
-<a id="a5c4d45632f52a784a44b6e6a3534815f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c4d45632f52a784a44b6e6a3534815f">&#9670;&nbsp;</a></span>GROUPNULL</h2>
+<a id="a477ab7e0e9bc6b5e50b3da3af8e86c44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a477ab7e0e9bc6b5e50b3da3af8e86c44">&#9670;&nbsp;</a></span>ELEMENTLOAD_SURFACE_DYNAMIC</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define GROUPNULL&#160;&#160;&#160;50</td>
+          <td class="memname">#define ELEMENTLOAD_SURFACE_DYNAMIC&#160;&#160;&#160;6</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Define global load pattern for a time dependant surface load. </p>
+
 </div>
 </div>
-<a id="ac3a5711db5b288d80c2ed31633912c9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3a5711db5b288d80c2ed31633912c9c">&#9670;&nbsp;</a></span>GROUPPML</h2>
+<a id="a17343bff609b904f600c354d937544e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17343bff609b904f600c354d937544e5">&#9670;&nbsp;</a></span>GROUP_ELEMENT_BWEN</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define GROUPPML&#160;&#160;&#160;32</td>
+          <td class="memname">#define GROUP_ELEMENT_BWEN&#160;&#160;&#160;41</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Define group of bouc-wen device elements, i.e, linear and quadratic for ParaView visualization. </p>
+
 </div>
 </div>
-<a id="a0d662f1f8ee25742943ad6249805d56c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d662f1f8ee25742943ad6249805d56c">&#9670;&nbsp;</a></span>GROUPQUAD</h2>
+<a id="a735338062c1393d3968c7448668f4fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a735338062c1393d3968c7448668f4fb8">&#9670;&nbsp;</a></span>GROUP_ELEMENT_FRAME</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define GROUPQUAD&#160;&#160;&#160;12</td>
+          <td class="memname">#define GROUP_ELEMENT_FRAME&#160;&#160;&#160;20</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Define group of frame elements, i.e, linear and quadratic for ParaView visualization. </p>
+
 </div>
 </div>
-<a id="a5b97f698c4a9dfb1b569954aa65b1d88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b97f698c4a9dfb1b569954aa65b1d88">&#9670;&nbsp;</a></span>GROUPSHELL</h2>
+<a id="aaca6bdd905e8173aae202d8c84766057"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaca6bdd905e8173aae202d8c84766057">&#9670;&nbsp;</a></span>GROUP_ELEMENT_HDRB</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define GROUPSHELL&#160;&#160;&#160;21</td>
+          <td class="memname">#define GROUP_ELEMENT_HDRB&#160;&#160;&#160;42</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Define group of high-damping rubber bearing device elements, i.e, linear and quadratic for ParaView visualization. </p>
+
 </div>
 </div>
-<a id="a698ae0f0b39ebbf6bd36e1f9a884dc69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a698ae0f0b39ebbf6bd36e1f9a884dc69">&#9670;&nbsp;</a></span>GROUPTETRA</h2>
+<a id="aa5d3b46a16d5d1f3831ac9373a38e3f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5d3b46a16d5d1f3831ac9373a38e3f9">&#9670;&nbsp;</a></span>GROUP_ELEMENT_HEXA</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define GROUPTETRA&#160;&#160;&#160;13</td>
+          <td class="memname">#define GROUP_ELEMENT_HEXA&#160;&#160;&#160;14</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Define group of hexahedra elements, i.e, linear and quadratic for ParaView visualization. </p>
+
 </div>
 </div>
-<a id="ae93049b6eb0dc86f2985e54db8f556e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae93049b6eb0dc86f2985e54db8f556e8">&#9670;&nbsp;</a></span>GROUPTRIA</h2>
+<a id="abfa0b1f400c190a3fca44b9aa34d55e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfa0b1f400c190a3fca44b9aa34d55e7">&#9670;&nbsp;</a></span>GROUP_ELEMENT_NULL</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define GROUPTRIA&#160;&#160;&#160;11</td>
+          <td class="memname">#define GROUP_ELEMENT_NULL&#160;&#160;&#160;50</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Define group of null elements, i.e, linear and quadratic for ParaView visualization. </p>
+
 </div>
 </div>
-<a id="a706dc35d062bff25f0c3f625ef7bf58c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a706dc35d062bff25f0c3f625ef7bf58c">&#9670;&nbsp;</a></span>GROUPTRUSS</h2>
+<a id="a0ae49e95ef2ddc96a8be9c2c8288c72b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ae49e95ef2ddc96a8be9c2c8288c72b">&#9670;&nbsp;</a></span>GROUP_ELEMENT_PML</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define GROUPTRUSS&#160;&#160;&#160;10</td>
+          <td class="memname">#define GROUP_ELEMENT_PML&#160;&#160;&#160;32</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Define group of elements for ParaView. </p>
+<p>Define group of perfectly-matched layer elements, i.e, linear and quadratic for ParaView visualization. </p>
 
 </div>
 </div>
-<a id="a80cd3dd28f1c1b802bc6650421165fa8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80cd3dd28f1c1b802bc6650421165fa8">&#9670;&nbsp;</a></span>GROUPZERO</h2>
+<a id="a045b20f123b6656f79a19fd6ed738784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a045b20f123b6656f79a19fd6ed738784">&#9670;&nbsp;</a></span>GROUP_ELEMENT_QUAD</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define GROUPZERO&#160;&#160;&#160;31</td>
+          <td class="memname">#define GROUP_ELEMENT_QUAD&#160;&#160;&#160;12</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Define group of quadrilateral elements, i.e, linear and quadratic for ParaView visualization. </p>
+
+</div>
+</div>
+<a id="ad42533bd685812c5c619396c0599392f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad42533bd685812c5c619396c0599392f">&#9670;&nbsp;</a></span>GROUP_ELEMENT_SHELL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GROUP_ELEMENT_SHELL&#160;&#160;&#160;21</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define group of shell elements, i.e, linear and quadratic for ParaView visualization. </p>
+
+</div>
+</div>
+<a id="aaf7b77d3742c3c87dc5aab5814b06e4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf7b77d3742c3c87dc5aab5814b06e4d">&#9670;&nbsp;</a></span>GROUP_ELEMENT_TETRA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GROUP_ELEMENT_TETRA&#160;&#160;&#160;13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define group of tetrahedra elements, i.e, linear and quadratic for ParaView visualization. </p>
+
+</div>
+</div>
+<a id="ae8a7176fa1341b2fe357a7d7c50f3d7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8a7176fa1341b2fe357a7d7c50f3d7c">&#9670;&nbsp;</a></span>GROUP_ELEMENT_TRIA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GROUP_ELEMENT_TRIA&#160;&#160;&#160;11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define group of triangular elements, i.e, linear and quadratic for ParaView visualization. </p>
+
+</div>
+</div>
+<a id="a7786ae33f2e269d70eeaf4bc4cdbaa2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7786ae33f2e269d70eeaf4bc4cdbaa2d">&#9670;&nbsp;</a></span>GROUP_ELEMENT_TRUSS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GROUP_ELEMENT_TRUSS&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define group of truss elements, i.e, linear and quadratic for ParaView visualization. </p>
+
+</div>
+</div>
+<a id="af870d6ef158df6cad1988ce07fef9735"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af870d6ef158df6cad1988ce07fef9735">&#9670;&nbsp;</a></span>GROUP_ELEMENT_ZERO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GROUP_ELEMENT_ZERO&#160;&#160;&#160;31</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define group of zero length elements, i.e, linear and quadratic for ParaView visualization. </p>
+
+</div>
+</div>
+<a id="a45230d5868ae4cc42bcd003e34cb0ff0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45230d5868ae4cc42bcd003e34cb0ff0">&#9670;&nbsp;</a></span>POINTLOAD_BODY_CONSTANT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POINTLOAD_BODY_CONSTANT&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define global load pattern for a node body load. </p>
+
+</div>
+</div>
+<a id="a8b3d3c2b13baf4c0daed1792d03fc578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b3d3c2b13baf4c0daed1792d03fc578">&#9670;&nbsp;</a></span>POINTLOAD_BODY_DYNAMIC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POINTLOAD_BODY_DYNAMIC&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define global load pattern time dependant for a body load. </p>
+
+</div>
+</div>
+<a id="a12185030d56aae7dd777f4cc36657409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12185030d56aae7dd777f4cc36657409">&#9670;&nbsp;</a></span>POINTLOAD_CONCENTRATED_CONSTANT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POINTLOAD_CONCENTRATED_CONSTANT&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define global load pattern constant concentrated load. </p>
+
+</div>
+</div>
+<a id="a982ef6233cf13a4f3de75cec41436ac4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a982ef6233cf13a4f3de75cec41436ac4">&#9670;&nbsp;</a></span>POINTLOAD_CONCENTRATED_DYNAMIC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POINTLOAD_CONCENTRATED_DYNAMIC&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define global load pattern time dependant concentrated load. </p>
+
+</div>
+</div>
+<a id="a2f68c4f3bd3a0e4f5831233249b49314"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f68c4f3bd3a0e4f5831233249b49314">&#9670;&nbsp;</a></span>POINTLOAD_SUPPORT_MOTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POINTLOAD_SUPPORT_MOTION&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define global load pattern constant/time-dependant support motion load. </p>
 
 </div>
 </div>
@@ -416,6 +676,182 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ad1ba9f7b7eccaeeeb307cd53f9019848"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1ba9f7b7eccaeeeb307cd53f9019848">&#9670;&nbsp;</a></span>VTK_LINEAR_HEXA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VTK_LINEAR_HEXA&#160;&#160;&#160;12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define ParaView VTK hexahedron (8 nodes) element types. </p>
+
+</div>
+</div>
+<a id="a79395dba0ee26492709a639a9d549255"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79395dba0ee26492709a639a9d549255">&#9670;&nbsp;</a></span>VTK_LINEAR_LINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VTK_LINEAR_LINE&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define ParaView VTK line (2 nodes) element types. </p>
+
+</div>
+</div>
+<a id="ad9d15eeb66452b151b02ee0f429d5a5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9d15eeb66452b151b02ee0f429d5a5f">&#9670;&nbsp;</a></span>VTK_LINEAR_QUAD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VTK_LINEAR_QUAD&#160;&#160;&#160;9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define ParaView VTK quadrilateral (4 nodes) element types. </p>
+
+</div>
+</div>
+<a id="a826b98b576b5c91154f243b2d5de2900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a826b98b576b5c91154f243b2d5de2900">&#9670;&nbsp;</a></span>VTK_LINEAR_TETRA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VTK_LINEAR_TETRA&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define ParaView VTK tetrahedron (4 nodes) element types. </p>
+
+</div>
+</div>
+<a id="af8f277c7c3ac826ca8ac95e9441ebc85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8f277c7c3ac826ca8ac95e9441ebc85">&#9670;&nbsp;</a></span>VTK_LINEAR_TRIA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VTK_LINEAR_TRIA&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define ParaView VTK triangular (2 nodes) element types. </p>
+
+</div>
+</div>
+<a id="a1636599de3a27a68aefd71ef05a1f756"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1636599de3a27a68aefd71ef05a1f756">&#9670;&nbsp;</a></span>VTK_POINT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VTK_POINT&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define ParaView VTK point (1 nodes) element types. </p>
+
+</div>
+</div>
+<a id="a3587abd6661d273f7d606f334e42cbab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3587abd6661d273f7d606f334e42cbab">&#9670;&nbsp;</a></span>VTK_QUADRATIC_HEXA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VTK_QUADRATIC_HEXA&#160;&#160;&#160;25</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define ParaView VTK hexahedron (20 nodes) element types. </p>
+
+</div>
+</div>
+<a id="a982b1fbf6e96c53b73fc7c04caf30a75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a982b1fbf6e96c53b73fc7c04caf30a75">&#9670;&nbsp;</a></span>VTK_QUADRATIC_LINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VTK_QUADRATIC_LINE&#160;&#160;&#160;21</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define ParaView VTK line (3 nodes) element types. </p>
+
+</div>
+</div>
+<a id="a690d9317401acd1763062e511699b935"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a690d9317401acd1763062e511699b935">&#9670;&nbsp;</a></span>VTK_QUADRATIC_QUAD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VTK_QUADRATIC_QUAD&#160;&#160;&#160;23</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define ParaView VTK quadrilateral (8 nodes) element types. </p>
+
+</div>
+</div>
+<a id="ae44510c0baf69ed0370387ad86ce2c0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae44510c0baf69ed0370387ad86ce2c0c">&#9670;&nbsp;</a></span>VTK_QUADRATIC_TETRA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VTK_QUADRATIC_TETRA&#160;&#160;&#160;24</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define ParaView VTK tetrahedron (10 nodes) element types. </p>
+
+</div>
+</div>
+<a id="a5de499ca7b043d4d488aece222107c12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5de499ca7b043d4d488aece222107c12">&#9670;&nbsp;</a></span>VTK_QUADRATIC_TRIA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VTK_QUADRATIC_TRIA&#160;&#160;&#160;22</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define ParaView VTK triangular (3 nodes) element types. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="a6565e99d5a2acb3ac38696c2ee2b48a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6565e99d5a2acb3ac38696c2ee2b48a5">&#9670;&nbsp;</a></span>ConsistentStorage</h2>
@@ -433,14 +869,30 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ac81f9269c8d57eed4d5b56f054fc84de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac81f9269c8d57eed4d5b56f054fc84de">&#9670;&nbsp;</a></span>fileName</h2>
+<a id="a2dd78b5562ceaf8a4bcb551ef9b8e6c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dd78b5562ceaf8a4bcb551ef9b8e6c5">&#9670;&nbsp;</a></span>driverFile</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string fileName</td>
+          <td class="memname">bool driverFile</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether the driver (JSON) file is provided. </p>
+
+</div>
+</div>
+<a id="a3bbc404bddbc4cafd5e1f86b9b8ff50d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bbc404bddbc4cafd5e1f86b9b8ff50d">&#9670;&nbsp;</a></span>fileName</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; fileName</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -462,22 +914,6 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The folder path where the file is loaded. </p>
-
-</div>
-</div>
-<a id="ae2660a677f4b723b49c190ec5c5ba32b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2660a677f4b723b49c190ec5c5ba32b">&#9670;&nbsp;</a></span>FormOfExecution</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool FormOfExecution</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The Execution for each simulation. </p>
 
 </div>
 </div>
@@ -625,6 +1061,22 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a32b84648602f633e8db5b7f73f49a6b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32b84648602f633e8db5b7f73f49a6b6">&#9670;&nbsp;</a></span>UpdateOption</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string UpdateOption</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The update option for member in <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
@@ -632,7 +1084,7 @@ Variables</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="dir_c4c3cc1ef075e8c2dbf7a9cdab7d21b3.html">12-Utilities</a></li><li class="navelem"><a class="el" href="Definitions_8hpp.html">Definitions.hpp</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:53 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

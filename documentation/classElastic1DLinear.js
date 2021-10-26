@@ -21,9 +21,9 @@ var classElastic1DLinear =
     [ "ReverseState", "classElastic1DLinear.html#afe0d6a8044ea59c4d1c350e25745faeb", null ],
     [ "UpdateState", "classElastic1DLinear.html#a6124c07edc45f5eea8198b8300d43cce", null ],
     [ "E", "classElastic1DLinear.html#a7ef603f307ccc3a846d9c0546393dc58", null ],
+    [ "newStrain", "classElastic1DLinear.html#a7c3249a314b8c3c29bcb1268f13c1506", null ],
     [ "nu", "classElastic1DLinear.html#a40afd520f38560d4a84fc4bb79a7ac42", null ],
     [ "Rho", "classElastic1DLinear.html#a1808d255e450aba355f746a15a3201d6", null ],
     [ "Strain", "classElastic1DLinear.html#a6373ddfcfe2276c5e323ebcd71a4d0bf", null ],
-    [ "Stress", "classElastic1DLinear.html#ac4c8be44e8b7f5d73aed7debe2aaefd5", null ],
     [ "TangentStiffness", "classElastic1DLinear.html#a0100e49c85e9458ecf665be4cda852ff", null ]
 ];

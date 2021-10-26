@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('classDynamicAnalysis.html','');});
 
 <p>This is the complete list of members for <a class="el" href="classDynamicAnalysis.html">DynamicAnalysis</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classAnalysis.html#a1ddbe949bfe5b1789ab958a2265d75c7">Analysis</a>(std::shared_ptr&lt; LoadCombo &gt; &amp;loadcombo)</td><td class="entry"><a class="el" href="classAnalysis.html">Analysis</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAnalysis.html#ab2b84b4e508f6aa61371243e8dafa59e">Analysis</a>(std::shared_ptr&lt; LoadCombo &gt; &amp;loadcombo, unsigned int nteps)</td><td class="entry"><a class="el" href="classAnalysis.html">Analysis</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classDynamicAnalysis.html#a54a5f9dc07ac098081b51cf0c7ee7d6d">Analyze</a>()</td><td class="entry"><a class="el" href="classDynamicAnalysis.html">DynamicAnalysis</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classDynamicAnalysis.html#a38a55ff467fb8e18ad07043276a4b013">DynamicAnalysis</a>(std::shared_ptr&lt; Mesh &gt; &amp;mesh, std::shared_ptr&lt; Algorithm &gt; &amp;algorithm, std::shared_ptr&lt; Integrator &gt; &amp;integrator, std::shared_ptr&lt; LoadCombo &gt; &amp;loadcombo, unsigned int nSteps=0)</td><td class="entry"><a class="el" href="classDynamicAnalysis.html">DynamicAnalysis</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classAnalysis.html#aa79b9bba8f5ea0b10271816986f7a6f1">EndRecorders</a>()</td><td class="entry"><a class="el" href="classAnalysis.html">Analysis</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
@@ -119,16 +119,17 @@ $(document).ready(function(){initNavTree('classDynamicAnalysis.html','');});
   <tr><td class="entry"><a class="el" href="classDynamicAnalysis.html#a2ab5ca1ae69fc2e4600b05f5cda708fa">theIntegrator</a></td><td class="entry"><a class="el" href="classDynamicAnalysis.html">DynamicAnalysis</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classDynamicAnalysis.html#a5de084e405045c197e46ae8489569f6f">theMesh</a></td><td class="entry"><a class="el" href="classDynamicAnalysis.html">DynamicAnalysis</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="classDynamicAnalysis.html#a50a3136b7f436c6381fed4c95274a562">UpdateDomain</a>(unsigned int k)</td><td class="entry"><a class="el" href="classDynamicAnalysis.html">DynamicAnalysis</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classAnalysis.html#a2603ddf807d4086ac2b5d132b8813890">WriteRecorders</a>(std::shared_ptr&lt; Mesh &gt; &amp;mesh, unsigned int step)</td><td class="entry"><a class="el" href="classAnalysis.html">Analysis</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classAnalysis.html#a8c3f87041212885d29ba88dbf9e2d51a">~Analysis</a>()=0</td><td class="entry"><a class="el" href="classAnalysis.html">Analysis</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classDynamicAnalysis.html#a5e09bf8623ab728a2b35adcab5868ae6">~DynamicAnalysis</a>()</td><td class="entry"><a class="el" href="classDynamicAnalysis.html">DynamicAnalysis</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAnalysis.html#a11be95e9006496df242a149225355bd6">UpdateMesh</a>(std::shared_ptr&lt; Mesh &gt; &amp;mesh, std::shared_ptr&lt; Integrator &gt; &amp;integrator)</td><td class="entry"><a class="el" href="classAnalysis.html">Analysis</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classAnalysis.html#a2603ddf807d4086ac2b5d132b8813890">WriteRecorders</a>(std::shared_ptr&lt; Mesh &gt; &amp;mesh, unsigned int step)</td><td class="entry"><a class="el" href="classAnalysis.html">Analysis</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAnalysis.html#a8c3f87041212885d29ba88dbf9e2d51a">~Analysis</a>()=0</td><td class="entry"><a class="el" href="classAnalysis.html">Analysis</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classDynamicAnalysis.html#a5e09bf8623ab728a2b35adcab5868ae6">~DynamicAnalysis</a>()</td><td class="entry"><a class="el" href="classDynamicAnalysis.html">DynamicAnalysis</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

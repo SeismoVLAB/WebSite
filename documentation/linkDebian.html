@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('linkDebian.html','');});
 <div class="title">Ubuntu Operating System </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Installation of <b>SVL</b> in Ubuntu (Debian) requires a <code>C++</code> and <code>Python</code>. These libraries can be easily installed using Debian repositories.</p>
+<div class="textblock"><p>Installation of <b>SVL</b> in <a href="https://ubuntu.com/" target="_blank">Ubuntu</a> (Debian) requires a <code>C++</code> and <code>Python</code>. These libraries can be easily installed using Debian repositories and we strongly recommend this option.</p>
 <p>For example, in <b>Ubuntu 18.04</b>, the complete installation can be done executing the following commands in a terminal: <br />
 </p><blockquote class="doxtable">
 <p><b>Install C++/Fortran Compilers</b> <br />
@@ -159,14 +159,19 @@ make -s DEBUG=False </p>
 <p>Before compiling <b>SVL</b>, please check in the Makefile.mk that the mpi library path is right. This library can be locate at <code>MPI_DIR = /usr/include/mpi</code> or <code>MPI_DIR = /usr/include/x86_64-linux-gnu/mpi</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>In <b>Ubuntu 16.04</b> the same process can be done, but <b>python3.5</b> and <b>libmumps-4.10.0</b> should be employed at <code>(*)</code> for packages consistency. </dd>
 <dd>
-In <b>Ubuntu 20.04</b> the same process can be done, but <b>python3.9</b> and <b>libmumps-5.2.1</b> should be employed at <code>(*)</code> for packages consistency. </dd></dl>
+In <b>Ubuntu 20.04</b> the same process can be done, but <b>python3.9</b> and <b>libmumps-5.2.1</b> should be employed at <code>(*)</code> for packages consistency. </dd>
+<dd>
+The previous list of steps can be employed in derived flavors such as <a href="https://ubuntu-mate.org/" target="_blank">Ubuntu MATE</a>, <a href="https://kubuntu.org/" target="_blank">Kubuntu</a>, <a href="https://xubuntu.org/" target="_blank">Xubuntu</a> If <b>SVL</b> is compiled successfully, you should see the following message: SUCCESSFUL LINKAGE. The executable SeismoVLAB.exe was generated, as shown in the following figure: <div class="image">
+<img src="UbuntuInstall.png" alt="UbuntuInstall.png" width="65%"/>
+</div>
+ </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:53 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

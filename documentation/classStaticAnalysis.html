@@ -151,12 +151,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae04f3aa664cb77dab3cc673a7e9678c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs changes in mesh.  <a href="#ae04f3aa664cb77dab3cc673a7e9678c4">More...</a><br /></td></tr>
 <tr class="separator:ae04f3aa664cb77dab3cc673a7e9678c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAnalysis"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAnalysis')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAnalysis.html">Analysis</a></td></tr>
-<tr class="memitem:a1ddbe949bfe5b1789ab958a2265d75c7 inherit pub_methods_classAnalysis"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnalysis.html#a1ddbe949bfe5b1789ab958a2265d75c7">Analysis</a> (std::shared_ptr&lt; <a class="el" href="classLoadCombo.html">LoadCombo</a> &gt; &amp;loadcombo)</td></tr>
-<tr class="memdesc:a1ddbe949bfe5b1789ab958a2265d75c7 inherit pub_methods_classAnalysis"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a> object.  <a href="classAnalysis.html#a1ddbe949bfe5b1789ab958a2265d75c7">More...</a><br /></td></tr>
-<tr class="separator:a1ddbe949bfe5b1789ab958a2265d75c7 inherit pub_methods_classAnalysis"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2b84b4e508f6aa61371243e8dafa59e inherit pub_methods_classAnalysis"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnalysis.html#ab2b84b4e508f6aa61371243e8dafa59e">Analysis</a> (std::shared_ptr&lt; <a class="el" href="classLoadCombo.html">LoadCombo</a> &gt; &amp;loadcombo, unsigned int nteps)</td></tr>
+<tr class="memdesc:ab2b84b4e508f6aa61371243e8dafa59e inherit pub_methods_classAnalysis"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a> object.  <a href="classAnalysis.html#ab2b84b4e508f6aa61371243e8dafa59e">More...</a><br /></td></tr>
+<tr class="separator:ab2b84b4e508f6aa61371243e8dafa59e inherit pub_methods_classAnalysis"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c3f87041212885d29ba88dbf9e2d51a inherit pub_methods_classAnalysis"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnalysis.html#a8c3f87041212885d29ba88dbf9e2d51a">~Analysis</a> ()=0</td></tr>
 <tr class="memdesc:a8c3f87041212885d29ba88dbf9e2d51a inherit pub_methods_classAnalysis"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a> object.  <a href="classAnalysis.html#a8c3f87041212885d29ba88dbf9e2d51a">More...</a><br /></td></tr>
 <tr class="separator:a8c3f87041212885d29ba88dbf9e2d51a inherit pub_methods_classAnalysis"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11be95e9006496df242a149225355bd6 inherit pub_methods_classAnalysis"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnalysis.html#a11be95e9006496df242a149225355bd6">UpdateMesh</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh, std::shared_ptr&lt; <a class="el" href="classIntegrator.html">Integrator</a> &gt; &amp;integrator)</td></tr>
+<tr class="memdesc:a11be95e9006496df242a149225355bd6 inherit pub_methods_classAnalysis"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update internal variables in <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a> according to form of simulation.  <a href="classAnalysis.html#a11be95e9006496df242a149225355bd6">More...</a><br /></td></tr>
+<tr class="separator:a11be95e9006496df242a149225355bd6 inherit pub_methods_classAnalysis"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2bd07b822b9bba5204b5ef60bd1ba9c inherit pub_methods_classAnalysis"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnalysis.html#aa2bd07b822b9bba5204b5ef60bd1ba9c">SetRecorder</a> (std::shared_ptr&lt; <a class="el" href="classRecorder.html">Recorder</a> &gt; &amp;recorder)</td></tr>
 <tr class="memdesc:aa2bd07b822b9bba5204b5ef60bd1ba9c inherit pub_methods_classAnalysis"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the recorder for the analysis.  <a href="classAnalysis.html#aa2bd07b822b9bba5204b5ef60bd1ba9c">More...</a><br /></td></tr>
 <tr class="separator:aa2bd07b822b9bba5204b5ef60bd1ba9c inherit pub_methods_classAnalysis"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,6 +172,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:a37d91f5e7ccdee44c65f2c5649128515"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaticAnalysis.html#a37d91f5e7ccdee44c65f2c5649128515">NumberOfSteps</a></td></tr>
+<tr class="memdesc:a37d91f5e7ccdee44c65f2c5649128515"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of time increments.  <a href="#a37d91f5e7ccdee44c65f2c5649128515">More...</a><br /></td></tr>
+<tr class="separator:a37d91f5e7ccdee44c65f2c5649128515"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c40b8f58b8cbf2fb13334b73cf63021"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaticAnalysis.html#a9c40b8f58b8cbf2fb13334b73cf63021">theMesh</a></td></tr>
 <tr class="memdesc:a9c40b8f58b8cbf2fb13334b73cf63021"><td class="mdescLeft">&#160;</td><td class="mdescRight">The finite element mesh:  <a href="#a9c40b8f58b8cbf2fb13334b73cf63021">More...</a><br /></td></tr>
 <tr class="separator:a9c40b8f58b8cbf2fb13334b73cf63021"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,9 +184,6 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a41edaa17036ed18716d85e87905afc43"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classIntegrator.html">Integrator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaticAnalysis.html#a41edaa17036ed18716d85e87905afc43">theIntegrator</a></td></tr>
 <tr class="memdesc:a41edaa17036ed18716d85e87905afc43"><td class="mdescLeft">&#160;</td><td class="mdescRight">The static integrator method.  <a href="#a41edaa17036ed18716d85e87905afc43">More...</a><br /></td></tr>
 <tr class="separator:a41edaa17036ed18716d85e87905afc43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37d91f5e7ccdee44c65f2c5649128515"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaticAnalysis.html#a37d91f5e7ccdee44c65f2c5649128515">NumberOfSteps</a></td></tr>
-<tr class="memdesc:a37d91f5e7ccdee44c65f2c5649128515"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of time increments.  <a href="#a37d91f5e7ccdee44c65f2c5649128515">More...</a><br /></td></tr>
-<tr class="separator:a37d91f5e7ccdee44c65f2c5649128515"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -200,7 +203,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for creating an static analysis and updating the states variables in mesh. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="Analysis_8hpp.html" title="This file contains the pure virtual &quot;Analysis object&quot; declarations, so far, static and dynamic analys...">Analysis.hpp</a> <a class="el" href="Integrator_8hpp.html">Integrator.hpp</a> <a class="el" href="Algorithm_8hpp.html">Algorithm.hpp</a> <a class="el" href="Mesh_8hpp.html" title="This file contains the &quot;Mesh object&quot; declarations, which stores nodes, materials, elements...">Mesh.hpp</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="Analysis_8hpp.html" title="This file contains the pure virtual &quot;Analysis object&quot; declarations, so far, static and dynamic analys...">Analysis.hpp</a> <a class="el" href="Integrator_8hpp.html" title="This file contains the &quot;Integrator object&quot; declarations, and defines how the dynamic solution between...">Integrator.hpp</a> <a class="el" href="Algorithm_8hpp.html">Algorithm.hpp</a> <a class="el" href="Mesh_8hpp.html" title="This file contains the &quot;Mesh object&quot; declarations, which stores nodes, materials, elements...">Mesh.hpp</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4e73a1aaa2a5f2fca614bba50de3af83"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4e73a1aaa2a5f2fca614bba50de3af83">&#9670;&nbsp;</a></span>StaticAnalysis()</h2>
@@ -438,7 +441,7 @@ Additional Inherited Members</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classStaticAnalysis.html">StaticAnalysis</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:02 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

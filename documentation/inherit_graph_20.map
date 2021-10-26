@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classSection.html" title="Virtual class for creating a section object. " alt="" coords="5,436,72,463"/>
+<area shape="rect" id="node1" href="$classSection.html" title="Virtual class for creating a section object. " alt="" coords="5,487,72,513"/>
 <area shape="rect" id="node2" href="$classFib3DLineSection.html" title="Class for creating a generic fiber section for 3D analysis with linear/nonlinear material for a frame..." alt="" coords="135,5,260,32"/>
 <area shape="rect" id="node3" href="$classLin2DAngle.html" title="Class for creating an angle section for 2D analysis with linear elastic material for a frame elements..." alt="" coords="153,56,242,83"/>
 <area shape="rect" id="node4" href="$classLin2DChannel.html" title="Class for creating a channel section for 2D analysis with linear elastic material for a frame element..." alt="" coords="145,107,249,133"/>
@@ -8,14 +8,16 @@
 <area shape="rect" id="node7" href="$classLin2DRectangular.html" title="Class for creating a solid rectangular section for 2D analysis with linear elastic material for a fra..." alt="" coords="134,259,261,285"/>
 <area shape="rect" id="node8" href="$classLin2DRectangularTube.html" title="Class for creating a rectangular tube section for 2D analysis with linear elastic material for a fram..." alt="" coords="120,309,275,336"/>
 <area shape="rect" id="node9" href="$classLin2DTee.html" title="Class for creating a tee section for 2D analysis with linear elastic material for a frame elements..." alt="" coords="158,360,237,387"/>
-<area shape="rect" id="node10" href="$classLin2DWideFlange.html" title="Class for creating a wide flange section for 2D analysis with linear elastic material for a frame ele..." alt="" coords="135,411,260,437"/>
-<area shape="rect" id="node11" href="$classLin3DAngle.html" title="Class for creating a angle section for 3D analysis with linear elastic material for a frame elements..." alt="" coords="153,461,242,488"/>
-<area shape="rect" id="node12" href="$classLin3DChannel.html" title="Class for creating a channel section for 3D analysis with linear elastic material for a frame element..." alt="" coords="145,512,249,539"/>
-<area shape="rect" id="node13" href="$classLin3DCircular.html" title="Class for creating a solid circular section for 3D analysis with linear elastic material for a frame ..." alt="" coords="147,563,248,589"/>
-<area shape="rect" id="node14" href="$classLin3DCircularTube.html" title="Class for creating a solid circular tube section for 3D analysis with linear elastic material for a f..." alt="" coords="132,613,263,640"/>
-<area shape="rect" id="node15" href="$classLin3DRectangular.html" title="Class for creating a solid rectangular section for 3D analysis with linear elastic material for a fra..." alt="" coords="134,664,261,691"/>
-<area shape="rect" id="node16" href="$classLin3DRectangularTube.html" title="Class for creating a rectangular tube section for 3D analysis with linear elastic material for a fram..." alt="" coords="120,715,275,741"/>
-<area shape="rect" id="node17" href="$classLin3DTee.html" title="Class for creating a tee section for 3D analysis with linear elastic material for a frame elements..." alt="" coords="158,765,237,792"/>
-<area shape="rect" id="node18" href="$classLin3DThinArea.html" title="Class for creating an area section for 3D analysis with linear elastic material for a shell elements..." alt="" coords="143,816,251,843"/>
-<area shape="rect" id="node19" href="$classLin3DWideFlange.html" title="Class for creating a wide flange section for 3D analysis with linear elastic material for a frame ele..." alt="" coords="135,867,260,893"/>
+<area shape="rect" id="node10" href="$classLin2DUserDefined.html" title="Class for creating a general solid section for 3D analysis with linear elastic material for a frame e..." alt="" coords="133,411,262,437"/>
+<area shape="rect" id="node11" href="$classLin2DWideFlange.html" title="Class for creating a wide flange section for 2D analysis with linear elastic material for a frame ele..." alt="" coords="135,461,260,488"/>
+<area shape="rect" id="node12" href="$classLin3DAngle.html" title="Class for creating a angle section for 3D analysis with linear elastic material for a frame elements..." alt="" coords="153,512,242,539"/>
+<area shape="rect" id="node13" href="$classLin3DChannel.html" title="Class for creating a channel section for 3D analysis with linear elastic material for a frame element..." alt="" coords="145,563,249,589"/>
+<area shape="rect" id="node14" href="$classLin3DCircular.html" title="Class for creating a solid circular section for 3D analysis with linear elastic material for a frame ..." alt="" coords="147,613,248,640"/>
+<area shape="rect" id="node15" href="$classLin3DCircularTube.html" title="Class for creating a solid circular tube section for 3D analysis with linear elastic material for a f..." alt="" coords="132,664,263,691"/>
+<area shape="rect" id="node16" href="$classLin3DRectangular.html" title="Class for creating a solid rectangular section for 3D analysis with linear elastic material for a fra..." alt="" coords="134,715,261,741"/>
+<area shape="rect" id="node17" href="$classLin3DRectangularTube.html" title="Class for creating a rectangular tube section for 3D analysis with linear elastic material for a fram..." alt="" coords="120,765,275,792"/>
+<area shape="rect" id="node18" href="$classLin3DTee.html" title="Class for creating a tee section for 3D analysis with linear elastic material for a frame elements..." alt="" coords="158,816,237,843"/>
+<area shape="rect" id="node19" href="$classLin3DThinArea.html" title="Class for creating an area section for 3D analysis with linear elastic material for a shell elements..." alt="" coords="143,867,251,893"/>
+<area shape="rect" id="node20" href="$classLin3DUserDefined.html" title="Class for creating a general solid section for 3D analysis with linear elastic material for a frame e..." alt="" coords="133,917,262,944"/>
+<area shape="rect" id="node21" href="$classLin3DWideFlange.html" title="Class for creating a wide flange section for 3D analysis with linear elastic material for a frame ele..." alt="" coords="135,968,260,995"/>
 </map>

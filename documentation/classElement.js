@@ -14,7 +14,7 @@ var classElement =
     [ "ComputeStiffnessMatrix", "classElement.html#a7a3de7d3765b7f1a690c9ad68e5914ad", null ],
     [ "ComputeSurfaceForces", "classElement.html#a39ced5654444f81d4ddc60deaccb947a", null ],
     [ "GetName", "classElement.html#adbeeb529aba35eb37f1c64c2081781ad", null ],
-    [ "GetNodes", "classElement.html#a0fdd16a2c5bc4deffb9be1b27fdd0f7b", null ],
+    [ "GetNodes", "classElement.html#a09641ce45857e9b1bb9b71d85db8162d", null ],
     [ "GetNumberOfDegreeOfFreedom", "classElement.html#a34e4f3cfd76955fca7a8593be1559bc0", null ],
     [ "GetNumberOfNodes", "classElement.html#a588dc0ad1b1b3d33f64b5f138af912e7", null ],
     [ "GetStrain", "classElement.html#a8e68d1e248d22cf3816e8ee727a22cbe", null ],

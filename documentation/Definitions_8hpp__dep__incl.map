@@ -1,5 +1,5 @@
 <map id="Definitions.hpp" name="Definitions.hpp">
-<area shape="rect" id="node2" href="$Parser_8hpp.html" title="Parser.hpp" alt="" coords="5,155,91,181"/>
-<area shape="rect" id="node3" href="$Profiler_8hpp.html" title="Profiler.hpp" alt="" coords="45,80,133,107"/>
-<area shape="rect" id="node4" href="$Utilities_8hpp.html" title="Utilities.hpp" alt="" coords="157,80,248,107"/>
+<area shape="rect" id="node2" href="$Driver_8hpp.html" title="This file contains the &quot;parsing&quot; functions to create, modify and analyze a finite element model provi..." alt="" coords="5,155,88,181"/>
+<area shape="rect" id="node3" href="$Profiler_8hpp.html" title="This file contains the &quot;Profiler object&quot; declarations to compute how long it takes for a program to b..." alt="" coords="44,80,132,107"/>
+<area shape="rect" id="node4" href="$Utilities_8hpp.html" title="Sets of functions used to parse command line information and to display SeismoVLAB information..." alt="" coords="156,80,247,107"/>
 </map>

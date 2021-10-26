@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('linkAssembler.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1>Background</h1>
-<p>The <a class="el" href="linkAssembler.html">Assembler</a> is class embedded in an <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a> object, and its function is to generate the global mass matrix \(\mathcal{M}\), global stiffness matrix \(\mathcal{K}\), global damping matrix \(\mathcal{C}\) as well as the global external force vector \(\mathcal{F}\). This process is done by looping over all the elements and adding their contribution to the total quantity to be assembled. These task are implemented specifically in the following member function:</p>
+<p>The <a class="el" href="linkAssembler.html">Assembler</a> is class embedded in an <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a> object, and its function is to generate the global mass matrix \(\mathcal{M}\), global stiffness matrix \(\mathcal{K}\), global damping matrix \(\mathcal{C}\) as well as the global external force vector \(\mathcal{F}\). This process is done by looping over all the elements and adding their contribution to the total quantity to be assembled. These tasks are implemented specifically in the following member function:</p>
 <ul>
 <li>Assemble of matrix<ul>
 <li><a class="el" href="classAssembler.html#a573ec05093f94f301cc2ca0c2fe9b918" title="Assemble the mass matrix. ">Assembler::ComputeMassMatrix()</a><br />
@@ -140,7 +140,9 @@ $(document).ready(function(){initNavTree('linkAssembler.html','');});
 <dl class="section note"><dt>Note</dt><dd>First the assembly operator \(\mathbf{A}^\textrm{e} : \mathbb{R}^{\textrm{N}_\textrm{dof}^\textrm{e}} \to \mathbb{R}^{\textrm{N}_{\textrm{total}}}\) assembles the element matrix/vector to the total matrix/vector, and second the transformation operator \(\mathbf{T} : \mathbb{R}^{\textrm{N}_{\textrm{total}}} \to \mathbb{R}^{\textrm{N}_{\textrm{free}}}\) enforce displacement boundary condition as well as kinematic constraints applied to some number of total degree of freedom. As it can be seen, the main feature of enforcing restrains and constrains in such manner is to reduce the size of the linear system to be solved, however the sparse pattern may increase.</dd></dl>
 <dl class="section attention"><dt>Attention</dt><dd>The <a class="el" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. ">Assembler</a> object is not needed to be parsed since it is created internally as soon as an integrator is specified. </dd>
 <dd>
-The <a class="el" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. ">Assembler</a> object takes care of imposing the restrains and constraints that are specified.</dd></dl>
+The <a class="el" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. ">Assembler</a> object takes care of imposing the restrains and constraints that are specified. </dd>
+<dd>
+More details on the assembler implementation can be found at <span style="color:green"><b>SVL/02-Run_Process/07-Assembler</b></span>.</dd></dl>
 <p><b>REFERENCE:</b></p><ul>
 <li>Bathe K. Jurgen, "Finite Element Procedures", Chapter 4: pages 164-166, Prentice-Hall, 1996. </li>
 </ul>
@@ -150,7 +152,7 @@ The <a class="el" href="classAssembler.html" title="Class for assembling the fin
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

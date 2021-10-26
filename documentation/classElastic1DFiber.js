@@ -21,7 +21,8 @@ var classElastic1DFiber =
     [ "ReverseState", "classElastic1DFiber.html#a1bace14a68ce5bc7a7340d31f33c177d", null ],
     [ "UpdateState", "classElastic1DFiber.html#abf6fea22d498b3da0a890a8cbf9783cf", null ],
     [ "E", "classElastic1DFiber.html#a3d48bff6893cc4a434fd2644279b9291", null ],
+    [ "newStrain", "classElastic1DFiber.html#a0b2ec531ff012b70d694114f3a652669", null ],
     [ "nu", "classElastic1DFiber.html#a7c5e1b1c227b5582c438878dcb3d6101", null ],
-    [ "Rho", "classElastic1DFiber.html#a427fe47e3bcb70fea8e86d26a9ee82e0", null ],
-    [ "Strain", "classElastic1DFiber.html#aa939e254352285bc6257a06ae1f834ef", null ]
+    [ "oldStrain", "classElastic1DFiber.html#a06dfe46989de4aafc7853225e3b523ce", null ],
+    [ "Rho", "classElastic1DFiber.html#a427fe47e3bcb70fea8e86d26a9ee82e0", null ]
 ];

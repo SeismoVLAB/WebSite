@@ -104,6 +104,9 @@ $(document).ready(function(){initNavTree('Utilities_8hpp.html','');});
 <div class="title">Utilities.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Sets of functions used to parse command line information and to display SeismoVLAB information.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;ctime&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
@@ -114,7 +117,7 @@ Include dependency graph for Utilities.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="Utilities_8hpp__incl.png" border="0" usemap="#Utilities_8hpp" alt=""/></div>
 <map name="Utilities_8hpp" id="Utilities_8hpp">
-<area shape="rect" id="node6" href="Definitions_8hpp.html" title="This file sets the global variables to be used during execution. " alt="" coords="319,80,429,107"/>
+<area shape="rect" id="node6" href="Definitions_8hpp.html" title="This file sets the global variables to be used during SeismoVLAB execution. " alt="" coords="319,80,429,107"/>
 </map>
 </div>
 </div>
@@ -128,18 +131,19 @@ Functions</h2></td></tr>
 <tr class="memitem:ad4952f88b5d628ce55f78bb06d8dedaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Utilities_8hpp.html#ad4952f88b5d628ce55f78bb06d8dedaa">printLogo</a> ()</td></tr>
 <tr class="memdesc:ad4952f88b5d628ce55f78bb06d8dedaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints Seismo-VLAB software header.  <a href="#ad4952f88b5d628ce55f78bb06d8dedaa">More...</a><br /></td></tr>
 <tr class="separator:ad4952f88b5d628ce55f78bb06d8dedaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a366395fdafa5ecc05c4ea4abe2eb7a1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Utilities_8hpp.html#a366395fdafa5ecc05c4ea4abe2eb7a1a">CommandLine</a> (int argc, char **argv, bool &amp;parsefile)</td></tr>
-<tr class="memdesc:a366395fdafa5ecc05c4ea4abe2eb7a1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse Command Line Inputs.  <a href="#a366395fdafa5ecc05c4ea4abe2eb7a1a">More...</a><br /></td></tr>
-<tr class="separator:a366395fdafa5ecc05c4ea4abe2eb7a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af517170a919110843756c69561470f45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Utilities_8hpp.html#af517170a919110843756c69561470f45">CommandLine</a> (int argc, char **argv)</td></tr>
+<tr class="memdesc:af517170a919110843756c69561470f45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse Command Line Inputs.  <a href="#af517170a919110843756c69561470f45">More...</a><br /></td></tr>
+<tr class="separator:af517170a919110843756c69561470f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd>Danilo S. Kusanovic (<a href="#" onclick="location.href='mai'+'lto:'+'dku'+'sa'+'nov'+'@c'+'alt'+'ec'+'h.e'+'du'; return false;">dkusa<span style="display: none;">.nosp@m.</span>nov@<span style="display: none;">.nosp@m.</span>calte<span style="display: none;">.nosp@m.</span>ch.e<span style="display: none;">.nosp@m.</span>du</a>) </dd></dl>
+<div class="textblock"><p>Sets of functions used to parse command line information and to display SeismoVLAB information. </p>
+<dl class="section author"><dt>Author</dt><dd>Danilo S. Kusanovic (<a href="#" onclick="location.href='mai'+'lto:'+'dku'+'sa'+'nov'+'@c'+'alt'+'ec'+'h.e'+'du'; return false;">dkusa<span style="display: none;">.nosp@m.</span>nov@<span style="display: none;">.nosp@m.</span>calte<span style="display: none;">.nosp@m.</span>ch.e<span style="display: none;">.nosp@m.</span>du</a>) </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>December 18, 2018 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0</dd></dl>
 <dl class="section see"><dt>See also</dt><dd>main.cpp </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a366395fdafa5ecc05c4ea4abe2eb7a1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a366395fdafa5ecc05c4ea4abe2eb7a1a">&#9670;&nbsp;</a></span>CommandLine()</h2>
+<a id="af517170a919110843756c69561470f45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af517170a919110843756c69561470f45">&#9670;&nbsp;</a></span>CommandLine()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -154,13 +158,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>argv</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool &amp;&#160;</td>
-          <td class="paramname"><em>parsefile</em>&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -220,7 +218,7 @@ Functions</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="dir_c4c3cc1ef075e8c2dbf7a9cdab7d21b3.html">12-Utilities</a></li><li class="navelem"><a class="el" href="Utilities_8hpp.html">Utilities.hpp</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:53 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

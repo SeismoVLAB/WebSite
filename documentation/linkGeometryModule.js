@@ -2,6 +2,7 @@ var linkGeometryModule =
 [
     [ "Global", "linkModel.html", null ],
     [ "Node", "linkNode.html", null ],
+    [ "Restraint", "linkRestrain.html", null ],
     [ "Constraint", "linkConstraint.html", null ],
     [ "Mass", "linkMass.html", null ],
     [ "Surface", "linkSurface.html", null ],

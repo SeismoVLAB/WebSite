@@ -109,11 +109,11 @@ $(document).ready(function(){initNavTree('linkIntegrator.html','');});
 <p>The main member function in <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a> are:</p><ul>
 <li><a class="el" href="classIntegrator.html#ade2662f0925875beb6c51fbf20fe8aff" title="Computes a new time step. ">Integrator::ComputeNewStep()</a> <br />
  This function computes the states variables (displacement, velocity and acceleration) once the incremental displacement is obtained.</li>
-<li><a class="el" href="classIntegrator.html#aede2ec16a0cc42fdfbc23f8bc46932d3" title="Gets the displacement vector. ">Integrator::GetDisplacements()</a> <br />
+<li><a class="el" href="classIntegrator.html#a2cb93d309e8552432b3d03c84d94aed6" title="Gets the displacement vector. ">Integrator::GetDisplacements()</a> <br />
  This function returns the displacement states variables \(U\) at the current time step.</li>
-<li><a class="el" href="classIntegrator.html#a5a0ea34280a28a1da235c7a6a312e133" title="Gets the velocity vector. ">Integrator::GetVelocities()</a> <br />
+<li><a class="el" href="classIntegrator.html#a2fb53d8c5817ad58dfe23d76a964b4b6" title="Gets the velocity vector. ">Integrator::GetVelocities()</a> <br />
  This function returns the velocity states variables \(V\) at the current time step.</li>
-<li><a class="el" href="classIntegrator.html#a1f4f24dc95e487e4f0646275ac848194" title="Gets the acceleration vector. ">Integrator::GetAccelerations()</a> <br />
+<li><a class="el" href="classIntegrator.html#a58279e2e957c9fb2fd63147debdb0d7d" title="Gets the acceleration vector. ">Integrator::GetAccelerations()</a> <br />
  This function returns the acceleration states variables \(A\) at the current time step.</li>
 </ul>
 <p>In general, the <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a> class uses the <a class="el" href="classAssembler.html" title="Class for assembling the finite element matrices and vector. ">Assembler</a> class to compute the effective stiffness matrix \(\textbf{K}_{\textrm{eff}}\) and effective force vector \(\textrm{F}_{\textrm{eff}}\) to be provided to the <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a> object to compute the displacements \(U\), velocities \(V\) and acceleration \(A\) vector states for the incremental analysis. In the incremental analysis, at each (pseudo) time step \(t_n\), one needs to solve nonlinear systems of equations iteratively until satisfying the given tolerance and convergence criterion. More information regarding the derived integrator classes can be found at:</p>
@@ -134,7 +134,7 @@ $(document).ready(function(){initNavTree('linkIntegrator.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

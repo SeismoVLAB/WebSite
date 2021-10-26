@@ -2,8 +2,6 @@ var searchData=
 [
   ['parse',['parse',['../classRSJresource.html#a9a9ab2c6809471bb7e9a41e44c04a978',1,'RSJresource::parse()'],['../classRSJparsedData.html#abe1b549d8a74ee93c04f2cd3bf53f1bb',1,'RSJparsedData::parse()']]],
   ['parse_5ffull',['parse_full',['../classRSJresource.html#a152b985ea8c3693f874952b084ac21db',1,'RSJresource']]],
-  ['parseanalysis',['ParseAnalysis',['../Parser_8hpp.html#a4fd81c895529aafa86cafb4a2c28b517',1,'Parser.hpp']]],
-  ['parsemesh',['ParseMesh',['../Parser_8hpp.html#a869703bd90a587fd17053df529d8b76a',1,'Parser.hpp']]],
   ['petscsolver',['PetscSolver',['../classPetscSolver.html#a0c403a238c86631d4593ea1a2a58f725',1,'PetscSolver']]],
   ['plastic1dgap',['Plastic1DGap',['../classPlastic1DGap.html#a15226b85d4fff01dd1c499d9df7e405b',1,'Plastic1DGap']]],
   ['plastic1dj2',['Plastic1DJ2',['../classPlastic1DJ2.html#a40d9eaf4c6e6ab92ae688ccfaf8249f9',1,'Plastic1DJ2']]],

@@ -220,9 +220,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ae9b9d65d9965e73189ebd9f0a96698df"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic2DPlaneStress.html#ae9b9d65d9965e73189ebd9f0a96698df">Strain</a></td></tr>
 <tr class="memdesc:ae9b9d65d9965e73189ebd9f0a96698df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strain vector.  <a href="#ae9b9d65d9965e73189ebd9f0a96698df">More...</a><br /></td></tr>
 <tr class="separator:ae9b9d65d9965e73189ebd9f0a96698df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c4141ca410987c6458e6d1a3b94143e"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic2DPlaneStress.html#a9c4141ca410987c6458e6d1a3b94143e">Stress</a></td></tr>
-<tr class="memdesc:a9c4141ca410987c6458e6d1a3b94143e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stress vector.  <a href="#a9c4141ca410987c6458e6d1a3b94143e">More...</a><br /></td></tr>
-<tr class="separator:a9c4141ca410987c6458e6d1a3b94143e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0339b00d476866ace85d2c0e08b798bb"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic2DPlaneStress.html#a0339b00d476866ace85d2c0e08b798bb">newStrain</a></td></tr>
+<tr class="memdesc:a0339b00d476866ace85d2c0e08b798bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Commited Strain vector.  <a href="#a0339b00d476866ace85d2c0e08b798bb">More...</a><br /></td></tr>
+<tr class="separator:a0339b00d476866ace85d2c0e08b798bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9edd5b3f9d5628d7ef587d0ba3eaf4f3"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElastic2DPlaneStress.html#a9edd5b3f9d5628d7ef587d0ba3eaf4f3">TangentStiffness</a></td></tr>
 <tr class="memdesc:a9edd5b3f9d5628d7ef587d0ba3eaf4f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tangent stiffness matrix.  <a href="#a9edd5b3f9d5628d7ef587d0ba3eaf4f3">More...</a><br /></td></tr>
 <tr class="separator:a9edd5b3f9d5628d7ef587d0ba3eaf4f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -888,6 +888,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a0339b00d476866ace85d2c0e08b798bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0339b00d476866ace85d2c0e08b798bb">&#9670;&nbsp;</a></span>newStrain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd Elastic2DPlaneStress::newStrain</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Commited Strain vector. </p>
+
+</div>
+</div>
 <a id="ae45c4be857b2a8cd3c97dd680cc55301"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae45c4be857b2a8cd3c97dd680cc55301">&#9670;&nbsp;</a></span>nu</h2>
 
@@ -960,30 +984,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9c4141ca410987c6458e6d1a3b94143e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c4141ca410987c6458e6d1a3b94143e">&#9670;&nbsp;</a></span>Stress</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::VectorXd Elastic2DPlaneStress::Stress</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Stress vector. </p>
-
-</div>
-</div>
 <a id="a9edd5b3f9d5628d7ef587d0ba3eaf4f3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9edd5b3f9d5628d7ef587d0ba3eaf4f3">&#9670;&nbsp;</a></span>TangentStiffness</h2>
 
@@ -1015,7 +1015,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classElastic2DPlaneStress.html">Elastic2DPlaneStress</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

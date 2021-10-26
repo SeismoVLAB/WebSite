@@ -23,8 +23,7 @@ var classHertzian1DLinear =
     [ "k1", "classHertzian1DLinear.html#af76ee45ce8060f5b8a0d47d4203aafaf", null ],
     [ "k2", "classHertzian1DLinear.html#ae53f37418ae1dc934b9ee331d02e7a3c", null ],
     [ "k3", "classHertzian1DLinear.html#ad520c57b9c27c9ec6d05a482cbd34ee2", null ],
+    [ "newStrain", "classHertzian1DLinear.html#a8983dfe43a3903370dcca3f9b59af1eb", null ],
     [ "Rho", "classHertzian1DLinear.html#ae7da74886ed513bf51161ea13903d171", null ],
-    [ "Strain", "classHertzian1DLinear.html#aa00d3e09eca5f1b104f7f2782dfe8e90", null ],
-    [ "Stress", "classHertzian1DLinear.html#a5ddce3155794e553d477e6306f6fb483", null ],
-    [ "TangentStiffness", "classHertzian1DLinear.html#a4e76c1ed2310188229c6863bdc4297ca", null ]
+    [ "Strain", "classHertzian1DLinear.html#aa00d3e09eca5f1b104f7f2782dfe8e90", null ]
 ];

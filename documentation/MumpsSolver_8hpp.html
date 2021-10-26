@@ -105,6 +105,9 @@ $(document).ready(function(){initNavTree('MumpsSolver_8hpp.html','');});
 <div class="title">MumpsSolver.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This file contains the "MumpsSolver" solver declaration; this object performs a (MU)ltifrontal (M)assively (P)arallel (S)parse direct Solver on the matrix A.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;dmumps_c.h&gt;</code><br />
 <code>#include &lt;Eigen/Dense&gt;</code><br />
 <code>#include &lt;Eigen/SparseCore&gt;</code><br />
@@ -122,7 +125,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="MumpsSolver_8hpp__dep__incl.png" border="0" usemap="#MumpsSolver_8hppdep" alt=""/></div>
 <map name="MumpsSolver_8hppdep" id="MumpsSolver_8hppdep">
-<area shape="rect" id="node2" href="Parser_8hpp.html" title="Parser.hpp" alt="" coords="26,80,111,107"/>
+<area shape="rect" id="node2" href="Driver_8hpp.html" title="This file contains the &quot;parsing&quot; functions to create, modify and analyze a finite element model provi..." alt="" coords="27,80,110,107"/>
 </map>
 </div>
 </div>
@@ -137,17 +140,21 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:aeb5163dca56e79ad711644394f50f432"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MumpsSolver_8hpp.html#aeb5163dca56e79ad711644394f50f432">JOB_INIT</a>&#160;&#160;&#160;-1</td></tr>
-<tr class="memdesc:aeb5163dca56e79ad711644394f50f432"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file contains the "MumpsSolver" solver declaration; this object performs a (MU)ltifrontal (M)assively (P)arallel (S)parse direct Solver on the matrix A, assuming that such matrix is symmetric positive definite (SPD), general symmetric (SYM) or unsymmetric (USYM) matrix.  <a href="#aeb5163dca56e79ad711644394f50f432">More...</a><br /></td></tr>
+<tr class="memdesc:aeb5163dca56e79ad711644394f50f432"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the MUMPS solver instance.  <a href="#aeb5163dca56e79ad711644394f50f432">More...</a><br /></td></tr>
 <tr class="separator:aeb5163dca56e79ad711644394f50f432"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06f8639f7575dfb6e258253467e656fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MumpsSolver_8hpp.html#a06f8639f7575dfb6e258253467e656fd">JOB_END</a>&#160;&#160;&#160;-2</td></tr>
+<tr class="memdesc:a06f8639f7575dfb6e258253467e656fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends the MUMPS solver instance.  <a href="#a06f8639f7575dfb6e258253467e656fd">More...</a><br /></td></tr>
 <tr class="separator:a06f8639f7575dfb6e258253467e656fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afae138fe6fce12375972645ba2b67285"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MumpsSolver_8hpp.html#afae138fe6fce12375972645ba2b67285">USE_COMM_WORLD</a>&#160;&#160;&#160;-987654</td></tr>
+<tr class="memdesc:afae138fe6fce12375972645ba2b67285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a communicator for the package.  <a href="#afae138fe6fce12375972645ba2b67285">More...</a><br /></td></tr>
 <tr class="separator:afae138fe6fce12375972645ba2b67285"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d7097d1f3146fd372cf14b5a2776b96"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MumpsSolver_8hpp.html#a5d7097d1f3146fd372cf14b5a2776b96">ICNTL</a>(I)&#160;&#160;&#160;icntl[(I)-1]</td></tr>
+<tr class="memdesc:a5d7097d1f3146fd372cf14b5a2776b96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform the c++ (0) base index to fortran (1) base index.  <a href="#a5d7097d1f3146fd372cf14b5a2776b96">More...</a><br /></td></tr>
 <tr class="separator:a5d7097d1f3146fd372cf14b5a2776b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd>Danilo S. Kusanovic (<a href="#" onclick="location.href='mai'+'lto:'+'dku'+'sa'+'nov'+'@c'+'alt'+'ec'+'h.e'+'du'; return false;">dkusa<span style="display: none;">.nosp@m.</span>nov@<span style="display: none;">.nosp@m.</span>calte<span style="display: none;">.nosp@m.</span>ch.e<span style="display: none;">.nosp@m.</span>du</a>) </dd></dl>
+<div class="textblock"><p>This file contains the "MumpsSolver" solver declaration; this object performs a (MU)ltifrontal (M)assively (P)arallel (S)parse direct Solver on the matrix A. </p>
+<dl class="section author"><dt>Author</dt><dd>Danilo S. Kusanovic (<a href="#" onclick="location.href='mai'+'lto:'+'dku'+'sa'+'nov'+'@c'+'alt'+'ec'+'h.e'+'du'; return false;">dkusa<span style="display: none;">.nosp@m.</span>nov@<span style="display: none;">.nosp@m.</span>calte<span style="display: none;">.nosp@m.</span>ch.e<span style="display: none;">.nosp@m.</span>du</a>) </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>June 8, 2020 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -167,6 +174,8 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Transform the c++ (0) base index to fortran (1) base index. </p>
+
 </div>
 </div>
 <a id="a06f8639f7575dfb6e258253467e656fd"></a>
@@ -180,6 +189,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Ends the MUMPS solver instance. </p>
 
 </div>
 </div>
@@ -195,7 +206,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This file contains the "MumpsSolver" solver declaration; this object performs a (MU)ltifrontal (M)assively (P)arallel (S)parse direct Solver on the matrix A, assuming that such matrix is symmetric positive definite (SPD), general symmetric (SYM) or unsymmetric (USYM) matrix. </p>
+<p>Start the MUMPS solver instance. </p>
 
 </div>
 </div>
@@ -211,6 +222,8 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Define a communicator for the package. </p>
+
 </div>
 </div>
 </div><!-- contents -->
@@ -220,7 +233,7 @@ Macros</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="dir_4937dd865d61e3944ed1a8856752d126.html">11-Solvers</a></li><li class="navelem"><a class="el" href="dir_9d8462bff7f89d3d942ed55d4cbdde49.html">01-Direct</a></li><li class="navelem"><a class="el" href="MumpsSolver_8hpp.html">MumpsSolver.hpp</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:53 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

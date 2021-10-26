@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 		<meta name="generator" content="Doxygen 1.8.13"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>Seismo-VLAB: Parser</title>
+		<title>Seismo-VLAB: Driver</title>
 		<link href="tabs.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="dynsections.js"></script>
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('linkParser.html','');});
+$(document).ready(function(){initNavTree('linkDriver.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -99,24 +99,24 @@ $(document).ready(function(){initNavTree('linkParser.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Parser </div>  </div>
+<div class="title">Driver </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1>Background</h1>
-<p>The <a class="el" href="Parser_8hpp.html">Parser.hpp</a> file defines an instance to translate the <b>JSON</b> input's format file into <b>Seismo-VLAB</b> objects. In particular, <a class="el" href="linkGeometryModule.html">Geometry Module</a>, <a class="el" href="linkAnalysisModule.html">Solution Module</a>, and <a class="el" href="linkIOModule.html">Input/Output Module</a> explain in details the structure of the <b>JSON</b> format.</p>
-<p>The <a class="el" href="linkParser.html">Parser</a> main function are:</p><ul>
-<li><a class="el" href="Parser_8hpp.html#aa145c899bb8db751c64e06a458b90d89">RunFromJSON()</a> <br />
+<p>The <a class="el" href="Driver_8hpp.html" title="This file contains the &quot;parsing&quot; functions to create, modify and analyze a finite element model provi...">Driver.hpp</a> file defines an instance to translate the <b>JSON</b> input's format file into <b>Seismo-VLAB</b> objects. In particular, components in the <a class="el" href="linkGeometryModule.html">Geometry Module</a>, <a class="el" href="linkAnalysisModule.html">Solution Module</a>, and <a class="el" href="linkIOModule.html">Input/Output Module</a> provided in <b>JSON</b> format are transformed into objects.</p>
+<p>The <a class="el" href="linkDriver.html">Driver</a> main function are:</p><ul>
+<li><a class="el" href="Driver_8hpp.html#ac9e144722f3dc100511f21318be14b65" title="Runs the User&#39;s JSON Input file. ">RunDriverFile()</a> <br />
  which parse the domain file and then perform the analysis. This function calls internally:<ul>
-<li><a class="el" href="Parser_8hpp.html#a869703bd90a587fd17053df529d8b76a">ParseMesh()</a> <br />
+<li><a class="el" href="Driver_8hpp.html#acbca2b5f6eea88a045f58a034d9d72c4" title="Populate the Mesh object with the json provided entities. ">UpdateMesh()</a> <br />
  which transform the json structure into recognizable objects defined at <a class="el" href="linkGeometryModule.html">Geometry Module</a>. Therefore <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>, <a class="el" href="classMaterial.html" title="Virtual class for creating a material object. ">Material</a>, <a class="el" href="classElement.html" title="Virtual class for creating an element in a mesh. ">Element</a>, Fiber, <a class="el" href="classSection.html" title="Virtual class for creating a section object. ">Section</a>, <a class="el" href="classLoad.html" title="Class for creating a load that can be applied to a node or to a element. ">Load</a> objects are created within this function.</li>
-<li><a class="el" href="Parser_8hpp.html#a4fd81c895529aafa86cafb4a2c28b517">ParseAnalysis()</a> <br />
+<li><a class="el" href="Driver_8hpp.html#a2a5fa62d8de654343352594aab7f36f7" title="Creates a new Analysis object from the json file. ">UpdateAnalysis()</a> <br />
  which transform the json structure into recognizable objects defined at <a class="el" href="linkAnalysisModule.html">Solution Module</a>. Therefore <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a>, <a class="el" href="classIntegrator.html" title="Class for defining how the static/dynamic analysis between two steps is going to be performed...">Integrator</a>, <a class="el" href="classLinearSystem.html" title="Virtual class for solving a linear system of the form Ax = b. ">LinearSystem</a>, <a class="el" href="classAnalysis.html" title="Virtual class for defining the analysis type to be performed. ">Analysis</a>, objects are created within this function.</li>
 </ul>
 </li>
-<li>UpateDomain() <br />
+<li><a class="el" href="classAnalysis.html#a11be95e9006496df242a149225355bd6">Analysis::UpdateMesh()</a> <br />
  which performs modification in the model after an analysis is performed.</li>
 </ul>
-<p>In <b>SVL</b> we use <a class="el" href="RSJparser_8hpp.html">RSJparser.hpp</a> <em><b>JSON</b></em> parser, because it resembles the same structure used in python dictionaries. Below is a simple example (extracted from the RSJparser documentation) on how to use <b>RSJparser</b> in an implementation file: </p><div class="fragment"><div class="line">std::string str = <span class="stringliteral">&quot;{&#39;RSJ&#39;: &#39;string data&#39;, &#39;keyName&#39;: [2,3,5,7]}&quot;</span>;</div><div class="line"><a class="code" href="classRSJresource.html">RSJresource</a> my_json(str);</div><div class="line">std::cout  &lt;&lt;  my_json[<span class="stringliteral">&quot;keyName&quot;</span>][2].as&lt;<span class="keywordtype">int</span>&gt;() &lt;&lt; std::endl;     <span class="comment">// prints 5</span></div><div class="line">std::cout  &lt;&lt;  my_json[<span class="stringliteral">&quot;RSJ&quot;</span>].as&lt;std::string&gt;(<span class="stringliteral">&quot;default string&quot;</span>) &lt;&lt; std::endl; <span class="comment">// prints &quot;string data&quot;</span></div><div class="line">std::cout  &lt;&lt;  my_json[<span class="stringliteral">&quot;JSON&quot;</span>].as&lt;std::string&gt;(<span class="stringliteral">&quot;default string&quot;</span>) &lt;&lt; std::endl; <span class="comment">// prints &quot;default string&quot;</span></div></div><!-- fragment --><p>The previous format is found extensively in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a> which are mostly used in the <a class="el" href="Parser_8hpp.html#a869703bd90a587fd17053df529d8b76a">ParseMesh()</a> and <a class="el" href="Parser_8hpp.html#a4fd81c895529aafa86cafb4a2c28b517">ParseAnalysis()</a> functions.</p>
+<p>In <b>SVL</b>, we use <a class="el" href="RSJparser_8hpp.html" title="This file contains the implementation of &quot;A Ridiculously Simple JSON Parser for C++.&quot; This great parsing class was taken from http://subhrajit.net/. ">RSJparser.hpp</a> <em><b>JSON</b></em> parser, because it resembles the same structure used in python dictionaries. Below is a simple example (extracted from the RSJparser documentation) on how to use <b>RSJparser</b> in an implementation file: </p><div class="fragment"><div class="line">std::string str = <span class="stringliteral">&quot;{&#39;RSJ&#39;: &#39;string data&#39;, &#39;keyName&#39;: [2,3,5,7]}&quot;</span>;</div><div class="line"><a class="code" href="classRSJresource.html">RSJresource</a> my_json(str);</div><div class="line">std::cout  &lt;&lt;  my_json[<span class="stringliteral">&quot;keyName&quot;</span>][2].as&lt;<span class="keywordtype">int</span>&gt;() &lt;&lt; std::endl;     <span class="comment">// prints 5</span></div><div class="line">std::cout  &lt;&lt;  my_json[<span class="stringliteral">&quot;RSJ&quot;</span>].as&lt;std::string&gt;(<span class="stringliteral">&quot;default string&quot;</span>) &lt;&lt; std::endl; <span class="comment">// prints &quot;string data&quot;</span></div><div class="line">std::cout  &lt;&lt;  my_json[<span class="stringliteral">&quot;JSON&quot;</span>].as&lt;std::string&gt;(<span class="stringliteral">&quot;default string&quot;</span>) &lt;&lt; std::endl; <span class="comment">// prints &quot;default string&quot;</span></div></div><!-- fragment --><p>The previous format is found extensively in the <a class="el" href="Driver_8hpp.html" title="This file contains the &quot;parsing&quot; functions to create, modify and analyze a finite element model provi...">Driver.hpp</a> which are mostly used in the <a class="el" href="Driver_8hpp.html#acbca2b5f6eea88a045f58a034d9d72c4" title="Populate the Mesh object with the json provided entities. ">UpdateMesh()</a> and <a class="el" href="Driver_8hpp.html#a2a5fa62d8de654343352594aab7f36f7" title="Creates a new Analysis object from the json file. ">UpdateAnalysis()</a> functions.</p>
 <p><b>REFERENCE:</b></p><ul>
 <li>Subhrajit Bhattacharya, "A Ridiculously Simple JSON Parser for C++", homepage <a href="https://www.lehigh.edu/~sub216/">https://www.lehigh.edu/~sub216/</a> or visit <a href="https://github.com/subh83/RSJp-cpp">https://github.com/subh83/RSJp-cpp</a> . </li>
 </ul>
@@ -126,7 +126,7 @@ $(document).ready(function(){initNavTree('linkParser.html','');});
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

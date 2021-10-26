@@ -17,5 +17,10 @@ var linkExtensions =
       [ "Point-Series", "linkParaview.html#Point-Series", null ],
       [ "Line-Series", "linkParaview.html#Line-Series", null ],
       [ "Range", "linkParaview.html#Range", null ]
+    ] ],
+    [ "Scalability", "linkScalability.html", [
+      [ "Strong-Scaling", "linkScalability.html#Strong-Scaling", null ],
+      [ "Weak-Scaling", "linkScalability.html#Weak-Scaling", null ],
+      [ "Elapsed-Time", "linkScalability.html#Elapsed-Time", null ]
     ] ]
 ];

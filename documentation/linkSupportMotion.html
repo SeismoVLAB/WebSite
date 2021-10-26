@@ -141,7 +141,7 @@ $(document).ready(function(){initNavTree('linkSupportMotion.html','');});
 <li><p class="startli"><span style="color:blue"><b>addSupportMotion</b></span>(<b>tag</b>, <b>attributes</b>):</p><ul>
 <li><span style="color:green"><b>tag</b></span> : The identifier of the restrained node, i.e., tag &gt; 1 to apply the support motion</li>
 <li><span style="color:green"><b>attributes</b></span> : Dictionary containing the support motion action on a Nodes in a direction<ul>
-<li><span style="color:blue">'type'</span> : Constant or TimeSerie</li>
+<li><span style="color:blue">'type'</span> : Constant or TimeSeries</li>
 <li><span style="color:blue">'value'</span> : Displacement value if type=static</li>
 <li><span style="color:blue">'file'</span> : Displacement time series file if type=dynamic</li>
 <li><span style="color:blue">'dof'</span> : Degree of freedom to apply the support motion</li>
@@ -153,7 +153,7 @@ $(document).ready(function(){initNavTree('linkSupportMotion.html','');});
 </div>
 <p class="startli"><b>Example</b> </p><blockquote class="doxtable">
 <p>A <b>SUPPORT MOTION</b> can be defined using the python interface as follows:<br />
-SVL.addSupportMotion(<b>tag</b>=708, <b>attributes</b>={'file': 'Ricker.txt', 'type': 'TimeSerie', 'dof': 1}) </p>
+SVL.addSupportMotion(<b>tag</b>=708, <b>attributes</b>={'file': 'Ricker.txt', 'type': 'TimeSeries', 'dof': 1}) </p>
 </blockquote>
 <p class="startli"><b>Application</b><br />
  Please refer to the <b>A06-DY_Lin_1DPointMass_Elastic_ZeroLength_SupportMotion.py</b> file located at <span style="color:green"><b>03-Validations/01-Debugging/</b></span> to see an example on how to define a support motion.</p>
@@ -166,9 +166,9 @@ SVL.addSupportMotion(<b>tag</b>=708, <b>attributes</b>={'file': 'Ricker.txt', 't
 </li>
 </ul>
 <h1>Run-Analysis</h1>
-<p>The C++ <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> in the <span style="color:green"><b>02-Run_Process/07-Assembler/Assembler.cpp</b></span> and <span style="color:green"><b>02-Run_Process/10-Integrators/Integrators.cpp</b></span> files provides with the implementation. A <a class="el" href="linkSupportMotion.html">Support Motion</a> is created using the built-in json parse-structure provided in the <a class="el" href="Parser_8hpp.html">Parser.hpp</a> and is defined inside the <span style="color:black"><b>"Supports"</b></span> json field indicating its <span style="color:blue"><b>"Tag"</b></span>.</p>
+<p>The C++ <a class="el" href="linkSoftwareStructure.html#linkRunProcess">Run-Analysis</a> in the <span style="color:green"><b>02-Run_Process/07-Assembler/Assembler.cpp</b></span> and <span style="color:green"><b>02-Run_Process/10-Integrators/Integrators.cpp</b></span> files provides with the implementation. A <a class="el" href="linkSupportMotion.html">Support Motion</a> is created using the built-in json parse-structure provided in the <a class="el" href="Driver_8hpp.html" title="This file contains the &quot;parsing&quot; functions to create, modify and analyze a finite element model provi...">Driver.hpp</a> and is defined inside the <span style="color:black"><b>"Supports"</b></span> json field indicating its <span style="color:blue"><b>"Tag"</b></span>.</p>
 <ul>
-<li>A <a class="el" href="linkSupportMotion.html">Support Motion</a> for <a class="el" href="classDynamicAnalysis.html" title="Class for creating a dynamic analysis and updating the states variables in mesh. ">DynamicAnalysis</a> can be created using the built-in parse-structure provided in the Parser as, <pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
+<li>A <a class="el" href="linkSupportMotion.html">Support Motion</a> for <a class="el" href="classStaticAnalysis.html" title="Class for creating an static analysis and updating the states variables in mesh. ">StaticAnalysis</a> can be created using the built-in parse-structure provided in the Parser as, <pre style="padding: 0px; color: black; background-color: white; border: white 0px solid">
 {
     <span style="color:black"><b>"Supports"</b></span>: {
         <span style="color:blue"><b>"Tag"</b></span>: {
@@ -197,7 +197,7 @@ SVL.addSupportMotion(<b>tag</b>=708, <b>attributes</b>={'file': 'Ricker.txt', 't
 {
     <span style="color:black"><b>"Supports"</b></span>: {
         <span style="color:blue"><b>"Tag"</b></span>: {
-            <span style="color:green"><b>"type"</b></span>: "TIMESERIE",
+            <span style="color:green"><b>"type"</b></span>: "TIMESERIES",
             <span style="color:green"><b>"file"</b></span>: [str],
             <span style="color:green"><b>"dof"</b></span>: [ ]
         }
@@ -215,7 +215,7 @@ SVL.addSupportMotion(<b>tag</b>=708, <b>attributes</b>={'file': 'Ricker.txt', 't
 </table>
 <b>Example</b> <blockquote class="doxtable">
 <p>A dynamic <b>SUPPORT MOTION</b> applied at node 5 along the degree-of-freedom 0 is created as: <br />
- { "Supports": { "5": { "type" : "TIMESERIE", "file": ["/path/to/folder/load.in"] "dof": [0] } } } </p>
+ { "Supports": { "5": { "type" : "TIMESERIES", "file": ["/path/to/folder/load.in"] "dof": [0] } } }</p>
 </blockquote>
 </li>
 </ul>
@@ -225,7 +225,7 @@ SVL.addSupportMotion(<b>tag</b>=708, <b>attributes</b>={'file': 'Ricker.txt', 't
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

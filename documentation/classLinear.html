@@ -140,9 +140,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af28720bde3ad8dde9d38e68c8cba99df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinear.html#af28720bde3ad8dde9d38e68c8cba99df">ComputeNewIncrement</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh, unsigned int i=0)</td></tr>
 <tr class="memdesc:af28720bde3ad8dde9d38e68c8cba99df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a new incremental solution.  <a href="#af28720bde3ad8dde9d38e68c8cba99df">More...</a><br /></td></tr>
 <tr class="separator:af28720bde3ad8dde9d38e68c8cba99df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0211055aa2600ebe5937279d2ad45f3a"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinear.html#a0211055aa2600ebe5937279d2ad45f3a">GetDisplacementIncrement</a> ()</td></tr>
-<tr class="memdesc:a0211055aa2600ebe5937279d2ad45f3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the displacement increment.  <a href="#a0211055aa2600ebe5937279d2ad45f3a">More...</a><br /></td></tr>
-<tr class="separator:a0211055aa2600ebe5937279d2ad45f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66d1b1859cc17e45dc779cbaefcbc8f0"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinear.html#a66d1b1859cc17e45dc779cbaefcbc8f0">GetDisplacementIncrement</a> ()</td></tr>
+<tr class="memdesc:a66d1b1859cc17e45dc779cbaefcbc8f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the displacement increment.  <a href="#a66d1b1859cc17e45dc779cbaefcbc8f0">More...</a><br /></td></tr>
+<tr class="separator:a66d1b1859cc17e45dc779cbaefcbc8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfb71a591158c7b119a4d48acf35cfee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinear.html#acfb71a591158c7b119a4d48acf35cfee">SetLoadFactor</a> (double factor)</td></tr>
 <tr class="memdesc:acfb71a591158c7b119a4d48acf35cfee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the load factor.  <a href="#acfb71a591158c7b119a4d48acf35cfee">More...</a><br /></td></tr>
 <tr class="separator:acfb71a591158c7b119a4d48acf35cfee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,15 +156,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad9f2d3cf714050f89095d552fff3400e inherit pub_methods_classAlgorithm"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#ad9f2d3cf714050f89095d552fff3400e">~Algorithm</a> ()=0</td></tr>
 <tr class="memdesc:ad9f2d3cf714050f89095d552fff3400e inherit pub_methods_classAlgorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys this <a class="el" href="classAlgorithm.html" title="Virtual class for defining how the solution between two steps is going to be carried out...">Algorithm</a> object.  <a href="classAlgorithm.html#ad9f2d3cf714050f89095d552fff3400e">More...</a><br /></td></tr>
 <tr class="separator:ad9f2d3cf714050f89095d552fff3400e inherit pub_methods_classAlgorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6caf80271bb29da10ced16eba78491a5 inherit pub_methods_classAlgorithm"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a6caf80271bb29da10ced16eba78491a5">ReverseStatesIncrements</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh)</td></tr>
+<tr class="memdesc:a6caf80271bb29da10ced16eba78491a5 inherit pub_methods_classAlgorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse the incremental state variables to its pervious converged one in the mesh.  <a href="classAlgorithm.html#a6caf80271bb29da10ced16eba78491a5">More...</a><br /></td></tr>
+<tr class="separator:a6caf80271bb29da10ced16eba78491a5 inherit pub_methods_classAlgorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d98a95ddc8b615587d7b283012f1b92 inherit pub_methods_classAlgorithm"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a3d98a95ddc8b615587d7b283012f1b92">UpdateStatesIncrements</a> (std::shared_ptr&lt; <a class="el" href="classMesh.html">Mesh</a> &gt; &amp;mesh, const Eigen::VectorXd &amp;dU)</td></tr>
 <tr class="memdesc:a3d98a95ddc8b615587d7b283012f1b92 inherit pub_methods_classAlgorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the incremental state variables in the mesh.  <a href="classAlgorithm.html#a3d98a95ddc8b615587d7b283012f1b92">More...</a><br /></td></tr>
 <tr class="separator:a3d98a95ddc8b615587d7b283012f1b92 inherit pub_methods_classAlgorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af091b4ced43a2075685840e3ec415782 inherit pub_methods_classAlgorithm"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#af091b4ced43a2075685840e3ec415782">ReducedParallelResidual</a> (const Eigen::VectorXd &amp;Feff, double &amp;Residual)</td></tr>
 <tr class="memdesc:af091b4ced43a2075685840e3ec415782 inherit pub_methods_classAlgorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the residual vector force from each processor.  <a href="classAlgorithm.html#af091b4ced43a2075685840e3ec415782">More...</a><br /></td></tr>
 <tr class="separator:af091b4ced43a2075685840e3ec415782 inherit pub_methods_classAlgorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12548a35e3474440ebf9272403eed7bc inherit pub_methods_classAlgorithm"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a12548a35e3474440ebf9272403eed7bc">ComputeConvergence</a> (const Eigen::VectorXd &amp;Force, double Delta, bool isFirstIteration)</td></tr>
-<tr class="memdesc:a12548a35e3474440ebf9272403eed7bc inherit pub_methods_classAlgorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes convergence tests for this algorithm.  <a href="classAlgorithm.html#a12548a35e3474440ebf9272403eed7bc">More...</a><br /></td></tr>
-<tr class="separator:a12548a35e3474440ebf9272403eed7bc inherit pub_methods_classAlgorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c49b05644027e2b24e3bc664c9ab67d inherit pub_methods_classAlgorithm"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlgorithm.html#a8c49b05644027e2b24e3bc664c9ab67d">ComputeConvergence</a> (const Eigen::VectorXd &amp;Force, const Eigen::VectorXd &amp;Delta, const Eigen::VectorXd &amp;delta, unsigned int k)</td></tr>
+<tr class="memdesc:a8c49b05644027e2b24e3bc664c9ab67d inherit pub_methods_classAlgorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes convergence tests for this algorithm.  <a href="classAlgorithm.html#a8c49b05644027e2b24e3bc664c9ab67d">More...</a><br /></td></tr>
+<tr class="separator:a8c49b05644027e2b24e3bc664c9ab67d inherit pub_methods_classAlgorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -193,7 +196,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for solving a linear system in just one-step; therefore, no-iteration or convergence test is performed. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="Algorithm_8hpp.html">Algorithm.hpp</a> <a class="el" href="Integrator_8hpp.html">Integrator.hpp</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="Algorithm_8hpp.html">Algorithm.hpp</a> <a class="el" href="Integrator_8hpp.html" title="This file contains the &quot;Integrator object&quot; declarations, and defines how the dynamic solution between...">Integrator.hpp</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aaf63c4651a450c874a6e68ba1d144eee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf63c4651a450c874a6e68ba1d144eee">&#9670;&nbsp;</a></span>Linear()</h2>
@@ -324,8 +327,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a0211055aa2600ebe5937279d2ad45f3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0211055aa2600ebe5937279d2ad45f3a">&#9670;&nbsp;</a></span>GetDisplacementIncrement()</h2>
+<a id="a66d1b1859cc17e45dc779cbaefcbc8f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66d1b1859cc17e45dc779cbaefcbc8f0">&#9670;&nbsp;</a></span>GetDisplacementIncrement()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -334,7 +337,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::VectorXd Linear::GetDisplacementIncrement </td>
+          <td class="memname">const Eigen::VectorXd&amp; Linear::GetDisplacementIncrement </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -351,7 +354,7 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The incremental displacement vector. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>More details can be found at <a class="el" href="linkLinear.html">Linear</a>. </dd></dl>
 
-<p>Implements <a class="el" href="classAlgorithm.html#a65d545e5c442ed3c4339d9b50e930f7e">Algorithm</a>.</p>
+<p>Implements <a class="el" href="classAlgorithm.html#a621efc48758d619bfcbf98840fed7d7c">Algorithm</a>.</p>
 
 </div>
 </div>
@@ -579,7 +582,7 @@ Protected Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classLinear.html">Linear</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

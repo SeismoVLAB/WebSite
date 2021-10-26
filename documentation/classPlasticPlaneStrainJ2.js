@@ -27,15 +27,21 @@ var classPlasticPlaneStrainJ2 =
     [ "ReverseState", "classPlasticPlaneStrainJ2.html#a777914bdcefc9ee992a6f65cceb84732", null ],
     [ "UpdateState", "classPlasticPlaneStrainJ2.html#ad977aed4905ec9ef8cc380f7ace68cee", null ],
     [ "alpha", "classPlasticPlaneStrainJ2.html#a52fdaa81fc4df133da2a5a99227162b6", null ],
+    [ "alpha_n", "classPlasticPlaneStrainJ2.html#a77cf83aacb835ba412969bfa6134af82", null ],
     [ "BackStress", "classPlasticPlaneStrainJ2.html#a07d852dae7acc2cafa9a19ab41309bf5", null ],
+    [ "BackStress_n", "classPlasticPlaneStrainJ2.html#a69a8c6649747c0f774d78e486b8cd006", null ],
     [ "beta", "classPlasticPlaneStrainJ2.html#a1fd61096c575bfa5ad675bb04d92a483", null ],
     [ "G", "classPlasticPlaneStrainJ2.html#a31a316440e0ab829d668a7ea99f51181", null ],
     [ "H", "classPlasticPlaneStrainJ2.html#af33dc1ccbaaa2863e05830dc30571c74", null ],
     [ "K", "classPlasticPlaneStrainJ2.html#a3087b11baac7d58ad67e875dd473cb51", null ],
     [ "PlasticStrain", "classPlasticPlaneStrainJ2.html#ae61968610de1d934037cc10c0d77a74f", null ],
+    [ "PlasticStrain_n", "classPlasticPlaneStrainJ2.html#af99faaf772a073c6533eea4d3b88c879", null ],
     [ "Rho", "classPlasticPlaneStrainJ2.html#adebc53a92b3a70977f08b583d4f07709", null ],
     [ "SigmaY", "classPlasticPlaneStrainJ2.html#a2ad7542541ecc35d8081989c1b9ca05b", null ],
     [ "Strain", "classPlasticPlaneStrainJ2.html#abdd7a8c04c6a5a313064602b5b3d1b30", null ],
+    [ "Strain_n", "classPlasticPlaneStrainJ2.html#a0a9d5d62555c755ddf3954bd40c5e3e8", null ],
     [ "Stress", "classPlasticPlaneStrainJ2.html#af6d90c12ef50890cb6b3d0d6a22d6b31", null ],
-    [ "TangentStiffness", "classPlasticPlaneStrainJ2.html#aa1cd7483edcafc8282c51b4f0e1d7f54", null ]
+    [ "Stress_n", "classPlasticPlaneStrainJ2.html#a49eaa4f61edd2e1f0c1338c919c6ae78", null ],
+    [ "TangentStiffness", "classPlasticPlaneStrainJ2.html#aa1cd7483edcafc8282c51b4f0e1d7f54", null ],
+    [ "TangentStiffness_n", "classPlasticPlaneStrainJ2.html#a3a490ff24c3654f033e57023fbe2c47c", null ]
 ];

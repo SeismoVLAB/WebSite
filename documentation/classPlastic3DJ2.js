@@ -27,15 +27,21 @@ var classPlastic3DJ2 =
     [ "ReverseState", "classPlastic3DJ2.html#a4b5e79b08bdb8f73fc7c0ab825256a07", null ],
     [ "UpdateState", "classPlastic3DJ2.html#a50df593a64a79c114e7d5350b90955f7", null ],
     [ "alpha", "classPlastic3DJ2.html#a6f40ca4dc47491dc264843895dce91ff", null ],
+    [ "alpha_n", "classPlastic3DJ2.html#a1a126d7d6e56f1fee9c8b874bdafef05", null ],
     [ "BackStress", "classPlastic3DJ2.html#af18aef1c2bc64a0b37d1d7bd706e3f7d", null ],
+    [ "BackStress_n", "classPlastic3DJ2.html#aea07a94dc8f416d5c9aa9091ea7b125f", null ],
     [ "beta", "classPlastic3DJ2.html#ab81126d63b5ac6f0645a5dd67ab5d93b", null ],
     [ "G", "classPlastic3DJ2.html#a33e81698e92c83bd1a5e8280222e6893", null ],
     [ "H", "classPlastic3DJ2.html#af4daec39301d2f8e6af7994ac570c2ab", null ],
     [ "K", "classPlastic3DJ2.html#a46e53adbcbba846eb984ef845a7f17ce", null ],
     [ "PlasticStrain", "classPlastic3DJ2.html#ad21d80fcafd400a46b615371c4b4bf56", null ],
+    [ "PlasticStrain_n", "classPlastic3DJ2.html#aa889c2fb95e0fc8cc17921222007b21d", null ],
     [ "Rho", "classPlastic3DJ2.html#ac36f6e6e39347fd7a1146320521db00b", null ],
     [ "SigmaY", "classPlastic3DJ2.html#ab059102fba9cb19ac27c4cb344f2b0ea", null ],
     [ "Strain", "classPlastic3DJ2.html#a6a8e62092896e596d097283221fec9c8", null ],
+    [ "Strain_n", "classPlastic3DJ2.html#af56edbbf5030cfd7e7d23fe0feca4ba3", null ],
     [ "Stress", "classPlastic3DJ2.html#a9b2cca3fbdee460afca5de123989eaea", null ],
-    [ "TangentStiffness", "classPlastic3DJ2.html#a8056eafb43e7a1d9f8891c581820abd0", null ]
+    [ "Stress_n", "classPlastic3DJ2.html#a5bf57235080215bf6b92b689e434ac1e", null ],
+    [ "TangentStiffness", "classPlastic3DJ2.html#a8056eafb43e7a1d9f8891c581820abd0", null ],
+    [ "TangentStiffness_n", "classPlastic3DJ2.html#ab2a6f8f53823ba95b9556d817f22e751", null ]
 ];

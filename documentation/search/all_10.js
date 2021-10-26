@@ -7,6 +7,8 @@ var searchData=
   ['kappa',['kappa',['../classPlastic3DBA.html#a8b7b131a8a62bc7df7f4adfcbb4e1553',1,'Plastic3DBA::kappa()'],['../classPlasticPlaneStrainBA.html#a7f29a5e371b2de90886bf1c78e534e90',1,'PlasticPlaneStrainBA::kappa()']]],
   ['kappa2',['kappa2',['../classFib3DLineSection.html#a4114892019a8fbfc23e35865fa49ecc9',1,'Fib3DLineSection']]],
   ['kappa3',['kappa3',['../classFib3DLineSection.html#acab70e133ed372d3e75d5166c732a4d4',1,'Fib3DLineSection']]],
+  ['kappa_5fn',['kappa_n',['../classPlastic3DBA.html#ab14bebcafdd97bcdbcd77ecb11449e4a',1,'Plastic3DBA::kappa_n()'],['../classPlasticPlaneStrainBA.html#ab703127c99d3e00fbad7c68a4f2ce349',1,'PlasticPlaneStrainBA::kappa_n()']]],
+  ['kbc',['kbc',['../classUnxBoucWen2DLink.html#a7b162e3e6c43dce77f54b4a9750b0e83',1,'UnxBoucWen2DLink::kbc()'],['../classUnxBoucWen3DLink.html#a2bc5f1b89353b16743ea222570479dc4',1,'UnxBoucWen3DLink::kbc()']]],
   ['kbw',['kbw',['../classUnxBoucWen2DLink.html#aebb267786fe5ebdbbd0ee5b5766d588c',1,'UnxBoucWen2DLink::kbw()'],['../classUnxBoucWen3DLink.html#ae4960e287e6ef85239bc2155774e1d5a',1,'UnxBoucWen3DLink::kbw()']]],
   ['kin2dframe2',['kin2DFrame2',['../classkin2DFrame2.html',1,'kin2DFrame2'],['../classkin2DFrame2.html#a6004987be9ee082103fbf45e95fd1f2f',1,'kin2DFrame2::kin2DFrame2()']]],
   ['kin2dframe2_2ehpp',['kin2DFrame2.hpp',['../kin2DFrame2_8hpp.html',1,'']]],

@@ -124,7 +124,7 @@ $(document).ready(function(){initNavTree('linkSurface.html','');});
 <li><p class="startli"><span style="color:blue"><b>addSurface</b></span>(<b>tag</b>, <b>etag</b>, <b>conn</b>):</p><ul>
 <li><span style="color:green"><b>tag</b></span> : The identifier of this surface, i.e., tag &gt; 0</li>
 <li><span style="color:green"><b>etag</b></span> :The identifier of this element, i.e., tag &gt; 0</li>
-<li><span style="color:green"><b>conn</b></span> : Connectivity array of this element surface (must belong to an element)</li>
+<li><span style="color:green"><b>conn</b></span> : Connectivity array of this surface (must belong to an element)</li>
 </ul>
 <p class="startli"><b>Example</b> </p><blockquote class="doxtable">
 <p>A <b>SURFACE</b> can be defined using the python interface as follows:<br />
@@ -134,9 +134,9 @@ SVL.addSurface(<b>tag</b>=5, <b>etag</b>=2, <b>conn</b>=[5,6,7,8]) </p>
  Please refer to the <b>D13-ST_Lin_3DSurfaceHorizontal_Elastic_Frame2.py</b> or <b>I02-ST_Lin_3DSurfaceLoad_Elastic_Hexa8.py</b> file located at <span style="color:green"><b>03-Validations/01-Debugging/</b></span> to see an example on how to define a surface using the <span style="color:blue"><b>addSurface</b></span> function.</p>
 </li>
 </ul>
-<p>The python <span style="color:green"><b>01-Pre_Process/Method/Compute.py</b></span> provides with a function to compute the face number of an element.</p><ul>
-<li><span style="color:blue"><b>SurfaceFace</b></span>(<b>name</b>, <b>surf</b>):<br />
- This function associate the face (surface) number to an element (<b>name</b>) depending on the connectivity array specified for that face (<b>surf</b>).</li>
+<p>The python <span style="color:green"><b>01-Pre_Process/Method/Compute.py</b></span> provides with a function to compute the face number of an element provided with the connectivity .</p><ul>
+<li><span style="color:blue"><b>SurfaceFace</b></span>(<b>name</b>, <b>conn</b>):<br />
+ This function associate the face (surface) number to an element (<b>name</b>) depending on the connectivity array specified for that face (<b>conn</b>).</li>
 </ul>
 <p>On the contrary, the <span style="color:green"><b>01-Pre_Process/Method/Remove.py</b></span> file provides with an interface to depopulate the <code>Entities</code> dictionary. For example, to remove an already define Surface, use:</p><ul>
 <li><span style="color:blue"><b>delSurface</b></span>(<b>tag</b>):<ul>
@@ -165,7 +165,8 @@ SVL.addSurface(<b>tag</b>=5, <b>etag</b>=2, <b>conn</b>=[5,6,7,8]) </p>
 <tr>
 <td><code>element</code> </td><td>The unique element identifier or Tag. </td></tr>
 </table>
-<b>Example</b> <blockquote class="doxtable">
+<br />
+ <b>Example</b> <blockquote class="doxtable">
 <p>A <b>SURFACE</b> with tag 5 defined in the element 2 on face 3 corresponding to connectivity [5,6,7,8] : <br />
  { "Surfaces": { "5": { "element" : 2, "face" : 3 } } }</p>
 </blockquote>
@@ -177,7 +178,7 @@ SVL.addSurface(<b>tag</b>=5, <b>etag</b>=2, <b>conn</b>=[5,6,7,8]) </p>
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:53 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -134,9 +134,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8780bd2438230a7a51d0efa61c5a1963"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a8780bd2438230a7a51d0efa61c5a1963">SetMass</a> (Eigen::VectorXd &amp;mass)</td></tr>
 <tr class="memdesc:a8780bd2438230a7a51d0efa61c5a1963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the node's mass at each degree of freedom.  <a href="#a8780bd2438230a7a51d0efa61c5a1963">More...</a><br /></td></tr>
 <tr class="separator:a8780bd2438230a7a51d0efa61c5a1963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48532158c81a22e8c35667aa88aeba22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a48532158c81a22e8c35667aa88aeba22">SetAsFixed</a> (bool isFixed)</td></tr>
+<tr class="memdesc:a48532158c81a22e8c35667aa88aeba22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the node's restrain condition.  <a href="#a48532158c81a22e8c35667aa88aeba22">More...</a><br /></td></tr>
+<tr class="separator:a48532158c81a22e8c35667aa88aeba22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a71af6ea097bfd7b769175707315385"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a9a71af6ea097bfd7b769175707315385">SetReaction</a> (Eigen::VectorXd &amp;reaction)</td></tr>
 <tr class="memdesc:a9a71af6ea097bfd7b769175707315385"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current reaction force of this node.  <a href="#a9a71af6ea097bfd7b769175707315385">More...</a><br /></td></tr>
 <tr class="separator:a9a71af6ea097bfd7b769175707315385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a622cb7e213eefc1a248c43279db00b3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a622cb7e213eefc1a248c43279db00b3b">SetProgressiveForces</a> (Eigen::VectorXd &amp;force)</td></tr>
+<tr class="memdesc:a622cb7e213eefc1a248c43279db00b3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the external force from previous analysis.  <a href="#a622cb7e213eefc1a248c43279db00b3b">More...</a><br /></td></tr>
+<tr class="separator:a622cb7e213eefc1a248c43279db00b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af216ec356a122d7a27c7a7d2275b45b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#af216ec356a122d7a27c7a7d2275b45b9">SetCoordinates</a> (Eigen::VectorXd &amp;coordinates)</td></tr>
 <tr class="memdesc:af216ec356a122d7a27c7a7d2275b45b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the node's position in a finite element <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.  <a href="#af216ec356a122d7a27c7a7d2275b45b9">More...</a><br /></td></tr>
 <tr class="separator:af216ec356a122d7a27c7a7d2275b45b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,48 +173,57 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab3cdfbd50ca5ea713a63e1f6844e0cb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#ab3cdfbd50ca5ea713a63e1f6844e0cb1">SetSupportMotion</a> (unsigned int k, std::vector&lt; double &gt; &amp;Uo)</td></tr>
 <tr class="memdesc:ab3cdfbd50ca5ea713a63e1f6844e0cb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the displacements support motion associated with this <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>.  <a href="#ab3cdfbd50ca5ea713a63e1f6844e0cb1">More...</a><br /></td></tr>
 <tr class="separator:ab3cdfbd50ca5ea713a63e1f6844e0cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f3b70601d1255446d83f69df223ed14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a0f3b70601d1255446d83f69df223ed14">DelSupportMotion</a> ()</td></tr>
+<tr class="memdesc:a0f3b70601d1255446d83f69df223ed14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the displacements support motion associated with this <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>.  <a href="#a0f3b70601d1255446d83f69df223ed14">More...</a><br /></td></tr>
+<tr class="separator:a0f3b70601d1255446d83f69df223ed14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a567115b803ccc57d357e4687c6bc5e21"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a567115b803ccc57d357e4687c6bc5e21">GetMass</a> () const</td></tr>
 <tr class="memdesc:a567115b803ccc57d357e4687c6bc5e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the node's mass as a vector.  <a href="#a567115b803ccc57d357e4687c6bc5e21">More...</a><br /></td></tr>
 <tr class="separator:a567115b803ccc57d357e4687c6bc5e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54605488417d1378c981e96a65375329"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a54605488417d1378c981e96a65375329">GetReaction</a> () const</td></tr>
 <tr class="memdesc:a54605488417d1378c981e96a65375329"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the node reaction force.  <a href="#a54605488417d1378c981e96a65375329">More...</a><br /></td></tr>
 <tr class="separator:a54605488417d1378c981e96a65375329"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3675afd20a1c4d5c3a9556c9c41dd4d"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#aa3675afd20a1c4d5c3a9556c9c41dd4d">GetCoordinates</a> () const</td></tr>
-<tr class="memdesc:aa3675afd20a1c4d5c3a9556c9c41dd4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the node's coordinate as a vector.  <a href="#aa3675afd20a1c4d5c3a9556c9c41dd4d">More...</a><br /></td></tr>
-<tr class="separator:aa3675afd20a1c4d5c3a9556c9c41dd4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b703e4b70b9db2ccfef6e5e2de1304f"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a2b703e4b70b9db2ccfef6e5e2de1304f">GetDisplacements</a> () const</td></tr>
-<tr class="memdesc:a2b703e4b70b9db2ccfef6e5e2de1304f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current displacement state of this node.  <a href="#a2b703e4b70b9db2ccfef6e5e2de1304f">More...</a><br /></td></tr>
-<tr class="separator:a2b703e4b70b9db2ccfef6e5e2de1304f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4241f9122118e86020daeb8f411bde8"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#ac4241f9122118e86020daeb8f411bde8">GetVelocities</a> () const</td></tr>
-<tr class="memdesc:ac4241f9122118e86020daeb8f411bde8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current velocity state of this node.  <a href="#ac4241f9122118e86020daeb8f411bde8">More...</a><br /></td></tr>
-<tr class="separator:ac4241f9122118e86020daeb8f411bde8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8140027e5229c37a351d42079a29ccb"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#ae8140027e5229c37a351d42079a29ccb">GetAccelerations</a> () const</td></tr>
-<tr class="memdesc:ae8140027e5229c37a351d42079a29ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current acceleration state of this node.  <a href="#ae8140027e5229c37a351d42079a29ccb">More...</a><br /></td></tr>
-<tr class="separator:ae8140027e5229c37a351d42079a29ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe4b6dce3abf632d16a8abf90bfff8e"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#affe4b6dce3abf632d16a8abf90bfff8e">GetCoordinates</a> () const</td></tr>
+<tr class="memdesc:affe4b6dce3abf632d16a8abf90bfff8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the node's coordinate as a vector.  <a href="#affe4b6dce3abf632d16a8abf90bfff8e">More...</a><br /></td></tr>
+<tr class="separator:affe4b6dce3abf632d16a8abf90bfff8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb5eac21f7f9dbbf40698bdf648f8fbb"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#acb5eac21f7f9dbbf40698bdf648f8fbb">GetDisplacements</a> () const</td></tr>
+<tr class="memdesc:acb5eac21f7f9dbbf40698bdf648f8fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current displacement state of this node.  <a href="#acb5eac21f7f9dbbf40698bdf648f8fbb">More...</a><br /></td></tr>
+<tr class="separator:acb5eac21f7f9dbbf40698bdf648f8fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc582db4331b8a0192fb6b21352c7156"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#afc582db4331b8a0192fb6b21352c7156">GetVelocities</a> () const</td></tr>
+<tr class="memdesc:afc582db4331b8a0192fb6b21352c7156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current velocity state of this node.  <a href="#afc582db4331b8a0192fb6b21352c7156">More...</a><br /></td></tr>
+<tr class="separator:afc582db4331b8a0192fb6b21352c7156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a400f622224f92d7966a407705c6212c9"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a400f622224f92d7966a407705c6212c9">GetAccelerations</a> () const</td></tr>
+<tr class="memdesc:a400f622224f92d7966a407705c6212c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current acceleration state of this node.  <a href="#a400f622224f92d7966a407705c6212c9">More...</a><br /></td></tr>
+<tr class="separator:a400f622224f92d7966a407705c6212c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae57b226c7df1e79e0c29b313b32d3856"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#ae57b226c7df1e79e0c29b313b32d3856">GetInertialForces</a> () const</td></tr>
 <tr class="memdesc:ae57b226c7df1e79e0c29b313b32d3856"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the inertial forces associated to this node.  <a href="#ae57b226c7df1e79e0c29b313b32d3856">More...</a><br /></td></tr>
 <tr class="separator:ae57b226c7df1e79e0c29b313b32d3856"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac94c202e6d65bcc364416de0fcd9298"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#aac94c202e6d65bcc364416de0fcd9298">GetPMLVector</a> () const</td></tr>
-<tr class="memdesc:aac94c202e6d65bcc364416de0fcd9298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current PML history vector of this node.  <a href="#aac94c202e6d65bcc364416de0fcd9298">More...</a><br /></td></tr>
-<tr class="separator:aac94c202e6d65bcc364416de0fcd9298"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ce8861716980d4126915680adf25a6a"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a0ce8861716980d4126915680adf25a6a">GetIncrementalDisplacements</a> () const</td></tr>
-<tr class="memdesc:a0ce8861716980d4126915680adf25a6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current incremental displacement of this node.  <a href="#a0ce8861716980d4126915680adf25a6a">More...</a><br /></td></tr>
-<tr class="separator:a0ce8861716980d4126915680adf25a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af20f15720f1524d84803ffc7c2bc8d61"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#af20f15720f1524d84803ffc7c2bc8d61">GetProgressiveForces</a> () const</td></tr>
+<tr class="memdesc:af20f15720f1524d84803ffc7c2bc8d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the external force from previous analysis.  <a href="#af20f15720f1524d84803ffc7c2bc8d61">More...</a><br /></td></tr>
+<tr class="separator:af20f15720f1524d84803ffc7c2bc8d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43ed6c985420d95ec6c8740b67228170"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a43ed6c985420d95ec6c8740b67228170">GetPMLVector</a> () const</td></tr>
+<tr class="memdesc:a43ed6c985420d95ec6c8740b67228170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current PML history vector of this node.  <a href="#a43ed6c985420d95ec6c8740b67228170">More...</a><br /></td></tr>
+<tr class="separator:a43ed6c985420d95ec6c8740b67228170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45de88b4fc2f96d4256fe4ac1b45cf5e"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a45de88b4fc2f96d4256fe4ac1b45cf5e">GetIncrementalDisplacements</a> () const</td></tr>
+<tr class="memdesc:a45de88b4fc2f96d4256fe4ac1b45cf5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current incremental displacement of this node.  <a href="#a45de88b4fc2f96d4256fe4ac1b45cf5e">More...</a><br /></td></tr>
+<tr class="separator:a45de88b4fc2f96d4256fe4ac1b45cf5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c1ab451f2b5f44548491ccff013f060"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a0c1ab451f2b5f44548491ccff013f060">GetDomainReductionMotion</a> (unsigned int k) const</td></tr>
 <tr class="memdesc:a0c1ab451f2b5f44548491ccff013f060"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current domain reduction displacements, velocities and accelerations.  <a href="#a0c1ab451f2b5f44548491ccff013f060">More...</a><br /></td></tr>
 <tr class="separator:a0c1ab451f2b5f44548491ccff013f060"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f9af38a86d13ae479ee2b79e0d0aa0c"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a6f9af38a86d13ae479ee2b79e0d0aa0c">GetSupportMotion</a> (unsigned int k)</td></tr>
 <tr class="memdesc:a6f9af38a86d13ae479ee2b79e0d0aa0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the nodal support motion displacement of this node.  <a href="#a6f9af38a86d13ae479ee2b79e0d0aa0c">More...</a><br /></td></tr>
 <tr class="separator:a6f9af38a86d13ae479ee2b79e0d0aa0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43e7c22356e00113072148d908ac2929"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a43e7c22356e00113072148d908ac2929">GetNumberOfSupportMotion</a> ()</td></tr>
+<tr class="memdesc:a43e7c22356e00113072148d908ac2929"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of degree-of-freedom with support motion in this node.  <a href="#a43e7c22356e00113072148d908ac2929">More...</a><br /></td></tr>
+<tr class="separator:a43e7c22356e00113072148d908ac2929"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7463d91e4915e8ba6a738b274247a883"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a7463d91e4915e8ba6a738b274247a883">GetNumberOfDegreeOfFreedom</a> () const</td></tr>
 <tr class="memdesc:a7463d91e4915e8ba6a738b274247a883"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of degree-of-freedom of this node.  <a href="#a7463d91e4915e8ba6a738b274247a883">More...</a><br /></td></tr>
 <tr class="separator:a7463d91e4915e8ba6a738b274247a883"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e2e0d2938dda770250359510394594f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a2e2e0d2938dda770250359510394594f">GetFreeDegreeOfFreedom</a> () const</td></tr>
-<tr class="memdesc:a2e2e0d2938dda770250359510394594f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the node's restrained degree of freedom as a vector.  <a href="#a2e2e0d2938dda770250359510394594f">More...</a><br /></td></tr>
-<tr class="separator:a2e2e0d2938dda770250359510394594f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f0ac74b85be4e48221a583b8f570c02"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a3f0ac74b85be4e48221a583b8f570c02">GetTotalDegreeOfFreedom</a> () const</td></tr>
-<tr class="memdesc:a3f0ac74b85be4e48221a583b8f570c02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the node's total degree of freedom as a vector.  <a href="#a3f0ac74b85be4e48221a583b8f570c02">More...</a><br /></td></tr>
-<tr class="separator:a3f0ac74b85be4e48221a583b8f570c02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d9a5ab3a8f47f3c5aa462f990c404cd"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a0d9a5ab3a8f47f3c5aa462f990c404cd">GetFreeDegreeOfFreedom</a> () const</td></tr>
+<tr class="memdesc:a0d9a5ab3a8f47f3c5aa462f990c404cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the node's restrained degree of freedom as a vector.  <a href="#a0d9a5ab3a8f47f3c5aa462f990c404cd">More...</a><br /></td></tr>
+<tr class="separator:a0d9a5ab3a8f47f3c5aa462f990c404cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b295c781a6fac4424e72e51d60ed282"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a1b295c781a6fac4424e72e51d60ed282">GetTotalDegreeOfFreedom</a> () const</td></tr>
+<tr class="memdesc:a1b295c781a6fac4424e72e51d60ed282"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the node's total degree of freedom as a vector.  <a href="#a1b295c781a6fac4424e72e51d60ed282">More...</a><br /></td></tr>
+<tr class="separator:a1b295c781a6fac4424e72e51d60ed282"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -241,8 +256,11 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a8e5b3ae6c3357a88e9568a7001ded8a9"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a8e5b3ae6c3357a88e9568a7001ded8a9">Reaction</a></td></tr>
 <tr class="memdesc:a8e5b3ae6c3357a88e9568a7001ded8a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The reaction forces of this node.  <a href="#a8e5b3ae6c3357a88e9568a7001ded8a9">More...</a><br /></td></tr>
 <tr class="separator:a8e5b3ae6c3357a88e9568a7001ded8a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59ce42d9e7e0fb581af8e03c1ab24f06"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a59ce42d9e7e0fb581af8e03c1ab24f06">CumulatedForce</a></td></tr>
+<tr class="memdesc:a59ce42d9e7e0fb581af8e03c1ab24f06"><td class="mdescLeft">&#160;</td><td class="mdescRight">The external force from previous analysis.  <a href="#a59ce42d9e7e0fb581af8e03c1ab24f06">More...</a><br /></td></tr>
+<tr class="separator:a59ce42d9e7e0fb581af8e03c1ab24f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fd684f0be388ebc3a8286a301d6a53b"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#a9fd684f0be388ebc3a8286a301d6a53b">PMLIntegratedVector</a></td></tr>
-<tr class="memdesc:a9fd684f0be388ebc3a8286a301d6a53b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The 3D perfectly-matched history verctor.  <a href="#a9fd684f0be388ebc3a8286a301d6a53b">More...</a><br /></td></tr>
+<tr class="memdesc:a9fd684f0be388ebc3a8286a301d6a53b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The 3D perfectly-matched history vector.  <a href="#a9fd684f0be388ebc3a8286a301d6a53b">More...</a><br /></td></tr>
 <tr class="separator:a9fd684f0be388ebc3a8286a301d6a53b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae465330d294a54b11d29ecdadd29812e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNode.html#ae465330d294a54b11d29ecdadd29812e">FreeDegreeOfFreedom</a></td></tr>
 <tr class="memdesc:ae465330d294a54b11d29ecdadd29812e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The free-degree-of-freedom list.  <a href="#ae465330d294a54b11d29ecdadd29812e">More...</a><br /></td></tr>
@@ -325,14 +343,34 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae8140027e5229c37a351d42079a29ccb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8140027e5229c37a351d42079a29ccb">&#9670;&nbsp;</a></span>GetAccelerations()</h2>
+<a id="a0f3b70601d1255446d83f69df223ed14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f3b70601d1255446d83f69df223ed14">&#9670;&nbsp;</a></span>DelSupportMotion()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::VectorXd Node::GetAccelerations </td>
+          <td class="memname">void Node::DelSupportMotion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove the displacements support motion associated with this <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#a37680417d4035a9cb1a323337cf095c2" title="The imposed nodal support motion displacements. ">Node::SupportMotion</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a400f622224f92d7966a407705c6212c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a400f622224f92d7966a407705c6212c9">&#9670;&nbsp;</a></span>GetAccelerations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::VectorXd&amp; Node::GetAccelerations </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -346,14 +384,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aa3675afd20a1c4d5c3a9556c9c41dd4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3675afd20a1c4d5c3a9556c9c41dd4d">&#9670;&nbsp;</a></span>GetCoordinates()</h2>
+<a id="affe4b6dce3abf632d16a8abf90bfff8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe4b6dce3abf632d16a8abf90bfff8e">&#9670;&nbsp;</a></span>GetCoordinates()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::VectorXd Node::GetCoordinates </td>
+          <td class="memname">const Eigen::VectorXd&amp; Node::GetCoordinates </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -368,14 +406,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a2b703e4b70b9db2ccfef6e5e2de1304f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b703e4b70b9db2ccfef6e5e2de1304f">&#9670;&nbsp;</a></span>GetDisplacements()</h2>
+<a id="acb5eac21f7f9dbbf40698bdf648f8fbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb5eac21f7f9dbbf40698bdf648f8fbb">&#9670;&nbsp;</a></span>GetDisplacements()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::VectorXd Node::GetDisplacements </td>
+          <td class="memname">const Eigen::VectorXd&amp; Node::GetDisplacements </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -418,14 +456,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a2e2e0d2938dda770250359510394594f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e2e0d2938dda770250359510394594f">&#9670;&nbsp;</a></span>GetFreeDegreeOfFreedom()</h2>
+<a id="a0d9a5ab3a8f47f3c5aa462f990c404cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d9a5ab3a8f47f3c5aa462f990c404cd">&#9670;&nbsp;</a></span>GetFreeDegreeOfFreedom()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;int&gt; Node::GetFreeDegreeOfFreedom </td>
+          <td class="memname">const std::vector&lt;int&gt;&amp; Node::GetFreeDegreeOfFreedom </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -440,14 +478,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a0ce8861716980d4126915680adf25a6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ce8861716980d4126915680adf25a6a">&#9670;&nbsp;</a></span>GetIncrementalDisplacements()</h2>
+<a id="a45de88b4fc2f96d4256fe4ac1b45cf5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45de88b4fc2f96d4256fe4ac1b45cf5e">&#9670;&nbsp;</a></span>GetIncrementalDisplacements()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::VectorXd Node::GetIncrementalDisplacements </td>
+          <td class="memname">const Eigen::VectorXd&amp; Node::GetIncrementalDisplacements </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -525,14 +563,35 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aac94c202e6d65bcc364416de0fcd9298"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac94c202e6d65bcc364416de0fcd9298">&#9670;&nbsp;</a></span>GetPMLVector()</h2>
+<a id="a43e7c22356e00113072148d908ac2929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43e7c22356e00113072148d908ac2929">&#9670;&nbsp;</a></span>GetNumberOfSupportMotion()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::VectorXd Node::GetPMLVector </td>
+          <td class="memname">unsigned int Node::GetNumberOfSupportMotion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the number of degree-of-freedom with support motion in this node. </p>
+<dl class="section return"><dt>Returns</dt><dd>Integer that represents the number of support motion applied to this node. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#a37680417d4035a9cb1a323337cf095c2" title="The imposed nodal support motion displacements. ">Node::SupportMotion</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a43ed6c985420d95ec6c8740b67228170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43ed6c985420d95ec6c8740b67228170">&#9670;&nbsp;</a></span>GetPMLVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::VectorXd&amp; Node::GetPMLVector </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -542,7 +601,28 @@ Private Attributes</h2></td></tr>
 
 <p>Gets the current PML history vector of this node. </p>
 <dl class="section return"><dt>Returns</dt><dd>Vector with the integrated PML states at each degree-of-freedom. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#a9fd684f0be388ebc3a8286a301d6a53b" title="The 3D perfectly-matched history verctor. ">Node::PMLIntegratedVector</a> <a class="el" href="classNode.html#afe5807800fc8d3e12b85c7cae84e2449" title="Sets the vector of absorbent integrated history values. ">Node::SetPMLVector</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#a9fd684f0be388ebc3a8286a301d6a53b" title="The 3D perfectly-matched history vector. ">Node::PMLIntegratedVector</a> <a class="el" href="classNode.html#afe5807800fc8d3e12b85c7cae84e2449" title="Sets the vector of absorbent integrated history values. ">Node::SetPMLVector</a>. </dd></dl>
+
+</div>
+</div>
+<a id="af20f15720f1524d84803ffc7c2bc8d61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af20f15720f1524d84803ffc7c2bc8d61">&#9670;&nbsp;</a></span>GetProgressiveForces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::VectorXd&amp; Node::GetProgressiveForces </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the external force from previous analysis. </p>
+<dl class="section return"><dt>Returns</dt><dd>Vector with the external forces for each degree-of-freedom. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Node::Force. </dd></dl>
 
 </div>
 </div>
@@ -595,14 +675,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a3f0ac74b85be4e48221a583b8f570c02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f0ac74b85be4e48221a583b8f570c02">&#9670;&nbsp;</a></span>GetTotalDegreeOfFreedom()</h2>
+<a id="a1b295c781a6fac4424e72e51d60ed282"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b295c781a6fac4424e72e51d60ed282">&#9670;&nbsp;</a></span>GetTotalDegreeOfFreedom()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;int&gt; Node::GetTotalDegreeOfFreedom </td>
+          <td class="memname">const std::vector&lt;int&gt;&amp; Node::GetTotalDegreeOfFreedom </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -617,14 +697,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac4241f9122118e86020daeb8f411bde8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4241f9122118e86020daeb8f411bde8">&#9670;&nbsp;</a></span>GetVelocities()</h2>
+<a id="afc582db4331b8a0192fb6b21352c7156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc582db4331b8a0192fb6b21352c7156">&#9670;&nbsp;</a></span>GetVelocities()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::VectorXd Node::GetVelocities </td>
+          <td class="memname">const Eigen::VectorXd&amp; Node::GetVelocities </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -701,6 +781,34 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#aa0b9638da475a9666445be272797f53b" title="The current acceleration vectors of this Node. ">Node::Accelerations</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a48532158c81a22e8c35667aa88aeba22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48532158c81a22e8c35667aa88aeba22">&#9670;&nbsp;</a></span>SetAsFixed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Node::SetAsFixed </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isFixed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the node's restrain condition. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isFixed</td><td>whether the node is fixed or free. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#ae71d1fd6d46d034fd87f13c464f8acae">Node::Fixed</a>. </dd></dl>
 
 </div>
 </div>
@@ -893,7 +1001,34 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#a9fd684f0be388ebc3a8286a301d6a53b" title="The 3D perfectly-matched history verctor. ">Node::PMLIntegratedVector</a> <a class="el" href="classNode.html#aac94c202e6d65bcc364416de0fcd9298" title="Gets the current PML history vector of this node. ">Node::GetPMLVector</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNode.html#a9fd684f0be388ebc3a8286a301d6a53b" title="The 3D perfectly-matched history vector. ">Node::PMLIntegratedVector</a> <a class="el" href="classNode.html#a43ed6c985420d95ec6c8740b67228170" title="Gets the current PML history vector of this node. ">Node::GetPMLVector</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a622cb7e213eefc1a248c43279db00b3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a622cb7e213eefc1a248c43279db00b3b">&#9670;&nbsp;</a></span>SetProgressiveForces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Node::SetProgressiveForces </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>force</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the external force from previous analysis. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">force</td><td>Vector of forces. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>Node::Force. </dd></dl>
 
 </div>
 </div>
@@ -1064,6 +1199,30 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The location of this node within the <a class="el" href="classMesh.html" title="Class for defining a mesh that stores the nodes, materials, elements, and loads. ">Mesh</a>.. </p>
+
+</div>
+</div>
+<a id="a59ce42d9e7e0fb581af8e03c1ab24f06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59ce42d9e7e0fb581af8e03c1ab24f06">&#9670;&nbsp;</a></span>CumulatedForce</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd Node::CumulatedForce</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The external force from previous analysis. </p>
 
 </div>
 </div>
@@ -1253,7 +1412,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The 3D perfectly-matched history verctor. </p>
+<p>The 3D perfectly-matched history vector. </p>
 
 </div>
 </div>
@@ -1360,7 +1519,7 @@ Private Attributes</h2></td></tr>
 			<ul>
 				<li class="navelem"><a class="el" href="classNode.html">Node</a></li>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

@@ -119,7 +119,7 @@ $(document).ready(function(){initNavTree('linkStaticpoint-load.html','');});
 <li><span style="color:green"><b>attributes</b></span> : Specific properties for the <b>PointLoad</b>, for example<ul>
 <li><span style="color:blue">'fun'</span>: The function identifier</li>
 <li><span style="color:blue">'list'</span>: The identifier of the nodes where this load acts upon</li>
-<li><span style="color:blue">'type'</span>: The type of load, in this case: '<b>Constant</b>'.</li>
+<li><span style="color:blue">'type'</span>: The type of load, in this case: '<b>Concentrated</b>'.</li>
 </ul>
 </li>
 </ul>
@@ -169,6 +169,7 @@ Please refer to the <b>D01-ST_Lin_2DBernoulli_Elastic_Frame2.py</b> file located
             <span style="color:green"><b>"name"</b></span> : "POINTLOAD",
             <span style="color:green"><b>"attributes"</b></span>: {
                 <span style="color:maroon"><b>"name"</b></span>: "CONSTANT",
+                <span style="color:maroon"><b>"type"</b></span>: "CONCENTRATED",
                 <span style="color:maroon"><b>"mag"</b></span>: double,
                 <span style="color:maroon"><b>"dir"</b></span>: [ ],
                 <span style="color:maroon"><b>"list"</b></span>: [ ]
@@ -192,7 +193,7 @@ Please refer to the <b>D01-ST_Lin_2DBernoulli_Elastic_Frame2.py</b> file located
 <dl class="section attention"><dt>Attention</dt><dd>The dimensions in <code>dir</code> must be consistent with the number of degree-of-freedom of that <a class="el" href="classNode.html" title="Class for creating a node in space that handles coordinates, state variables, free and total degrees-...">Node</a>.</dd></dl>
 <b>Example</b> <blockquote class="doxtable">
 <p>A 3D <b>STATIC POINT LOAD</b> applied downwards on node 2 whose intensities is 0.75 N:<br />
- { "Loads": { "1": { "name" : "POINTLOAD", "attributes": { "name": "CONSTANT", "mag": 0.75, "dir": [0.000, 0.000, -1.000], "list": [2] } } } } </p>
+ { "Loads": { "1": { "name" : "POINTLOAD", "attributes": { "name": "CONSTANT", "type": "CONCENTRATED", "mag": 0.75, "dir": [0.000, 0.000, -1.000], "list": [2] } } } } </p>
 </blockquote>
 </li>
 </ul>
@@ -202,7 +203,7 @@ Please refer to the <b>D01-ST_Lin_2DBernoulli_Elastic_Frame2.py</b> file located
 		<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
 			<ul>
 				<li class="footer">
-					Generated on Tue Jun 29 2021 18:48:01 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
+					Generated on Mon Oct 25 2021 18:05:54 for Seismo-VLAB by <a href="http://www.doxygen.org/index.html">
 					<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13.
 				</li>
 			</ul>

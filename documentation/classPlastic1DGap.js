@@ -28,7 +28,5 @@ var classPlastic1DGap =
     [ "minYieldStrain", "classPlastic1DGap.html#a33b34fac4452aed4ed21715d01a61e6c", null ],
     [ "newStrain", "classPlastic1DGap.html#a2f298c15a88c70913a64fd0c4963bc66", null ],
     [ "oldStrain", "classPlastic1DGap.html#afad21ad7dd93e3d85ce6b659ee9c91d2", null ],
-    [ "oldStress", "classPlastic1DGap.html#a28196d581e2ff3afa4f2f59023be32db", null ],
-    [ "oldTangentStiffness", "classPlastic1DGap.html#a074593b2724bcc48b41e20c12ce05495", null ],
     [ "Ratio", "classPlastic1DGap.html#ab211601ff3c8afa3653b545bae62c625", null ]
 ];
